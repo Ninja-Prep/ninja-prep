@@ -1,16 +1,11 @@
 import React from "react";
+import Navbar from "../src/Navbar";
+import Header from "../src/Header";
 
 function App() {
-  console.log("World");
-  return <div>Hello</div>;
-}
 
-function c() {
-  console.log("function c");
+  return ( <
+    Navbar / >
+  )
 }
-
-function b() {
-  console.log("Joanne's function");
-}
-function A() {}
 export default App;
