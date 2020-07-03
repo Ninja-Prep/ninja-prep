@@ -1,7 +1,7 @@
 import React from "react";
 
 function App() {
-  console.log("Nguyen Alex");
+  console.log("World");
   return <div>Hello</div>;
 }
 
