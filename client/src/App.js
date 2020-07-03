@@ -5,4 +5,7 @@ function App() {
   return <div>Hello</div>;
 }
 
+function b() {
+  console.log("Joanne's function");
+}
 export default App;
