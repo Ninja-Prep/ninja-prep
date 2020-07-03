@@ -1,12 +1,7 @@
 import React from "react";
 
 function App() {
-  console.log("Adding a log statemet");
-<<<<<<< Updated upstream
-  console.log("joanne's test");
-=======
-  console.log("Alex's test");
->>>>>>> Stashed changes
+  console.log("Nguyen");
   return <div>Hello</div>;
 }
 
