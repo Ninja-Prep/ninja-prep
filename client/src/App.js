@@ -4,7 +4,7 @@ import Header from "../src/Header";
 
 function App() {
 
-  return ( <div>Hello Alex</div>
+  return ( <div>Hello Visitor!</div>
   )
 }
 export default App;
