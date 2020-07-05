@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.com/alexngn/ninja-prep.svg?token=uyxNiz5t4m7psWEvcCa2&branch=master)](https://travis-ci.com/alexngn/ninja-prep)[![codecov](https://codecov.io/gh/alexngn/ninja-prep/branch/master/graph/badge.svg?token=TWBKFMYTP2)](https://codecov.io/gh/alexngn/ninja-prep)
