@@ -1,0 +1,27 @@
+{
+  "name": "ninja-prep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node server/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codecov": "^3.7.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5"
+  }
+}
