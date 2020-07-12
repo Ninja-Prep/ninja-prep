@@ -6,8 +6,6 @@ orbs:
 
 jobs:
   build-and-test:
-    # environment:
-    # CODECOV_TOKEN: 0495b91f-ff6a-4d8a-89f1-c51bc2d4de9d
     executor:
       name: node/default
     steps:

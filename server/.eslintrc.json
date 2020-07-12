@@ -3,7 +3,7 @@
   "plugins": ["prettier"],
   "rules": {
     "func-names": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "no-process-exit": "off",
     "no-console": "off",
     "no-unused-vars": "warn",
