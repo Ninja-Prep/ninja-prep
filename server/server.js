@@ -1,4 +1,5 @@
 const dash = require('appmetrics-dash').monitor();
+const prom = require('appmetrics-prometheus').attach();
 const express = require('express');
 const path = require('path');
 

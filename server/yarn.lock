@@ -221,6 +221,15 @@ appmetrics-dash@^5.3.0:
   optionalDependencies:
     node-report "^2.1.0"
 
+appmetrics-prometheus@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/appmetrics-prometheus/-/appmetrics-prometheus-3.1.0.tgz#2c865529dd6dce3a924ed0df74cf2f32ee120c7d"
+  integrity sha512-TkrsA29Pesr12quj0UZOPAJBayfusWDnWj7/6EiMrGiHhPyC2pOhX3ckv0qNVK0KO7dNgsf4FUs5kPJYWBuc/g==
+  dependencies:
+    appmetrics "^5.0.0"
+    debug "^2.6.0"
+    express "^4.14.1"
+
 appmetrics@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/appmetrics/-/appmetrics-5.1.1.tgz#ae742ca33eb807d87156d4c508b0474b5be40e88"
