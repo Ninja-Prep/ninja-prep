@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/alxngu/.yarn/bin/yarn.js add appmetrics-prometheus
+  /usr/local/bin/node /Users/alxngu/.yarn/bin/yarn.js add api-express-exporter
 
 PATH: 
   /Users/alxngu/.yarn/bin:/Users/alxngu/.config/yarn/global/node_modules/.bin:/Users/alxngu/.toolbox/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/alxngu/.toolbox/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/alxngu/Desktop/Folders/ninja-prep/server/node_modules/ansi-colors/README.md'
+  Error: EACCES: permission denied, unlink '/Users/alxngu/Desktop/Folders/ninja-prep/server/node_modules/ansi-colors/LICENSE'
 
 npm manifest: 
   {
@@ -33,7 +33,10 @@ npm manifest:
     "license": "ISC",
     "dependencies": {
       "appmetrics-dash": "^5.3.0",
+      "appmetrics-prometheus": "^3.1.0",
       "express": "^4.17.1",
+      "express-prom-bundle": "^6.0.0",
+      "prom-client": "^12.0.0",
       "react": "^16.13.1",
       "sudo": "^1.0.3",
       "yarn": "^1.22.4"
@@ -280,6 +283,15 @@ Lockfile:
     optionalDependencies:
       node-report "^2.1.0"
   
+  appmetrics-prometheus@^3.1.0:
+    version "3.1.0"
+    resolved "https://registry.yarnpkg.com/appmetrics-prometheus/-/appmetrics-prometheus-3.1.0.tgz#2c865529dd6dce3a924ed0df74cf2f32ee120c7d"
+    integrity sha512-TkrsA29Pesr12quj0UZOPAJBayfusWDnWj7/6EiMrGiHhPyC2pOhX3ckv0qNVK0KO7dNgsf4FUs5kPJYWBuc/g==
+    dependencies:
+      appmetrics "^5.0.0"
+      debug "^2.6.0"
+      express "^4.14.1"
+  
   appmetrics@^5.0.0:
     version "5.1.1"
     resolved "https://registry.yarnpkg.com/appmetrics/-/appmetrics-5.1.1.tgz#ae742ca33eb807d87156d4c508b0474b5be40e88"
@@ -473,6 +485,11 @@ Lockfile:
     integrity sha1-QIZrnhueC1W0gYlDEeaPr/rrxSI=
     dependencies:
       callsite "1.0.0"
+  
+  bintrees@1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/bintrees/-/bintrees-1.0.1.tgz#0e655c9b9c2435eaab68bf4027226d2b55a34524"
+    integrity sha1-DmVcm5wkNeqraL9AJyJtK1WjRSQ=
   
   blob@0.0.5:
     version "0.0.5"
@@ -1268,6 +1285,14 @@ Lockfile:
     version "1.8.1"
     resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
     integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  
+  express-prom-bundle@^6.0.0:
+    version "6.0.0"
+    resolved "https://registry.yarnpkg.com/express-prom-bundle/-/express-prom-bundle-6.0.0.tgz#e1aff1bddcd4f01359478e150dffd4e6214b88d7"
+    integrity sha512-wRq1yIfMo7oo6lbX38A+g93h/rxSaGk4DkvzIlnF9QGQVBuKmjm/Bkkztu6R6KrMHSuMKWNIrZbZKreuZdEV6w==
+    dependencies:
+      on-finished "^2.3.0"
+      url-value-parser "^2.0.0"
   
   express@^4.14.1, express@^4.17.1:
     version "4.17.1"
@@ -2248,7 +2273,7 @@ Lockfile:
       function-bind "^1.1.1"
       has "^1.0.3"
   
-  on-finished@~2.3.0:
+  on-finished@^2.3.0, on-finished@~2.3.0:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
     integrity sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=
@@ -2458,6 +2483,13 @@ Lockfile:
     version "2.0.3"
     resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
     integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
+  
+  prom-client@^12.0.0:
+    version "12.0.0"
+    resolved "https://registry.yarnpkg.com/prom-client/-/prom-client-12.0.0.tgz#9689379b19bd3f6ab88a9866124db9da3d76c6ed"
+    integrity sha512-JbzzHnw0VDwCvoqf8y1WDtq4wSBAbthMB1pcVI/0lzdqHGJI3KBJDXle70XK+c7Iv93Gihqo0a5LlOn+g8+DrQ==
+    dependencies:
+      tdigest "^0.1.1"
   
   prop-types@^15.6.2, prop-types@^15.7.2:
     version "15.7.2"
@@ -3075,6 +3107,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/tcp-ping/-/tcp-ping-0.1.1.tgz#02dd7f42b5bf7d7cb78d5b7aacefa155fd8f7c0c"
     integrity sha1-At1/QrW/fXy3jVt6rO+hVf2PfAw=
   
+  tdigest@^0.1.1:
+    version "0.1.1"
+    resolved "https://registry.yarnpkg.com/tdigest/-/tdigest-0.1.1.tgz#2e3cb2c39ea449e55d1e6cd91117accca4588021"
+    integrity sha1-Ljyyw56kSeVdHmzZEReszKRYgCE=
+    dependencies:
+      bintrees "1.0.1"
+  
   text-table@^0.2.0:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
@@ -3190,6 +3229,11 @@ Lockfile:
     integrity sha512-KY9Frmirql91X2Qgjry0Wd4Y+YTdrdZheS8TFwvkbLWf/G5KNJDCh6pKL5OZctEW4+0Baa5idK2ZQuELRwPznQ==
     dependencies:
       punycode "^2.1.0"
+  
+  url-value-parser@^2.0.0:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/url-value-parser/-/url-value-parser-2.0.1.tgz#c8179a095ab9ec1f5aa17ca36af5af396b4e95ed"
+    integrity sha512-bexECeREBIueboLGM3Y1WaAzQkIn+Tca/Xjmjmfd0S/hFHSCEoFkNh0/D0l9G4K74MkEP/lLFRlYnxX3d68Qgw==
   
   util-deprecate@~1.0.1:
     version "1.0.2"
