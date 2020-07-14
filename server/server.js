@@ -1,43 +1,12 @@
-// const dash = require('appmetrics-dash').monitor();
-// const prom = require('appmetrics-prometheus').attach();
-// const promBundle = require('express-prom-bundle');
 const express = require('express');
-const client = require('prom-client');
-const metricsMiddleware = require('api-express-exporter');
 const path = require('path');
-
-// const metricsMiddleware = promBundle({ includeMethod: true });
+const metricsMiddleware = require('./prometheus');
 
 const app = express();
 
-// app.use(
-//   '/myweirdmetrics',
-//   require('appmetrics-prometheus').endpoint(),
-//   (req, res) => {
-//     res.send('Hello World');
-//   }
-// );
 app.use(metricsMiddleware());
-// app.use(require('api-express-exporter')());
-
-// https://github.com/siimon/prom-client
-// prometheus metrics
-
-// const Registry = { client };
-// const register = new Registry();
-// const collectDefaultMetrics = { client };
-
-// Probe every 5th second.
-
-// collectDefaultMetrics({ register, timeout: 5000, prefix: 'default_' });
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
-// app.get('/metrics', (req, res) => {
-//   app.log('GET -> metrics called.');
-//   res.set('Content-Type', register.contentType);
-//   res.end(register.metrics());
-// });
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
