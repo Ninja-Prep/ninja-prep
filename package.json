@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "start": "node server/server.js",
-    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=false yarn --cwd ./server/ install && yarn --cwd ./client/ install && yarn --cwd ./client/ build"
+    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=true yarn --cwd ./server/ install && yarn --cwd ./client/ install && yarn --cwd ./client/ build"
   },
   "author": "",
   "license": "ISC",
