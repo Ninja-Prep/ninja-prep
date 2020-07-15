@@ -10,7 +10,9 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - run: yarn install
+      - node/install:
+          install-yarn: true
+          node-version: latest
       - run: yarn global add jest
       - run: yarn test
       - run: sudo yarn global add codecov
