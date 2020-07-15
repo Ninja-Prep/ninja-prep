@@ -20,6 +20,8 @@ jobs:
             - codecov/upload:
                 file: ./coverage/coverage-final.json
   deploy-prod:
+    executor:
+      name: node/default
     steps:
       - checkout
       - run: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
