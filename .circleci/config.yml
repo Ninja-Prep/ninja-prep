@@ -19,8 +19,19 @@ jobs:
             - run: codecov
             - codecov/upload:
                 file: ./coverage/coverage-final.json
+  deploy-prod:
+    steps:
+      - checkout
+      - run: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
 
 workflows:
   build-and-test:
     jobs:
       - build-and-test
+      - deploy-prod:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build
