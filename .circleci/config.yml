@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@1.1.6
+  node: circleci/node@2.0.2
   codecov: codecov/codecov@1.1.0
 
 jobs:
@@ -20,8 +20,8 @@ jobs:
             - codecov/upload:
                 file: ./coverage/coverage-final.json
   deploy-prod:
-    executor:
-      name: node/default
+    docker:
+      - image: circleci/node:14.x
     steps:
       - checkout
       - run: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “deploy_project.sh”
