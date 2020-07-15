@@ -24,7 +24,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - run: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
+      - run: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “deploy_project.sh”
 
 workflows:
   build-and-test:
