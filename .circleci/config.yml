@@ -10,14 +10,13 @@ jobs:
       name: node/default
     steps:
       - checkout
-        steps:
-          - run: yarn install
-          - run: yarn global add jest
-          - run: yarn test
-          - run: sudo yarn global add codecov
-          - run: codecov
-          - codecov/upload:
-              file: ./coverage/coverage-final.json
+        - run: yarn install
+        - run: yarn global add jest
+        - run: yarn test
+        - run: sudo yarn global add codecov
+        - run: codecov
+        - codecov/upload:
+            file: ./coverage/coverage-final.json
   deploy-prod:
     docker:
       - image: circleci/node:7.10
