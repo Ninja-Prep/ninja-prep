@@ -18,7 +18,7 @@ const setupMetricService = (option) => {
   });
 
   const host = option.host || 'localhost';
-  const port = option.port || 9991;
+  const port = option.port || process.argv[3];
 
   metricServer.listen(port, host, () => {
     console.log(`Metrics server listening on ${host}:${port}`);
