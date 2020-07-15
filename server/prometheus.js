@@ -56,13 +56,13 @@ const captureAllRoutes = (option, app) => {
 const makeApiMiddleware = (option = {}) => {
   const allRoutes = [];
 
-  const normalizePath = (req, opts) => {
+  const normalizePath = (req) => {
     if (option.normalizePath !== undefined && !option.normalizePath) {
       return req.url;
     }
 
     let pattern = null;
-    let path = url.parse(req.originalUrl || req.url).pathname;
+    let path = url.URL(req.originalUrl || req.url).pathname;
     if (path.endsWith('/')) {
       // Remove trailing slash
       path = path.replace(/\/$/, '');
