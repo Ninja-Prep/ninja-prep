@@ -22,7 +22,7 @@ jobs:
           file: ./coverage/coverage-final.json
   deploy-prod:
     docker:
-      - image: circleci/node:x.y
+      - image: circleci/node:7.10
     steps:
       - checkout
       - run: ls && pwd
