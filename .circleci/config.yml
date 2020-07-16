@@ -28,7 +28,7 @@ jobs:
       - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
 
 workflows:
-  deploy-prod:
+  build-and-test:
     jobs:
       - build-and-test
       - deploy-prod:
