@@ -5,37 +5,37 @@ orbs:
   codecov: codecov/codecov@1.1.0
 
 jobs:
-  # build-and-test:
-  #   executor:
-  #     name: node/default
-  #   steps:
-  #     - checkout
-  #     - node/install:
-  #         install-yarn: true
-  #         install-npm: false
-  #         node-version: latest
-  #     - run: yarn global add jest
-  #     - run: yarn test
-  #     - run: sudo yarn global add codecov
-  #     - run: codecov
-  #     - codecov/upload:
-  #         file: ./coverage/coverage-final.json
-  deploy-prod:
-    docker:
-      - image: circleci/node:7.10
+  build-and-test:
+    executor:
+      name: node/default
     steps:
       - checkout
-      - run: ls && pwd
-      - run: ssh -o -t StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
+      - node/install:
+          install-yarn: true
+          install-npm: false
+          node-version: latest
+      - run: yarn global add jest
+      - run: yarn test
+      - run: sudo yarn global add codecov
+      - run: codecov
+      - codecov/upload:
+          file: ./coverage/coverage-final.json
+    deploy-prod:
+      docker:
+        - image: circleci/node:7.10
+      steps:
+        - checkout
+        - run: ls && pwd
+        - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
 
 workflows:
   deploy-prod:
     jobs:
-      # - build-and-test
+      - build-and-test
       - deploy-prod:
           filters:
             branches:
               only:
                 - master
-          # requires:
-          # - build-and-test
+          requires:
+            - build-and-test
