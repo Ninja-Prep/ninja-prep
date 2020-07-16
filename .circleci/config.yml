@@ -25,7 +25,8 @@ jobs:
       - image: circleci/node:7.10
     steps:
       - checkout
-      - run: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
+      - run: ls && pwd
+      - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
 
 workflows:
   build-and-test:
