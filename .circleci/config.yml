@@ -22,11 +22,14 @@ jobs:
           file: ./coverage/coverage-final.json
   deploy-prod:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:x.y
     steps:
       - checkout
       - run: ls && pwd
       - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
+      - run: sudo git pull origin master
+      - run: yarn yarn-recursive install
+      - run: yarn start
 
 workflows:
   build-and-test:
