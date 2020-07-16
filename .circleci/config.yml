@@ -27,9 +27,6 @@ jobs:
       - checkout
       - run: ls && pwd
       - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
-      - run: sudo git pull origin master
-      - run: sudo yarn yarn-recursive install
-      - run: yarn start
 
 workflows:
   deploy-prod:
