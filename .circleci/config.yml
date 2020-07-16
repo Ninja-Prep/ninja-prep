@@ -20,13 +20,12 @@ jobs:
       - run: codecov
       - codecov/upload:
           file: ./coverage/coverage-final.json
-    deploy-prod:
-      docker:
-        - image: circleci/node:7.10
-      steps:
-        - checkout
-        - run: ls && pwd
-        - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
+  deploy-prod:
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
 
 workflows:
   deploy-prod:
