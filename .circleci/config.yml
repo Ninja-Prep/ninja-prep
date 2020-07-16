@@ -26,9 +26,9 @@ jobs:
     steps:
       - checkout
       - run: ls && pwd
-      - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
+      - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP
       - run: sudo git pull origin master
-      - run: yarn yarn-recursive install
+      - run: sudo yarn yarn-recursive install
       - run: yarn start
 
 workflows:
