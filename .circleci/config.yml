@@ -32,13 +32,13 @@ jobs:
       - run: yarn start
 
 workflows:
-  build-and-test:
-    jobs:
-      # - build-and-test
-      - deploy-prod:
-          filters:
-            branches:
-              only:
-                - master
-          requires:
-            - build-and-test
+  # build-and-test:
+  jobs:
+    # - build-and-test
+    - deploy-prod:
+        filters:
+          branches:
+            only:
+              - master
+        requires:
+          - build-and-test
