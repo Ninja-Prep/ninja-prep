@@ -21,8 +21,8 @@ jobs:
       - codecov/upload:
           file: ./coverage/coverage-final.json
   deploy-prod:
-    docker:
-      - image: circleci/node:7.10
+    executor:
+      name: node/default
     steps:
       - checkout
       - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
