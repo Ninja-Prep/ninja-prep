@@ -1,6 +1,6 @@
 import React from 'react'
 
 function App() {
-	return <div> Made a change!</div>
+	return <div> Hello!</div>
 }
 export default App

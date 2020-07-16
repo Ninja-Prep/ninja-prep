@@ -26,7 +26,7 @@ jobs:
     steps:
       - checkout
       - run: ls && pwd
-      - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
+      - run: ssh -o -t StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
 
 workflows:
   deploy-prod:
