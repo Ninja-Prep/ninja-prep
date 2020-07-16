@@ -12,6 +12,7 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
+          install-npm: false
           node-version: latest
       - run: yarn global add jest
       - run: yarn test

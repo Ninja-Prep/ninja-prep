@@ -62,7 +62,7 @@ const makeApiMiddleware = (option = {}) => {
     }
 
     let pattern = null;
-    let path = url.URL(req.originalUrl || req.url).pathname;
+    let path = url.parse(req.originalUrl || req.url).pathname;
     if (path.endsWith('/')) {
       // Remove trailing slash
       path = path.replace(/\/$/, '');
