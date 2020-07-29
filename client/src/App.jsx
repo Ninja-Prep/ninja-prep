@@ -1,6 +1,6 @@
 import React from 'react'
 
 function App() {
-	return <div> Hello World!</div>
+	return <div> PM2</div>
 }
 export default App
