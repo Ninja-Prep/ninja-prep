@@ -15,6 +15,8 @@ jobs:
           install-npm: false
           node-version: latest
       - run: yarn global add jest
+      - run: yarn add @babel/preset-react
+      - run: yarn add @babel/plugin-transform-modules-commonjs
       - run: yarn test
       - run: sudo yarn global add codecov
       - run: codecov
