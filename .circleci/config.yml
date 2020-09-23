@@ -15,9 +15,9 @@ jobs:
           install-npm: false
           node-version: latest
       - run: yarn global add jest
-      - run: yarn test
-      - run: sudo yarn global add codecov
-      - run: codecov
+      # - run: yarn test
+      # - run: sudo yarn global add codecov
+      # - run: codecov
       - codecov/upload:
           file: ./coverage/coverage-final.json
   deploy-prod:
