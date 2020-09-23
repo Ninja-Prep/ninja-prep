@@ -15,9 +15,13 @@ jobs:
           install-npm: false
           node-version: latest
       - run: yarn global add jest
-      # - run: yarn test
-      # - run: sudo yarn global add codecov
-      # - run: codecov
+      - run: yarn add @babel/preset-react
+      - run: yarn add @babel/plugin-transform-modules-commonjs
+      - run: yarn add react
+      - run: yarn add react-dom
+      - run: yarn test
+      - run: sudo yarn global add codecov
+      - run: codecov
       - codecov/upload:
           file: ./coverage/coverage-final.json
   deploy-prod:
