@@ -19,6 +19,7 @@ jobs:
       - run: yarn add @babel/plugin-transform-modules-commonjs
       - run: yarn add react
       - run: yarn add react-dom
+      - run: yarn add identity-obj-proxy
       - run: yarn test
       - run: sudo yarn global add codecov
       - run: codecov
