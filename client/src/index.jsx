@@ -1,5 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+import './css/index.css'
 
-ReactDOM.render(<App content="New Words" />, document.getElementById('root'))
+ReactDOM.render(
+	<div>
+		<App />
+	</div>,
+	document.getElementById('root')
+)

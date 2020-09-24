@@ -1,0 +1,31 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #f7f8fc;
+	padding: 0;
+	margin: 0;
+	color: #767676;
+	font-weight: 700;
+	z-index: 1;
+}
+
+.logo {
+	color: #0a0a10;
+	font-size: 4rem;
+	padding-left: 3%;
+	position: absolute;
+}
+
+.logo:hover {
+	text-decoration: none;
+	color: #0a0a10;
+}
+
+.navbar-nav {
+	padding-left: 10%;
+}
+
+.navbar-collapse {
+	padding-left: 0;
+}

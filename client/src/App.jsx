@@ -1,6 +1,11 @@
 import React from 'react'
+import { Home } from './views/Home'
 
-function App({ content }) {
-	return <div>{content}</div>
+function App() {
+	return (
+		<div>
+			<Home />
+		</div>
+	)
 }
 export default App
