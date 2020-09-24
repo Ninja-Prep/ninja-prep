@@ -1,0 +1,27 @@
+.footer {
+	/* background-color: #47527b; */
+	background-color: #3f4cb0;
+	color: #f7f8fc;
+	padding: 2% 10%;
+	font-size: 1.2rem;
+	bottom: 0;
+	width: 100%;
+	margin-top: 10%;
+}
+
+p {
+	margin: 0;
+}
+
+.footer-logo {
+	font-weight: 700;
+	font-size: 4rem;
+}
+
+.contact {
+	text-align: right;
+}
+
+.copyright {
+	text-align: center;
+}
