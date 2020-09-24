@@ -4,7 +4,7 @@ import '../css/navbar.css'
 function Navbar() {
 	return (
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light">
+			<nav className="navbar navbar-expand-lg navbar-light">
 				<a href="https://www.google.com/">
 					<img src="./images/logo.png" alt="logo" />
 				</a>
@@ -20,15 +20,15 @@ function Navbar() {
 					<span class="navbar-toggler-icon"></span>
 				</button> */}
 
-				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-					<ul class="navbar-nav">
-						<li class="nav-item">
+				<div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+					<ul className="navbar-nav">
+						<li className="nav-item">
 							<a href="https://www.google.com/">link</a>
 						</li>
-						<li class="nav-item">
+						<li className="nav-item">
 							<a href="https://www.google.com/">link</a>
 						</li>
-						<li class="nav-item">
+						<li className="nav-item">
 							<a href="https://www.google.com/">link</a>
 						</li>
 					</ul>

@@ -11,9 +11,15 @@
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
+		"babel-plugin-react-html-attrs": "^3.0.5",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.1"
+	},
+	"jest": {
+		"moduleNameMapper": {
+			"\\.(css|less|scss|sass)$": "identity-obj-proxy"
+		}
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -51,6 +57,7 @@
 		"eslint-plugin-prettier": "^3.1.4",
 		"eslint-plugin-react": "7.x",
 		"eslint-plugin-react-hooks": "2.0.0",
+		"identity-obj-proxy": "^3.0.0",
 		"prettier": "^2.0.5"
 	}
 }

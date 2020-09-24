@@ -3,21 +3,21 @@ import '../css/footer.css'
 
 function Footer() {
 	return (
-		<div class="footer">
-			<div class="row">
-				<div class="col-sm">
+		<div className="footer">
+			<div className="row">
+				<div className="col-sm">
 					<div>
-						<p class="footer-logo">row1</p>
+						<p className="footer-logo">row1</p>
 					</div>
 				</div>
-				<div class="col-sm">
-					<div class="contact">
+				<div className="col-sm">
+					<div className="contact">
 						<p>row1</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="copyright">
+			<div className="copyright">
 				<p>&copy; NinjaPrep</p>
 				<p>2020</p>
 			</div>
