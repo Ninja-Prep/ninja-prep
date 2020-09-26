@@ -1,50 +1,28 @@
 /*HEADER*/
 
 .header {
-    /* position: relative;
+	/* position: relative;
     top: 50px; */
-    width: 100%;
-    padding: 6% 10% 8% 10%;
-    color: #0a0a10;
-    background-color: #f7f8fc;
-  }
-  
-  .header-content h2 {
-    font-size: 1.7rem;
-  }
-  
-  .header-content p {
-    padding-top: 5%;
-  }
-  
-  /*ABOUT*/
-  .about {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    /* position: absolute;
-    top: 100px; */
-    margin: 12% 10% 0 10%;
-    width: 60%;
-    color: #0a0a10;
-    background-color: white;
-  }
-  
-  .container {
-    margin: 0;
-    padding: 5%;
-  }
-  
-  .about .col-sm {
-    padding: 0 5%;
-  }
-  .profile-picture {
-    background-color: #e8888e;
-    width: 100%;
-    height: 100%;
-  }
-  
-  
-  
-  
-  
+	width: 100%;
+	padding: 10% 10% 7% 10%;
+	color: #0a0a10;
+	background-color: #f7f8fc;
+}
+
+.header-title {
+	width: 50%;
+}
+
+.header-description {
+	width: 43%;
+	padding-bottom: 3%;
+}
+
+.get-started {
+	background-color: #ee953d;
+	color: white;
+	text-align: center;
+	padding: 0.5% 1%;
+	border-radius: 30px;
+	border: none;
+}
