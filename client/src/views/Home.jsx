@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar } from '../components/Navbar'
 import { Header } from '../components/Header'
+import { Discover } from '../components/Discover'
 import { Footer } from '../components/Footer'
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
 		<div>
 			<Navbar />
 			<Header />
+			<Discover />
 			<Footer />
 		</div>
 	)

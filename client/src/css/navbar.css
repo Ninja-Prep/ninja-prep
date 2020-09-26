@@ -10,22 +10,13 @@
 	z-index: 1;
 }
 
+.navbar-brand {
+	padding: 0.5% 1% 0.5% 4%;
+	margin: 0;
+}
+
 .logo {
-	color: #0a0a10;
-	font-size: 4rem;
-	padding-left: 3%;
-	position: absolute;
+	height: 50px;
+	width: auto;
 }
 
-.logo:hover {
-	text-decoration: none;
-	color: #0a0a10;
-}
-
-.navbar-nav {
-	padding-left: 10%;
-}
-
-.navbar-collapse {
-	padding-left: 0;
-}
