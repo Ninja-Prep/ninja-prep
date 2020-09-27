@@ -15,11 +15,14 @@ jobs:
           install-npm: false
           node-version: latest
       - run: 
+          name: Client Build Attempt
+          command: yarn --cwd ./client run build
+      - run: 
           name: Testing Client Folder
           command: sudo chmod +x ./bin/TestClient.sh && sudo ./bin/TestClient.sh
       - run: 
           name: Adding Code Coverage
-          command: sudo chmod +x ./bin/CodeCoverageClient.sh && sudo 
+          command: sudo chmod +x ./bin/CodeCoverageClient.sh && sudo ./bin/CodeCoverageClient.sh
       - codecov/upload:
           file: ./client/coverage/coverage-final.json
 
