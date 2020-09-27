@@ -1,0 +1,7 @@
+{
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "moduleNameMapper": {
+        "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+} 

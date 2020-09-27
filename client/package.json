@@ -4,6 +4,18 @@
 	"private": true,
 	"proxy": "http://localhost:5000",
 	"type": "module",
+	"babel": {
+		"env": {
+			"test": {
+				"presets": [
+					"@babel/preset-react"
+				],
+				"plugins": [
+					"@babel/plugin-transform-modules-commonjs"
+				]
+			}
+		}
+	},
 	"dependencies": {
 		"@babel/plugin-transform-modules-commonjs": "^7.10.4",
 		"@babel/plugin-transform-react-jsx": "^7.10.4",
@@ -16,15 +28,11 @@
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.1"
 	},
-	"jest": {
-		"moduleNameMapper": {
-			"\\.(css|less|scss|sass)$": "identity-obj-proxy"
-		}
-	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "react-scripts build ",
 		"test": "react-scripts test",
+		"jest": "jest --c .jest.config.json",
 		"eject": "react-scripts eject",
 		"eslint-check": "eslint --print-config ./src/App.jsx | eslint-config-prettier-check"
 	},
@@ -59,5 +67,10 @@
 		"eslint-plugin-react-hooks": "2.0.0",
 		"identity-obj-proxy": "^3.0.0",
 		"prettier": "^2.0.5"
+	},
+	"prettier": {
+		"semi": false,
+		"singleQuote": true,
+		"useTabs": true
 	}
 }

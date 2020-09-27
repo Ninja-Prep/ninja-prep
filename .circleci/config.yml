@@ -14,23 +14,26 @@ jobs:
           install-yarn: true
           install-npm: false
           node-version: latest
-      - run: yarn global add jest
-      - run: yarn add @babel/preset-react
-      - run: yarn add @babel/plugin-transform-modules-commonjs
-      - run: yarn add react
-      - run: yarn add react-dom
-      - run: yarn add identity-obj-proxy
-      - run: yarn test
-      - run: sudo yarn global add codecov
-      - run: codecov
+      - run: 
+          name: Adding NPM/Yarn dependencies
+          command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
+      - run: 
+          name: Testing Client Folder
+          command: cd client && yarn jest
+      - run: 
+          name: Client Build Attempt
+          command: CI=false yarn --cwd ./client run build
       - codecov/upload:
-          file: ./coverage/coverage-final.json
+          file: ./client/coverage/coverage-final.json
+
   deploy-prod:
     executor:
       name: node/default
     steps:
       - checkout
-      - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
+      - run: 
+          name: Deploy to Production
+          command: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
 
 workflows:
   build-and-test:

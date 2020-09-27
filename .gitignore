@@ -1,4 +1,4 @@
 /node_modules
 /coverage
 /.yarn
-/build
+/client/build
