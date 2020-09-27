@@ -16,10 +16,10 @@ jobs:
           node-version: latest
       - run: 
           name: Testing Client Folder
-          command: ./bin/TestClient.sh
+          command: sudo ./bin/TestClient.sh
       - run: 
           name: Adding Code Coverage
-          command: ./bin/CodeCoverageClient.sh
+          command: sudo ./bin/CodeCoverageClient.sh
       - codecov/upload:
           file: ./client/coverage/coverage-final.json
 
