@@ -15,11 +15,14 @@ jobs:
           install-npm: false
           node-version: latest
       - run: 
-          name: Client Build Attempt
-          command: yarn --cwd ./client run build
+          name: Adding NPM/Yarn dependencies
+          command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
       - run: 
           name: Testing Client Folder
-          command: sudo chmod +x ./bin/TestClient.sh && sudo ./bin/TestClient.sh
+          command: cd client && yarn jest
+      - run: 
+          name: Client Build Attempt
+          command: yarn --cwd ./client run build
       - run: 
           name: Adding Code Coverage
           command: sudo chmod +x ./bin/CodeCoverageClient.sh && sudo ./bin/CodeCoverageClient.sh
@@ -31,7 +34,9 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - run: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
+      - run: 
+          name: Deploy to Production
+          command: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
 
 workflows:
   build-and-test:

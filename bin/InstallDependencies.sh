@@ -5,4 +5,4 @@ yarn add @babel/plugin-transform-modules-commonjs
 yarn add react
 yarn add react-dom
 yarn add identity-obj-proxy
-yarn jest
+yarn add react-scripts
