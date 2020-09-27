@@ -30,7 +30,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "react-scripts build ",
 		"test": "react-scripts test",
 		"jest": "jest --c .jest.config.json",
 		"eject": "react-scripts eject",
