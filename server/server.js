@@ -1,11 +1,8 @@
 const express = require('express');
 const path = require('path');
-const metricsMiddleware = require('./prometheus');
 
 const PORT = process.env.PORT || process.argv[2] || 5000;
 const app = express();
-
-app.use(metricsMiddleware());
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
