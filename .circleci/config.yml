@@ -23,9 +23,6 @@ jobs:
       - run: 
           name: Client Build Attempt
           command: CI=false yarn --cwd ./client run build
-      - run: 
-          name: Adding Code Coverage
-          command: sudo chmod +x ./bin/CodeCoverageClient.sh && sudo ./bin/CodeCoverageClient.sh
       - codecov/upload:
           file: ./client/coverage/coverage-final.json
 
