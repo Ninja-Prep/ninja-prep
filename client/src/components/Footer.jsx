@@ -7,13 +7,38 @@ function Footer() {
 			<div className="row">
 				<div className="col-sm">
 					<div>
-						<p className="footer-logo">row1</p>
+						<p className="footer-logo">
+							<img className="logo" src="./images/logo.png" alt="logo" />
+						</p>
 					</div>
 				</div>
 				<div className="col-sm">
-					<div className="contact">
-						<p>row1</p>
-					</div>
+					<p class="bold">NINJAPREP</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
+				</div>
+				<div className="col-sm">
+					<p class="bold">COURSES</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
+				</div>
+				<div className="col-sm">
+					<p class="bold">COURSES</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
+				</div>
+				<div className="col-sm">
+					<p class="bold">RESOURCES</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
+					<p>About Us</p>
 				</div>
 			</div>
 
