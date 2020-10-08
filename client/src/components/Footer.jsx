@@ -13,28 +13,28 @@ function Footer() {
 					</div>
 				</div>
 				<div className="col-sm">
-					<p class="bold">NINJAPREP</p>
+					<p className="bold">NINJAPREP</p>
 					<p>About Us</p>
 					<p>About Us</p>
 					<p>About Us</p>
 					<p>About Us</p>
 				</div>
 				<div className="col-sm">
-					<p class="bold">COURSES</p>
+					<p className="bold">COURSES</p>
 					<p>About Us</p>
 					<p>About Us</p>
 					<p>About Us</p>
 					<p>About Us</p>
 				</div>
 				<div className="col-sm">
-					<p class="bold">COURSES</p>
+					<p className="bold">COURSES</p>
 					<p>About Us</p>
 					<p>About Us</p>
 					<p>About Us</p>
 					<p>About Us</p>
 				</div>
 				<div className="col-sm">
-					<p class="bold">RESOURCES</p>
+					<p className="bold">RESOURCES</p>
 					<p>About Us</p>
 					<p>About Us</p>
 					<p>About Us</p>
