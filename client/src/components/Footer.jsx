@@ -42,10 +42,7 @@ function Footer() {
 				</div>
 			</div>
 
-			<div className="copyright">
-				<p>&copy; NinjaPrep</p>
-				<p>2020</p>
-			</div>
+		
 		</div>
 	)
 }

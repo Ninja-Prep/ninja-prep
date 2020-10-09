@@ -1,16 +1,17 @@
-import React from 'react'
-import '../css/header.css'
+import React from 'react';
+import '../css/header.css';
+import {headerTitle, headerDescription} from '../stringVariables/HomeStringVariables';
 
 const Header = (props) => {
 	return (
 		<div className="header">
 			<div className="header-title">
-				<h1 className="bold">A place to gain new coding skills</h1>
+				
+				<h1 className="bold">{headerTitle}</h1>
 			</div>
 			<div className="header-description">
 				<h2>
-					NinjaPrep will help you build a strong and solid foundation on data
-					structures and algorithms to prepare you for technical interviews.
+					{headerDescription}
 				</h2>
 			</div>
 			<button className="get-started">

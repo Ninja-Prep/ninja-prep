@@ -42,18 +42,18 @@ const Solve = (props) => {
 				</div>
 
 				<div className="row challenge-content-container">
-					<div className="col-sm easy">
-						<p>Easy</p>
+					<div className="col-sm easy challenge">
+						<p className="difficulty-level bold">Easy</p>
 						<SolveCard />
 						<SolveCard />
 					</div>
-					<div className="col-sm medium">
-						<p>Medium</p>
+					<div className="col-sm medium challenge">
+						<p className="difficulty-level bold">Medium</p>
 						<SolveCard />
 						<SolveCard />
 					</div>
-					<div className="col-sm hard">
-						<p>Hard</p>
+					<div className="col-sm hard challenge">
+						<p className="difficulty-level bold">Hard</p>
 						<SolveCard />
 						<SolveCard />
 					</div>
