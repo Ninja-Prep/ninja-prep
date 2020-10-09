@@ -8,6 +8,7 @@ const Header = (props) => {
 			<div className="header-title">
 				
 				<h1 className="bold">{headerTitle}</h1>
+
 			</div>
 			<div className="header-description">
 				<h2>
