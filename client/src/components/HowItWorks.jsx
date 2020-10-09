@@ -9,18 +9,10 @@ class HowItWorks extends React.Component {
 			width: '0%',
 		}
 	}
-	changeOnStep1 = () => {
-		this.setState({ width: '10%' })
+	changeOnStep = (percentage) => {
+		this.setState({ width: percentage })
 	}
-	changeOnStep2 = () => {
-		this.setState({ width: '40%' })
-	}
-	changeOnStep3 = () => {
-		this.setState({ width: '65%' })
-	}
-	changeOnStep4 = () => {
-		this.setState({ width: '100%' })
-	}
+
 	render() {
 		return (
 			<div className="how-it-works-container">
@@ -35,25 +27,25 @@ class HowItWorks extends React.Component {
 					></div>
 				</div>
 				<div className="row">
-					<div className="col-sm" id="step-1" onMouseOver={this.changeOnStep1}>
+					<div className="col-sm" id="step-1" onMouseOver={() =>this.changeOnStep('10%')}>
 						<h2 className="step-title">Discover</h2>
 						<p>
 							{discoverSummary}
 						</p>
 					</div>
-					<div className="col-sm " id="step-2" onMouseOver={this.changeOnStep2}>
+					<div className="col-sm " id="step-2" onMouseOver={() =>this.changeOnStep('40%')}>
 						<h2 className="step-title">Learn</h2>
 						<p>
 							{learnSummary}
 						</p>
 					</div>
-					<div className="col-sm " id="step-3" onMouseOver={this.changeOnStep3}>
+					<div className="col-sm " id="step-3" onMouseOver={() =>this.changeOnStep('65%')}>
 						<h2 className="step-title">Solve</h2>
 						<p>
 							{solveSummary}
 						</p>
 					</div>
-					<div className="col-sm " id="step-4" onMouseOver={this.changeOnStep4}>
+					<div className="col-sm " id="step-4" onMouseOver={() =>this.changeOnStep('100%')}>
 						<h2 className="step-title">Go</h2>
 						<p>
 							{goSummary}
