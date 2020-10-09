@@ -1,12 +1,11 @@
 .footer {
 	/* background-color: #47527b; */
-	background-color: #3f4cb0;
-	color: #f7f8fc;
-	padding: 2% 10%;
+	background-color: white;
+	color: #0a0a10;
+	padding: 4% 10% 2% 10%;
 	font-size: 1.2rem;
 	bottom: 0;
 	width: 100%;
-	margin-top: 10%;
 }
 
 p {
@@ -16,9 +15,4 @@ p {
 .footer-logo {
 	font-weight: 700;
 	font-size: 4rem;
-}
-
-
-.copyright {
-	text-align: center;
 }

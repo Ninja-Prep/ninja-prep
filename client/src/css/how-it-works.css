@@ -1,9 +1,33 @@
 .how-it-works-container {
-	margin: 4% 10%;
+	padding: 4% 10%;
+	background-color: #f7f8fc;
+}
+.how-it-works-title {
+	padding-bottom: 6%;
+	text-align: center;
 }
 .progress-bar {
-    width: 25%;
-    background-color:#3F4CB0;
+	width: 25%;
+	background-color: #3f4cb0;
 }
 
+#step-1,
+#step-2,
+#step-3,
+#step-4 {
+	position: relative;
+	top: -47px;
+	text-align: center;
+}
 
+.step-title {
+	height: 80px;
+	width: 80px;
+	line-height: 80px;
+	-moz-border-radius: 40px; /* or 50% */
+	border-radius: 40px; /* or 50% */
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: auto auto 10% auto;
+}

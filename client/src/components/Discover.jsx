@@ -42,8 +42,8 @@ const Discover = (props) => {
 
 				<div className="row  discover-content-container">
 					<div className="discover-content ">
-						<div className="discover-card mr-4 card">
-							<img className="card-img-top" src="..." alt="Course image" />
+						<div className="discover-card mr-2 card">
+							<img className="card-img-top" src="./images/discover1.png" alt="Course image" />
 							<div className="card-body">
 								<h2 className="card-title bold">
 									The Basics of Array & String
@@ -54,8 +54,8 @@ const Discover = (props) => {
 					</div>
 
 					<div className="discover-content ">
-						<div className="discover-card mr-4 card">
-							<img className="card-img-top" src="..." alt="Course image" />
+						<div className="discover-card mr-2 card">
+							<img className="card-img-top" src="./images/discover2.png" alt="Course image" />
 							<div className="card-body">
 								<h2 className="card-title bold">
 									The Basics of Array & String
@@ -66,8 +66,8 @@ const Discover = (props) => {
 					</div>
 
 					<div className="discover-content">
-						<div className="discover-card mr-4 card">
-							<img className="card-img-top" src="..." alt="Course image" />
+						<div className="discover-card mr-2 card">
+							<img className="card-img-top" src="./images/discover3.png" alt="Course image" />
 							<div className="card-body">
 								<h2 className="card-title bold">
 									The Basics of Array & String
@@ -79,7 +79,7 @@ const Discover = (props) => {
 
 					<div className="discover-content">
 						<div className="discover-card card">
-							<img className="card-img-top" src="..." alt="Course image" />
+							<img className="card-img-top" src="./images/discover4.png" alt="Course image" />
 							<div className="card-body">
 								<h2 className="card-title bold">
 									The Basics of Array & String
