@@ -40,7 +40,7 @@ function Navbar() {
 						<ul className="navbar-nav ml-auto right-tabs">
 						<li className="nav-item right">
 							<a className="nav-link" href="#">
-								<p>Get Premium</p>
+								<p className="premium bold">Get Premium</p>
 							</a>
 						</li>
 						<li className="nav-item right">
@@ -50,7 +50,7 @@ function Navbar() {
 						</li>
 						<li className="nav-item right">
 							<a className="nav-link" href="#">
-								<p>Sign Up</p>
+								<p className="bold">Sign Up</p>
 							</a>
 						</li>
 						</ul>

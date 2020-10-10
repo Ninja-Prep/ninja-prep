@@ -27,26 +27,33 @@ class HowItWorks extends React.Component {
 					></div>
 				</div>
 				<div className="row">
-					<div className="col-sm" id="step" onMouseOver={() =>this.changeOnStep('10%')}>
-						<h2 className="step-title bold">Discover</h2>
+					{/* <div className="col-sm" id="step" onMouseOver={() =>this.changeOnStep('10%')}>
+						<h2 className="step-title bold">Discover <span className="step-number bold">2</span></h2>
+						<p className="step-description">
+							{discoverSummary}
+						</p>
+					</div> */}
+					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('10%')}>
+						<h2 className="step-title bold">Discover <span className="step-number bold">1</span></h2>
 						<p>
 							{discoverSummary}
 						</p>
 					</div>
 					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('40%')}>
-						<h2 className="step-title bold">Learn</h2>
-						<p>
+						<h2 className="step-title bold">Learn <span className="step-number bold">2</span></h2>
+						<p >
 							{learnSummary}
 						</p>
 					</div>
 					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('65%')}>
-						<h2 className="step-title bold">Solve</h2>
+						<h2 className="step-title bold">Solve <span className="step-number bold">3</span></h2>
+				
 						<p>
 							{solveSummary}
 						</p>
 					</div>
 					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('100%')}>
-						<h2 className="step-title bold">Go</h2>
+						<h2 className="step-title bold">Go <span className="step-number bold">4</span></h2>
 						<p>
 							{goSummary}
 						</p>

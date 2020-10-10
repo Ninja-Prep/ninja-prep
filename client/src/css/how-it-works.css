@@ -9,24 +9,32 @@
 .progress-bar {
 	width: 25%;
 	background-color: #3f4cb0;
-
 }
 
 #step {
 	position: relative;
-	top: -47px;
+	top: -60px;
 	text-align: center;
 	padding: 0 3%;
 }
 
 .step-title {
-	height: 90px;
-	width: 90px;
-	line-height: 90px;
+	height: 100px;
+	width: 100px;
+	line-height: 100px;
 	border-radius: 50%;
-	border: 2px solid #3F4CB0;
-	background-color: #F7F8FC;
-	color: #3F4CB0;
+	border: 2px solid #3f4cb0;
+	background-color: #f7f8fc;
+	color: #3f4cb0;
 	text-align: center;
 	margin: auto auto 10% auto;
+}
+
+.step-number {
+	position: absolute;
+	top: 1%;
+	left: 45%;
+	color: #3f4cb0;
+	opacity: 10%;
+	font-size: 3.5rem;
 }
