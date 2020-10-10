@@ -9,25 +9,24 @@
 .progress-bar {
 	width: 25%;
 	background-color: #3f4cb0;
+
 }
 
-#step-1,
-#step-2,
-#step-3,
-#step-4 {
+#step {
 	position: relative;
 	top: -47px;
 	text-align: center;
+	padding: 0 3%;
 }
 
 .step-title {
-	height: 80px;
-	width: 80px;
-	line-height: 80px;
-	-moz-border-radius: 40px; /* or 50% */
-	border-radius: 40px; /* or 50% */
-	background-color: black;
-	color: white;
+	height: 90px;
+	width: 90px;
+	line-height: 90px;
+	border-radius: 50%;
+	border: 2px solid #3F4CB0;
+	background-color: #F7F8FC;
+	color: #3F4CB0;
 	text-align: center;
 	margin: auto auto 10% auto;
 }
