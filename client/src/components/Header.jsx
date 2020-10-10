@@ -13,10 +13,9 @@ const Header = (props) => {
 				<h2>
 					{headerDescription}
 				</h2>
+				<img className = "header-img" src="./images/coursePreview.png"/>
 			</div>
-			<button className="get-started">
-				<p className="bold">Get started</p>
-			</button>
+	
 		</div>
 	)
 }

@@ -4,7 +4,7 @@ import '../css/navbar.css'
 function Navbar() {
 	return (
 		<div>
-			<nav className="navbar navbar-expand-lg navbar-light bg-light">
+			<nav className="navbar navbar-expand-lg navbar-dark">
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -19,40 +19,41 @@ function Navbar() {
 				<a className="navbar-brand" href="#">
 					<img className="logo" src="./images/logo.png" alt="logo" />
 				</a>
-
 				<div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-					<ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-						<li className="nav-item">
-							<a className="nav-link pl-0" href="#">
+					<ul className="navbar-nav mr-auto left-tabs">
+						<li className="nav-item left ">
+							<a className="nav-link" href="#">
 								<p>Home</p>
 							</a>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item left">
 							<a className="nav-link" href="#">
 								<p>About Us</p>
 							</a>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item left">
 							<a className="nav-link" href="#">
 								<p>Courses</p>
 							</a>
 						</li>
-						<li className="nav-item">
+					</ul>
+						<ul className="navbar-nav ml-auto right-tabs">
+						<li className="nav-item right">
 							<a className="nav-link" href="#">
 								<p>Get Premium</p>
 							</a>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item right">
 							<a className="nav-link" href="#">
 								<p>Sign In</p>
 							</a>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item right">
 							<a className="nav-link" href="#">
 								<p>Sign Up</p>
 							</a>
 						</li>
-					</ul>
+						</ul>
 				</div>
 			</nav>
 		</div>

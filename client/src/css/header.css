@@ -4,7 +4,7 @@
 	/* position: relative;
     top: 50px; */
 	width: 100%;
-	padding: 10% 10% 7% 10%;
+	padding: 8% 10% 4% 10%;
 	color: #0a0a10;
 	background-color: #f7f8fc;
 }
@@ -15,14 +15,9 @@
 
 .header-description {
 	width: 43%;
-	padding-bottom: 3%;
 }
 
-.get-started {
-	background-color: #ee953d;
-	color: white;
-	text-align: center;
-	padding: 0.5% 1%;
-	border-radius: 30px;
-	border: none;
+.header-img {
+	width: 70%;
+	padding: 3% 0% 0% 2%;
 }
