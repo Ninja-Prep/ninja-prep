@@ -27,12 +27,6 @@ class HowItWorks extends React.Component {
 					></div>
 				</div>
 				<div className="row">
-					{/* <div className="col-sm" id="step" onMouseOver={() =>this.changeOnStep('10%')}>
-						<h2 className="step-title bold">Discover <span className="step-number bold">2</span></h2>
-						<p className="step-description">
-							{discoverSummary}
-						</p>
-					</div> */}
 					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('10%')}>
 						<h2 className="step-title bold">Discover <span className="step-number bold">1</span></h2>
 						<p>
