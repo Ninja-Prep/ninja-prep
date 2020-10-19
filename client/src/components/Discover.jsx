@@ -10,49 +10,49 @@ const Discover = (props) => {
 				<h1 className="bold">Discover New Skills</h1>
 				<PlayArrowIcon className="discover-play" />
 			</div>
-			<div class="card-deck">
-				<div class="card">
+			<div className="card-deck">
+				<div className="card">
 					<img
-						class="card-img-top"
+						className="card-img-top"
 						src="./images/discover1.png"
 						alt="Card image cap"
 					/>
-					<div class="card-body">
-						<h2 class="card-title">Stacks</h2>
-						<p class="card-text subtitle">Stacks</p>
+					<div className="card-body">
+						<h2 className="card-title">Stacks</h2>
+						<p className="card-text subtitle">Stacks</p>
 					</div>
 				</div>
-				<div class="card">
+				<div className="card">
 					<img
-						class="card-img-top"
+						className="card-img-top"
 						src="./images/discover2.png"
 						alt="Card image cap"
 					/>
-					<div class="card-body">
-						<h2 class="card-title">Queue</h2>
-						<p class="card-text subtitle">Queue</p>
+					<div className="card-body">
+						<h2 className="card-title">Queue</h2>
+						<p className="card-text subtitle">Queue</p>
 					</div>
 				</div>
-				<div class="card">
+				<div className="card">
 					<img
-						class="card-img-top"
+						className="card-img-top"
 						src="./images/discover3.png"
 						alt="Card image cap"
 					/>
-					<div class="card-body">
-						<h2 class="card-title">Linked List</h2>
-						<p class="card-text subtitle">Linked List</p>
+					<div className="card-body">
+						<h2 className="card-title">Linked List</h2>
+						<p className="card-text subtitle">Linked List</p>
 					</div>
 				</div>
-				<div class="card">
+				<div className="card">
 					<img
-						class="card-img-top"
+						className="card-img-top"
 						src="./images/discover4.png"
 						alt="Card image cap"
 					/>
-					<div class="card-body">
-						<h2 class="card-title">Linked List</h2>
-						<p class="card-text subtitle">Linked List</p>
+					<div className="card-body">
+						<h2 className="card-title">Linked List</h2>
+						<p className="card-text subtitle">Linked List</p>
 					</div>
 				</div>
 			</div>
