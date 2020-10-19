@@ -3,21 +3,52 @@
 	top: 0;
 	width: 100%;
 	background-color: #3f4cb0;
-	padding: 0;
-	margin: 0;
+	padding: 0 10%;
 	font-weight: 700;
 	z-index: 1;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .navbar-brand {
-	padding: 0.75% 0 0.75% 3%;
+	padding: 2% 0;
 	margin: 0;
+	font-size: 1.2rem;
+	font-weight: 400;
 }
 
 .logo {
-	height: 50px;
-	width: auto;
+	height: 35px;
+	padding-right: 8%;
+}
+
+/* .left-tabs {
+	position: absolute;
+	left: 10%;
+} */
+
+.right-tabs {
+	position: absolute;
+	right: 10%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-left: 0;
+	padding-right: 0;
+	color: #f5f5f5;
+}
+
+/* .left {
+	padding-right: 2em;
+} */
+
+.right {
+	padding-left: 2em;
+}
+
+.premium {
+	background-color: #ee953d;
+	border-radius: 20px;
+	padding: 1px 10px;
 }
 
 .left-tabs {

@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import '../css/how-it-works.css'
-import {discoverSummary,learnSummary,solveSummary,goSummary} from '../stringVariables/HomeStringVariables'
+import {
+	discoverSummary,
+	learnSummary,
+	solveSummary,
+	goSummary,
+} from '../stringVariables/HomeStringVariables'
 
 class HowItWorks extends React.Component {
 	constructor(props) {
@@ -17,8 +22,8 @@ class HowItWorks extends React.Component {
 		return (
 			<div className="how-it-works-container">
 				<div className="how-it-works-title">
-<p className="subtitle">How It Works</p>
-<h1 className="bold">Stay ahead from home</h1>
+					<h2 className="subtitle">How It Works</h2>
+					<h1 className="bold">Stay ahead from home</h1>
 				</div>
 				<div className="progress">
 					<div
@@ -27,30 +32,46 @@ class HowItWorks extends React.Component {
 					></div>
 				</div>
 				<div className="row">
-					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('10%')}>
-						<h2 className="step-title bold">Discover <span className="step-number bold">1</span></h2>
-						<p>
-							{discoverSummary}
-						</p>
+					<div
+						className="col-sm "
+						id="step"
+						onMouseOver={() => this.changeOnStep('10%')}
+					>
+						<h2 className="step-title bold">
+							Discover <span className="step-number bold">1</span>
+						</h2>
+						<p>{discoverSummary}</p>
 					</div>
-					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('40%')}>
-						<h2 className="step-title bold">Learn <span className="step-number bold">2</span></h2>
-						<p >
-							{learnSummary}
-						</p>
+					<div
+						className="col-sm "
+						id="step"
+						onMouseOver={() => this.changeOnStep('40%')}
+					>
+						<h2 className="step-title bold">
+							Learn <span className="step-number bold">2</span>
+						</h2>
+						<p>{learnSummary}</p>
 					</div>
-					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('65%')}>
-						<h2 className="step-title bold">Solve <span className="step-number bold">3</span></h2>
-				
-						<p>
-							{solveSummary}
-						</p>
+					<div
+						className="col-sm "
+						id="step"
+						onMouseOver={() => this.changeOnStep('65%')}
+					>
+						<h2 className="step-title bold">
+							Solve <span className="step-number bold">3</span>
+						</h2>
+
+						<p>{solveSummary}</p>
 					</div>
-					<div className="col-sm " id="step" onMouseOver={() =>this.changeOnStep('100%')}>
-						<h2 className="step-title bold">Go <span className="step-number bold">4</span></h2>
-						<p>
-							{goSummary}
-						</p>
+					<div
+						className="col-sm "
+						id="step"
+						onMouseOver={() => this.changeOnStep('100%')}
+					>
+						<h2 className="step-title bold">
+							Go <span className="step-number bold">4</span>
+						</h2>
+						<p>{goSummary}</p>
 					</div>
 				</div>
 			</div>
