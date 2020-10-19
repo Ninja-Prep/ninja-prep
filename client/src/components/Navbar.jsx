@@ -42,6 +42,7 @@ function Navbar() {
 								<p>Sign In</p>
 							</a>
 						</li>
+
 					</ul>
 				</div>
 			</nav>
