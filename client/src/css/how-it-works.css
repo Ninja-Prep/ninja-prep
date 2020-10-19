@@ -23,11 +23,15 @@
 	width: 100px;
 	line-height: 100px;
 	border-radius: 50%;
-	border: 2px solid #3f4cb0;
+	border: 2px solid #dddddd;
 	background-color: #f7f8fc;
 	color: #3f4cb0;
 	text-align: center;
 	margin: auto auto 10% auto;
+}
+
+.step-title:hover {
+	border: 2px solid #3f4cb0;
 }
 
 .step-number {

@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar } from '../components/Navbar'
 import { Header } from '../components/Header'
 import { Discover } from '../components/Discover'
-import { Solve } from '../components/Solve'
+
 import { HowItWorks } from '../components/HowItWorks'
 import { Footer } from '../components/Footer'
 
@@ -12,7 +12,6 @@ function Home() {
 			<Navbar />
 			<Header />
 			<Discover />
-			<Solve />
 			<HowItWorks />
 			<Footer />
 		</div>
