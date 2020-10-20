@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/discover.css'
+import { Link } from 'react-router-dom'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 
