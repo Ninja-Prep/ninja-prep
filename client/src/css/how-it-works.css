@@ -9,6 +9,7 @@
 .progress-bar {
 	width: 25%;
 	background-color: #3f4cb0;
+	position: relative;
 }
 
 #step {
@@ -37,6 +38,7 @@
 .step-number {
 	position: absolute;
 	top: 1%;
+	left: 0;
 	left: 45%;
 	color: #3f4cb0;
 	opacity: 10%;

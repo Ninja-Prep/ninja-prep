@@ -3,7 +3,7 @@
 }
 
 .discover-title {
-	padding-bottom: 2%;
+	padding-bottom: 1%;
 	display: flex;
 	align-items: center;
 }
@@ -20,6 +20,20 @@
 	cursor: pointer;
 }
 
+.card:hover {
+	box-shadow: 0 0 15px 0 #e0e0e0;
+	cursor: pointer;
+}
+
 .card-img-top {
-	height: 200px;
+	height: 250px;
+}
+
+.card-body {
+	padding: 0.75rem 1.25rem;
+}
+
+.card-title {
+	font-weight: 700;
+	margin-bottom: 0;
 }
