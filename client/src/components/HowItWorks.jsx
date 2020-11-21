@@ -33,7 +33,7 @@ class HowItWorks extends React.Component {
 				</div>
 				<div className="row">
 					<div
-						className="col-sm "
+						className="col-md "
 						id="step"
 						onMouseOver={() => this.changeOnStep('10%')}
 					>
@@ -43,7 +43,7 @@ class HowItWorks extends React.Component {
 						<p>{discoverSummary}</p>
 					</div>
 					<div
-						className="col-sm "
+						className="col-md "
 						id="step"
 						onMouseOver={() => this.changeOnStep('40%')}
 					>
@@ -53,7 +53,7 @@ class HowItWorks extends React.Component {
 						<p>{learnSummary}</p>
 					</div>
 					<div
-						className="col-sm "
+						className="col-md "
 						id="step"
 						onMouseOver={() => this.changeOnStep('65%')}
 					>
