@@ -1,5 +1,5 @@
 //Header
-export const headerTitle = 'A place to gain new coding skills';
+export const headerTitle = 'A place to learn new coding skills';
 export const headerDescription = "NinjaPrep will help you build a strong and solid foundation on data structures and algorithms to prepare you for technical interviews.";
 
 //How It Works
