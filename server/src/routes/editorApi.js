@@ -13,3 +13,5 @@ router.post("/", (req, res) => {
     res.send(new Buffer.from(`${response["output"]}`));
   });
 });
+
+module.exports = router;
