@@ -8,10 +8,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=production && nodemon server.js",
+    "start": "cross-env NODE_ENV=production nodemon server.js",
     "server": "nodemon server.js",
     "client": "cd ../client && yarn start",
-    "dev": "cross-env NODE_ENV=development && concurrently \"yarn run server\" \"yarn run client\""
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\""
   },
   "author": "",
   "license": "ISC",
