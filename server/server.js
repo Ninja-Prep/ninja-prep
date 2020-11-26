@@ -10,8 +10,6 @@ const path = require("path");
 const PORT = process.env.PORT || process.argv[2] || 5000;
 
 const inProduction = process.env.NODE_ENV.trim() === "production";
-console.log(process.env.NODE_ENV);
-console.log(inProduction);
 
 if (inProduction) {
   app.use(express.static(path.join(__dirname, "..", "client", "build")));
