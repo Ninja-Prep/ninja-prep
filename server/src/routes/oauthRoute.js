@@ -28,7 +28,7 @@ router.get(
 );
 
 router.get(
-  "https://ninjaprep.io/auth/github/callback",
+  "/auth/github/callback",
   passport.authenticate("github", { failureRedirect: "/login" }),
   function (req, res) {
     res.redirect("/");
