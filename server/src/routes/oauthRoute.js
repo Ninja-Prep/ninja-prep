@@ -28,7 +28,7 @@ router.get(
 );
 
 router.get(
-  "/auth/github/callback",
+  "/github/callback",
   passport.authenticate("github", { failureRedirect: "/login" }),
   function (req, res) {
     res.redirect("/");
