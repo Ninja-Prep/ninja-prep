@@ -47,7 +47,7 @@ passport.use(
       callbackURL: "/auth/github/callback",
     },
     function (accessToken, refreshToken, profile, done) {
-      User.findOrCreate({ githubId: profile.id }, function (err, user) {
+      User.findOrCreate(profile.id, function (err, user) {
         if (err) {
           return done(err);
         }
@@ -66,5 +66,3 @@ passport.deserializeUser(function (id, done) {
     done(err, user);
   });
 });
-
-module.exports = passport;
