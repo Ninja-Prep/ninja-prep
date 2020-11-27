@@ -6,6 +6,7 @@ const passport = require("passport");
 const cors = require("cors");
 
 module.exports = function (app) {
+  app.enable("trust proxy");
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json({ extended: true }));
   app.use(flash());
