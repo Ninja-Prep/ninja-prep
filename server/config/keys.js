@@ -8,4 +8,6 @@ module.exports = {
   GOOGLE_CLIENT:
     "1099061643056-uttv485p1dejksge4t4fj22lpt2asbqa.apps.googleusercontent.com",
   GOOGLE_SECRET: "7NFLnF8vdRl_E-mTVHsTdcqE",
+  FACEBOOK_CLIENT: "502699163981548",
+  FACEBOOK_SECRET: "157dedc42ee6e64463841bf6e0a8b0c2",
 };

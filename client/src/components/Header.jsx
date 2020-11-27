@@ -20,7 +20,7 @@ const SocialMediaButtons = (cssClass) => {
 			<div className="d-flex justify-content-center">
 				<a
 					className={cssClass + ' fluid ui mb-3 facebook button'}
-					href="/auth/github"
+					href="/auth/facebook"
 				>
 					<i className="facebook icon"></i>
 					Facebook Login
