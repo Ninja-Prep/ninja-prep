@@ -3,6 +3,7 @@ const passport = require("passport");
 
 router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 router.get("/facebook", passport.authenticate("facebook"));
+router.get("/github", passport.authenticate("github"));
 
 router.get(
   "/google/callback",
@@ -22,6 +23,14 @@ router.get(
   }),
   (req, res) => {
     req.flash("login", "Logged In");
+    res.redirect("/");
+  }
+);
+
+router.get(
+  "https://ninjaprep.io/auth/github/callback",
+  passport.authenticate("github", { failureRedirect: "/login" }),
+  function (req, res) {
     res.redirect("/");
   }
 );
