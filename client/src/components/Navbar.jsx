@@ -17,7 +17,7 @@ function Navbar() {
 				>
 					<span className="navbar-toggler-icon"></span>
 				</button>
-				<Link className="navbar-brand" to="#">
+				<Link className="navbar-brand" to="/">
 					<img className="logo" src="./images/NinjaPrep-Logo.png" alt="logo" />
 					NinjaPrep
 				</Link>
