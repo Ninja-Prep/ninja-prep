@@ -38,8 +38,7 @@ const SocialMediaButtons = (cssClass) => {
 		</>
 	)
 }
-
-const SignIn = (props) => {
+const Login = (props) => {
 	return (
 		<div className="sign-in-container">
 			<div className="container">
@@ -67,6 +66,5 @@ const SignIn = (props) => {
 		</div>
 	)
 }
-
-export default SignIn
-export { default as SignIn } from './SignIn'
+export default Login
+export { default as Login } from './Login'
