@@ -1,7 +1,8 @@
 import React from 'react'
 import { Header } from '../components/Header'
 import { Discover } from '../components/Discover'
-import { Footer } from '../components/Footer'
+import { VideosAndArticles } from '../components/VideosAndArticles'
+import { CodeAlong } from '../components/CodeAlong'
 import '../css/LandingPage.css'
 
 function LandingPage() {
@@ -9,7 +10,8 @@ function LandingPage() {
 		<div>
 			<Header />
 			<Discover />
-			<Footer />
+			<VideosAndArticles />
+			<CodeAlong />
 		</div>
 	)
 }
