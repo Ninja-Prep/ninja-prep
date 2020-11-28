@@ -1,0 +1,39 @@
+.featured-container {
+	padding: 4% 10%;
+}
+
+.featured-title {
+	padding-bottom: 1%;
+	display: flex;
+	align-items: center;
+}
+
+.featured-play {
+	transform: scale(1.4);
+	margin-left: 1%;
+	margin-bottom: 1%;
+	color: #767676;
+}
+
+.featured-play:hover {
+	color: #0a0a10;
+	cursor: pointer;
+}
+
+.card:hover {
+	box-shadow: 0 0 15px 0 #e0e0e0;
+	cursor: pointer;
+}
+
+.card-img-top {
+	height: 250px;
+}
+
+.card-body {
+	padding: 0.75rem 1.25rem;
+}
+
+.card-title {
+	font-weight: 700;
+	margin-bottom: 0;
+}

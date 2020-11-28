@@ -1,43 +1,28 @@
 import React from 'react'
 import '../css/discover.css'
-import DiscoverCard from './DiscoverCard'
+import Grid from '@material-ui/core/Grid'
 
-import PlayArrowIcon from '@material-ui/icons/PlayArrow'
-
-const Discover = (props) => {
-	const discoverCards = [
-		{
-			discoverCardImgPath: './images/discover1.png',
-			discoverCardTitle: 'Stacks 101',
-			discoverCardSubtitle: 'Stacks',
-		},
-		{
-			discoverCardImgPath: './images/discover2.png',
-			discoverCardTitle: 'Queues 101',
-			discoverCardSubtitle: 'Queues',
-		},
-		{
-			discoverCardImgPath: './images/discover3.png',
-			discoverCardTitle: 'Linked List 101',
-			discoverCardSubtitle: 'Linked List',
-		},
-		{
-			discoverCardImgPath: './images/discover4.png',
-			discoverCardTitle: 'Remembering Binary',
-			discoverCardSubtitle: 'Binary',
-		},
-	]
+function Discover() {
 	return (
-		<div className="discover-container">
-			<div className="discover-title">
-				<h1 className="bold">Discover New Skills</h1>
-				<PlayArrowIcon className="discover-play" />
-			</div>
-			<div className="card-deck ">
-				{discoverCards.map((card, i) => (
-					<DiscoverCard key={i} {...card} />
-				))}
-			</div>
+		<div className="landing-page-container">
+			<Grid container justify="center" alignItems="center">
+				<Grid item xs={12} sm={6}>
+					<img
+						className="explore-cards-img"
+						src="./images/Explore-Cards.png"
+						alt="Explore Cards"
+					/>
+				</Grid>
+				<Grid item xs={12} sm={6}>
+					<h1 className="landing-page-title discover-title">Discover</h1>
+
+					<p className="landing-page-description">
+						Discover in-demand concepts and skills that are actually asked for
+						by top companies. Choose from our wide selection of problems and
+						dive deep!
+					</p>
+				</Grid>
+			</Grid>
 		</div>
 	)
 }
