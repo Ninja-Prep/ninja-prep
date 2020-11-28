@@ -1,11 +1,14 @@
 .landing-page-container {
 	padding: 4% 10%;
-    text-align: center;
+	text-align: center;
 }
 .landing-page-title {
 	font-family: 'Roboto';
 	font-weight: 700;
 	font-size: 2.8em;
+	width: 70%;
+	margin: 0 auto;
+	padding: 3% 0;
 }
 
 .landing-page-description {

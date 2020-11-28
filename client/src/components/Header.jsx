@@ -34,7 +34,7 @@ function Header() {
 				A place to help you build a strong foundation in data structures and
 				algorithms and prepare for technical interviews, all in one platform.
 			</p>
-			<Button className={classes.root}>
+			<Button className={classes.root} href="/login">
 				Start Learning <NavigateNextIcon className="start-learning-icon" />
 			</Button>
 		</div>

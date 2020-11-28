@@ -29,7 +29,7 @@ function Navbar() {
 							</Link>
 						</li>
 						<li className="nav-item right">
-							<Link className="nav-link" to="#">
+							<Link className="nav-link" to="/challenges">
 								<p>Challenges</p>
 							</Link>
 						</li>
