@@ -1,10 +1,10 @@
 import React from 'react'
-import { Home } from './views/Home'
+import { LandingPage } from './views/LandingPage'
 
 function App() {
 	return (
 		<div>
-			<Home />
+			<LandingPage />
 		</div>
 	)
 }

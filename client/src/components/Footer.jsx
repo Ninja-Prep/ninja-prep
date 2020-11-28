@@ -1,30 +1,31 @@
 import React from 'react'
 import '../css/footer.css'
-import FavoriteIcon from '@material-ui/icons/Favorite'
 
 function Footer() {
 	return (
 		<div className="footer-container">
 			<div className="row">
 				<div className="col-sm">
-					<div>
-						<img className="logo" src="./images/logo.png" alt="logo" />
-					</div>
+					<img
+						className="footer-logo"
+						src="./images/NinjaPrep-Logo.png"
+						alt="logo"
+					/>
 				</div>
 				<div className="col-sm">
-					<p className="bold">NINJAPREP</p>
+					<p className="footer-column bold subtitle">NINJAPREP</p>
 					<p>About Us</p>
 					<p>Premium</p>
 					<p>Roadmap</p>
 				</div>
 				<div className="col-sm">
-					<p className="bold">COURSES</p>
+					<p className="footer-column bold subtitle">COURSES</p>
 					<p>Stacks</p>
 					<p>Queues</p>
 					<p>Linked List</p>
 				</div>
 				<div className="col-sm">
-					<p className="bold">RESOURCES</p>
+					<p className="footer-column bold subtitle">RESOURCES</p>
 					<p>Articles</p>
 					<p>Challenges</p>
 					<p>Cheatsheets</p>

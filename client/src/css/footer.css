@@ -3,5 +3,14 @@
 	color: #0a0a10;
 	padding: 4% 10%;
 	border: 1px solid #e0e0e0;
+}
 
+.footer-logo {
+	width: 70px;
+	height: auto;
+	padding-top: 3%;
+}
+
+.footer-column {
+	padding-bottom: 2%;
 }

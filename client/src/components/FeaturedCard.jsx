@@ -1,9 +1,7 @@
 import React from 'react'
-import '../css/discover.css'
+import '../css/featured.css'
 
-import PlayArrowIcon from '@material-ui/icons/PlayArrow'
-
-const DiscoverCard = (props) => {
+const FeaturedCard = (props) => {
 	return (
 		<div className="card ">
 			<img
@@ -19,5 +17,5 @@ const DiscoverCard = (props) => {
 	)
 }
 
-export default DiscoverCard
-export { default as DiscoverCard } from './DiscoverCard'
+export default FeaturedCard
+export { default as FeaturedCard } from './FeaturedCard'

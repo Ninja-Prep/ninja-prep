@@ -17,14 +17,14 @@ function Navbar() {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<a className="navbar-brand" href="#">
-					<img className="logo" src="./images/logo.png" alt="logo" />
+					<img className="logo" src="./images/NinjaPrep-Logo.png" alt="logo" />
 					NinjaPrep
 				</a>
 				<div className="collapse navbar-collapse" id="navbarTogglerDemo03">
 					<ul className="navbar-nav ml-auto right-tabs">
 						<li className="nav-item right">
 							<a className="nav-link" href="#">
-								<p className="premium bold">Get Premium</p>
+								<p className="premium">Get Premium</p>
 							</a>
 						</li>
 						<li className="nav-item right">
@@ -42,7 +42,6 @@ function Navbar() {
 								<p>Sign In</p>
 							</a>
 						</li>
-
 					</ul>
 				</div>
 			</nav>
