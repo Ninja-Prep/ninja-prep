@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/featured.css'
+import './featured.css'
 
 const FeaturedCard = (props) => {
 	return (

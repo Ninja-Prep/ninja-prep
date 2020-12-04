@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/videos-and-articles.css'
+import './videos-and-articles.css'
 import OndemandVideoIcon from '@material-ui/icons/OndemandVideo'
 import ChromeReaderModeIcon from '@material-ui/icons/ChromeReaderMode'
 

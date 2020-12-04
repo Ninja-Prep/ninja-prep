@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/code-along.css'
+import './code-along.css'
 import CodeIcon from '@material-ui/icons/Code'
 
 function CodeAlong() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/featured.css'
+import './featured.css'
 import FeaturedCard from './FeaturedCard'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'

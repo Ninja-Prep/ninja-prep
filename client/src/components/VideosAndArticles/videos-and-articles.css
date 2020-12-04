@@ -4,7 +4,7 @@
 }
 
 .videos-and-articles-container {
-	background-image: url('images/Rainbow-Background.png');
+	background-image: url('/images/Rainbow-Background.png');
 	background-repeat: no-repeat;
 }
 .article-title {

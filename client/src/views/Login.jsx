@@ -3,7 +3,7 @@ import '../css/sign-in.css'
 import {
 	headerTitle,
 	headerDescription,
-} from '../stringVariables/HomeStringVariables'
+} from '../components/Partials/HomeStringVariables'
 
 const SocialMediaButtons = (cssClass) => {
 	return (
@@ -46,7 +46,11 @@ const Login = (props) => {
 					<div className="col-lg">
 						<h1 className="bold"> {headerTitle} </h1>
 						<h2 className="sign-in-description"> {headerDescription} </h2>
-						<img className="sign-in-img" src="./images/coursePreview.png" alt="Placeholder"/>
+						<img
+							className="sign-in-img"
+							src="./images/coursePreview.png"
+							alt="Placeholder"
+						/>
 					</div>
 					<div className="col-lg">
 						<div className="card sign-in-form">

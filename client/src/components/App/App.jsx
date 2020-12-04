@@ -1,9 +1,9 @@
 import React from 'react'
-import { Navbar } from './components/Navbar'
-import { LandingPage } from './views/LandingPage'
-import { Challenges } from './views/Challenges'
-import { Login } from './views/Login'
-import { Footer } from './components/Footer'
+import { Navbar } from '../Partials/Navbar'
+import { LandingPage } from '../../views/LandingPage'
+import { Challenges } from '../../views/Challenges'
+import { Login } from '../../views/Login'
+import { Footer } from '../Partials/Footer'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
 	return (

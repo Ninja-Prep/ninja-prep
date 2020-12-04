@@ -2,7 +2,8 @@
 	"name": "client",
 	"version": "0.1.0",
 	"private": true,
-	"proxy": "http://localhost:5000",
+	"proxy": "http://localhost:5000/auth",
+	"main": "index.jsx",
 	"babel": {
 		"env": {
 			"test": {
@@ -45,7 +46,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build ",
 		"test": "react-scripts test",
-		"jest": "jest --c .jest.config.json",
+		"jest": "jest",
 		"eject": "react-scripts eject",
 		"eslint-check": "eslint --print-config ./src/App.jsx | eslint-config-prettier-check"
 	},
@@ -84,5 +85,12 @@
 		"semi": false,
 		"singleQuote": true,
 		"useTabs": true
+	},
+	"jest": {
+		"coverageDirectory": "./coverage/",
+		"collectCoverage": true,
+		"moduleNameMapper": {
+			"\\.(css|less|scss)$": "identity-obj-proxy"
+		}
 	}
 }

@@ -1,13 +1,12 @@
 import React from 'react'
-import '../css/header.css'
+import './header.css'
 
 import Button from '@material-ui/core/Button'
 import { Link } from 'react-router-dom'
-import styles from './HeaderCssComponent'
+import styles from '../HeaderCssComponent'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 
 function Header() {
-	console.log(styles())
 	return (
 		<div className="header-container">
 			<img

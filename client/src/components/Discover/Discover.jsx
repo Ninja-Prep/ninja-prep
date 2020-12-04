@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/discover.css'
+import './discover.css'
 import Grid from '@material-ui/core/Grid'
 
 function Discover() {

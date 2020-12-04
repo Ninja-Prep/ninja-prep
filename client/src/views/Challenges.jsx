@@ -1,5 +1,5 @@
 import React from 'react'
-import {Featured} from '../components/Featured'
+import { Featured } from '../components/Featured/Featured'
 
 function Challenges() {
 	return (
