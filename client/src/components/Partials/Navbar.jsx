@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Navbar() {
 	const [collapsedCss, setIsNavCollapsed] = useState('')
 	const handleNavCollapse = () => {
-		if (collapsedCss == '') setIsNavCollapsed('collapse')
+		if (collapsedCss === '') setIsNavCollapsed('collapse')
 		else setIsNavCollapsed('')
 	}
 	return (
@@ -23,8 +23,8 @@ function Navbar() {
 				className="custom-toggler navbar-toggler"
 				type="button"
 				data-toggle="collapse"
-				data-target="#navbarTogglerDemo03"
-				aria-controls="navbarTogglerDemo03"
+				data-target="#toggleNav"
+				aria-controls="toggleNav"
 				aria-expanded={collapsedCss}
 				aria-label="Toggle navigation"
 				onClick={handleNavCollapse}
@@ -34,21 +34,18 @@ function Navbar() {
 
 			<div
 				className={`${collapsedCss} navbar-collapse justify-content-end`}
-				id="navbarTogglerDemo03"
+				id="toggleNav"
 			>
 				<div class="navbar-nav">
 					<Link className="nav-link" color="white" textDecoration="none" to="#">
 						Get Premium
 					</Link>
-
 					<Link className="nav-link" to="/challenges">
 						Challenges
 					</Link>
-
 					<Link className="nav-link" to="#">
 						Resources
 					</Link>
-
 					<Link className="nav-link" to="/login">
 						Sign In
 					</Link>
