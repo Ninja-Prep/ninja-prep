@@ -17,4 +17,3 @@ function LandingPage() {
 }
 
 export default LandingPage
-export { default as LandingPage } from './LandingPage'

@@ -10,4 +10,3 @@ function Challenges() {
 }
 
 export default Challenges
-export { default as Challenges } from './Challenges'

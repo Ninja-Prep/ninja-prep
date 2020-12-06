@@ -1,9 +1,9 @@
 import React from 'react'
-import { Navbar } from '../Partials/Navbar'
-import { LandingPage } from '../../views/LandingPage'
-import { Challenges } from '../../views/Challenges'
-import { Login } from '../../views/Login'
-import { Footer } from '../Partials/Footer'
+import Navbar from '../Partials/Navbar'
+import LandingPageView from '../../views/LandingPageView'
+import ChallengesView from '../../views/ChallengesView'
+import LoginView from '../../views/LoginView'
+import Footer from '../Partials/Footer'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
 	return (
@@ -11,9 +11,9 @@ function App() {
 			<Router>
 				<Navbar />
 				<Switch>
-					<Route path="/" exact component={LandingPage} />
-					<Route path="/challenges" exact component={Challenges} />
-					<Route path="/login" exact component={Login} />
+					<Route path="/" exact component={LandingPageView} />
+					<Route path="/challenges" exact component={ChallengesView} />
+					<Route path="/login" exact component={LoginView} />
 				</Switch>
 				<Footer />
 			</Router>

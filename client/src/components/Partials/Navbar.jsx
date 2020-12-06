@@ -1,54 +1,61 @@
-import React from 'react'
-import './navbar.css'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
+	const [collapsedCss, setIsNavCollapsed] = useState('')
+	const handleNavCollapse = () => {
+		if (collapsedCss == '') setIsNavCollapsed('collapse')
+		else setIsNavCollapsed('')
+	}
 	return (
-		<div>
-			<nav className="navbar navbar-expand-lg navbar-dark">
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarTogglerDemo03"
-					aria-controls="navbarTogglerDemo03"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span className="navbar-toggler-icon"></span>
-				</button>
-				<Link className="navbar-brand" to="/">
-					<img className="logo" src="./images/NinjaPrep-Logo.png" alt="logo" />
-					NinjaPrep
-				</Link>
-				<div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-					<ul className="navbar-nav ml-auto right-tabs">
-						<li className="nav-item right">
-							<Link className="nav-link" to="#">
-								<p className="premium">Get Premium</p>
-							</Link>
-						</li>
-						<li className="nav-item right">
-							<Link className="nav-link" to="/challenges">
-								<p>Challenges</p>
-							</Link>
-						</li>
-						<li className="nav-item right">
-							<Link className="nav-link" to="#">
-								<p>Resources</p>
-							</Link>
-						</li>
-						<li className="nav-item right">
-							<Link className="nav-link" to="/login">
-								<p>Sign In</p>
-							</Link>
-						</li>
-					</ul>
+		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+			<Link className="navbar-brand" to="/">
+				<img
+					className="logo"
+					src="./images/NinjaPrep-Logo.png"
+					alt="logo"
+					width="60"
+					height="60"
+				/>
+				NinjaPrep
+			</Link>
+			<button
+				className="custom-toggler navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarTogglerDemo03"
+				aria-controls="navbarTogglerDemo03"
+				aria-expanded={collapsedCss}
+				aria-label="Toggle navigation"
+				onClick={handleNavCollapse}
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div
+				className={`${collapsedCss} navbar-collapse justify-content-end`}
+				id="navbarTogglerDemo03"
+			>
+				<div class="navbar-nav">
+					<Link className="nav-link" color="white" textDecoration="none" to="#">
+						Get Premium
+					</Link>
+
+					<Link className="nav-link" to="/challenges">
+						Challenges
+					</Link>
+
+					<Link className="nav-link" to="#">
+						Resources
+					</Link>
+
+					<Link className="nav-link" to="/login">
+						Sign In
+					</Link>
 				</div>
-			</nav>
-		</div>
+			</div>
+		</nav>
 	)
 }
 
 export default Navbar
-export { default as Navbar } from './Navbar'
