@@ -1,15 +1,16 @@
 import React from 'react'
-import Navbar from '../Partials/Navbar'
+import NavigationBar from '../Partials/NavigationBar'
 import LandingPageView from '../../views/LandingPageView'
 import ChallengesView from '../../views/ChallengesView'
 import LoginView from '../../views/LoginView'
 import Footer from '../Partials/Footer'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 function App() {
 	return (
 		<div>
 			<Router>
-				<Navbar />
+				<NavigationBar />
 				<Switch>
 					<Route path="/" exact component={LandingPageView} />
 					<Route path="/challenges" exact component={ChallengesView} />
