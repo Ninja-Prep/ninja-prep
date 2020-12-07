@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
+import './navigation-bar.css'
 
 function NavigationBar() {
 	return (
-		<Navbar fixed="top" bg="dark" expand="lg" className="px-5" variant="dark">
+		<Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
 			<Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
 				<img
-					className="logo ml-5"
+					className="logo ml-5 mr-3"
 					src="./images/NinjaPrep-Logo.png"
 					alt="logo"
-					width="60"
-					height="60"
+					width="40"
+					height="40"
 				/>
 				NinjaPrep
 			</Navbar.Brand>
@@ -24,7 +25,7 @@ function NavigationBar() {
 					<Nav.Link as={Link} to="/challenges" className="pl-3">
 						Challenges
 					</Nav.Link>
-					<Nav.Link as={Link} to="/premium" className="pl-3">
+					<Nav.Link as={Link} to="/about" className="pl-3">
 						Meet the Team
 					</Nav.Link>
 					<Nav.Link as={Link} to="/login" className="pl-3 mr-5">
