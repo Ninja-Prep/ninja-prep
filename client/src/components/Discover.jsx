@@ -1,62 +1,28 @@
 import React from 'react'
 import '../css/discover.css'
-import { Link } from 'react-router-dom'
+import Grid from '@material-ui/core/Grid'
 
-import PlayArrowIcon from '@material-ui/icons/PlayArrow'
-
-const Discover = (props) => {
+function Discover() {
 	return (
-		<div className="discover-container">
-			<div className="discover-title">
-				<h1 className="bold">Discover New Skills</h1>
-				<PlayArrowIcon className="discover-play" />
-			</div>
-			<div className="card-deck">
-				<div className="card">
+		<div className="landing-page-container discover-container">
+			<Grid container justify="center" alignItems="center">
+				<Grid item xs={12} sm={6}>
 					<img
-						className="card-img-top"
-						src="./images/discover1.png"
-						alt="Card image cap"
+						className="explore-cards-img"
+						src="./images/Explore-Cards.png"
+						alt="Explore Cards"
 					/>
-					<div className="card-body">
-						<h2 className="card-title">Stacks</h2>
-						<p className="card-text subtitle">Stacks</p>
-					</div>
-				</div>
-				<div className="card">
-					<img
-						className="card-img-top"
-						src="./images/discover2.png"
-						alt="Card image cap"
-					/>
-					<div className="card-body">
-						<h2 className="card-title">Queue</h2>
-						<p className="card-text subtitle">Queue</p>
-					</div>
-				</div>
-				<div className="card">
-					<img
-						className="card-img-top"
-						src="./images/discover3.png"
-						alt="Card image cap"
-					/>
-					<div className="card-body">
-						<h2 className="card-title">Linked List</h2>
-						<p className="card-text subtitle">Linked List</p>
-					</div>
-				</div>
-				<div className="card">
-					<img
-						className="card-img-top"
-						src="./images/discover4.png"
-						alt="Card image cap"
-					/>
-					<div className="card-body">
-						<h2 className="card-title">Linked List</h2>
-						<p className="card-text subtitle">Linked List</p>
-					</div>
-				</div>
-			</div>
+				</Grid>
+				<Grid item xs={12} sm={6}>
+					<h1 className="landing-page-title discover-title">Discover</h1>
+
+					<p className="landing-page-description">
+						Discover in-demand concepts and skills that are actually asked for
+						by top companies. Choose from our wide selection of problems and
+						dive deep!
+					</p>
+				</Grid>
+			</Grid>
 		</div>
 	)
 }

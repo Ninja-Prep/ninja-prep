@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
 	return (
@@ -16,31 +17,31 @@ function Navbar() {
 				>
 					<span className="navbar-toggler-icon"></span>
 				</button>
-				<a className="navbar-brand" href="#">
-					<img className="logo" src="./images/logo.png" alt="logo" />
+				<Link className="navbar-brand" to="/">
+					<img className="logo" src="./images/NinjaPrep-Logo.png" alt="logo" />
 					NinjaPrep
-				</a>
+				</Link>
 				<div className="collapse navbar-collapse" id="navbarTogglerDemo03">
 					<ul className="navbar-nav ml-auto right-tabs">
 						<li className="nav-item right">
-							<a className="nav-link" href="#">
-								<p className="premium bold">Get Premium</p>
-							</a>
+							<Link className="nav-link" to="#">
+								<p className="premium">Get Premium</p>
+							</Link>
 						</li>
 						<li className="nav-item right">
-							<a className="nav-link" href="#">
+							<Link className="nav-link" to="/challenges">
 								<p>Challenges</p>
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item right">
-							<a className="nav-link" href="#">
+							<Link className="nav-link" to="#">
 								<p>Resources</p>
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item right">
-							<a className="nav-link" href="#">
+							<Link className="nav-link" to="/login">
 								<p>Sign In</p>
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>

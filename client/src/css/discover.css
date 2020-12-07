@@ -1,25 +1,12 @@
-.discover-container {
-	padding: 4% 10%;
+.discover-container{
+	padding-bottom: 1% !important;
 }
 
-.discover-title {
-	padding-bottom: 2%;
-	display: flex;
-	align-items: center;
+.explore-cards-img {
+	width: 60%;
+	height: auto;
 }
 
-.discover-play {
-	transform: scale(1.4);
-	margin-left: 1%;
-	margin-bottom: 1%;
-	color: #767676;
-}
-
-.discover-play:hover {
-	color: #0a0a10;
-	cursor: pointer;
-}
-
-.card-img-top {
-	height: 200px;
+.discover-title{
+    color:#3F4CB0;
 }

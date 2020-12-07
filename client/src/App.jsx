@@ -1,28 +1,22 @@
 import React from 'react'
+import { Navbar } from './components/Navbar'
+import { LandingPage } from './views/LandingPage'
+import { Challenges } from './views/Challenges'
+import { Login } from './views/Login'
+import { Footer } from './components/Footer'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import AllCategories from './views/AllCategories'
-import { Home } from './views/Home'
-import ProblemTemplate from './views/ProblemTemplate'
-import rootReducer from './reducers'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-const store = createStore(
-	rootReducer,
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
-
 function App() {
 	return (
 		<div>
-			<Provider store={store}>
-				<Router>
-					<Switch>
-						<Route path="/" exact component={Home} />
-						<Route path="/all-categories" exact component={AllCategories} />
-						<Route path="/problem/:name" exact component={ProblemTemplate} />
-					</Switch>
-				</Router>
-			</Provider>
+			<Router>
+				<Navbar />
+				<Switch>
+					<Route path="/" exact component={LandingPage} />
+					<Route path="/challenges" exact component={Challenges} />
+					<Route path="/login" exact component={Login} />
+				</Switch>
+				<Footer />
+			</Router>
 		</div>
 	)
 }

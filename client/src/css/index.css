@@ -13,24 +13,26 @@ body {
 	overflow-x: hidden;
 }
 
-code {
+/* code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
-}
+} */
 
 p {
 	font-size: 1em;
 	font-weight: 400;
 	margin:0;
+	line-height: 1.5em;
 }
 
 h1 {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	font-weight: 400;
+	padding-bottom: 1%;
 }
 
 h2 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: 400;
 	line-height: 1.5em;
 }
