@@ -1,0 +1,52 @@
+{
+  "name": "ninja-prep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production nodemon server.js",
+    "server": "nodemon server.js",
+    "client": "cd ../client && yarn start",
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "express-list-endpoints": "^5.0.0",
+    "express-prom-bundle": "^6.0.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.16",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0",
+    "prom-client": "^12.0.0",
+    "react": "^16.13.1",
+    "sudo": "^1.0.3",
+    "url-pattern": "^1.0.3",
+    "yarn": "^1.22.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "4.0.0",
+    "prettier": "^2.0.5"
+  }
+}
