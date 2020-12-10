@@ -38,7 +38,7 @@ const SocialMediaButtons = (cssClass) => {
 		</>
 	)
 }
-const LoginView = (props) => {
+const LoginPage = (props) => {
 	return (
 		<div className="sign-in-container">
 			<div className="container">
@@ -70,4 +70,4 @@ const LoginView = (props) => {
 		</div>
 	)
 }
-export default LoginView
+export default LoginPage

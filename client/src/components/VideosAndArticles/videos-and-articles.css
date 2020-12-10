@@ -1,26 +1,14 @@
-.background-container {
-	position: relative;
-	margin-bottom: 10%;
-}
-
-.videos-and-articles-container {
+.rainbow-bg {
 	background-image: url('/images/Rainbow-Background.png');
 	background-repeat: no-repeat;
 }
-.article-title {
+.article-text {
 	color: #259af3;
 }
 
-.video-title {
+.video-text {
 	color: #1da09c;
-	font-family: 'Roboto';
-	font-weight: 700;
-	font-size: 2.8em;
+	
 }
 
-.chrome-title {
-	color: #1da09c;
-	font-family: 'Roboto';
-	font-weight: 700;
-	font-size: 2.8em;
-}
+

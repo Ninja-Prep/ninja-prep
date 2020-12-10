@@ -1,7 +1,7 @@
 import React from 'react'
 import { Featured } from '../components/Featured/Featured'
 
-function Challenges() {
+function ChallengesPage() {
 	return (
 		<div className="challenges-container">
 			<Featured />
@@ -9,4 +9,4 @@ function Challenges() {
 	)
 }
 
-export default Challenges
+export default ChallengesPage

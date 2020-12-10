@@ -1,9 +1,9 @@
 import React from 'react'
 import NavigationBar from '../Partials/NavigationBar'
-import LandingPageView from '../../views/LandingPageView'
-import ChallengesView from '../../views/ChallengesView'
-import LoginView from '../../views/LoginView'
-import Footer from '../Partials/Footer'
+import LandingPage from '../../views/LandingPage'
+import ChallengesPage from '../../views/ChallengesPage'
+import MeetTheTeamPage from '../../views/MeetTheTeamPage'
+import LoginPage from '../../views/LoginPage'
 import FooterBar from '../Partials/FooterBar'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -13,12 +13,11 @@ function App() {
 			<Router>
 				<NavigationBar />
 				<Switch>
-					<Route path="/" exact component={LandingPageView} />
-					<Route path="/challenges" exact component={ChallengesView} />
-					<Route path="/about" exact component={ChallengesView} />
-					<Route path="/login" exact component={LoginView} />
+					<Route path="/" exact component={LandingPage} />
+					<Route path="/challenges" exact component={ChallengesPage} />
+					<Route path="/about" exact component={MeetTheTeamPage} />
+					<Route path="/login" exact component={LoginPage} />
 				</Switch>
-				<Footer />
 				<FooterBar />
 			</Router>
 		</div>

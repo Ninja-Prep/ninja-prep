@@ -44,7 +44,7 @@ function FooterBar() {
 						<p>Cheatsheets</p>
 					</Col>
 				</Row>
-				<Col></Col>
+
 			</Container>
 		</footer>
 	)
