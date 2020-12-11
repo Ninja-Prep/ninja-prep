@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
-import './navigation-bar.css'
+import './NavigationBar.css'
 
-function NavigationBar() {
+function NavigationBarMobile() {
 	return (
 		<Navbar
 			fixed="top"
@@ -44,4 +44,4 @@ function NavigationBar() {
 	)
 }
 
-export default NavigationBar
+export default NavigationBarMobile

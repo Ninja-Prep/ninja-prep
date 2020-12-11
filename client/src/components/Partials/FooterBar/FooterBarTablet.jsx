@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav, Row, Col } from 'react-bootstrap'
 
-function FooterBar() {
+function FooterBarTablet() {
 	return (
 		<Navbar sticky="bottom px-5 border-top">
 			<Row className="py-5 mx-auto container">
@@ -55,5 +55,5 @@ function FooterBar() {
 	)
 }
 
-export default FooterBar
-export { default as FooterBar } from './FooterBar'
+export default FooterBarTablet
+export { default as FooterBarTablet } from './FooterBarTablet'
