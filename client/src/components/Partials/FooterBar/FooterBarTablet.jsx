@@ -4,7 +4,7 @@ import { Navbar, Nav, Row, Col } from 'react-bootstrap'
 
 function FooterBarTablet() {
 	return (
-		<Navbar sticky="bottom px-5 border-top">
+		<Navbar sticky="bottom" className="px-5 border-top">
 			<Row className="py-5 mx-auto container">
 				<Col className="my-auto p-0">
 					<img

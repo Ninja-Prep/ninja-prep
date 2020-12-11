@@ -1,41 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Col, Row, Nav } from 'react-bootstrap'
+import { Navbar, Nav, Row, Col } from 'react-bootstrap'
 
 function FooterBarMobile() {
 	return (
-		<footer>
-			<Container className="py-5">
-				<Row>
-					<Col>
-						<p className="font-weight-bold">NINJAPREP</p>
-						<Nav.Link as={Link} to="/about" className="pl-0">
-							About Us
-						</Nav.Link>
-
-						<Nav.Link as={Link} to="/premium" className="pl-0">
-							Get Premium
-						</Nav.Link>
-
-						<Nav.Link as={Link} to="/roadmap" className="pl-0">
-							Roadmap
-						</Nav.Link>
-					</Col>
-					<Col>
-						<p className="font-weight-bold">COURSES</p>
-						<p>Stacks</p>
-						<p>Queues</p>
-						<p>Linked List</p>
-					</Col>
-					<Col>
-						<p className="font-weight-bold">RESOURCES</p>
-						<p>Articles</p>
-						<p>Challenges</p>
-						<p>Cheatsheets</p>
-					</Col>
-				</Row>
-			</Container>
-		</footer>
+		<Navbar sticky="bottom" className=" px-auto py-3 m-auto border-top">
+			<div className="mx-auto container">
+				<p className="text-secondary m-0">Copyright &copy; 2020 NinjaPrep</p>
+				<p className="text-secondary m-0 px-2">|</p>
+				<Nav.Link as={Link} to="/about" className="p-0 text-dark">
+					About
+				</Nav.Link>
+				<p className="text-secondary m-0 px-2">|</p>
+				<Nav.Link as={Link} to="/premium" className="p-0 text-dark">
+					Premium
+				</Nav.Link>
+				<p className="text-secondary m-0 px-2">|</p>
+				<Nav.Link as={Link} to="/roadmap" className="p-0 text-dark">
+					Roadmap
+				</Nav.Link>
+			</div>
+		</Navbar>
 	)
 }
 
