@@ -5,6 +5,19 @@ router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 router.get("/facebook", passport.authenticate("facebook"));
 router.get("/github", passport.authenticate("github"));
 
+router.get("/getLoginStatus", (req, res) => {
+  res.send(req.isAuthenticated());
+});
+
+router.get("/logout", (req, res) => {
+  req.session.destroy(function (err) {
+    res.status(200).clearCookie("isLoggedIn", {
+      path: "/",
+    });
+    res.redirect("/");
+  });
+});
+
 router.get(
   "/google/callback",
   passport.authenticate("google", {

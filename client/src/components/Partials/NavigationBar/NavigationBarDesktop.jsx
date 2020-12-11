@@ -2,6 +2,24 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
 import './NavigationBar.css'
+import Cookies from 'universal-cookie'
+
+const cookies = new Cookies()
+function renderLoginLink() {
+	if (cookies.get('isLoggedIn')) {
+		return (
+			<Nav.Link href="/auth/logout" className="pl-3 mr-5">
+				Sign Out
+			</Nav.Link>
+		)
+	} else {
+		return (
+			<Nav.Link as={Link} to="/login" className="pl-3 mr-5">
+				Sign In
+			</Nav.Link>
+		)
+	}
+}
 
 function NavigationBarDesktop() {
 	return (
@@ -33,9 +51,7 @@ function NavigationBarDesktop() {
 					<Nav.Link as={Link} to="/about" className="pl-3">
 						Meet the Team
 					</Nav.Link>
-					<Nav.Link as={Link} to="/login" className="pl-3 mr-5">
-						Sign In
-					</Nav.Link>
+					{renderLoginLink()}
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>

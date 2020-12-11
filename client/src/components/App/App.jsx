@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Cookies from 'universal-cookie'
 import NavigationBarComponent from '../Partials/NavigationBar/NavigationBarComponent'
 import LandingPage from '../../views/LandingPage'
 import ChallengesPage from '../../views/ChallengesPage'
@@ -8,10 +9,26 @@ import MeetTheTeamPage from '../../views/MeetTheTeamPage'
 import LoginPage from '../../views/LoginPage'
 import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Axios from 'axios'
 
-function App() {
-	return (
-		<div>
+const cookies = new Cookies()
+
+async function getLoginStatus() {
+	const response = await Axios.get('/auth/getLoginStatus')
+	cookies.set('isLoggedIn', response.data)
+}
+
+class App extends Component {
+	constructor(props) {
+		super(props)
+	}
+
+	async componentDidMount() {
+		await getLoginStatus()
+		console.log(cookies.get('isLoggedIn'))
+	}
+	render() {
+		return (
 			<Router>
 				<NavigationBarComponent />
 				<Switch>
@@ -22,7 +39,8 @@ function App() {
 				</Switch>
 				<FooterBarComponent />
 			</Router>
-		</div>
-	)
+		)
+	}
 }
+
 export default App
