@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Col, Row, Nav } from 'react-bootstrap'
 
-function FooterBar() {
+function FooterBarDesktop() {
 	return (
 		<footer>
 			<Container className="py-5">
@@ -16,7 +16,6 @@ function FooterBar() {
 							height="70"
 						/>
 					</Col>
-
 					<Col>
 						<p className="font-weight-bold">NINJAPREP</p>
 						<Nav.Link as={Link} to="/about" className="pl-0">
@@ -44,11 +43,10 @@ function FooterBar() {
 						<p>Cheatsheets</p>
 					</Col>
 				</Row>
-
 			</Container>
 		</footer>
 	)
 }
 
-export default FooterBar
-export { default as FooterBar } from './FooterBar'
+export default FooterBarDesktop
+export { default as FooterBarDesktop } from './FooterBarDesktop'

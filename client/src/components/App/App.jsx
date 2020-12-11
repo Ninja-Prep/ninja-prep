@@ -1,24 +1,26 @@
 import React from 'react'
-import NavigationBar from '../Partials/NavigationBar'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavigationBarComponent from '../Partials/NavigationBar/NavigationBarComponent'
 import LandingPage from '../../views/LandingPage'
 import ChallengesPage from '../../views/ChallengesPage'
 import MeetTheTeamPage from '../../views/MeetTheTeamPage'
 import LoginPage from '../../views/LoginPage'
-import FooterBar from '../Partials/FooterBar'
+import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
 	return (
 		<div>
 			<Router>
-				<NavigationBar />
+				<NavigationBarComponent />
 				<Switch>
 					<Route path="/" exact component={LandingPage} />
 					<Route path="/challenges" exact component={ChallengesPage} />
 					<Route path="/about" exact component={MeetTheTeamPage} />
 					<Route path="/login" exact component={LoginPage} />
 				</Switch>
-				<FooterBar />
+				<FooterBarComponent />
 			</Router>
 		</div>
 	)
