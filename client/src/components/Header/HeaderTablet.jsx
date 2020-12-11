@@ -5,25 +5,22 @@ import { Button } from 'react-bootstrap'
 import './header.css'
 
 const HeaderTablet = () => (
-	<div className="py-5  text-center header-bg">
+	<div className="py-5 text-center header-bg">
 		<div className="py-3 px-5 ">
 			<img
 				className="w-auto h-20"
 				src="/images/NinjaPrep-Logo.png"
 				alt="logo"
 			/>
-
 			<h1 className="display-4 px-5 font-weight-bold">
 				Enhance your skills here
 			</h1>
-
-			<span className="lead  m-auto d-block">
+			<span className="lead m-auto d-block">
 				A place to help you build a strong foundation in data structures and
 			</span>
-			<span className="lead   m-auto d-block">
+			<span className="lead m-auto d-block">
 				algorithms and prepare for technical interviews, all in one platform.
 			</span>
-
 			<Link to="/login">
 				<Button
 					variant="gradient"

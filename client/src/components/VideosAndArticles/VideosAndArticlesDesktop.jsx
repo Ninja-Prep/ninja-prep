@@ -23,7 +23,6 @@ const VideosAndArticlesDesktop = () => (
 				<h1 className="font-weight-bold pt-3 pb-2 w-75 mx-auto video-text display-5">
 					Step-by-step Video Explanations
 				</h1>
-
 				<p className="lead text-secondary w-75 m-auto">
 					Learning from textbooks isn't meant to be easy which is why each of
 					our questions are accompanied with a video to maximize your learning
@@ -35,7 +34,6 @@ const VideosAndArticlesDesktop = () => (
 				<h1 className="font-weight-bold pt-3 pb-2 w-75 mx-auto article-text display-5">
 					Insightful Community Articles
 				</h1>
-
 				<p className="lead text-secondary w-75 m-auto">
 					We provide articles written from the community on the most important
 					and complex topics as an additional resource!

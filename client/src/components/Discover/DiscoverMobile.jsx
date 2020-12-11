@@ -13,8 +13,9 @@ const DiscoverMobile = () => (
 				/>
 			</Col>
 			<Col className="my-auto col-12">
-				<h1 className="font-weight-bold discover-text display-5 pt-2  pb-2 ">Discover</h1>
-
+				<h1 className="font-weight-bold discover-text display-5 pt-2  pb-2 ">
+					Discover
+				</h1>
 				<p className="lead text-secondary m-auto">
 					Discover in-demand concepts and skills that are actually asked for by
 					top companies. Choose from our wide selection of problems and dive
