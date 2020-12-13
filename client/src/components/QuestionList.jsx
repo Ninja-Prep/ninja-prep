@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/featured.css'
 import '../css/question-list.css'
 import { Link } from 'react-router-dom'
+import { Row, Col } from 'react-bootstrap'
 import FeaturedCard from './FeaturedCard'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
@@ -69,9 +70,20 @@ const QuestionList = (props) => {
                 <PlayArrowIcon className="featured-play" />
             </div>
             <div class="container">
-                <div class="row mb-3 col-sm p-3 mx-auto"> 
+                {/* <div class="row mb-3 col-sm p-3 mx-auto"> 
                     {makeButtons()}
-                </div>
+                </div> */}
+                <Row className="pt-3">
+                    <Col className="my-auto">
+                        {easyButton}
+                    </Col>
+                    <Col className="my-auto">
+                        {easyButton}
+                    </Col>
+                    <Col className="my-auto">
+                        {easyButton}
+                    </Col>
+                </Row>
                 {makeRows()}
             </div>
         </div>
