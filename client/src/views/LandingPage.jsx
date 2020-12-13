@@ -1,20 +1,19 @@
 import React from 'react'
-import { Header } from '../components/Header'
-import { Discover } from '../components/Discover'
-import { VideosAndArticles } from '../components/VideosAndArticles'
-import { CodeAlong } from '../components/CodeAlong'
+import { HeaderComponent } from '../components/Header/HeaderComponent'
+import { DiscoverComponent } from '../components/Discover/DiscoverComponent'
+import { VideosAndArticlesComponent } from '../components/VideosAndArticles/VideosAndArticlesComponent'
+import { CodeAlongComponent } from '../components/CodeAlong/CodeAlongComponent'
 import '../css/LandingPage.css'
 
 function LandingPage() {
 	return (
 		<div>
-			<Header />
-			<Discover />
-			<VideosAndArticles />
-			<CodeAlong />
+			<HeaderComponent />
+			<DiscoverComponent />
+			<VideosAndArticlesComponent />
+			<CodeAlongComponent />
 		</div>
 	)
 }
 
 export default LandingPage
-export { default as LandingPage } from './LandingPage'
