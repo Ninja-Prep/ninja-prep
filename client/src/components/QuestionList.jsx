@@ -1,92 +1,80 @@
 import React from 'react'
-import '../css/featured.css'
 import '../css/question-list.css'
+import '../components/Featured/featured.css'
 import { Link } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
-import FeaturedCard from './FeaturedCard'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 
 const QuestionList = (props) => {
-    const QuestionImageList = []
-    const numRows = 4
-    const numCols = 3
-    
-    var card =         
-    (<div class="card text-white bg-secondary mb-3 col-sm p-3 mx-2" >
-        <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-        </div>
-    </div>)
+	const QuestionImageList = []
+	const numRows = 4
+	const numCols = 3
 
-    function copyCards() {
-        for (var i = 0; i < numCols; i++) {
-            QuestionImageList[i] = card
-        }
-        return QuestionImageList
-    }
+	var card = (
+		<div class="w-25 text-white bg-secondary mb-3 col-sm p-3 mx-2">
+			<div class="card-body">
+				<h5 class="card-title">Primary card title</h5>
+			</div>
+		</div>
+	)
 
-    var row = (           
-        <div class="row">        
-            {copyCards()}
-        </div>)
+	function copyCards() {
+		for (var i = 0; i < numCols; i++) {
+			QuestionImageList[i] = card
+		}
+		return QuestionImageList
+	}
 
-    function makeRows(){
-        let rows = []
-        for(var i = 0; i < numRows; i++) {
-            rows[i] = row
-        }
-        return rows
-    }
+	var row = <div class="row">{copyCards()}</div>
 
-    var easyButton = (
-        <Link className="nav-link" to="#">
-            <p className="easy">Easy</p>
-        </Link>
-    )
+	function makeRows() {
+		let rows = []
+		for (var i = 0; i < numRows; i++) {
+			rows[i] = row
+		}
+		return rows
+	}
 
-    var mediumButton = (
-        <Link className="nav-link" to="#">
-            <p className="medium">Medium</p>
-        </Link>
-    )
+	var easyButton = (
+		<Link className="nav-link" to="#">
+			<p className="easy d-inline text-center">Easy</p>
+		</Link>
+	)
 
+	var mediumButton = (
+		<Link className="nav-link" to="#">
+			<p className="medium d-inline">Medium</p>
+		</Link>
+	)
 
-    var hardButton = (
-        <Link className="nav-link" to="#">
-            <p className="hard">Hard</p>
-        </Link>
-    )
+	var hardButton = (
+		<Link className="nav-link" to="#">
+			<p className="hard d-inline">Hard</p>
+		</Link>
+	)
 
-
-    function makeButtons(){
-        return [easyButton, mediumButton, hardButton]
-    }
+	function makeButtons() {
+		return [easyButton, mediumButton, hardButton]
+	}
 
 	return (
-        <div className="featured-container">
-            <div className="featured-title">
-                <h1 className="bold">All</h1>
-                <PlayArrowIcon className="featured-play" />
-            </div>
-            <div class="container">
-                {/* <div class="row mb-3 col-sm p-3 mx-auto"> 
+		<div className="featured-container">
+			<div className="featured-title">
+				<h1 className="bold">All</h1>
+				<PlayArrowIcon className="featured-play" />
+			</div>
+
+			{/* <div class="row mb-3 col-sm p-3 mx-auto"> 
                     {makeButtons()}
                 </div> */}
-                <Row className="pt-3">
-                    <Col className="my-auto">
-                        {easyButton}
-                    </Col>
-                    <Col className="my-auto">
-                        {easyButton}
-                    </Col>
-                    <Col className="my-auto">
-                        {easyButton}
-                    </Col>
-                </Row>
-                {makeRows()}
-            </div>
-        </div>
+			<Row className="pt-3">
+				<Col className="my-auto text-center">{easyButton}</Col>
+				<Col className="my-auto text-center">{mediumButton}</Col>
+				<Col className="my-auto text-center">{hardButton}</Col>
+			</Row>
+			{/* {makeRows()} */}
+		</div>
 	)
 }
 
