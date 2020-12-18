@@ -1,15 +1,20 @@
 const express = require("express");
 const app = express();
-const middleWare = require("./src/imports/middlewareSetup")(app);
-const routers = require("./src/routes/routerHandler")(app);
-const passport = require("./src/imports/passportSetup");
-const mongoose = require("./src/imports/mongooseSetup");
+const middleWare = require("./src/middleware/middlewareSetup")(app);
+const routers = require("./src/api/routerHandler")(app);
+const passport = require("./src/middleware/passportSetup");
+const mongoose = require("./src/middleware/mongooseSetup");
 const keys = require("./config/keys");
 const path = require("path");
 
 const PORT = process.env.PORT || process.argv[2] || 5000;
 
-const inProduction = process.env.NODE_ENV.trim() === "production";
+let inProduction = false;
+if (process.env.NODE_ENV) {
+  inProduction = process.env.NODE_ENV.trim() === "production";
+}
+
+console.log(`production is ${inProduction}`);
 
 if (inProduction) {
   app.use(express.static(path.join(__dirname, "..", "client", "build")));
