@@ -5,7 +5,12 @@ import './navigation-bar.css'
 
 function NavigationBar() {
 	return (
-		<Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
+		<Navbar
+			fixed="top"
+			expand="lg"
+			className="px-5 py-3 navigation-bar"
+			variant="dark"
+		>
 			<Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
 				<img
 					className="logo ml-5 mr-3"
