@@ -1,7 +1,5 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import './sign-in.css'
-import { logInTitle, logInDescription } from '../Partials/HomeStringVariables'
 
 const SocialMediaButtons = (cssClass) => {
 	return (
@@ -38,15 +36,15 @@ const SocialMediaButtons = (cssClass) => {
 }
 
 const LoginMobile = () => (
-	<div className="py-auto px-5 mx-5">
+	<div className="py-auto px-5 mx-5 login-mobile-container">
 		<Row className="py-5 px-0 mx-auto container">
 			<Col className="px-0 my-auto">
 				<div>
 					<div className="py-5">
-						<h3 className="font-weight-bold pb-4">Learn to code with NinjaPrep</h3>
-						<div>
-							{SocialMediaButtons('mx-auto')}
-						</div>
+						<h3 className="font-weight-bold pb-4">
+							Learn to code with NinjaPrep
+						</h3>
+						<div>{SocialMediaButtons('mx-auto')}</div>
 					</div>
 				</div>
 			</Col>

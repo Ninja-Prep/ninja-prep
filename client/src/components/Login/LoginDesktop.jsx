@@ -1,7 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import './sign-in.css'
-import { logInTitle, logInDescription } from '../Partials/HomeStringVariables'
+import { logInTitle } from '../Partials/HomeStringVariables'
 
 const SocialMediaButtons = (cssClass) => {
 	return (
@@ -46,15 +45,15 @@ const LoginDesktop = () => (
 					src="./images/coursePreview.png"
 					alt="Placeholder"
 				/>
-				<h2 className="display-5 font-weight-bold pb-2 pt-2 pr-3">{logInTitle}</h2>
+				<h2 className="display-5 font-weight-bold pb-2 pt-2 pr-3">
+					{logInTitle}
+				</h2>
 			</Col>
 			<Col className="px-0 col-5 my-auto">
 				<div>
 					<div className="py-5">
 						<h3 className="font-weight-bold pb-4">Get Started for Free</h3>
-						<div>
-							{SocialMediaButtons('mx-auto')}
-						</div>
+						<div>{SocialMediaButtons('mx-auto')}</div>
 					</div>
 				</div>
 			</Col>

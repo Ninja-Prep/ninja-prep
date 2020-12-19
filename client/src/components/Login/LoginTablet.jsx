@@ -1,7 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import './sign-in.css'
-import { logInTitle, logInDescription } from '../Partials/HomeStringVariables'
+import { logInTitle } from '../Partials/HomeStringVariables'
 
 const SocialMediaButtons = (cssClass) => {
 	return (
