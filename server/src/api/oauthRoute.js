@@ -11,6 +11,7 @@ router.get("/getLoginStatus", (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.session.destroy(function (err) {
+    req.logOut();
     res.status(200).clearCookie("isLoggedIn", {
       path: "/",
     });
@@ -25,6 +26,7 @@ router.get(
   }),
   (req, res) => {
     req.flash("login", "Logged In");
+    res.cookie("isLoggedIn", req.isAuthenticated());
     res.redirect("/");
   }
 );

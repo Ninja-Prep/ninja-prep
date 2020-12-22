@@ -23,7 +23,7 @@ class App extends Component {
 		super(props)
 	}
 
-	async componentDidMount() {
+	async componentWillMount() {
 		await getLoginStatus()
 		console.log(cookies.get('isLoggedIn'))
 	}
@@ -32,13 +32,11 @@ class App extends Component {
 			<Router>
 				<NavigationBarComponent />
 				<Switch>
-					<Fragment>
-						<Route path="/login" exact component={LoginPage} />
-						<Route path="/" exact component={LandingPage} />
-						<Route path="/challenges" exact component={ChallengesPage} />
-						<Route path="/about" exact component={MeetTheTeamPage} />
-						<FooterBarComponent />
-					</Fragment>
+					<Route path="/login" exact component={LoginPage} />
+					<Route path="/" exact component={LandingPage} />
+					<Route path="/challenges" exact component={ChallengesPage} />
+					<Route path="/about" exact component={MeetTheTeamPage} />
+					<FooterBarComponent />
 				</Switch>
 			</Router>
 		)
