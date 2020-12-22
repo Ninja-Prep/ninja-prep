@@ -3,5 +3,4 @@ import editor from './editor'
 
 export default combineReducers({
 	editor,
-	form: formReducer,
 })
