@@ -1,34 +1,31 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
+import {
+	FACEBOOK_LOGIN,
+	GITHUB_LOGIN,
+	GOOGLE_LOGIN,
+	LEARN_TO_CODE_MOBILE,
+} from './LoginStringIds'
 
 const SocialMediaButtons = (cssClass) => {
 	return (
 		<>
 			<div className="lead">
-				<a
-					className={cssClass + ' fluid ui mb-4 py-3 red google button'}
-					href="/auth/google"
-				>
+				<a className={cssClass + ' red google button'} href="/auth/google">
 					<i className="google icon"></i>
-					Google Login
+					{GOOGLE_LOGIN}
 				</a>
 			</div>
 			<div className="lead">
-				<a
-					className={cssClass + ' fluid ui mb-4 py-3 facebook button'}
-					href="/auth/facebook"
-				>
+				<a className={cssClass + '  facebook button'} href="/auth/facebook">
 					<i className="facebook icon"></i>
-					Facebook Login
+					{FACEBOOK_LOGIN}
 				</a>
 			</div>
 			<div className="lead">
-				<a
-					className={cssClass + ' fluid ui py-3 black button'}
-					href="/auth/github"
-				>
+				<a className={cssClass + ' black button'} href="/auth/github">
 					<i className="github icon"></i>
-					GitHub Login
+					{GITHUB_LOGIN}
 				</a>
 			</div>
 		</>
@@ -41,10 +38,8 @@ const LoginMobile = () => (
 			<Col className="px-0 my-auto">
 				<div>
 					<div className="py-5">
-						<h3 className="font-weight-bold pb-4">
-							Learn to code with NinjaPrep
-						</h3>
-						<div>{SocialMediaButtons('mx-auto')}</div>
+						<h3 className="font-weight-bold pb-4">{LEARN_TO_CODE_MOBILE}</h3>
+						<div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
 					</div>
 				</div>
 			</Col>

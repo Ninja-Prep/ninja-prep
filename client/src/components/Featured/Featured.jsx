@@ -1,8 +1,8 @@
 import React from 'react'
 import './featured.css'
 import FeaturedCard from './FeaturedCard'
-
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
+import { DISCOVER_NEW_SKILLS } from './FeaturedStringIds'
 
 const Featured = (props) => {
 	const FeaturedList = [
@@ -30,7 +30,7 @@ const Featured = (props) => {
 	return (
 		<div className="featured-container">
 			<div className="featured-title">
-				<h1 className="bold">Discover New Skills</h1>
+				<h1 className="bold">{DISCOVER_NEW_SKILLS}</h1>
 				<PlayArrowIcon className="featured-play" />
 			</div>
 			<div className="card-deck ">

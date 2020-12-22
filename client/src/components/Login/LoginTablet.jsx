@@ -1,35 +1,32 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import { logInTitle } from '../Partials/HomeStringVariables'
+import {
+	FACEBOOK_LOGIN,
+	GET_STARTED,
+	GOOGLE_LOGIN,
+	GITHUB_LOGIN,
+	LOGIN_HEADER_TITLE,
+} from './LoginStringIds'
 
 const SocialMediaButtons = (cssClass) => {
 	return (
 		<>
 			<div className="lead">
-				<a
-					className={cssClass + ' fluid ui mb-4 py-3 red google button'}
-					href="/auth/google"
-				>
+				<a className={cssClass + 'red google button'} href="/auth/google">
 					<i className="google icon"></i>
-					Google Login
+					{GOOGLE_LOGIN}
 				</a>
 			</div>
 			<div className="lead">
-				<a
-					className={cssClass + ' fluid ui mb-4 py-3 facebook button'}
-					href="/auth/facebook"
-				>
+				<a className={cssClass + ' facebook button'} href="/auth/facebook">
 					<i className="facebook icon"></i>
-					Facebook Login
+					{FACEBOOK_LOGIN}
 				</a>
 			</div>
 			<div className="lead">
-				<a
-					className={cssClass + ' fluid ui py-3 black button'}
-					href="/auth/github"
-				>
+				<a className={cssClass + ' black button'} href="/auth/github">
 					<i className="github icon"></i>
-					GitHub Login
+					{GITHUB_LOGIN}
 				</a>
 			</div>
 		</>
@@ -45,15 +42,15 @@ const LoginTablet = () => (
 					src="./images/coursePreview.png"
 					alt="Placeholder"
 				/>
-				<h2 className="display-5 font-weight-bold pb-2 pt-2 pr-3">{logInTitle}</h2>
+				<h2 className="display-5 font-weight-bold pb-2 pt-2 pr-3">
+					{LOGIN_HEADER_TITLE}
+				</h2>
 			</Col>
 			<Col className="px-0 my-auto">
 				<div>
 					<div className="py-5">
-						<h3 className="font-weight-bold pb-4">Get Started for Free</h3>
-						<div>
-							{SocialMediaButtons('mx-auto')}
-						</div>
+						<h3 className="font-weight-bold pb-4">{GET_STARTED}</h3>
+						<div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
 					</div>
 				</div>
 			</Col>

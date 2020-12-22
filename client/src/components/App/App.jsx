@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Cookies from 'universal-cookie'
@@ -32,12 +32,14 @@ class App extends Component {
 			<Router>
 				<NavigationBarComponent />
 				<Switch>
-					<Route path="/" exact component={LandingPage} />
-					<Route path="/challenges" exact component={ChallengesPage} />
-					<Route path="/about" exact component={MeetTheTeamPage} />
 					<Route path="/login" exact component={LoginPage} />
+					<Fragment>
+						<Route path="/" exact component={LandingPage} />
+						<Route path="/challenges" exact component={ChallengesPage} />
+						<Route path="/about" exact component={MeetTheTeamPage} />
+						<FooterBarComponent />
+					</Fragment>
 				</Switch>
-				<FooterBarComponent />
 			</Router>
 		)
 	}
