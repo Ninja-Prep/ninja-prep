@@ -8,9 +8,25 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-body {
-	margin: 0;
-	padding: 70px 0px 0 0;
-	font-family: 'Roboto', 'Source Sans Pro', sans-serif;
-	overflow-x: hidden;
+@media only screen and (min-width: 768px) {
+	body {
+		margin: 0;
+
+		padding-top: 70px;
+		/* Change padding bottom to be footer height */
+		padding-bottom: 200px;
+		font-family: 'Roboto', 'Source Sans Pro', sans-serif;
+		overflow-x: hidden;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		margin: 0;
+		padding-top: 70px;
+		/* Change padding bottom to be footer height */
+		padding-bottom: 50px;
+		font-family: 'Roboto', 'Source Sans Pro', sans-serif;
+		overflow-x: hidden;
+	}
 }

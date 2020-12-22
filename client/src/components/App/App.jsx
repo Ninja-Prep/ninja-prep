@@ -32,8 +32,8 @@ class App extends Component {
 			<Router>
 				<NavigationBarComponent />
 				<Switch>
-					<Route path="/login" exact component={LoginPage} />
 					<Fragment>
+						<Route path="/login" exact component={LoginPage} />
 						<Route path="/" exact component={LandingPage} />
 						<Route path="/challenges" exact component={ChallengesPage} />
 						<Route path="/about" exact component={MeetTheTeamPage} />

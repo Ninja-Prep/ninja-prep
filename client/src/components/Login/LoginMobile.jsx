@@ -33,7 +33,7 @@ const SocialMediaButtons = (cssClass) => {
 }
 
 const LoginMobile = () => (
-	<div className="py-auto px-5 mx-5 login-mobile-container">
+	<div className="py-auto px-5 mx-5 login-mobile-container h-100">
 		<Row className="py-5 px-0 mx-auto container">
 			<Col className="px-0 my-auto">
 				<div>
