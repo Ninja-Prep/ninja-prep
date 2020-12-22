@@ -36,8 +36,8 @@ class App extends Component {
 					<Route path="/" exact component={LandingPage} />
 					<Route path="/challenges" exact component={ChallengesPage} />
 					<Route path="/about" exact component={MeetTheTeamPage} />
-					<FooterBarComponent />
 				</Switch>
+				<FooterBarComponent />
 			</Router>
 		)
 	}
