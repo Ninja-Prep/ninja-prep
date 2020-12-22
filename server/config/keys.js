@@ -1,5 +1,4 @@
 module.exports = {
-  PORT: process.env.PORT || process.argv[2] || 5000,
   MONGO_URL:
     "mongodb+srv://alxngu:bC1L2uj84tekD1rC@ninjaprep-01.woyjy.mongodb.net/NinjaPrep-test-01?retryWrites=true&w=majority",
   JDOODLE_CLIENT: "b32dfbf2fa459aba2c91a3a3c3b9e668",
