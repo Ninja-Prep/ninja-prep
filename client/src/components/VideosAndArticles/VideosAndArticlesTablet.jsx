@@ -3,6 +3,12 @@ import { Row, Col } from 'react-bootstrap'
 import './videos-and-articles.css'
 import OndemandVideoIcon from '@material-ui/icons/OndemandVideo'
 import ChromeReaderModeIcon from '@material-ui/icons/ChromeReaderMode'
+import {
+	ARTICLE_DESCRIPTION,
+	STEP_BY_STEP,
+	VIDEO_DESCRIPTION,
+	ARTICLE_HEADER,
+} from './VideosAndArticlesStringIds'
 
 const styles = {
 	videoIcon: {
@@ -21,25 +27,16 @@ const VideosAndArticlesTablet = () => (
 			<Col className="pl-0 pr-4 py-3 col-6">
 				<OndemandVideoIcon style={styles.videoIcon} />
 				<h1 className="font-weight-bold pt-2  pb-2 video-text display-5">
-					Step-by-step Video Explanations
+					{STEP_BY_STEP}
 				</h1>
-
-				<p className="lead text-secondary">
-					Learning from textbooks isn't meant to be easy which is why each of
-					our questions are accompanied with a video to maximize your learning
-					experience.
-				</p>
+				<p className="lead text-secondary">{VIDEO_DESCRIPTION}</p>
 			</Col>
 			<Col className="pr-0 pl-4 py-3 col-6 ">
 				<ChromeReaderModeIcon style={styles.chromeReaderIcon} />
 				<h1 className="font-weight-bold pt-2  pb-2 article-text display-5">
-					Insightful Community Articles
+					{ARTICLE_HEADER}
 				</h1>
-
-				<p className="lead text-secondary">
-					We provide articles written from the community on the most important
-					and complex topics as an additional resource!
-				</p>
+				<p className="lead text-secondary">{ARTICLE_DESCRIPTION}</p>
 			</Col>
 		</Row>
 	</div>

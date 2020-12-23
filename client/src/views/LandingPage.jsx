@@ -3,7 +3,6 @@ import { HeaderComponent } from '../components/Header/HeaderComponent'
 import { DiscoverComponent } from '../components/Discover/DiscoverComponent'
 import { VideosAndArticlesComponent } from '../components/VideosAndArticles/VideosAndArticlesComponent'
 import { CodeAlongComponent } from '../components/CodeAlong/CodeAlongComponent'
-import '../css/LandingPage.css'
 
 function LandingPage() {
 	return (

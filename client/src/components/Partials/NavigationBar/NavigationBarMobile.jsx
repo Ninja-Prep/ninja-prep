@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
-import './navigation-bar.css'
+import './NavigationBar.css'
+import {
+	GET_PREMIUM_NAVIGATION,
+	NINJA_PREP_NAVIGATION,
+	CHALLENGES_NAVIGATION,
+	MEET_THE_TEAM_NAVIGATION,
+	SIGN_IN_NAVIGATION,
+} from './NavigationBarStringIds'
 
-function NavigationBar() {
+function NavigationBarMobile() {
 	return (
 		<Navbar
 			fixed="top"
@@ -13,28 +20,28 @@ function NavigationBar() {
 		>
 			<Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
 				<img
-					className="logo ml-5 mr-3"
+					className="logo"
 					src="./images/NinjaPrep-Logo.png"
 					alt="logo"
 					width="40"
 					height="40"
 				/>
-				NinjaPrep
+				{NINJA_PREP_NAVIGATION}
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="ml-auto pr-5 mr-5">
 					<Nav.Link as={Link} to="/premium" className="pl-3">
-						Get Premium
+						{GET_PREMIUM_NAVIGATION}
 					</Nav.Link>
 					<Nav.Link as={Link} to="/challenges" className="pl-3">
-						Challenges
+						{CHALLENGES_NAVIGATION}
 					</Nav.Link>
 					<Nav.Link as={Link} to="/about" className="pl-3">
-						Meet the Team
+						{MEET_THE_TEAM_NAVIGATION}
 					</Nav.Link>
 					<Nav.Link as={Link} to="/login" className="pl-3 mr-5">
-						Sign In
+						{SIGN_IN_NAVIGATION}
 					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
@@ -42,4 +49,4 @@ function NavigationBar() {
 	)
 }
 
-export default NavigationBar
+export default NavigationBarMobile

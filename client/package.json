@@ -1,8 +1,6 @@
 {
 	"name": "client",
 	"version": "0.1.0",
-	"private": true,
-	"proxy": "http://localhost:5000/auth",
 	"main": "index.jsx",
 	"babel": {
 		"env": {
@@ -28,7 +26,7 @@
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
-		"axios": "^0.20.0",
+		"axios": "^0.21.0",
 		"babel-plugin-react-html-attrs": "^3.0.5",
 		"codemirror": "^5.58.1",
 		"bootstrap": "^4.5.3",
@@ -46,7 +44,8 @@
 		"react-scripts": "3.4.1",
 		"redux": "^4.0.5",
 		"redux-form": "^8.3.7",
-		"redux-thunk": "^2.3.0"
+		"redux-thunk": "^2.3.0",
+		"universal-cookie": "^4.0.4"
 	},
 	"scripts": {
 		"start": "react-scripts start",
