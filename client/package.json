@@ -49,14 +49,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts jest",
+    "test": "react-scripts test",
     "jest": "jest",
-    "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "eject": "react-scripts eject"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test",
+      "pre-commit": "pretty-quick --staged",
       "pre-push": "yarn test"
     }
   },
@@ -84,7 +83,8 @@
     "husky": "^4.3.6",
     "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
