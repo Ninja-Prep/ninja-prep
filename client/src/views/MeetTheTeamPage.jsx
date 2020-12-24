@@ -1,7 +1,8 @@
 import React from 'react'
+import Profile from '../components/Profile/Profile'
 
 function MeetTheTeamPage() {
-	return <div></div>
+	return <Profile />
 }
 
 export default MeetTheTeamPage
