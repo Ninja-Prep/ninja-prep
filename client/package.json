@@ -48,11 +48,17 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build ",
-    "test": "react-scripts test",
+    "build": "react-scripts build",
+    "test": "react-scripts jest",
     "jest": "jest",
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
+    }
   },
   "lint-staged": {
     "src/**/*.{js,json,css,scss,html,md}": [
