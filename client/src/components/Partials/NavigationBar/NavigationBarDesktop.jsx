@@ -16,7 +16,7 @@ function renderLoginLink() {
 	if (cookies.get('isLoggedIn')) {
 		return (
 			<Nav.Link href="/auth/logout" className="pl-3 mr-5">
-				Sign Out
+				Log Out
 			</Nav.Link>
 		)
 	} else {
