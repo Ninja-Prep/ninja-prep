@@ -52,7 +52,13 @@
     "test": "react-scripts test",
     "jest": "jest",
     "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+	"*.{js,json,css,scss,html,md}": [
+	  "prettier --write",
+	  "git add"
+	]
   },
   "browserslist": {
     "production": [
