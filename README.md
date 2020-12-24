@@ -8,7 +8,7 @@ Rules for coding:
 
 Before any pull request:
 
-In the client folder
+In the client folder:
 
 1. Run the command: yarn jest
 2. Run the command: yarn build
