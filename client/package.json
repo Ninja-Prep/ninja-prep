@@ -55,10 +55,10 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-	"*.{js,json,css,scss,html,md}": [
-	  "prettier --write",
-	  "git add"
-	]
+    "*.{js,json,css,scss,html,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
