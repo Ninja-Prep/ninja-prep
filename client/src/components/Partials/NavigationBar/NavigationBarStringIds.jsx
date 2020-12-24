@@ -1,6 +1,6 @@
-export const NINJA_PREP_NAVIGATION = 'NinjaPrep'
-export const GET_PREMIUM_NAVIGATION = 'Get Premium'
-export const CHALLENGES_NAVIGATION = 'Challenges'
-export const MEET_THE_TEAM_NAVIGATION = 'Meet the Team'
-export const SIGN_IN_NAVIGATION = 'Sign In'
-export const SIGN_OUT_NAVIGATION = 'Sign Out'
+export const NINJA_PREP_NAVIGATION = "NinjaPrep"
+export const GET_PREMIUM_NAVIGATION = "Get Premium"
+export const CHALLENGES_NAVIGATION = "Challenges"
+export const MEET_THE_TEAM_NAVIGATION = "Meet the Team"
+export const SIGN_IN_NAVIGATION = "Sign In"
+export const SIGN_OUT_NAVIGATION = "Sign Out"

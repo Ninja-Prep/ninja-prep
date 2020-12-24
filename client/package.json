@@ -51,19 +51,24 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "jest": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext js,jsx,ts,tsx src/"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn test"
+      "pre-push": "yarn lint && yarn test"
     }
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "plugin:prettier/recommended"
-    ]
+    ],
+    "rules": {
+      "no-extra-semi": "error",
+      "no-console": "error"
+    }
   },
   "browserslist": {
     "production": [
@@ -91,5 +96,8 @@
     "moduleNameMapper": {
       "\\.(css|less|scss)$": "identity-obj-proxy"
     }
+  },
+  "prettier": {
+    "semi": false
   }
 }
