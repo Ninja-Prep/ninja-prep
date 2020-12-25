@@ -5,17 +5,17 @@ import { VideosAndArticlesMobile } from './VideosAndArticlesMobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 
 const VideosAndArticlesComponent = () => (
-	<div>
-		<Desktop>
-			<VideosAndArticlesDesktop />
-		</Desktop>
-		<Tablet>
-			<VideosAndArticlesTablet />
-		</Tablet>
-		<Mobile>
-			<VideosAndArticlesMobile />
-		</Mobile>
-	</div>
+    <div>
+        <Desktop>
+            <VideosAndArticlesDesktop />
+        </Desktop>
+        <Tablet>
+            <VideosAndArticlesTablet />
+        </Tablet>
+        <Mobile>
+            <VideosAndArticlesMobile />
+        </Mobile>
+    </div>
 )
 
 export default VideosAndArticlesComponent

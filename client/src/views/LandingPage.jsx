@@ -5,14 +5,14 @@ import { VideosAndArticlesComponent } from '../components/VideosAndArticles/Vide
 import { CodeAlongComponent } from '../components/CodeAlong/CodeAlongComponent'
 
 function LandingPage() {
-	return (
-		<div>
-			<HeaderComponent />
-			<DiscoverComponent />
-			<VideosAndArticlesComponent />
-			<CodeAlongComponent />
-		</div>
-	)
+    return (
+        <div>
+            <HeaderComponent />;
+            <DiscoverComponent />
+            <VideosAndArticlesComponent />
+            <CodeAlongComponent />
+        </div>
+    )
 }
 
 export default LandingPage

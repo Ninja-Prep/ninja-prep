@@ -1,7 +1,7 @@
 import React from 'react'
 
 function MeetTheTeamPage() {
-	return <div></div>
+    return <div></div>
 }
 
 export default MeetTheTeamPage
