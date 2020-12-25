@@ -3,11 +3,11 @@ import { Controlled as CodeMirror } from 'react-codemirror2'
 import { connect } from 'react-redux'
 import Axios from 'axios'
 import { languageMap } from './CodeEditorNavbar/CodeEditorLanguages'
-import CodeEditorNav from './CodeEditorNavbar/CodeEditorNavbar'
+import CodeEditorNavbar from './CodeEditorNavbar/CodeEditorNavbar'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/addon/selection/active-line'
 
-class CodeEditor extends Component {
+class CodeEditorDesktop extends Component {
     constructor(props) {
         super(props)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -40,7 +40,7 @@ class CodeEditor extends Component {
         return (
             <Fragment>
                 <form onSubmit={this.handleSubmit}>
-                    <EditorNav />
+                    <CodeEditorNavbar />
                     <div>
                         <CodeMirror
                             value={this.state.value}
@@ -65,4 +65,4 @@ const mapStateToProps = (state) => ({
     styleActiveLine: true,
 })
 
-export default connect(mapStateToProps)(CodeEditor)
+export default connect(mapStateToProps)(CodeEditorDesktop)

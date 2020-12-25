@@ -1,8 +1,7 @@
-import { useRouteMatch, useParams, Link } from 'react-router-dom'
-import CodeEditor from '../components/problem/CodeEditor'
+import CodeEditorComponent from '../components/CodeEditor/CodeEditorComponent'
 import React, { Component } from 'react'
 
-class ProblemTemplate extends Component {
+class ProblemTemplatePage extends Component {
     constructor(props) {
         super(props)
         this.problemName = this.props.match.params.name
@@ -11,10 +10,10 @@ class ProblemTemplate extends Component {
     render() {
         return (
             <div>
-                <CodeEditor />
+                <CodeEditorComponent />
             </div>
         )
     }
 }
 
-export default ProblemTemplate
+export default ProblemTemplatePage

@@ -10,6 +10,7 @@ import LoginPage from '../../views/LoginPage'
 import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Axios from 'axios'
+import ProblemTemplatePage from '../../views/ProblemTemplatePage'
 
 const cookies = new Cookies()
 
@@ -33,12 +34,9 @@ class App extends Component {
                 <Switch>
                     <Route path="/login" exact component={LoginPage} />
                     <Route path="/" exact component={LandingPage} />
-                    <Route
-                        path="/challenges"
-                        exact
-                        component={ChallengesPage}
-                    />
+                    <Route path="/challenges" exact component={ChallengesPage} />
                     <Route path="/about" exact component={MeetTheTeamPage} />
+                    <Route path="/problem/:id" exact component={ProblemTemplatePage} />
                 </Switch>
                 <FooterBarComponent />
             </Router>
