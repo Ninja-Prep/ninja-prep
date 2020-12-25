@@ -12,21 +12,10 @@ import {
 
 function NavigationBarMobile() {
     return (
-        <Navbar
-            fixed="top"
-            expand="lg"
-            className="px-5 py-3 navigation-bar"
-            variant="dark"
-        >
+        <Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
             <div className="container p-0">
                 <Navbar.Brand as={Link} to="/">
-                    <img
-                        className="mr-3"
-                        src="./images/NinjaPrep-Logo.png"
-                        alt="logo"
-                        width="40"
-                        height="40"
-                    />
+                    <img className="mr-3" src="./images/NinjaPrep-Logo.png" alt="logo" width="40" height="40" />
                     {NINJA_PREP_NAVIGATION}
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

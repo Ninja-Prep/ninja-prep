@@ -7,11 +7,7 @@ function AllCategories() {
         <ul>
             {Problems.map((problem) => (
                 <li key={problem.id}>
-                    <Link
-                        to={`${process.env.PUBLIC_URL}/problem/${problem.name}`}
-                    >
-                        {problem.name}
-                    </Link>
+                    <Link to={`${process.env.PUBLIC_URL}/problem/${problem.name}`}>{problem.name}</Link>
                 </li>
             ))}
         </ul>

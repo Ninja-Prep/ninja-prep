@@ -30,20 +30,9 @@ function renderLoginLink() {
 
 function NavigationBarDesktop() {
     return (
-        <Navbar
-            fixed="top"
-            expand="lg"
-            className="px-5 py-3 navigation-bar"
-            variant="dark"
-        >
+        <Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
             <Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
-                <img
-                    className="logo ml-5 mr-3"
-                    src="./images/NinjaPrep-Logo.png"
-                    alt="logo"
-                    width="40"
-                    height="40"
-                />
+                <img className="logo ml-5 mr-3" src="./images/NinjaPrep-Logo.png" alt="logo" width="40" height="40" />
                 {NINJA_PREP_NAVIGATION}
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
