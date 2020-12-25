@@ -55,7 +55,7 @@
     "husky": {
         "hooks": {
             "pre-commit": "pretty-quick --staged",
-            "pre-push": "jest && lint"
+            "pre-push": "run jest && lint"
         }
     },
     "eslintConfig": {
