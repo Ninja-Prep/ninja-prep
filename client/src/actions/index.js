@@ -1,9 +1,9 @@
 export const changeTheme = (theme) => ({
-  type: "CHANGE_THEME",
-  theme: theme,
-});
+    type: 'CHANGE_THEME',
+    theme: theme,
+})
 
 export const changeMode = (mode) => ({
-  type: "CHANGE_MODE",
-  mode: mode,
-});
+    type: 'CHANGE_MODE',
+    mode: mode,
+})

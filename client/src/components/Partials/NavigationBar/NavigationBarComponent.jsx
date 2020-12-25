@@ -5,17 +5,17 @@ import NavigationBarMobile from './NavigationBarMobile'
 import { Desktop, Tablet, Mobile } from '../../MediaQuery/DeviceSizes'
 
 const NavigationBarComponent = () => (
-	<div>
-		<Desktop>
-			<NavigationBarDesktop />
-		</Desktop>
-		<Tablet>
-			<NavigationBarTablet />
-		</Tablet>
-		<Mobile>
-			<NavigationBarMobile />
-		</Mobile>
-	</div>
+    <div>
+        <Desktop>
+            <NavigationBarDesktop />
+        </Desktop>
+        <Tablet>
+            <NavigationBarTablet />
+        </Tablet>
+        <Mobile>
+            <NavigationBarMobile />
+        </Mobile>
+    </div>
 )
 
 export default NavigationBarComponent
