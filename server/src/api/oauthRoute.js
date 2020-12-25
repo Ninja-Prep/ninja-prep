@@ -11,11 +11,15 @@ router.get("/getLoginStatus", (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.session.destroy(function (err) {
-    req.logOut();
-    res.status(200).clearCookie("isLoggedIn", {
-      path: "/",
-    });
-    res.redirect("/");
+    if (err) {
+      console.log(err);
+    } else {
+      req.logOut();
+      res.status(200).clearCookie("isLoggedIn", {
+        path: "/",
+      });
+      res.redirect("/");
+    }
   });
 });
 
