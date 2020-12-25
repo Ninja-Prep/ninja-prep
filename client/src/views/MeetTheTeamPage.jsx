@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 
 function MeetTheTeamPage() {
-  return <div></div>
+    return <div></div>
 }
 
 export default MeetTheTeamPage
-export { default as MeetTheTeamPage } from "./MeetTheTeamPage"
+export { default as MeetTheTeamPage } from './MeetTheTeamPage'
