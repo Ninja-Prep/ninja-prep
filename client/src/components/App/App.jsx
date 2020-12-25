@@ -25,7 +25,6 @@ class App extends Component {
 
 	async componentWillMount() {
 		await getLoginStatus()
-		console.log(cookies.get('isLoggedIn'))
 	}
 	render() {
 		return (

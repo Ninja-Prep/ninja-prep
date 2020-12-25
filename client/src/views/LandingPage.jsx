@@ -7,7 +7,7 @@ import { CodeAlongComponent } from '../components/CodeAlong/CodeAlongComponent'
 function LandingPage() {
 	return (
 		<div>
-			<HeaderComponent />
+			<HeaderComponent />;
 			<DiscoverComponent />
 			<VideosAndArticlesComponent />
 			<CodeAlongComponent />
