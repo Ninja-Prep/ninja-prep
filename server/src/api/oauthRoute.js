@@ -30,7 +30,7 @@ router.get(
   }),
   (req, res) => {
     req.flash("login", "Logged In");
-    res.cookie("isLoggedIn", req.isAuthenticated());
+    res.cookie("user", req.user);
     res.redirect("/");
   }
 );
