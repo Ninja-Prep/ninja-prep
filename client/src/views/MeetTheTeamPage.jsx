@@ -6,4 +6,3 @@ function MeetTheTeamPage() {
 }
 
 export default MeetTheTeamPage
-export { default as MeetTheTeamPage } from './MeetTheTeamPage'
