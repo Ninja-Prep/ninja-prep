@@ -82,7 +82,7 @@ function MeetTheTeamComponent() {
                     />
                 </Col>
             </Row>
-
+            
         </div>
     )
 }

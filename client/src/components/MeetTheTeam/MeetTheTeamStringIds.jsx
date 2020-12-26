@@ -8,7 +8,7 @@ export const JOANNE_DESCRIPTION =
 
 export const ANGELA_YEUNG = 'Angela Yeung'
 export const ANGELA_Y_DESCRIPTION =
-	"Angela Yeung is currently a Bachelor's student at New York University majoring in Computer Science. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at."
+	"Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at."
 
 export const ANGELA_SUN = 'Angela Sun'
 export const ANGELA_S_DESCRIPTION =
