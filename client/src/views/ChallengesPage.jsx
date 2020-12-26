@@ -7,7 +7,7 @@ function ChallengesPage() {
 	return (
 		<div className="challenges-container">
 			<Featured />
-			<QuestionListComponent />
+			<QuestionListDesktop />
 		</div>
 	)
 }

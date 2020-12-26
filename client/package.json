@@ -46,7 +46,7 @@
 		"redux-thunk": "^2.3.0"
 	},
 	"scripts": {
-		"start": "PORT=8080 react-scripts start",
+		"start": "react-scripts start",
 		"build": "react-scripts build ",
 		"test": "react-scripts test",
 		"jest": "jest",
