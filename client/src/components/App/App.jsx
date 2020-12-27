@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Cookies from 'universal-cookie'
 import NavigationBarComponent from '../Partials/NavigationBar/NavigationBarComponent'
 import LandingPage from '../../views/LandingPage'
+import PremiumPage from '../../views/PremiumPage'
 import ChallengesPage from '../../views/ChallengesPage'
 import MeetTheTeamPage from '../../views/MeetTheTeamPage'
 import LoginPage from '../../views/LoginPage'
@@ -33,6 +34,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/login" exact component={LoginPage} />
                     <Route path="/" exact component={LandingPage} />
+                    <Route path="/premium" exact component={PremiumPage} />
                     <Route
                         path="/challenges"
                         exact

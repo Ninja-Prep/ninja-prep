@@ -18,7 +18,7 @@ const HeaderTablet = () => (
                 src="/images/NinjaPrep-Logo.png"
                 alt="logo"
             />
-            <h1 className="display-4 px-5 font-weight-bold">
+            <h1 className="display-5 px-5 font-weight-bold pb-2">
                 {ENHANCE_YOUR_SKILLS}
             </h1>
             <span className="lead m-auto d-block">{HEADER_DESCRIPTION_1}</span>

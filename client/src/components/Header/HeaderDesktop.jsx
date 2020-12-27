@@ -18,7 +18,7 @@ const HeaderDesktop = () => (
                 src="/images/NinjaPrep-Logo.png"
                 alt="logo"
             />
-            <h1 className="display-4 px-5 font-weight-bold">
+            <h1 className="display-5 px-5 font-weight-bold pb-2">
                 {ENHANCE_YOUR_SKILLS}
             </h1>
             <span className="lead w-75 m-auto d-block">
