@@ -15,7 +15,7 @@ function NavigationBarDesktop(props) {
         if (props.user) {
             return (
                 <Nav.Link href="/auth/logout" className="pl-3 mr-5">
-                    {props.user.first_name}
+                    Sign Out
                 </Nav.Link>
             )
         } else {

@@ -10,7 +10,22 @@ import {
     SIGN_IN_NAVIGATION,
 } from './NavigationBarStringIds'
 
-function NavigationBarMobile() {
+function NavigationBarMobile(props) {
+    function renderLoginLink() {
+        if (props.user) {
+            return (
+                <Nav.Link href="/auth/logout" className="pl-3 mr-5">
+                    Sign Out
+                </Nav.Link>
+            )
+        } else {
+            return (
+                <Nav.Link as={Link} to="/login" className="pl-3 mr-5">
+                    {SIGN_IN_NAVIGATION}
+                </Nav.Link>
+            )
+        }
+    }
     return (
         <Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
             <div className="container p-0">
@@ -30,9 +45,7 @@ function NavigationBarMobile() {
                         <Nav.Link as={Link} to="/about" className="pl-3">
                             {MEET_THE_TEAM_NAVIGATION}
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/login" className="pl-3">
-                            {SIGN_IN_NAVIGATION}
-                        </Nav.Link>
+                            {renderLoginLink()}
                     </Nav>
                 </Navbar.Collapse>
             </div>
