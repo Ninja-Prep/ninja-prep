@@ -11,8 +11,7 @@
     "server": " nodemon -L server.js",
     "client": "cd ../client && yarn start",
     "prod": "cross-env NODE_ENV=production nodemon server.js",
-    "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\"",
-    "lint": "eslint --ext js,jsx,ts,tsx src/"
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\""
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +27,7 @@
     "express-list-endpoints": "^5.0.0",
     "express-session": "^1.17.1",
     "jdoodle-client": "^1.0.2",
+    "lint-staged": "^10.5.3",
     "lodash": "^4.17.20",
     "mongoose": "^5.10.16",
     "nodemon": "^2.0.6",
@@ -65,10 +65,16 @@
       "class-methods-use-this": "off"
     }
   },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn lint"
+      "pre-commit": "lint-staged"
     }
   }
 }

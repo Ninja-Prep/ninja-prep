@@ -17,7 +17,7 @@ userSchema.statics.findOrCreate = async function (profile, callback) {
   if (!user) {
     user = await new this({
       _id: profile.id,
-      first_name: profile._json.name.split(" ")[0],
+      first_name: profile.displayName.split(" ")[0],
       premium_expiration_date: new Date(Date.now()),
     }).save();
   }
