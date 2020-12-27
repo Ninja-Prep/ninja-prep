@@ -44,7 +44,7 @@ passport.use(
     {
       clientID: keys.GITHUB_CLIENT,
       clientSecret: keys.GITHUB_SECRET,
-      callbackURL: "/auth/github/callback",
+      scope: ["read:user"],
     },
     function (accessToken, refreshToken, profile, done) {
       User.findOrCreate(profile, function (err, user) {

@@ -4,7 +4,7 @@ import { Navbar, Nav, Row, Col } from 'react-bootstrap'
 
 function FooterBarDesktop() {
     return (
-        <Navbar sticky="bottom" className="px-5 border-top d-absolute">
+        <Navbar sticky="bottom" className="px-5 border-top">
             <Row className="py-5 mx-auto container">
                 <Col className="my-auto p-0">
                     <img src="./images/NinjaPrep-Logo.png" alt="logo" width="70" height="70" />

@@ -24,21 +24,25 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
         "@testing-library/user-event": "^7.2.1",
-        "axios": "^0.21.0",
+        "axios": "^0.21.1",
         "babel-plugin-react-html-attrs": "^3.0.5",
         "bootstrap": "^4.5.3",
+        "codemirror": "^5.59.0",
         "http-proxy-middleware": "^1.0.6",
         "jquery": "^3.5.1",
         "levenary": "^1.1.1",
+        "lint-staged": "^10.5.3",
         "lodash": "^4.17.20",
         "lodash.throttle": "^4.1.1",
         "react": "^16.13.1",
         "react-bootstrap": "^1.4.0",
+        "react-codemirror2": "^7.2.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.2",
         "react-responsive": "^8.2.0",
         "react-router-dom": "^5.2.0",
-        "react-scripts": "4.0.1",
+        "react-scripts": "3.4.1",
+        "react-select": "^3.1.1",
         "redux": "^4.0.5",
         "redux-form": "^8.3.7",
         "redux-thunk": "^2.3.0",
@@ -52,10 +56,12 @@
         "eject": "react-scripts eject",
         "lint": "eslint --ext js,jsx,ts,tsx src/"
     },
+    "lint-staged": {
+        "src/**/*.jsx": ["prettier --write", "eslint --fix", "git add"]
+    },
     "husky": {
         "hooks": {
-            "pre-commit": "pretty-quick --staged",
-            "pre-push": "yarn lint"
+            "pre-commit": "lint-staged"
         }
     },
     "eslintConfig": {
