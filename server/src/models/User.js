@@ -11,7 +11,6 @@ userSchema.statics.findOrCreate = async function (profile, callback) {
   let user = await this.findById({ _id: profile.id }, (err, doc) => {
     if (err) callback(err, null);
     else if (doc) {
-      console.log("Found!");
       callback(err, doc);
     }
   });
