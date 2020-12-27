@@ -26,7 +26,7 @@ passport.use(
     {
       clientID: keys.FACEBOOK_CLIENT,
       clientSecret: keys.FACEBOOK_SECRET,
-      callbackURL: "/auth/facebook/callback",
+      callbackURL: "https://ninjaprep.io/auth/facebook/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       User.findOrCreate(profile, function (err, user) {

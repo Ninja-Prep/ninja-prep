@@ -9,7 +9,6 @@ router.get("/github", passport.authenticate("github"));
 const publicUserFields = ["first_name", "_id"];
 
 router.get("/authenticationStatus", (req, res) => {
-  console.log(req.session.isAuthenticated);
   res.send(req.session.isAuthenticated);
 });
 
