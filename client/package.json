@@ -28,6 +28,7 @@
         "codemirror": "^5.59.0",
         "http-proxy-middleware": "^1.0.6",
         "levenary": "^1.1.1",
+        "lint-staged": "^10.5.3",
         "lodash": "^4.17.20",
         "lodash.throttle": "^4.1.1",
         "react": "^16.13.1",
@@ -52,9 +53,12 @@
         "eject": "react-scripts eject",
         "lint": "eslint --ext js,jsx,ts,tsx src/"
     },
+    "lint-staged": {
+        "src/**/*.jsx": ["prettier --write", "eslint --fix", "git add"]
+    },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn lint --fix && pretty-quick --staged"
+            "pre-commit": "lint-staged"
         }
     },
     "eslintConfig": {
@@ -62,7 +66,13 @@
         "rules": {
             "no-extra-semi": "error",
             "no-console": "error",
-            "indent": ["warn", 4, { "SwitchCase": 1 }]
+            "indent": [
+                "warn",
+                4,
+                {
+                    "SwitchCase": 1
+                }
+            ]
         }
     },
     "browserslist": {
