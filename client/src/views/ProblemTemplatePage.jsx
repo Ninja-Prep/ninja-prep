@@ -1,4 +1,3 @@
-import CodeEditorComponent from '../components/CodeEditor/CodeEditorComponent'
 import React, { Component } from 'react'
 
 class ProblemTemplatePage extends Component {
@@ -10,7 +9,6 @@ class ProblemTemplatePage extends Component {
     render() {
         return (
             <div>
-                <CodeEditorComponent />
             </div>
         )
     }

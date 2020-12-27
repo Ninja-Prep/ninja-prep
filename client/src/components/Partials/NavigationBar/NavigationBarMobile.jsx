@@ -44,7 +44,7 @@ function NavigationBarMobile(props) {
                     <Nav.Link as={Link} to="/about" className="pl-3">
                         {MEET_THE_TEAM_NAVIGATION}
                     </Nav.Link>
-                        {renderLoginLink()}
+                    {renderLoginLink()}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
