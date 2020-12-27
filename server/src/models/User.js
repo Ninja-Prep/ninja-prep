@@ -21,7 +21,6 @@ userSchema.statics.findOrCreate = async function (profile, callback) {
       premium_expiration_date: new Date(Date.now()),
     }).save();
   }
-  console.log(user);
   callback(null, user);
 };
 
