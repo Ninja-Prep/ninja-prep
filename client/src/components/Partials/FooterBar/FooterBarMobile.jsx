@@ -1,17 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Navbar, Nav, Row, Col } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 function FooterBarMobile() {
     return (
-        <Navbar
-            sticky="bottom"
-            className=" px-auto py-3 m-auto border-top d-absolute"
-        >
+        <Navbar sticky="bottom" className=" px-auto py-3 m-auto border-top d-absolute">
             <div className="mx-auto container">
-                <p className="text-secondary m-0">
-                    Copyright &copy; 2020 NinjaPrep
-                </p>
+                <p className="text-secondary m-0">Copyright &copy; 2020 NinjaPrep</p>
                 <p className="text-secondary m-0 px-2">|</p>
                 <Nav.Link as={Link} to="/about" className="p-0 text-dark">
                     About
