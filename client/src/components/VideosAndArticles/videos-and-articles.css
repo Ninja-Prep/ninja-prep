@@ -1,11 +1,11 @@
 .rainbow-bg {
-	background-image: url('/images/Rainbow-Background.png');
-	background-repeat: no-repeat;
+    background-image: url('/images/Rainbow-Background.png');
+    background-repeat: no-repeat;
 }
 .article-text {
-	color: #259af3;
+    color: #259af3;
 }
 
 .video-text {
-	color: #1da09c;
+    color: #1da09c;
 }

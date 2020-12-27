@@ -14,7 +14,7 @@ passport.use(
       proxy: true,
     },
     function (accessToken, refreshToken, profile, done) {
-      User.findOrCreate(profile.id, function (err, user) {
+      User.findOrCreate(profile, function (err, user) {
         return done(err, user);
       });
     }
@@ -26,10 +26,10 @@ passport.use(
     {
       clientID: keys.FACEBOOK_CLIENT,
       clientSecret: keys.FACEBOOK_SECRET,
-      callbackURL: "https://ninjaprep.io/auth/facebook/callback",
+      callbackURL: "/auth/facebook/callback",
     },
     function (accessToken, refreshToken, profile, done) {
-      User.findOrCreate(profile.id, function (err, user) {
+      User.findOrCreate(profile, function (err, user) {
         if (err) {
           return done(err);
         }
@@ -47,7 +47,7 @@ passport.use(
       callbackURL: "/auth/github/callback",
     },
     function (accessToken, refreshToken, profile, done) {
-      User.findOrCreate(profile.id, function (err, user) {
+      User.findOrCreate(profile, function (err, user) {
         if (err) {
           return done(err);
         }

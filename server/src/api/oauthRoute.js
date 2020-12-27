@@ -1,3 +1,4 @@
+const _ = require("lodash");
 const router = require("express").Router();
 const passport = require("passport");
 
@@ -5,22 +6,21 @@ router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 router.get("/facebook", passport.authenticate("facebook"));
 router.get("/github", passport.authenticate("github"));
 
-router.get("/getLoginStatus", (req, res) => {
-  res.send(req.isAuthenticated());
+const publicUserFields = ["first_name", "_id"];
+
+router.get("/authenticationStatus", (req, res) => {
+  console.log(req.session.isAuthenticated);
+  res.send(req.session.isAuthenticated);
+});
+
+router.get("/getUser", (req, res) => {
+  res.send(req.session.publicUser);
 });
 
 router.get("/logout", (req, res) => {
-  req.session.destroy(function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      req.logOut();
-      res.status(200).clearCookie("isLoggedIn", {
-        path: "/",
-      });
-      res.redirect("/");
-    }
-  });
+  req.logOut();
+  req.session = null;
+  res.redirect("/");
 });
 
 router.get(
@@ -30,7 +30,10 @@ router.get(
   }),
   (req, res) => {
     req.flash("login", "Logged In");
-    res.cookie("isLoggedIn", req.isAuthenticated());
+    const publicUser = _.pick(req.user, publicUserFields);
+    req.session.publicUser = publicUser;
+    req.session.user = req.user;
+    req.session.isAuthenticated = true;
     res.redirect("/");
   }
 );
