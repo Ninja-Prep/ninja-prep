@@ -26,7 +26,7 @@ passport.use(
     {
       clientID: keys.FACEBOOK_CLIENT,
       clientSecret: keys.FACEBOOK_SECRET,
-      callbackURL: "https://ninjaprep.io/auth/facebook/callback",
+      callbackURL: "/auth/facebook/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       User.findOrCreate(profile, function (err, user) {
@@ -44,7 +44,7 @@ passport.use(
     {
       clientID: keys.GITHUB_CLIENT,
       clientSecret: keys.GITHUB_SECRET,
-      callbackURL: "/auth/github/callback",
+      scope: ["read:user"],
     },
     function (accessToken, refreshToken, profile, done) {
       User.findOrCreate(profile, function (err, user) {
