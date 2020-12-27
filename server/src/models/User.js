@@ -15,9 +15,17 @@ userSchema.statics.findOrCreate = async function (profile, callback) {
     }
   });
   if (!user) {
+    let name = "";
+
+    if (profile.displayName) {
+      name = profile.displayName.split(" ")[0];
+    } else if (profile.username) {
+      name = profile.username;
+    }
+
     user = await new this({
       _id: profile.id,
-      first_name: profile.displayName.split(" ")[0],
+      first_name: name,
       premium_expiration_date: new Date(Date.now()),
     }).save();
   }
