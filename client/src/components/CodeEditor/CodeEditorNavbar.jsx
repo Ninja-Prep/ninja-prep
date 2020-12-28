@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { changeTheme, changeMode } from '../../../actions'
+import { changeTheme, changeMode } from '../../actions'
 import React, { Fragment } from 'react'
 import Select from 'react-select'
 import { themeOptions, modeOptions } from './CodeEditorLanguages'

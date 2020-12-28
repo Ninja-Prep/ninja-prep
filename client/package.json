@@ -6,8 +6,13 @@
     "babel": {
         "env": {
             "test": {
-                "presets": ["@babel/preset-react"],
-                "plugins": ["@babel/plugin-transform-modules-commonjs", "@babel/plugin-proposal-class-properties"]
+                "presets": [
+                    "@babel/preset-react"
+                ],
+                "plugins": [
+                    "@babel/plugin-transform-modules-commonjs",
+                    "@babel/plugin-proposal-class-properties"
+                ]
             }
         }
     },
@@ -39,6 +44,7 @@
         "react-codemirror2": "^7.2.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.2",
+        "react-reflex": "^3.1.0",
         "react-responsive": "^8.2.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
@@ -57,7 +63,11 @@
         "lint": "eslint --ext js,jsx,ts,tsx src/"
     },
     "lint-staged": {
-        "src/**/*.jsx": ["prettier --write", "eslint --fix", "git add"]
+        "src/**/*.jsx": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ]
     },
     "husky": {
         "hooks": {
@@ -65,7 +75,10 @@
         }
     },
     "eslintConfig": {
-        "extends": ["react-app", "plugin:prettier/recommended"],
+        "extends": [
+            "react-app",
+            "plugin:prettier/recommended"
+        ],
         "rules": {
             "no-extra-semi": "error",
             "no-console": "error",
@@ -79,8 +92,16 @@
         }
     },
     "browserslist": {
-        "production": [">0.2%", "not dead", "not op_mini all"],
-        "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     },
     "devDependencies": {
         "eslint-config-prettier": "^7.1.0",
