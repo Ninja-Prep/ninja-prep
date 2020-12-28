@@ -15,6 +15,8 @@ import ProblemTemplatePage from '../../views/ProblemTemplatePage'
 console.log(30)
 console.log(30)
 console.log(30)
+console.log(30)
+console.log(30)
 class App extends Component {
     render() {
         return (
