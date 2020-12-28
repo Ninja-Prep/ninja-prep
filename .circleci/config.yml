@@ -1,5 +1,10 @@
 version: 2.1
-
+executors:
+  docker-publisher:
+    environment:
+      IMAGE_NAME: alexngn/ninjaprep
+    docker:
+      - image: circleci/buildpack-deps:stretch
 orbs:
   node: circleci/node@3.0.1
   codecov: codecov/codecov@1.1.0
@@ -14,24 +19,55 @@ jobs:
           install-yarn: true
           install-npm: false
           node-version: latest
-      - run: 
+      - run:
           name: Adding NPM/Yarn dependencies
           command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
-      - run: 
+      - run:
           name: Testing Client Folder
           command: cd client && yarn jest
-      - run: 
+      - run:
           name: Client Build Attempt
           command: CI=false yarn --cwd ./client run build
       - codecov/upload:
           file: ./client/coverage/coverage-final.json
+
+  build-remote-docker-image:
+    executor: docker-publisher
+    steps:
+      - checkout
+      - run:
+          name: Build Docker image
+          command: |
+            docker build -t $IMAGE_NAME:latest .
+      - run:
+          name: Archive Docker image
+          command: docker save -o image.tar $IMAGE_NAME
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./image.tar
+
+  publish-latest:
+    executor: docker-publisher
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - setup_remote_docker
+      - run:
+          name: Load archived Docker image
+          command: docker load -i /tmp/workspace/image.tar
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push $IMAGE_NAME:latest
 
   deploy-prod:
     executor:
       name: node/default
     steps:
       - checkout
-      - run: 
+      - run:
           name: Deploy to Production
           command: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
 
@@ -39,10 +75,24 @@ workflows:
   build-and-test:
     jobs:
       - build-and-test
-      - deploy-prod:
+      - build-remote-docker-image:
           filters:
             branches:
               only:
                 - master
           requires:
             - build-and-test
+      - publish-latest:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build-remote-docker-image
+      - deploy-prod:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - publish-latest
