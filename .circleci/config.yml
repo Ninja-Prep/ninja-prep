@@ -36,7 +36,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-        version: 19.03.13
+          version: 19.03.13
       - run:
           name: Build Docker image
           command: |
@@ -53,7 +53,7 @@ jobs:
     executor: docker-publisher
     steps:
       - setup_remote_docker:
-        version: 19.03.13
+          version: 19.03.13
       - attach_workspace:
           at: /tmp/workspace
       - setup_remote_docker
