@@ -8,8 +8,8 @@ import MeetTheTeamPage from '../../views/MeetTheTeamPage'
 import LoginPage from '../../views/LoginPage'
 import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import ProblemTemplatePage from '../../views/ProblemTemplatePage'
 import ProtectedRoute from '../Routes/ProtectedRoute'
+
 import ProblemTemplatePage from '../../views/ProblemTemplatePage'
 
 class App extends Component {
