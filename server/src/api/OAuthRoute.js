@@ -8,8 +8,14 @@ router.get("/github", passport.authenticate("github"));
 
 const publicUserFields = ["first_name", "_id"];
 
+function setUserCookie(req) {
+  const publicUser = _.pick(req.user, publicUserFields);
+  req.session.publicUser = publicUser;
+  req.session.user = req.user;
+  req.session.isAuthenticated = true;
+}
+
 router.get("/authenticationStatus", (req, res) => {
-  console.log(req.session.isAuthenticated);
   res.send(req.session.isAuthenticated);
 });
 
@@ -30,10 +36,7 @@ router.get(
   }),
   (req, res) => {
     req.flash("login", "Logged In");
-    const publicUser = _.pick(req.user, publicUserFields);
-    req.session.publicUser = publicUser;
-    req.session.user = req.user;
-    req.session.isAuthenticated = true;
+    setUserCookie(req);
     res.redirect("/");
   }
 );
@@ -45,6 +48,7 @@ router.get(
   }),
   (req, res) => {
     req.flash("login", "Logged In");
+    setUserCookie(req);
     res.redirect("/");
   }
 );
@@ -53,6 +57,7 @@ router.get(
   "/github/callback",
   passport.authenticate("github", { failureRedirect: "/login" }),
   function (req, res) {
+    setUserCookie(req);
     res.redirect("/");
   }
 );
