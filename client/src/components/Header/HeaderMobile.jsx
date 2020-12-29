@@ -13,7 +13,7 @@ const HeaderMobile = () => (
             <span className="lead m-auto d-block">{HEADER_DESCRIPTION_1 + ' ' + HEADER_DESCRIPTION_2}</span>
             <Link to="/login">
                 <Button variant="gradient" className="mt-2 mt-5 px-4 font-weight-bold btn-lg">
-                    {START_LEARNING_TEXT} <NavigateNextIcon className="start-learning-icon" />
+                    {START_LEARNING_TEXT} <NavigateNextIcon />
                 </Button>
             </Link>
         </div>
