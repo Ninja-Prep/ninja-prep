@@ -1,16 +1,16 @@
 import React from 'react'
-import { PremiumHeader } from './PremiumDesktop/PremiumHeader'
-import { Plans } from './PremiumDesktop/Plans'
-import { Benefits } from './PremiumDesktop/Benefits'
-import { FAQ } from './PremiumDesktop/FAQ'
+import { PremiumHeaderDesktop } from './PremiumHeader/PremiumHeaderDesktop'
+import { PlansDesktop } from './Plans/PlansDesktop'
+import { BenefitsDesktop } from './Benefits/BenefitsDesktop'
+import { PremiumFAQDesktop } from './PremiumFAQ/PremiumFAQDesktop'
 
 function PremiumDesktop() {
     return (
         <div>
-            <PremiumHeader />
-            <Plans />
-            <Benefits />
-            <FAQ />
+            <PremiumHeaderDesktop />
+            <PlansDesktop />
+            <BenefitsDesktop />
+            <PremiumFAQDesktop />
         </div>
     )
 }
