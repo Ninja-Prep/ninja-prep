@@ -1,6 +1,5 @@
 import React from 'react'
 import '../premium.css'
-import { Container } from 'react-bootstrap'
 import { PREMIUM_HEADER_TITLE, PREMIUM_HEADER_DESCRIPTION } from './PremiumHeaderStringIds'
 
 function PremiumHeaderDesktop() {
