@@ -17,7 +17,7 @@ const styles = {
 }
 
 const VideosAndArticlesDesktop = () => (
-    <div className="text-center  py-5  rainbow-bg">
+    <div className="text-center py-5 rainbow-bg">
         <Row className="mt-5 p-0 mx-auto container">
             <Col className="pr-5 pl-0 py-5 col-6">
                 <OndemandVideoIcon style={styles.videoIcon} />
