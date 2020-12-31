@@ -3,10 +3,11 @@ import { PremiumHeaderDesktop } from './PremiumHeader/PremiumHeaderDesktop'
 import { PlansDesktop } from './Plans/PlansDesktop'
 import { BenefitsDesktop } from './Benefits/BenefitsDesktop'
 import { PremiumFAQDesktop } from './PremiumFAQ/PremiumFAQDesktop'
+import './premium.css'
 
 function PremiumDesktop() {
     return (
-        <div>
+        <div className="circles-bg">
             <PremiumHeaderDesktop />
             <PlansDesktop />
             <BenefitsDesktop />

@@ -22,7 +22,7 @@ function BenefitsDesktop() {
         )
     }
     return (
-        <div className="circles-bg">
+        <div>
             <Container>
                 <h2 className="display-5 py-5 m-0">What's included</h2>
                 <Row className="pb-5 mb-3">
