@@ -1,0 +1,38 @@
+
+.discover {
+    background-image: url('/images/blob1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.videos {
+    background-image: url('/images/blob2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.articles {
+    background-image: url('/images/blob3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.feedback {
+    background-image: url('/images/blob4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.job {
+    background-image: url('/images/blob5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
