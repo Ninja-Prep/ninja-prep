@@ -1,2 +1,2 @@
-export const SHOWCASE_TITLE = 'This might just be the easiest way to learn.'
-export const SHOWCASE_DESCRIPTION = 'With everything you need, all in one platform.'
+export const SHOWCASE_TITLE = 'Start investing in yourself now'
+export const SHOWCASE_DESCRIPTION = 'Now sure where to begin? Click on a problem and starting learning!'

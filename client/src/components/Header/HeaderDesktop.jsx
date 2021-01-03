@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 import { ENHANCE_YOUR_SKILLS, START_LEARNING_TEXT, HEADER_DESCRIPTION_1, HEADER_DESCRIPTION_2 } from './HeaderStringIds'
 import { FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN, LOGIN_HEADER_TITLE, GET_STARTED } from '../Login/LoginStringIds'
 import './header.css'
@@ -30,8 +30,8 @@ const SocialMediaButtons = (cssClass) => {
 }
 
 const HeaderDesktop = () => (
-    <div className="header-bg text-light ">
-        <Container className="py-5 my-auto">
+    <div className="header-bg text-light">
+        <Container className=" header-container">
             <Row>
                 <Col className="pr-5 mr-5 my-auto">
                     <div>
@@ -43,8 +43,10 @@ const HeaderDesktop = () => (
                 </Col>
                 <Col className="pl-5 ml-5">
                     <div className="form-bg rounded">
-                        <h3 className="font-weight-bold pb-3 mx-auto">{GET_STARTED}</h3>
-                        <div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
+                        <div className="pt-4 pb-2 px-5">
+                            <h4 className="font-weight-bold pb-3 mx-auto text-light">{GET_STARTED}</h4>
+                            <div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
+                        </div>
                     </div>
                 </Col>
             </Row>

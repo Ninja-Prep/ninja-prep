@@ -26,7 +26,7 @@ function JourneyDesktop() {
         )
     }
     return (
-        <div className="pb-5">
+        <div className="pb-5 pt-4">
             <Container>
                 <div className="text-center pb-4">
                     <h3 className="font-weight-bold pb-2">{JOURNEY_TITLE}</h3>
