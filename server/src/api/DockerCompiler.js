@@ -30,3 +30,18 @@ function random(size) {
 }
 
 module.exports = router;
+
+// router.post("/", (req, res) => {
+//   res.set("Content-Type", "text/html");
+//   config = {
+//     clientId: keys.JDOODLE_CLIENT,
+//     clientSecret: keys.JDOODLE_SECRET,
+//     script: req.body.script,
+//     language: req.body.language,
+//   };
+//   jdoodle.callExecuteAPI(config).then((response) => {
+//     res.send(new Buffer.from(`${response["output"]}`));
+//   });
+// });
+
+// module.exports = router;
