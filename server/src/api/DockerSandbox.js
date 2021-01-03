@@ -5,11 +5,17 @@ const DockerSandbox = function (
   folderPath,
   dockerImageName,
   absPath,
+  programmingLanguage,
+  codeSnippet,
+  fileName,
   outputHandler
 ) {
   this.folderPath = folderPath;
   this.dockerImageName = dockerImageName;
   this.absPath = absPath;
+  this.programmingLanguage = programmingLanguage;
+  this.codeSnippet = codeSnippet;
+  this.fileName = fileName;
   this.outputHandler = outputHandler;
 };
 
@@ -18,22 +24,36 @@ DockerSandbox.prototype.run = function () {
 };
 
 DockerSandbox.prototype.prepare = function () {
+  const sandbox = this;
   const makeOutputDirectory = ["mkdir", this.folderPath].join(" ");
   const copyInitialFiles = [
     "cp",
-    this.absPath,
-    "InitialCompilerFiles/*",
+    this.absPath + "InitialCompilerFiles/*",
     this.folderPath,
   ].join(" ");
 
   const command = [makeOutputDirectory, copyInitialFiles].join(" && ");
 
-  exec(command, this.executeCode());
+  exec(command, (a, b) => {
+    console.log(a);
+    console.log(b);
+    sandbox.copyCodeSnippet();
+  });
+};
+
+DockerSandbox.prototype.copyCodeSnippet = function () {
+  const sandbox = this;
+  const codeSnippetFilePath = sandbox.folderPath + "/" + sandbox.fileName;
+  console.log("writing snippet", this.codeSnippet);
+  console.log(codeSnippetFilePath);
+  fs.writeFile(codeSnippetFilePath, sandbox.codeSnippet, () =>
+    sandbox.executeCode()
+  );
 };
 
 DockerSandbox.prototype.executeCode = function () {
   const sandbox = this;
-
+  console.log("Executing...");
   let volumeMount = sandbox.folderPath + ":/ninjaprep";
   let siblingDockerMount = "-v /var/run/docker.sock:/var/run/docker.sock";
   const runCodeCommand = [
