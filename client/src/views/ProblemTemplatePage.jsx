@@ -9,11 +9,15 @@ class ProblemTemplatePage extends Component {
     }
 
     render() {
+<<<<<<< HEAD
         return (
             <div>
                 <ReflexDemo />
             </div>
         )
+=======
+        return <div></div>
+>>>>>>> ed1a7224241c38aaae9f92002de216d61d4db2e7
     }
 }
 

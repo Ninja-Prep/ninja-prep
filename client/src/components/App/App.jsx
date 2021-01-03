@@ -3,6 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NavigationBarComponent from '../Partials/NavigationBar/NavigationBarComponent'
 import LandingPage from '../../views/LandingPage'
+import PremiumPage from '../../views/PremiumPage'
 import ChallengesPage from '../../views/ChallengesPage'
 import MeetTheTeamPage from '../../views/MeetTheTeamPage'
 import LoginPage from '../../views/LoginPage'
@@ -34,6 +35,9 @@ class App extends Component {
                     />
                     <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={FooterLayout} />
                     <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={FooterLayout} />
+                    <Route path="/premium" exact component={PremiumPage} />
+                    <Route path="/challenges" exact component={ChallengesPage} />
+                    <Route path="/about" exact component={MeetTheTeamPage} />
                     <Route path="/problem/:id" exact component={ProblemTemplatePage} />
                 </Switch>
             </Router>
