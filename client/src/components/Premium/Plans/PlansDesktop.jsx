@@ -9,10 +9,10 @@ function PlansDesktop() {
             <Card>
                 <Card.Header className={' text-light py-5 px-5 ' + props.backgroundColor}>
                     <Row>
-                        <Col>
+                        <Col className="pr-0">
                             <h2>{props.title}</h2>
                         </Col>
-                        <Col>
+                        <Col className="pl-0">
                             <h2 className="text-right">
                                 {props.cost}
                                 <span className="lead text-light">/mo</span>
