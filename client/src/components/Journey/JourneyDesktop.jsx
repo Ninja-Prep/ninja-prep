@@ -13,11 +13,36 @@ import './journey.css'
 
 function JourneyDesktop() {
     const JourneyList = [
-        ['discover', DISCOVER_CONCEPTS.IMAGE_PATH, DISCOVER_CONCEPTS.TITLE, DISCOVER_CONCEPTS.DESCRIPTION],
-        ['videos', VIDEOS.IMAGE_PATH, VIDEOS.TITLE, VIDEOS.DESCRIPTION],
-        ['articles', ARTICLES.IMAGE_PATH, ARTICLES.TITLE, ARTICLES.DESCRIPTION],
-        ['feedback', FEEDBACK.IMAGE_PATH, FEEDBACK.TITLE, FEEDBACK.DESCRIPTION],
-        ['job', JOB.IMAGE_PATH, JOB.TITLE, JOB.DESCRIPTION],
+        {
+            backgroundImage: 'discover',
+            imagePath: DISCOVER_CONCEPTS.IMAGE_PATH,
+            title: DISCOVER_CONCEPTS.TITLE,
+            description: DISCOVER_CONCEPTS.DESCRIPTION,
+        },
+        {
+            backgroundImage: 'videos',
+            imagePath: VIDEOS.IMAGE_PATH,
+            title: VIDEOS.TITLE,
+            description: VIDEOS.DESCRIPTION,
+        },
+        {
+            backgroundImage: 'articles',
+            imagePath: ARTICLES.IMAGE_PATH,
+            title: ARTICLES.TITLE,
+            description: ARTICLES.DESCRIPTION,
+        },
+        {
+            backgroundImage: 'feedback',
+            imagePath: FEEDBACK.IMAGE_PATH,
+            title: FEEDBACK.TITLE,
+            description: FEEDBACK.DESCRIPTION,
+        },
+        {
+            backgroundImage: 'job',
+            imagePath: JOB.IMAGE_PATH,
+            title: JOB.TITLE,
+            description: JOB.DESCRIPTION,
+        },
     ]
     function JourneyCard(props) {
         return (
@@ -42,10 +67,10 @@ function JourneyDesktop() {
                 {JourneyList.map((card, i) => (
                     <JourneyCard
                         key={i}
-                        backgroundImage={JourneyList[i][0]}
-                        imagePath={JourneyList[i][1]}
-                        title={JourneyList[i][2]}
-                        description={JourneyList[i][3]}
+                        backgroundImage={card.backgroundImage}
+                        imagePath={card.imagePath}
+                        title={card.title}
+                        description={card.description}
                     />
                 ))}
             </Container>
