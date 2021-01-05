@@ -1,6 +1,6 @@
 import React from 'react'
 import '../premium.css'
-import { Container, CardColumns, CardDeck, Card, Row, Col, Button } from 'react-bootstrap'
+import { CardDeck, Card, Row, Col, Button } from 'react-bootstrap'
 import { SUBSCRIBE_BUTTON, PLAN_A, PLAN_B, PLAN_C } from './PlansStringIds'
 
 function PlansTablet() {
