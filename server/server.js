@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const middleWare = require("./src/middleware/middlewareSetup")(app);
-const routers = require("./src/api/routerHandler")(app);
-const passport = require("./src/middleware/passportSetup");
-const mongoose = require("./src/middleware/mongooseSetup");
+const middleWare = require("./src/middleware/MiddlewareSetup")(app);
+const routers = require("./src/api/RouterHandler")(app);
+const passport = require("./src/middleware/PassportSetup");
+const mongoose = require("./src/middleware/MongooseSetup");
 const keys = require("./config/keys");
 const path = require("path");
 
