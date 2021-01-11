@@ -9,7 +9,7 @@ function JourneyMobile() {
         return (
             <Col className="py-5">
                 <Row className="mx-auto mb-2">
-                    <img className="mx-auto img-fluid w-75" src={props.imagePath} />
+                    <img className="mx-auto img-fluid w-50" src={props.imagePath} />
                 </Row>
                 <Row>
                     <h4 className="font-weight-bold mx-auto pb-2 text-center">{props.title}</h4>
