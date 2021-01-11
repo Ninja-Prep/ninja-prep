@@ -30,8 +30,8 @@ const SocialMediaButtons = (cssClass) => {
 }
 
 const HeaderDesktop = () => (
-    <div className="header-bg text-light">
-        <Container className=" header-container">
+    <div className="header-bg text-light px-5">
+        <Container className="header-container">
             <Row>
                 <Col className="pr-5 pl-0 mx-5 my-auto">
                     <div>

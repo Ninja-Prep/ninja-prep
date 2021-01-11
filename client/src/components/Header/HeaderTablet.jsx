@@ -31,9 +31,9 @@ const SocialMediaButtons = (cssClass) => {
 
 const HeaderTablet = () => (
     <div className="header-bg text-light">
-        <Container className=" header-container">
+        <Container className="header-container px-5">
             <Row>
-                <Col className="pr-5 pl-0 mx-5 my-auto">
+                <Col className="my-auto pr-4 pl-0">
                     <div>
                         <h3 className="font-weight-bold pb-2">{ENHANCE_YOUR_SKILLS}</h3>
                         <p className="lead">
@@ -41,7 +41,7 @@ const HeaderTablet = () => (
                         </p>
                     </div>
                 </Col>
-                <Col className="pl-5 pr-0 mx-5">
+                <Col className="pl-3 pr-0">
                     <div className="form-bg rounded">
                         <div className="pt-4 pb-2 px-5">
                             <h4 className="font-weight-bold pb-3 mx-auto text-light">{GET_STARTED}</h4>
