@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Row, Col } from 'react-bootstrap'
+=======
+import { Container, Row, Col } from 'react-bootstrap'
+>>>>>>> d3bc951d0c99c62c1191892653a64856099e8a7a
 import { ENHANCE_YOUR_SKILLS, HEADER_DESCRIPTION_1, HEADER_DESCRIPTION_2 } from './HeaderStringIds'
 import { FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN, GET_STARTED } from '../Login/LoginStringIds'
 import './header.css'
