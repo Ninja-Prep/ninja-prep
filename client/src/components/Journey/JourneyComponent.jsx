@@ -1,5 +1,7 @@
 import React from 'react'
 import { JourneyDesktop } from './JourneyDesktop'
+import { JourneyTablet } from './JourneyTablet'
+import { JourneyMobile } from './JourneyMobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 
 const JourneyComponent = () => (
@@ -7,8 +9,12 @@ const JourneyComponent = () => (
         <Desktop>
             <JourneyDesktop />
         </Desktop>
-        <Tablet></Tablet>
-        <Mobile></Mobile>
+        <Tablet>
+            <JourneyTablet />
+        </Tablet>
+        <Mobile>
+            <JourneyMobile />
+        </Mobile>
     </div>
 )
 
