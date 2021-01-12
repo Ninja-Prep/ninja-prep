@@ -1,5 +1,7 @@
 import React from 'react'
 import { ShowcaseDesktop } from './ShowcaseDesktop'
+import { ShowcaseTablet } from './ShowcaseTablet'
+import { ShowcaseMobile } from './ShowcaseMobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 
 const ShowcaseComponent = () => (
@@ -7,8 +9,12 @@ const ShowcaseComponent = () => (
         <Desktop>
             <ShowcaseDesktop />
         </Desktop>
-        <Tablet></Tablet>
-        <Mobile></Mobile>
+        <Tablet>
+            <ShowcaseTablet />
+        </Tablet>
+        <Mobile>
+            <ShowcaseMobile />
+        </Mobile>
     </div>
 )
 
