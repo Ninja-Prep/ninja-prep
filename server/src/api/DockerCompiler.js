@@ -1,37 +1,65 @@
-const keys = require("../../config/keys");
 const router = require("express").Router();
+const fs = require("fs");
+const Problem = require("./../models/ProblemSchema")
+const fsPromises = fs.promises;
 const encrypt = require("crypto");
 const DockerSandbox = require("./DockerSandbox");
-const containerLanguageMap = require("./LanguageCompileContainerMap")
+const containerLanguageMap = require("./DockerSandboxHelper")
   .containerLanguageMap;
 
-router.post("/execute", (req, res) => {
+
+
+// Run user code
+// Run solution code
+// Check code
+// Send response
+router.post("/execute/:problemName", async (req, res) => {
   const hash = random(5);
   const absPath = __dirname + "/";
   const folderPath = absPath + "temp/" + hash;
   const programmingLanguage = req.body.programmingLanguage;
   const dockerImageName = containerLanguageMap[programmingLanguage].container;
   const fileName = containerLanguageMap[programmingLanguage].fileName;
-  const codeSnippet = req.body.codeSnippet;
+  const userCodeSnippet = req.body.codeSnippet;
 
-  const sendOutput = function (output = { exitCode, stdOut, stdErr }) {
-    console.log(output);
-    res.send(output);
-  };
+  console.log(req.params.problemName)
+  const problem = await Problem.findOne({ problem_name: req.params.problemName }).populate(`templates.${programmingLanguage}`)
+  const testCases = problem.input_testcases;
+  console.log(testCases);
+  // res.send("hello")
+  const solutionCodeSnippet = problem.templates.get(`${programmingLanguage}`).solution_code_snippet
+  const codeContainer = problem.templates.get(`${programmingLanguage}`).executable_code_container;
+  const execUserCode = codeContainer.replace("INSERT_SOLVER", userCodeSnippet)
+  const execSolutionCode = codeContainer.replace("INSERT_SOLVER", solutionCodeSnippet)
 
-  const sandbox = new DockerSandbox(
+  // console.log(programmingLanguage)
+  // console.log(fileName)
+
+  const userSandbox = new DockerSandbox(
     folderPath,
     dockerImageName,
     absPath,
     programmingLanguage,
-    codeSnippet,
+    execSolutionCode,
     fileName,
-    sendOutput
+    testCases
   );
-  console.log(codeSnippet);
-  console.log(programmingLanguage);
-  console.log("api hit!");
-  sandbox.run();
+  // console.log(userCodeSnippet);
+  // console.log(programmingLanguage);
+  const val = await userSandbox.run()
+  // console.log("the output", val)
+
+  // const solutionSandbox = new DockerSandbox(
+  //   folderPath,
+  //   dockerImageName,
+  //   absPath,
+  //   programmingLanguage,
+  //   solutionCodeSnippet,
+  //   fileName,
+  //   sendOutput,
+  // );
+
+
 });
 
 function random(size) {
@@ -40,18 +68,3 @@ function random(size) {
 }
 
 module.exports = router;
-
-// router.post("/", (req, res) => {
-//   res.set("Content-Type", "text/html");
-//   config = {
-//     clientId: keys.JDOODLE_CLIENT,
-//     clientSecret: keys.JDOODLE_SECRET,
-//     Snippet: req.body.Snippet,
-//     language: req.body.language,
-//   };
-//   jdoodle.callExecuteAPI(config).then((response) => {
-//     res.send(new Buffer.from(`${response["output"]}`));
-//   });
-// });
-
-// module.exports = router;

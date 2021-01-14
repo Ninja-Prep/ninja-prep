@@ -1,5 +1,9 @@
-const exec = require("child_process").exec;
+const child = require("child_process");
 const fs = require("fs");
+const fsPromises = fs.promises;
+const util = require("util")
+const exec = util.promisify(child.exec);
+const { exitCodeMap, detailedStatusCode } = require("./DockerSandboxHelper")
 
 const DockerSandbox = function (
   folderPath,
@@ -8,54 +12,48 @@ const DockerSandbox = function (
   programmingLanguage,
   codeSnippet,
   fileName,
-  outputHandler
+  testCases
 ) {
   this.folderPath = folderPath;
   this.dockerImageName = dockerImageName;
   this.absPath = absPath;
   this.programmingLanguage = programmingLanguage;
   this.codeSnippet = codeSnippet;
-  this.fileName = fileName;
-  this.outputHandler = outputHandler;
+  this.fileName = fileName,
+    this.testCases = testCases
 };
 
 DockerSandbox.prototype.run = function () {
-  this.prepare();
+  return this.prepare();
 };
 
-DockerSandbox.prototype.prepare = function () {
+DockerSandbox.prototype.prepare = async function () {
   const sandbox = this;
   const makeOutputDirectory = ["mkdir", this.folderPath].join(" ");
-  const copyInitialFiles = [
-    "cp",
-    this.absPath + "InitialCompilerFiles/*",
-    this.folderPath,
+  const createInitialFiles = [
+    "touch",
+    this.folderPath + "/output.txt",
+    this.folderPath + "/error.txt",
   ].join(" ");
 
-  const command = [makeOutputDirectory, copyInitialFiles].join(" && ");
+  const command = [makeOutputDirectory, createInitialFiles].join(" && ");
 
-  exec(command, (a, b) => {
-    console.log(a);
-    console.log(b);
-    sandbox.copyCodeSnippet();
-  });
+  await exec(command);
+  return sandbox.copyCodeSnippet();
 };
 
-DockerSandbox.prototype.copyCodeSnippet = function () {
+DockerSandbox.prototype.copyCodeSnippet = async function () {
   const sandbox = this;
   const codeSnippetFilePath = sandbox.folderPath + "/" + sandbox.fileName;
-  console.log("writing snippet", this.codeSnippet);
-  console.log(codeSnippetFilePath);
-  fs.writeFile(codeSnippetFilePath, sandbox.codeSnippet, () =>
-    sandbox.executeCode()
-  );
+  const testCasesPath = sandbox.folderPath + "/testcases.txt";
+  await fsPromises.writeFile(codeSnippetFilePath, sandbox.codeSnippet)
+  await fsPromises.writeFile(testCasesPath, sandbox.testCases)
+  return sandbox.executeCode()
 };
 
-DockerSandbox.prototype.executeCode = function () {
+DockerSandbox.prototype.executeCode = async function () {
   const sandbox = this;
-  console.log("Executing...");
   let volumeMount = sandbox.folderPath + ":/ninjaprep";
-  let siblingDockerMount = "-v /var/run/docker.sock:/var/run/docker.sock";
   const runCodeCommand = [
     "docker run",
     "--network none",
@@ -63,7 +61,6 @@ DockerSandbox.prototype.executeCode = function () {
     "-itd",
     "-v",
     volumeMount,
-    siblingDockerMount,
     "-w",
     "/ninjaprep",
     sandbox.dockerImageName,
@@ -71,11 +68,17 @@ DockerSandbox.prototype.executeCode = function () {
 
   console.log(runCodeCommand);
   // TODO: Set memory allocation limit
-  exec(runCodeCommand, (err, containerId) => {
-    exec(`docker wait ${containerId}`, (err, exitCode) => {
-      sandbox.handleRunExitCodes({ exitCode: parseInt(exitCode) });
-    });
-  });
+  const containerId = await (await exec(runCodeCommand)).stdout
+  let exitCode = await (await exec(`docker wait ${containerId}`)).stdout
+  exitCode = parseInt(exitCode)
+  const detailedExitCode = exitCodeMap[exitCode]
+
+  // const stdout = await fsPromises.readFile(sandbox.folderPath + "/output.txt", "utf-8");
+  // const stderr = await fsPromises.readFile(sandbox.folderPath + "/error.txt", "utf-8");
+
+  exec(`docker rm ${containerId}`)
+
+  return { detailedExitCode, stdout, stderr }
 };
 
 // 0 - Code Compiles and executes
@@ -83,50 +86,5 @@ DockerSandbox.prototype.executeCode = function () {
 // 2 - Compile error
 // 124 - Timeout Error
 // Default - Unknown error code
-DockerSandbox.prototype.handleRunExitCodes = function (output = { exitCode }) {
-  const sandbox = this;
-  if (output.exitCode == 2) {
-    sandbox.parseErrorFileOutput(output);
-  } else {
-    sandbox.parseStandardFileOutput(output);
-  }
-};
-
-DockerSandbox.prototype.parseStandardFileOutput = function (
-  output = { exitCode }
-) {
-  const sandbox = this;
-  const outputFilePath = sandbox.folderPath + "/output.txt";
-
-  fs.readFile(outputFilePath, "utf8", (err, stdOutput) => {
-    if (err) {
-      sandbox.sandboxCleanup();
-    } else {
-      sandbox.parseErrorFileOutput({ ...output, stdOutput });
-    }
-  });
-};
-
-DockerSandbox.prototype.parseErrorFileOutput = function (
-  output = { exitCode, stdOutput }
-) {
-  const sandbox = this;
-  const errorFilePath = sandbox.folderPath + "/error.txt";
-
-  fs.readFile(errorFilePath, "utf8", (err, stdErr) => {
-    if (err) {
-      sandbox.sandboxCleanup(output);
-    } else {
-      sandbox.sandboxCleanup({ ...output, stdErr });
-    }
-  });
-};
-
-DockerSandbox.prototype.sandboxCleanup = function (output) {
-  const sandbox = this;
-  exec(`rm -rf ${sandbox.folderPath}`, () => {
-    sandbox.outputHandler(output);
-  });
-};
 
 module.exports = DockerSandbox;

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Controlled as CodeMirror } from 'react-codemirror2'
+import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import Axios from 'axios'
 import { languageMap } from './CodeEditorLanguages'
@@ -18,6 +19,16 @@ class CodeEditorDesktop extends Component {
         }
     }
 
+    componentDidMount() {
+        // console.log(this.props)
+        Axios({
+            method: 'GET',
+            url: `/api/challenges/${this.props.match.params.id}`,
+        }).then((res) => {
+            this.setState({ value: res.data })
+        })
+    }
+
     textHandler(value) {
         this.setState({ value })
     }
@@ -25,15 +36,16 @@ class CodeEditorDesktop extends Component {
     handleSubmit(event) {
         event.preventDefault()
         const data = {
-            script: this.state.value,
-            language: languageMap[this.props.mode],
+            codeSnippet: this.state.value,
+            programmingLanguage: languageMap[this.props.mode],
         }
         Axios({
             method: 'POST',
-            url: '/api/compile',
+            url: `/api/dockersandbox/execute/${this.props.match.params.id}`,
             data: data,
         }).then((res) => {
-            this.setState({ output: res.data })
+            // console.log(res)
+            this.setState({ output: res.data.stdOutput, error: res.data.stdErr })
         })
     }
 
@@ -53,6 +65,8 @@ class CodeEditorDesktop extends Component {
                     </div>
                     <button type="submit">Submit Code</button>
                 </form>
+                <p>{this.state.output}</p>
+                <p>{this.state.error}</p>
             </Fragment>
         )
     }
@@ -66,4 +80,4 @@ const mapStateToProps = (state) => ({
     styleActiveLine: true,
 })
 
-export default connect(mapStateToProps)(CodeEditorDesktop)
+export default connect(mapStateToProps)(withRouter(CodeEditorDesktop))
