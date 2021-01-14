@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const fs = require("fs");
-const Problem = require("./../models/ProblemSchema")
+const Problem = require("./../models/Problem")
 const fsPromises = fs.promises;
 const encrypt = require("crypto");
 const DockerSandbox = require("./DockerSandbox");
