@@ -1,37 +1,57 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import NavigateNextIcon from '@material-ui/icons/NavigateNext'
-import { Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import { ENHANCE_YOUR_SKILLS, HEADER_DESCRIPTION_1, HEADER_DESCRIPTION_2 } from './HeaderStringIds'
+import { FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN, GET_STARTED } from '../Login/LoginStringIds'
 import './header.css'
-import {
-	ENHANCE_YOUR_SKILLS,
-	START_LEARNING_TEXT,
-	HEADER_DESCRIPTION_1,
-	HEADER_DESCRIPTION_2,
-} from './HeaderStringIds'
+
+const SocialMediaButtons = (cssClass) => {
+    return (
+        <>
+            <div className="lead">
+                <a className={cssClass + ' red google button'} href="/auth/google">
+                    <i className="google icon"></i>
+                    {GOOGLE_LOGIN}
+                </a>
+            </div>
+            <div className="lead">
+                <a className={cssClass + ' facebook button'} href="/auth/facebook">
+                    <i className="facebook icon"></i>
+                    {FACEBOOK_LOGIN}
+                </a>
+            </div>
+            <div className="lead">
+                <a className={cssClass + '  black button'} href="/auth/github">
+                    <i className="github icon"></i>
+                    {GITHUB_LOGIN}
+                </a>
+            </div>
+        </>
+    )
+}
 
 const HeaderTablet = () => (
-	<div className="py-5 text-center header-bg">
-		<div className="py-3 px-5 ">
-			<img
-				className="w-auto h-20"
-				src="/images/NinjaPrep-Logo.png"
-				alt="logo"
-			/>
-			<h1 className="display-4 px-5 font-weight-bold">{ENHANCE_YOUR_SKILLS}</h1>
-			<span className="lead m-auto d-block">{HEADER_DESCRIPTION_1}</span>
-			<span className="lead m-auto d-block">{HEADER_DESCRIPTION_2}</span>
-			<Link to="/login">
-				<Button
-					variant="gradient"
-					className=" mt-2 mt-5 px-4 font-weight-bold btn-lg"
-				>
-					{START_LEARNING_TEXT}{' '}
-					<NavigateNextIcon className="start-learning-icon" />
-				</Button>
-			</Link>
-		</div>
-	</div>
+    <div className="header-bg text-light">
+        <Container className="header-container px-5">
+            <Row>
+                <Col className="my-auto pr-4 pl-0">
+                    <div>
+                        <h3 className="font-weight-bold pb-2">{ENHANCE_YOUR_SKILLS}</h3>
+                        <p className="lead">
+                            {HEADER_DESCRIPTION_1} {HEADER_DESCRIPTION_2}
+                        </p>
+                    </div>
+                </Col>
+                <Col className="pl-3 pr-0">
+                    <div className="form-bg rounded">
+                        <div className="pt-4 pb-2 px-5">
+                            <h4 className="font-weight-bold pb-3 mx-auto text-light">{GET_STARTED}</h4>
+                            <div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    </div>
 )
 
 export default HeaderTablet

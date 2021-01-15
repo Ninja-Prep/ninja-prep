@@ -1,0 +1,30 @@
+.easy {
+    color: #ffffff;
+	background-color: green;
+	border-radius: 20px;
+	padding: 1px 10px;
+}
+
+.medium {
+    color: #ffffff;
+	background-color: #ee953d;
+	border-radius: 20px;
+	padding: 1px 10px;
+}
+
+.hard {
+    color: #ffffff;
+	background-color: red;
+	border-radius: 20px;
+	padding: 1px 10px;
+}
+
+.featured-title {
+	padding-bottom: 1%;
+	display: flex;
+	align-items: center;
+}
+
+.featured-container {
+	padding-bottom: 1%;
+}
