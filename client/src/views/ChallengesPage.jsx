@@ -4,12 +4,12 @@ import QuestionListComponent from '../components/QuestionList/QuestionListCompon
 import QuestionListDesktop from '../components/QuestionList/QuestionListDesktop'
 
 function ChallengesPage() {
-	return (
-		<div className="challenges-container">
-			<Featured />
-			<QuestionListDesktop />
-		</div>
-	)
+    return (
+        <div className="challenges-container">
+            <Featured />
+            <QuestionListComponent />
+        </div>
+    )
 }
 
 export default ChallengesPage
