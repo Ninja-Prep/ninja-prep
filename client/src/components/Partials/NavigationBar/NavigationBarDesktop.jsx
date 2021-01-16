@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
 import './NavigationBar.css'
-import Cookies from 'universal-cookie'
 import {
     GET_PREMIUM_NAVIGATION,
     NINJA_PREP_NAVIGATION,
@@ -11,39 +10,26 @@ import {
     SIGN_IN_NAVIGATION,
 } from './NavigationBarStringIds'
 
-const cookies = new Cookies()
-function renderLoginLink() {
-    if (cookies.get('isLoggedIn')) {
-        return (
-            <Nav.Link href="/auth/logout" className="pl-3 mr-5">
-                Log Out
-            </Nav.Link>
-        )
-    } else {
-        return (
-            <Nav.Link as={Link} to="/login" className="pl-3 mr-5">
-                {SIGN_IN_NAVIGATION}
-            </Nav.Link>
-        )
+function NavigationBarDesktop(props) {
+    function renderLoginLink() {
+        if (props.user) {
+            return (
+                <Nav.Link href="/auth/logout" className="pl-3 mr-5">
+                    Sign Out
+                </Nav.Link>
+            )
+        } else {
+            return (
+                <Nav.Link as={Link} to="/login" className="pl-3 mr-5">
+                    {SIGN_IN_NAVIGATION}
+                </Nav.Link>
+            )
+        }
     }
-}
-
-function NavigationBarDesktop() {
     return (
-        <Navbar
-            fixed="top"
-            expand="lg"
-            className="px-5 py-3 navigation-bar"
-            variant="dark"
-        >
+        <Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
             <Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
-                <img
-                    className="logo ml-5 mr-3"
-                    src="./images/NinjaPrep-Logo.png"
-                    alt="logo"
-                    width="40"
-                    height="40"
-                />
+                <img className="logo ml-5 mr-3" src="./images/NinjaPrep-Logo.png" alt="logo" width="40" height="40" />
                 {NINJA_PREP_NAVIGATION}
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -2,18 +2,32 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  username: String,
-  password: String,
-  oauth_id: String,
+  _id: String,
+  first_name: String,
+  premium_expiration_date: Date,
 });
 
-userSchema.statics.findOrCreate = async function (id, callback) {
-  let user = await this.findOne({ oauth_id: id }, (err, doc) => {
+userSchema.statics.findOrCreate = async function (profile, callback) {
+  let user = await this.findById({ _id: profile.id }, (err, doc) => {
     if (err) callback(err, null);
-    else if (doc) callback(err, doc);
+    else if (doc) {
+      callback(err, doc);
+    }
   });
   if (!user) {
-    user = await new this({ oauth_id: id }).save();
+    let name = "";
+
+    if (profile.displayName) {
+      name = profile.displayName.split(" ")[0];
+    } else if (profile.username) {
+      name = profile.username;
+    }
+
+    user = await new this({
+      _id: profile.id,
+      first_name: name,
+      premium_expiration_date: new Date(Date.now()),
+    }).save();
   }
   callback(null, user);
 };
