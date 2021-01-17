@@ -10,6 +10,7 @@ function NavigationBarComponent() {
 
     useEffect(() => {
         axios.get('/auth/getUser').then((authUser) => {
+            console.log(authUser)
             setUser(authUser.data)
         })
     }, [])

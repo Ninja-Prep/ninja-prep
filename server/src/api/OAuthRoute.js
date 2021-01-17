@@ -6,12 +6,13 @@ router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 router.get("/facebook", passport.authenticate("facebook"));
 router.get("/github", passport.authenticate("github"));
 
-const publicUserFields = ["first_name", "_id"];
+const publicUserFields = ["first_name", "_id", "profile_picture"];
 
 function setUserCookie(req) {
   const publicUser = _.pick(req.user, publicUserFields);
   req.session.publicUser = publicUser;
   req.session.user = req.user;
+  console.log(req.user);
   req.session.isAuthenticated = true;
 }
 

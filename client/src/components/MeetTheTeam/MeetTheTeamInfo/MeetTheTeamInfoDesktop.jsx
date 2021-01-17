@@ -30,7 +30,7 @@ const MeetTheTeamInfoDesktop = (props) => {
                     <Col className="pr-5">{alexPhoto}</Col>
 
                     <Col className="pl-5">
-                        <h1 className="display-5 m-auto pb-3 name-text font-weight-bold">{ALEX_NGUYEN}</h1>
+                        <h1 className="display-5 pb-3 name-text font-weight-bold">{ALEX_NGUYEN}</h1>
                         <p className="lead text-secondary">{ALEX_DESCRIPTION}</p>
                     </Col>
                 </Row>

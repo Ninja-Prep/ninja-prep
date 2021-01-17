@@ -13,10 +13,15 @@ import {
 function NavigationBarDesktop(props) {
     function renderLoginLink() {
         if (props.user) {
+            console.log(props.user)
+            
             return (
-                <Nav.Link href="/auth/logout" className="pl-3 mr-5">
-                    Sign Out
-                </Nav.Link>
+                <div>
+                    <Nav.Link href="/auth/logout" className="pl-3 mr-5">
+                        Sign Out
+                    </Nav.Link>
+                    <img className="img-fluid rounded" src={props.user.profile_picture} alt="ProfilePhoto"/>
+                </div>
             )
         } else {
             return (
