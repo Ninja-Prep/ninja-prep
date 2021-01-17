@@ -1,15 +1,14 @@
 import React from 'react'
-import { Featured } from '../components/Featured'
-import QuestionListDesktop from '../components/QuestionList/QuestionListDesktop'
+import {Featured} from '../components/Featured'
 import QuestionListComponent from '../components/QuestionListComponent'
 
 function Challenges() {
-    return (
-        <div className="challenges-container">
-            <Featured />
-            <QuestionListComponent />
-        </div>
-    )
+	return (
+		<div className="challenges-container">
+			<Featured />
+			<QuestionListComponent />
+		</div>
+	)
 }
 
 export default Challenges

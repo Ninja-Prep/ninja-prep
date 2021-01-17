@@ -26,12 +26,7 @@ function JourneyTablet() {
                     <p className="lead">{JOURNEY_DESCRIPTION}</p>
                 </div>
                 {JourneyList.map((card, i) => (
-                    <JourneyCard
-                        key={i}
-                        imagePath={card.imagePath}
-                        title={card.title}
-                        description={card.description}
-                    />
+                    <JourneyCard key={i} imagePath={card.imagePath} title={card.title} description={card.description} />
                 ))}
             </Container>
         </div>
