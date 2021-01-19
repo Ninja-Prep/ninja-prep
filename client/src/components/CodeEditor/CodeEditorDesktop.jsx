@@ -8,6 +8,8 @@ import CodeEditorNavbar from './CodeEditorNavbar'
 import './CodeMirror.css'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/addon/selection/active-line'
+import 'codemirror/addon/edit/matchbrackets'
+import 'codemirror/addon/edit/closebrackets'
 
 class CodeEditorDesktop extends Component {
     constructor(props) {
@@ -44,7 +46,6 @@ class CodeEditorDesktop extends Component {
             url: `/api/dockersandbox/execute/${this.props.match.params.id}`,
             data: data,
         }).then((res) => {
-            // console.log(res)
             this.setState({ output: res.data.stdOutput, error: res.data.stdErr })
         })
     }
@@ -78,6 +79,9 @@ const mapStateToProps = (state) => ({
     lineNumbers: true,
     lineWrapping: true,
     styleActiveLine: true,
+    matchBrackets: true,
+    autoCloseBrackets: true,
+    indentUnit: 4,
 })
 
 export default connect(mapStateToProps)(withRouter(CodeEditorDesktop))

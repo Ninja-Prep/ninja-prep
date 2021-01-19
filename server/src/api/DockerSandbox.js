@@ -3,88 +3,129 @@ const fs = require("fs");
 const fsPromises = fs.promises;
 const util = require("util")
 const exec = util.promisify(child.exec);
-const { exitCodeMap, detailedStatusCode } = require("./DockerSandboxHelper")
+const encrypt = require("crypto");
+const { exitCodeMap, checkerExitCodeMap } = require("./DockerSandboxHelper")
 
-const DockerSandbox = function (
-  folderPath,
-  dockerImageName,
-  absPath,
-  programmingLanguage,
-  codeSnippet,
-  fileName,
-  testCases
-) {
-  this.folderPath = folderPath;
-  this.dockerImageName = dockerImageName;
-  this.absPath = absPath;
-  this.programmingLanguage = programmingLanguage;
-  this.codeSnippet = codeSnippet;
-  this.fileName = fileName,
-    this.testCases = testCases
+const absPath = __dirname + "/";
+class DockerSandbox {
+  constructor(dockerDetails) {
+    this.dockerDetails = dockerDetails
+    const hash = this.randomHash(5);
+    this.folderPath = absPath + "temp/" + hash;
+  }
+
+  async run(submissionSnippet, testCase) {
+    await exec(`mkdir ${this.folderPath}`);
+    try {
+      await this.prepare()
+      await this.copyCodeSnippet(submissionSnippet, testCase)
+      return this.executeCode({ isChecker: false })
+    } catch (err) {
+      exec(`rm -rf ${this.folderPath}`)
+    }
+  };
+
+  async runChecker(checkerSnippet, userOutput, solutionOutput, testCase) {
+    await exec(`mkdir ${this.folderPath}`);
+    try {
+      await this.copyCheckerCodeSnippet(checkerSnippet, userOutput, testCase)
+      return await this.executeCode({ isChecker: true, userOutput, solutionOutput, testCase })
+    }
+    catch (err) {
+      exec(`rm -rf ${this.folderPath}`)
+    }
+  }
+
+  async copyCheckerCodeSnippet(checkerSnippet, userOutput, testCase) {
+    const sandbox = this;
+    const checkerSnippetFilePath = sandbox.folderPath + "/" + sandbox.dockerDetails.fileName;
+    const testCasesPath = sandbox.folderPath + "/TestCase.txt";
+    const userOutputPath = sandbox.folderPath + "/UserOutput.txt";
+    await fsPromises.writeFile(checkerSnippetFilePath, checkerSnippet)
+    await fsPromises.writeFile(testCasesPath, testCase)
+    await fsPromises.writeFile(userOutputPath, userOutput)
+  };
+
+  async prepare() {
+    const createInitialFiles = [
+      "touch",
+      this.folderPath + "/output.txt",
+      this.folderPath + "/error.txt",
+    ].join(" ");
+
+    await exec(createInitialFiles)
+  };
+
+  async copyCodeSnippet(submissionCodeSnippet, testCase) {
+    const sandbox = this;
+    const submissionCodeSnippetPath = sandbox.folderPath + "/" + sandbox.dockerDetails.fileName;
+    const testCasePath = sandbox.folderPath + "/testcase.txt";
+    await fsPromises.writeFile(submissionCodeSnippetPath, submissionCodeSnippet)
+    await fsPromises.writeFile(testCasePath, testCase)
+  };
+
+  async executeCode(submissionBO = { isChecker: false, userOutput: "", solutionOutput: "", testCase: "" }) {
+
+    const sandbox = this;
+    let volumeMount = sandbox.folderPath + ":/ninjaprep";
+    const runCodeCommand = [
+      "docker run",
+      "--network none",
+      "--read-only",
+      "-itd",
+      "-v",
+      volumeMount,
+      "-w",
+      "/ninjaprep",
+      sandbox.dockerDetails.dockerImageName,
+    ].join(" ");
+
+    console.log(runCodeCommand);
+    // TODO: Set memory allocation limit
+
+    const containerId = await this.buildCompileContainer(runCodeCommand)
+    let exitCode = await this.waitForExitCode(containerId)
+    exitCode = parseInt(exitCode)
+
+    const detailedExitCode = submissionBO.isChecker ? checkerExitCodeMap[exitCode] : exitCodeMap[exitCode]
+
+    exec(`docker rm ${containerId}`)
+    const stdout = await fsPromises.readFile(sandbox.folderPath + "/output.txt", "utf-8")
+    const stderr = await fsPromises.readFile(sandbox.folderPath + "/error.txt", "utf-8")
+    exec(`rm -rf ${this.folderPath}`)
+    if (submissionBO.isChecker) {
+      return { detailedExitCode, userOutput: submissionBO.userOutput, solutionOutput: submissionBO.solutionOutput, testCase: submissionBO.testCase }
+    }
+    return { detailedExitCode, stdout, stderr }
+  };
+
+  randomHash(size) {
+    return encrypt.randomBytes(size).toString("hex");
+  }
+
+  async buildCompileContainer(runCodeCommand) {
+    try {
+      const { stdout, stderr } = await exec(runCodeCommand)
+      if (stderr) throw new Error(stderr)
+      return stdout
+    } catch (error) {
+      if (error.stdout) throw new Error(error.stdout);
+      throw new Error(error)
+    }
+  }
+
+  async waitForExitCode(containerId) {
+    try {
+      const { stdout, stderr } = await exec(`docker wait ${containerId}`)
+      if (stderr) throw new Error(stderr)
+      return stdout
+    } catch (error) {
+      if (error.stdout) throw new Error(error.stdout);
+      throw new Error(error)
+    }
+  }
+
 };
 
-DockerSandbox.prototype.run = function () {
-  return this.prepare();
-};
-
-DockerSandbox.prototype.prepare = async function () {
-  const sandbox = this;
-  const makeOutputDirectory = ["mkdir", this.folderPath].join(" ");
-  const createInitialFiles = [
-    "touch",
-    this.folderPath + "/output.txt",
-    this.folderPath + "/error.txt",
-  ].join(" ");
-
-  const command = [makeOutputDirectory, createInitialFiles].join(" && ");
-
-  await exec(command);
-  return sandbox.copyCodeSnippet();
-};
-
-DockerSandbox.prototype.copyCodeSnippet = async function () {
-  const sandbox = this;
-  const codeSnippetFilePath = sandbox.folderPath + "/" + sandbox.fileName;
-  const testCasesPath = sandbox.folderPath + "/testcases.txt";
-  await fsPromises.writeFile(codeSnippetFilePath, sandbox.codeSnippet)
-  await fsPromises.writeFile(testCasesPath, sandbox.testCases)
-  return sandbox.executeCode()
-};
-
-DockerSandbox.prototype.executeCode = async function () {
-  const sandbox = this;
-  let volumeMount = sandbox.folderPath + ":/ninjaprep";
-  const runCodeCommand = [
-    "docker run",
-    "--network none",
-    "--read-only",
-    "-itd",
-    "-v",
-    volumeMount,
-    "-w",
-    "/ninjaprep",
-    sandbox.dockerImageName,
-  ].join(" ");
-
-  console.log(runCodeCommand);
-  // TODO: Set memory allocation limit
-  const containerId = await (await exec(runCodeCommand)).stdout
-  let exitCode = await (await exec(`docker wait ${containerId}`)).stdout
-  exitCode = parseInt(exitCode)
-  const detailedExitCode = exitCodeMap[exitCode]
-
-  // const stdout = await fsPromises.readFile(sandbox.folderPath + "/output.txt", "utf-8");
-  // const stderr = await fsPromises.readFile(sandbox.folderPath + "/error.txt", "utf-8");
-
-  exec(`docker rm ${containerId}`)
-
-  return { detailedExitCode, stdout, stderr }
-};
-
-// 0 - Code Compiles and executes
-// 1 - Runtime error
-// 2 - Compile error
-// 124 - Timeout Error
-// Default - Unknown error code
 
 module.exports = DockerSandbox;

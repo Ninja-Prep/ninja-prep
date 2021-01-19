@@ -10,12 +10,12 @@ const templateMap = {
 const ProblemSchema = new Schema({
     _id: Schema.Types.ObjectId,
     problem_name: String,
-    input_testcases: String,
+    input_testcases: [String],
     templates: {
         type: Map,
         of: templateMap,
     },
-    checker_code_snippet: { programming_language: String, code_snippet: String }
+    checker_code_snippet: String
 });
 
 const ProblemModel = mongoose.model("Problem",

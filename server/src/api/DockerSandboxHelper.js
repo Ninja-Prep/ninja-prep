@@ -1,20 +1,31 @@
 const languageContainerMap = {
-    python3: "python3_container",
-    java: "javac_container"
+    python3: { container: "alexngn/python3_container", fileName: "File.py" },
+    java: { container: "alexngn/javac_container", fileName: "File.java" },
+    checker: { container: "alexngn/checker_container", fileName: "Checker.java" }
 }
 
 const detailedStatusCode = {
-    Approved: "Approved",
+    APPROVED: "Approved",
     WA: "Wrong Answer",
-    CompileError: "Compile Error",
-    RuntimeError: "Runtime Error",
-    TLE: "Time Limit Exceeded"
+    COMPILE_ERROR: "Compile Error",
+    RUNTIME_ERROR: "Runtime Error",
+    TLE: "Time Limit Exceeded",
+    CORRECT: "Correct"
 }
 
 const exitCodeMap = {
-    0: detailedStatusCode.Approved,
-    1: detailedStatusCode.CompileError,
-    2: detailedStatusCode.RuntimeError,
+    0: detailedStatusCode.APPROVED,
+    1: detailedStatusCode.RUNTIME_ERROR,
+    2: detailedStatusCode.COMPILE_ERROR,
+    3: detailedStatusCode.WA,
+    124: detailedStatusCode.TLE
+}
+
+const checkerExitCodeMap = {
+    0: detailedStatusCode.CORRECT,
+    1: detailedStatusCode.RUNTIME_ERROR,
+    2: detailedStatusCode.COMPILE_ERROR,
+    3: detailedStatusCode.WA,
     124: detailedStatusCode.TLE
 }
 
@@ -22,5 +33,6 @@ const exitCodeMap = {
 module.exports = {
     exitCodeMap,
     detailedStatusCode,
-    languageContainerMap
+    languageContainerMap,
+    checkerExitCodeMap
 }
