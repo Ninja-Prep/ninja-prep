@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 
+import ReflexDemo from '../components/CodeEditor/ReflexDemo'
+
 class ProblemTemplatePage extends Component {
     constructor(props) {
         super(props)
-        this.problemName = this.props.match.params.name
+        // console.log(this.props.match.params.id)
     }
 
     render() {
-        return <div></div>
+        return (
+            <div>
+                <ReflexDemo {...this.props} />
+            </div>
+        )
     }
 }
 
