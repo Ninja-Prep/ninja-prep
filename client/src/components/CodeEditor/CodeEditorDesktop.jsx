@@ -11,6 +11,9 @@ import 'codemirror/addon/selection/active-line'
 import 'codemirror/addon/edit/matchbrackets'
 import 'codemirror/addon/edit/closebrackets'
 
+import { ReflexContainer, ReflexSplitter, ReflexElement } from 'react-reflex'
+import 'react-reflex/styles.css'
+
 class CodeEditorDesktop extends Component {
     constructor(props) {
         super(props)
@@ -18,6 +21,22 @@ class CodeEditorDesktop extends Component {
         this.state = {
             value: '',
             output: '',
+        }
+        this.resizeProps = {
+            onStopResize: this.onStopResize.bind(this),
+            onResize: this.onResize.bind(this),
+        }
+    }
+
+    onResize(e) {
+        if (e.domElement) {
+            e.domElement.classList.add('resizing')
+        }
+    }
+
+    onStopResize(e) {
+        if (e.domElement) {
+            e.domElement.classList.remove('resizing')
         }
     }
 
@@ -27,6 +46,7 @@ class CodeEditorDesktop extends Component {
             method: 'GET',
             url: `/api/challenges/${this.props.match.params.id}`,
         }).then((res) => {
+            console.log(res.data)
             this.setState({ value: res.data })
         })
     }
@@ -46,29 +66,77 @@ class CodeEditorDesktop extends Component {
             url: `/api/dockersandbox/execute/${this.props.match.params.id}`,
             data: data,
         }).then((res) => {
-            this.setState({ output: res.data.stdOutput, error: res.data.stdErr })
+            console.log(res)
+            this.setState({ output: res.data.detailedExitCode })
         })
     }
 
     render() {
         return (
-            <Fragment>
-                <form onSubmit={this.handleSubmit}>
-                    <CodeEditorNavbar />
-                    <div>
-                        <CodeMirror
-                            value={this.state.value}
-                            options={this.props}
-                            onBeforeChange={(editor, data, value) => {
-                                this.textHandler(value)
-                            }}
-                        />
-                    </div>
-                    <button type="submit">Submit Code</button>
-                </form>
-                <p>{this.state.output}</p>
-                <p>{this.state.error}</p>
-            </Fragment>
+            <div className="viewport-height">
+                <CodeEditorNavbar />
+                <ReflexContainer orientation="horizontal">
+                    <ReflexElement>
+                        <ReflexContainer orientation="vertical">
+                            <ReflexElement {...this.resizeProps}>
+                                {/* <CodeEditorNavbar /> */}
+                                <ReflexContainer orientation="horizontal">
+                                    <ReflexElement {...this.resizeProps}>
+                                        This is the documentation resources area
+                                    </ReflexElement>
+                                </ReflexContainer>
+                            </ReflexElement>
+
+                            <ReflexSplitter {...this.resizeProps} style={{ width: '10px' }} />
+
+                            <ReflexElement {...this.resizeProps}>
+                                <ReflexElement className="header">{/* <CodeEditorNavbar /> */}</ReflexElement>
+                                <ReflexContainer orientation="horizontal">
+                                    <ReflexElement {...this.resizeProps}>
+                                        <div>
+                                            <ReflexContainer orientation="vertical">
+                                                <ReflexElement {...this.resizeProps}>
+                                                    <div className="pane-content">
+                                                        <form onSubmit={this.handleSubmit} id="codeSubmitForm">
+                                                            <div>
+                                                                {/* <CodeMirror
+                                                                    value={this.state.value}
+                                                                    options={this.props}
+                                                                    onBeforeChange={(editor, data, value) => {
+                                                                        this.textHandler(value)
+                                                                    }}
+                                                                /> */}
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </ReflexElement>
+                                            </ReflexContainer>
+                                        </div>
+                                    </ReflexElement>
+                                    <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
+                                    <ReflexElement {...this.resizeProps} minSize="50" maxSize="600">
+                                        <div className="pane-content">
+                                            <label>
+                                                This is the Right bottom pane with output
+                                                <p>{this.state.output}</p>
+                                                <p>{this.state.error}</p>
+                                            </label>
+                                        </div>
+                                    </ReflexElement>
+                                    {/* <ReflexElement className="submit-viewport"> */}
+
+                                    {/* </ReflexElement> */}
+                                </ReflexContainer>
+                            </ReflexElement>
+                        </ReflexContainer>
+                    </ReflexElement>
+                </ReflexContainer>
+                <div className=" submit-area">
+                    <button type="submit" form="codeSubmitForm">
+                        Submit Code
+                    </button>
+                </div>
+            </div>
         )
     }
 }

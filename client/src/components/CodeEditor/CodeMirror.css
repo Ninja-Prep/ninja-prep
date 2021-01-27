@@ -1,3 +1,11 @@
 .CodeMirror {
     min-height: 100%;
 }
+
+.viewport-height {
+    height: calc(100vh - 70px);
+}
+
+.submit-area {
+    background-color: black;
+}

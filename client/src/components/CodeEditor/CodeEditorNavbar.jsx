@@ -7,24 +7,14 @@ import { themeOptions, modeOptions } from './CodeEditorLanguages'
 function CodeEditorNavbar() {
     const dispatch = useDispatch()
     return (
-        <Fragment>
-            <div className="row w-50 ml-auto">
-                <div className="col-3 col-md-4 ml-auto">
-                    <Select
-                        placeholder="Theme"
-                        options={themeOptions}
-                        onChange={(e) => dispatch(changeTheme(e.value))}
-                    />
-                </div>
-                <div className="col-3 col-md-4">
-                    <Select
-                        placeholder="Language"
-                        options={modeOptions}
-                        onChange={(e) => dispatch(changeMode(e.value))}
-                    />
-                </div>
+        <div className="row p-0 m-0">
+            <div className="col-3 p-0 m-0">
+                <Select placeholder="Language" options={modeOptions} onChange={(e) => dispatch(changeMode(e.value))} />
             </div>
-        </Fragment>
+            <div className="col-3 p-0 m-0">
+                <Select placeholder="Theme" options={themeOptions} onChange={(e) => dispatch(changeTheme(e.value))} />
+            </div>
+        </div>
     )
 }
 
