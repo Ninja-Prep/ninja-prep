@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import Axios from 'axios'
 import { languageMap } from './CodeEditorLanguages'
 import CodeEditorNavbar from './CodeEditorNavbar'
+
+import { DropdownButton, Dropdown } from 'react-bootstrap'
 import './CodeMirror.css'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/addon/selection/active-line'
@@ -46,7 +48,7 @@ class CodeEditorDesktop extends Component {
             method: 'GET',
             url: `/api/challenges/${this.props.match.params.id}`,
         }).then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({ value: res.data })
         })
     }
@@ -66,7 +68,7 @@ class CodeEditorDesktop extends Component {
             url: `/api/dockersandbox/execute/${this.props.match.params.id}`,
             data: data,
         }).then((res) => {
-            console.log(res)
+            // console.log(res)
             this.setState({ output: res.data.detailedExitCode })
         })
     }
@@ -74,7 +76,7 @@ class CodeEditorDesktop extends Component {
     render() {
         return (
             <div className="viewport-height">
-                <CodeEditorNavbar />
+                {/* <CodeEditorNavbar /> */}
                 <ReflexContainer orientation="horizontal">
                     <ReflexElement>
                         <ReflexContainer orientation="vertical">
@@ -90,7 +92,19 @@ class CodeEditorDesktop extends Component {
                             <ReflexSplitter {...this.resizeProps} style={{ width: '10px' }} />
 
                             <ReflexElement {...this.resizeProps}>
-                                <ReflexElement className="header">{/* <CodeEditorNavbar /> */}</ReflexElement>
+                                <ReflexElement className="header">
+                                    {/* <CodeEditorNavbar /> */}
+                                    <DropdownButton
+                                        id="dropdown-basic-button"
+                                        title="Dropdown button"
+                                        className="position-absolute"
+                                    >
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </DropdownButton>
+                                    {/* <div className="row">Hello World!</div> */}
+                                </ReflexElement>
                                 <ReflexContainer orientation="horizontal">
                                     <ReflexElement {...this.resizeProps}>
                                         <div>
@@ -121,6 +135,15 @@ class CodeEditorDesktop extends Component {
                                                 <p>{this.state.output}</p>
                                                 <p>{this.state.error}</p>
                                             </label>
+
+                                            <button
+                                                type="submit"
+                                                form="codeSubmitForm"
+                                                className="position-absolute"
+                                                style={{ bottom: 0, right: 0 }}
+                                            >
+                                                Submit Code
+                                            </button>
                                         </div>
                                     </ReflexElement>
                                     {/* <ReflexElement className="submit-viewport"> */}
@@ -131,11 +154,6 @@ class CodeEditorDesktop extends Component {
                         </ReflexContainer>
                     </ReflexElement>
                 </ReflexContainer>
-                <div className=" submit-area">
-                    <button type="submit" form="codeSubmitForm">
-                        Submit Code
-                    </button>
-                </div>
             </div>
         )
     }
