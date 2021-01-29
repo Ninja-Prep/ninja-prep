@@ -4,6 +4,13 @@
     /* margin: 0px; */
     /* padding-bottom: 10px; */
 }
+.CodeMirror-scrollbar-filler {
+    display: none !important;
+}
+
+.CodeMirror-gutter-filler {
+    display: none !important;
+}
 
 .CodeMirror-scroll {
 }
