@@ -17,7 +17,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <NavigationBarComponent />
+                {/* <NavigationBarComponent /> */}
                 <Switch>
                     <ProtectedRoute
                         path="/login"

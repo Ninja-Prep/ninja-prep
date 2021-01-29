@@ -6,7 +6,21 @@ import Axios from 'axios'
 import { languageMap } from './CodeEditorLanguages'
 import CodeEditorNavbar from './CodeEditorNavbar'
 
-import { DropdownButton, Dropdown } from 'react-bootstrap'
+import IconButton from '@material-ui/core/IconButton'
+import FullscreenIcon from '@material-ui/icons/Fullscreen'
+import SettingsIcon from '@material-ui/icons/Settings'
+import InfoIcon from '@material-ui/icons/Info'
+import PlayArrowIcon from '@material-ui/icons/PlayArrow'
+
+//Tab Icons
+import SubtitlesIcon from '@material-ui/icons/Subtitles'
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
+import BookIcon from '@material-ui/icons/Book'
+import WatchLaterIcon from '@material-ui/icons/WatchLater'
+
+import { ProblemDesktop } from './ProblemTab.jsx/ProblemDesktop'
+import { DropdownButton, Dropdown, Row, Col, Tabs, Tab, Nav, Button } from 'react-bootstrap'
+
 import './CodeMirror.css'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/addon/selection/active-line'
@@ -76,80 +90,120 @@ class CodeEditorDesktop extends Component {
     render() {
         return (
             <div className="viewport-height">
-                {/* <CodeEditorNavbar /> */}
-                <ReflexContainer orientation="horizontal">
-                    <ReflexElement>
-                        <ReflexContainer orientation="vertical">
-                            <ReflexElement {...this.resizeProps}>
-                                {/* <CodeEditorNavbar /> */}
-                                <ReflexContainer orientation="horizontal">
-                                    <ReflexElement {...this.resizeProps}>
-                                        This is the documentation resources area
+                <ReflexContainer orientation="vertical">
+                    <ReflexElement {...this.resizeProps}>
+                        <Tabs defaultActiveKey="problem" id="uncontrolled-tab-example" className="header-area">
+                            <Tab eventKey="problem" title="Problem">
+                                <ProblemDesktop />
+                            </Tab>
+                            <Tab eventKey="solution" title="Solution">
+                                test2
+                            </Tab>
+                            <Tab eventKey="article" title="Article">
+                                this is test3
+                            </Tab>
+                            <Tab eventKey="submission" title="Submission">
+                                this is test4
+                            </Tab>
+                        </Tabs>
+                    </ReflexElement>
+
+                    <ReflexSplitter {...this.resizeProps} style={{ width: '10px' }} />
+
+                    <ReflexElement {...this.resizeProps}>
+                        <ReflexContainer orientation="horizontal">
+                            <ReflexElement
+                                {...this.resizeProps}
+                                style={{ overflow: 'hidden' }}
+                                minSize="200"
+                                maxSize="800"
+                            >
+                                <div className="pane-content">
+                                    <ReflexElement>
+                                        <Row className="p-1 header-area">
+                                            <Col className="align-self-center">
+                                                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                                </DropdownButton>
+                                            </Col>
+                                            <Col className="text-right">
+                                                <IconButton>
+                                                    <InfoIcon />
+                                                </IconButton>
+                                                <IconButton>
+                                                    <SettingsIcon />
+                                                </IconButton>
+                                                <IconButton className="pr-0">
+                                                    <FullscreenIcon />
+                                                </IconButton>
+                                            </Col>
+                                        </Row>
                                     </ReflexElement>
-                                </ReflexContainer>
+
+                                    <form onSubmit={this.handleSubmit} id="codeSubmitForm">
+                                        <div>
+                                            <CodeMirror
+                                                value={this.state.value}
+                                                options={this.props}
+                                                onBeforeChange={(editor, data, value) => {
+                                                    this.textHandler(value)
+                                                }}
+                                            />
+                                        </div>
+                                    </form>
+                                </div>
                             </ReflexElement>
 
-                            <ReflexSplitter {...this.resizeProps} style={{ width: '10px' }} />
+                            <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
 
-                            <ReflexElement {...this.resizeProps}>
-                                <ReflexElement className="header">
-                                    {/* <CodeEditorNavbar /> */}
-                                    <DropdownButton
-                                        id="dropdown-basic-button"
-                                        title="Dropdown button"
-                                        className="position-absolute"
-                                    >
-                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                    </DropdownButton>
-                                    {/* <div className="row">Hello World!</div> */}
-                                </ReflexElement>
-                                <ReflexContainer orientation="horizontal">
-                                    <ReflexElement {...this.resizeProps}>
-                                        <div>
-                                            <ReflexContainer orientation="vertical">
-                                                <ReflexElement {...this.resizeProps}>
-                                                    <div className="pane-content">
-                                                        <form onSubmit={this.handleSubmit} id="codeSubmitForm">
-                                                            <div>
-                                                                {/* <CodeMirror
-                                                                    value={this.state.value}
-                                                                    options={this.props}
-                                                                    onBeforeChange={(editor, data, value) => {
-                                                                        this.textHandler(value)
-                                                                    }}
-                                                                /> */}
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </ReflexElement>
-                                            </ReflexContainer>
-                                        </div>
+                            <ReflexElement {...this.resizeProps} style={{ overflow: 'hidden' }}>
+                                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                                    <Row>
+                                        <Col sm={3}>
+                                            <Nav variant="pills" className="flex-column">
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                                </Nav.Item>
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                                </Nav.Item>
+                                            </Nav>
+                                        </Col>
+                                        <Col sm={9}>
+                                            <Tab.Content>
+                                                <Tab.Pane eventKey="first">
+                                                    <p>{this.state.output}</p>
+                                                    <p>{this.state.error}</p>test1
+                                                </Tab.Pane>
+                                                <Tab.Pane eventKey="second">
+                                                    <p>{this.state.output}</p>
+                                                    <p>{this.state.error}</p>test2
+                                                </Tab.Pane>
+                                            </Tab.Content>
+                                        </Col>
+                                    </Row>
+                                    <ReflexElement flex={0.06} className="footer">
+                                        <Button
+                                            variant="outline-dark"
+                                            className="position-absolute"
+                                            style={{ bottom: 0, right: 80 }}
+                                        >
+                                            <PlayArrowIcon />
+                                            Run Code
+                                        </Button>
+                                        <Button
+                                            variant="success"
+                                            type="submit"
+                                            form="codeSubmitForm"
+                                            className="position-absolute"
+                                            style={{ bottom: 0, right: 0 }}
+                                        >
+                                            Submit
+                                        </Button>
                                     </ReflexElement>
-                                    <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
-                                    <ReflexElement {...this.resizeProps} minSize="50" maxSize="600">
-                                        <div className="pane-content">
-                                            <label>
-                                                This is the Right bottom pane with output
-                                                <p>{this.state.output}</p>
-                                                <p>{this.state.error}</p>
-                                            </label>
-
-                                            <button
-                                                type="submit"
-                                                form="codeSubmitForm"
-                                                className="position-absolute"
-                                                style={{ bottom: 0, right: 0 }}
-                                            >
-                                                Submit Code
-                                            </button>
-                                        </div>
-                                    </ReflexElement>
-                                    {/* <ReflexElement className="submit-viewport"> */}
-
-                                    {/* </ReflexElement> */}
-                                </ReflexContainer>
+                                </Tab.Container>
                             </ReflexElement>
                         </ReflexContainer>
                     </ReflexElement>

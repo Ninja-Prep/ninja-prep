@@ -3,9 +3,14 @@
 }
 
 .viewport-height {
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
+    height: 100vh;
 }
 
 .submit-area {
     background-color: black;
+}
+
+.header-area {
+    background-color: #f9fbfd;
 }
