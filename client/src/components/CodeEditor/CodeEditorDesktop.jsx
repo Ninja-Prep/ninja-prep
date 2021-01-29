@@ -26,6 +26,8 @@ import 'codemirror/lib/codemirror.css'
 import 'codemirror/addon/selection/active-line'
 import 'codemirror/addon/edit/matchbrackets'
 import 'codemirror/addon/edit/closebrackets'
+import 'codemirror/addon/scroll/simplescrollbars'
+import 'codemirror/addon/scroll/simplescrollbars.css'
 
 import { ReflexContainer, ReflexSplitter, ReflexElement } from 'react-reflex'
 import 'react-reflex/styles.css'
@@ -118,42 +120,40 @@ class CodeEditorDesktop extends Component {
                                 minSize="200"
                                 maxSize="800"
                             >
-                                <div className="pane-content">
-                                    <ReflexElement>
-                                        <Row className="p-1 header-area">
-                                            <Col className="align-self-center">
-                                                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-                                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                                </DropdownButton>
-                                            </Col>
-                                            <Col className="text-right">
-                                                <IconButton>
-                                                    <InfoIcon />
-                                                </IconButton>
-                                                <IconButton>
-                                                    <SettingsIcon />
-                                                </IconButton>
-                                                <IconButton className="pr-0">
-                                                    <FullscreenIcon />
-                                                </IconButton>
-                                            </Col>
-                                        </Row>
-                                    </ReflexElement>
+                                {/* <ReflexElement>
+                                    <Row className="p-1 header-area">
+                                        <Col className="align-self-center">
+                                            <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                            </DropdownButton>
+                                        </Col>
+                                        <Col className="text-right">
+                                            <IconButton>
+                                                <InfoIcon />
+                                            </IconButton>
+                                            <IconButton>
+                                                <SettingsIcon />
+                                            </IconButton>
+                                            <IconButton className="pr-0">
+                                                <FullscreenIcon />
+                                            </IconButton>
+                                        </Col>
+                                    </Row>
+                                </ReflexElement> */}
 
-                                    <form onSubmit={this.handleSubmit} id="codeSubmitForm">
-                                        <div>
-                                            <CodeMirror
-                                                value={this.state.value}
-                                                options={this.props}
-                                                onBeforeChange={(editor, data, value) => {
-                                                    this.textHandler(value)
-                                                }}
-                                            />
-                                        </div>
-                                    </form>
-                                </div>
+                                <form onSubmit={this.handleSubmit} id="codeSubmitForm">
+                                    <div>
+                                        <CodeMirror
+                                            value={this.state.value}
+                                            options={this.props}
+                                            onBeforeChange={(editor, data, value) => {
+                                                this.textHandler(value)
+                                            }}
+                                        />
+                                    </div>
+                                </form>
                             </ReflexElement>
 
                             <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
@@ -217,11 +217,7 @@ const mapStateToProps = (state) => ({
     theme: state.editor.theme,
     mode: state.editor.mode,
     lineNumbers: true,
-    lineWrapping: true,
-    styleActiveLine: true,
-    matchBrackets: true,
-    autoCloseBrackets: true,
-    indentUnit: 4,
+    scrollbarStyle: 'overlay',
 })
 
 export default connect(mapStateToProps)(withRouter(CodeEditorDesktop))
