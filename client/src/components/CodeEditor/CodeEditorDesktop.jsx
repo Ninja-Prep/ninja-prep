@@ -203,20 +203,41 @@ class CodeEditorDesktop extends Component {
 
                     <ReflexElement {...this.resizeProps}>
                         <ReflexContainer orientation="horizontal">
-                            <div style={{ flexDirection: 'column' }}>
-                                <ReflexElement
-                                    {...this.resizeProps}
-                                    style={{ overflow: 'hidden' }}
-                                    minSize="200"
-                                    maxSize="800"
+                            <ReflexElement
+                                {...this.resizeProps}
+                                style={{ overflow: 'hidden' }}
+                                minSize="200"
+                                maxSize="800"
+                            >
+                                <div
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        height: '100%',
+                                    }}
                                 >
-                                    {this.renderDropdownButtonNav()}
-                                    {this.renderCodemirror()}
-                                </ReflexElement>
+                                    <div></div>
+                                    <div style={{ flex: 'none' }}>{this.renderDropdownButtonNav()}</div>
 
-                                <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
-                                {this.renderSubmissionButtonBox()}
-                            </div>
+                                    <div
+                                        style={{
+                                            flex: '1 1 100%',
+                                            position: 'relative',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            minHeight: '0px',
+                                        }}
+                                    >
+                                        <div style={{ height: '100%', flex: '1 1 auto', overflow: 'hidden' }}>
+                                            {this.renderCodemirror()}
+                                            {/* <p> hello </p> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </ReflexElement>
+
+                            <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
+                            {this.renderSubmissionButtonBox()}
                         </ReflexContainer>
                     </ReflexElement>
                 </ReflexContainer>

@@ -1,22 +1,6 @@
 .CodeMirror {
-    min-height: 100%;
-    min-width: 100%;
-    /* margin: 0px; */
-    /* padding-bottom: 10px; */
-}
-.CodeMirror-scrollbar-filler {
-    display: none !important;
-}
-
-.CodeMirror-gutter-filler {
-    display: none !important;
-}
-
-.CodeMirror-scroll {
-}
-
-.CodeMirror-vscrollbar {
-    padding-bottom: 10px !important;
+    height: 100% !important;
+    width: 100% !important;
 }
 
 .viewport-height {
