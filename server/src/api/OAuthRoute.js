@@ -12,7 +12,6 @@ function setUserCookie(req) {
   const publicUser = _.pick(req.user, publicUserFields);
   req.session.publicUser = publicUser;
   req.session.user = req.user;
-  console.log(req.user);
   req.session.isAuthenticated = true;
 }
 

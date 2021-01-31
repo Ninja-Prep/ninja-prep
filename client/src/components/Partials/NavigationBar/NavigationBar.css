@@ -2,3 +2,12 @@
 	background-color: #2a2a3a;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+.profile-picture {
+	height: 30px;
+	width: auto;
+}
+
+.get-premium {
+	color: #EE953D
+}
