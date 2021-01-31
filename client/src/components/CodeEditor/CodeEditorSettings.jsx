@@ -49,7 +49,7 @@ function CodeEditorSettings() {
                 </Modal.Body>
             </Modal>
 
-            <IconButton onClick={handleSettingShow}>
+            {/* <IconButton onClick={handleSettingShow}>
                 <SettingsIcon />
             </IconButton>
 
@@ -76,7 +76,7 @@ function CodeEditorSettings() {
                         </Col>
                     </Row>
                 </Modal.Body>
-            </Modal>
+            </Modal> */}
 
             <IconButton>
                 <FullscreenIcon />

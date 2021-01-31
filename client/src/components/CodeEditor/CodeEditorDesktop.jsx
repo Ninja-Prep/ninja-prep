@@ -186,7 +186,7 @@ class CodeEditorDesktop extends Component {
 
     renderSettingsArea() {
         return (
-            <Row className="p-1 header-area">
+            <Row className="p-1 code-editor-settings-area">
                 <Col className="align-self-center">
                     <LanguageDropdown />
                 </Col>
@@ -221,10 +221,11 @@ class CodeEditorDesktop extends Component {
                     <ReflexElement {...this.resizeProps}>
                         <ReflexContainer orientation="horizontal">
                             <ReflexElement
+                                flex={4}
                                 {...this.resizeProps}
                                 style={{ overflow: 'hidden' }}
-                                minSize="200"
-                                maxSize="800"
+                                // minSize="100"
+                                // maxSize="900"
                             >
                                 <div
                                     style={{
@@ -253,9 +254,19 @@ class CodeEditorDesktop extends Component {
                                 </div>
                             </ReflexElement>
 
-                            <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
+                            <ReflexSplitter
+                                {...this.resizeProps}
+                                style={{ height: '13px', backgroundColor: '#2A2A3A', borderColor: 'transparent' }}
+                                className="code-splitter"
+                            />
 
-                            <ReflexElement {...this.resizeProps} style={{ overflow: 'hidden' }}>
+                            <ReflexElement
+                                flex={1}
+                                {...this.resizeProps}
+                                style={{ overflow: 'hidden', backgroundColor: '#404053' }}
+                                minSize="150"
+                                maxSize="800"
+                            >
                                 <div className="test-case-container">{this.renderTestCases()}</div>
                                 {this.renderRunAndSubmissionButtons()}
                             </ReflexElement>

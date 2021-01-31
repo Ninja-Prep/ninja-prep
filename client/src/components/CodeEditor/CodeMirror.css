@@ -1,11 +1,11 @@
 .CodeMirror {
     height: 100% !important;
     width: 100% !important;
-    /* background-color: #404053 !important; */
+    background-color: #404053 !important;
 }
 
 .CodeMirror-gutters {
-    /* background-color: #2a2a3a !important; */
+    background-color: #2a2a3a !important;
 }
 
 .viewport-height {
@@ -17,6 +17,11 @@
     background-color: black;
 }
 
-.header-area {
-    background-color: #f9fbfd;
+.code-editor-settings-area {
+    background-color: #404053;
+    border-bottom: black 1px solid;
+}
+
+.code-splitter {
+    background-color: #2a2a3a;
 }
