@@ -1,6 +1,11 @@
 .CodeMirror {
     height: 100% !important;
     width: 100% !important;
+    /* background-color: #404053 !important; */
+}
+
+.CodeMirror-gutters {
+    /* background-color: #2a2a3a !important; */
 }
 
 .viewport-height {

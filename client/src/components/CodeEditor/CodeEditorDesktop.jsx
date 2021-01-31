@@ -18,7 +18,11 @@ import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
 import BookIcon from '@material-ui/icons/Book'
 import WatchLaterIcon from '@material-ui/icons/WatchLater'
 
-import { ProblemDesktop } from './ProblemTab.jsx/ProblemDesktop'
+import { ProblemDesktop } from './Tabs/ProblemDesktop'
+import { VideoSolution } from './Tabs/VideoSolution'
+import { ConceptReview } from './Tabs/ConceptReview'
+import { LanguageDropdown } from './LanguageDropdown'
+import { CodeEditorSettings } from './CodeEditorSettings'
 import { DropdownButton, Dropdown, Row, Col, Tabs, Tab, Nav, Button } from 'react-bootstrap'
 
 import './CodeMirror.css'
@@ -82,8 +86,13 @@ class CodeEditorDesktop extends Component {
             url: `/api/dockersandbox/execute/${this.props.match.params.id}`,
             data: data,
         }).then((res) => {
-            // console.log(res)
-            this.setState({ output: res.data.detailedExitCode })
+            console.log(res)
+            this.setState({
+                verdict: res.data.detailedExitCode,
+                inputTestCase: res.data.testCase,
+                userOutput: res.data.userOutput,
+                expectedOutput: res.data.solutionOutput,
+            })
         })
     }
     renderLeftPage() {
@@ -93,88 +102,96 @@ class CodeEditorDesktop extends Component {
                     <Tab eventKey="problem" title="Problem">
                         <ProblemDesktop />
                     </Tab>
-                    <Tab eventKey="solution" title="Solution">
-                        test2
+                    <Tab eventKey="videoSolution" title="Video Solution">
+                        <VideoSolution />
                     </Tab>
-                    <Tab eventKey="article" title="Article">
-                        this is test3
+                    <Tab eventKey="article" title="Concept Review">
+                        <ConceptReview />
                     </Tab>
-                    <Tab eventKey="submission" title="Submission">
-                        this is test4
+                    <Tab eventKey="submissions" title="Submissions">
+                        <ConceptReview />
                     </Tab>
                 </Tabs>
             </ReflexElement>
         )
     }
 
-    renderSubmissionButtonBox() {
+    renderTestCases() {
         return (
-            <ReflexElement {...this.resizeProps} style={{ overflow: 'hidden' }}>
-                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                    <Row>
-                        <Col sm={3}>
-                            <Nav variant="pills" className="flex-column">
-                                <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                                </Nav.Item>
-                            </Nav>
-                        </Col>
-                        <Col sm={9}>
-                            <Tab.Content>
-                                <Tab.Pane eventKey="first">
-                                    <p>{this.state.output}</p>
-                                    <p>{this.state.error}</p>test1
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="second">
-                                    <p>{this.state.output}</p>
-                                    <p>{this.state.error}</p>test2
-                                </Tab.Pane>
-                            </Tab.Content>
-                        </Col>
-                    </Row>
-                    <ReflexElement flex={0.06} className="footer">
-                        <Button variant="outline-dark" className="position-absolute" style={{ bottom: 0, right: 80 }}>
-                            <PlayArrowIcon />
-                            Run Code
-                        </Button>
-                        <Button
-                            variant="success"
-                            type="submit"
-                            form="codeSubmitForm"
-                            className="position-absolute"
-                            style={{ bottom: 0, right: 0 }}
-                        >
-                            Submit
-                        </Button>
-                    </ReflexElement>
-                </Tab.Container>
+            <Tabs defaultActiveKey="output" id="uncontrolled-tab-example">
+                <Tab eventKey="output" title="Test Case">
+                    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                        <Row>
+                            <Col sm={3}>
+                                <Nav variant="pills" className="flex-column">
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="first">Test Case 1</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="second">Test Case 2</Nav.Link>
+                                    </Nav.Item>
+                                </Nav>
+                            </Col>
+                            <Col sm={9}>
+                                <Tab.Content>
+                                    <Tab.Pane eventKey="first">
+                                        <p>{this.state.verdict}</p>
+                                        <p>Input: {this.state.inputTestCase}</p>
+                                        <p>Output: {this.state.userOutput}</p>
+                                        <p>Expected Output: {this.state.expectedOutput}</p>
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="second">
+                                        <p>{this.state.verdict}</p>
+                                        <p>Input: {this.state.inputTestCase}</p>
+                                        <p>Output: {this.state.userOutput}</p>
+                                        <p>Expected Output: {this.state.expectedOutput}</p>
+                                    </Tab.Pane>
+                                </Tab.Content>
+                            </Col>
+                        </Row>
+                    </Tab.Container>
+                </Tab>
+                <Tab eventKey="customInput" title="Custom Input">
+                    this is where users can customize test case / input
+                </Tab>
+            </Tabs>
+        )
+    }
+
+    renderRunAndSubmissionButtons() {
+        return (
+            <ReflexElement flex={0.06} className="footer">
+                <Button
+                    variant="outline-dark"
+                    type="submit"
+                    onClick={this.handleSubmit}
+                    className="position-absolute"
+                    style={{ bottom: 0, right: 80 }}
+                >
+                    <PlayArrowIcon />
+                    Run Code
+                </Button>
+                <Button
+                    variant="success"
+                    type="submit"
+                    onClick={this.handleSubmit}
+                    className="position-absolute"
+                    style={{ bottom: 0, right: 0 }}
+                >
+                    Submit
+                </Button>
             </ReflexElement>
         )
     }
 
-    renderDropdownButtonNav() {
+    renderSettingsArea() {
         return (
             <Row className="p-1 header-area">
                 <Col className="align-self-center">
-                    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </DropdownButton>
+                    <LanguageDropdown />
                 </Col>
                 <Col className="text-right">
-                    <IconButton>
-                        <InfoIcon />
-                    </IconButton>
-                    <IconButton>
-                        <SettingsIcon />
-                    </IconButton>
-                    <IconButton className="pr-0">
-                        <FullscreenIcon />
-                    </IconButton>
+                    <CodeEditorSettings />
                 </Col>
             </Row>
         )
@@ -217,7 +234,7 @@ class CodeEditorDesktop extends Component {
                                     }}
                                 >
                                     <div></div>
-                                    <div style={{ flex: 'none' }}>{this.renderDropdownButtonNav()}</div>
+                                    <div style={{ flex: 'none' }}>{this.renderSettingsArea()}</div>
 
                                     <div
                                         style={{
@@ -237,7 +254,11 @@ class CodeEditorDesktop extends Component {
                             </ReflexElement>
 
                             <ReflexSplitter {...this.resizeProps} style={{ height: '10px' }} />
-                            {this.renderSubmissionButtonBox()}
+
+                            <ReflexElement {...this.resizeProps} style={{ overflow: 'hidden' }}>
+                                <div className="test-case-container">{this.renderTestCases()}</div>
+                                {this.renderRunAndSubmissionButtons()}
+                            </ReflexElement>
                         </ReflexContainer>
                     </ReflexElement>
                 </ReflexContainer>

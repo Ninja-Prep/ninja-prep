@@ -3,6 +3,12 @@ import { Accordion, Card } from 'react-bootstrap'
 import HowToRegIcon from '@material-ui/icons/HowToReg'
 import ShareIcon from '@material-ui/icons/Share'
 
+//Tab Icons
+import SubtitlesIcon from '@material-ui/icons/Subtitles'
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
+import BookIcon from '@material-ui/icons/Book'
+import WatchLaterIcon from '@material-ui/icons/WatchLater'
+
 function ProblemDesktop() {
     return (
         <div className="m-4">
