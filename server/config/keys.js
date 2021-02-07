@@ -11,4 +11,8 @@ module.exports = {
   FACEBOOK_SECRET: "157dedc42ee6e64463841bf6e0a8b0c2",
   GITHUB_CLIENT: "d2d181427a54562870e4",
   GITHUB_SECRET: "67dc09757e15fb10935d8592afe25bd1840cf144",
+  STRIPE_TEST_KEY:
+    "sk_test_51IFPpVD8LTDC9rJzDeLtZD2Ke1pDUGOKQw8txz1vgO4jhFQ0FdGzj41duEBDeUAYlcTrjKHSBqAuwY5uxYqjyGX700tD2iD0en",
+  STRIPE_SUCCESS_URL: "https://ninjaprep.io?session_id={CHECKOUT_SESSION_ID}",
+  STRIPE_CANCEL_URL: "https://ninjaprep.io/about",
 };

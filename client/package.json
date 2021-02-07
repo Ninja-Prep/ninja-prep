@@ -6,8 +6,13 @@
     "babel": {
         "env": {
             "test": {
-                "presets": ["@babel/preset-react"],
-                "plugins": ["@babel/plugin-transform-modules-commonjs", "@babel/plugin-proposal-class-properties"]
+                "presets": [
+                    "@babel/preset-react"
+                ],
+                "plugins": [
+                    "@babel/plugin-transform-modules-commonjs",
+                    "@babel/plugin-proposal-class-properties"
+                ]
             }
         }
     },
@@ -19,6 +24,8 @@
         "@material-ui/core": "^4.11.0",
         "@material-ui/icons": "^4.9.1",
         "@material-ui/styles": "^4.11.1",
+        "@stripe/react-stripe-js": "^1.2.1",
+        "@stripe/stripe-js": "^1.11.0",
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
         "@testing-library/user-event": "^7.2.1",
@@ -43,6 +50,7 @@
         "redux": "^4.0.5",
         "redux-form": "^8.3.7",
         "redux-thunk": "^2.3.0",
+        "stripe": "^8.132.0",
         "universal-cookie": "^4.0.4"
     },
     "scripts": {
@@ -54,7 +62,11 @@
         "lint": "eslint --ext js,jsx,ts,tsx src/"
     },
     "lint-staged": {
-        "src/**/*.jsx": ["prettier --write", "eslint --fix", "git add"]
+        "src/**/*.jsx": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ]
     },
     "husky": {
         "hooks": {
@@ -62,7 +74,10 @@
         }
     },
     "eslintConfig": {
-        "extends": ["react-app", "plugin:prettier/recommended"],
+        "extends": [
+            "react-app",
+            "plugin:prettier/recommended"
+        ],
         "rules": {
             "no-extra-semi": "error",
             "no-console": "error",
@@ -76,8 +91,16 @@
         }
     },
     "browserslist": {
-        "production": [">0.2%", "not dead", "not op_mini all"],
-        "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     },
     "devDependencies": {
         "eslint-config-prettier": "^7.1.0",

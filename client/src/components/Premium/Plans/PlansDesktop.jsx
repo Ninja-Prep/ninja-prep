@@ -3,8 +3,6 @@ import '../premium.css'
 import { Container, CardDeck, Card, Row, Col, Button } from 'react-bootstrap'
 import { SUBSCRIBE_BUTTON, PLAN_A, PLAN_B, PLAN_C } from './PlansStringIds'
 
-import { Elements } from '@stripe/react-stripe-js'
-import { loadStripe } from '@stripe/stripe-js'
 import { useStripe } from '@stripe/react-stripe-js'
 import Axios from 'axios'
 
@@ -32,7 +30,7 @@ function PlansDesktop() {
                     <Card.Text>{props.description}</Card.Text>
                 </Card.Body>
                 <div className="mx-auto pb-4">
-                    <Button onClick={CheckoutForm} variant="outline-secondary">
+                    <Button onClick={RedirectToCheckoutForm} variant="outline-secondary">
                         <p className="lead">{SUBSCRIBE_BUTTON}</p>
                     </Button>
                 </div>
@@ -41,17 +39,14 @@ function PlansDesktop() {
     }
 
     const stripe = useStripe()
-    const CheckoutForm = () => {
+    const RedirectToCheckoutForm = () => {
         Axios({
             method: 'POST',
             url: `/payment/create-checkout-session/`,
         }).then((res) => {
-            console.log(res)
-            stripe
-                .redirectToCheckout({
-                    sessionId: res.data.sessionId,
-                })
-                .then((res) => console.log('Payment ', res))
+            stripe.redirectToCheckout({
+                sessionId: res.data.sessionId,
+            })
         })
     }
 
