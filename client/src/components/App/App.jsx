@@ -7,9 +7,10 @@ import PremiumPage from '../../views/PremiumPage'
 import ChallengesPage from '../../views/ChallengesPage'
 import MeetTheTeamPage from '../../views/MeetTheTeamPage'
 import LoginPage from '../../views/LoginPage'
-import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ProtectedRoute from '../Routes/ProtectedRoute'
+import RouteWrapper from '../Routes/RouteWrapper'
+import { FooterLayout } from '../Routes/Layouts'
 import ProblemTemplatePage from '../../views/ProblemTemplatePage'
 
 class App extends Component {
@@ -18,14 +19,27 @@ class App extends Component {
             <Router>
                 <NavigationBarComponent />
                 <Switch>
-                    <ProtectedRoute path="/login" exact authComponent={ChallengesPage} component={LoginPage} />
-                    <ProtectedRoute path="/" exact authComponent={ChallengesPage} component={LandingPage} />
+                    <ProtectedRoute
+                        path="/login"
+                        exact
+                        authComponent={ChallengesPage}
+                        component={LoginPage}
+                        layout={FooterLayout}
+                    />
+                    <ProtectedRoute
+                        path="/"
+                        exact
+                        authComponent={ChallengesPage}
+                        component={LandingPage}
+                        layout={FooterLayout}
+                    />
+                    <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={FooterLayout} />
+                    <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={FooterLayout} />
                     <Route path="/premium" exact component={PremiumPage} />
                     <Route path="/challenges" exact component={ChallengesPage} />
                     <Route path="/about" exact component={MeetTheTeamPage} />
                     <Route path="/problem/:id" exact component={ProblemTemplatePage} />
                 </Switch>
-                <FooterBarComponent />
             </Router>
         )
     }
