@@ -1,20 +1,23 @@
 const mongoose = require("mongoose");
+const ProblemLanguageTemplateSchema = require("./ProblemLanguageTemplate");
 const { Schema } = mongoose;
 
-const problemSignatureSchema = new Schema({
-  language: String,
-  signature: String,
+const templateMap = {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "ProblemLanguageTemplate",
+};
+
+const ProblemSchema = new Schema({
+  _id: Schema.Types.ObjectId,
+  problem_name: String,
+  input_testcases: [String],
+  templates: {
+    type: Map,
+    of: templateMap,
+  },
+  checker_code_snippet: String,
 });
 
-const problemSchema = new Schema({
-  title: String,
-  problemId: String,
-  description: String,
-  methodSignature: [problemSignatureSchema],
-  testCases: Object,
-  category: String,
-});
+const ProblemModel = mongoose.model("Problem", ProblemSchema);
 
-const problemModel = mongoose.model("Problem", problemSchema);
-
-module.exports = problemModel;
+module.exports = ProblemModel;
