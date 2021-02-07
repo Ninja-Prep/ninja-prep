@@ -6,6 +6,9 @@ module.exports = function (app) {
         }),
         createProxyMiddleware('/api', {
             target: `http://${process.env.PROXY_DOMAIN}:5000`,
+        }),
+        createProxyMiddleware('/payment', {
+            target: `http://${process.env.PROXY_DOMAIN}:5000`,
         })
     )
 }

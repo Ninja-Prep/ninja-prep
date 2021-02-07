@@ -16,7 +16,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <NavigationBarComponent />
+                {/* <NavigationBarComponent /> */}
                 <Switch>
                     <ProtectedRoute path="/login" exact authComponent={ChallengesPage} component={LoginPage} />
                     <ProtectedRoute path="/" exact authComponent={ChallengesPage} component={LandingPage} />
