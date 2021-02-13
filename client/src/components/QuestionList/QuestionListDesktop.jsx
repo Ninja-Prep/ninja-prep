@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
-// import PendingIcon from '@material-ui/icons/Pending'
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import LockIcon from '@material-ui/icons/Lock'
 
 const QuestionListDesktop = (props) => {
@@ -20,8 +20,7 @@ const QuestionListDesktop = (props) => {
         } else if (status === 'done') {
             icon = <CheckCircleIcon className="check-circle-icon" />
         } else if (status === 'pending') {
-            // TODO: change to PendingIcon - currently cannot import
-            icon = <CheckCircleIcon className="check-circle-icon" />
+            icon = <MoreHorizIcon className="pending-icon" />
         } else {
             icon = <LockIcon className="lock-icon" />
         }
