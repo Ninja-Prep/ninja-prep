@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
-// import PendingIcon from '@material-ui/icons/Pending'
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import LockIcon from '@material-ui/icons/Lock'
 
 const QuestionListDesktop = (props) => {
@@ -17,11 +17,10 @@ const QuestionListDesktop = (props) => {
         let questionTitle = title
         if (status == null) {
             icon = null
-        } else if (status === "done") {
+        } else if (status === 'done') {
             icon = <CheckCircleIcon className="check-circle-icon" />
-        } else if (status === "pending") {
-            // TODO: change to PendingIcon - currently cannot import
-            icon = <CheckCircleIcon className="check-circle-icon" />
+        } else if (status === 'pending') {
+            icon = <MoreHorizIcon className="pending-icon" />
         } else {
             icon = <LockIcon className="lock-icon" />
         }
@@ -30,9 +29,7 @@ const QuestionListDesktop = (props) => {
             <div className="card flex-row flex-wrap mb-3 col-sm p-0">
                 <div className="img-square-wrapper p-2">{icon}</div>
                 <div className="card-block px-2">
-                    <blockquote className="mb-0 card-body flex-fill">
-                        {questionTitle}
-                    </blockquote>
+                    <blockquote className="mb-0 card-body flex-fill">{questionTitle}</blockquote>
                 </div>
             </div>
         )
@@ -43,10 +40,10 @@ const QuestionListDesktop = (props) => {
     function getQuestionList() {
         // TODO: get question list from db here instead
         return [
-            ["Question", null],
-            ["Question1", "done"],
-            ["Question2", "pending"],
-            ["Question3", "premium"],
+            ['Question', null],
+            ['Question1', 'done'],
+            ['Question2', 'pending'],
+            ['Question3', 'premium'],
         ]
     }
 
