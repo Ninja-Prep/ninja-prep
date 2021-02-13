@@ -3,6 +3,9 @@ import '../premium.css'
 import { CardDeck, Card, Row, Col, Button } from 'react-bootstrap'
 import { SUBSCRIBE_BUTTON, PLAN_A, PLAN_B, PLAN_C } from './PlansStringIds'
 
+import { useStripe } from '@stripe/react-stripe-js'
+import Axios from 'axios'
+
 function PlansTablet() {
     function PlanCard(props) {
         return (
@@ -25,13 +28,25 @@ function PlansTablet() {
                         <Card.Text>{props.description}</Card.Text>
                     </Card.Body>
                     <div className="mx-auto pb-4">
-                        <Button href="#" variant="outline-secondary">
+                        <Button onClick={RedirectToCheckoutForm} variant="outline-secondary">
                             <p className="lead">{SUBSCRIBE_BUTTON}</p>
                         </Button>
                     </div>
                 </Card>
             </Row>
         )
+    }
+
+    const stripe = useStripe()
+    const RedirectToCheckoutForm = () => {
+        Axios({
+            method: 'POST',
+            url: `/payment/create-checkout-session/`,
+        }).then((res) => {
+            stripe.redirectToCheckout({
+                sessionId: res.data.sessionId,
+            })
+        })
     }
 
     return (

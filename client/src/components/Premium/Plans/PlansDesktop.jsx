@@ -3,7 +3,13 @@ import '../premium.css'
 import { Container, CardDeck, Card, Row, Col, Button } from 'react-bootstrap'
 import { SUBSCRIBE_BUTTON, PLAN_A, PLAN_B, PLAN_C } from './PlansStringIds'
 
+import { useStripe } from '@stripe/react-stripe-js'
+import Axios from 'axios'
+
 function PlansDesktop() {
+    // Make sure to call `loadStripe` outside of a component’s render to avoid
+    // recreating the `Stripe` object on every render.
+
     function PlanCard(props) {
         return (
             <Card>
@@ -24,12 +30,24 @@ function PlansDesktop() {
                     <Card.Text>{props.description}</Card.Text>
                 </Card.Body>
                 <div className="mx-auto pb-4">
-                    <Button href="#" variant="outline-secondary">
+                    <Button onClick={RedirectToCheckoutForm} variant="outline-secondary">
                         <p className="lead">{SUBSCRIBE_BUTTON}</p>
                     </Button>
                 </div>
             </Card>
         )
+    }
+
+    const stripe = useStripe()
+    const RedirectToCheckoutForm = () => {
+        Axios({
+            method: 'POST',
+            url: `/payment/create-checkout-session/`,
+        }).then((res) => {
+            stripe.redirectToCheckout({
+                sessionId: res.data.sessionId,
+            })
+        })
     }
 
     return (
