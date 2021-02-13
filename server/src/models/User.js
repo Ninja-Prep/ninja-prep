@@ -32,6 +32,7 @@ userSchema.statics.findOrCreate = async function (profile, callback) {
       profile_picture: profile.photos[0].value,
     }).save();
   }
+  console.log(user);
   callback(null, user);
 };
 

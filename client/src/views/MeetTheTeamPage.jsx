@@ -1,8 +1,8 @@
 import React from 'react'
-import MeetTheTeamComponent from "../components/MeetTheTeam/MeetTheTeamComponent"
+import MeetTheTeamComponent from '../components/MeetTheTeam/MeetTheTeamComponent'
 
 function MeetTheTeamPage() {
-	return <MeetTheTeamComponent />
+    return <MeetTheTeamComponent />
 }
 
 export default MeetTheTeamPage

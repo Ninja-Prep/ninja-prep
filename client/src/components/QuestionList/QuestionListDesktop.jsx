@@ -5,27 +5,54 @@ import { Link } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+// import PendingIcon from '@material-ui/icons/Pending'
+import LockIcon from '@material-ui/icons/Lock'
 
 const QuestionListDesktop = (props) => {
     const numRows = 4
 
-    const questionCard = (
-        <div className="card text-primary mb-3 col-sm p-3 mx-2">
-            <blockquote className="blockquote mb-0 card-body flex-fill">
-                <p>Question</p>
-                <footer className="blockquote-footer">
-                    <small className="text-muted">
-                        <cite title="Stacks">Stacks 101</cite>
-                    </small>
-                </footer>
-            </blockquote>
-        </div>
-    )
+    function makeQuestionCard(title, status) {
+        let icon = null
+        let questionTitle = title
+        if (status == null) {
+            icon = null
+        } else if (status === 'done') {
+            icon = <CheckCircleIcon className="check-circle-icon" />
+        } else if (status === 'pending') {
+            // TODO: change to PendingIcon - currently cannot import
+            icon = <CheckCircleIcon className="check-circle-icon" />
+        } else {
+            icon = <LockIcon className="lock-icon" />
+        }
+
+        let questionCard = (
+            <div className="card flex-row flex-wrap mb-3 col-sm p-0">
+                <div className="img-square-wrapper p-2">{icon}</div>
+                <div className="card-block px-2">
+                    <blockquote className="mb-0 card-body flex-fill">{questionTitle}</blockquote>
+                </div>
+            </div>
+        )
+
+        return questionCard
+    }
+
+    function getQuestionList() {
+        // TODO: get question list from db here instead
+        return [
+            ['Question', null],
+            ['Question1', 'done'],
+            ['Question2', 'pending'],
+            ['Question3', 'premium'],
+        ]
+    }
 
     function makeQuestionCards() {
         let cards = []
-        for (var i = 0; i < numRows; i++) {
-            cards[i] = questionCard
+        let questionList = getQuestionList()
+        for (let i = 0; i < numRows; i++) {
+            cards[i] = makeQuestionCard(questionList[i][0], questionList[i][1])
         }
         return cards
     }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Featured } from '../components/Featured'
-import QuestionListDesktop from '../components/QuestionList/QuestionListDesktop'
 import QuestionListComponent from '../components/QuestionListComponent'
 
 function Challenges() {
