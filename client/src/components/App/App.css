@@ -11,7 +11,6 @@
 @media only screen and (min-width: 768px) {
     body {
         margin: 0;
-        padding-top: 70px;
         /* Change padding bottom to be footer height */
         padding-bottom: 200px;
         font-family: 'Roboto', 'Source Sans Pro', sans-serif;
@@ -22,7 +21,6 @@
 @media only screen and (max-width: 767px) {
     body {
         margin: 0;
-        padding-top: 70px;
         /* Change padding bottom to be footer height */
         padding-bottom: 50px;
         font-family: 'Roboto', 'Source Sans Pro', sans-serif;
