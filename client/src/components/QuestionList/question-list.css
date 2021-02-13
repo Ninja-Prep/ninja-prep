@@ -45,27 +45,13 @@
     color: #449d44;
 }
 
-.check-circle-icon:hover {
-    color: #0a0a10;
-    cursor: pointer;
-}
 
 .pending-icon {
     margin-top: 7%;
     color: #1d7fc9;
 }
 
-.pending-icon:hover {
-    color: #0a0a10;
-    cursor: pointer;
-}
-
 .lock-icon {
     margin-top: 7%;
     color: #ee953d;
-}
-
-.lock-icon:hover {
-    color: #0a0a10;
-    cursor: pointer;
 }
