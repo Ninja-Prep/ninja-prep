@@ -2,28 +2,26 @@ import React from 'react'
 import { Row, Col, Container } from 'react-bootstrap'
 import '../meettheteam.css'
 import {
-	ALEX_NGUYEN, ALEX_DESCRIPTION, JOANNE_CHEONG, JOANNE_DESCRIPTION, ANGELA_YEUNG,
-    ANGELA_Y_DESCRIPTION, ANGELA_SUN, ANGELA_S_DESCRIPTION} from './MeetTheTeamInfoStringIds'
+    ALEX_NGUYEN,
+    ALEX_DESCRIPTION,
+    JOANNE_CHEONG,
+    JOANNE_DESCRIPTION,
+    ANGELA_YEUNG,
+    ANGELA_Y_DESCRIPTION,
+    ANGELA_SUN,
+    ANGELA_S_DESCRIPTION,
+} from './MeetTheTeamInfoStringIds'
 
 const MeetTheTeamInfoDesktop = (props) => {
+    const alexPhoto = <img className="img-fluid rounded" src="/images/ALEX-PHOTO.png" alt="AlexPhoto" />
 
-    const alexPhoto = (
-        <img className="img-fluid rounded" src="/images/Photo-Alex.png" alt="AlexPhoto"/>
-    )
+    const joannePhoto = <img className="img-fluid rounded" src="/images/JOANNE-PHOTO.png" alt="JoannePhoto" />
 
-    const joannePhoto = (
-        <img className="img-fluid rounded" src="/images/Photo-Joanne.png" alt="JoannePhoto"/>
-    )
+    const angelaYPhoto = <img className="img-fluid rounded" src="/images/ANGELA-Y-PHOTO.png" alt="AngelaYPhoto" />
 
-    const angelaYPhoto = (        
-        <img className="img-fluid rounded" src="/images/Photo-Angela-Y.png" alt="AngelaYPhoto"/>
-    )
+    const angelaSPhoto = <img className="img-fluid rounded" src="/images/ANGELA-S-PHOTO.png" alt="AngelaSPhoto" />
 
-    const angelaSPhoto = (
-        <img className="img-fluid rounded" src="/images/Photo-Angela-S.png" alt="AngelaSPhoto"/>
-    )
-
-    return(
+    return (
         <Container className="px-5 pt-5 pb-3 w-75">
             <div className="px-5">
                 <Row className="pt-3 pb-5">
@@ -61,10 +59,10 @@ const MeetTheTeamInfoDesktop = (props) => {
 
                     <Col className="pl-5">{angelaSPhoto}</Col>
                 </Row>
-            </div>           
+            </div>
         </Container>
     )
-    }
+}
 
 export default MeetTheTeamInfoDesktop
 export { default as MeetTheTeamInfoDesktop } from './MeetTheTeamInfoDesktop'
