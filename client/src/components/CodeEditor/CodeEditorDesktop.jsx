@@ -4,7 +4,6 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import Axios from 'axios'
 import { languageMap } from './CodeEditorLanguages'
-import CodeEditorNavbar from './CodeEditorNavbar'
 
 import IconButton from '@material-ui/core/IconButton'
 import FullscreenIcon from '@material-ui/icons/Fullscreen'
@@ -22,7 +21,10 @@ import { ProblemDesktop } from './Tabs/ProblemDesktop'
 import { VideoSolution } from './Tabs/VideoSolution'
 import { ConceptReview } from './Tabs/ConceptReview'
 import { LanguageDropdown } from './LanguageDropdown'
-import { CodeEditorSettings } from './CodeEditorSettings'
+import { CodeEditorShortcuts } from './CodeEditorShortcuts'
+import CodeEditorNavbar from './CodeEditorNavbar/CodeEditorNavbar'
+import { TestCase } from './CodeEditorOutput/TestCase'
+
 import { DropdownButton, Dropdown, Row, Col, Tabs, Tab, Nav, Button } from 'react-bootstrap'
 
 import './CodeMirror.css'
@@ -93,6 +95,7 @@ class CodeEditorDesktop extends Component {
                 userOutput: res.data.userOutput,
                 expectedOutput: res.data.solutionOutput,
             })
+            console.log(this.state)
         })
     }
     renderLeftPage() {
@@ -117,44 +120,61 @@ class CodeEditorDesktop extends Component {
     }
 
     renderTestCases() {
+        console.log(this.state)
         return (
-            <Tabs defaultActiveKey="output" id="uncontrolled-tab-example">
-                <Tab eventKey="output" title="Test Case">
-                    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                        <Row>
-                            <Col sm={3}>
-                                <Nav variant="pills" className="flex-column">
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="first">Test Case 1</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="second">Test Case 2</Nav.Link>
-                                    </Nav.Item>
-                                </Nav>
-                            </Col>
-                            <Col sm={9}>
-                                <Tab.Content>
-                                    <Tab.Pane eventKey="first">
-                                        <p>{this.state.verdict}</p>
-                                        <p>Input: {this.state.inputTestCase}</p>
-                                        <p>Output: {this.state.userOutput}</p>
-                                        <p>Expected Output: {this.state.expectedOutput}</p>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="second">
-                                        <p>{this.state.verdict}</p>
-                                        <p>Input: {this.state.inputTestCase}</p>
-                                        <p>Output: {this.state.userOutput}</p>
-                                        <p>Expected Output: {this.state.expectedOutput}</p>
-                                    </Tab.Pane>
-                                </Tab.Content>
-                            </Col>
-                        </Row>
-                    </Tab.Container>
-                </Tab>
-                <Tab eventKey="customInput" title="Custom Input">
-                    this is where users can customize test case / input
-                </Tab>
-            </Tabs>
+            // <Tabs
+            //     defaultActiveKey="output"
+            //     id="uncontrolled-tab-example"
+            //     className=""
+            //     style={{ backgroundColor: 'red' }}
+            // >
+            //     <Tab eventKey="output" title="Test Case" style={{ backgroundColor: 'orange' }}>
+            //         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+            //             <Row>
+            //                 <Col sm={3}>
+            //                     <Nav variant="pills" className="flex-column">
+            //                         <Nav.Item>
+            //                             <Nav.Link eventKey="first" className="">
+            //                                 Test Case 1
+            //                             </Nav.Link>
+            //                         </Nav.Item>
+            //                         <Nav.Item>
+            //                             <Nav.Link eventKey="second" className="">
+            //                                 Test Case 2
+            //                             </Nav.Link>
+            //                         </Nav.Item>
+            //                     </Nav>
+            //                 </Col>
+            //                 <Col sm={9}>
+            //                     <Tab.Content>
+            //                         <Tab.Pane eventKey="first">
+            //                             <p>{this.state.verdict}</p>
+            //                             <p>Input: {this.state.inputTestCase}</p>
+            //                             <p>Output: {this.state.userOutput}</p>
+            //                             <p>Expected Output: {this.state.expectedOutput}</p>
+            //                         </Tab.Pane>
+            //                         <Tab.Pane eventKey="second">
+            //                             <p>{this.state.verdict}</p>
+            //                             <p>Input: {this.state.inputTestCase}</p>
+            //                             <p>Output: {this.state.userOutput}</p>
+            //                             <p>Expected Output: {this.state.expectedOutput}</p>
+            //                         </Tab.Pane>
+            //                     </Tab.Content>
+            //                 </Col>
+            //             </Row>
+            //         </Tab.Container>
+            //     </Tab>
+            //     <Tab eventKey="customInput" title="Custom Input">
+            //         this is where users can customize test case / input
+            //     </Tab>
+            // </Tabs>
+
+            <TestCase
+                verdict={this.state.verdict}
+                inputTestCase={this.state.inputTestCase}
+                userOutput={this.state.userOutput}
+                expectedOutput={this.state.expectedOutput}
+            />
         )
     }
 
@@ -162,13 +182,13 @@ class CodeEditorDesktop extends Component {
         return (
             <ReflexElement flex={0.06} className="footer">
                 <Button
-                    variant="outline-dark"
+                    variant="outline-secondary"
                     type="submit"
                     onClick={this.handleSubmit}
-                    className="position-absolute"
+                    className="position-absolute run-code-btn"
                     style={{ bottom: 0, right: 80 }}
                 >
-                    <PlayArrowIcon />
+                    <PlayArrowIcon className="mr-2" />
                     Run Code
                 </Button>
                 <Button
@@ -191,7 +211,7 @@ class CodeEditorDesktop extends Component {
                     <LanguageDropdown />
                 </Col>
                 <Col className="text-right">
-                    <CodeEditorSettings />
+                    <CodeEditorShortcuts />
                 </Col>
             </Row>
         )
@@ -214,61 +234,73 @@ class CodeEditorDesktop extends Component {
     render() {
         return (
             <div className="viewport-height">
-                <ReflexContainer orientation="vertical">
-                    {this.renderLeftPage()}
-                    <ReflexSplitter {...this.resizeProps} style={{ width: '10px' }} />
+                <ReflexContainer orientation="horizontal">
+                    <ReflexElement flex={0.05} {...this.resizeProps} style={{ overflow: 'hidden' }}>
+                        <CodeEditorNavbar />
+                    </ReflexElement>
+                    <ReflexElement>
+                        <ReflexContainer orientation="vertical">
+                            {this.renderLeftPage()}
 
-                    <ReflexElement {...this.resizeProps}>
-                        <ReflexContainer orientation="horizontal">
-                            <ReflexElement
-                                flex={4}
-                                {...this.resizeProps}
-                                style={{ overflow: 'hidden' }}
-                                // minSize="100"
-                                // maxSize="900"
-                            >
-                                <div
-                                    style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        height: '100%',
-                                    }}
-                                >
-                                    <div></div>
-                                    <div style={{ flex: 'none' }}>{this.renderSettingsArea()}</div>
+                            <ReflexSplitter {...this.resizeProps} style={{ width: '10px' }} />
 
-                                    <div
-                                        style={{
-                                            flex: '1 1 100%',
-                                            position: 'relative',
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            minHeight: '0px',
-                                        }}
+                            <ReflexElement {...this.resizeProps}>
+                                <ReflexContainer orientation="horizontal">
+                                    <ReflexElement
+                                        flex={4}
+                                        {...this.resizeProps}
+                                        style={{ overflow: 'hidden' }}
+                                        // minSize="100"
+                                        // maxSize="900"
                                     >
-                                        <div style={{ height: '100%', flex: '1 1 auto', overflow: 'hidden' }}>
-                                            {this.renderCodemirror()}
-                                            {/* <p> hello </p> */}
+                                        <div
+                                            style={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                height: '100%',
+                                            }}
+                                        >
+                                            <div></div>
+                                            <div style={{ flex: 'none' }}>{this.renderSettingsArea()}</div>
+
+                                            <div
+                                                style={{
+                                                    flex: '1 1 100%',
+                                                    position: 'relative',
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    minHeight: '0px',
+                                                }}
+                                            >
+                                                <div style={{ height: '100%', flex: '1 1 auto', overflow: 'hidden' }}>
+                                                    {this.renderCodemirror()}
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </ReflexElement>
+                                    </ReflexElement>
 
-                            <ReflexSplitter
-                                {...this.resizeProps}
-                                style={{ height: '13px', backgroundColor: '#2A2A3A', borderColor: 'transparent' }}
-                                className="code-splitter"
-                            />
+                                    <ReflexSplitter
+                                        {...this.resizeProps}
+                                        style={{
+                                            height: '13px',
+                                            backgroundColor: '#2A2A3A',
+                                            borderColor: 'transparent',
+                                        }}
+                                        className="code-splitter"
+                                    />
 
-                            <ReflexElement
-                                flex={1}
-                                {...this.resizeProps}
-                                style={{ overflow: 'hidden', backgroundColor: '#404053' }}
-                                minSize="150"
-                                maxSize="800"
-                            >
-                                <div className="test-case-container">{this.renderTestCases()}</div>
-                                {this.renderRunAndSubmissionButtons()}
+                                    <ReflexElement
+                                        flex={1}
+                                        {...this.resizeProps}
+                                        style={{ overflow: 'hidden', backgroundColor: '#404053' }}
+                                        minSize="150"
+                                        maxSize="800"
+                                        className="text-light"
+                                    >
+                                        {this.renderTestCases()}
+                                        {this.renderRunAndSubmissionButtons()}
+                                    </ReflexElement>
+                                </ReflexContainer>
                             </ReflexElement>
                         </ReflexContainer>
                     </ReflexElement>

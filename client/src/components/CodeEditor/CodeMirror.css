@@ -5,9 +5,19 @@
 }
 
 .CodeMirror-gutters {
-    background-color: #2a2a3a !important;
+    background-color: #292936 !important;
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: 1px solid #292936 !important;
 }
 
+.CodeMirror-selected {
+    background-color: #292936 !important;
+}
+
+.CodeMirror-activeline-background {
+    background: #292936 !important;
+}
 .viewport-height {
     /* height: calc(100vh - 70px); */
     height: 100vh;
@@ -22,6 +32,14 @@
     border-bottom: black 1px solid;
 }
 
+.test-case-container {
+    background-color: #404053;
+}
+
 .code-splitter {
     background-color: #2a2a3a;
 }
+/* 
+.run-code-btn {
+    border-radius: 30px;
+} */

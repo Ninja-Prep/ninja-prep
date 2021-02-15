@@ -12,7 +12,7 @@ import { changeTheme, changeMode } from '../../actions'
 import Select from 'react-select'
 import { themeOptions, modeOptions } from './CodeEditorLanguages'
 
-function CodeEditorSettings() {
+function CodeEditorShortcuts() {
     //For Shortcuts Icon
     const [showShortcuts, setShowShortcuts] = useState(false)
     const handleShortcutsClose = () => setShowShortcuts(false)
@@ -27,7 +27,7 @@ function CodeEditorSettings() {
     const dispatch = useDispatch()
     return (
         <div>
-            <IconButton onClick={handleShortcutsShow}>
+            <IconButton onClick={handleShortcutsShow} className="text-secondary">
                 <InfoIcon />
             </IconButton>
 
@@ -78,12 +78,12 @@ function CodeEditorSettings() {
                 </Modal.Body>
             </Modal> */}
 
-            <IconButton>
+            <IconButton className="text-secondary">
                 <FullscreenIcon />
             </IconButton>
         </div>
     )
 }
 
-export default CodeEditorSettings
-export { default as CodeEditorSettings } from './CodeEditorSettings'
+export default CodeEditorShortcuts
+export { default as CodeEditorShortcuts } from './CodeEditorShortcuts'

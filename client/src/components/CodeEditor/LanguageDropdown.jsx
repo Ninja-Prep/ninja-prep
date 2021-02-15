@@ -11,18 +11,13 @@ function LanguageDropdown() {
     const handleSelect = (e) => console.log(e)
 
     return (
-        // <div>
-        //     <div className="row p-0 m-0 position-absolute">
-        //         <div className="col-3 p-0 m-0">
-        //             <Select
-        //                 placeholder="Language"
-        //                 options={modeOptions}
-        //                 onChange={(e) => dispatch(changeMode(e.value))}
-        //             />
-        //         </div>
-        //     </div>
-        // </div>
-        <DropdownButton id="dropdown-basic-button" title={'Language'} onSelect={(e) => dispatch(changeMode(e))}>
+        <DropdownButton
+            variant="outline-light"
+            id="dropdown-basic-button"
+            title={'Language '}
+            onSelect={(e) => dispatch(changeMode(e))}
+            className="ml-2"
+        >
             {modeOptions.map((option) => (
                 <Dropdown.Item eventKey={option.value}> {option.label} </Dropdown.Item>
             ))}

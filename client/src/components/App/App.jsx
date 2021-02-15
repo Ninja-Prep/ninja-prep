@@ -35,7 +35,7 @@ class App extends Component {
                     />
                     <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={FooterLayout} />
                     <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={FooterLayout} />
-                    <Route path="/premium" exact component={PremiumPage} />
+                    <RouteWrapper path="/premium" exact component={PremiumPage} layout={FooterLayout} />
                     <Route path="/challenges" exact component={ChallengesPage} />
                     <Route path="/about" exact component={MeetTheTeamPage} />
                     <Route path="/problem/:id" exact component={ProblemTemplatePage} />
