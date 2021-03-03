@@ -23,16 +23,6 @@
     padding: 1px 10px;
 }
 
-.featured-title {
-    padding-bottom: 1%;
-    display: flex;
-    align-items: center;
-}
-
-.featured-container {
-    padding-bottom: 1%;
-}
-
 .img-square-wrapper {
     background-color: #f5f5f5;
     text-align: center;

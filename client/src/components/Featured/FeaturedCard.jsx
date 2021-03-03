@@ -6,8 +6,8 @@ const FeaturedCard = (props) => {
         <div className="card ">
             <img className="card-img-top" src={props.discoverCardImgPath} alt="Card cap" />
             <div className="card-body">
-                <h2 className="card-title">{props.discoverCardTitle}</h2>
-                <p className="card-text subtitle">{props.discoverCardSubtitle}</p>
+                <p className="card-title lead text-dark">{props.discoverCardTitle}</p>
+                {/* <p className="card-text subtitle">{props.discoverCardSubtitle}</p> */}
             </div>
         </div>
     )
