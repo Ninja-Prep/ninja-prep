@@ -29,7 +29,9 @@ const QuestionListDesktop = (props) => {
             <div className="card flex-row flex-wrap mb-3 col-sm p-0">
                 <div className="img-square-wrapper p-2">{icon}</div>
                 <div className="card-block px-2">
-                    <blockquote className="mb-0 lead card-body flex-fill">{questionTitle}</blockquote>
+                    <blockquote className="mb-0 lead card-body flex-fill problem-text-color">
+                        {questionTitle}
+                    </blockquote>
                 </div>
             </div>
         )

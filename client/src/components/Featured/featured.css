@@ -26,6 +26,7 @@
 }
 
 .card-img-top {
+    max-width: auto;
     height: 250px;
 }
 
