@@ -1,4 +1,4 @@
-.card {
+.problem-text-color {
     color: #1d7fc9;
 }
 
@@ -21,16 +21,6 @@
     background-color: #d9534f;
     border-radius: 20px;
     padding: 1px 10px;
-}
-
-.featured-title {
-    padding-bottom: 1%;
-    display: flex;
-    align-items: center;
-}
-
-.featured-container {
-    padding-bottom: 1%;
 }
 
 .img-square-wrapper {
