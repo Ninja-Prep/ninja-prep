@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { Row, Col, Container } from 'react-bootstrap'
 
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
-// import PendingIcon from '@material-ui/icons/Pending'
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import LockIcon from '@material-ui/icons/Lock'
 
 const QuestionListDesktop = (props) => {
@@ -21,6 +21,8 @@ const QuestionListDesktop = (props) => {
         } else if (status === 'pending') {
             // TODO: change to PendingIcon - currently cannot import
             icon = <CheckCircleIcon className="check-circle-icon" />
+        } else if (status === 'pending') {
+            icon = <MoreHorizIcon className="pending-icon" />
         } else {
             icon = <LockIcon className="lock-icon" />
         }
