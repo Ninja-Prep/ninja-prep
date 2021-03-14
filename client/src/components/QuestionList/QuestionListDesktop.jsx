@@ -2,11 +2,10 @@ import React from 'react'
 import './question-list.css'
 import '../Featured/featured.css'
 import { Link } from 'react-router-dom'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 
-import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
-// import PendingIcon from '@material-ui/icons/Pending'
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import LockIcon from '@material-ui/icons/Lock'
 
 const QuestionListDesktop = (props) => {
@@ -22,6 +21,8 @@ const QuestionListDesktop = (props) => {
         } else if (status === 'pending') {
             // TODO: change to PendingIcon - currently cannot import
             icon = <CheckCircleIcon className="check-circle-icon" />
+        } else if (status === 'pending') {
+            icon = <MoreHorizIcon className="pending-icon" />
         } else {
             icon = <LockIcon className="lock-icon" />
         }
@@ -30,7 +31,9 @@ const QuestionListDesktop = (props) => {
             <div className="card flex-row flex-wrap mb-3 col-sm p-0">
                 <div className="img-square-wrapper p-2">{icon}</div>
                 <div className="card-block px-2">
-                    <blockquote className="mb-0 card-body flex-fill">{questionTitle}</blockquote>
+                    <blockquote className="mb-0 lead card-body flex-fill problem-text-color">
+                        {questionTitle}
+                    </blockquote>
                 </div>
             </div>
         )
@@ -59,40 +62,39 @@ const QuestionListDesktop = (props) => {
 
     const easyButton = (
         <Link className="nav-link" to="#">
-            <p className="easy d-inline">Easy</p>
+            <p className="easy font-weight-bold d-inline px-3 py-1">Easy</p>
         </Link>
     )
 
     const mediumButton = (
         <Link className="nav-link" to="#">
-            <p className="medium d-inline">Medium</p>
+            <p className="medium font-weight-bold d-inline px-3 py-1">Medium</p>
         </Link>
     )
 
     const hardButton = (
         <Link className="nav-link" to="#">
-            <p className="hard d-inline">Hard</p>
+            <p className="hard font-weight-bold d-inline px-3 py-1">Hard</p>
         </Link>
     )
 
     return (
-        <div className="featured-container">
-            <div className="featured-title">
-                <h1 className="bold">All</h1>
-                <PlayArrowIcon className="featured-play" />
+        <div className="mx-5 px-5 pb-5 mb-5">
+            <div className="mx-5">
+                <h2 className="font-weight-bold pb-4">All</h2>
+
+                <Row className="pb-3">
+                    <Col className="my-auto text-center">{easyButton}</Col>
+                    <Col className="my-auto text-center">{mediumButton}</Col>
+                    <Col className="my-auto text-center">{hardButton}</Col>
+                </Row>
+
+                <Row className="">
+                    <Col className="my-auto mr-3 text-center">{makeQuestionCards()}</Col>
+                    <Col className="my-auto mr-3 text-center">{makeQuestionCards()}</Col>
+                    <Col className="my-auto text-center">{makeQuestionCards()}</Col>
+                </Row>
             </div>
-
-            <Row className="pt-3">
-                <Col className="my-auto text-center">{easyButton}</Col>
-                <Col className="my-auto text-center">{mediumButton}</Col>
-                <Col className="my-auto text-center">{hardButton}</Col>
-            </Row>
-
-            <Row className="pt-3">
-                <Col className="my-auto text-center">{makeQuestionCards()}</Col>
-                <Col className="my-auto text-center">{makeQuestionCards()}</Col>
-                <Col className="my-auto text-center">{makeQuestionCards()}</Col>
-            </Row>
         </div>
     )
 }
