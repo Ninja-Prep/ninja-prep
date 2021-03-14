@@ -3,6 +3,13 @@ import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import NavigationBarComponent from '../Partials/NavigationBar/NavigationBarComponent'
 import './layouts.css'
 
+export const HeaderLayout = ({ children }) => (
+    <div className="Header-Padding">
+        {children}
+        <NavigationBarComponent />
+    </div>
+)
+
 export const FooterLayout = ({ children }) => (
     <div>
         {children}

@@ -9,8 +9,9 @@ import LoginPage from '../../views/LoginPage'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ProtectedRoute from '../Routes/ProtectedRoute'
 import RouteWrapper from '../Routes/RouteWrapper'
-import { HeaderandFooterLayout } from '../Routes/Layouts'
+import { HeaderandFooterLayout, HeaderLayout } from '../Routes/Layouts'
 import ProblemTemplatePage from '../../views/ProblemTemplatePage'
+import Error404Component from '../Error404/Error404Component'
 
 class App extends Component {
     render() {
@@ -37,6 +38,7 @@ class App extends Component {
                     <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={HeaderandFooterLayout} />
                     <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={HeaderandFooterLayout} />
                     <Route path="/problem/:id" exact component={ProblemTemplatePage} />
+                    <RouteWrapper exact component={Error404Component} layout={HeaderLayout} />
                 </Switch>
             </Router>
         )
