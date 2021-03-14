@@ -1,6 +1,7 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Row, Col, Modal, Button } from 'react-bootstrap'
 import { FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN, LOGIN_HEADER_TITLE, GET_STARTED } from './LoginStringIds'
+import { LoginModalDesktop } from './LoginModalDesktop'
 
 const SocialMediaButtons = (cssClass) => {
     return (
@@ -27,24 +28,27 @@ const SocialMediaButtons = (cssClass) => {
     )
 }
 
-const LoginDesktop = () => (
-    <div className="py-auto px-5">
-        <Row className="py-5 px-0 mx-auto container h-100">
-            <Col className="pl-0 pr-5 ">
-                <img className="pt-3 pr-5" src="./images/coursePreview.png" alt="Placeholder" />
-                <h2 className="display-5 font-weight-bold pb-2 pt-2 pr-3">{LOGIN_HEADER_TITLE}</h2>
-            </Col>
-            <Col className="px-0 col-5">
-                <div>
-                    <div className="py-5">
-                        <h3 className="font-weight-bold pb-4 mx-auto">{GET_STARTED}</h3>
-                        <div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
+function LoginDesktop() {
+    return (
+        <div className="py-auto px-5">
+            <Row className="py-5 px-0 mx-auto container h-100">
+                <Col className="pl-0 pr-5 ">
+                    <img className="pt-3 pr-5" src="./images/coursePreview.png" alt="Placeholder" />
+                    <h2 className="display-5 font-weight-bold pb-2 pt-2 pr-3">{LOGIN_HEADER_TITLE}</h2>
+                </Col>
+                <Col className="px-0 col-5">
+                    <div>
+                        <div className="py-5">
+                            <h3 className="font-weight-bold pb-4 mx-auto">{GET_STARTED}</h3>
+                            <div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
+                            <LoginModalDesktop show={true} />
+                        </div>
                     </div>
-                </div>
-            </Col>
-        </Row>
-    </div>
-)
+                </Col>
+            </Row>
+        </div>
+    )
+}
 
 export default LoginDesktop
 export { default as LoginDesktop } from './LoginDesktop'
