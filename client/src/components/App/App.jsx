@@ -9,7 +9,7 @@ import LoginPage from '../../views/LoginPage'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ProtectedRoute from '../Routes/ProtectedRoute'
 import RouteWrapper from '../Routes/RouteWrapper'
-import { HeaderandFooterLayout } from '../Routes/Layouts'
+import { HeaderandFooterLayout, FooterLayout } from '../Routes/Layouts'
 import ProblemTemplatePage from '../../views/ProblemTemplatePage'
 
 class App extends Component {
