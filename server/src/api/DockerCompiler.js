@@ -49,31 +49,34 @@ router.post("/execute/:problemName", getProblemDetails, async (req, res) => {
     fileName: checkerFileName,
   };
 
-  // try {
-  //   const submissionResults = await Promise.all(problemBO.testCases.map(async (testCase) => {
-  //     let snippets = [problemBO.snippets.userCode, problemBO.snippets.solutionCode];
+  try {
+    const submissionResults = await Promise.all(
+      problemBO.testCases.map(async (testCase) => {
+        let snippets = [
+          problemBO.snippets.userCode,
+          problemBO.snippets.solutionCode,
+        ];
 
-  //     const [userOutput, solutionOutput] = await Promise.all(snippets.map(async (snippet) => {
-  //       const sandbox = new DockerSandbox(problemBO.dockerDetails);
-  //       return await sandbox.run(snippet, testCase)
-  //     }))
-  //     const checkerSandbox = new DockerSandbox(checkerDockerDetails);
-  //     return await checkerSandbox.runChecker(problemBO.snippets.checkerCode, userOutput.stdout, solutionOutput.stdout, testCase)
-  //   }))
-  //   console.log(submissionResults)
-  //   res.send(submissionResults)
-  // }
-  // catch (error) {
-  //   console.error(error)
-  //   res.status(500).send("Error building container")
-  // }
-
-  res.send({
-    detailedExitCode: "Wrong Answer",
-    userOutput: "0 0 \n",
-    solutionOutput: "6 6 \n",
-    testCase: "12\n6 6 3 0 12",
-  });
+        const [userOutput, solutionOutput] = await Promise.all(
+          snippets.map(async (snippet) => {
+            const sandbox = new DockerSandbox(problemBO.dockerDetails);
+            return await sandbox.run(snippet, testCase);
+          })
+        );
+        const checkerSandbox = new DockerSandbox(checkerDockerDetails);
+        return await checkerSandbox.runChecker(
+          problemBO.snippets.checkerCode,
+          userOutput.stdout,
+          solutionOutput.stdout,
+          testCase
+        );
+      })
+    );
+    res.send(submissionResults);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error building container");
+  }
 });
 
 module.exports = router;
