@@ -1,4 +1,4 @@
-.card {
+.problem-text-color {
     color: #1d7fc9;
 }
 
@@ -23,16 +23,6 @@
     padding: 1px 10px;
 }
 
-.featured-title {
-    padding-bottom: 1%;
-    display: flex;
-    align-items: center;
-}
-
-.featured-container {
-    padding-bottom: 1%;
-}
-
 .img-square-wrapper {
     background-color: #f5f5f5;
     text-align: center;
@@ -45,27 +35,13 @@
     color: #449d44;
 }
 
-.check-circle-icon:hover {
-    color: #0a0a10;
-    cursor: pointer;
-}
 
 .pending-icon {
     margin-top: 7%;
     color: #1d7fc9;
 }
 
-.pending-icon:hover {
-    color: #0a0a10;
-    cursor: pointer;
-}
-
 .lock-icon {
     margin-top: 7%;
     color: #ee953d;
-}
-
-.lock-icon:hover {
-    color: #0a0a10;
-    cursor: pointer;
 }

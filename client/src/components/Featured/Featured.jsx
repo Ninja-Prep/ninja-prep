@@ -1,7 +1,6 @@
 import React from 'react'
 import './featured.css'
 import FeaturedCard from './FeaturedCard'
-import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import { DISCOVER_NEW_SKILLS } from './FeaturedStringIds'
 
 const Featured = (props) => {
@@ -28,15 +27,15 @@ const Featured = (props) => {
         },
     ]
     return (
-        <div className="featured-container">
-            <div className="featured-title">
-                <h1 className="bold">{DISCOVER_NEW_SKILLS}</h1>
-                <PlayArrowIcon className="featured-play" />
-            </div>
-            <div className="card-deck ">
-                {FeaturedList.map((card, i) => (
-                    <FeaturedCard key={i} {...card} />
-                ))}
+        <div className="mx-5 px-5 pb-5 pt-5 mb-5">
+            <div className="mx-5">
+                <h2 className="font-weight-bold pb-4">{DISCOVER_NEW_SKILLS}</h2>
+
+                <div className="card-deck ">
+                    {FeaturedList.map((card, i) => (
+                        <FeaturedCard key={i} {...card} />
+                    ))}
+                </div>
             </div>
         </div>
     )

@@ -1,1 +1,1 @@
-export const DISCOVER_NEW_SKILLS = 'Discover New Skills'
+export const DISCOVER_NEW_SKILLS = 'Featured'
