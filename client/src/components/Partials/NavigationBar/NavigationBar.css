@@ -15,3 +15,12 @@
 .modal-header {
     border-bottom: 0 none;
 }
+
+.profile-picture {
+	height: 30px;
+	width: auto;
+}
+
+.get-premium {
+	color: #EE953D
+}

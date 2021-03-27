@@ -63,6 +63,7 @@ function NavigationBarMobile(props) {
 
     function renderLoginLink() {
         if (props.user) {
+            
             return (
                 <div>
                     <Dropdown menuAlign="right" className="pl-3">
