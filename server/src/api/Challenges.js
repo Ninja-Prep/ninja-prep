@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const Problem = require("../models/Problem");
-const containerMap = require("./DockerSandboxHelper").containerLanguageMap;
 
 router.get("/:problemName", async (req, res) => {
   const language = "java";
