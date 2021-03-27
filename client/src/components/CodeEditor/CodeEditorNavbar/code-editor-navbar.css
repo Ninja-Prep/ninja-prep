@@ -1,0 +1,13 @@
+.problem-navigation-bar {
+    background-color: #2a2a3a;
+}
+
+.get-premium-btn {
+    background-color: transparent;
+    border: 1px solid #ee953d;
+    color: #ee953d;
+}
+
+.get-premium-btn:hover {
+    background-color: #ee953d;
+}
