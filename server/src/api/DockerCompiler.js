@@ -26,13 +26,13 @@ router.post("/execute/:problemName", getProblemDetails, async (req, res) => {
 
   try {
     const { body } = await got.post("http://localhost:8000/judgeSubmission/", {
-      json: true,
-      body: {
+      json: {
         snippets: problemBO.snippets,
         testCases: problemBO.testCases,
         language: 'java'
       }
     })
+    console.log(body)
     res.send(body)
   }
   catch (error) {
