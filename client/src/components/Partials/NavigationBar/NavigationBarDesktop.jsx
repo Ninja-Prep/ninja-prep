@@ -107,7 +107,7 @@ function NavigationBarDesktop(props) {
             )
         } else {
             return (
-                <Nav.Link as={Link} to="/" onClick={handleShortcutsShow} className="pl-3 mr-5">
+                <Nav.Link as={Link} to="/" onClick={handleShortcutsShow} className="pl-3 mr-5 Sign-out-Test">
                     {SIGN_IN_NAVIGATION}
                 </Nav.Link>
             )
