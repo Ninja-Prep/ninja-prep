@@ -1,5 +1,5 @@
 const initialState = {
-    theme: 'eclipse',
+    theme: 'material',
     mode: 'text/x-java',
 }
 
