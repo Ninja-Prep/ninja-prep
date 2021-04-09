@@ -1,33 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ENHANCE_YOUR_SKILLS, HEADER_DESCRIPTION_1, HEADER_DESCRIPTION_2 } from './HeaderStringIds'
-import { FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN, GET_STARTED } from '../Login/LoginStringIds'
+import { GET_STARTED } from '../Login/LoginStringIds'
 import './header.css'
-
-const SocialMediaButtons = (cssClass) => {
-    return (
-        <>
-            <div className="lead">
-                <a className={cssClass + ' red google button'} href="/auth/google">
-                    <i className="google icon"></i>
-                    {GOOGLE_LOGIN}
-                </a>
-            </div>
-            <div className="lead">
-                <a className={cssClass + ' facebook button'} href="/auth/facebook">
-                    <i className="facebook icon"></i>
-                    {FACEBOOK_LOGIN}
-                </a>
-            </div>
-            <div className="lead">
-                <a className={cssClass + '  black button'} href="/auth/github">
-                    <i className="github icon"></i>
-                    {GITHUB_LOGIN}
-                </a>
-            </div>
-        </>
-    )
-}
+import SocialMediaButtons from './SocialMediaButtons'
 
 const HeaderTablet = () => (
     <div className="header-bg text-light">
