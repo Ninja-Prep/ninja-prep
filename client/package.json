@@ -86,14 +86,7 @@
         ],
         "rules": {
             "no-extra-semi": "error",
-            "no-console": "error",
-            "indent": [
-                "warn",
-                4,
-                {
-                    "SwitchCase": 1
-                }
-            ]
+            "no-console": "error"
         }
     },
     "browserslist": {
