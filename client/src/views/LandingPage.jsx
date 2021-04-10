@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderComponent } from '../components/Header/HeaderComponent'
+import HeaderComponent from '../components/Header/HeaderComponent'
 import { JourneyComponent } from '../components/Journey/JourneyComponent'
 import { ShowcaseComponent } from '../components/Showcase/ShowcaseComponent'
 

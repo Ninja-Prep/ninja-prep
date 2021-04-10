@@ -1,5 +1,6 @@
 import React from 'react'
 import { FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN } from '../Login/LoginStringIds'
+
 const SocialMediaButtons = (cssClass: String) => {
     return (
         <div>

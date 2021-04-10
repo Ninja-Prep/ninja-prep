@@ -5,11 +5,11 @@ import { GET_STARTED } from '../Login/LoginStringIds'
 import './header.css'
 import SocialMediaButtons from './SocialMediaButtons'
 
-const HeaderTablet = () => (
-    <div className="header-bg text-light">
-        <Container className="header-container px-5">
+const HeaderDesktop = () => (
+    <div className="header-bg text-light px-5">
+        <Container className="header-container">
             <Row>
-                <Col className="my-auto pr-4 pl-0">
+                <Col className="pr-5 pl-0 mx-5 my-auto">
                     <div>
                         <h3 className="font-weight-bold pb-2">{ENHANCE_YOUR_SKILLS}</h3>
                         <p className="lead">
@@ -17,7 +17,7 @@ const HeaderTablet = () => (
                         </p>
                     </div>
                 </Col>
-                <Col className="pl-3 pr-0">
+                <Col className="pl-5 pr-0 mx-5">
                     <div className="form-bg rounded">
                         <div className="pt-4 pb-2 px-5">
                             <h4 className="font-weight-bold pb-3 mx-auto text-light">{GET_STARTED}</h4>
@@ -30,5 +30,4 @@ const HeaderTablet = () => (
     </div>
 )
 
-export default HeaderTablet
-export { default as HeaderTablet } from './HeaderTablet'
+export default HeaderDesktop

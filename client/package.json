@@ -73,6 +73,10 @@
         "src/**/*.jsx": [
             "prettier --write",
             "eslint --fix"
+        ],
+        "src/**/*.tsx": [
+            "prettier --write",
+            "eslint --fix"
         ]
     },
     "husky": {
