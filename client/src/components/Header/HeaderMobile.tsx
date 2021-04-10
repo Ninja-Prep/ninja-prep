@@ -2,7 +2,7 @@ import React from 'react'
 import { Row } from 'react-bootstrap'
 import './header.css'
 import { START_LEARNING_FOR_FREE } from './HeaderStringIds'
-import SocialMediaButtons from './SocialMediaButtons'
+import SocialMediaButtons from '../Login/SocialMediaButtons'
 
 const HeaderMobile = () => (
     <div className="header-bg-mobile">

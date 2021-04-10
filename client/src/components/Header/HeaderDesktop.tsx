@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { ENHANCE_YOUR_SKILLS, HEADER_DESCRIPTION_1, HEADER_DESCRIPTION_2 } from './HeaderStringIds'
 import { GET_STARTED } from '../Login/LoginStringIds'
 import './header.css'
-import SocialMediaButtons from './SocialMediaButtons'
+import SocialMediaButtons from '../Login/SocialMediaButtons'
 
 const HeaderDesktop = () => (
     <div className="header-bg text-light px-5">

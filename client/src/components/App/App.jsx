@@ -5,7 +5,6 @@ import LandingPage from '../../views/LandingPage'
 import PremiumPage from '../../views/PremiumPage'
 import ChallengesPage from '../../views/ChallengesPage'
 import MeetTheTeamPage from '../../views/MeetTheTeamPage'
-import LoginPage from '../../views/LoginPage'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ProtectedRoute from '../Routes/ProtectedRoute'
 import RouteWrapper from '../Routes/RouteWrapper'
@@ -18,13 +17,6 @@ class App extends Component {
         return (
             <Router>
                 <Switch>
-                    <ProtectedRoute
-                        path="/login"
-                        exact
-                        authComponent={ChallengesPage}
-                        component={LoginPage}
-                        layout={HeaderandFooterLayout}
-                    />
                     <ProtectedRoute
                         path="/"
                         exact

@@ -12,7 +12,7 @@ import {
     CHALLENGES_NAVIGATION,
     MEET_THE_TEAM_NAVIGATION,
     SIGN_IN_NAVIGATION,
-    SIGN_UP_POPUP_BOX,
+    SIGN_UP_POPUP_BOX
 } from './NavigationBarStringIds'
 import { FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN, LOGIN_HEADER_TITLE, GET_STARTED } from '../../Login/LoginStringIds'
 
@@ -62,8 +62,7 @@ function NavigationBarDesktop(props) {
     const handleShortcutsShow = () => setShowShortcuts(true)
 
     function renderLoginLink() {
-        if (props.user) {
-            
+        if (false) {
             return (
                 <div>
                     <Dropdown menuAlign="right" className="pl-3">
