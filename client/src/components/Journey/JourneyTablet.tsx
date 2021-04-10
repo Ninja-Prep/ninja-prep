@@ -2,20 +2,21 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { JOURNEY_TITLE, JOURNEY_DESCRIPTION } from './JourneyStringIds'
 import { JourneyList } from './JourneyList'
+import { JourneyCardProps } from './JourneyCardInterface'
 import './journey.css'
 
-function JourneyMobile() {
-    function JourneyCard(props) {
+function JourneyTablet() {
+    function JourneyCard(props: JourneyCardProps) {
         return (
-            <Col className="py-5">
-                <Row className="mx-auto mb-2">
-                    <img className="mx-auto img-fluid w-50" src={props.imagePath} />
-                </Row>
-                <Row>
-                    <h4 className="font-weight-bold mx-auto pb-2 text-center">{props.title}</h4>
-                    <p className="lead text-secondary text-center">{props.description}</p>
-                </Row>
-            </Col>
+            <Row className="py-5">
+                <Col className="pr-5">
+                    <img className="float-right img-fluid" src={props.imagePath} />
+                </Col>
+                <Col className="my-auto pl-5">
+                    <h4 className="font-weight-bold">{props.title}</h4>
+                    <p className="lead text-secondary">{props.description}</p>
+                </Col>
+            </Row>
         )
     }
     return (
@@ -33,5 +34,4 @@ function JourneyMobile() {
     )
 }
 
-export default JourneyMobile
-export { default as JourneyMobile } from './JourneyMobile'
+export default JourneyTablet

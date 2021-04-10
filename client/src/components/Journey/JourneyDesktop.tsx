@@ -2,18 +2,19 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { JOURNEY_TITLE, JOURNEY_DESCRIPTION } from './JourneyStringIds'
 import { JourneyList } from './JourneyList'
+import { JourneyCardProps } from './JourneyCardInterface'
 import './journey.css'
 
-function JourneyTablet() {
-    function JourneyCard(props) {
+function JourneyDesktop() {
+    function JourneyCard(props: JourneyCardProps) {
         return (
-            <Row className="py-5">
+            <Row className={' py-5 blob-bg ' + props.backgroundImage}>
                 <Col className="pr-5">
                     <img className="float-right img-fluid" src={props.imagePath} />
                 </Col>
                 <Col className="my-auto pl-5">
                     <h4 className="font-weight-bold">{props.title}</h4>
-                    <p className="lead text-secondary">{props.description}</p>
+                    <p className="w-75 lead text-secondary">{props.description}</p>
                 </Col>
             </Row>
         )
@@ -26,12 +27,17 @@ function JourneyTablet() {
                     <p className="lead">{JOURNEY_DESCRIPTION}</p>
                 </div>
                 {JourneyList.map((card, i) => (
-                    <JourneyCard key={i} imagePath={card.imagePath} title={card.title} description={card.description} />
+                    <JourneyCard
+                        key={i}
+                        backgroundImage={card.backgroundImage}
+                        imagePath={card.imagePath}
+                        title={card.title}
+                        description={card.description}
+                    />
                 ))}
             </Container>
         </div>
     )
 }
 
-export default JourneyTablet
-export { default as JourneyTablet } from './JourneyTablet'
+export default JourneyDesktop
