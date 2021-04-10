@@ -1,20 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Error404.css'
+import { TEXT_404, MISSING_PAGE_TEXT, OOPS, REDIRECT_TEXT } from './Error404StringIds'
 
 function Error404Desktop() {
     return (
         <div className="container">
-            <h1 className="display-1 text-center mt-5"> 404 </h1>
-
-            <div className="text-center mt-5"> Oops! </div>
-
-            <div className="text-center"> We can't seem to find the page you are looking for... </div>
-
+            <h1 className="display-1 text-center mt-5"> {TEXT_404} </h1>
+            <div className="text-center mt-5"> {OOPS} </div>
+            <div className="text-center"> {MISSING_PAGE_TEXT} </div>
             <div className="text-center my-5">
                 <button className="btn btn-primary">
                     <Link to="/">
-                        <p className="backHomeButton">Back to home</p>
+                        <p className="backHomeButton">{REDIRECT_TEXT}</p>
                     </Link>
                 </button>
             </div>
@@ -23,4 +21,3 @@ function Error404Desktop() {
 }
 
 export default Error404Desktop
-export { default as Error404Desktop } from './Error404Desktop'

@@ -1,12 +1,16 @@
+/*
+404 Not Found pages when user goes to route that does not exist
+*/
+
 import React from 'react'
-import { Error404Desktop } from './Error404Desktop'
-import { Error404Tablet } from './Error404Tablet'
-import { Error404Mobile } from './Error404Mobile'
+import  Error404Desktop  from './Error404Desktop'
+import  Error404Tablet  from './Error404Tablet'
+import  Error404Mobile  from './Error404Mobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 
 const Error404Component = () => (
     <div>
-        <Desktop>
+        <Desktop >
             <Error404Desktop />
         </Desktop>
         <Tablet>
@@ -19,4 +23,3 @@ const Error404Component = () => (
 )
 
 export default Error404Component
-export { default as Error404Component } from './Error404Component'
