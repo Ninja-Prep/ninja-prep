@@ -1,5 +1,5 @@
 import React from 'react'
-import '../meettheteam.css'
+import '../MeetTheTeam.css'
 import { Container } from 'react-bootstrap'
 import { MEET_THE_TEAM_HEADER_TITLE, MEET_THE_TEAM_HEADER_DESCRIPTION } from './MeetTheTeamHeaderStringIds'
 
@@ -16,4 +16,3 @@ function MeetTheTeamHeaderMobile() {
 }
 
 export default MeetTheTeamHeaderMobile
-export { default as MeetTheTeamHeaderMobile } from './MeetTheTeamHeaderMobile'

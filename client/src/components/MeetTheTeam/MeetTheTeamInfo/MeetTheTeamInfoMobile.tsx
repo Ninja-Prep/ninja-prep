@@ -1,6 +1,7 @@
 import React from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
-import '../meettheteam.css'
+import { Col, Container } from 'react-bootstrap'
+import '../MeetTheTeam.css'
+import { ALEX_NGUYEN_PHOTO, ANGELA_SUN_PHOTO, ANGELA_YEUNG_PHOTO, JOANNE_CHEONG_PHOTO } from './MeetTheTeamImages'
 import {
     ALEX_NGUYEN,
     ALEX_DESCRIPTION,
@@ -9,35 +10,27 @@ import {
     ANGELA_YEUNG,
     ANGELA_Y_DESCRIPTION,
     ANGELA_SUN,
-    ANGELA_S_DESCRIPTION,
+    ANGELA_S_DESCRIPTION
 } from './MeetTheTeamInfoStringIds'
 
-const MeetTheTeamInfoMobile = (props) => {
-    const alexPhoto = <img className="img-fluid rounded" src="/images/ALEX-PHOTO.png" alt="AlexPhoto" />
-
-    const joannePhoto = <img className="img-fluid rounded" src="/images/JOANNE-PHOTO.png" alt="JoannePhoto" />
-
-    const angelaYPhoto = <img className="img-fluid rounded" src="/images/ANGELA-Y-PHOTO.png" alt="AngelaYPhoto" />
-
-    const angelaSPhoto = <img className="img-fluid rounded" src="/images/ANGELA-S-PHOTO.png" alt="AngelaSPhoto" />
-
+const MeetTheTeamInfoMobile = () => {
     return (
         <Container className="px-5 pt-5 pb-3 w-75">
             <div className="px-5">
                 <h1 className="display-5 m-auto py-4 name-text text-center font-weight-bold">{ALEX_NGUYEN}</h1>
-                <Col className="pr-5">{alexPhoto}</Col>
+                <Col className="pr-5">{ALEX_NGUYEN_PHOTO}</Col>
                 <p className="lead pt-3 pb-3 text-secondary">{ALEX_DESCRIPTION}</p>
 
                 <h1 className="display-5 m-auto py-4 name-text text-center font-weight-bold">{JOANNE_CHEONG}</h1>
-                <Col className="pr-5">{joannePhoto}</Col>
+                <Col className="pr-5">{ANGELA_SUN_PHOTO}</Col>
                 <p className="lead pt-3 pb-3 text-secondary">{JOANNE_DESCRIPTION}</p>
 
                 <h1 className="display-5 m-auto py-4 name-text text-center font-weight-bold">{ANGELA_YEUNG}</h1>
-                <Col className="pr-5">{angelaYPhoto}</Col>
+                <Col className="pr-5">{ANGELA_YEUNG_PHOTO}</Col>
                 <p className="lead pt-3 pb-3 text-secondary">{ANGELA_Y_DESCRIPTION}</p>
 
                 <h1 className="display-5 m-auto py-4 name-text text-center font-weight-bold">{ANGELA_SUN}</h1>
-                <Col className="pr-5">{angelaSPhoto}</Col>
+                <Col className="pr-5">{JOANNE_CHEONG_PHOTO}</Col>
                 <p className="lead pt-3 pb-3 text-secondary">{ANGELA_S_DESCRIPTION}</p>
             </div>
         </Container>
@@ -45,4 +38,3 @@ const MeetTheTeamInfoMobile = (props) => {
 }
 
 export default MeetTheTeamInfoMobile
-export { default as MeetTheTeamInfoMobile } from './MeetTheTeamInfoMobile'

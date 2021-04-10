@@ -1,6 +1,10 @@
 import React from 'react'
-import '../meettheteam.css'
-import { MEET_THE_TEAM_HEADER_TITLE, MEET_THE_TEAM_HEADER_DESCRIPTION_1, MEET_THE_TEAM_HEADER_DESCRIPTION_2 } from './MeetTheTeamHeaderStringIds'
+import '../MeetTheTeam.css'
+import {
+    MEET_THE_TEAM_HEADER_TITLE,
+    MEET_THE_TEAM_HEADER_DESCRIPTION_1,
+    MEET_THE_TEAM_HEADER_DESCRIPTION_2
+} from './MeetTheTeamHeaderStringIds'
 
 function MeetTheTeamHeaderDesktop() {
     return (
@@ -14,4 +18,3 @@ function MeetTheTeamHeaderDesktop() {
 }
 
 export default MeetTheTeamHeaderDesktop
-export { default as MeetTheTeamHeaderDesktop } from './MeetTheTeamHeaderDesktop'

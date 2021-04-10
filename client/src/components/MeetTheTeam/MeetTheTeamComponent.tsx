@@ -1,7 +1,7 @@
 import React from 'react'
-import { MeetTheTeamDesktop } from './MeetTheTeamDesktop'
-import { MeetTheTeamTablet } from './MeetTheTeamTablet'
-import { MeetTheTeamMobile } from './MeetTheTeamMobile'
+import MeetTheTeamDesktop from './MeetTheTeamDesktop'
+import MeetTheTeamTablet from './MeetTheTeamTablet'
+import MeetTheTeamMobile from './MeetTheTeamMobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 
 const MeetTheTeamComponent = () => (
@@ -19,4 +19,3 @@ const MeetTheTeamComponent = () => (
 )
 
 export default MeetTheTeamComponent
-export { default as MeetTheTeamComponent } from './MeetTheTeamComponent'

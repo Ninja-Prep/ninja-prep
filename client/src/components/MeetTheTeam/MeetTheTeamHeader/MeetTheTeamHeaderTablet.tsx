@@ -1,7 +1,11 @@
 import React from 'react'
-import '../meettheteam.css'
+import '../MeetTheTeam.css'
 import { Container } from 'react-bootstrap'
-import { MEET_THE_TEAM_HEADER_TITLE, MEET_THE_TEAM_HEADER_DESCRIPTION_1, MEET_THE_TEAM_HEADER_DESCRIPTION_2 } from './MeetTheTeamHeaderStringIds'
+import {
+    MEET_THE_TEAM_HEADER_TITLE,
+    MEET_THE_TEAM_HEADER_DESCRIPTION_1,
+    MEET_THE_TEAM_HEADER_DESCRIPTION_2
+} from './MeetTheTeamHeaderStringIds'
 
 function MeetTheTeamHeaderTablet() {
     return (
@@ -17,4 +21,3 @@ function MeetTheTeamHeaderTablet() {
 }
 
 export default MeetTheTeamHeaderTablet
-export { default as MeetTheTeamHeaderTablet } from './MeetTheTeamHeaderTablet'
