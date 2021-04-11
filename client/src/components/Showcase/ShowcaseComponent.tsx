@@ -1,7 +1,10 @@
+/*
+Call to action text component for customer to get involved in NinjaPrep.io
+*/
 import React from 'react'
-import { ShowcaseDesktop } from './ShowcaseDesktop'
-import { ShowcaseTablet } from './ShowcaseTablet'
-import { ShowcaseMobile } from './ShowcaseMobile'
+import ShowcaseDesktop from './ShowcaseDesktop'
+import ShowcaseTablet from './ShowcaseTablet'
+import ShowcaseMobile from './ShowcaseMobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 
 const ShowcaseComponent = () => (
@@ -19,4 +22,3 @@ const ShowcaseComponent = () => (
 )
 
 export default ShowcaseComponent
-export { default as ShowcaseComponent } from './ShowcaseComponent'

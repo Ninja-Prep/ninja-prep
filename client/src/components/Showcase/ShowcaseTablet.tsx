@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import { SHOWCASE_TITLE, SHOWCASE_DESCRIPTION } from './showcaseStringIds'
-import './showcase.css'
+import { SHOWCASE_TITLE, SHOWCASE_DESCRIPTION } from './ShowcaseStringIds'
+import './Showcase.css'
 
-function ShowcaseDesktop() {
+function ShowcaseTablet() {
     return (
         <div className="py-5 showcase-bg">
             <Container>
@@ -16,5 +16,4 @@ function ShowcaseDesktop() {
     )
 }
 
-export default ShowcaseDesktop
-export { default as ShowcaseDesktop } from './ShowcaseDesktop'
+export default ShowcaseTablet

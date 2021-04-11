@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import { SHOWCASE_TITLE, SHOWCASE_DESCRIPTION } from './showcaseStringIds'
-import './showcase.css'
+import { SHOWCASE_TITLE, SHOWCASE_DESCRIPTION } from './ShowcaseStringIds'
+import './Showcase.css'
 
 function ShowcaseMobile() {
     return (
@@ -17,4 +17,3 @@ function ShowcaseMobile() {
 }
 
 export default ShowcaseMobile
-export { default as ShowcaseMobile } from './ShowcaseMobile'
