@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 
 function FooterBarMobile() {
     return (
-        <Navbar sticky="bottom" className=" px-auto py-3 m-auto border-top d-absolute">
+        <Navbar className=" px-auto py-3 m-auto border-top d-absolute">
             <div className="mx-auto container">
                 <p className="text-secondary m-0">Copyright &copy; 2020 NinjaPrep</p>
                 <p className="text-secondary m-0 px-2">|</p>
@@ -25,4 +25,3 @@ function FooterBarMobile() {
 }
 
 export default FooterBarMobile
-export { default as FooterBarMobile } from './FooterBarMobile'

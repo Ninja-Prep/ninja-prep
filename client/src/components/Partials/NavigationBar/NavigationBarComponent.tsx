@@ -3,14 +3,26 @@ import NavigationBarDesktop from './NavigationBarDesktop'
 import NavigationBarTablet from './NavigationBarTablet'
 import NavigationBarMobile from './NavigationBarMobile'
 import { Desktop, Tablet, Mobile } from '../../MediaQuery/DeviceSizes'
-import axios from 'axios'
+import { default as _ } from 'lodash'
+import axios, { AxiosResponse } from 'axios'
+
+export type AuthUser = {
+    profile_picture: string
+}
+
+export interface NavBarProps {
+    user?: AuthUser
+}
 
 function NavigationBarComponent() {
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState<AuthUser>()
 
     useEffect(() => {
-        axios.get('/auth/getUser').then((authUser) => {
-            setUser(authUser.data)
+        axios.get<AuthUser>('/auth/getUser').then((authUser: AxiosResponse<AuthUser>) => {
+            // _.data returns an empty string instead of undefined if no user
+            if (!_.isEmpty(authUser.data)) {
+                setUser(authUser.data)
+            }
         })
     }, [])
 
@@ -30,4 +42,3 @@ function NavigationBarComponent() {
 }
 
 export default NavigationBarComponent
-export { default as NavigationBarComponent } from './NavigationBarComponent'

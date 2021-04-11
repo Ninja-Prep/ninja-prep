@@ -1,5 +1,7 @@
 export const NINJA_PREP_NAVIGATION = 'NinjaPrep'
 export const GET_PREMIUM_NAVIGATION = 'Get Premium'
+export const REPORT_A_BUG = 'Bug Report'
+export const SETTINGS = 'Settings'
 export const CHALLENGES_NAVIGATION = 'Challenges'
 export const MEET_THE_TEAM_NAVIGATION = 'Meet the Team'
 export const SIGN_IN_NAVIGATION = 'Sign Up'

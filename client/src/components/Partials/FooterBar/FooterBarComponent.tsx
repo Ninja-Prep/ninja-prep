@@ -1,7 +1,7 @@
 import React from 'react'
-import { FooterBarDesktop } from './FooterBarDesktop'
-import { FooterBarTablet } from './FooterBarTablet'
-import { FooterBarMobile } from './FooterBarMobile'
+import FooterBarDesktop from './FooterBarDesktop'
+import FooterBarTablet from './FooterBarTablet'
+import FooterBarMobile from './FooterBarMobile'
 import { Desktop, Tablet, Mobile } from '../../MediaQuery/DeviceSizes'
 
 const FooterBarComponent = () => (
@@ -19,4 +19,3 @@ const FooterBarComponent = () => (
 )
 
 export default FooterBarComponent
-export { default as FooterBarComponent } from './FooterBarComponent'
