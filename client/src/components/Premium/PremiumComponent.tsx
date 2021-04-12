@@ -1,7 +1,7 @@
 import React from 'react'
-import { PremiumDesktop } from './PremiumDesktop'
-import { PremiumTablet } from './PremiumTablet'
-import { PremiumMobile } from './PremiumMobile'
+import PremiumDesktop from './PremiumDesktop'
+import PremiumTablet from './PremiumTablet'
+import PremiumMobile from './PremiumMobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 
 const PremiumComponent = () => (
@@ -19,4 +19,3 @@ const PremiumComponent = () => (
 )
 
 export default PremiumComponent
-export { default as PremiumComponent } from './PremiumComponent'

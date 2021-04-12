@@ -1,5 +1,5 @@
 import React from 'react'
-import '../premium.css'
+import '../Premium.css'
 import { PREMIUM_HEADER_TITLE, PREMIUM_HEADER_DESCRIPTION } from './PremiumHeaderStringIds'
 
 function PremiumHeaderDesktop() {
@@ -13,4 +13,3 @@ function PremiumHeaderDesktop() {
 }
 
 export default PremiumHeaderDesktop
-export { default as PremiumHeaderDesktop } from './PremiumHeaderDesktop'

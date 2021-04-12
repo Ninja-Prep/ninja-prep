@@ -1,5 +1,5 @@
 import React from 'react'
-import '../premium.css'
+import '../Premium.css'
 import { Container } from 'react-bootstrap'
 import { PREMIUM_HEADER_TITLE, PREMIUM_HEADER_DESCRIPTION } from './PremiumHeaderStringIds'
 
@@ -16,4 +16,3 @@ function PremiumHeaderTablet() {
 }
 
 export default PremiumHeaderTablet
-export { default as PremiumHeaderTablet } from './PremiumHeaderTablet'

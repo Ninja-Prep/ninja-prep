@@ -1,5 +1,5 @@
-.premium-header-bg{
-    background-color: #F9FBFD;
+.premium-header-bg {
+    background-color: #f9fbfd;
 }
 .plan-a {
     background-color: #25d0f3;
@@ -18,10 +18,4 @@
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: left 45% top 55%;
-}
-
-.hr-line {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), lightgray, rgba(0, 0, 0, 0));
 }

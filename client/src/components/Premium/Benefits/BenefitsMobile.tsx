@@ -1,18 +1,18 @@
 import React from 'react'
-import '../premium.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import DoneIcon from '@material-ui/icons/Done'
 import { BENEFIT_1, BENEFIT_2, BENEFIT_3, BENEFIT_4, BENEFIT_5, BENEFIT_6 } from './BenefitsStringIds'
+import { BenefitsCardProps } from './BenefitsBaseComponent'
 
 const styles = {
     doneIcon: {
         fontSize: 25,
-        color: '#259AF3',
-    },
+        color: '#259AF3'
+    }
 }
 
 function BenefitsMobile() {
-    function BenefitsCard(props) {
+    function BenefitsCard(props: BenefitsCardProps) {
         return (
             <Row className="pb-5 mb-3">
                 <Col>
@@ -44,4 +44,3 @@ function BenefitsMobile() {
 }
 
 export default BenefitsMobile
-export { default as BenefitsMobile } from './BenefitsMobile'

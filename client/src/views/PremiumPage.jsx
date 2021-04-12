@@ -1,5 +1,5 @@
 import React from 'react'
-import { PremiumComponent } from '../components/Premium/PremiumComponent'
+import PremiumComponent from '../components/Premium/PremiumComponent'
 
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'

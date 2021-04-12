@@ -1,18 +1,18 @@
 import React from 'react'
-import '../premium.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import DoneIcon from '@material-ui/icons/Done'
 import { BENEFIT_1, BENEFIT_2, BENEFIT_3, BENEFIT_4, BENEFIT_5, BENEFIT_6 } from './BenefitsStringIds'
+import { BenefitsCardProps } from './BenefitsBaseComponent'
 
 const styles = {
     doneIcon: {
         fontSize: 30,
-        color: '#259AF3',
-    },
+        color: '#259AF3'
+    }
 }
 
 function BenefitsDesktop() {
-    function BenefitsCard(props) {
+    function BenefitsCard(props: BenefitsCardProps) {
         return (
             <Col>
                 <DoneIcon className="align-middle" style={styles.doneIcon} />
@@ -43,4 +43,3 @@ function BenefitsDesktop() {
 }
 
 export default BenefitsDesktop
-export { default as BenefitsDesktop } from './BenefitsDesktop'
