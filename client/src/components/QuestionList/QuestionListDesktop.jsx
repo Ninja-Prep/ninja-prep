@@ -2,7 +2,7 @@ import React from 'react'
 import './question-list.css'
 import '../Featured/featured.css'
 import { Link } from 'react-router-dom'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
@@ -31,9 +31,7 @@ const QuestionListDesktop = (props) => {
             <div className="card flex-row flex-wrap mb-3 col-sm p-0">
                 <div className="img-square-wrapper p-2">{icon}</div>
                 <div className="card-block px-2">
-                    <blockquote className="mb-0 lead card-body flex-fill problem-text-color">
-                        {questionTitle}
-                    </blockquote>
+                    <blockquote className="mb-0 lead card-body flex-fill problem-text-color">{questionTitle}</blockquote>
                 </div>
             </div>
         )
@@ -47,7 +45,7 @@ const QuestionListDesktop = (props) => {
             ['Question', null],
             ['Question1', 'done'],
             ['Question2', 'pending'],
-            ['Question3', 'premium'],
+            ['Question3', 'premium']
         ]
     }
 

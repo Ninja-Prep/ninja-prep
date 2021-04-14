@@ -42,4 +42,3 @@ const Featured = () => {
 }
 
 export default Featured
-export { default as Featured } from './Featured'

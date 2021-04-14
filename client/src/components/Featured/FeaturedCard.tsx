@@ -1,7 +1,12 @@
 import React from 'react'
 import './featured.css'
 
-const FeaturedCard = (props) => {
+interface Props {
+    discoverCardImgPath: string
+    discoverCardTitle: string
+}
+
+const FeaturedCard = (props: Props) => {
     return (
         <div className="card mr-5">
             <img className="card-img-top img-fluid" src={props.discoverCardImgPath} alt="Card cap" />
@@ -13,4 +18,3 @@ const FeaturedCard = (props) => {
 }
 
 export default FeaturedCard
-export { default as FeaturedCard } from './FeaturedCard'

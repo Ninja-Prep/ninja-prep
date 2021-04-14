@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 import ReflexDemo from '../components/CodeEditor/ReflexDemo'
 
 class ProblemTemplatePage extends Component {
-    constructor(props) {
+    constructor(props: {} | Readonly<{}>) {
         super(props)
-        // console.log(this.props.match.params.id)
     }
 
     render() {

@@ -7,15 +7,14 @@ Pick between two components to render
 */
 
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 import Axios from 'axios'
 import RouteWrapper from './RouteWrapper'
-import { RouteComponentProps } from 'react-router'
+import { RouteComponentProps, RouteProps } from 'react-router'
 
-interface Props {
+interface Props extends RouteProps {
     component: React.ComponentType<RouteComponentProps>
     authComponent: React.ComponentType<RouteComponentProps>
-    layout: React.ComponentType
+    layout: React.ComponentType<{ children: React.ReactChild }>
 }
 
 type State = {

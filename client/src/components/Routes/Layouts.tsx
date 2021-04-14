@@ -6,13 +6,13 @@ Layouts for pageouts to include additional content
 other components
 */
 
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import NavigationBarComponent from '../Partials/NavigationBar/NavigationBarComponent'
 import './Layouts.css'
 
 interface Props {
-    children: React.ReactNode
+    children: React.ReactChild
 }
 
 export const HeaderLayout = ({ children }: Props) => (
@@ -29,7 +29,7 @@ export const FooterLayout = ({ children }: Props) => (
     </div>
 )
 
-export const HeaderandFooterLayout = ({ children }: Props) => (
+export const HeaderandFooterLayout: FunctionComponent<Props> = ({ children }: Props) => (
     <div className="Header-Padding">
         <NavigationBarComponent />
         {children}

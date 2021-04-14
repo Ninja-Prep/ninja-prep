@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import { RouteComponentProps } from 'react-router'
+import { RouteComponentProps, RouteProps } from 'react-router'
 
-interface Props {
+interface Props extends RouteProps {
     component: React.ComponentType<RouteComponentProps>
-    layout: React.ComponentType
+    layout: React.ComponentType<{ children: React.ReactChild }>
 }
 
 function RouteWrapper({ component: Component, layout: Layout, ...rest }: Props) {

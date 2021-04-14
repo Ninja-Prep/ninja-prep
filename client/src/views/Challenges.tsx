@@ -1,11 +1,11 @@
 import React from 'react'
-import { Featured } from '../components/Featured'
-import QuestionListComponent from '../components/QuestionListComponent'
+// import Featured from '../components/Featured'
+import QuestionListComponent from '../components/QuestionList/QuestionListComponent'
 
 function Challenges() {
     return (
         <div className="challenges-container">
-            <Featured />
+            {/* <Featured /> */}
             <QuestionListComponent />
         </div>
     )
