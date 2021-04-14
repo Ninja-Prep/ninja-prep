@@ -1,7 +1,7 @@
 {
     "name": "client",
     "version": "0.1.0",
-    "main": "index.tsx",
+    "main": "index",
     "license": "UNLICENSED",
     "babel": {
         "env": {
@@ -126,6 +126,11 @@
         "collectCoverage": true,
         "setupFiles": [
             "./tst/setupTests.tsx"
+        ],
+        "moduleDirectories": [
+            "node_modules",
+            "src",
+            "tst"
         ],
         "moduleNameMapper": {
             "\\.(css|less|scss)$": "identity-obj-proxy"
