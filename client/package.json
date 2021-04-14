@@ -125,7 +125,7 @@
         "coverageDirectory": "./coverage/",
         "collectCoverage": true,
         "setupFiles": [
-            "./tst/setupTests.tsx"
+            "./tst/setupTests.js"
         ],
         "moduleDirectories": [
             "node_modules",
