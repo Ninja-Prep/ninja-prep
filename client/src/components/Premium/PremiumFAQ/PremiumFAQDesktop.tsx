@@ -9,8 +9,8 @@ function PremiumFAQDesktop() {
             <Container>
                 <hr className="m-auto text-center"></hr>
                 <h2 className="display-5 py-5 m-0 text-center text-secondary">FAQ</h2>
-                {FAQObjectList.questions.map((FAQ) => (
-                    <FAQCard question={FAQ.question} answer={FAQ.answer} />
+                {FAQObjectList.questions.map((FAQ, key) => (
+                    <FAQCard question={FAQ.question} key={key} answer={FAQ.answer} />
                 ))}
             </Container>
         </div>

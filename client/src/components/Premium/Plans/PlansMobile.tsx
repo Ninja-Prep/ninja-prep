@@ -12,8 +12,8 @@ function PlansMobile() {
             <Container>
                 <h2 className="display-5 py-5 m-0 text-center">{OUR_PLANS}</h2>
                 <CardDeck>
-                    {PlanCardsList.plans.map((plan) => (
-                        <Row className="mx-auto container pb-5">
+                    {PlanCardsList.plans.map((plan, key) => (
+                        <Row key={key} className="mx-auto container pb-5">
                             <PlanCard {...plan} stripe={stripe} url={'/payment/create-checkout-session/'} />
                         </Row>
                     ))}

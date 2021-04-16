@@ -1,0 +1,1706 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <QuestionListComponent>
+    <div>
+      <Desktop>
+        <QuestionListDesktop>
+          <div
+            className="mx-5 px-5 pb-5 mb-5"
+          >
+            <div
+              className="mx-5"
+            >
+              <h2
+                className="font-weight-bold pb-4"
+              >
+                All
+              </h2>
+              <Row
+                className="pb-3"
+                noGutters={false}
+              >
+                <div
+                  className="pb-3 row"
+                >
+                  <Col
+                    className="my-auto text-center"
+                  >
+                    <div
+                      className="my-auto text-center col"
+                    >
+                      <Link
+                        className="nav-link"
+                        to="#"
+                      >
+                        <LinkAnchor
+                          className="nav-link"
+                          href="/"
+                          navigate={[Function]}
+                        >
+                          <a
+                            className="nav-link"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            <p
+                              className="easy font-weight-bold d-inline px-3 py-1"
+                            >
+                              Easy
+                            </p>
+                          </a>
+                        </LinkAnchor>
+                      </Link>
+                    </div>
+                  </Col>
+                  <Col
+                    className="my-auto text-center"
+                  >
+                    <div
+                      className="my-auto text-center col"
+                    >
+                      <Link
+                        className="nav-link"
+                        to="#"
+                      >
+                        <LinkAnchor
+                          className="nav-link"
+                          href="/"
+                          navigate={[Function]}
+                        >
+                          <a
+                            className="nav-link"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            <p
+                              className="medium font-weight-bold d-inline px-3 py-1"
+                            >
+                              Medium
+                            </p>
+                          </a>
+                        </LinkAnchor>
+                      </Link>
+                    </div>
+                  </Col>
+                  <Col
+                    className="my-auto text-center"
+                  >
+                    <div
+                      className="my-auto text-center col"
+                    >
+                      <Link
+                        className="nav-link"
+                        to="#"
+                      >
+                        <LinkAnchor
+                          className="nav-link"
+                          href="/"
+                          navigate={[Function]}
+                        >
+                          <a
+                            className="nav-link"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            <p
+                              className="hard font-weight-bold d-inline px-3 py-1"
+                            >
+                              Hard
+                            </p>
+                          </a>
+                        </LinkAnchor>
+                      </Link>
+                    </div>
+                  </Col>
+                </div>
+              </Row>
+              <Row
+                className=""
+                noGutters={false}
+              >
+                <div
+                  className="row"
+                >
+                  <Col
+                    className="my-auto mr-3 text-center"
+                  >
+                    <div
+                      className="my-auto mr-3 text-center col"
+                    >
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        />
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(CheckCircleIcon)
+                            className="check-circle-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="check-circle-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="check-circle-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root check-circle-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(CheckCircleIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question1
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(CheckCircleIcon)
+                            className="check-circle-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="check-circle-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="check-circle-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root check-circle-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(CheckCircleIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question2
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(LockIcon)
+                            className="lock-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="lock-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="lock-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root lock-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(LockIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question3
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col
+                    className="my-auto mr-3 text-center"
+                  >
+                    <div
+                      className="my-auto mr-3 text-center col"
+                    >
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        />
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(CheckCircleIcon)
+                            className="check-circle-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="check-circle-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="check-circle-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root check-circle-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(CheckCircleIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question1
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(CheckCircleIcon)
+                            className="check-circle-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="check-circle-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="check-circle-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root check-circle-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(CheckCircleIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question2
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(LockIcon)
+                            className="lock-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="lock-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="lock-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root lock-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(LockIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question3
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col
+                    className="my-auto text-center"
+                  >
+                    <div
+                      className="my-auto text-center col"
+                    >
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        />
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(CheckCircleIcon)
+                            className="check-circle-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="check-circle-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="check-circle-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root check-circle-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(CheckCircleIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question1
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(CheckCircleIcon)
+                            className="check-circle-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="check-circle-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="check-circle-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root check-circle-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(CheckCircleIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question2
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div
+                        className="card flex-row flex-wrap mb-3 col-sm p-0"
+                      >
+                        <div
+                          className="img-square-wrapper p-2"
+                        >
+                          <ForwardRef(LockIcon)
+                            className="lock-icon"
+                          >
+                            <WithStyles(ForwardRef(SvgIcon))
+                              className="lock-icon"
+                            >
+                              <ForwardRef(SvgIcon)
+                                className="lock-icon"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                    "colorError": "MuiSvgIcon-colorError",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                    "root": "MuiSvgIcon-root",
+                                  }
+                                }
+                              >
+                                <svg
+                                  aria-hidden={true}
+                                  className="MuiSvgIcon-root lock-icon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                                  />
+                                </svg>
+                              </ForwardRef(SvgIcon)>
+                            </WithStyles(ForwardRef(SvgIcon))>
+                          </ForwardRef(LockIcon)>
+                        </div>
+                        <div
+                          className="card-block px-2"
+                        >
+                          <blockquote
+                            className="mb-0 lead card-body flex-fill problem-text-color"
+                          >
+                            Question3
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                </div>
+              </Row>
+            </div>
+          </div>
+        </QuestionListDesktop>
+      </Desktop>
+      <Tablet />
+      <Mobile />
+    </div>
+  </QuestionListComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <QuestionListComponent>
+    <div>
+      <Desktop />
+      <Tablet />
+      <Mobile>
+        <QuestionListMobile>
+          <div
+            className="featured-container"
+          >
+            <div
+              className="featured-title"
+            >
+              <h1
+                className="bold"
+              >
+                All
+              </h1>
+              <ForwardRef(PlayArrowIcon)
+                className="featured-play"
+              >
+                <WithStyles(ForwardRef(SvgIcon))
+                  className="featured-play"
+                >
+                  <ForwardRef(SvgIcon)
+                    className="featured-play"
+                    classes={
+                      Object {
+                        "colorAction": "MuiSvgIcon-colorAction",
+                        "colorDisabled": "MuiSvgIcon-colorDisabled",
+                        "colorError": "MuiSvgIcon-colorError",
+                        "colorPrimary": "MuiSvgIcon-colorPrimary",
+                        "colorSecondary": "MuiSvgIcon-colorSecondary",
+                        "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                        "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                        "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                        "root": "MuiSvgIcon-root",
+                      }
+                    }
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root featured-play"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8 5v14l11-7z"
+                      />
+                    </svg>
+                  </ForwardRef(SvgIcon)>
+                </WithStyles(ForwardRef(SvgIcon))>
+              </ForwardRef(PlayArrowIcon)>
+            </div>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="easy d-inline"
+                          >
+                            Easy
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="medium d-inline"
+                          >
+                            Medium
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="hard d-inline"
+                          >
+                            Hard
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </div>
+        </QuestionListMobile>
+      </Mobile>
+    </div>
+  </QuestionListComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <QuestionListComponent>
+    <div>
+      <Desktop />
+      <Tablet>
+        <QuestionListTablet>
+          <div
+            className="featured-container"
+          >
+            <div
+              className="featured-title"
+            >
+              <h1
+                className="bold"
+              >
+                All
+              </h1>
+              <ForwardRef(PlayArrowIcon)
+                className="featured-play"
+              >
+                <WithStyles(ForwardRef(SvgIcon))
+                  className="featured-play"
+                >
+                  <ForwardRef(SvgIcon)
+                    className="featured-play"
+                    classes={
+                      Object {
+                        "colorAction": "MuiSvgIcon-colorAction",
+                        "colorDisabled": "MuiSvgIcon-colorDisabled",
+                        "colorError": "MuiSvgIcon-colorError",
+                        "colorPrimary": "MuiSvgIcon-colorPrimary",
+                        "colorSecondary": "MuiSvgIcon-colorSecondary",
+                        "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                        "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                        "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                        "root": "MuiSvgIcon-root",
+                      }
+                    }
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root featured-play"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8 5v14l11-7z"
+                      />
+                    </svg>
+                  </ForwardRef(SvgIcon)>
+                </WithStyles(ForwardRef(SvgIcon))>
+              </ForwardRef(PlayArrowIcon)>
+            </div>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="easy d-inline"
+                          >
+                            Easy
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="medium d-inline"
+                          >
+                            Medium
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="hard d-inline"
+                          >
+                            Hard
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </div>
+        </QuestionListTablet>
+      </Tablet>
+      <Mobile />
+    </div>
+  </QuestionListComponent>
+</Router>
+`;

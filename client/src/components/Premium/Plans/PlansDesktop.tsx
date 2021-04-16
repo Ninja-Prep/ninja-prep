@@ -11,8 +11,8 @@ function PlansDesktop() {
             <h2 className="display-5 py-5 m-0 text-center">{OUR_PLANS}</h2>
             <Container>
                 <CardDeck className="m-0">
-                    {PlanCardsList.plans.map((plan) => (
-                        <PlanCard {...plan} stripe={stripe} url={'/payment/create-checkout-session/'} />
+                    {PlanCardsList.plans.map((plan, key) => (
+                        <PlanCard {...plan} stripe={stripe} key={key} url={'/payment/create-checkout-session/'} />
                     ))}
                 </CardDeck>
             </Container>

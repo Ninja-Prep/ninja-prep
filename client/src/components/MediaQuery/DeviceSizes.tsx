@@ -15,7 +15,6 @@ export const Desktop = ({ children }: Props) => {
 
     if (isDesktop) {
         if (children != null) return <Fragment>{children}</Fragment>
-        return <Fragment />
     }
     return <Fragment />
 }
@@ -24,7 +23,6 @@ export const Tablet = ({ children }: Props) => {
     const isTablet: boolean = useMediaQuery({ minWidth: 768, maxWidth: 991 })
     if (isTablet) {
         if (children != null) return <Fragment>{children}</Fragment>
-        return <Fragment />
     }
     return <Fragment />
 }
@@ -33,16 +31,11 @@ export const Mobile = ({ children }: Props) => {
     const isMobile: boolean = useMediaQuery({ maxWidth: 767 })
     if (isMobile) {
         if (children != null) return <Fragment>{children}</Fragment>
-        return <Fragment />
     }
     return <Fragment />
 }
 
 export const Default = ({ children }: Props) => {
-    const isNotMobile: boolean = useMediaQuery({ minWidth: 768 })
-    if (isNotMobile) {
-        if (children != null) return <Fragment>{children}</Fragment>
-        return <Fragment />
-    }
+    if (children != null) return <Fragment>{children}</Fragment>
     return <Fragment />
 }

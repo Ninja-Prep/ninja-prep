@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Error404Component>
+    <div>
+      <Desktop>
+        <Error404Desktop>
+          <div
+            className="container"
+          >
+            <h1
+              className="display-1 text-center mt-5"
+            >
+               
+              404
+               
+            </h1>
+            <div
+              className="text-center mt-5"
+            >
+               
+              Oops!
+               
+            </div>
+            <div
+              className="text-center"
+            >
+               
+              We can't seem to find the page you are looking for...
+               
+            </div>
+            <div
+              className="text-center my-5"
+            >
+              <button
+                className="btn btn-primary"
+              >
+                <Link
+                  to="/"
+                >
+                  <LinkAnchor
+                    href="/"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <p
+                        className="backHomeButton"
+                      >
+                        Back to home
+                      </p>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </Error404Desktop>
+      </Desktop>
+      <Tablet />
+      <Mobile />
+    </div>
+  </Error404Component>
+</Router>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Error404Component>
+    <div>
+      <Desktop />
+      <Tablet />
+      <Mobile>
+        <Error404Mobile>
+          <div
+            className="container"
+          >
+            <h1
+              className="display-1 text-center mt-5"
+            >
+               
+              404
+               
+            </h1>
+            <div
+              className="text-center mt-5"
+            >
+               
+              Oops!
+               
+            </div>
+            <div
+              className="text-center"
+            >
+               
+              We can't seem to find the page you are looking for...
+               
+            </div>
+            <div
+              className="text-center my-5"
+            >
+              <button
+                className="btn btn-primary"
+              >
+                <Link
+                  to="/"
+                >
+                  <LinkAnchor
+                    href="/"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <p
+                        className="backHomeButton"
+                      >
+                        Back to home
+                      </p>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </Error404Mobile>
+      </Mobile>
+    </div>
+  </Error404Component>
+</Router>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Error404Component>
+    <div>
+      <Desktop />
+      <Tablet>
+        <Error404Tablet>
+          <div
+            className="container"
+          >
+            <h1
+              className="display-1 text-center mt-5"
+            >
+               
+              404
+               
+            </h1>
+            <div
+              className="text-center mt-5"
+            >
+               
+              Oops!
+               
+            </div>
+            <div
+              className="text-center"
+            >
+               
+              We can't seem to find the page you are looking for...
+               
+            </div>
+            <div
+              className="text-center my-5"
+            >
+              <button
+                className="btn btn-primary"
+              >
+                <Link
+                  to="/"
+                >
+                  <LinkAnchor
+                    href="/"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <p
+                        className="backHomeButton"
+                      >
+                        Back to home
+                      </p>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </Error404Tablet>
+      </Tablet>
+      <Mobile />
+    </div>
+  </Error404Component>
+</Router>
+`;
