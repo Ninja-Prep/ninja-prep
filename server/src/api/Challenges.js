@@ -1,6 +1,16 @@
 const router = require("express").Router();
 const Problem = require("../models/Problem");
-const containerMap = require("./DockerSandboxHelper").containerLanguageMap;
+const _ = require("lodash");
+const mongoose = require("mongoose")
+
+router.get("/findchallenges", async (req, res) => {
+  const publicChallengesFields = ["problem_name"];
+  const challenges = await mongoose.connection.db.collection("problems").find().toArray()
+  const filteredChallenges = challenges.map(challenge => {
+    return _.pick(challenge, publicChallengesFields)
+  })
+  res.send(filteredChallenges)
+})
 
 router.get("/:problemName", async (req, res) => {
   const language = "java";
