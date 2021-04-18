@@ -1,5 +1,5 @@
 import React from 'react'
-import { QuestionListDesktop } from './QuestionListDesktop'
+import QuestionListDesktop from './QuestionListDesktop'
 import { QuestionListTablet } from './QuestionListTablet'
 import { QuestionListMobile } from './QuestionListMobile'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
@@ -19,4 +19,3 @@ const QuestionListComponent = () => (
 )
 
 export default QuestionListComponent
-export { default as QuestionListComponent } from './QuestionListComponent'

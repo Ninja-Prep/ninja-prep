@@ -1,5 +1,5 @@
 import React from 'react'
-import './question-list.css'
+import './QuestionList.css'
 import '../Featured/featured.css'
 import { Link } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
