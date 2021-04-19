@@ -1,0 +1,7 @@
+.content-tabs-link .nav-tabs .nav-link {
+    color: rgb(167, 161, 161);
+}
+
+.content-tabs-link .nav-tabs .nav-link.active {
+    color: black;
+}

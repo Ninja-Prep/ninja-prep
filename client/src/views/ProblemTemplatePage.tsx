@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
-
-import ReflexDemo from '../components/CodeEditor/ReflexDemo'
+import CodeEditorComponent from '../components/CodeEditor/CodeEditorComponent'
 
 class ProblemTemplatePage extends Component {
-    constructor(props: {} | Readonly<{}>) {
-        super(props)
-    }
-
     render() {
         return (
             <div>
-                <ReflexDemo {...this.props} />
+                <CodeEditorComponent {...this.props} />
             </div>
         )
     }

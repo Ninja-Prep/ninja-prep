@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const Problem = require("../models/Problem");
 const _ = require("lodash");
 const mongoose = require("mongoose")
 
@@ -14,10 +13,19 @@ router.get("/findchallenges", async (req, res) => {
 
 router.get("/:problemPath", async (req, res) => {
   const language = "java";
-  let problem = await Problem.findOne({
+  let problem = await mongoose.connection.db.collection("problems").findOne({
     problem_path: req.params.problemPath,
-  }).populate(`templates.${language}`);
-  res.send(problem.templates.get("java").starter_code_snippet);
+  })
+  if (_.isNull(problem)) {
+    res.send({});
+  }
+  else {
+    const problemTemplateCode = await mongoose.connection.db.collection("problemlanguagetemplates").findOne({ _id: problem.templates[language] })
+    const starterCode = problemTemplateCode.starter_code_snippet
+    const problemName = problem.problem_name
+    res.send({ starterCode, problemName });
+  }
+
 });
 
 module.exports = router;

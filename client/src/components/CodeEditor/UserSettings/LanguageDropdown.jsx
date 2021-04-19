@@ -1,20 +1,17 @@
 import { useDispatch } from 'react-redux'
-import { changeTheme, changeMode } from '../../actions'
-import React, { Fragment } from 'react'
-import Select from 'react-select'
-import { themeOptions, modeOptions } from './CodeEditorLanguages'
+import { changeMode } from '../../../actions'
+import React from 'react'
+import { modeOptions } from './CodeEditorLanguages'
+import { connect } from 'react-redux'
 import { DropdownButton, Dropdown } from 'react-bootstrap'
 
-function LanguageDropdown() {
+function LanguageDropdown(props) {
     const dispatch = useDispatch()
-
-    const handleSelect = (e) => console.log(e)
-
     return (
         <DropdownButton
-            variant="outline-light"
+            variant="outline-dark"
             id="dropdown-basic-button"
-            title={'Language '}
+            title={props.language}
             onSelect={(e) => dispatch(changeMode(e))}
             className="ml-2"
         >
@@ -25,5 +22,8 @@ function LanguageDropdown() {
     )
 }
 
-export default LanguageDropdown
-export { default as LanguageDropdown } from './LanguageDropdown'
+const mapStateToProps = (state) => ({
+    language: state.editor.language
+})
+
+export default connect(mapStateToProps)(LanguageDropdown)

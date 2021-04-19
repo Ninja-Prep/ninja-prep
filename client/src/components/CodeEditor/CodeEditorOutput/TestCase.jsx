@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Tabs, Tab, Nav } from 'react-bootstrap'
-import './test-case-output.css'
+import './TestCase.css'
 
 function TestCase(props) {
     return (
@@ -49,4 +49,3 @@ function TestCase(props) {
 }
 
 export default TestCase
-export { default as TestCase } from './TestCase'
