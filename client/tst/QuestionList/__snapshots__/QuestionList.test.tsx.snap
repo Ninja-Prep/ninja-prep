@@ -35,21 +35,39 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
             >
               All
             </h2>
-            <Row
-              noGutters={false}
+            <FadeIn
+              delay={250}
+              transitionDuration={450}
             >
-              <div
-                className="row"
-              >
-                <Col
-                  className="my-auto text-center"
+              <div>
+                <div
+                  key=".0"
+                  style={
+                    Object {
+                      "opacity": 0,
+                      "transform": "translateY(20px)",
+                      "transition": "opacity 450ms, transform 450ms",
+                    }
+                  }
                 >
-                  <div
-                    className="my-auto text-center col"
-                  />
-                </Col>
+                  <Row
+                    noGutters={false}
+                  >
+                    <div
+                      className="row"
+                    >
+                      <Col
+                        className="my-auto text-center"
+                      >
+                        <div
+                          className="my-auto text-center col"
+                        />
+                      </Col>
+                    </div>
+                  </Row>
+                </div>
               </div>
-            </Row>
+            </FadeIn>
           </div>
         </QuestionListDesktop>
       </Desktop>

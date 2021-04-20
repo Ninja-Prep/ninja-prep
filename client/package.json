@@ -9,12 +9,19 @@
                 "presets": [
                     "@babel/preset-react",
                     "@babel/preset-typescript",
-                    "@babel/preset-env"
+                    [
+                        "@babel/preset-env",
+                        {
+                            "modules": false
+                        }
+                    ]
                 ],
                 "plugins": [
+                    "@babel/plugin-transform-regenerator",
                     "@babel/plugin-transform-modules-commonjs",
                     "@babel/plugin-proposal-class-properties",
-                    "emotion"
+                    "emotion",
+                    "@babel/plugin-transform-runtime"
                 ]
             }
         }
@@ -24,6 +31,7 @@
         "@babel/plugin-proposal-class-properties": "^7.10.4",
         "@babel/plugin-transform-modules-commonjs": "^7.10.4",
         "@babel/plugin-transform-react-jsx": "^7.10.4",
+        "@babel/plugin-transform-runtime": "^7.13.15",
         "@babel/preset-react": "^7.10.4",
         "@material-ui/core": "^4.11.0",
         "@material-ui/icons": "^4.9.1",
