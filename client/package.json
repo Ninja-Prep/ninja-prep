@@ -8,11 +8,13 @@
             "test": {
                 "presets": [
                     "@babel/preset-react",
-                    "@babel/preset-typescript"
+                    "@babel/preset-typescript",
+                    "@babel/preset-env"
                 ],
                 "plugins": [
                     "@babel/plugin-transform-modules-commonjs",
-                    "@babel/plugin-proposal-class-properties"
+                    "@babel/plugin-proposal-class-properties",
+                    "emotion"
                 ]
             }
         }
@@ -54,12 +56,14 @@
         "react-bootstrap": "^1.4.0",
         "react-codemirror2": "^7.2.1",
         "react-dom": "^16.13.1",
+        "react-fade-in": "^2.0.1",
         "react-redux": "^7.2.2",
         "react-reflex": "^3.1.0",
         "react-responsive": "^8.2.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
         "react-select": "^3.1.1",
+        "react-spinners": "^0.10.6",
         "redux": "^4.0.5",
         "redux-form": "^8.3.7",
         "redux-thunk": "^2.3.0",

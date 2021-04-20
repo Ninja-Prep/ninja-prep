@@ -17,17 +17,10 @@ class App extends Component {
         return (
             <Router>
                 <Switch>
-                    <ProtectedRoute
-                        path="/"
-                        exact
-                        authComponent={ChallengesPage}
-                        component={LandingPage}
-                        layout={HeaderandFooterLayout}
-                    />
-                    <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={HeaderandFooterLayout} />
+                    <ProtectedRoute path="/" exact authComponent={ChallengesPage} component={LandingPage} layout={HeaderLayout} />
+                    <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={HeaderLayout} />
                     <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={HeaderandFooterLayout} />
                     <RouteWrapper path="/premium" exact component={PremiumPage} layout={HeaderandFooterLayout} />
-                    <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={HeaderandFooterLayout} />
                     <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={HeaderandFooterLayout} />
                     <Route path="/problem/:id" exact component={ProblemTemplatePage} />
                     <RouteWrapper exact component={Error404Component} layout={HeaderLayout} />

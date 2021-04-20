@@ -5,6 +5,8 @@ import Axios from 'axios'
 import { Row, Col } from 'react-bootstrap'
 import { QuestionStatus } from './QuestionListStringIds'
 import QuestionCard from './QuestionCard'
+import AsyncSpinner from '../Routes/Util/AsyncSpinner'
+import FadeIn from 'react-fade-in'
 
 interface Challenge {
     problem_name: String
@@ -30,19 +32,21 @@ class QuestionListDesktop extends Component {
 
     renderCards() {
         return (
-            <Row>
-                <Col className="my-auto text-center">
-                    {this.state.challenges.map((challenge: Challenge) => {
-                        return (
-                            <QuestionCard
-                                status={QuestionStatus.NONE}
-                                questionTitle={challenge.problem_name}
-                                path={challenge.problem_path}
-                            />
-                        )
-                    })}
-                </Col>
-            </Row>
+            <FadeIn delay={250} transitionDuration={450}>
+                <Row>
+                    <Col className="my-auto text-center">
+                        {this.state.challenges.map((challenge: Challenge) => {
+                            return (
+                                <QuestionCard
+                                    status={QuestionStatus.NONE}
+                                    questionTitle={challenge.problem_name}
+                                    path={challenge.problem_path}
+                                />
+                            )
+                        })}
+                    </Col>
+                </Row>
+            </FadeIn>
         )
     }
     render() {
