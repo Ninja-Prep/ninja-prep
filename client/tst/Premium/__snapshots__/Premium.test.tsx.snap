@@ -1,0 +1,3164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Elements
+    stripe={Promise {}}
+  >
+    <PremiumComponent>
+      <div>
+        <Desktop>
+          <PremiumDesktop>
+            <div
+              className="circles-bg"
+            >
+              <PremiumHeaderDesktop>
+                <div
+                  className="py-5 text-center premium-header-bg"
+                >
+                  <img
+                    alt="logo"
+                    className="w-auto img-fluid pb-5 pt-5"
+                    src="/images/NinjaPrep-Logo.png"
+                  />
+                  <h3
+                    className="display-5 pb-2"
+                  >
+                    Learn, practice, and apply in-demand skills with a NinjaPrep subscription.
+                  </h3>
+                  <p
+                    className="text-secondary lead m-auto d-block pb-5"
+                  >
+                    Access to guided and convenient features, all in one platform.
+                  </p>
+                </div>
+              </PremiumHeaderDesktop>
+              <PlansDesktop>
+                <div
+                  className="pb-3"
+                >
+                  <h2
+                    className="display-5 py-5 m-0 text-center"
+                  >
+                    Our Plans
+                  </h2>
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <CardDeck
+                        className="m-0"
+                      >
+                        <div
+                          className="m-0 card-deck"
+                        >
+                          <PlanCard
+                            backgroundColor="plan-a"
+                            cost="$35"
+                            description="Access to guided and convenient features, all in one platform."
+                            key="0"
+                            stripe={null}
+                            title="Plan A"
+                            url="/payment/create-checkout-session/"
+                          >
+                            <Card
+                              body={false}
+                            >
+                              <div
+                                className="card"
+                              >
+                                <CardHeader
+                                  className=" text-light py-5 px-5 plan-a"
+                                >
+                                  <div
+                                    className=" text-light py-5 px-5 plan-a card-header"
+                                  >
+                                    <Row
+                                      noGutters={false}
+                                    >
+                                      <div
+                                        className="row"
+                                      >
+                                        <Col
+                                          className="pr-0"
+                                        >
+                                          <div
+                                            className="pr-0 col"
+                                          >
+                                            <h2>
+                                              Plan A
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="pl-0"
+                                        >
+                                          <div
+                                            className="pl-0 col"
+                                          >
+                                            <h2
+                                              className="text-right"
+                                            >
+                                              $35
+                                              <span
+                                                className="lead text-light"
+                                              >
+                                                /mo
+                                              </span>
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </div>
+                                </CardHeader>
+                                <CardBody
+                                  className="px-5 py-4 lead"
+                                >
+                                  <div
+                                    className="px-5 py-4 lead card-body"
+                                  >
+                                    <CardText>
+                                      <p
+                                        className="card-text"
+                                      >
+                                        Access to guided and convenient features, all in one platform.
+                                      </p>
+                                    </CardText>
+                                  </div>
+                                </CardBody>
+                                <div
+                                  className="mx-auto pb-4"
+                                >
+                                  <Button
+                                    active={false}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    variant="outline-secondary"
+                                  >
+                                    <button
+                                      className="btn btn-outline-secondary"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <p
+                                        className="lead"
+                                      >
+                                        Subscribe
+                                      </p>
+                                    </button>
+                                  </Button>
+                                </div>
+                              </div>
+                            </Card>
+                          </PlanCard>
+                          <PlanCard
+                            backgroundColor="plan-b"
+                            cost="$35"
+                            description="Access to guided and convenient features, all in one platform."
+                            key="1"
+                            stripe={null}
+                            title="Plan B"
+                            url="/payment/create-checkout-session/"
+                          >
+                            <Card
+                              body={false}
+                            >
+                              <div
+                                className="card"
+                              >
+                                <CardHeader
+                                  className=" text-light py-5 px-5 plan-b"
+                                >
+                                  <div
+                                    className=" text-light py-5 px-5 plan-b card-header"
+                                  >
+                                    <Row
+                                      noGutters={false}
+                                    >
+                                      <div
+                                        className="row"
+                                      >
+                                        <Col
+                                          className="pr-0"
+                                        >
+                                          <div
+                                            className="pr-0 col"
+                                          >
+                                            <h2>
+                                              Plan B
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="pl-0"
+                                        >
+                                          <div
+                                            className="pl-0 col"
+                                          >
+                                            <h2
+                                              className="text-right"
+                                            >
+                                              $35
+                                              <span
+                                                className="lead text-light"
+                                              >
+                                                /mo
+                                              </span>
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </div>
+                                </CardHeader>
+                                <CardBody
+                                  className="px-5 py-4 lead"
+                                >
+                                  <div
+                                    className="px-5 py-4 lead card-body"
+                                  >
+                                    <CardText>
+                                      <p
+                                        className="card-text"
+                                      >
+                                        Access to guided and convenient features, all in one platform.
+                                      </p>
+                                    </CardText>
+                                  </div>
+                                </CardBody>
+                                <div
+                                  className="mx-auto pb-4"
+                                >
+                                  <Button
+                                    active={false}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    variant="outline-secondary"
+                                  >
+                                    <button
+                                      className="btn btn-outline-secondary"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <p
+                                        className="lead"
+                                      >
+                                        Subscribe
+                                      </p>
+                                    </button>
+                                  </Button>
+                                </div>
+                              </div>
+                            </Card>
+                          </PlanCard>
+                          <PlanCard
+                            backgroundColor="plan-c"
+                            cost="$35"
+                            description="Access to guided and convenient features, all in one platform."
+                            key="2"
+                            stripe={null}
+                            title="Plan C"
+                            url="/payment/create-checkout-session/"
+                          >
+                            <Card
+                              body={false}
+                            >
+                              <div
+                                className="card"
+                              >
+                                <CardHeader
+                                  className=" text-light py-5 px-5 plan-c"
+                                >
+                                  <div
+                                    className=" text-light py-5 px-5 plan-c card-header"
+                                  >
+                                    <Row
+                                      noGutters={false}
+                                    >
+                                      <div
+                                        className="row"
+                                      >
+                                        <Col
+                                          className="pr-0"
+                                        >
+                                          <div
+                                            className="pr-0 col"
+                                          >
+                                            <h2>
+                                              Plan C
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="pl-0"
+                                        >
+                                          <div
+                                            className="pl-0 col"
+                                          >
+                                            <h2
+                                              className="text-right"
+                                            >
+                                              $35
+                                              <span
+                                                className="lead text-light"
+                                              >
+                                                /mo
+                                              </span>
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </div>
+                                </CardHeader>
+                                <CardBody
+                                  className="px-5 py-4 lead"
+                                >
+                                  <div
+                                    className="px-5 py-4 lead card-body"
+                                  >
+                                    <CardText>
+                                      <p
+                                        className="card-text"
+                                      >
+                                        Access to guided and convenient features, all in one platform.
+                                      </p>
+                                    </CardText>
+                                  </div>
+                                </CardBody>
+                                <div
+                                  className="mx-auto pb-4"
+                                >
+                                  <Button
+                                    active={false}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    variant="outline-secondary"
+                                  >
+                                    <button
+                                      className="btn btn-outline-secondary"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <p
+                                        className="lead"
+                                      >
+                                        Subscribe
+                                      </p>
+                                    </button>
+                                  </Button>
+                                </div>
+                              </div>
+                            </Card>
+                          </PlanCard>
+                        </div>
+                      </CardDeck>
+                    </div>
+                  </Container>
+                </div>
+              </PlansDesktop>
+              <BenefitsDesktop>
+                <div>
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <h2
+                        className="display-5 py-5 pl-3 m-0"
+                      >
+                        What's included
+                      </h2>
+                      <Row
+                        className="pb-5 mb-3 px-3"
+                        noGutters={false}
+                      >
+                        <div
+                          className="pb-5 mb-3 px-3 row"
+                        >
+                          <BenefitsCard
+                            description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                            title="Access to Premium Content"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <ForwardRef(DoneIcon)
+                                  className="align-middle"
+                                  style={
+                                    Object {
+                                      "color": "#259AF3",
+                                      "fontSize": 30,
+                                    }
+                                  }
+                                >
+                                  <WithStyles(ForwardRef(SvgIcon))
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 30,
+                                      }
+                                    }
+                                  >
+                                    <ForwardRef(SvgIcon)
+                                      className="align-middle"
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                          "colorError": "MuiSvgIcon-colorError",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                          "root": "MuiSvgIcon-root",
+                                        }
+                                      }
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 30,
+                                        }
+                                      }
+                                    >
+                                      <svg
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root align-middle"
+                                        focusable="false"
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 30,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                        />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef(DoneIcon)>
+                                <p
+                                  className="d-inline lead align-middle pl-1"
+                                >
+                                  Access to Premium Content
+                                </p>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </BenefitsCard>
+                          <BenefitsCard
+                            description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                            title="Premium Articles"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <ForwardRef(DoneIcon)
+                                  className="align-middle"
+                                  style={
+                                    Object {
+                                      "color": "#259AF3",
+                                      "fontSize": 30,
+                                    }
+                                  }
+                                >
+                                  <WithStyles(ForwardRef(SvgIcon))
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 30,
+                                      }
+                                    }
+                                  >
+                                    <ForwardRef(SvgIcon)
+                                      className="align-middle"
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                          "colorError": "MuiSvgIcon-colorError",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                          "root": "MuiSvgIcon-root",
+                                        }
+                                      }
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 30,
+                                        }
+                                      }
+                                    >
+                                      <svg
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root align-middle"
+                                        focusable="false"
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 30,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                        />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef(DoneIcon)>
+                                <p
+                                  className="d-inline lead align-middle pl-1"
+                                >
+                                  Premium Articles
+                                </p>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </BenefitsCard>
+                        </div>
+                      </Row>
+                      <Row
+                        className="pb-5 mb-3 px-3"
+                        noGutters={false}
+                      >
+                        <div
+                          className="pb-5 mb-3 px-3 row"
+                        >
+                          <BenefitsCard
+                            description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                            title="Code Walkthroughs"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <ForwardRef(DoneIcon)
+                                  className="align-middle"
+                                  style={
+                                    Object {
+                                      "color": "#259AF3",
+                                      "fontSize": 30,
+                                    }
+                                  }
+                                >
+                                  <WithStyles(ForwardRef(SvgIcon))
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 30,
+                                      }
+                                    }
+                                  >
+                                    <ForwardRef(SvgIcon)
+                                      className="align-middle"
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                          "colorError": "MuiSvgIcon-colorError",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                          "root": "MuiSvgIcon-root",
+                                        }
+                                      }
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 30,
+                                        }
+                                      }
+                                    >
+                                      <svg
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root align-middle"
+                                        focusable="false"
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 30,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                        />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef(DoneIcon)>
+                                <p
+                                  className="d-inline lead align-middle pl-1"
+                                >
+                                  Code Walkthroughs
+                                </p>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </BenefitsCard>
+                          <BenefitsCard
+                            description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                            title="Crash Course"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <ForwardRef(DoneIcon)
+                                  className="align-middle"
+                                  style={
+                                    Object {
+                                      "color": "#259AF3",
+                                      "fontSize": 30,
+                                    }
+                                  }
+                                >
+                                  <WithStyles(ForwardRef(SvgIcon))
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 30,
+                                      }
+                                    }
+                                  >
+                                    <ForwardRef(SvgIcon)
+                                      className="align-middle"
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                          "colorError": "MuiSvgIcon-colorError",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                          "root": "MuiSvgIcon-root",
+                                        }
+                                      }
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 30,
+                                        }
+                                      }
+                                    >
+                                      <svg
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root align-middle"
+                                        focusable="false"
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 30,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                        />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef(DoneIcon)>
+                                <p
+                                  className="d-inline lead align-middle pl-1"
+                                >
+                                  Crash Course
+                                </p>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </BenefitsCard>
+                        </div>
+                      </Row>
+                      <Row
+                        className="pb-5 mb-3 px-3"
+                        noGutters={false}
+                      >
+                        <div
+                          className="pb-5 mb-3 px-3 row"
+                        >
+                          <BenefitsCard
+                            description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                            title="In-Browser Compiler"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <ForwardRef(DoneIcon)
+                                  className="align-middle"
+                                  style={
+                                    Object {
+                                      "color": "#259AF3",
+                                      "fontSize": 30,
+                                    }
+                                  }
+                                >
+                                  <WithStyles(ForwardRef(SvgIcon))
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 30,
+                                      }
+                                    }
+                                  >
+                                    <ForwardRef(SvgIcon)
+                                      className="align-middle"
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                          "colorError": "MuiSvgIcon-colorError",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                          "root": "MuiSvgIcon-root",
+                                        }
+                                      }
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 30,
+                                        }
+                                      }
+                                    >
+                                      <svg
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root align-middle"
+                                        focusable="false"
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 30,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                        />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef(DoneIcon)>
+                                <p
+                                  className="d-inline lead align-middle pl-1"
+                                >
+                                  In-Browser Compiler
+                                </p>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </BenefitsCard>
+                          <BenefitsCard
+                            description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                            title="Code in 5 languages"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <ForwardRef(DoneIcon)
+                                  className="align-middle"
+                                  style={
+                                    Object {
+                                      "color": "#259AF3",
+                                      "fontSize": 30,
+                                    }
+                                  }
+                                >
+                                  <WithStyles(ForwardRef(SvgIcon))
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 30,
+                                      }
+                                    }
+                                  >
+                                    <ForwardRef(SvgIcon)
+                                      className="align-middle"
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                          "colorError": "MuiSvgIcon-colorError",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                          "root": "MuiSvgIcon-root",
+                                        }
+                                      }
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 30,
+                                        }
+                                      }
+                                    >
+                                      <svg
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root align-middle"
+                                        focusable="false"
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 30,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                        />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef(DoneIcon)>
+                                <p
+                                  className="d-inline lead align-middle pl-1"
+                                >
+                                  Code in 5 languages
+                                </p>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </BenefitsCard>
+                        </div>
+                      </Row>
+                    </div>
+                  </Container>
+                </div>
+              </BenefitsDesktop>
+              <PremiumFAQDesktop>
+                <div
+                  className="pb-5"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <hr
+                        className="m-auto text-center"
+                      />
+                      <h2
+                        className="display-5 py-5 m-0 text-center text-secondary"
+                      >
+                        FAQ
+                      </h2>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="0"
+                        question="What will I get with a premium subscription?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What will I get with a premium subscription?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="1"
+                        question="What if I sign up and want to cancel?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What if I sign up and want to cancel?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="2"
+                        question="What is the return policy?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What is the return policy?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                    </div>
+                  </Container>
+                </div>
+              </PremiumFAQDesktop>
+            </div>
+          </PremiumDesktop>
+        </Desktop>
+        <Tablet />
+        <Mobile />
+      </div>
+    </PremiumComponent>
+  </Elements>
+</Router>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Elements
+    stripe={Promise {}}
+  >
+    <PremiumComponent>
+      <div>
+        <Desktop />
+        <Tablet />
+        <Mobile>
+          <PremiumMobile>
+            <div>
+              <PremiumHeaderMobile>
+                <div
+                  className="py-5 px-3 text-center premium-header-bg"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <img
+                        alt="logo"
+                        className="w-25 img-fluid pb-4 pt-2"
+                        src="/images/NinjaPrep-Logo.png"
+                      />
+                      <h3
+                        className="display-5 pb-2"
+                      >
+                        Learn, practice, and apply in-demand skills with a NinjaPrep subscription.
+                      </h3>
+                      <p
+                        className="text-secondary lead m-auto d-block "
+                      >
+                        Access to guided and convenient features, all in one platform.
+                      </p>
+                    </div>
+                  </Container>
+                </div>
+              </PremiumHeaderMobile>
+              <PlansMobile>
+                <div
+                  className="pb-3 m-0"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <h2
+                        className="display-5 py-5 m-0 text-center"
+                      >
+                        Our Plans
+                      </h2>
+                      <CardDeck>
+                        <div
+                          className="card-deck"
+                        >
+                          <Row
+                            className="mx-auto container pb-5"
+                            key="0"
+                            noGutters={false}
+                          >
+                            <div
+                              className="mx-auto container pb-5 row"
+                            >
+                              <PlanCard
+                                backgroundColor="plan-a"
+                                cost="$35"
+                                description="Access to guided and convenient features, all in one platform."
+                                stripe={null}
+                                title="Plan A"
+                                url="/payment/create-checkout-session/"
+                              >
+                                <Card
+                                  body={false}
+                                >
+                                  <div
+                                    className="card"
+                                  >
+                                    <CardHeader
+                                      className=" text-light py-5 px-5 plan-a"
+                                    >
+                                      <div
+                                        className=" text-light py-5 px-5 plan-a card-header"
+                                      >
+                                        <Row
+                                          noGutters={false}
+                                        >
+                                          <div
+                                            className="row"
+                                          >
+                                            <Col
+                                              className="pr-0"
+                                            >
+                                              <div
+                                                className="pr-0 col"
+                                              >
+                                                <h2>
+                                                  Plan A
+                                                </h2>
+                                              </div>
+                                            </Col>
+                                            <Col
+                                              className="pl-0"
+                                            >
+                                              <div
+                                                className="pl-0 col"
+                                              >
+                                                <h2
+                                                  className="text-right"
+                                                >
+                                                  $35
+                                                  <span
+                                                    className="lead text-light"
+                                                  >
+                                                    /mo
+                                                  </span>
+                                                </h2>
+                                              </div>
+                                            </Col>
+                                          </div>
+                                        </Row>
+                                      </div>
+                                    </CardHeader>
+                                    <CardBody
+                                      className="px-5 py-4 lead"
+                                    >
+                                      <div
+                                        className="px-5 py-4 lead card-body"
+                                      >
+                                        <CardText>
+                                          <p
+                                            className="card-text"
+                                          >
+                                            Access to guided and convenient features, all in one platform.
+                                          </p>
+                                        </CardText>
+                                      </div>
+                                    </CardBody>
+                                    <div
+                                      className="mx-auto pb-4"
+                                    >
+                                      <Button
+                                        active={false}
+                                        disabled={false}
+                                        onClick={[Function]}
+                                        variant="outline-secondary"
+                                      >
+                                        <button
+                                          className="btn btn-outline-secondary"
+                                          disabled={false}
+                                          onClick={[Function]}
+                                          type="button"
+                                        >
+                                          <p
+                                            className="lead"
+                                          >
+                                            Subscribe
+                                          </p>
+                                        </button>
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </Card>
+                              </PlanCard>
+                            </div>
+                          </Row>
+                          <Row
+                            className="mx-auto container pb-5"
+                            key="1"
+                            noGutters={false}
+                          >
+                            <div
+                              className="mx-auto container pb-5 row"
+                            >
+                              <PlanCard
+                                backgroundColor="plan-b"
+                                cost="$35"
+                                description="Access to guided and convenient features, all in one platform."
+                                stripe={null}
+                                title="Plan B"
+                                url="/payment/create-checkout-session/"
+                              >
+                                <Card
+                                  body={false}
+                                >
+                                  <div
+                                    className="card"
+                                  >
+                                    <CardHeader
+                                      className=" text-light py-5 px-5 plan-b"
+                                    >
+                                      <div
+                                        className=" text-light py-5 px-5 plan-b card-header"
+                                      >
+                                        <Row
+                                          noGutters={false}
+                                        >
+                                          <div
+                                            className="row"
+                                          >
+                                            <Col
+                                              className="pr-0"
+                                            >
+                                              <div
+                                                className="pr-0 col"
+                                              >
+                                                <h2>
+                                                  Plan B
+                                                </h2>
+                                              </div>
+                                            </Col>
+                                            <Col
+                                              className="pl-0"
+                                            >
+                                              <div
+                                                className="pl-0 col"
+                                              >
+                                                <h2
+                                                  className="text-right"
+                                                >
+                                                  $35
+                                                  <span
+                                                    className="lead text-light"
+                                                  >
+                                                    /mo
+                                                  </span>
+                                                </h2>
+                                              </div>
+                                            </Col>
+                                          </div>
+                                        </Row>
+                                      </div>
+                                    </CardHeader>
+                                    <CardBody
+                                      className="px-5 py-4 lead"
+                                    >
+                                      <div
+                                        className="px-5 py-4 lead card-body"
+                                      >
+                                        <CardText>
+                                          <p
+                                            className="card-text"
+                                          >
+                                            Access to guided and convenient features, all in one platform.
+                                          </p>
+                                        </CardText>
+                                      </div>
+                                    </CardBody>
+                                    <div
+                                      className="mx-auto pb-4"
+                                    >
+                                      <Button
+                                        active={false}
+                                        disabled={false}
+                                        onClick={[Function]}
+                                        variant="outline-secondary"
+                                      >
+                                        <button
+                                          className="btn btn-outline-secondary"
+                                          disabled={false}
+                                          onClick={[Function]}
+                                          type="button"
+                                        >
+                                          <p
+                                            className="lead"
+                                          >
+                                            Subscribe
+                                          </p>
+                                        </button>
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </Card>
+                              </PlanCard>
+                            </div>
+                          </Row>
+                          <Row
+                            className="mx-auto container pb-5"
+                            key="2"
+                            noGutters={false}
+                          >
+                            <div
+                              className="mx-auto container pb-5 row"
+                            >
+                              <PlanCard
+                                backgroundColor="plan-c"
+                                cost="$35"
+                                description="Access to guided and convenient features, all in one platform."
+                                stripe={null}
+                                title="Plan C"
+                                url="/payment/create-checkout-session/"
+                              >
+                                <Card
+                                  body={false}
+                                >
+                                  <div
+                                    className="card"
+                                  >
+                                    <CardHeader
+                                      className=" text-light py-5 px-5 plan-c"
+                                    >
+                                      <div
+                                        className=" text-light py-5 px-5 plan-c card-header"
+                                      >
+                                        <Row
+                                          noGutters={false}
+                                        >
+                                          <div
+                                            className="row"
+                                          >
+                                            <Col
+                                              className="pr-0"
+                                            >
+                                              <div
+                                                className="pr-0 col"
+                                              >
+                                                <h2>
+                                                  Plan C
+                                                </h2>
+                                              </div>
+                                            </Col>
+                                            <Col
+                                              className="pl-0"
+                                            >
+                                              <div
+                                                className="pl-0 col"
+                                              >
+                                                <h2
+                                                  className="text-right"
+                                                >
+                                                  $35
+                                                  <span
+                                                    className="lead text-light"
+                                                  >
+                                                    /mo
+                                                  </span>
+                                                </h2>
+                                              </div>
+                                            </Col>
+                                          </div>
+                                        </Row>
+                                      </div>
+                                    </CardHeader>
+                                    <CardBody
+                                      className="px-5 py-4 lead"
+                                    >
+                                      <div
+                                        className="px-5 py-4 lead card-body"
+                                      >
+                                        <CardText>
+                                          <p
+                                            className="card-text"
+                                          >
+                                            Access to guided and convenient features, all in one platform.
+                                          </p>
+                                        </CardText>
+                                      </div>
+                                    </CardBody>
+                                    <div
+                                      className="mx-auto pb-4"
+                                    >
+                                      <Button
+                                        active={false}
+                                        disabled={false}
+                                        onClick={[Function]}
+                                        variant="outline-secondary"
+                                      >
+                                        <button
+                                          className="btn btn-outline-secondary"
+                                          disabled={false}
+                                          onClick={[Function]}
+                                          type="button"
+                                        >
+                                          <p
+                                            className="lead"
+                                          >
+                                            Subscribe
+                                          </p>
+                                        </button>
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </Card>
+                              </PlanCard>
+                            </div>
+                          </Row>
+                        </div>
+                      </CardDeck>
+                    </div>
+                  </Container>
+                </div>
+              </PlansMobile>
+              <BenefitsMobile>
+                <div
+                  className="px-3"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <h2
+                        className="display-5 pb-5 "
+                      >
+                        What's included
+                      </h2>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Access to Premium Content"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Access to Premium Content
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Premium Articles"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Premium Articles
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Code Walkthroughs"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Code Walkthroughs
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Crash Course"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Crash Course
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="In-Browser Compiler"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    In-Browser Compiler
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Code in 5 languages"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Code in 5 languages
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                    </div>
+                  </Container>
+                </div>
+              </BenefitsMobile>
+              <PremiumFAQMobile>
+                <div
+                  className="pb-5 px-3"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <hr
+                        className="m-auto text-center"
+                      />
+                      <h2
+                        className="display-5 py-5 m-0 text-center text-secondary"
+                      >
+                        FAQ
+                      </h2>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="0"
+                        question="What will I get with a premium subscription?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What will I get with a premium subscription?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="1"
+                        question="What if I sign up and want to cancel?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What if I sign up and want to cancel?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="2"
+                        question="What is the return policy?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What is the return policy?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                    </div>
+                  </Container>
+                </div>
+              </PremiumFAQMobile>
+            </div>
+          </PremiumMobile>
+        </Mobile>
+      </div>
+    </PremiumComponent>
+  </Elements>
+</Router>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Elements
+    stripe={Promise {}}
+  >
+    <PremiumComponent>
+      <div>
+        <Desktop />
+        <Tablet>
+          <PremiumTablet>
+            <div
+              className="circles-bg"
+            >
+              <PremiumHeaderTablet>
+                <div
+                  className="py-5 text-center premium-header-bg"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <img
+                        alt="logo"
+                        className="img-fluid pb-4 pt-2"
+                        src="/images/NinjaPrep-Logo.png"
+                      />
+                      <h3
+                        className="display-5 pb-2"
+                      >
+                        Learn, practice, and apply in-demand skills with a NinjaPrep subscription.
+                      </h3>
+                      <p
+                        className="text-secondary lead m-auto d-block pb-2"
+                      >
+                        Access to guided and convenient features, all in one platform.
+                      </p>
+                    </div>
+                  </Container>
+                </div>
+              </PremiumHeaderTablet>
+              <PlansTablet>
+                <div
+                  className="pb-3 m-0 mx-5 px-5"
+                >
+                  <h2
+                    className="display-5 py-5 m-0 text-center"
+                  >
+                    Our Plans
+                  </h2>
+                  <CardDeck>
+                    <div
+                      className="card-deck"
+                    >
+                      <Row
+                        className="mx-auto container pb-5"
+                        key="0"
+                        noGutters={false}
+                      >
+                        <div
+                          className="mx-auto container pb-5 row"
+                        >
+                          <PlanCard
+                            backgroundColor="plan-a"
+                            cost="$35"
+                            description="Access to guided and convenient features, all in one platform."
+                            stripe={null}
+                            title="Plan A"
+                            url="/payment/create-checkout-session/"
+                          >
+                            <Card
+                              body={false}
+                            >
+                              <div
+                                className="card"
+                              >
+                                <CardHeader
+                                  className=" text-light py-5 px-5 plan-a"
+                                >
+                                  <div
+                                    className=" text-light py-5 px-5 plan-a card-header"
+                                  >
+                                    <Row
+                                      noGutters={false}
+                                    >
+                                      <div
+                                        className="row"
+                                      >
+                                        <Col
+                                          className="pr-0"
+                                        >
+                                          <div
+                                            className="pr-0 col"
+                                          >
+                                            <h2>
+                                              Plan A
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="pl-0"
+                                        >
+                                          <div
+                                            className="pl-0 col"
+                                          >
+                                            <h2
+                                              className="text-right"
+                                            >
+                                              $35
+                                              <span
+                                                className="lead text-light"
+                                              >
+                                                /mo
+                                              </span>
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </div>
+                                </CardHeader>
+                                <CardBody
+                                  className="px-5 py-4 lead"
+                                >
+                                  <div
+                                    className="px-5 py-4 lead card-body"
+                                  >
+                                    <CardText>
+                                      <p
+                                        className="card-text"
+                                      >
+                                        Access to guided and convenient features, all in one platform.
+                                      </p>
+                                    </CardText>
+                                  </div>
+                                </CardBody>
+                                <div
+                                  className="mx-auto pb-4"
+                                >
+                                  <Button
+                                    active={false}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    variant="outline-secondary"
+                                  >
+                                    <button
+                                      className="btn btn-outline-secondary"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <p
+                                        className="lead"
+                                      >
+                                        Subscribe
+                                      </p>
+                                    </button>
+                                  </Button>
+                                </div>
+                              </div>
+                            </Card>
+                          </PlanCard>
+                        </div>
+                      </Row>
+                      <Row
+                        className="mx-auto container pb-5"
+                        key="1"
+                        noGutters={false}
+                      >
+                        <div
+                          className="mx-auto container pb-5 row"
+                        >
+                          <PlanCard
+                            backgroundColor="plan-b"
+                            cost="$35"
+                            description="Access to guided and convenient features, all in one platform."
+                            stripe={null}
+                            title="Plan B"
+                            url="/payment/create-checkout-session/"
+                          >
+                            <Card
+                              body={false}
+                            >
+                              <div
+                                className="card"
+                              >
+                                <CardHeader
+                                  className=" text-light py-5 px-5 plan-b"
+                                >
+                                  <div
+                                    className=" text-light py-5 px-5 plan-b card-header"
+                                  >
+                                    <Row
+                                      noGutters={false}
+                                    >
+                                      <div
+                                        className="row"
+                                      >
+                                        <Col
+                                          className="pr-0"
+                                        >
+                                          <div
+                                            className="pr-0 col"
+                                          >
+                                            <h2>
+                                              Plan B
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="pl-0"
+                                        >
+                                          <div
+                                            className="pl-0 col"
+                                          >
+                                            <h2
+                                              className="text-right"
+                                            >
+                                              $35
+                                              <span
+                                                className="lead text-light"
+                                              >
+                                                /mo
+                                              </span>
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </div>
+                                </CardHeader>
+                                <CardBody
+                                  className="px-5 py-4 lead"
+                                >
+                                  <div
+                                    className="px-5 py-4 lead card-body"
+                                  >
+                                    <CardText>
+                                      <p
+                                        className="card-text"
+                                      >
+                                        Access to guided and convenient features, all in one platform.
+                                      </p>
+                                    </CardText>
+                                  </div>
+                                </CardBody>
+                                <div
+                                  className="mx-auto pb-4"
+                                >
+                                  <Button
+                                    active={false}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    variant="outline-secondary"
+                                  >
+                                    <button
+                                      className="btn btn-outline-secondary"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <p
+                                        className="lead"
+                                      >
+                                        Subscribe
+                                      </p>
+                                    </button>
+                                  </Button>
+                                </div>
+                              </div>
+                            </Card>
+                          </PlanCard>
+                        </div>
+                      </Row>
+                      <Row
+                        className="mx-auto container pb-5"
+                        key="2"
+                        noGutters={false}
+                      >
+                        <div
+                          className="mx-auto container pb-5 row"
+                        >
+                          <PlanCard
+                            backgroundColor="plan-c"
+                            cost="$35"
+                            description="Access to guided and convenient features, all in one platform."
+                            stripe={null}
+                            title="Plan C"
+                            url="/payment/create-checkout-session/"
+                          >
+                            <Card
+                              body={false}
+                            >
+                              <div
+                                className="card"
+                              >
+                                <CardHeader
+                                  className=" text-light py-5 px-5 plan-c"
+                                >
+                                  <div
+                                    className=" text-light py-5 px-5 plan-c card-header"
+                                  >
+                                    <Row
+                                      noGutters={false}
+                                    >
+                                      <div
+                                        className="row"
+                                      >
+                                        <Col
+                                          className="pr-0"
+                                        >
+                                          <div
+                                            className="pr-0 col"
+                                          >
+                                            <h2>
+                                              Plan C
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="pl-0"
+                                        >
+                                          <div
+                                            className="pl-0 col"
+                                          >
+                                            <h2
+                                              className="text-right"
+                                            >
+                                              $35
+                                              <span
+                                                className="lead text-light"
+                                              >
+                                                /mo
+                                              </span>
+                                            </h2>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </div>
+                                </CardHeader>
+                                <CardBody
+                                  className="px-5 py-4 lead"
+                                >
+                                  <div
+                                    className="px-5 py-4 lead card-body"
+                                  >
+                                    <CardText>
+                                      <p
+                                        className="card-text"
+                                      >
+                                        Access to guided and convenient features, all in one platform.
+                                      </p>
+                                    </CardText>
+                                  </div>
+                                </CardBody>
+                                <div
+                                  className="mx-auto pb-4"
+                                >
+                                  <Button
+                                    active={false}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    variant="outline-secondary"
+                                  >
+                                    <button
+                                      className="btn btn-outline-secondary"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <p
+                                        className="lead"
+                                      >
+                                        Subscribe
+                                      </p>
+                                    </button>
+                                  </Button>
+                                </div>
+                              </div>
+                            </Card>
+                          </PlanCard>
+                        </div>
+                      </Row>
+                    </div>
+                  </CardDeck>
+                </div>
+              </PlansTablet>
+              <BenefitsTablet>
+                <div>
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <h2
+                        className="display-5 pb-5 "
+                      >
+                        What's included
+                      </h2>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Access to Premium Content"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Access to Premium Content
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Premium Articles"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Premium Articles
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Code Walkthroughs"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Code Walkthroughs
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Crash Course"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Crash Course
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="In-Browser Compiler"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    In-Browser Compiler
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                      <BenefitsCard
+                        description="Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences."
+                        title="Code in 5 languages"
+                      >
+                        <Row
+                          className="pb-5 mb-3"
+                          noGutters={false}
+                        >
+                          <div
+                            className="pb-5 mb-3 row"
+                          >
+                            <Col>
+                              <div
+                                className="col"
+                              >
+                                <div
+                                  className="align-middle"
+                                >
+                                  <ForwardRef(DoneIcon)
+                                    className="align-middle"
+                                    style={
+                                      Object {
+                                        "color": "#259AF3",
+                                        "fontSize": 25,
+                                      }
+                                    }
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="align-middle"
+                                      style={
+                                        Object {
+                                          "color": "#259AF3",
+                                          "fontSize": 25,
+                                        }
+                                      }
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="align-middle"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "color": "#259AF3",
+                                            "fontSize": 25,
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root align-middle"
+                                          focusable="false"
+                                          style={
+                                            Object {
+                                              "color": "#259AF3",
+                                              "fontSize": 25,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(DoneIcon)>
+                                  <p
+                                    className="d-inline lead align-middle m-0 pl-1"
+                                  >
+                                    Code in 5 languages
+                                  </p>
+                                </div>
+                                <p
+                                  className="text-secondary lead pt-2"
+                                >
+                                  Access to over 100 challenges that cover in-demand algorithm and data structure concepts. This is placeholder text where you elaborate on the benefit in about 2 to 3 sentences.
+                                </p>
+                              </div>
+                            </Col>
+                          </div>
+                        </Row>
+                      </BenefitsCard>
+                    </div>
+                  </Container>
+                </div>
+              </BenefitsTablet>
+              <PremiumFAQTablet>
+                <div
+                  className="pb-5"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <hr
+                        className="m-auto text-center"
+                      />
+                      <h2
+                        className="display-5 py-5 m-0 text-center text-secondary"
+                      >
+                        FAQ
+                      </h2>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="0"
+                        question="What will I get with a premium subscription?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What will I get with a premium subscription?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="1"
+                        question="What if I sign up and want to cancel?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What if I sign up and want to cancel?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                      <FAQCard
+                        answer="- This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences."
+                        key="2"
+                        question="What is the return policy?"
+                      >
+                        <div
+                          className="border-top py-5"
+                        >
+                          <p
+                            className="lead text-secondary"
+                          >
+                            What is the return policy?
+                          </p>
+                          <p
+                            className="text-muted font-italic"
+                          >
+                            - This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences. This is the answer to the first question that will preferably be between 2-3 sentences.
+                          </p>
+                        </div>
+                      </FAQCard>
+                    </div>
+                  </Container>
+                </div>
+              </PremiumFAQTablet>
+            </div>
+          </PremiumTablet>
+        </Tablet>
+        <Mobile />
+      </div>
+    </PremiumComponent>
+  </Elements>
+</Router>
+`;

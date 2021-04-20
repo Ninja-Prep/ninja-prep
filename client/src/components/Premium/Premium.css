@@ -1,0 +1,21 @@
+.premium-header-bg {
+    background-color: #f9fbfd;
+}
+.plan-a {
+    background-color: #25d0f3;
+}
+
+.plan-b {
+    background-color: #259af3;
+}
+
+.plan-c {
+    background-color: #2a2a3a;
+}
+
+.circles-bg {
+    background-image: url('/images/Circles-Background.png');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: left 45% top 55%;
+}

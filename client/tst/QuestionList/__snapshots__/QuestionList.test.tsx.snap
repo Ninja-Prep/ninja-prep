@@ -1,0 +1,1087 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <QuestionListComponent>
+    <div>
+      <Desktop>
+        <QuestionListDesktop>
+          <div
+            className="mx-5 px-5 pb-5 mb-5"
+          >
+            <h2
+              className="font-weight-bold pb-4"
+            >
+              All
+            </h2>
+            <FadeIn
+              delay={250}
+              transitionDuration={450}
+            >
+              <div>
+                <div
+                  key=".0"
+                  style={
+                    Object {
+                      "opacity": 0,
+                      "transform": "translateY(20px)",
+                      "transition": "opacity 450ms, transform 450ms",
+                    }
+                  }
+                >
+                  <Row
+                    noGutters={false}
+                  >
+                    <div
+                      className="row"
+                    >
+                      <Col
+                        className="my-auto text-center"
+                      >
+                        <div
+                          className="my-auto text-center col"
+                        />
+                      </Col>
+                    </div>
+                  </Row>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </QuestionListDesktop>
+      </Desktop>
+      <Tablet />
+      <Mobile />
+    </div>
+  </QuestionListComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <QuestionListComponent>
+    <div>
+      <Desktop />
+      <Tablet />
+      <Mobile>
+        <QuestionListMobile>
+          <div
+            className="featured-container"
+          >
+            <div
+              className="featured-title"
+            >
+              <h1
+                className="bold"
+              >
+                All
+              </h1>
+              <ForwardRef(PlayArrowIcon)
+                className="featured-play"
+              >
+                <WithStyles(ForwardRef(SvgIcon))
+                  className="featured-play"
+                >
+                  <ForwardRef(SvgIcon)
+                    className="featured-play"
+                    classes={
+                      Object {
+                        "colorAction": "MuiSvgIcon-colorAction",
+                        "colorDisabled": "MuiSvgIcon-colorDisabled",
+                        "colorError": "MuiSvgIcon-colorError",
+                        "colorPrimary": "MuiSvgIcon-colorPrimary",
+                        "colorSecondary": "MuiSvgIcon-colorSecondary",
+                        "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                        "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                        "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                        "root": "MuiSvgIcon-root",
+                      }
+                    }
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root featured-play"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8 5v14l11-7z"
+                      />
+                    </svg>
+                  </ForwardRef(SvgIcon)>
+                </WithStyles(ForwardRef(SvgIcon))>
+              </ForwardRef(PlayArrowIcon)>
+            </div>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="easy d-inline"
+                          >
+                            Easy
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="medium d-inline"
+                          >
+                            Medium
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="hard d-inline"
+                          >
+                            Hard
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </div>
+        </QuestionListMobile>
+      </Mobile>
+    </div>
+  </QuestionListComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <QuestionListComponent>
+    <div>
+      <Desktop />
+      <Tablet>
+        <QuestionListTablet>
+          <div
+            className="featured-container"
+          >
+            <div
+              className="featured-title"
+            >
+              <h1
+                className="bold"
+              >
+                All
+              </h1>
+              <ForwardRef(PlayArrowIcon)
+                className="featured-play"
+              >
+                <WithStyles(ForwardRef(SvgIcon))
+                  className="featured-play"
+                >
+                  <ForwardRef(SvgIcon)
+                    className="featured-play"
+                    classes={
+                      Object {
+                        "colorAction": "MuiSvgIcon-colorAction",
+                        "colorDisabled": "MuiSvgIcon-colorDisabled",
+                        "colorError": "MuiSvgIcon-colorError",
+                        "colorPrimary": "MuiSvgIcon-colorPrimary",
+                        "colorSecondary": "MuiSvgIcon-colorSecondary",
+                        "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                        "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                        "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                        "root": "MuiSvgIcon-root",
+                      }
+                    }
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root featured-play"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8 5v14l11-7z"
+                      />
+                    </svg>
+                  </ForwardRef(SvgIcon)>
+                </WithStyles(ForwardRef(SvgIcon))>
+              </ForwardRef(PlayArrowIcon)>
+            </div>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="easy d-inline"
+                          >
+                            Easy
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="medium d-inline"
+                          >
+                            Medium
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <Link
+                      className="nav-link"
+                      to="#"
+                    >
+                      <LinkAnchor
+                        className="nav-link"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="nav-link"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <p
+                            className="hard d-inline"
+                          >
+                            Hard
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+            <Row
+              className="pt-3"
+              noGutters={false}
+            >
+              <div
+                className="pt-3 row"
+              >
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  className="my-auto text-center"
+                >
+                  <div
+                    className="my-auto text-center col"
+                  >
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                    <div
+                      className="card text-primary mb-3 col-sm p-3 mx-2"
+                    >
+                      <blockquote
+                        className="blockquote mb-0 card-body flex-fill"
+                      >
+                        <p>
+                          Question
+                        </p>
+                        <footer
+                          className="blockquote-footer"
+                        >
+                          <small
+                            className="text-muted"
+                          >
+                            <cite
+                              title="Stacks"
+                            >
+                              Stacks 101
+                            </cite>
+                          </small>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </div>
+        </QuestionListTablet>
+      </Tablet>
+      <Mobile />
+    </div>
+  </QuestionListComponent>
+</Router>
+`;

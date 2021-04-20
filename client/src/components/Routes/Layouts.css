@@ -1,0 +1,7 @@
+/* 
+The header is 70 px
+Content below needs to be shifted the height of the header
+ */
+.Header-Padding {
+    padding-top: 70px;
+}

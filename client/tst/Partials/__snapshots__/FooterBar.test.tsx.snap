@@ -1,0 +1,1412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <FooterBarComponent>
+    <div>
+      <Desktop>
+        <FooterBarDesktop>
+          <Navbar
+            className="px-5 border-top"
+            collapseOnSelect={false}
+            expand={true}
+            variant="light"
+          >
+            <nav
+              className="px-5 border-top navbar navbar-expand navbar-light"
+            >
+              <Row
+                className="py-5 mx-auto container"
+                noGutters={false}
+              >
+                <div
+                  className="py-5 mx-auto container row"
+                >
+                  <Col
+                    className="my-auto p-0"
+                  >
+                    <div
+                      className="my-auto p-0 col"
+                    >
+                      <img
+                        alt="logo"
+                        height="70"
+                        src="./images/NinjaPrep-Logo.png"
+                        width="70"
+                      />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div
+                      className="col"
+                    >
+                      <p
+                        className="font-weight-bold text-secondary"
+                      >
+                        NINJAPREP
+                      </p>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/about"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/about"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/about"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/about"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/about"
+                                onClick={[Function]}
+                              >
+                                About Us
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/premium"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/premium"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/premium"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/premium"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/premium"
+                                onClick={[Function]}
+                              >
+                                Get Premium
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div
+                      className="col"
+                    >
+                      <p
+                        className="font-weight-bold text-secondary"
+                      >
+                        COURSES
+                      </p>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/about"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/about"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/about"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/about"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/about"
+                                onClick={[Function]}
+                              >
+                                Stacks
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/premium"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/premium"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/premium"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/premium"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/premium"
+                                onClick={[Function]}
+                              >
+                                Queues
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div
+                      className="col"
+                    >
+                      <p
+                        className="font-weight-bold text-secondary"
+                      >
+                        RESOURCES
+                      </p>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/about"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/about"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/about"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/about"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/about"
+                                onClick={[Function]}
+                              >
+                                Articles
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/premium"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/premium"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/premium"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/premium"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/premium"
+                                onClick={[Function]}
+                              >
+                                Challenges
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                    </div>
+                  </Col>
+                </div>
+              </Row>
+            </nav>
+          </Navbar>
+        </FooterBarDesktop>
+      </Desktop>
+      <Tablet />
+      <Mobile />
+    </div>
+  </FooterBarComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <FooterBarComponent>
+    <div>
+      <Desktop />
+      <Tablet />
+      <Mobile>
+        <FooterBarMobile>
+          <Navbar
+            className=" px-auto py-3 m-auto border-top d-absolute"
+            collapseOnSelect={false}
+            expand={true}
+            variant="light"
+          >
+            <nav
+              className=" px-auto py-3 m-auto border-top d-absolute navbar navbar-expand navbar-light"
+            >
+              <div
+                className="mx-auto container"
+              >
+                <p
+                  className="text-secondary m-0"
+                >
+                  Copyright © 2020 NinjaPrep
+                </p>
+                <p
+                  className="text-secondary m-0 px-2"
+                >
+                  |
+                </p>
+                <NavLink
+                  as={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "Link",
+                      "propTypes": Object {
+                        "innerRef": [Function],
+                        "onClick": [Function],
+                        "replace": [Function],
+                        "target": [Function],
+                        "to": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
+                  className="p-0 text-dark"
+                  disabled={false}
+                  to="/about"
+                >
+                  <ForwardRef
+                    as={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "displayName": "Link",
+                        "propTypes": Object {
+                          "innerRef": [Function],
+                          "onClick": [Function],
+                          "replace": [Function],
+                          "target": [Function],
+                          "to": [Function],
+                        },
+                        "render": [Function],
+                      }
+                    }
+                    className="p-0 text-dark nav-link"
+                    disabled={false}
+                    to="/about"
+                  >
+                    <Link
+                      className="p-0 text-dark nav-link"
+                      disabled={false}
+                      onClick={[Function]}
+                      to="/about"
+                    >
+                      <LinkAnchor
+                        className="p-0 text-dark nav-link"
+                        disabled={false}
+                        href="/about"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="p-0 text-dark nav-link"
+                          disabled={false}
+                          href="/about"
+                          onClick={[Function]}
+                        >
+                          About
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </ForwardRef>
+                </NavLink>
+                <p
+                  className="text-secondary m-0 px-2"
+                >
+                  |
+                </p>
+                <NavLink
+                  as={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "Link",
+                      "propTypes": Object {
+                        "innerRef": [Function],
+                        "onClick": [Function],
+                        "replace": [Function],
+                        "target": [Function],
+                        "to": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
+                  className="p-0 text-dark"
+                  disabled={false}
+                  to="/premium"
+                >
+                  <ForwardRef
+                    as={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "displayName": "Link",
+                        "propTypes": Object {
+                          "innerRef": [Function],
+                          "onClick": [Function],
+                          "replace": [Function],
+                          "target": [Function],
+                          "to": [Function],
+                        },
+                        "render": [Function],
+                      }
+                    }
+                    className="p-0 text-dark nav-link"
+                    disabled={false}
+                    to="/premium"
+                  >
+                    <Link
+                      className="p-0 text-dark nav-link"
+                      disabled={false}
+                      onClick={[Function]}
+                      to="/premium"
+                    >
+                      <LinkAnchor
+                        className="p-0 text-dark nav-link"
+                        disabled={false}
+                        href="/premium"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="p-0 text-dark nav-link"
+                          disabled={false}
+                          href="/premium"
+                          onClick={[Function]}
+                        >
+                          Premium
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </ForwardRef>
+                </NavLink>
+                <p
+                  className="text-secondary m-0 px-2"
+                >
+                  |
+                </p>
+                <NavLink
+                  as={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "Link",
+                      "propTypes": Object {
+                        "innerRef": [Function],
+                        "onClick": [Function],
+                        "replace": [Function],
+                        "target": [Function],
+                        "to": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
+                  className="p-0 text-dark"
+                  disabled={false}
+                  to="/roadmap"
+                >
+                  <ForwardRef
+                    as={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "displayName": "Link",
+                        "propTypes": Object {
+                          "innerRef": [Function],
+                          "onClick": [Function],
+                          "replace": [Function],
+                          "target": [Function],
+                          "to": [Function],
+                        },
+                        "render": [Function],
+                      }
+                    }
+                    className="p-0 text-dark nav-link"
+                    disabled={false}
+                    to="/roadmap"
+                  >
+                    <Link
+                      className="p-0 text-dark nav-link"
+                      disabled={false}
+                      onClick={[Function]}
+                      to="/roadmap"
+                    >
+                      <LinkAnchor
+                        className="p-0 text-dark nav-link"
+                        disabled={false}
+                        href="/roadmap"
+                        navigate={[Function]}
+                        onClick={[Function]}
+                      >
+                        <a
+                          className="p-0 text-dark nav-link"
+                          disabled={false}
+                          href="/roadmap"
+                          onClick={[Function]}
+                        >
+                          Roadmap
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </ForwardRef>
+                </NavLink>
+              </div>
+            </nav>
+          </Navbar>
+        </FooterBarMobile>
+      </Mobile>
+    </div>
+  </FooterBarComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <FooterBarComponent>
+    <div>
+      <Desktop />
+      <Tablet>
+        <FooterBarTablet>
+          <Navbar
+            className="px-5 border-top"
+            collapseOnSelect={false}
+            expand={true}
+            variant="light"
+          >
+            <nav
+              className="px-5 border-top navbar navbar-expand navbar-light"
+            >
+              <Row
+                className="py-5 mx-auto container"
+                noGutters={false}
+              >
+                <div
+                  className="py-5 mx-auto container row"
+                >
+                  <Col
+                    className="my-auto p-0"
+                  >
+                    <div
+                      className="my-auto p-0 col"
+                    >
+                      <img
+                        alt="logo"
+                        height="70"
+                        src="./images/NinjaPrep-Logo.png"
+                        width="70"
+                      />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div
+                      className="col"
+                    >
+                      <p
+                        className="font-weight-bold text-secondary"
+                      >
+                        NINJAPREP
+                      </p>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/about"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/about"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/about"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/about"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/about"
+                                onClick={[Function]}
+                              >
+                                About Us
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/premium"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/premium"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/premium"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/premium"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/premium"
+                                onClick={[Function]}
+                              >
+                                Get Premium
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/roadmap"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/roadmap"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/roadmap"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/roadmap"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/roadmap"
+                                onClick={[Function]}
+                              >
+                                Roadmap
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div
+                      className="col"
+                    >
+                      <p
+                        className="font-weight-bold text-secondary"
+                      >
+                        COURSES
+                      </p>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/about"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/about"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/about"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/about"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/about"
+                                onClick={[Function]}
+                              >
+                                Stacks
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/premium"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/premium"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/premium"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/premium"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/premium"
+                                onClick={[Function]}
+                              >
+                                Queues
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/roadmap"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/roadmap"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/roadmap"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/roadmap"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/roadmap"
+                                onClick={[Function]}
+                              >
+                                Linked List
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div
+                      className="col"
+                    >
+                      <p
+                        className="font-weight-bold text-secondary"
+                      >
+                        RESOURCES
+                      </p>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/about"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/about"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/about"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/about"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/about"
+                                onClick={[Function]}
+                              >
+                                Articles
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/premium"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/premium"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/premium"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/premium"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/premium"
+                                onClick={[Function]}
+                              >
+                                Challenges
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                      <NavLink
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        className="pl-0 text-dark"
+                        disabled={false}
+                        to="/roadmap"
+                      >
+                        <ForwardRef
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          className="pl-0 text-dark nav-link"
+                          disabled={false}
+                          to="/roadmap"
+                        >
+                          <Link
+                            className="pl-0 text-dark nav-link"
+                            disabled={false}
+                            onClick={[Function]}
+                            to="/roadmap"
+                          >
+                            <LinkAnchor
+                              className="pl-0 text-dark nav-link"
+                              disabled={false}
+                              href="/roadmap"
+                              navigate={[Function]}
+                              onClick={[Function]}
+                            >
+                              <a
+                                className="pl-0 text-dark nav-link"
+                                disabled={false}
+                                href="/roadmap"
+                                onClick={[Function]}
+                              >
+                                Cheatsheets
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </ForwardRef>
+                      </NavLink>
+                    </div>
+                  </Col>
+                </div>
+              </Row>
+            </nav>
+          </Navbar>
+        </FooterBarTablet>
+      </Tablet>
+      <Mobile />
+    </div>
+  </FooterBarComponent>
+</Router>
+`;
