@@ -44,7 +44,7 @@ class CodeEditorDesktop extends Component {
     render() {
         return (
             <div className="viewport-wrapper">
-                <CodeEditorNavbar title={this.props.problemDetails.problemName} />
+                <CodeEditorNavbar title={this.props.problemDetails.title} />
                 <ReflexContainer orientation="horizontal">
                     <ReflexElement>
                         <ReflexContainer orientation="vertical">
