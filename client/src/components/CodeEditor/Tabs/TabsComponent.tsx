@@ -1,16 +1,20 @@
 import React from 'react'
 import { Tab, Tabs } from 'react-bootstrap'
 import ConceptReview from './ConceptReview'
-import ProblemDesktop from './ProblemDesktop'
+import ProblemDescription from './ProblemDescription'
 import VideoSolution from './VideoSolution'
 import './Tabs.css'
 
-const TabsComponent = () => {
+interface Props {
+    problemDetails: any
+}
+
+const TabsComponent = (props: Props) => {
     return (
         <div className="content-tabs-link">
             <Tabs defaultActiveKey="problem">
                 <Tab eventKey="problem" title="Problem">
-                    <ProblemDesktop />
+                    <ProblemDescription problemDetails={props.problemDetails} />
                 </Tab>
                 <Tab eventKey="videoSolution" title="Video Solution">
                     <VideoSolution />

@@ -7,7 +7,6 @@ import FadeIn from 'react-fade-in'
 
 import { default as _ } from 'lodash'
 import AsyncSpinner from '../Routes/Util/AsyncSpinner'
-import { Fade } from '@material-ui/core'
 
 function CodeEditorComponent(props) {
     const [isLoading, setLoadingStatus] = useState(true)
@@ -23,7 +22,6 @@ function CodeEditorComponent(props) {
     }, [props.match.params.id])
 
     if (isLoading) {
-        // TODO: Add loading spinner
         return <AsyncSpinner />
     } else if (!isLoading && _.isEmpty(problemDetails)) {
         // TODO: Add meaningful missing problem component

@@ -3,7 +3,7 @@ const _ = require("lodash");
 const mongoose = require("mongoose")
 
 router.get("/findchallenges", async (req, res) => {
-  const publicChallengesFields = ["problem_name", "problem_path"];
+  const publicChallengesFields = ["title", "problem_path"];
   const challenges = await mongoose.connection.db.collection("problems").find().toArray()
   const filteredChallenges = challenges.map(challenge => {
     return _.pick(challenge, publicChallengesFields)
@@ -22,8 +22,9 @@ router.get("/:problemPath", async (req, res) => {
   else {
     const problemTemplateCode = await mongoose.connection.db.collection("problemlanguagetemplates").findOne({ _id: problem.templates[language] })
     const starterCode = problemTemplateCode.starter_code_snippet
-    const problemName = problem.problem_name
-    res.send({ starterCode, problemName });
+    const title = problem.title
+    const description = problem.description
+    res.send({ starterCode, title, description });
   }
 
 });

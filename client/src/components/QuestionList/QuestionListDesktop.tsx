@@ -5,11 +5,10 @@ import Axios from 'axios'
 import { Row, Col } from 'react-bootstrap'
 import { QuestionStatus } from './QuestionListStringIds'
 import QuestionCard from './QuestionCard'
-import AsyncSpinner from '../Routes/Util/AsyncSpinner'
 import FadeIn from 'react-fade-in'
 
 interface Challenge {
-    problem_name: String
+    title: String
     problem_path: String
 }
 
@@ -39,7 +38,7 @@ class QuestionListDesktop extends Component {
                             return (
                                 <QuestionCard
                                     status={QuestionStatus.NONE}
-                                    questionTitle={challenge.problem_name}
+                                    questionTitle={challenge.title}
                                     path={challenge.problem_path}
                                 />
                             )

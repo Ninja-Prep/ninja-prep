@@ -49,7 +49,7 @@ class CodeEditorDesktop extends Component {
                     <ReflexElement>
                         <ReflexContainer orientation="vertical">
                             <ReflexElement>
-                                <TabComponent />
+                                <TabComponent problemDetails={this.props.problemDetails} />
                             </ReflexElement>
                             <ReflexSplitter style={{ width: '10px' }} />
 
