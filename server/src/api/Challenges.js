@@ -24,7 +24,8 @@ router.get("/:problemPath", async (req, res) => {
     const starterCode = problemTemplateCode.starter_code_snippet
     const title = problem.title
     const description = problem.description
-    res.send({ starterCode, title, description });
+    const hints = problem.hints
+    res.send({ starterCode, title, description, hints });
   }
 
 });
