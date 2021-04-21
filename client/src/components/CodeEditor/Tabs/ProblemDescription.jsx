@@ -4,7 +4,8 @@ import ShareIcon from '@material-ui/icons/Share'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import HintComponent from './HintComponent'
-function ProblemDesktop({ problemDetails }) {
+
+function ProblemDescription({ problemDetails }) {
     return (
         <div className="m-4">
             <div>
@@ -28,4 +29,4 @@ function ProblemDesktop({ problemDetails }) {
     )
 }
 
-export default ProblemDesktop
+export default ProblemDescription
