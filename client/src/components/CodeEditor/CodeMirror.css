@@ -47,22 +47,18 @@ body {
     border-bottom: black 1px solid;
 }
 
-.test-case-container {
-    background-color: #404053;
-}
-
 .reflex-splitter-horizontal-editor-testcase {
     height: 13px !important;
-    background-color: #2a2a3a !important;
+    background-color: #4e4e6b !important;
     border-color: transparent !important;
 }
 
 .reflex-element-testcase-area {
-    background-color: #404053 !important;
+    background-color: #2a2a3b !important;
 }
 
 .reflex-element-hide-overflow {
-    overflow: hidden !important;
+    overflow-x: hidden !important;
 }
 
 .settings-area-flex {

@@ -6,7 +6,8 @@ async function getProblemDetails(req, res, next) {
   const programmingLanguage = req.body.programmingLanguage;
   const userCodeSnippet = req.body.codeSnippet;
 
-  const problem = await Problem.findOne({ problem_name: req.params.problemName, }).populate(`templates.${programmingLanguage}`);
+  console.log(req.params)
+  const problem = await Problem.findOne({ problem_path: req.params.problemPath, }).populate(`templates.${programmingLanguage}`);
   const testCases = problem.input_testcases;
   const solutionCodeSnippet = problem.templates.get(`${programmingLanguage}`).solution_code_snippet;
   const codeContainer = problem.templates.get(`${programmingLanguage}`).executable_code_container;
@@ -20,7 +21,7 @@ async function getProblemDetails(req, res, next) {
   };
   next();
 }
-router.post("/execute/:problemName", getProblemDetails, async (req, res) => {
+router.post("/execute/:problemPath", getProblemDetails, async (req, res) => {
 
   const problemBO = req.problemBO;
 

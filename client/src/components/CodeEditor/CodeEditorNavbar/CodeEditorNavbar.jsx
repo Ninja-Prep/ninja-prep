@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Nav, Button, Row, Col } from 'react-bootstrap'
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm'
 import './CodeEditorNavbar.css'
 
 function CodeEditorNavbar(props) {
@@ -37,10 +36,6 @@ function CodeEditorNavbar(props) {
                 <Nav.Link as={Link} to="/challenges" className="pl-3 d-inline text-light">
                     Problems
                 </Nav.Link>
-                <Nav.Link as={Link} to="#" className="pl-3 d-inline text-light">
-                    <AccessAlarmIcon />
-                </Nav.Link>
-
                 <LoginLink />
 
                 <Nav.Link as={Link} to="/premium" className="pl-3 d-inline">

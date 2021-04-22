@@ -25,7 +25,8 @@ router.get("/:problemPath", async (req, res) => {
     const title = problem.title
     const description = problem.description
     const hints = problem.hints
-    res.send({ starterCode, title, description, hints });
+    const testCases = problem.input_testcases
+    res.send({ starterCode, title, description, hints, testCases });
   }
 
 });

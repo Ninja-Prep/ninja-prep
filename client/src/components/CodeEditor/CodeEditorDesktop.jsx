@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 
 import TabComponent from './Tabs/TabsComponent'
 import CodeEditorNavbar from './CodeEditorNavbar/CodeEditorNavbar'
-import TestCase from './CodeEditorOutput/TestCase'
-import SubmitCodeButtons from './CodeEditorOutput/SubmitCodeButtons'
+import TestCaseArea from './CodeEditorOutput/TestCaseArea'
+
 import CodeMirrorWrapperComponent from './CodeMirrorWrapperComponent'
 
 import './CodeMirror.css'
@@ -68,15 +68,8 @@ class CodeEditorDesktop extends Component {
                                         flex={2}
                                         className="reflex-element-testcase-area reflex-element-hide-overflow text-light"
                                     >
-                                        <TestCase
-                                            verdict={this.state.verdict}
-                                            inputTestCase={this.state.inputTestCase}
-                                            userOutput={this.state.userOutput}
-                                            expectedOutput={this.state.expectedOutput}
-                                        />
-
-                                        <SubmitCodeButtons
-                                            paramsId={this.props.match.params.id}
+                                        <TestCaseArea
+                                            testCases={this.props.problemDetails.testCases}
                                             mode={this.props.mode}
                                             codeSnippet={this.state.value}
                                         />

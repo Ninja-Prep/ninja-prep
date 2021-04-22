@@ -9,8 +9,15 @@ export const getProblemDetails = async (paramsId: string) => {
     return problemInfo.data
 }
 
-export const handleSubmit = (event: { preventDefault: () => void }, codeSnippet: string, language: string, paramsId: string) => {
+export const handleSubmit = (
+    event: { preventDefault: () => void },
+    codeSnippet: string,
+    language: string,
+    paramsId: string,
+    setParentState: (arg0: object) => void
+) => {
     event.preventDefault()
+    setParentState({ isPendingSubmission: true })
     Axios({
         method: 'POST',
         url: `/api/dockersandbox/execute/${paramsId}`,
@@ -18,5 +25,7 @@ export const handleSubmit = (event: { preventDefault: () => void }, codeSnippet:
             codeSnippet,
             programmingLanguage: languageMap[language]
         }
-    }).then((res) => {})
+    }).then((res) => {
+        setParentState({ isPendingSubmission: false })
+    })
 }
