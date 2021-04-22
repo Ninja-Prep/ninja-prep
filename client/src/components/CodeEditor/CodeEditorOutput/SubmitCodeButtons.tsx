@@ -21,7 +21,7 @@ function SubmitCodeButtons({ codeSnippet, mode, match, setParentState }: Props) 
         <div>
             <Row className="px-3 pt-3 pb-2">
                 <Col md="auto">
-                    <p className="h5 font-weight-bold d-inline"> {SUBMIT_YOUR_CODE}</p>
+                    <p className="h5 font-weight-bold d-inline text-dark"> {SUBMIT_YOUR_CODE}</p>
                 </Col>
                 <Col>
                     <div className="float-right">

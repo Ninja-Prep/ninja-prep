@@ -1,5 +1,5 @@
 .nav-tabs .nav-link {
-    color: white;
+    color: black;
 }
 
 .nav-tabs .nav-link.active {
@@ -7,9 +7,13 @@
 }
 
 .nav-pills .nav-link.active {
-    background-color: rgba(70, 70, 97, 0.753);
+    background-color: #f7f8fc;
     border-radius: 0;
     right: 5px;
     text-align: center;
     font-weight: bold;
+}
+
+.selected-testcase-details {
+    background-color: #f7f8fc;
 }
