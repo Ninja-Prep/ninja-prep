@@ -26,6 +26,6 @@ export const handleSubmit = (
             programmingLanguage: languageMap[language]
         }
     }).then((res) => {
-        setParentState({ isPendingSubmission: false })
+        setParentState({ isPendingSubmission: false, userSubmissionOutput: res.data })
     })
 }

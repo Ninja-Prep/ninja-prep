@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
-import { Row, Col, Tab, Nav, Container } from 'react-bootstrap'
+import { Row, Col, Tab, Nav } from 'react-bootstrap'
 import { withRouter } from 'react-router'
 import SubmitCodeButtons from './SubmitCodeButtons'
 import TestCaseTabContent from './TestCaseTabContent'
 import './TestCaseArea.css'
+import CheckRoundedIcon from '@material-ui/icons/CheckRounded'
 import LoadingCodeSubmission from './LoadingCodeSubmission'
+import CloseRoundedIcon from '@material-ui/icons/CloseRounded'
+import FadeIn from 'react-fade-in'
+import _ from 'lodash'
 
 class TestCaseArea extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isPendingSubmission: false
+            isPendingSubmission: false,
+            userSubmissionOutput: []
         }
         this.setParentState = this.setParentState.bind(this)
     }
@@ -24,7 +29,7 @@ class TestCaseArea extends Component {
             return <LoadingCodeSubmission />
         }
         return (
-            <div className="h-100">
+            <div>
                 <SubmitCodeButtons
                     mode={this.props.mode}
                     codeSnippet={this.props.codeSnippet}
@@ -32,30 +37,57 @@ class TestCaseArea extends Component {
                     setParentState={this.setParentState}
                 />
                 <Tab.Container id="left-tabs-example" defaultActiveKey="0">
-                    <Row className="h-75">
-                        <Col sm={3} className="pr-0">
-                            <Nav variant="pills" className="flex-column">
-                                {this.props.testCases.map((testCase, index) => {
-                                    return (
-                                        <Nav.Link eventKey={index.toString()} className="text-dark">
-                                            <b>Test Case {index + 1}</b>
-                                        </Nav.Link>
-                                    )
-                                })}
-                            </Nav>
-                        </Col>
-                        <Col sm={9} className="selected-testcase-details">
-                            <Tab.Content>
-                                {this.props.testCases.map((testCase, index) => {
-                                    return <TestCaseTabContent testCaseInput={testCase} index={index} />
-                                })}
-                            </Tab.Content>
-                        </Col>
-                    </Row>
+                    <FadeIn>
+                        <Row className="h-75">
+                            <Col sm={3} className="pr-0">
+                                <Nav variant="pills" className="flex-column">
+                                    <TestCaseTabLabels
+                                        testCases={this.props.testCases}
+                                        judgedTestCases={this.state.userSubmissionOutput.judged_test_cases}
+                                    />
+                                </Nav>
+                            </Col>
+                            <Col sm={9} className="selected-testcase-details">
+                                <Tab.Content>
+                                    {this.props.testCases.map((testCase, index) => {
+                                        return <TestCaseTabContent testCaseInput={testCase} index={index} />
+                                    })}
+                                </Tab.Content>
+                            </Col>
+                        </Row>
+                    </FadeIn>
                 </Tab.Container>
             </div>
         )
     }
+}
+
+function TestCaseTabLabels(props) {
+    if (!_.isEmpty(props.judgedTestCases)) {
+        return props.judgedTestCases.map((testCase, index) => {
+            if (testCase.status != 'ACCEPTED') {
+                return (
+                    <Nav.Link eventKey={index.toString()} className="text-dark text-center">
+                        <CloseRoundedIcon style={{ color: 'red' }} />
+                        <b className="px-1">Test Case {index + 1}</b>
+                    </Nav.Link>
+                )
+            }
+            return (
+                <Nav.Link eventKey={index.toString()} className="text-dark text-center">
+                    <CheckRoundedIcon style={{ color: 'green' }} />
+                    <b className="px-1">Test Case {index + 1}</b>
+                </Nav.Link>
+            )
+        })
+    }
+    return props.testCases.map((testCase, index) => {
+        return (
+            <Nav.Link eventKey={index.toString()} className="text-dark text-center">
+                <b>Test Case {index + 1}</b>
+            </Nav.Link>
+        )
+    })
 }
 
 export default withRouter(TestCaseArea)
