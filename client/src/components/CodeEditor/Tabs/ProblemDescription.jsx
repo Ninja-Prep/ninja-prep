@@ -14,7 +14,7 @@ function ProblemDescription({ problemDetails }) {
                 <h3 className="font-weight-bold">{problemDetails.title}</h3>
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>{problemDetails.description}</ReactMarkdown>
             </div>
-            <HintComponent hints={problemDetails.hints} />
+            {problemDetails.hints && <HintComponent hints={problemDetails.hints} />}
         </div>
     )
 }
