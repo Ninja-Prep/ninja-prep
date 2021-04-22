@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Accordion, Card } from 'react-bootstrap'
+import _ from 'lodash'
 
 interface Props {
     hints: Array<string>
@@ -19,6 +20,9 @@ const HintCard = ({ index, hint }: { index: number; hint: string }) => {
 }
 
 const HintComponent = (props: Props) => {
+    if (_.isNull(props.hints)) {
+        return <Fragment />
+    }
     return (
         <div className="text-dark pb-4">
             <p className="font-weight-bold lead">Hints</p>
