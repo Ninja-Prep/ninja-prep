@@ -6,7 +6,6 @@ import { SUBMIT_CODE, SUBMIT_YOUR_CODE } from './TestCaseAreaStringIds'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import { handleSubmit } from '../CodeEditorBaseComponent'
 import _ from 'lodash'
-import userEvent from '@testing-library/user-event'
 
 interface MatchParams {
     id: string
