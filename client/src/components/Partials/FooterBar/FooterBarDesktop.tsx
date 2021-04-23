@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav, Row, Col } from 'react-bootstrap'
+import { DarkNavbarNinjaPrepLogo } from '../Logos/NinjaPrepLogos'
 
 function FooterBarDesktop() {
     return (
         <Navbar className="px-5 border-top">
-            <Row className="py-5 mx-auto container">
+            <Row className="py-4 mx-auto container">
                 <Col className="my-auto p-0">
-                    <img src="./images/NinjaPrep-Logo.png" alt="logo" width="70" height="70" />
+                    <DarkNavbarNinjaPrepLogo height={70} width={160} />
                 </Col>
                 <Col>
                     <p className="font-weight-bold text-secondary">NINJAPREP</p>

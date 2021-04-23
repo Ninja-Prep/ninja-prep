@@ -8,7 +8,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
 import './NavigationBar.css'
-import { NINJA_PREP_NAVIGATION } from './NavigationBarStringIds'
+import { LightNavbarNinjaPrepLogo } from '../Logos/NinjaPrepLogos'
 import NavigationBarLoginModalTablet from './NavigationBarLogin/NavigationBarLoginModalTablet'
 import NavigationBarLoginDropdown from './NavigationBarLogin/NavigationBarLoginDropdown'
 import { NavBarProps } from './NavigationBarComponent'
@@ -24,8 +24,7 @@ function NavigationBarTablet(props: NavBarProps) {
         <Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
             <div className="container p-0">
                 <Navbar.Brand as={Link} to="/">
-                    <img className="mr-3" src="./images/NinjaPrep-Logo.png" alt="logo" width="40" height="40" />
-                    {NINJA_PREP_NAVIGATION}
+                    <LightNavbarNinjaPrepLogo height={40} width={100} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

@@ -69,14 +69,47 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                       href="/"
                       onClick={[Function]}
                     >
-                      <img
-                        alt="logo"
-                        className="logo ml-5 mr-3"
-                        height="40"
-                        src="./images/NinjaPrep-Logo.png"
-                        width="40"
-                      />
-                      NinjaPrep
+                      <LightNavbarNinjaPrepLogo
+                        height={40}
+                        width={100}
+                      >
+                        <svg
+                          height={40}
+                          viewBox="0 0 200 57"
+                          width={100}
+                        >
+                          <g
+                            data-name="Group 120"
+                            id="Group_120"
+                            transform="translate(-1157 -10208)"
+                          >
+                            <text
+                              fill="#f9fbfd"
+                              font-family="SourceSansPro-Bold, Source Sans Pro"
+                              font-size="40"
+                              font-weight="700"
+                              id="NinjaPrep"
+                              transform="translate(1157 10249)"
+                            >
+                              <tspan
+                                x="0"
+                                y="0"
+                              >
+                                NinjaPrep
+                              </tspan>
+                            </text>
+                            <circle
+                              cx="7.5"
+                              cy="7.5"
+                              data-name="Ellipse 44"
+                              fill="#25d0f3"
+                              id="Ellipse_44"
+                              r="7.5"
+                              transform="translate(1342 10237)"
+                            />
+                          </g>
+                        </svg>
+                      </LightNavbarNinjaPrepLogo>
                     </a>
                   </LinkAnchor>
                 </Link>
@@ -523,14 +556,14 @@ exports[`matches snapshot on "MOBILE" 1`] = `
       <Mobile>
         <NavigationBarMobile>
           <Navbar
-            className="px-5 py-3 navigation-bar"
+            className="pr-5 pl-2 py-3 navigation-bar"
             collapseOnSelect={false}
             expand="lg"
             fixed="top"
             variant="dark"
           >
             <nav
-              className="px-5 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
+              className="pr-5 pl-2 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
             >
               <NavbarBrand
                 as={
@@ -564,14 +597,47 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                       href="/"
                       onClick={[Function]}
                     >
-                      <img
-                        alt="logo"
-                        className="logo"
-                        height="40"
-                        src="./images/NinjaPrep-Logo.png"
-                        width="40"
-                      />
-                      NinjaPrep
+                      <LightNavbarNinjaPrepLogo
+                        height={40}
+                        width={100}
+                      >
+                        <svg
+                          height={40}
+                          viewBox="0 0 200 57"
+                          width={100}
+                        >
+                          <g
+                            data-name="Group 120"
+                            id="Group_120"
+                            transform="translate(-1157 -10208)"
+                          >
+                            <text
+                              fill="#f9fbfd"
+                              font-family="SourceSansPro-Bold, Source Sans Pro"
+                              font-size="40"
+                              font-weight="700"
+                              id="NinjaPrep"
+                              transform="translate(1157 10249)"
+                            >
+                              <tspan
+                                x="0"
+                                y="0"
+                              >
+                                NinjaPrep
+                              </tspan>
+                            </text>
+                            <circle
+                              cx="7.5"
+                              cy="7.5"
+                              data-name="Ellipse 44"
+                              fill="#25d0f3"
+                              id="Ellipse_44"
+                              r="7.5"
+                              transform="translate(1342 10237)"
+                            />
+                          </g>
+                        </svg>
+                      </LightNavbarNinjaPrepLogo>
                     </a>
                   </LinkAnchor>
                 </Link>
@@ -1059,14 +1125,47 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         href="/"
                         onClick={[Function]}
                       >
-                        <img
-                          alt="logo"
-                          className="mr-3"
-                          height="40"
-                          src="./images/NinjaPrep-Logo.png"
-                          width="40"
-                        />
-                        NinjaPrep
+                        <LightNavbarNinjaPrepLogo
+                          height={40}
+                          width={100}
+                        >
+                          <svg
+                            height={40}
+                            viewBox="0 0 200 57"
+                            width={100}
+                          >
+                            <g
+                              data-name="Group 120"
+                              id="Group_120"
+                              transform="translate(-1157 -10208)"
+                            >
+                              <text
+                                fill="#f9fbfd"
+                                font-family="SourceSansPro-Bold, Source Sans Pro"
+                                font-size="40"
+                                font-weight="700"
+                                id="NinjaPrep"
+                                transform="translate(1157 10249)"
+                              >
+                                <tspan
+                                  x="0"
+                                  y="0"
+                                >
+                                  NinjaPrep
+                                </tspan>
+                              </text>
+                              <circle
+                                cx="7.5"
+                                cy="7.5"
+                                data-name="Ellipse 44"
+                                fill="#25d0f3"
+                                id="Ellipse_44"
+                                r="7.5"
+                                transform="translate(1342 10237)"
+                              />
+                            </g>
+                          </svg>
+                        </LightNavbarNinjaPrepLogo>
                       </a>
                     </LinkAnchor>
                   </Link>

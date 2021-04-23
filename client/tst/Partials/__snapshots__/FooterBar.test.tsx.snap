@@ -37,11 +37,11 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
               className="px-5 border-top navbar navbar-expand navbar-light"
             >
               <Row
-                className="py-5 mx-auto container"
+                className="py-4 mx-auto container"
                 noGutters={false}
               >
                 <div
-                  className="py-5 mx-auto container row"
+                  className="py-4 mx-auto container row"
                 >
                   <Col
                     className="my-auto p-0"
@@ -49,12 +49,47 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                     <div
                       className="my-auto p-0 col"
                     >
-                      <img
-                        alt="logo"
-                        height="70"
-                        src="./images/NinjaPrep-Logo.png"
-                        width="70"
-                      />
+                      <DarkNavbarNinjaPrepLogo
+                        height={70}
+                        width={160}
+                      >
+                        <svg
+                          height={70}
+                          viewBox="0 0 201 58"
+                          width={160}
+                        >
+                          <g
+                            data-name="Group 119"
+                            id="Group_119"
+                            transform="translate(-1157 -10129)"
+                          >
+                            <text
+                              fill="#2a2a3a"
+                              font-family="SourceSansPro-Bold, Source Sans Pro"
+                              font-size="41"
+                              font-weight="700"
+                              id="NinjaPrep"
+                              transform="translate(1157 10171)"
+                            >
+                              <tspan
+                                x="0"
+                                y="0"
+                              >
+                                NinjaPrep
+                              </tspan>
+                            </text>
+                            <circle
+                              cx="7.5"
+                              cy="7.5"
+                              data-name="Ellipse 44"
+                              fill="#25d0f3"
+                              id="Ellipse_44"
+                              r="7.5"
+                              transform="translate(1343 10158)"
+                            />
+                          </g>
+                        </svg>
+                      </DarkNavbarNinjaPrepLogo>
                     </div>
                   </Col>
                   <Col>
@@ -791,12 +826,47 @@ exports[`matches snapshot on "TABLET" 1`] = `
                     <div
                       className="my-auto p-0 col"
                     >
-                      <img
-                        alt="logo"
-                        height="70"
-                        src="./images/NinjaPrep-Logo.png"
-                        width="70"
-                      />
+                      <DarkNavbarNinjaPrepLogo
+                        height={50}
+                        width={130}
+                      >
+                        <svg
+                          height={50}
+                          viewBox="0 0 201 58"
+                          width={130}
+                        >
+                          <g
+                            data-name="Group 119"
+                            id="Group_119"
+                            transform="translate(-1157 -10129)"
+                          >
+                            <text
+                              fill="#2a2a3a"
+                              font-family="SourceSansPro-Bold, Source Sans Pro"
+                              font-size="41"
+                              font-weight="700"
+                              id="NinjaPrep"
+                              transform="translate(1157 10171)"
+                            >
+                              <tspan
+                                x="0"
+                                y="0"
+                              >
+                                NinjaPrep
+                              </tspan>
+                            </text>
+                            <circle
+                              cx="7.5"
+                              cy="7.5"
+                              data-name="Ellipse 44"
+                              fill="#25d0f3"
+                              id="Ellipse_44"
+                              r="7.5"
+                              transform="translate(1343 10158)"
+                            />
+                          </g>
+                        </svg>
+                      </DarkNavbarNinjaPrepLogo>
                     </div>
                   </Col>
                   <Col>
