@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Tab } from 'react-bootstrap'
 import { INPUT_TEXT } from './TestCaseAreaStringIds'
 import './TestCaseArea.css'
+import _ from 'lodash'
 
 interface Props {
     testCases: Array<string>
@@ -36,25 +37,33 @@ const StyleStatus = ({ status }: { status: string }) => {
 }
 
 const TestCaseTabContent = ({ testCases, judgedTestCases }: Props) => {
-    if (judgedTestCases) {
-        return judgedTestCases.map((testCase, index) => {
-            return (
-                <Tab.Pane className="pr-3 py-3 test-case-tab-content" eventKey={index.toString()}>
-                    <StyleStatus status={testCase.status as string} />
-                    <StyleTestCaseData header={INPUT_TEXT} content={testCase.test_case} />
-                    <StyleTestCaseData header="Your Output" content={testCase.user_output} />
-                    <StyleTestCaseData header="Expected Output" content={testCase.expected_output} />
-                </Tab.Pane>
-            )
-        })
-    }
-    return testCases.map((testCase, index) => {
+    if (!_.isEmpty(judgedTestCases)) {
         return (
-            <Tab.Pane className="pr-3 py-3 test-case-tab-content" eventKey={index.toString()}>
-                <StyleTestCaseData header={INPUT_TEXT} content={testCase} />
-            </Tab.Pane>
+            <Fragment>
+                {judgedTestCases.map((testCase, index) => {
+                    return (
+                        <Tab.Pane className="pr-3 py-3 test-case-tab-content" eventKey={index.toString()}>
+                            <StyleStatus status={testCase.status as string} />
+                            <StyleTestCaseData header={INPUT_TEXT} content={testCase.test_case} />
+                            <StyleTestCaseData header="Your Output" content={testCase.user_output} />
+                            <StyleTestCaseData header="Expected Output" content={testCase.expected_output} />
+                        </Tab.Pane>
+                    )
+                })}
+            </Fragment>
         )
-    })
+    }
+    return (
+        <Fragment>
+            {testCases.map((testCase, index) => {
+                return (
+                    <Tab.Pane className="pr-3 py-3 test-case-tab-content" eventKey={index.toString()}>
+                        <StyleTestCaseData header={INPUT_TEXT} content={testCase} />
+                    </Tab.Pane>
+                )
+            })}
+        </Fragment>
+    )
 }
 
 export default TestCaseTabContent

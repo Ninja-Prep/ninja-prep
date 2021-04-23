@@ -5,7 +5,11 @@ import { modeOptions } from './CodeEditorLanguages'
 import { connect } from 'react-redux'
 import { DropdownButton, Dropdown } from 'react-bootstrap'
 
-function LanguageDropdown(props) {
+interface Props {
+    language: string
+}
+
+function LanguageDropdown(props: Props) {
     const dispatch = useDispatch()
     return (
         <DropdownButton
@@ -22,7 +26,7 @@ function LanguageDropdown(props) {
     )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: { editor: Props }) => ({
     language: state.editor.language
 })
 

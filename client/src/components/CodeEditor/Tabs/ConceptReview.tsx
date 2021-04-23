@@ -44,4 +44,3 @@ function ConceptReview() {
 }
 
 export default ConceptReview
-export { default as ConceptReview } from './ConceptReview'

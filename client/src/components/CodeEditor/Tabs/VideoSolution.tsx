@@ -14,4 +14,3 @@ function VideoSolution() {
 }
 
 export default VideoSolution
-export { default as VideoSolution } from './VideoSolution'

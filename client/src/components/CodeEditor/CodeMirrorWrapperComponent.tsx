@@ -3,6 +3,7 @@ import { Controlled as CodeMirror } from 'react-codemirror2'
 import { EditorConfiguration } from 'codemirror'
 import CodeEditorUserSettings from './UserSettings/CodeEditorUserSettings'
 import './CodeMirror.css'
+
 interface Props {
     textValue: string
     editorConfig: EditorConfiguration

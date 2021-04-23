@@ -3,7 +3,15 @@ import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import HintComponent from './HintComponent'
 
-function ProblemDescription({ problemDetails }) {
+interface Props {
+    problemDetails: {
+        title: string
+        description: string
+        hints: Array<string>
+    }
+}
+
+function ProblemDescription({ problemDetails }: Props) {
     return (
         <div className="m-4">
             <div>

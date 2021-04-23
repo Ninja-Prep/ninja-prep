@@ -3,21 +3,18 @@ import { Link } from 'react-router-dom'
 import { Nav, Button, Row, Col } from 'react-bootstrap'
 import './CodeEditorNavbar.css'
 
-function CodeEditorNavbar(props) {
+interface Props {
+    title: string
+}
+
+function CodeEditorNavbar(props: Props) {
+    //ToDo: Add Signed in/out user logic
     function LoginLink() {
-        if (props.user) {
-            return (
-                <Nav.Link href="/auth/logout" className="pl-3 text-light">
-                    Sign Out
-                </Nav.Link>
-            )
-        } else {
-            return (
-                <Nav.Link as={Link} to="/login" className="pl-3 d-inline text-light">
-                    Sign in
-                </Nav.Link>
-            )
-        }
+        return (
+            <Nav.Link as={Link} to="/login" className="pl-3 d-inline text-light">
+                Sign in
+            </Nav.Link>
+        )
     }
     return (
         <Row className="problem-navigation-bar m-0 p-0 align-items-center">

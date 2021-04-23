@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { RouteComponentProps, withRouter } from 'react-router-dom'
 import CodeEditorDesktop from './CodeEditorDesktop'
 import { getProblemDetails } from './CodeEditorBaseComponent'
 import Error404Component from '../Error404/Error404Component'
@@ -8,7 +9,13 @@ import FadeIn from 'react-fade-in'
 import { default as _ } from 'lodash'
 import AsyncSpinner from '../Routes/Util/AsyncSpinner'
 
-function CodeEditorComponent(props) {
+interface MatchParams {
+    id: string
+}
+
+interface Props extends RouteComponentProps<MatchParams> {}
+
+function CodeEditorComponent(props: Props) {
     const [isLoading, setLoadingStatus] = useState(true)
     const [problemDetails, setProblemDetails] = useState()
 
@@ -41,4 +48,4 @@ function CodeEditorComponent(props) {
     )
 }
 
-export default CodeEditorComponent
+export default withRouter(CodeEditorComponent)

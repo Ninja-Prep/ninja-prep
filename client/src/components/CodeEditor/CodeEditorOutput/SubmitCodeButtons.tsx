@@ -6,6 +6,8 @@ import { SUBMIT_CODE, SUBMIT_YOUR_CODE } from './TestCaseAreaStringIds'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import { handleSubmit } from '../CodeEditorBaseComponent'
 import _ from 'lodash'
+import { UserSubmissionOutput } from './TestCaseAreaHelper'
+import { withRouter } from 'react-router-dom'
 
 interface MatchParams {
     id: string
@@ -14,12 +16,12 @@ interface MatchParams {
 interface SubmitCodeButtonsProps extends RouteComponentProps<MatchParams> {
     codeSnippet: string
     mode: string
-    setParentState: () => void
-    userSubmissionOutput: any
+    setParentState: (state: any) => void
+    userSubmissionOutput: UserSubmissionOutput
 }
 
 interface VerdictProps {
-    userSubmissionOutput: any
+    userSubmissionOutput: UserSubmissionOutput
 }
 
 function VerdictHeader({ userSubmissionOutput }: VerdictProps) {
@@ -70,4 +72,4 @@ function SubmitCodeButtons({ codeSnippet, mode, match, setParentState, userSubmi
     )
 }
 
-export default SubmitCodeButtons
+export default withRouter(SubmitCodeButtons)
