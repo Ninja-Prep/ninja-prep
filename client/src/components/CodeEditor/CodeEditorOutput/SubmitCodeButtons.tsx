@@ -39,11 +39,11 @@ function VerdictHeader({ userSubmissionOutput }: VerdictProps) {
                 )
             }
             default: {
-                return <p className="h4 font-weight-bold d-inline text-danger"> {userSubmissionOutput.verdict}</p>
+                return <p className="h4 font-weight-bold d-inline text-danger"> {userSubmissionOutput.verdict} </p>
             }
         }
     }
-    return <p className="h5 font-weight-bold d-inline text-dark"> {SUBMIT_YOUR_CODE}</p>
+    return <p className="h5 font-weight-bold d-inline text-dark"> {SUBMIT_YOUR_CODE} </p>
 }
 
 function SubmitCodeButtons({ codeSnippet, mode, match, setParentState, userSubmissionOutput }: SubmitCodeButtonsProps) {

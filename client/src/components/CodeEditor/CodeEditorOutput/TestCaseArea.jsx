@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Row, Col, Tab, Nav } from 'react-bootstrap'
 import { withRouter } from 'react-router'
 import SubmitCodeButtons from './SubmitCodeButtons'
-import TestCaseTabContent from './TestCaseTabContent'
+import TestCaseTabContent, { StyleTestCaseData } from './TestCaseTabContent'
 import './TestCaseArea.css'
 import CheckRoundedIcon from '@material-ui/icons/CheckRounded'
 import LoadingCodeSubmission from './LoadingCodeSubmission'
@@ -37,58 +37,74 @@ class TestCaseArea extends Component {
                     userSubmissionOutput={this.state.userSubmissionOutput}
                     setParentState={this.setParentState}
                 />
-                <Tab.Container id="left-tabs-example" defaultActiveKey="0">
-                    <FadeIn>
-                        <Row className="h-75">
-                            <Col sm={3} className="pr-0">
-                                <Nav variant="pills" className="flex-column">
-                                    <TestCaseTabLabels
-                                        testCases={this.props.testCases}
-                                        judgedTestCases={this.state.userSubmissionOutput.judged_test_cases}
-                                    />
-                                </Nav>
-                            </Col>
-                            <Col sm={9} className="selected-testcase-details">
-                                <Tab.Content>
-                                    <TestCaseTabContent
-                                        testCases={this.props.testCases}
-                                        judgedTestCases={this.state.userSubmissionOutput.judged_test_cases}
-                                    />
-                                </Tab.Content>
-                            </Col>
-                        </Row>
-                    </FadeIn>
-                </Tab.Container>
+                <UserOutputWrapper userSubmissionOutput={this.state.userSubmissionOutput} {...this.props} />
             </div>
         )
     }
 }
 
+function UserOutputWrapper(props) {
+    if (props.userSubmissionOutput.verdict == 'Compile Error') {
+        return (
+            <div className="px-3">
+                <StyleTestCaseData header="Raw Output" content={props.userSubmissionOutput.stderr} />
+            </div>
+        )
+    }
+    return (
+        <Tab.Container id="left-tabs-example" defaultActiveKey="0">
+            <FadeIn>
+                <Row className="h-75">
+                    <Col sm={3} className="pr-0">
+                        <Nav variant="pills" className="flex-column">
+                            <TestCaseTabLabels
+                                testCases={props.testCases}
+                                maybeUserSubmissionOutput={props.userSubmissionOutput}
+                            />
+                        </Nav>
+                    </Col>
+                    <Col sm={9} className="selected-testcase-details">
+                        <Tab.Content>
+                            <TestCaseTabContent
+                                testCases={props.testCases}
+                                judgedTestCases={props.userSubmissionOutput.judged_test_cases}
+                            />
+                        </Tab.Content>
+                    </Col>
+                </Row>
+            </FadeIn>
+        </Tab.Container>
+    )
+}
+
+function StyleTestCaseTabLabel({ index, children }) {
+    return (
+        <Nav.Link eventKey={index.toString()} className="text-dark text-center">
+            {children}
+            <b className="px-1">Test Case {index + 1}</b>
+        </Nav.Link>
+    )
+}
+
 function TestCaseTabLabels(props) {
-    if (!_.isEmpty(props.judgedTestCases)) {
-        return props.judgedTestCases.map((testCase, index) => {
+    if (!_.isEmpty(props.maybeUserSubmissionOutput)) {
+        return props.maybeUserSubmissionOutput.judged_test_cases.map((testCase, index) => {
             if (testCase.status != 'ACCEPTED') {
                 return (
-                    <Nav.Link eventKey={index.toString()} className="text-dark text-center">
+                    <StyleTestCaseTabLabel index={index}>
                         <CloseRoundedIcon style={{ color: 'red' }} />
-                        <b className="px-1">Test Case {index + 1}</b>
-                    </Nav.Link>
+                    </StyleTestCaseTabLabel>
                 )
             }
             return (
-                <Nav.Link eventKey={index.toString()} className="text-dark text-center">
+                <StyleTestCaseTabLabel index={index}>
                     <CheckRoundedIcon style={{ color: 'green' }} />
-                    <b className="px-1">Test Case {index + 1}</b>
-                </Nav.Link>
+                </StyleTestCaseTabLabel>
             )
         })
     }
     return props.testCases.map((testCase, index) => {
-        return (
-            <Nav.Link eventKey={index.toString()} className="text-dark text-center">
-                <b>Test Case {index + 1}</b>
-            </Nav.Link>
-        )
+        return <StyleTestCaseTabLabel index={index} />
     })
 }
 

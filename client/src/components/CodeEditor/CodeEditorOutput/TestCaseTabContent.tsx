@@ -1,7 +1,6 @@
 import React from 'react'
-import { Tab, Container } from 'react-bootstrap'
+import { Tab } from 'react-bootstrap'
 import { INPUT_TEXT } from './TestCaseAreaStringIds'
-import _ from 'lodash'
 import './TestCaseArea.css'
 
 interface Props {
@@ -14,11 +13,11 @@ interface StyleProps {
     content?: string
 }
 
-const StyleTestCaseData = ({ header, content }: StyleProps) => {
+export const StyleTestCaseData = ({ header, content }: StyleProps) => {
     return (
         <div className="pt-3">
             <p className="text-dark font-weight-bold">{header}</p>
-            <p style={{ whiteSpace: 'pre-wrap', fontFamily: 'Fira Code' }} className="p-3 bg-dark">
+            <p style={{ whiteSpace: 'pre-wrap', fontFamily: 'Fira Code' }} className="p-3 bg-dark rounded">
                 {content}
             </p>
         </div>
@@ -37,7 +36,7 @@ const StyleStatus = ({ status }: { status: string }) => {
 }
 
 const TestCaseTabContent = ({ testCases, judgedTestCases }: Props) => {
-    if (_.some(judgedTestCases)) {
+    if (judgedTestCases) {
         return judgedTestCases.map((testCase, index) => {
             return (
                 <Tab.Pane className="pr-3 py-3 test-case-tab-content" eventKey={index.toString()}>
