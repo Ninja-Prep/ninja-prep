@@ -34,6 +34,7 @@ class TestCaseArea extends Component {
                     mode={this.props.mode}
                     codeSnippet={this.props.codeSnippet}
                     {...this.props}
+                    userSubmissionOutput={this.state.userSubmissionOutput}
                     setParentState={this.setParentState}
                 />
                 <Tab.Container id="left-tabs-example" defaultActiveKey="0">

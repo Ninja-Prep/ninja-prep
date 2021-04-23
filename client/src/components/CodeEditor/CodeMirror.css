@@ -49,12 +49,12 @@ body {
 
 .reflex-splitter-horizontal-editor-testcase {
     height: 13px !important;
-    background-color: #4e4e6b !important;
-    border-color: transparent !important;
+    background-color: #d1d1d1 !important;
+    border-color: #f3f7f8 !important;
 }
 
 .reflex-element-testcase-area {
-    background-color: #dbdbdb !important;
+    background-color: #f3f7f8 !important;
 }
 
 .reflex-element-hide-overflow {

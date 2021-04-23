@@ -21,7 +21,7 @@ import 'react-reflex/styles.css'
 class CodeEditorDesktop extends Component {
     constructor(props) {
         super(props)
-        this.cookieUsercodeKey = [props.problemDetails.problemName, props.mode].join('_')
+        this.cookieUsercodeKey = [props.problemDetails.title, props.mode].join('_')
         this.state = {
             value: this.setInitialCode(),
             output: ''

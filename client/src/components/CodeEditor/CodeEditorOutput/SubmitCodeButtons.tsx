@@ -5,23 +5,54 @@ import { Row, Col } from 'react-bootstrap'
 import { SUBMIT_CODE, SUBMIT_YOUR_CODE } from './TestCaseAreaStringIds'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import { handleSubmit } from '../CodeEditorBaseComponent'
+import _ from 'lodash'
+import userEvent from '@testing-library/user-event'
 
 interface MatchParams {
     id: string
 }
 
-interface Props extends RouteComponentProps<MatchParams> {
+interface SubmitCodeButtonsProps extends RouteComponentProps<MatchParams> {
     codeSnippet: string
     mode: string
     setParentState: () => void
+    userSubmissionOutput: any
 }
 
-function SubmitCodeButtons({ codeSnippet, mode, match, setParentState }: Props) {
+interface VerdictProps {
+    userSubmissionOutput: any
+}
+
+function VerdictHeader({ userSubmissionOutput }: VerdictProps) {
+    if (!_.isEmpty(userSubmissionOutput)) {
+        switch (userSubmissionOutput.verdict) {
+            case 'ACCEPTED': {
+                return <p className="h3 font-weight-bold d-inline text-success"> ACCEPTED </p>
+            }
+            case 'Wrong Answer': {
+                const countFailed = userSubmissionOutput.judged_test_cases.filter((testCase: any) => {
+                    return testCase.status === 'ACCEPTED'
+                }).length
+                return (
+                    <p className="h4 font-weight-bold d-inline text-danger">
+                        {countFailed}/{userSubmissionOutput.judged_test_cases.length} Test Cases Passed
+                    </p>
+                )
+            }
+            default: {
+                return <p className="h4 font-weight-bold d-inline text-danger"> {userSubmissionOutput.verdict}</p>
+            }
+        }
+    }
+    return <p className="h5 font-weight-bold d-inline text-dark"> {SUBMIT_YOUR_CODE}</p>
+}
+
+function SubmitCodeButtons({ codeSnippet, mode, match, setParentState, userSubmissionOutput }: SubmitCodeButtonsProps) {
     return (
         <div>
             <Row className="px-3 pt-3 pb-2">
                 <Col md="auto">
-                    <p className="h5 font-weight-bold d-inline text-dark"> {SUBMIT_YOUR_CODE}</p>
+                    <VerdictHeader userSubmissionOutput={userSubmissionOutput} />
                 </Col>
                 <Col>
                     <div className="float-right">
