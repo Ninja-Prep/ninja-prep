@@ -50,9 +50,10 @@ class TestCaseArea extends Component {
                             </Col>
                             <Col sm={9} className="selected-testcase-details">
                                 <Tab.Content>
-                                    {this.props.testCases.map((testCase, index) => {
-                                        return <TestCaseTabContent testCaseInput={testCase} index={index} />
-                                    })}
+                                    <TestCaseTabContent
+                                        testCases={this.props.testCases}
+                                        judgedTestCases={this.state.userSubmissionOutput.judged_test_cases}
+                                    />
                                 </Tab.Content>
                             </Col>
                         </Row>
