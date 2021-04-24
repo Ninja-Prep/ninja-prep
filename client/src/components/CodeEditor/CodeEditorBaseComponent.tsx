@@ -20,7 +20,7 @@ export const handleSubmit = (
     setParentState({ isPendingSubmission: true })
     Axios({
         method: 'POST',
-        url: `/api/dockersandbox/execute/${paramsId}`,
+        url: `/api/submisson/execute/${paramsId}`,
         data: {
             codeSnippet,
             programmingLanguage: languageMap[language]

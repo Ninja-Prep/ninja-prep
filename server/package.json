@@ -1,81 +1,88 @@
 {
-  "name": "ninja-prep",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "engines": {
-    "node": ">=14.x"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": " nodemon -L server.js",
-    "client": "cd ../client && yarn start",
-    "prod": "cross-env NODE_ENV=production node server.js",
-    "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\""
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@stripe/stripe-js": "^1.11.0",
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.3.0",
-    "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.5",
-    "cookie-session": "^1.4.0",
-    "cors": "^2.8.5",
-    "cross-env": "^7.0.2",
-    "express": "^4.17.1",
-    "express-list-endpoints": "^5.0.0",
-    "express-session": "^1.17.1",
-    "got": "^11.8.2",
-    "jdoodle-client": "^1.0.2",
-    "lint-staged": "^10.5.3",
-    "lodash": "^4.17.20",
-    "mongoose": "^5.10.16",
-    "nodemon": "^2.0.6",
-    "passport": "^0.4.1",
-    "passport-facebook": "^3.0.0",
-    "passport-github2": "^0.1.12",
-    "passport-google-oauth20": "^2.0.0",
-    "pretty-quick": "^3.1.0",
-    "react": "^16.13.1",
-    "stripe": "^8.132.0",
-    "sudo": "^1.0.3",
-    "tmp": "^0.2.1",
-    "url-pattern": "^1.0.3",
-    "yarn": "^1.22.4"
-  },
-  "devDependencies": {
-    "eslint": "^7.4.0",
-    "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.6",
-    "prettier": "^2.0.5"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:node/recommended"
-    ],
-    "rules": {
-      "func-names": "off",
-      "no-process-exit": "off",
-      "no-console": "off",
-      "no-unused-vars": "warn",
-      "object-shorthand": "off",
-      "class-methods-use-this": "off"
+    "name": "ninja-prep",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/server.js",
+    "engines": {
+        "node": ">=14.x"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "nodemon --verbose --config nodemon.json server.ts",
+        "client": "cd ../client && yarn start",
+        "prod": "cross-env NODE_ENV=production  ts-node --files server.ts",
+        "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@stripe/stripe-js": "^1.11.0",
+        "@types/stripe": "^8.0.417",
+        "body-parser": "^1.19.0",
+        "concurrently": "^5.3.0",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.5",
+        "cookie-session": "^1.4.0",
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.2",
+        "express": "^4.17.1",
+        "express-list-endpoints": "^5.0.0",
+        "express-session": "^1.17.1",
+        "got": "^11.8.2",
+        "lint-staged": "^10.5.3",
+        "lodash": "^4.17.20",
+        "mongoose": "^5.10.16",
+        "nodemon": "^2.0.6",
+        "passport": "^0.4.1",
+        "passport-facebook": "^3.0.0",
+        "passport-github2": "^0.1.12",
+        "passport-google-oauth20": "^2.0.0",
+        "pretty-quick": "^3.1.0",
+        "react": "^16.13.1",
+        "stripe": "^8.132.0",
+        "yarn": "^1.22.4"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.19.0",
+        "@types/cookie-parser": "^1.4.2",
+        "@types/cookie-session": "^2.0.42",
+        "@types/cors": "^2.8.10",
+        "@types/express": "^4.17.11",
+        "@types/express-session": "^1.17.3",
+        "@types/lodash": "^4.14.168",
+        "@types/passport-google-oauth20": "^2.0.7",
+        "eslint": "^7.4.0",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.21.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "husky": "^4.3.6",
+        "prettier": "^2.0.5",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.4"
+    },
+    "eslintConfig": {
+        "extends": [
+            "plugin:node/recommended"
+        ],
+        "rules": {
+            "func-names": "off",
+            "no-process-exit": "off",
+            "no-console": "off",
+            "no-unused-vars": "warn",
+            "object-shorthand": "off",
+            "class-methods-use-this": "off"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "eslint --fix"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     }
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint --fix"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
 }
