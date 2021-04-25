@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Premium.css'
+import '../premium.css'
 import { Container } from 'react-bootstrap'
 import { PREMIUM_HEADER_TITLE, PREMIUM_HEADER_DESCRIPTION } from './PremiumHeaderStringIds'
 import { DarkNavbarNinjaPrepLogo } from '../../Partials/Logos/NinjaPrepLogos'

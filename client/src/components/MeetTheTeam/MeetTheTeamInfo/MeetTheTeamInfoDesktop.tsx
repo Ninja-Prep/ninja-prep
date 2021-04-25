@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Container } from 'react-bootstrap'
-import '../MeetTheTeam.css'
+import '../meettheteam.css'
 import { ALEX_NGUYEN_PHOTO, ANGELA_SUN_PHOTO, ANGELA_YEUNG_PHOTO, JOANNE_CHEONG_PHOTO } from './MeetTheTeamImages'
 import {
     ALEX_NGUYEN,

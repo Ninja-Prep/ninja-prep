@@ -5,6 +5,8 @@ import { SUBSCRIBE_BUTTON } from './PlansStringIds'
 import { Card, Row, Col, Button } from 'react-bootstrap'
 
 export interface Plan {
+    mode: string
+    priceKey: string
     title: string
     description: string
     cost: string
@@ -21,35 +23,34 @@ interface StripeInterface extends Plan {
 }
 
 export const PLAN_A: Plan = {
+    mode: 'payment',
+    priceKey: 'price_1IFSi9D8LTDC9rJz3fLG14zX',
     title: 'Plan A',
-    cost: '$35',
+    cost: '$5',
     description: 'Access to guided and convenient features, all in one platform.',
     backgroundColor: 'plan-a'
 }
 export const PLAN_B = {
+    mode: 'subscription',
+    priceKey: 'price_1IjseOD8LTDC9rJz8vEdFJ2V',
     title: 'Plan B',
-    cost: '$35',
+    cost: '$100',
     description: 'Access to guided and convenient features, all in one platform.',
     backgroundColor: 'plan-b'
 }
-export const PLAN_C = {
-    title: 'Plan C',
-    cost: '$35',
-    description: 'Access to guided and convenient features, all in one platform.',
-    backgroundColor: 'plan-c'
-}
 
 export const PlanCardsList: PlanCards = {
-    plans: [PLAN_A, PLAN_B, PLAN_C]
+    plans: [PLAN_A, PLAN_B]
 }
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 
-export const RedirectToCheckoutForm = (stripe: Stripe | null, urlString: string) => {
+export const RedirectToCheckoutForm = (stripe: Stripe | null, urlString: string, priceKey: string, mode: string) => {
     Axios({
         method: 'POST',
-        url: urlString
+        url: urlString,
+        data: { priceKey: priceKey, mode: mode }
     }).then((res) => {
         stripe?.redirectToCheckout({
             sessionId: res.data.sessionId
@@ -77,7 +78,10 @@ export function PlanCard(props: StripeInterface) {
                 <Card.Text>{props.description}</Card.Text>
             </Card.Body>
             <div className="mx-auto pb-4">
-                <Button onClick={() => RedirectToCheckoutForm(props.stripe, props.url)} variant="outline-secondary">
+                <Button
+                    onClick={() => RedirectToCheckoutForm(props.stripe, props.url, props.priceKey, props.mode)}
+                    variant="outline-secondary"
+                >
                     <p className="lead">{SUBSCRIBE_BUTTON}</p>
                 </Button>
             </div>

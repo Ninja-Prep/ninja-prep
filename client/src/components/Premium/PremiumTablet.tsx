@@ -3,7 +3,7 @@ import PremiumHeaderTablet from './PremiumHeader/PremiumHeaderTablet'
 import PlansTablet from './Plans/PlansTablet'
 import BenefitsTablet from './Benefits/BenefitsTablet'
 import PremiumFAQTablet from './PremiumFAQ/PremiumFAQTablet'
-import './Premium.css'
+import './premium.css'
 
 function PremiumTablet() {
     return (

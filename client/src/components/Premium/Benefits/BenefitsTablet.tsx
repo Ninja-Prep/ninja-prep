@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Premium.css'
+import '../premium.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import DoneIcon from '@material-ui/icons/Done'
 import { BENEFIT_1, BENEFIT_2, BENEFIT_3, BENEFIT_4, BENEFIT_5, BENEFIT_6 } from './BenefitsStringIds'

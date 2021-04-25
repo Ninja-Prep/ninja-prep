@@ -16,11 +16,11 @@ Router.post("/create-checkout-session", async (req, res) => {
   // for additional parameters to pass.
   try {
     const session = await stripe.checkout.sessions.create({
-      mode: "payment",
+      mode: req.body.mode,
       payment_method_types: ["card"],
       line_items: [
         {
-          price: "price_1IFSi9D8LTDC9rJz3fLG14zX",
+          price: req.body.priceKey,
           // For metered billing, do not pass quantity
           quantity: 1,
         },

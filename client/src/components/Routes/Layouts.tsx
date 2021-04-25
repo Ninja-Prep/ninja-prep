@@ -9,7 +9,7 @@ other components
 import React, { FunctionComponent } from 'react'
 import FooterBarComponent from '../Partials/FooterBar/FooterBarComponent'
 import NavigationBarComponent from '../Partials/NavigationBar/NavigationBarComponent'
-import './Layouts.css'
+import './layouts.css'
 
 interface Props {
     children: React.ReactChild

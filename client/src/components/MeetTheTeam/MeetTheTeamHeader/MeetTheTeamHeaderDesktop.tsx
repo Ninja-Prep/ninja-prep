@@ -1,5 +1,5 @@
 import React from 'react'
-import '../MeetTheTeam.css'
+import '../meettheteam.css'
 import {
     MEET_THE_TEAM_HEADER_TITLE,
     MEET_THE_TEAM_HEADER_DESCRIPTION_1,

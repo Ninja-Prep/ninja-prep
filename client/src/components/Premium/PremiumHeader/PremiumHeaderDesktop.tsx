@@ -1,6 +1,6 @@
 import React from 'react'
 import { DarkNavbarNinjaPrepLogo } from '../../Partials/Logos/NinjaPrepLogos'
-import '../Premium.css'
+import '../premium.css'
 import { PREMIUM_HEADER_TITLE, PREMIUM_HEADER_DESCRIPTION } from './PremiumHeaderStringIds'
 
 function PremiumHeaderDesktop() {
