@@ -20,6 +20,7 @@ RUN yarn build
 WORKDIR /usr/src/app/server
 COPY ./server ./
 RUN yarn install --silent
+RUN yarn build
 
 # Exports
 EXPOSE 5000
