@@ -41,9 +41,7 @@
         "pretty-quick": "^3.1.0",
         "react": "^16.13.1",
         "stripe": "^8.132.0",
-        "yarn": "^1.22.4"
-    },
-    "devDependencies": {
+        "yarn": "^1.22.4",
         "@types/body-parser": "^1.19.0",
         "@types/cookie-parser": "^1.4.2",
         "@types/cookie-session": "^2.0.42",
@@ -52,6 +50,9 @@
         "@types/express-session": "^1.17.3",
         "@types/lodash": "^4.14.168",
         "@types/passport-google-oauth20": "^2.0.7",
+        "typescript": "^4.2.4"
+    },
+    "devDependencies": {
         "eslint": "^7.4.0",
         "eslint-config-node": "^4.1.0",
         "eslint-config-prettier": "^6.11.0",
