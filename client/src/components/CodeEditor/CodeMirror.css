@@ -1,26 +1,42 @@
+/* Ensure page uses 100% viewport and does not scroll */
+.viewport-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#root {
+    height: 100%;
+}
+
+body {
+    padding-bottom: 0px !important;
+}
+
 .CodeMirror {
     height: 100% !important;
     width: 100% !important;
-    background-color: #404053 !important;
+}
+.CodeMirror * {
+    font-family: 'Fira Code';
 }
 
-.CodeMirror-gutters {
-    background-color: #292936 !important;
-    padding-right: 5px;
-    margin-right: 5px;
-    border-right: 1px solid #292936 !important;
+.outer-flexbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.CodeMirror-selected {
-    background-color: #292936 !important;
+.middle-flexbox-wrapper {
+    flex: 1 1 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
 }
 
-.CodeMirror-activeline-background {
-    background: #292936 !important;
-}
-.viewport-height {
-    /* height: calc(100vh - 70px); */
-    height: 100vh;
+.inner-flexbox-wrapper {
+    flex: 1 1 auto;
+    overflow: hidden;
 }
 
 .submit-area {
@@ -28,18 +44,27 @@
 }
 
 .code-editor-settings-area {
-    background-color: #404053;
     border-bottom: black 1px solid;
 }
 
-.test-case-container {
-    background-color: #404053;
+.reflex-splitter-horizontal-editor-testcase {
+    height: 13px !important;
+    background-color: #d1d1d1 !important;
+    border-color: #f3f7f8 !important;
 }
 
-.code-splitter {
-    background-color: #2a2a3a;
+.reflex-element-testcase-area {
+    background-color: #f3f7f8 !important;
 }
-/* 
+
+.reflex-element-hide-overflow {
+    overflow-x: hidden !important;
+}
+
+.settings-area-flex {
+    flex: none;
+}
+
 .run-code-btn {
     border-radius: 30px;
-} */
+}

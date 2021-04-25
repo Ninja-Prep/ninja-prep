@@ -1,0 +1,19 @@
+.content-tabs-link .nav-tabs .nav-link {
+    color: rgb(167, 161, 161);
+}
+
+.content-tabs-link .nav-tabs .nav-link.active {
+    color: black;
+}
+
+pre {
+    border-radius: 5px;
+    background-color: #ebebeb88;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-family: 'Fira Code';
+}
+
+h5 {
+    font-weight: bold;
+}

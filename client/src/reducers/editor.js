@@ -1,6 +1,9 @@
+import { modeOptions } from "../components/CodeEditor/UserSettings/CodeEditorLanguages"
+
 const initialState = {
-    theme: 'material',
+    theme: 'github',
     mode: 'text/x-java',
+    language: modeOptions.find(_ => _.value == 'text/x-java').label
 }
 
 const editorReducer = (state = initialState, action) => {
@@ -14,6 +17,7 @@ const editorReducer = (state = initialState, action) => {
             return {
                 ...state,
                 mode: action.mode,
+                language: modeOptions.find(_ => _.value == action.mode).label
             }
 
         default:

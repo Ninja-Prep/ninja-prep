@@ -1,0 +1,1583 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <NavigationBarComponent>
+    <div>
+      <Desktop>
+        <NavigationBarDesktop>
+          <Navbar
+            className="px-5 py-3 navigation-bar"
+            collapseOnSelect={false}
+            expand="lg"
+            fixed="top"
+            variant="dark"
+          >
+            <nav
+              className="px-5 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
+            >
+              <NavbarBrand
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
+                className="pl-5 ml-5"
+                to="/"
+              >
+                <Link
+                  className="pl-5 ml-5 navbar-brand"
+                  to="/"
+                >
+                  <LinkAnchor
+                    className="pl-5 ml-5 navbar-brand"
+                    href="/"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="pl-5 ml-5 navbar-brand"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <LightNavbarNinjaPrepLogo
+                        height={40}
+                        width={100}
+                      >
+                        <svg
+                          height={40}
+                          viewBox="0 0 200 57"
+                          width={100}
+                        >
+                          <g
+                            data-name="Group 120"
+                            id="Group_120"
+                            transform="translate(-1157 -10208)"
+                          >
+                            <text
+                              fill="#f9fbfd"
+                              font-family="SourceSansPro-Bold, Source Sans Pro"
+                              font-size="40"
+                              font-weight="700"
+                              id="NinjaPrep"
+                              transform="translate(1157 10249)"
+                            >
+                              <tspan
+                                x="0"
+                                y="0"
+                              >
+                                NinjaPrep
+                              </tspan>
+                            </text>
+                            <circle
+                              cx="7.5"
+                              cy="7.5"
+                              data-name="Ellipse 44"
+                              fill="#25d0f3"
+                              id="Ellipse_44"
+                              r="7.5"
+                              transform="translate(1342 10237)"
+                            />
+                          </g>
+                        </svg>
+                      </LightNavbarNinjaPrepLogo>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavbarBrand>
+              <NavbarToggle
+                aria-controls="basic-navbar-nav"
+                label="Toggle navigation"
+              >
+                <button
+                  aria-controls="basic-navbar-nav"
+                  aria-label="Toggle navigation"
+                  className="navbar-toggler collapsed"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="navbar-toggler-icon"
+                  />
+                </button>
+              </NavbarToggle>
+              <NavbarCollapse
+                id="basic-navbar-nav"
+              >
+                <ForwardRef
+                  appear={false}
+                  getDimensionValue={[Function]}
+                  id="basic-navbar-nav"
+                  in={false}
+                  mountOnEnter={false}
+                  timeout={300}
+                  unmountOnExit={false}
+                >
+                  <Transition
+                    addEndListener={[Function]}
+                    appear={false}
+                    aria-expanded={null}
+                    enter={true}
+                    exit={true}
+                    id="basic-navbar-nav"
+                    in={false}
+                    mountOnEnter={false}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    timeout={300}
+                    unmountOnExit={false}
+                  >
+                    <div
+                      aria-expanded={null}
+                      className="navbar-collapse collapse"
+                      id="basic-navbar-nav"
+                    >
+                      <Nav
+                        className="ml-auto pr-5 mr-5"
+                        fill={false}
+                        justify={false}
+                      >
+                        <ForwardRef
+                          as="div"
+                          className="ml-auto pr-5 mr-5 navbar-nav"
+                          onSelect={[Function]}
+                        >
+                          <div
+                            className="ml-auto pr-5 mr-5 navbar-nav"
+                            onKeyDown={[Function]}
+                          >
+                            <NavigationBarLinks>
+                              <NavLink
+                                as={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "displayName": "Link",
+                                    "propTypes": Object {
+                                      "innerRef": [Function],
+                                      "onClick": [Function],
+                                      "replace": [Function],
+                                      "target": [Function],
+                                      "to": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                className="pl-3"
+                                disabled={false}
+                                to="/premium"
+                              >
+                                <ForwardRef
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 nav-link"
+                                  disabled={false}
+                                  to="/premium"
+                                >
+                                  <Link
+                                    className="pl-3 nav-link"
+                                    data-rb-event-key={null}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="/premium"
+                                  >
+                                    <LinkAnchor
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      href="/premium"
+                                      navigate={[Function]}
+                                      onClick={[Function]}
+                                    >
+                                      <a
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/premium"
+                                        onClick={[Function]}
+                                      >
+                                        Get Premium
+                                      </a>
+                                    </LinkAnchor>
+                                  </Link>
+                                </ForwardRef>
+                              </NavLink>
+                              <NavLink
+                                as={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "displayName": "Link",
+                                    "propTypes": Object {
+                                      "innerRef": [Function],
+                                      "onClick": [Function],
+                                      "replace": [Function],
+                                      "target": [Function],
+                                      "to": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                className="pl-3"
+                                disabled={false}
+                                to="/challenges"
+                              >
+                                <ForwardRef
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 nav-link"
+                                  disabled={false}
+                                  to="/challenges"
+                                >
+                                  <Link
+                                    className="pl-3 nav-link"
+                                    data-rb-event-key={null}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="/challenges"
+                                  >
+                                    <LinkAnchor
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      href="/challenges"
+                                      navigate={[Function]}
+                                      onClick={[Function]}
+                                    >
+                                      <a
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/challenges"
+                                        onClick={[Function]}
+                                      >
+                                        Challenges
+                                      </a>
+                                    </LinkAnchor>
+                                  </Link>
+                                </ForwardRef>
+                              </NavLink>
+                              <NavLink
+                                as={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "displayName": "Link",
+                                    "propTypes": Object {
+                                      "innerRef": [Function],
+                                      "onClick": [Function],
+                                      "replace": [Function],
+                                      "target": [Function],
+                                      "to": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                className="pl-3"
+                                disabled={false}
+                                to="/about"
+                              >
+                                <ForwardRef
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 nav-link"
+                                  disabled={false}
+                                  to="/about"
+                                >
+                                  <Link
+                                    className="pl-3 nav-link"
+                                    data-rb-event-key={null}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="/about"
+                                  >
+                                    <LinkAnchor
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      href="/about"
+                                      navigate={[Function]}
+                                      onClick={[Function]}
+                                    >
+                                      <a
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/about"
+                                        onClick={[Function]}
+                                      >
+                                        Meet the Team
+                                      </a>
+                                    </LinkAnchor>
+                                  </Link>
+                                </ForwardRef>
+                              </NavLink>
+                            </NavigationBarLinks>
+                            <NavigationBarLoginDropdown
+                              handleShow={[Function]}
+                            >
+                              <NavigationBarLoggedOut
+                                handleShow={[Function]}
+                              >
+                                <NavLink
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 mr-5"
+                                  disabled={false}
+                                  onClick={[Function]}
+                                  to="#"
+                                >
+                                  <ForwardRef
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
+                                    className="pl-3 mr-5 nav-link"
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="#"
+                                  >
+                                    <Link
+                                      className="pl-3 mr-5 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      to="#"
+                                    >
+                                      <LinkAnchor
+                                        className="pl-3 mr-5 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/"
+                                        navigate={[Function]}
+                                        onClick={[Function]}
+                                      >
+                                        <a
+                                          className="pl-3 mr-5 nav-link"
+                                          data-rb-event-key={null}
+                                          disabled={false}
+                                          href="/"
+                                          onClick={[Function]}
+                                        >
+                                          Sign Up
+                                        </a>
+                                      </LinkAnchor>
+                                    </Link>
+                                  </ForwardRef>
+                                </NavLink>
+                              </NavigationBarLoggedOut>
+                            </NavigationBarLoginDropdown>
+                          </div>
+                        </ForwardRef>
+                      </Nav>
+                    </div>
+                  </Transition>
+                </ForwardRef>
+              </NavbarCollapse>
+              <NavigationBarLoginModalDesktop
+                handleClose={[Function]}
+                showShortcuts={false}
+              >
+                <Modal
+                  animation={true}
+                  autoFocus={true}
+                  backdrop={true}
+                  centered={true}
+                  dialogAs={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "ModalDialog",
+                      "render": [Function],
+                    }
+                  }
+                  enforceFocus={true}
+                  keyboard={true}
+                  onHide={[Function]}
+                  restoreFocus={true}
+                  show={false}
+                >
+                  <Modal
+                    autoFocus={true}
+                    backdrop={true}
+                    backdropTransition={[Function]}
+                    containerClassName="modal-open"
+                    enforceFocus={true}
+                    keyboard={true}
+                    manager={
+                      BootstrapModalManager {
+                        "containers": Array [],
+                        "data": Array [],
+                        "handleContainerOverflow": true,
+                        "hideSiblingNodes": true,
+                        "modals": Array [],
+                        "scrollbarSize": 0,
+                      }
+                    }
+                    onEnter={[Function]}
+                    onEntering={[Function]}
+                    onEscapeKeyDown={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onHide={[Function]}
+                    renderBackdrop={[Function]}
+                    renderDialog={[Function]}
+                    restoreFocus={true}
+                    show={false}
+                    transition={[Function]}
+                  />
+                </Modal>
+              </NavigationBarLoginModalDesktop>
+            </nav>
+          </Navbar>
+        </NavigationBarDesktop>
+      </Desktop>
+      <Tablet />
+      <Mobile />
+    </div>
+  </NavigationBarComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <NavigationBarComponent>
+    <div>
+      <Desktop />
+      <Tablet />
+      <Mobile>
+        <NavigationBarMobile>
+          <Navbar
+            className="pr-5 pl-2 py-3 navigation-bar"
+            collapseOnSelect={false}
+            expand="lg"
+            fixed="top"
+            variant="dark"
+          >
+            <nav
+              className="pr-5 pl-2 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
+            >
+              <NavbarBrand
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
+                className="pl-5 ml-5"
+                to="/"
+              >
+                <Link
+                  className="pl-5 ml-5 navbar-brand"
+                  to="/"
+                >
+                  <LinkAnchor
+                    className="pl-5 ml-5 navbar-brand"
+                    href="/"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="pl-5 ml-5 navbar-brand"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <LightNavbarNinjaPrepLogo
+                        height={40}
+                        width={100}
+                      >
+                        <svg
+                          height={40}
+                          viewBox="0 0 200 57"
+                          width={100}
+                        >
+                          <g
+                            data-name="Group 120"
+                            id="Group_120"
+                            transform="translate(-1157 -10208)"
+                          >
+                            <text
+                              fill="#f9fbfd"
+                              font-family="SourceSansPro-Bold, Source Sans Pro"
+                              font-size="40"
+                              font-weight="700"
+                              id="NinjaPrep"
+                              transform="translate(1157 10249)"
+                            >
+                              <tspan
+                                x="0"
+                                y="0"
+                              >
+                                NinjaPrep
+                              </tspan>
+                            </text>
+                            <circle
+                              cx="7.5"
+                              cy="7.5"
+                              data-name="Ellipse 44"
+                              fill="#25d0f3"
+                              id="Ellipse_44"
+                              r="7.5"
+                              transform="translate(1342 10237)"
+                            />
+                          </g>
+                        </svg>
+                      </LightNavbarNinjaPrepLogo>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavbarBrand>
+              <NavbarToggle
+                aria-controls="basic-navbar-nav"
+                label="Toggle navigation"
+              >
+                <button
+                  aria-controls="basic-navbar-nav"
+                  aria-label="Toggle navigation"
+                  className="navbar-toggler collapsed"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="navbar-toggler-icon"
+                  />
+                </button>
+              </NavbarToggle>
+              <NavbarCollapse
+                id="basic-navbar-nav"
+              >
+                <ForwardRef
+                  appear={false}
+                  getDimensionValue={[Function]}
+                  id="basic-navbar-nav"
+                  in={false}
+                  mountOnEnter={false}
+                  timeout={300}
+                  unmountOnExit={false}
+                >
+                  <Transition
+                    addEndListener={[Function]}
+                    appear={false}
+                    aria-expanded={null}
+                    enter={true}
+                    exit={true}
+                    id="basic-navbar-nav"
+                    in={false}
+                    mountOnEnter={false}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    timeout={300}
+                    unmountOnExit={false}
+                  >
+                    <div
+                      aria-expanded={null}
+                      className="navbar-collapse collapse"
+                      id="basic-navbar-nav"
+                    >
+                      <Nav
+                        className="ml-auto pr-5 mr-5"
+                        fill={false}
+                        justify={false}
+                      >
+                        <ForwardRef
+                          as="div"
+                          className="ml-auto pr-5 mr-5 navbar-nav"
+                          onSelect={[Function]}
+                        >
+                          <div
+                            className="ml-auto pr-5 mr-5 navbar-nav"
+                            onKeyDown={[Function]}
+                          >
+                            <NavigationBarLinks>
+                              <NavLink
+                                as={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "displayName": "Link",
+                                    "propTypes": Object {
+                                      "innerRef": [Function],
+                                      "onClick": [Function],
+                                      "replace": [Function],
+                                      "target": [Function],
+                                      "to": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                className="pl-3"
+                                disabled={false}
+                                to="/premium"
+                              >
+                                <ForwardRef
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 nav-link"
+                                  disabled={false}
+                                  to="/premium"
+                                >
+                                  <Link
+                                    className="pl-3 nav-link"
+                                    data-rb-event-key={null}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="/premium"
+                                  >
+                                    <LinkAnchor
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      href="/premium"
+                                      navigate={[Function]}
+                                      onClick={[Function]}
+                                    >
+                                      <a
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/premium"
+                                        onClick={[Function]}
+                                      >
+                                        Get Premium
+                                      </a>
+                                    </LinkAnchor>
+                                  </Link>
+                                </ForwardRef>
+                              </NavLink>
+                              <NavLink
+                                as={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "displayName": "Link",
+                                    "propTypes": Object {
+                                      "innerRef": [Function],
+                                      "onClick": [Function],
+                                      "replace": [Function],
+                                      "target": [Function],
+                                      "to": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                className="pl-3"
+                                disabled={false}
+                                to="/challenges"
+                              >
+                                <ForwardRef
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 nav-link"
+                                  disabled={false}
+                                  to="/challenges"
+                                >
+                                  <Link
+                                    className="pl-3 nav-link"
+                                    data-rb-event-key={null}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="/challenges"
+                                  >
+                                    <LinkAnchor
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      href="/challenges"
+                                      navigate={[Function]}
+                                      onClick={[Function]}
+                                    >
+                                      <a
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/challenges"
+                                        onClick={[Function]}
+                                      >
+                                        Challenges
+                                      </a>
+                                    </LinkAnchor>
+                                  </Link>
+                                </ForwardRef>
+                              </NavLink>
+                              <NavLink
+                                as={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "displayName": "Link",
+                                    "propTypes": Object {
+                                      "innerRef": [Function],
+                                      "onClick": [Function],
+                                      "replace": [Function],
+                                      "target": [Function],
+                                      "to": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                className="pl-3"
+                                disabled={false}
+                                to="/about"
+                              >
+                                <ForwardRef
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 nav-link"
+                                  disabled={false}
+                                  to="/about"
+                                >
+                                  <Link
+                                    className="pl-3 nav-link"
+                                    data-rb-event-key={null}
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="/about"
+                                  >
+                                    <LinkAnchor
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      href="/about"
+                                      navigate={[Function]}
+                                      onClick={[Function]}
+                                    >
+                                      <a
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/about"
+                                        onClick={[Function]}
+                                      >
+                                        Meet the Team
+                                      </a>
+                                    </LinkAnchor>
+                                  </Link>
+                                </ForwardRef>
+                              </NavLink>
+                            </NavigationBarLinks>
+                            <NavigationBarLoginDropdown
+                              handleShow={[Function]}
+                            >
+                              <NavigationBarLoggedOut
+                                handleShow={[Function]}
+                              >
+                                <NavLink
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3 mr-5"
+                                  disabled={false}
+                                  onClick={[Function]}
+                                  to="#"
+                                >
+                                  <ForwardRef
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
+                                    className="pl-3 mr-5 nav-link"
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="#"
+                                  >
+                                    <Link
+                                      className="pl-3 mr-5 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      to="#"
+                                    >
+                                      <LinkAnchor
+                                        className="pl-3 mr-5 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/"
+                                        navigate={[Function]}
+                                        onClick={[Function]}
+                                      >
+                                        <a
+                                          className="pl-3 mr-5 nav-link"
+                                          data-rb-event-key={null}
+                                          disabled={false}
+                                          href="/"
+                                          onClick={[Function]}
+                                        >
+                                          Sign Up
+                                        </a>
+                                      </LinkAnchor>
+                                    </Link>
+                                  </ForwardRef>
+                                </NavLink>
+                              </NavigationBarLoggedOut>
+                            </NavigationBarLoginDropdown>
+                          </div>
+                        </ForwardRef>
+                      </Nav>
+                      <NavigationBarLoginModalMobile
+                        handleClose={[Function]}
+                        showShortcuts={false}
+                      >
+                        <Modal
+                          animation={true}
+                          autoFocus={true}
+                          backdrop={true}
+                          centered={true}
+                          className="px-5"
+                          dialogAs={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "ModalDialog",
+                              "render": [Function],
+                            }
+                          }
+                          enforceFocus={true}
+                          keyboard={true}
+                          onHide={[Function]}
+                          restoreFocus={true}
+                          show={false}
+                        >
+                          <Modal
+                            autoFocus={true}
+                            backdrop={true}
+                            backdropTransition={[Function]}
+                            containerClassName="modal-open"
+                            enforceFocus={true}
+                            keyboard={true}
+                            manager={
+                              BootstrapModalManager {
+                                "containers": Array [],
+                                "data": Array [],
+                                "handleContainerOverflow": true,
+                                "hideSiblingNodes": true,
+                                "modals": Array [],
+                                "scrollbarSize": 0,
+                              }
+                            }
+                            onEnter={[Function]}
+                            onEntering={[Function]}
+                            onEscapeKeyDown={[Function]}
+                            onExit={[Function]}
+                            onExited={[Function]}
+                            onHide={[Function]}
+                            renderBackdrop={[Function]}
+                            renderDialog={[Function]}
+                            restoreFocus={true}
+                            show={false}
+                            transition={[Function]}
+                          />
+                        </Modal>
+                      </NavigationBarLoginModalMobile>
+                    </div>
+                  </Transition>
+                </ForwardRef>
+              </NavbarCollapse>
+            </nav>
+          </Navbar>
+        </NavigationBarMobile>
+      </Mobile>
+    </div>
+  </NavigationBarComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <NavigationBarComponent>
+    <div>
+      <Desktop />
+      <Tablet>
+        <NavigationBarTablet>
+          <Navbar
+            className="px-5 py-3 navigation-bar"
+            collapseOnSelect={false}
+            expand="lg"
+            fixed="top"
+            variant="dark"
+          >
+            <nav
+              className="px-5 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
+            >
+              <div
+                className="container p-0"
+              >
+                <NavbarBrand
+                  as={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "Link",
+                      "propTypes": Object {
+                        "innerRef": [Function],
+                        "onClick": [Function],
+                        "replace": [Function],
+                        "target": [Function],
+                        "to": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
+                  to="/"
+                >
+                  <Link
+                    className="navbar-brand"
+                    to="/"
+                  >
+                    <LinkAnchor
+                      className="navbar-brand"
+                      href="/"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="navbar-brand"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <LightNavbarNinjaPrepLogo
+                          height={40}
+                          width={100}
+                        >
+                          <svg
+                            height={40}
+                            viewBox="0 0 200 57"
+                            width={100}
+                          >
+                            <g
+                              data-name="Group 120"
+                              id="Group_120"
+                              transform="translate(-1157 -10208)"
+                            >
+                              <text
+                                fill="#f9fbfd"
+                                font-family="SourceSansPro-Bold, Source Sans Pro"
+                                font-size="40"
+                                font-weight="700"
+                                id="NinjaPrep"
+                                transform="translate(1157 10249)"
+                              >
+                                <tspan
+                                  x="0"
+                                  y="0"
+                                >
+                                  NinjaPrep
+                                </tspan>
+                              </text>
+                              <circle
+                                cx="7.5"
+                                cy="7.5"
+                                data-name="Ellipse 44"
+                                fill="#25d0f3"
+                                id="Ellipse_44"
+                                r="7.5"
+                                transform="translate(1342 10237)"
+                              />
+                            </g>
+                          </svg>
+                        </LightNavbarNinjaPrepLogo>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </NavbarBrand>
+                <NavbarToggle
+                  aria-controls="basic-navbar-nav"
+                  label="Toggle navigation"
+                >
+                  <button
+                    aria-controls="basic-navbar-nav"
+                    aria-label="Toggle navigation"
+                    className="navbar-toggler collapsed"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="navbar-toggler-icon"
+                    />
+                  </button>
+                </NavbarToggle>
+                <NavbarCollapse
+                  id="basic-navbar-nav"
+                >
+                  <ForwardRef
+                    appear={false}
+                    getDimensionValue={[Function]}
+                    id="basic-navbar-nav"
+                    in={false}
+                    mountOnEnter={false}
+                    timeout={300}
+                    unmountOnExit={false}
+                  >
+                    <Transition
+                      addEndListener={[Function]}
+                      appear={false}
+                      aria-expanded={null}
+                      enter={true}
+                      exit={true}
+                      id="basic-navbar-nav"
+                      in={false}
+                      mountOnEnter={false}
+                      onEnter={[Function]}
+                      onEntered={[Function]}
+                      onEntering={[Function]}
+                      onExit={[Function]}
+                      onExited={[Function]}
+                      onExiting={[Function]}
+                      timeout={300}
+                      unmountOnExit={false}
+                    >
+                      <div
+                        aria-expanded={null}
+                        className="navbar-collapse collapse"
+                        id="basic-navbar-nav"
+                      >
+                        <Nav
+                          className="ml-auto"
+                          fill={false}
+                          justify={false}
+                        >
+                          <ForwardRef
+                            as="div"
+                            className="ml-auto navbar-nav"
+                            onSelect={[Function]}
+                          >
+                            <div
+                              className="ml-auto navbar-nav"
+                              onKeyDown={[Function]}
+                            >
+                              <NavigationBarLinks>
+                                <NavLink
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3"
+                                  disabled={false}
+                                  to="/premium"
+                                >
+                                  <ForwardRef
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
+                                    className="pl-3 nav-link"
+                                    disabled={false}
+                                    to="/premium"
+                                  >
+                                    <Link
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      to="/premium"
+                                    >
+                                      <LinkAnchor
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/premium"
+                                        navigate={[Function]}
+                                        onClick={[Function]}
+                                      >
+                                        <a
+                                          className="pl-3 nav-link"
+                                          data-rb-event-key={null}
+                                          disabled={false}
+                                          href="/premium"
+                                          onClick={[Function]}
+                                        >
+                                          Get Premium
+                                        </a>
+                                      </LinkAnchor>
+                                    </Link>
+                                  </ForwardRef>
+                                </NavLink>
+                                <NavLink
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3"
+                                  disabled={false}
+                                  to="/challenges"
+                                >
+                                  <ForwardRef
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
+                                    className="pl-3 nav-link"
+                                    disabled={false}
+                                    to="/challenges"
+                                  >
+                                    <Link
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      to="/challenges"
+                                    >
+                                      <LinkAnchor
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/challenges"
+                                        navigate={[Function]}
+                                        onClick={[Function]}
+                                      >
+                                        <a
+                                          className="pl-3 nav-link"
+                                          data-rb-event-key={null}
+                                          disabled={false}
+                                          href="/challenges"
+                                          onClick={[Function]}
+                                        >
+                                          Challenges
+                                        </a>
+                                      </LinkAnchor>
+                                    </Link>
+                                  </ForwardRef>
+                                </NavLink>
+                                <NavLink
+                                  as={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "displayName": "Link",
+                                      "propTypes": Object {
+                                        "innerRef": [Function],
+                                        "onClick": [Function],
+                                        "replace": [Function],
+                                        "target": [Function],
+                                        "to": [Function],
+                                      },
+                                      "render": [Function],
+                                    }
+                                  }
+                                  className="pl-3"
+                                  disabled={false}
+                                  to="/about"
+                                >
+                                  <ForwardRef
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
+                                    className="pl-3 nav-link"
+                                    disabled={false}
+                                    to="/about"
+                                  >
+                                    <Link
+                                      className="pl-3 nav-link"
+                                      data-rb-event-key={null}
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      to="/about"
+                                    >
+                                      <LinkAnchor
+                                        className="pl-3 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        href="/about"
+                                        navigate={[Function]}
+                                        onClick={[Function]}
+                                      >
+                                        <a
+                                          className="pl-3 nav-link"
+                                          data-rb-event-key={null}
+                                          disabled={false}
+                                          href="/about"
+                                          onClick={[Function]}
+                                        >
+                                          Meet the Team
+                                        </a>
+                                      </LinkAnchor>
+                                    </Link>
+                                  </ForwardRef>
+                                </NavLink>
+                              </NavigationBarLinks>
+                              <NavigationBarLoginDropdown
+                                handleShow={[Function]}
+                              >
+                                <NavigationBarLoggedOut
+                                  handleShow={[Function]}
+                                >
+                                  <NavLink
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
+                                    className="pl-3 mr-5"
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    to="#"
+                                  >
+                                    <ForwardRef
+                                      as={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "Link",
+                                          "propTypes": Object {
+                                            "innerRef": [Function],
+                                            "onClick": [Function],
+                                            "replace": [Function],
+                                            "target": [Function],
+                                            "to": [Function],
+                                          },
+                                          "render": [Function],
+                                        }
+                                      }
+                                      className="pl-3 mr-5 nav-link"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      to="#"
+                                    >
+                                      <Link
+                                        className="pl-3 mr-5 nav-link"
+                                        data-rb-event-key={null}
+                                        disabled={false}
+                                        onClick={[Function]}
+                                        to="#"
+                                      >
+                                        <LinkAnchor
+                                          className="pl-3 mr-5 nav-link"
+                                          data-rb-event-key={null}
+                                          disabled={false}
+                                          href="/"
+                                          navigate={[Function]}
+                                          onClick={[Function]}
+                                        >
+                                          <a
+                                            className="pl-3 mr-5 nav-link"
+                                            data-rb-event-key={null}
+                                            disabled={false}
+                                            href="/"
+                                            onClick={[Function]}
+                                          >
+                                            Sign Up
+                                          </a>
+                                        </LinkAnchor>
+                                      </Link>
+                                    </ForwardRef>
+                                  </NavLink>
+                                </NavigationBarLoggedOut>
+                              </NavigationBarLoginDropdown>
+                            </div>
+                          </ForwardRef>
+                        </Nav>
+                      </div>
+                    </Transition>
+                  </ForwardRef>
+                </NavbarCollapse>
+                <NavigationBarLoginModalTablet
+                  handleClose={[Function]}
+                  showShortcuts={false}
+                >
+                  <Modal
+                    animation={true}
+                    autoFocus={true}
+                    backdrop={true}
+                    centered={true}
+                    dialogAs={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "displayName": "ModalDialog",
+                        "render": [Function],
+                      }
+                    }
+                    enforceFocus={true}
+                    keyboard={true}
+                    onHide={[Function]}
+                    restoreFocus={true}
+                    show={false}
+                  >
+                    <Modal
+                      autoFocus={true}
+                      backdrop={true}
+                      backdropTransition={[Function]}
+                      containerClassName="modal-open"
+                      enforceFocus={true}
+                      keyboard={true}
+                      manager={
+                        BootstrapModalManager {
+                          "containers": Array [],
+                          "data": Array [],
+                          "handleContainerOverflow": true,
+                          "hideSiblingNodes": true,
+                          "modals": Array [],
+                          "scrollbarSize": 0,
+                        }
+                      }
+                      onEnter={[Function]}
+                      onEntering={[Function]}
+                      onEscapeKeyDown={[Function]}
+                      onExit={[Function]}
+                      onExited={[Function]}
+                      onHide={[Function]}
+                      renderBackdrop={[Function]}
+                      renderDialog={[Function]}
+                      restoreFocus={true}
+                      show={false}
+                      transition={[Function]}
+                    />
+                  </Modal>
+                </NavigationBarLoginModalTablet>
+              </div>
+            </nav>
+          </Navbar>
+        </NavigationBarTablet>
+      </Tablet>
+      <Mobile />
+    </div>
+  </NavigationBarComponent>
+</Router>
+`;

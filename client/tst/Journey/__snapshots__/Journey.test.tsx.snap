@@ -1,0 +1,813 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<JourneyComponent>
+  <div>
+    <Desktop>
+      <JourneyDesktop>
+        <div
+          className="pb-5 pt-4"
+        >
+          <Container
+            fluid={false}
+          >
+            <div
+              className="container"
+            >
+              <div
+                className="text-center pb-4"
+              >
+                <h3
+                  className="font-weight-bold pb-2"
+                >
+                  This might just be the easiest way to learn.
+                </h3>
+                <p
+                  className="lead"
+                >
+                  With everything you need, all in one platform.
+                </p>
+              </div>
+              <JourneyCard
+                backgroundImage="discover"
+                description="Choose from our wide selection of problems and go from beginner to mastery level."
+                imagePath="./images/Discover Img.png"
+                key="0"
+                title="Discover In-demand Concepts"
+              >
+                <Row
+                  className=" py-5 blob-bg discover"
+                  noGutters={false}
+                >
+                  <div
+                    className=" py-5 blob-bg discover row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Discover Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Discover In-demand Concepts
+                        </h4>
+                        <p
+                          className="w-75 lead text-secondary"
+                        >
+                          Choose from our wide selection of problems and go from beginner to mastery level.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                backgroundImage="videos"
+                description="Code alongside with our step-by-step videos that includes conceptual overview and visual diagrams"
+                imagePath="./images/Videos Img.png"
+                key="1"
+                title="Code Walkthroughs"
+              >
+                <Row
+                  className=" py-5 blob-bg videos"
+                  noGutters={false}
+                >
+                  <div
+                    className=" py-5 blob-bg videos row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Videos Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Code Walkthroughs
+                        </h4>
+                        <p
+                          className="w-75 lead text-secondary"
+                        >
+                          Code alongside with our step-by-step videos that includes conceptual overview and visual diagrams
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                backgroundImage="articles"
+                description="No matter your experience level, you'll learn complex concepts in and out."
+                imagePath="./images/Articles Img.png"
+                key="2"
+                title="In-depth Articles"
+              >
+                <Row
+                  className=" py-5 blob-bg articles"
+                  noGutters={false}
+                >
+                  <div
+                    className=" py-5 blob-bg articles row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Articles Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          In-depth Articles
+                        </h4>
+                        <p
+                          className="w-75 lead text-secondary"
+                        >
+                          No matter your experience level, you'll learn complex concepts in and out.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                backgroundImage="feedback"
+                description="Your code is tested once you press submit, so you always know if you're on the right track."
+                imagePath="./images/Feedback Img.png"
+                key="3"
+                title="Instant Feedback"
+              >
+                <Row
+                  className=" py-5 blob-bg feedback"
+                  noGutters={false}
+                >
+                  <div
+                    className=" py-5 blob-bg feedback row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Feedback Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Instant Feedback
+                        </h4>
+                        <p
+                          className="w-75 lead text-secondary"
+                        >
+                          Your code is tested once you press submit, so you always know if you're on the right track.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                backgroundImage="job"
+                description="Learn, practice, and apply your coding skills with NinjaPrep to take your programming career to the next level."
+                imagePath="./images/Job Img.png"
+                key="4"
+                title="Land your dream job"
+              >
+                <Row
+                  className=" py-5 blob-bg job"
+                  noGutters={false}
+                >
+                  <div
+                    className=" py-5 blob-bg job row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Job Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Land your dream job
+                        </h4>
+                        <p
+                          className="w-75 lead text-secondary"
+                        >
+                          Learn, practice, and apply your coding skills with NinjaPrep to take your programming career to the next level.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+            </div>
+          </Container>
+        </div>
+      </JourneyDesktop>
+    </Desktop>
+    <Tablet />
+    <Mobile />
+  </div>
+</JourneyComponent>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<JourneyComponent>
+  <div>
+    <Desktop />
+    <Tablet />
+    <Mobile>
+      <JourneyMobile>
+        <div
+          className="pb-5 pt-4"
+        >
+          <Container
+            fluid={false}
+          >
+            <div
+              className="container"
+            >
+              <div
+                className="text-center pb-4"
+              >
+                <h3
+                  className="font-weight-bold pb-2"
+                >
+                  This might just be the easiest way to learn.
+                </h3>
+                <p
+                  className="lead"
+                >
+                  With everything you need, all in one platform.
+                </p>
+              </div>
+              <JourneyCard
+                description="Choose from our wide selection of problems and go from beginner to mastery level."
+                imagePath="./images/Discover Img.png"
+                key="0"
+                title="Discover In-demand Concepts"
+              >
+                <Col
+                  className="py-5"
+                >
+                  <div
+                    className="py-5 col"
+                  >
+                    <Row
+                      className="mx-auto mb-2"
+                      noGutters={false}
+                    >
+                      <div
+                        className="mx-auto mb-2 row"
+                      >
+                        <img
+                          className="mx-auto img-fluid w-50"
+                          src="./images/Discover Img.png"
+                        />
+                      </div>
+                    </Row>
+                    <Row
+                      noGutters={false}
+                    >
+                      <div
+                        className="row"
+                      >
+                        <h4
+                          className="font-weight-bold mx-auto pb-2 text-center"
+                        >
+                          Discover In-demand Concepts
+                        </h4>
+                        <p
+                          className="lead text-secondary text-center"
+                        >
+                          Choose from our wide selection of problems and go from beginner to mastery level.
+                        </p>
+                      </div>
+                    </Row>
+                  </div>
+                </Col>
+              </JourneyCard>
+              <JourneyCard
+                description="Code alongside with our step-by-step videos that includes conceptual overview and visual diagrams"
+                imagePath="./images/Videos Img.png"
+                key="1"
+                title="Code Walkthroughs"
+              >
+                <Col
+                  className="py-5"
+                >
+                  <div
+                    className="py-5 col"
+                  >
+                    <Row
+                      className="mx-auto mb-2"
+                      noGutters={false}
+                    >
+                      <div
+                        className="mx-auto mb-2 row"
+                      >
+                        <img
+                          className="mx-auto img-fluid w-50"
+                          src="./images/Videos Img.png"
+                        />
+                      </div>
+                    </Row>
+                    <Row
+                      noGutters={false}
+                    >
+                      <div
+                        className="row"
+                      >
+                        <h4
+                          className="font-weight-bold mx-auto pb-2 text-center"
+                        >
+                          Code Walkthroughs
+                        </h4>
+                        <p
+                          className="lead text-secondary text-center"
+                        >
+                          Code alongside with our step-by-step videos that includes conceptual overview and visual diagrams
+                        </p>
+                      </div>
+                    </Row>
+                  </div>
+                </Col>
+              </JourneyCard>
+              <JourneyCard
+                description="No matter your experience level, you'll learn complex concepts in and out."
+                imagePath="./images/Articles Img.png"
+                key="2"
+                title="In-depth Articles"
+              >
+                <Col
+                  className="py-5"
+                >
+                  <div
+                    className="py-5 col"
+                  >
+                    <Row
+                      className="mx-auto mb-2"
+                      noGutters={false}
+                    >
+                      <div
+                        className="mx-auto mb-2 row"
+                      >
+                        <img
+                          className="mx-auto img-fluid w-50"
+                          src="./images/Articles Img.png"
+                        />
+                      </div>
+                    </Row>
+                    <Row
+                      noGutters={false}
+                    >
+                      <div
+                        className="row"
+                      >
+                        <h4
+                          className="font-weight-bold mx-auto pb-2 text-center"
+                        >
+                          In-depth Articles
+                        </h4>
+                        <p
+                          className="lead text-secondary text-center"
+                        >
+                          No matter your experience level, you'll learn complex concepts in and out.
+                        </p>
+                      </div>
+                    </Row>
+                  </div>
+                </Col>
+              </JourneyCard>
+              <JourneyCard
+                description="Your code is tested once you press submit, so you always know if you're on the right track."
+                imagePath="./images/Feedback Img.png"
+                key="3"
+                title="Instant Feedback"
+              >
+                <Col
+                  className="py-5"
+                >
+                  <div
+                    className="py-5 col"
+                  >
+                    <Row
+                      className="mx-auto mb-2"
+                      noGutters={false}
+                    >
+                      <div
+                        className="mx-auto mb-2 row"
+                      >
+                        <img
+                          className="mx-auto img-fluid w-50"
+                          src="./images/Feedback Img.png"
+                        />
+                      </div>
+                    </Row>
+                    <Row
+                      noGutters={false}
+                    >
+                      <div
+                        className="row"
+                      >
+                        <h4
+                          className="font-weight-bold mx-auto pb-2 text-center"
+                        >
+                          Instant Feedback
+                        </h4>
+                        <p
+                          className="lead text-secondary text-center"
+                        >
+                          Your code is tested once you press submit, so you always know if you're on the right track.
+                        </p>
+                      </div>
+                    </Row>
+                  </div>
+                </Col>
+              </JourneyCard>
+              <JourneyCard
+                description="Learn, practice, and apply your coding skills with NinjaPrep to take your programming career to the next level."
+                imagePath="./images/Job Img.png"
+                key="4"
+                title="Land your dream job"
+              >
+                <Col
+                  className="py-5"
+                >
+                  <div
+                    className="py-5 col"
+                  >
+                    <Row
+                      className="mx-auto mb-2"
+                      noGutters={false}
+                    >
+                      <div
+                        className="mx-auto mb-2 row"
+                      >
+                        <img
+                          className="mx-auto img-fluid w-50"
+                          src="./images/Job Img.png"
+                        />
+                      </div>
+                    </Row>
+                    <Row
+                      noGutters={false}
+                    >
+                      <div
+                        className="row"
+                      >
+                        <h4
+                          className="font-weight-bold mx-auto pb-2 text-center"
+                        >
+                          Land your dream job
+                        </h4>
+                        <p
+                          className="lead text-secondary text-center"
+                        >
+                          Learn, practice, and apply your coding skills with NinjaPrep to take your programming career to the next level.
+                        </p>
+                      </div>
+                    </Row>
+                  </div>
+                </Col>
+              </JourneyCard>
+            </div>
+          </Container>
+        </div>
+      </JourneyMobile>
+    </Mobile>
+  </div>
+</JourneyComponent>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<JourneyComponent>
+  <div>
+    <Desktop />
+    <Tablet>
+      <JourneyTablet>
+        <div
+          className="pb-5 pt-4"
+        >
+          <Container
+            fluid={false}
+          >
+            <div
+              className="container"
+            >
+              <div
+                className="text-center pb-4"
+              >
+                <h3
+                  className="font-weight-bold pb-2"
+                >
+                  This might just be the easiest way to learn.
+                </h3>
+                <p
+                  className="lead"
+                >
+                  With everything you need, all in one platform.
+                </p>
+              </div>
+              <JourneyCard
+                description="Choose from our wide selection of problems and go from beginner to mastery level."
+                imagePath="./images/Discover Img.png"
+                key="0"
+                title="Discover In-demand Concepts"
+              >
+                <Row
+                  className="py-5"
+                  noGutters={false}
+                >
+                  <div
+                    className="py-5 row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Discover Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Discover In-demand Concepts
+                        </h4>
+                        <p
+                          className="lead text-secondary"
+                        >
+                          Choose from our wide selection of problems and go from beginner to mastery level.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                description="Code alongside with our step-by-step videos that includes conceptual overview and visual diagrams"
+                imagePath="./images/Videos Img.png"
+                key="1"
+                title="Code Walkthroughs"
+              >
+                <Row
+                  className="py-5"
+                  noGutters={false}
+                >
+                  <div
+                    className="py-5 row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Videos Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Code Walkthroughs
+                        </h4>
+                        <p
+                          className="lead text-secondary"
+                        >
+                          Code alongside with our step-by-step videos that includes conceptual overview and visual diagrams
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                description="No matter your experience level, you'll learn complex concepts in and out."
+                imagePath="./images/Articles Img.png"
+                key="2"
+                title="In-depth Articles"
+              >
+                <Row
+                  className="py-5"
+                  noGutters={false}
+                >
+                  <div
+                    className="py-5 row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Articles Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          In-depth Articles
+                        </h4>
+                        <p
+                          className="lead text-secondary"
+                        >
+                          No matter your experience level, you'll learn complex concepts in and out.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                description="Your code is tested once you press submit, so you always know if you're on the right track."
+                imagePath="./images/Feedback Img.png"
+                key="3"
+                title="Instant Feedback"
+              >
+                <Row
+                  className="py-5"
+                  noGutters={false}
+                >
+                  <div
+                    className="py-5 row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Feedback Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Instant Feedback
+                        </h4>
+                        <p
+                          className="lead text-secondary"
+                        >
+                          Your code is tested once you press submit, so you always know if you're on the right track.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+              <JourneyCard
+                description="Learn, practice, and apply your coding skills with NinjaPrep to take your programming career to the next level."
+                imagePath="./images/Job Img.png"
+                key="4"
+                title="Land your dream job"
+              >
+                <Row
+                  className="py-5"
+                  noGutters={false}
+                >
+                  <div
+                    className="py-5 row"
+                  >
+                    <Col
+                      className="pr-5"
+                    >
+                      <div
+                        className="pr-5 col"
+                      >
+                        <img
+                          className="float-right img-fluid"
+                          src="./images/Job Img.png"
+                        />
+                      </div>
+                    </Col>
+                    <Col
+                      className="my-auto pl-5"
+                    >
+                      <div
+                        className="my-auto pl-5 col"
+                      >
+                        <h4
+                          className="font-weight-bold"
+                        >
+                          Land your dream job
+                        </h4>
+                        <p
+                          className="lead text-secondary"
+                        >
+                          Learn, practice, and apply your coding skills with NinjaPrep to take your programming career to the next level.
+                        </p>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </JourneyCard>
+            </div>
+          </Container>
+        </div>
+      </JourneyTablet>
+    </Tablet>
+    <Mobile />
+  </div>
+</JourneyComponent>
+`;

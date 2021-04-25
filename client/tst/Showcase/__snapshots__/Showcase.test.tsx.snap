@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<ShowcaseComponent>
+  <div>
+    <Desktop>
+      <ShowcaseDesktop>
+        <div
+          className="py-5 showcase-bg"
+        >
+          <Container
+            fluid={false}
+          >
+            <div
+              className="container"
+            >
+              <div
+                className="text-center pb-4"
+              >
+                <h3
+                  className="font-weight-bold pb-2"
+                >
+                  Start investing in yourself now
+                </h3>
+                <p
+                  className="lead"
+                >
+                  Now sure where to begin? Click on a problem and starting learning!
+                </p>
+              </div>
+            </div>
+          </Container>
+        </div>
+      </ShowcaseDesktop>
+    </Desktop>
+    <Tablet />
+    <Mobile />
+  </div>
+</ShowcaseComponent>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<ShowcaseComponent>
+  <div>
+    <Desktop />
+    <Tablet />
+    <Mobile>
+      <ShowcaseMobile>
+        <div
+          className="py-5 showcase-bg"
+        >
+          <Container
+            fluid={false}
+          >
+            <div
+              className="container"
+            >
+              <div
+                className="text-center pb-4"
+              >
+                <h3
+                  className="font-weight-bold pb-2"
+                >
+                  Start investing in yourself now
+                </h3>
+                <p
+                  className="lead"
+                >
+                  Now sure where to begin? Click on a problem and starting learning!
+                </p>
+              </div>
+            </div>
+          </Container>
+        </div>
+      </ShowcaseMobile>
+    </Mobile>
+  </div>
+</ShowcaseComponent>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<ShowcaseComponent>
+  <div>
+    <Desktop />
+    <Tablet>
+      <ShowcaseTablet>
+        <div
+          className="py-5 showcase-bg"
+        >
+          <Container
+            fluid={false}
+          >
+            <div
+              className="container"
+            >
+              <div
+                className="text-center pb-4"
+              >
+                <h3
+                  className="font-weight-bold pb-2"
+                >
+                  Start investing in yourself now
+                </h3>
+                <p
+                  className="lead"
+                >
+                  Now sure where to begin? Click on a problem and starting learning!
+                </p>
+              </div>
+            </div>
+          </Container>
+        </div>
+      </ShowcaseTablet>
+    </Tablet>
+    <Mobile />
+  </div>
+</ShowcaseComponent>
+`;
