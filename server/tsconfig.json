@@ -14,6 +14,6 @@
         "baseUrl": ".",
         "typeRoots": ["./src/Types", "./@types", "./node_modules/@types"]
     },
-    "include": ["./src", "./src/Types/*"],
+    "include": ["./src", "./src/Types/*, ./config"],
     "preserveSymlinks": true
 }

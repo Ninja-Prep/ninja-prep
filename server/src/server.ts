@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express'
-import initializeMiddleWare from './src/MiddleWare/InitializeMiddlewareWrapper'
+import initializeMiddleWare from './MiddleWare/InitializeMiddlewareWrapper'
 
-import './src/MiddleWare/InitializePassport'
-import './src/MiddleWare/InitializeMongoose'
+import './MiddleWare/InitializePassport'
+import './MiddleWare/InitializeMongoose'
 import path from 'path'
 
 const app = express()
