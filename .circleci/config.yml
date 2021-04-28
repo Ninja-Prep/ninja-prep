@@ -48,7 +48,7 @@ jobs:
       - persist_to_workspace:
             root: .
             paths:
-                - ./npclient.tar
+                - ./client_image.tar 
       - run:
             name: Build Server Image
             command: |
@@ -59,7 +59,7 @@ jobs:
       - persist_to_workspace:
             root: .
             paths:
-                - ./npserver.tar
+                - ./server_image.tar
 
   publish-latest:
     executor: docker-publisher
