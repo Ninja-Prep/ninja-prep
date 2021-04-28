@@ -1,5 +1,5 @@
 import { default as _ } from 'lodash'
-import express, { Request, Response } from 'express'
+import express, { NextFunction, Request, Response } from 'express'
 import passport from 'passport'
 
 const router = express.Router()
@@ -38,7 +38,7 @@ router.get('/logout', (req: Request, res: Response) => {
 router.get(
     '/google/callback',
     passport.authenticate('google', {
-        failureRedirect: '/login'
+        failureRedirect: '/'
     }),
     (req: Request, res: Response) => {
         setUserCookie(req)

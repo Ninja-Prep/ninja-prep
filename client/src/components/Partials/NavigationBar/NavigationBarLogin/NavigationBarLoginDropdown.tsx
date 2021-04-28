@@ -69,7 +69,7 @@ function NavigationBarLoggedIn({ user }: { user: AuthUser }) {
                         {SETTINGS}
                     </DropdownItem>
                     <Dropdown.Divider />
-                    <DropdownItem url="/auth/logout" DropdownIcon={ExitToAppIcon}>
+                    <DropdownItem url="/api/auth/logout" DropdownIcon={ExitToAppIcon}>
                         {SIGN_OUT_NAVIGATION}
                     </DropdownItem>
                 </Dropdown.Menu>

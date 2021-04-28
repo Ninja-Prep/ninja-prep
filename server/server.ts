@@ -1,15 +1,12 @@
-import express, { Request, Response } from 'express'
-import initializeMiddleWare from './MiddleWare/InitializeMiddlewareWrapper'
+import express from 'express'
+import initializeMiddleWare from './src/MiddleWare/InitializeMiddlewareWrapper'
 
-import './MiddleWare/InitializePassport'
-import './MiddleWare/InitializeMongoose'
-import path from 'path'
+import './src/MiddleWare/InitializePassport'
+import './src/MiddleWare/InitializeMongoose'
 
 const app = express()
-
 initializeMiddleWare(app)
-
-const PORT = process.env.PORT || process.argv[2] || 5000
+const PORT = process.env.PORT || 8080
 
 let inProduction = false
 if (process.env.NODE_ENV) {
@@ -23,13 +20,14 @@ if (process.env.NODE_ENV) {
 // })
 console.log(`production is ${inProduction}`)
 
-if (inProduction) {
-    app.use(express.static(path.join(__dirname, '../../../', 'client', 'build')))
+// if (inProduction) {
+//     app.use(express.static(path.join(__dirname, '../../', 'client', 'build')))
 
-    app.get('/*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../../../', 'client', 'build', 'index.html'))
-    })
-}
+//     app.get('/*', (req, res) => {
+//         res.sendFile(path.join(__dirname, '../../', 'client', 'build', 'index.html'))
+//         return
+//     })
+// }
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`)

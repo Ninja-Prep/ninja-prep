@@ -9,9 +9,9 @@
     "scripts": {
         "build": "tsc -p .",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "server": "nodemon --verbose --config nodemon.json ./src/server.ts",
+        "server": "nodemon --verbose --config nodemon.json ./server.ts",
         "client": "cd ../client && yarn start",
-        "prod": "cross-env NODE_ENV=production node build/src/server.js",
+        "prod": "cross-env NODE_ENV=production node build/server.js",
         "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\""
     },
     "author": "",

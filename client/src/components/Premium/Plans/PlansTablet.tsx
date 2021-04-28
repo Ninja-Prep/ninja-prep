@@ -13,7 +13,7 @@ function PlansTablet() {
             <CardDeck>
                 {PlanCardsList.plans.map((plan, key) => (
                     <Row key={key} className="mx-auto container pb-5">
-                        <PlanCard {...plan} stripe={stripe} url={'/payment/create-checkout-session/'} />
+                        <PlanCard {...plan} stripe={stripe} url={'/api/payment/create-checkout-session/'} />
                     </Row>
                 ))}
             </CardDeck>

@@ -12,7 +12,7 @@ function PlansDesktop() {
             <Container>
                 <CardDeck className="m-0">
                     {PlanCardsList.plans.map((plan, key) => (
-                        <PlanCard {...plan} stripe={stripe} key={key} url={'/payment/create-checkout-session/'} />
+                        <PlanCard {...plan} stripe={stripe} key={key} url={'/api/payment/create-checkout-session/'} />
                     ))}
                 </CardDeck>
             </Container>

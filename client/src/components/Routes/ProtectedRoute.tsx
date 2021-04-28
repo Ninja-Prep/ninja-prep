@@ -29,7 +29,7 @@ class ProtectedRoute extends React.Component<Props, State> {
     }
 
     async getAuthStatus() {
-        const authStatus = await Axios.get('/auth/authenticationStatus')
+        const authStatus = await Axios.get('/api/auth/authenticationStatus')
         this.setState({ isAuthenticated: authStatus.data, isLoading: false })
     }
 

@@ -18,7 +18,7 @@ function NavigationBarComponent() {
     const [user, setUser] = useState<AuthUser>()
 
     useEffect(() => {
-        axios.get<AuthUser>('/auth/getUser').then((authUser: AxiosResponse<AuthUser>) => {
+        axios.get<AuthUser>('/api/auth/getUser').then((authUser: AxiosResponse<AuthUser>) => {
             // _.data returns an empty string instead of undefined if no user
             if (!_.isEmpty(authUser.data)) {
                 setUser(authUser.data)

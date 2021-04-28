@@ -15,5 +15,6 @@
         "typeRoots": ["./src/Types", "./@types", "./node_modules/@types"]
     },
     "include": ["./src", "./src/Types/*, ./config"],
+    "files": ["server.ts"],
     "preserveSymlinks": true
 }

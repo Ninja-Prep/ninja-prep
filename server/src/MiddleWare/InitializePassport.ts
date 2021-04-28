@@ -11,12 +11,12 @@ passport.use(
         {
             clientID: keys.GOOGLE_CLIENT,
             clientSecret: keys.GOOGLE_SECRET,
-            callbackURL: '/auth/google/callback',
+            callbackURL: '/api/auth/google/callback',
             proxy: true
         },
         function (_accessToken, _refreshToken, profile, done) {
             User.findOrCreate(profile, function (err: string | Error, user: Express.User) {
-                return done(err, user)
+                done(err, user)
             })
         }
     )
@@ -27,14 +27,15 @@ passport.use(
         {
             clientID: keys.FACEBOOK_CLIENT,
             clientSecret: keys.FACEBOOK_SECRET,
-            callbackURL: '/auth/facebook/callback'
+            callbackURL: '/api/auth/facebook/callback'
         },
         function (_accessToken: any, _refreshToken: any, profile: any, done: (arg0: any, arg1: undefined) => void) {
             User.findOrCreate(profile, function (err: any, user: any) {
                 if (err) {
-                    return done(err, user)
+                    done(err, user)
+                } else {
+                    done(null, user)
                 }
-                done(null, user)
             })
         }
     )

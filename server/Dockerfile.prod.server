@@ -1,0 +1,19 @@
+#  Dockerfile for Node Express Backend
+FROM node:15-alpine 
+ENV NODE_ENV production
+
+# Create App Directory
+WORKDIR /app
+
+COPY ./package.json /app/package.json
+COPY ./yarn.lock /app/yarn.lock
+
+RUN yarn install --silent
+
+COPY . .
+RUN yarn build
+
+# Exports
+EXPOSE 5000
+
+CMD ["yarn","prod"]

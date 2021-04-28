@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+    npclient:
+        image: ninjaprep/npclient
+        ports:
+            - '8080:80'
+        networks:
+            - npbox
+            - npclient
+            - npserver
+        deploy:
+            mode: replicated
+            replicas: 1
+
+    npserver:
+        image: ninjaprep/npserver
+        networks:
+            - npbox
+            - npclient
+            - npserver
+
+    npbox:
+        image: ninjaprep/npbox
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - '8000:8000'
+        networks:
+            - npbox
+            - npclient
+            - npserver
+
+networks:
+    npclient:
+    npserver:
+    npbox:
