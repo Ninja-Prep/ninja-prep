@@ -85,9 +85,9 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                           >
                             <text
                               fill="#f9fbfd"
-                              font-family="SourceSansPro-Bold, Source Sans Pro"
-                              font-size="40"
-                              font-weight="700"
+                              fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                              fontSize="40"
+                              fontWeight="700"
                               id="NinjaPrep"
                               transform="translate(1157 10249)"
                             >
@@ -613,9 +613,9 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                           >
                             <text
                               fill="#f9fbfd"
-                              font-family="SourceSansPro-Bold, Source Sans Pro"
-                              font-size="40"
-                              font-weight="700"
+                              fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                              fontSize="40"
+                              fontWeight="700"
                               id="NinjaPrep"
                               transform="translate(1157 10249)"
                             >
@@ -1141,9 +1141,9 @@ exports[`matches snapshot on "TABLET" 1`] = `
                             >
                               <text
                                 fill="#f9fbfd"
-                                font-family="SourceSansPro-Bold, Source Sans Pro"
-                                font-size="40"
-                                font-weight="700"
+                                fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                                fontSize="40"
+                                fontWeight="700"
                                 id="NinjaPrep"
                                 transform="translate(1157 10249)"
                               >
