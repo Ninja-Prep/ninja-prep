@@ -91,11 +91,7 @@
         "lint": "eslint --ext js,jsx,ts,tsx src/"
     },
     "lint-staged": {
-        "src/**/*.jsx": [
-            "prettier --write",
-            "eslint --fix"
-        ],
-        "src/**/*.tsx": [
+        "src/**/*.{jsx,tsx}": [
             "prettier --write",
             "eslint --fix"
         ]
