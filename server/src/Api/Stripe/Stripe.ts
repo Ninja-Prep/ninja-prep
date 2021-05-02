@@ -2,9 +2,8 @@
 // See your keys here: https://dashboard.stripe.com/account/apikeys
 import Stripe from 'stripe'
 import express from 'express'
-import keys from '../../../config/keys'
 
-const stripe = new Stripe(keys.STRIPE_TEST_KEY, {
+const stripe = new Stripe(process.env.STRIPE_TEST_KEY, {
     apiVersion: '2020-08-27'
 })
 const Router = express.Router()
@@ -26,8 +25,8 @@ Router.post('/create-checkout-session', async (_req, res) => {
             // {CHECKOUT_SESSION_ID} is a string literal; do not change it!
             // the actual Session ID is returned in the query parameter when your customer
             // is redirected to the success page.
-            success_url: keys.STRIPE_SUCCESS_URL,
-            cancel_url: keys.STRIPE_CANCEL_URL
+            success_url: process.env.STRIPE_SUCCESS_URL,
+            cancel_url: process.env.STRIPE_CANCEL_URL
         })
         res.send({
             sessionId: session.id

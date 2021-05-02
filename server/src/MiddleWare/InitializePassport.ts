@@ -3,14 +3,13 @@ import PassportGoogle from 'passport-google-oauth20'
 const GoogleStrategy = PassportGoogle.Strategy
 const FacebookStrategy = require('passport-facebook').Strategy
 const GitHubStrategy = require('passport-github2').Strategy
-import keys from '../../config/keys'
 import User from '../Models/User'
 
 passport.use(
     new GoogleStrategy(
         {
-            clientID: keys.GOOGLE_CLIENT,
-            clientSecret: keys.GOOGLE_SECRET,
+            clientID: process.env.GOOGLE_CLIENT,
+            clientSecret: process.env.GOOGLE_SECRET,
             callbackURL: '/api/auth/google/callback',
             proxy: true
         },
@@ -25,8 +24,8 @@ passport.use(
 passport.use(
     new FacebookStrategy(
         {
-            clientID: keys.FACEBOOK_CLIENT,
-            clientSecret: keys.FACEBOOK_SECRET,
+            clientID: process.env.FACEBOOK_CLIENT,
+            clientSecret: process.env.FACEBOOK_SECRET,
             callbackURL: '/api/auth/facebook/callback'
         },
         function (_accessToken: any, _refreshToken: any, profile: any, done: (arg0: any, arg1: undefined) => void) {
@@ -44,8 +43,8 @@ passport.use(
 passport.use(
     new GitHubStrategy(
         {
-            clientID: keys.GITHUB_CLIENT,
-            clientSecret: keys.GITHUB_SECRET,
+            clientID: process.env.GITHUB_CLIENT,
+            clientSecret: process.env.GITHUB_SECRET,
             scope: ['read:user']
         },
         function (_accessToken: any, _refreshToken: any, profile: any, done: (arg0: any, arg1: undefined) => any) {

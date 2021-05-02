@@ -35,13 +35,15 @@ router.post('/execute/:problemPath', getProblemDetails, async (req: Request, res
     const problemBO = req.problemBO
 
     try {
-        const { body } = await got.post('http://npbox:8000/compile/', {
+        console.time()
+        const { body } = await got.post('http://localhost:8000/compile/', {
             json: {
                 snippets: problemBO.snippets,
                 testCases: problemBO.testCases,
                 language: 'java'
             }
         })
+        console.timeEnd()
         console.log(body)
         res.send(body)
     } catch (error) {

@@ -4,23 +4,28 @@ services:
     npclient:
         image: ninjaprep/npclient
         ports:
-            - "80:80"
-            - "443:443"
+            - '80:80'
+            - '443:443'
         networks:
             - npclient
             - npserver
-        volumes:
-            - /etc/letsencrypt:/etc/letsencrypt
-            - /var/lib/letsencrypt:/var/lib/letsencrypt
+            - npbox
+        depends_on:
+            - npserver
+            - npbox
         deploy:
-            mode: global
+            mode: replicated
             placement:
                 constraints:
                     - node.role == manager
             replicas: 1
 
     npserver:
-        image: ninjaprep/npserver
+        image: npserver
+        depends_on:
+            - npbox
+        environment:
+            - DOPPLER_TOKEN
         networks:
             - npbox
             - npclient
