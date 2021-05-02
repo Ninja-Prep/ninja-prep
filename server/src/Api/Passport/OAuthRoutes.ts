@@ -1,5 +1,4 @@
 import { default as _ } from 'lodash'
-import { logger } from '../../logger'
 import express, { Request, Response } from 'express'
 import passport from 'passport'
 
@@ -19,7 +18,6 @@ function setUserCookie(req: Request) {
 }
 
 router.get('/authenticationStatus', (req: Request, res: Response) => {
-    logger.info('Auth requested')
     if (req.session?.isAuthenticated) {
         res.send(req.session.isAuthenticated)
     } else {
