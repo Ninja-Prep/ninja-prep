@@ -13,9 +13,9 @@ export const LightNavbarNinjaPrepLogo = (props: Props) => {
                     id="NinjaPrep"
                     transform="translate(1157 10249)"
                     fill="#f9fbfd"
-                    font-size="40"
-                    font-family="SourceSansPro-Bold, Source Sans Pro"
-                    font-weight="700"
+                    fontSize="40"
+                    fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                    fontWeight="700"
                 >
                     <tspan x="0" y="0">
                         NinjaPrep
@@ -43,9 +43,9 @@ export const DarkNavbarNinjaPrepLogo = (props: Props) => {
                     id="NinjaPrep"
                     transform="translate(1157 10171)"
                     fill="#2a2a3a"
-                    font-size="41"
-                    font-family="SourceSansPro-Bold, Source Sans Pro"
-                    font-weight="700"
+                    fontSize="41"
+                    fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                    fontWeight="700"
                 >
                     <tspan x="0" y="0">
                         NinjaPrep
