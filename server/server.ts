@@ -2,10 +2,12 @@ import express from 'express'
 import initializeMiddleWare from './src/MiddleWare/InitializeMiddlewareWrapper'
 
 import './src/MiddleWare/InitializePassport'
-import './src/MiddleWare/InitializeMongoose'
+import { dbconnect } from './src/MiddleWare/InitializeMongoose'
 
 const app = express()
 initializeMiddleWare(app)
+dbconnect()
+
 const PORT = process.env.PORT || 8080
 
 let inProduction = false

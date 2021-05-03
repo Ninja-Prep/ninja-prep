@@ -14,7 +14,8 @@
         "baseUrl": ".",
         "typeRoots": ["./src/Types", "./@types", "./node_modules/@types"]
     },
-    "include": ["./src", "./src/Types/*, ./config"],
+    "ts-node": { "files": true },
+    "include": ["./src", "./src/Types/*, ./config", "./tst"],
     "files": ["server.ts"],
     "preserveSymlinks": true
 }
