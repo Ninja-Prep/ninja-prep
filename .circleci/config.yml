@@ -92,7 +92,7 @@ jobs:
       - checkout
       - run:
           name: Deploy to Production
-          command: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_project.sh"
+          command: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP -p $SSH_PORT "./deploy_project.sh"
 
 workflows:
   build-and-test:
