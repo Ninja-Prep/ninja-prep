@@ -1,15 +1,14 @@
 import express, { Request, Response } from 'express'
+import { logger, logObject } from '../../logger'
 import got from 'got'
 import mongoose from 'mongoose'
 
 const router = express.Router()
 
 async function getProblemDetails(req: Request, res: Response, next: () => void) {
-    console.log(req.body)
+    logObject(req.body)
     const programmingLanguage = req.body.programmingLanguage
     const userCodeSnippet = req.body.codeSnippet
-
-    console.log(req.params)
     let problem = await mongoose.connection.db.collection('problems').findOne({
         problem_path: req.params.problemPath
     })
@@ -35,19 +34,17 @@ router.post('/execute/:problemPath', getProblemDetails, async (req: Request, res
     const problemBO = req.problemBO
 
     try {
-        console.time()
-        const { body } = await got.post('http://npbox:8000/compile/', {
+        const { body } = await got.post(`http://${process.env.COMPILER_HOST}:8000/compile/`, {
             json: {
                 snippets: problemBO.snippets,
                 testCases: problemBO.testCases,
                 language: 'java'
             }
         })
-        console.timeEnd()
-        console.log(body)
+        logObject(JSON.parse(body))
         res.send(body)
     } catch (error) {
-        console.log(error)
+        logger.error(error)
         res.send(error)
     }
 })

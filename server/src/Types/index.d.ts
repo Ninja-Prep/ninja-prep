@@ -24,6 +24,7 @@ declare global {
 declare global {
     namespace NodeJS {
         interface ProcessEnv {
+            COMPILER_HOST: string
             NODE_ENV: string
             MONGO_URL: string
             GOOGLE_CLIENT: string

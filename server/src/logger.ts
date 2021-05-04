@@ -8,7 +8,7 @@ const { LoggingWinston } = require('@google-cloud/logging-winston')
 
 const loggingWinston = new LoggingWinston({})
 
-let loggingTransports = []
+let loggingTransports: any[] = []
 
 const isProduction = process.env.NODE_ENV == 'production'
 
@@ -34,6 +34,10 @@ export const logger = createLogger({
     levels: config.syslog.levels,
     transports: loggingTransports
 })
+
+export const logObject = (object: Object) => {
+    logger.info('%o', { ...object })
+}
 
 function getLevel(req: any, res: any) {
     let level = ''
