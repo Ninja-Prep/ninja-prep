@@ -1,6 +1,7 @@
 import { default as _ } from 'lodash'
 import express, { Request, Response } from 'express'
 import passport from 'passport'
+import { logger } from '../../logger'
 
 const router = express.Router()
 

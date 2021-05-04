@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import { logger } from '../logger'
 
 function dbconnect() {
     mongoose.connect(
@@ -8,8 +9,8 @@ function dbconnect() {
             useUnifiedTopology: true
         },
         (err) => {
-            if (err) console.log(err)
-            else console.log('MongoDB connected')
+            if (err) logger.error(err)
+            else logger.info('MongoDB connected')
         }
     )
     return mongoose.connection

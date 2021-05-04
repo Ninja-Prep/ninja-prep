@@ -15,6 +15,7 @@ declare global {
                 testCases: Array<string>
                 snippets: { userCode: string; checkerCode: string }
             }
+            id: string
         }
     }
 }
@@ -23,6 +24,7 @@ declare global {
 declare global {
     namespace NodeJS {
         interface ProcessEnv {
+            NODE_ENV: string
             MONGO_URL: string
             GOOGLE_CLIENT: string
             GOOGLE_SECRET: string
