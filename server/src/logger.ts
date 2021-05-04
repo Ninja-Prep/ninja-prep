@@ -6,38 +6,55 @@ import express from 'express'
 
 const { LoggingWinston } = require('@google-cloud/logging-winston')
 
-const loggingWinston = new LoggingWinston({})
+const consolePrintFormat = printf((info) => {
+    const reqId = httpContext.get('reqId') || ''
+    const level = info.level
+    if (typeof info.message === 'object') {
+        const objString = JSON.stringify(info.message, null, 4)
+        return ` [${level}] ${reqId} ${objString}`
+    } else {
+        return ` [${level}] ${reqId} ${info.message} `
+    }
+})
+
+const loggingWinston = new LoggingWinston({
+    format: printf((info) => {
+        const reqId = httpContext.get('reqId') || ''
+        const level = info.level
+        if (typeof info.message === 'object') {
+            const objString = JSON.stringify(info.message, null, 4)
+            info.message = ` [${level}] ${reqId} ${objString}`
+        } else {
+            info.message = ` [${level}] ${reqId} ${info.message} `
+        }
+        return info.message
+    })
+})
 
 let loggingTransports: any[] = []
 
-const isProduction = process.env.NODE_ENV == 'production'
+const isProduction = process.env.NODE_ENV === 'production'
 
 if (isProduction) {
-    loggingTransports = [new transports.Console(), loggingWinston]
+    loggingTransports = [
+        new transports.Console({
+            format: combine(consolePrintFormat)
+        }),
+        loggingWinston
+    ]
 } else {
-    loggingTransports = [new transports.Console()]
+    loggingTransports = [
+        new transports.Console({
+            format: combine(colorize({ level: true }), consolePrintFormat)
+        })
+    ]
 }
 
 export const logger = createLogger({
-    format: combine(
-        colorize(),
-        json(),
-        prettyPrint(),
-        format.splat(),
-        format.simple(),
-        printf((info) => {
-            const reqId = httpContext.get('reqId') || ''
-            const level = info.level
-            return ` [${level}]: ${reqId} ${info.message}`
-        })
-    ),
+    format: combine(json(), prettyPrint(), format.splat(), format.simple()),
     levels: config.syslog.levels,
     transports: loggingTransports
 })
-
-export const logObject = (object: Object) => {
-    logger.info('%o', { ...object })
-}
 
 function getLevel(req: any, res: any) {
     let level = ''
@@ -56,8 +73,10 @@ function getLevel(req: any, res: any) {
     return level
 }
 
+const expressWinstonTransports = [new transports.Console({}), new LoggingWinston({})]
+
 const expresslogger = expressWinston.logger({
-    transports: loggingTransports,
+    transports: expressWinstonTransports,
     meta: isProduction,
     format: format.combine(json(), prettyPrint()),
     statusLevels: false,
@@ -69,7 +88,7 @@ const expresslogger = expressWinston.logger({
 })
 
 const expressErrorLogger = expressWinston.errorLogger({
-    transports: loggingTransports,
+    transports: expressWinstonTransports,
     meta: isProduction,
     format: combine(json(), prettyPrint()),
     msg: (req, res) => {

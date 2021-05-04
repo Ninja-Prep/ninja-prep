@@ -1,12 +1,12 @@
 import express, { Request, Response } from 'express'
-import { logger, logObject } from '../../logger'
+import { logger } from '../../logger'
 import got from 'got'
 import mongoose from 'mongoose'
 
 const router = express.Router()
 
 async function getProblemDetails(req: Request, res: Response, next: () => void) {
-    logObject(req.body)
+    logger.info(req.body)
     const programmingLanguage = req.body.programmingLanguage
     const userCodeSnippet = req.body.codeSnippet
     let problem = await mongoose.connection.db.collection('problems').findOne({
@@ -41,7 +41,7 @@ router.post('/execute/:problemPath', getProblemDetails, async (req: Request, res
                 language: 'java'
             }
         })
-        logObject(JSON.parse(body))
+        logger.info(JSON.parse(body))
         res.send(body)
     } catch (error) {
         logger.error(error)
