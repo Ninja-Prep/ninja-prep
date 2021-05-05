@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV === 'production') {
+    require('@google-cloud/trace-agent').start()
+}
+
 import express from 'express'
 import initializeMiddleWare from './src/MiddleWare/InitializeMiddlewareWrapper'
 import './src/MiddleWare/InitializePassport'

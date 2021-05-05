@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { logger } from '../logger'
+import { logError, logger } from '../logger'
 
 function dbconnect() {
     mongoose.connect(
