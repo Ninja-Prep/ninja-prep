@@ -1,5 +1,8 @@
+import { initializeGCPMetrics } from './src/GCPMetrics'
+
 if (process.env.NODE_ENV === 'production') {
     require('@google-cloud/trace-agent').start()
+    initializeGCPMetrics()
 }
 
 import express from 'express'

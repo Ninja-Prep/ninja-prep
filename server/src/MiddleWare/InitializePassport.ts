@@ -5,6 +5,7 @@ const GoogleStrategy = PassportGoogle.Strategy
 const FacebookStrategy = require('passport-facebook').Strategy
 const GitHubStrategy = require('passport-github2').Strategy
 import User from '../Models/User'
+import { METRIC_MEASURES, recordMetric } from '../GCPMetrics'
 
 passport.use(
     new GoogleStrategy(
@@ -15,6 +16,7 @@ passport.use(
             proxy: true
         },
         function (_accessToken, _refreshToken, profile, done) {
+            recordMetric(METRIC_MEASURES.GOOGLE_OAUTH_COUNT_MEASURE, 1)
             User.findOrCreate(profile, function (err: string | Error, user: Express.User) {
                 if (err) logError(err)
                 done(err, user)
