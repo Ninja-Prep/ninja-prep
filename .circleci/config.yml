@@ -33,6 +33,9 @@ jobs:
                   name: Server Build Attempt
                   command: CI=false yarn --cwd ./server run build
             - run:
+                  name: Install Doppler CLI to current directory
+                  command: (curl -Ls https://cli.doppler.com/install.sh || wget -qO- https://cli.doppler.com/install.sh) | sh -s -- --no-install --no-package-manager
+            - run:
                   name: Testing Server Folder
                   command: doppler run -- yarn --cwd ./server yarn test
             - codecov/upload:
