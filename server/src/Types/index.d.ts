@@ -27,6 +27,7 @@ declare global {
             COMPILER_HOST: string
             NODE_ENV: string
             MONGO_URL: string
+            MOCHA_TEST: string
             GOOGLE_CLIENT: string
             GOOGLE_SECRET: string
             STRIPE_SUCCESS_URL: string

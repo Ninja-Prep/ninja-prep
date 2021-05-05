@@ -1,3 +1,3 @@
 #!/bin/bash
-cd client
-yarn install
+yarn --cwd ./client install
+yarn --cwd ./server install

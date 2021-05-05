@@ -98,6 +98,8 @@ const expressErrorLogger = expressWinston.errorLogger({
 })
 
 export default function (app: express.Application) {
-    app.use(expressErrorLogger)
-    app.use(expresslogger)
+    if (process.env.MOCHA_TEST !== 'true') {
+        app.use(expressErrorLogger)
+        app.use(expresslogger)
+    }
 }

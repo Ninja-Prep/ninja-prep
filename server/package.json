@@ -8,7 +8,7 @@
     },
     "scripts": {
         "build": "tsc -p .",
-        "test": "mocha -r ts-node/register  tst/**/*.test.ts",
+        "test": "cross-env MOCHA_TEST=true mocha -r ts-node/register  tst/**/*.test.ts",
         "server": "nodemon --verbose --config nodemon.json ./server.ts",
         "client": "cd ../client && yarn start",
         "prod": "cross-env NODE_ENV=production node build/server.js",
