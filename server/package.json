@@ -17,6 +17,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@google-cloud/error-reporting": "^2.0.1",
         "@google-cloud/logging-winston": "^4.0.4",
         "@stripe/stripe-js": "^1.11.0",
         "@types/body-parser": "^1.19.0",

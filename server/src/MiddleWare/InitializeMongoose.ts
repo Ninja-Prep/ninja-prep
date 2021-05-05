@@ -9,7 +9,7 @@ function dbconnect() {
             useUnifiedTopology: true
         },
         (err) => {
-            if (err) logger.error(err)
+            if (err) logError(err)
             else logger.info('MongoDB connected')
         }
     )

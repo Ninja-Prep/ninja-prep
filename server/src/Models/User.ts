@@ -1,5 +1,5 @@
 import { Document, model, Model, Schema } from 'mongoose'
-import { logger } from '../logger'
+import { logError } from '../logger'
 
 const userSchema = new Schema({
     _id: String,
@@ -22,7 +22,7 @@ interface IUserModel extends Model<IUserDocument> {
 userSchema.statics.findOrCreate = async function (profile, callback) {
     let user = await this.findById(profile.id, (err: any, doc: any) => {
         if (err) {
-            logger.error(err)
+            logError(err)
             callback(err, null)
         } else if (doc) {
             callback(err, doc)

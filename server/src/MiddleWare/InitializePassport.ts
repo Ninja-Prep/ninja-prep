@@ -1,6 +1,6 @@
 import passport from 'passport'
 import PassportGoogle from 'passport-google-oauth20'
-import { logger } from '../logger'
+import { logError, logger } from '../logger'
 const GoogleStrategy = PassportGoogle.Strategy
 const FacebookStrategy = require('passport-facebook').Strategy
 const GitHubStrategy = require('passport-github2').Strategy
@@ -16,7 +16,7 @@ passport.use(
         },
         function (_accessToken, _refreshToken, profile, done) {
             User.findOrCreate(profile, function (err: string | Error, user: Express.User) {
-                if (err) logger.error(err)
+                if (err) logError(err)
                 done(err, user)
             })
         }
@@ -33,7 +33,7 @@ passport.use(
         function (_accessToken: any, _refreshToken: any, profile: any, done: (arg0: any, arg1: undefined) => void) {
             User.findOrCreate(profile, function (err: any, user: any) {
                 if (err) {
-                    logger.error(err)
+                    logError(err)
                     done(err, user)
                 } else {
                     done(null, user)
@@ -53,7 +53,7 @@ passport.use(
         function (_accessToken: any, _refreshToken: any, profile: any, done: (arg0: any, arg1: undefined) => any) {
             User.findOrCreate(profile, function (err: any, user: any) {
                 if (err) {
-                    logger.error(err)
+                    logError(err)
                     return done(err, user)
                 }
                 return done(err, user)
