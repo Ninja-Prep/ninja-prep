@@ -13,9 +13,11 @@ const printFormat = printf((info) => {
     const level = info.level
     if (typeof info.message === 'object') {
         const objString = JSON.stringify(info.message, null, 4)
-        return ` [${level}] ${reqId} ${objString}`
+        info.message = ` [${level}] ${reqId} ${objString}`
+        return info.message
     } else {
-        return ` [${level}] ${reqId} ${info.message} `
+        info.message = ` [${level}] ${reqId} ${info.message} `
+        return info.message
     }
 })
 
