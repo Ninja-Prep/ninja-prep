@@ -79,7 +79,7 @@ const expressWinstonTransports = [new transports.Console({}), new LoggingWinston
 
 const expresslogger = expressWinston.logger({
     transports: expressWinstonTransports,
-    meta: isProduction,
+    meta: process.env.SHOULD_LOG_META == 'true',
     format: format.combine(json(), prettyPrint()),
     statusLevels: false,
     level: (req, res) => getLevel(req, res),
@@ -91,7 +91,7 @@ const expresslogger = expressWinston.logger({
 
 const expressErrorLogger = expressWinston.errorLogger({
     transports: expressWinstonTransports,
-    meta: isProduction,
+    meta: process.env.SHOULD_LOG_META == 'true',
     format: combine(json(), prettyPrint()),
     msg: (req, res) => {
         const level = getLevel(req, res)

@@ -30,6 +30,7 @@ declare global {
             MOCHA_TEST: string
             GOOGLE_CLIENT: string
             GOOGLE_SECRET: string
+            SHOULD_LOG_META: string
             STRIPE_SUCCESS_URL: string
             STRIPE_CANCEL_URL: string
             STRIPE_TEST_KEY: string

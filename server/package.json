@@ -55,6 +55,9 @@
     "comments": {
         "@types/continuation-local-storage": {
             "description": "^3.2.3 is not supported due to export func error. Wait until OpenCensus updates repo to accommodate"
+        },
+        "@opencensus/exporter-stackdriver@0.0.22": {
+            "description": "Has a node-forge dependency issue. This package should be updated as soon as possible on NPM"
         }
     },
     "devDependencies": {
