@@ -26,17 +26,17 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 let loggingTransports: any[] = []
 if (isProduction) {
-    loggingTransports = [new transports.Console({ format: printFormat }), loggingWinston]
+    loggingTransports = [new transports.Console({}), loggingWinston]
 } else {
     loggingTransports = [
         new transports.Console({
-            format: combine(colorize({ level: true }), printFormat)
+            format: combine(colorize({ level: true }))
         })
     ]
 }
 
 export const logger = createLogger({
-    format: combine(json(), prettyPrint(), format.splat(), format.simple()),
+    format: combine(json(), prettyPrint(), format.splat(), format.simple(), printFormat),
     levels: config.syslog.levels,
     transports: loggingTransports
 })
