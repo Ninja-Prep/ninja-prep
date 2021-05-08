@@ -4,7 +4,7 @@ import CodeSubmissionLoadBar from './CodeSubmissionLoadBar'
 import { UserSubmissionOutput, SubmissionStatus } from './TestCaseAreaHelper'
 import TestCaseOutputWrapper from './TestCaseOutputWrapper'
 import { CompletedTestCaseTabLabels, DefaultTestCaseTabLabels } from './TestCaseTabLabels'
-import { CompletedTabContent, DefaultTabContent } from './TestCaseTabContent'
+import { CompletedTabContent, DefaultTabContent, StyleTestCaseData } from './TestCaseTabContent'
 import SubmitCodeButtons from './SubmitCodeButtons'
 
 interface State {
@@ -41,7 +41,11 @@ class TestCaseArea extends Component<Props, State> {
     render() {
         return (
             <UserSubmissionContext.Provider value={this.state}>
-                <SubmissionStatusHandler submissionStatus={this.state.submissionStatus} {...this.props} />
+                <SubmissionStatusHandler
+                    submissionStatus={this.state.submissionStatus}
+                    submissionOutput={this.state.submissionOutput}
+                    {...this.props}
+                />
             </UserSubmissionContext.Provider>
         )
     }
@@ -50,11 +54,13 @@ class TestCaseArea extends Component<Props, State> {
 function SubmissionStatusHandler({
     submissionStatus,
     mode,
-    codeSnippet
+    codeSnippet,
+    submissionOutput
 }: {
     submissionStatus: SubmissionStatus
     mode: string
     codeSnippet: string
+    submissionOutput: UserSubmissionOutput | undefined
 }) {
     switch (submissionStatus) {
         case SubmissionStatus.Pending:
@@ -70,7 +76,7 @@ function SubmissionStatusHandler({
             return (
                 <div className="h-100">
                     <SubmitCodeButtons mode={mode} codeSnippet={codeSnippet} />
-                    <TestCaseOutputWrapper TabLabels={<CompletedTestCaseTabLabels />} TabContent={<CompletedTabContent />} />
+                    <TestCaseOutputHandler />
                 </div>
             )
         default:
@@ -81,6 +87,26 @@ function SubmissionStatusHandler({
                 </div>
             )
     }
+}
+
+function TestCaseOutputHandler() {
+    console.log()
+    return (
+        <UserSubmissionContext.Consumer>
+            {({ submissionOutput }) => {
+                if (submissionOutput && submissionOutput.verdict == 'Compile Error') {
+                    return (
+                        <div className="px-3">
+                            <StyleTestCaseData header="Raw Output" content={submissionOutput.stderr} />{' '}
+                        </div>
+                    )
+                } else
+                    return (
+                        <TestCaseOutputWrapper TabLabels={<CompletedTestCaseTabLabels />} TabContent={<CompletedTabContent />} />
+                    )
+            }}
+        </UserSubmissionContext.Consumer>
+    )
 }
 
 export default TestCaseArea
