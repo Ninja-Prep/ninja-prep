@@ -39,6 +39,9 @@ router.post('/execute/:problemPath', getProblemDetails, async (req: Request, res
                 snippets: problemBO.snippets,
                 testCases: problemBO.testCases,
                 language: 'java'
+            },
+            headers: {
+                'X-Request-Id': req.id
             }
         })
         logger.info(JSON.parse(body))
