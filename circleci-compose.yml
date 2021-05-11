@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+    npbox:
+        image: ninjaprep/npbox
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - '8000:8000'
+        networks:
+            - npbox
+    box:
+        image: ninjaprep/box
+    npserver:
+        image: ninjaprep/npserver
+        environment:
+            - DOPPLER_TOKEN
+        depends_on:
+            - npbox
+        networks:
+            - npbox
+        command: ['doppler', 'run', '--', 'yarn', 'integration-test']
+
+networks:
+    npbox:

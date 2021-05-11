@@ -1,5 +1,5 @@
 import express from 'express'
-import initializeMiddleWare from '../../../src/MiddleWare/InitializeMiddlewareWrapper'
+import initializeMiddleWare from '../../../../src/MiddleWare/InitializeMiddlewareWrapper'
 import request from 'supertest'
 import chai from 'chai'
 import keygrip from 'keygrip'

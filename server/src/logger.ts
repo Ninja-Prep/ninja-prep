@@ -23,6 +23,7 @@ const printFormat = printf((info) => {
 
 const loggingWinston = new LoggingWinston({})
 const isProduction = process.env.NODE_ENV === 'production'
+const isTest = process.env.MOCHA_TEST === 'true'
 
 let loggingTransports: any[] = []
 if (isProduction) {
@@ -38,7 +39,8 @@ if (isProduction) {
 export const logger = createLogger({
     format: combine(json(), prettyPrint(), format.splat(), format.simple(), printFormat),
     levels: config.syslog.levels,
-    transports: loggingTransports
+    transports: loggingTransports,
+    silent: isTest
 })
 
 //Strictly to complement error reporting since error reporting does not log to console

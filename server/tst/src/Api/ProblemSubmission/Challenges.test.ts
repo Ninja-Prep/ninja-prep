@@ -1,6 +1,6 @@
 import express from 'express'
-import initializeMiddleWare from '../../../src/MiddleWare/InitializeMiddlewareWrapper'
-import { dbconnect, dbclose } from '../../../src/MiddleWare/InitializeMongoose'
+import initializeMiddleWare from '../../../../src/MiddleWare/InitializeMiddlewareWrapper'
+import { dbconnect, dbclose } from '../../../../src/MiddleWare/InitializeMongoose'
 import request from 'supertest'
 import chai from 'chai'
 

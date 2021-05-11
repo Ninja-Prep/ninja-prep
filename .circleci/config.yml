@@ -1,11 +1,15 @@
 version: 2.1
+
 executors:
     docker-publisher:
         environment:
             NPSERVER_IMAGE: ninjaprep/npserver
             NPCLIENT_IMAGE: ninjaprep/npclient
+            NPBOX_IMAGE: ninjaprep/npbox
+            BOX_IMAGE: ninjaprep/box
         docker:
             - image: circleci/buildpack-deps:stretch
+
 orbs:
     node: circleci/node@3.0.1
     codecov: codecov/codecov@1.1.0
@@ -47,6 +51,7 @@ jobs:
             - checkout
             - setup_remote_docker:
                   version: 19.03.13
+                  docker_layer_caching: true
             - run:
                   name: Build Nginx Client Image
                   command: |
@@ -70,11 +75,37 @@ jobs:
                   paths:
                       - ./server_image.tar
 
+    integration-tests:
+        executor: docker-publisher
+        steps:
+            - checkout
+            - setup_remote_docker:
+                  version: 19.03.13
+            - attach_workspace:
+                  at: /tmp/workspace
+            - run:
+                  name: Load archived server Docker image
+                  command: docker load -i /tmp/workspace/server_image.tar
+            - run:
+                  name: Pull npbox image
+                  command: |
+                      echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+                      docker pull $NPBOX_IMAGE:latest
+            - run:
+                  name: Pull box image
+                  command: |
+                      echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+                      docker pull $BOX_IMAGE:latest
+            - run:
+                  name: Run server integration tests
+                  command: docker-compose -f circleci-compose.yml up --scale box=0 --exit-code-from npserver
+
     publish-latest:
         executor: docker-publisher
         steps:
             - setup_remote_docker:
                   version: 19.03.13
+                  docker_layer_caching: true
             - attach_workspace:
                   at: /tmp/workspace
             - run:
@@ -114,13 +145,20 @@ workflows:
                               - master
                   requires:
                       - build-and-test
-            - publish-latest:
+            - integration-tests:
                   filters:
                       branches:
                           only:
                               - master
                   requires:
                       - build-remote-docker-image
+            - publish-latest:
+                  filters:
+                      branches:
+                          only:
+                              - master
+                  requires:
+                      - integration-tests
             - deploy-prod:
                   filters:
                       branches:
