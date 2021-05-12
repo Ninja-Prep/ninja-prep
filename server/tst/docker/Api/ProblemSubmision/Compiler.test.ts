@@ -1,6 +1,6 @@
-//Require the dev-dependencies
 import chai from 'chai'
 import express from 'express'
+import { Validator } from 'jsonschema'
 import initializeMiddleWare from '../../../../src/MiddleWare/InitializeMiddlewareWrapper'
 import { dbconnect, dbclose } from '../../../../src/MiddleWare/InitializeMongoose'
 import request from 'supertest'
@@ -9,7 +9,7 @@ const app = express()
 initializeMiddleWare(app)
 
 describe('POST /api/challenges/execute/Two-Sum', function () {
-    this.timeout(10000)
+    this.timeout(5000)
     before(function (done) {
         dbconnect()
             .once('open', () => done())
@@ -18,7 +18,28 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
     after(function (done) {
         dbclose().then(() => done())
     })
-    it('can submit a problem', function (done) {
+
+    const validator = new Validator()
+    const schema = {
+        id: '/TestCases',
+        verdict: { type: 'string' },
+        stderr: { type: 'string' },
+        judged_test_cases: {
+            type: 'array',
+            items: {
+                properties: {
+                    status: { type: 'string' },
+                    stderr: { type: 'string' },
+                    user_stdout: { type: 'string' },
+                    user_output: { type: 'string' },
+                    test_case: { type: 'string' },
+                    expected_output: { type: 'string' }
+                }
+            }
+        }
+    }
+
+    it('can judge a correct answer', function (done) {
         const solutionString = `class Solver {
                 public int[] twoSum(int [] nums, int target) {
                     int[] ans = new int[2];
@@ -38,7 +59,60 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
             .post('/api/submisson/execute/Two-Sum')
             .send({ programmingLanguage: 'java', codeSnippet: solutionString })
             .then((res) => {
-                console.log(res.text)
+                const output = JSON.parse(res.text)
+                const result = validator.validate(output, schema)
+                chai.expect(result.valid).to.be.true
+                chai.expect(output.verdict).to.eq('ACCEPTED')
+                chai.expect(output.stderr).to.eq('')
+                output.judged_test_cases.forEach((testCase: any) => {
+                    chai.expect(testCase.user_output).to.eq(testCase.expected_output)
+                    chai.expect(testCase.status).to.eq('ACCEPTED')
+                })
+                chai.expect(res.status).to.eq(200)
+                done()
+            })
+    })
+
+    it('can judge an incorrect answer', function (done) {
+        const solutionString = `class Solver {
+                public int[] twoSum(int [] nums, int target) {
+                    return null;
+                }
+            }`
+        request(app)
+            .post('/api/submisson/execute/Two-Sum')
+            .send({ programmingLanguage: 'java', codeSnippet: solutionString })
+            .then((res) => {
+                const output = JSON.parse(res.text)
+                const result = validator.validate(output, schema)
+                chai.expect(result.valid).to.be.true
+                chai.expect(output.verdict).to.eq('Wrong Answer')
+                chai.expect(output.stderr).to.eq('')
+                output.judged_test_cases.forEach((testCase: any) => {
+                    chai.expect(testCase.user_output).to.not.eq(testCase.expected_output)
+                    chai.expect(testCase.status).to.eq('Wrong Answer')
+                })
+                chai.expect(res.status).to.eq(200)
+                done()
+            })
+    })
+
+    it('can judge a compile error', function (done) {
+        const solutionString = `class Solver {
+                public int[] twoSum(int [] nums, int target) {
+                    return null
+                }
+            }`
+        request(app)
+            .post('/api/submisson/execute/Two-Sum')
+            .send({ programmingLanguage: 'java', codeSnippet: solutionString })
+            .then((res) => {
+                const output = JSON.parse(res.text)
+                const result = validator.validate(output, schema)
+                chai.expect(result.valid).to.be.true
+                chai.expect(output.verdict).to.eq('Compile Error')
+                chai.expect(output.stderr).to.not.be.empty
+                chai.expect(output.judged_test_cases).to.be.empty
                 chai.expect(res.status).to.eq(200)
                 done()
             })
