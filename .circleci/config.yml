@@ -1,56 +1,6 @@
 version: 2.1
 
 executors:
-    node/default:
-        environment:
-            PRIVATE_KEY: |
-                b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
-                NhAAAAAwEAAQAAAgEAwGS1GsuIbd7JTjtEPqVByCiP2VfgB+no9SkaV91S7Yw33O0PQRw/
-                ZSmp6ldbqY3TU/MzIGyT61TJ1kHNwOXLw5+6cutIUx8kq4rwxmvtLrhH6fmaJoeqiZjm4D
-                jLJswNPeqlD1XpmiysPNy5A0Z5e1CZq4Mp8c4VhK9yvm+2HO227ekFgSt1WxBrWC6PflQC
-                3oJCRDHA1gAgklk4usyTMZaiflMLq53t6S6SKn6Inh8y0rWbEpv2gcZ03ehe4p0aIkUK0q
-                IauTgGefkMu3nvZgURLc64WzaAf/7P7QVlZRY2pjQ8l8xffX70EfhtYhMlOXLR3i/AfdBv
-                icerTVhwDwr6zA4zPixwbl6omznzCGnOyPk/okGVzZvn4xOGT+sbcQZOs2rm7bSsVPKxWI
-                yT2IQnT0JxUNRVwvTpYd4nAgkZ22v7MD1CC+T9GI9L4ZXv3bGBy8Y3zqxJ1tDqM8ca+pYI
-                8JUq6hIhJI2cnOpScpsjZeKOYTnyIOU3FJxou2WD5S86ExMZYVtfwnpbhmD86L2cOaNLoK
-                E0QxvW/8CFDHskaLURIIiU/PyPA8zuvD165/bgVW01IhoGkITZenyzI5HvhbZAaZLz9HMr
-                dnSD36WIx/XUO6zAiMkRexUAnbMrrDeM/iwj3DUihydpxClGTSrnK4Fb5+3WZER/DEVzV6
-                sAAAdQGBcyrBgXMqwAAAAHc3NoLXJzYQAAAgEAwGS1GsuIbd7JTjtEPqVByCiP2VfgB+no
-                9SkaV91S7Yw33O0PQRw/ZSmp6ldbqY3TU/MzIGyT61TJ1kHNwOXLw5+6cutIUx8kq4rwxm
-                vtLrhH6fmaJoeqiZjm4DjLJswNPeqlD1XpmiysPNy5A0Z5e1CZq4Mp8c4VhK9yvm+2HO22
-                7ekFgSt1WxBrWC6PflQC3oJCRDHA1gAgklk4usyTMZaiflMLq53t6S6SKn6Inh8y0rWbEp
-                v2gcZ03ehe4p0aIkUK0qIauTgGefkMu3nvZgURLc64WzaAf/7P7QVlZRY2pjQ8l8xffX70
-                EfhtYhMlOXLR3i/AfdBvicerTVhwDwr6zA4zPixwbl6omznzCGnOyPk/okGVzZvn4xOGT+
-                sbcQZOs2rm7bSsVPKxWIyT2IQnT0JxUNRVwvTpYd4nAgkZ22v7MD1CC+T9GI9L4ZXv3bGB
-                y8Y3zqxJ1tDqM8ca+pYI8JUq6hIhJI2cnOpScpsjZeKOYTnyIOU3FJxou2WD5S86ExMZYV
-                tfwnpbhmD86L2cOaNLoKE0QxvW/8CFDHskaLURIIiU/PyPA8zuvD165/bgVW01IhoGkITZ
-                enyzI5HvhbZAaZLz9HMrdnSD36WIx/XUO6zAiMkRexUAnbMrrDeM/iwj3DUihydpxClGTS
-                rnK4Fb5+3WZER/DEVzV6sAAAADAQABAAACAQCD3oMjso34gNOKA6VrKupDv0mZt1mfEvzR
-                zTJ5NwI4P/uqOfJStoHdXQlRzj7NoKBQ0kkg2Esq6hrN+JyGsvtPQpQRYKNaFeaUjc8qsZ
-                8IftcL0EGQVzzUwzC8TzEvjn0lC0fHkyNiwWvs630EebGajExH+sctLgwhvf/v97HjciwI
-                NcfIGXl+yWpKLt+7vumYib/R7ig2hi/NH8p6fu4E9zK5U0KUhtMjGQCmj8QkXU4AjumTf8
-                MegGBqGXOv7+6RvrEEXofinDwULlhDx/gG/UIhG6fRHTJGiOkLlL9C4k7i7Lr7cOGiqvmv
-                t4+BwY2qKsEegax2j/9jeLA5e3ySIouwk4LukCve74rL3KLD2g3rB+TpzraQup7ZMH6Umb
-                ODY1YBiWbFnkrBPKuIHBR3uSCIzerZRscDczhoXGo8ewHGOLOdK+dy2VsIoKGyMvjrD2om
-                Nn5P+JeOpXabze/HYssN1E4oA8BlkzjUVz/CgM9ZTWukJXwkMYOo30U+OrVZ3VCMREQSXH
-                MnTxUhyxBxuO8ZnokFLvU8v3MZg6YjmQOg7R7E3t4w5+uEGWeSFu2tpeX4gEbvKw2MCwkV
-                PezQeaJcAWuQnehL39mCefeu2UMfhWVDOFXzdhoMnWQgLDfwS5DX9ro3QVhC4DOLN4JMYJ
-                NGWmR+Lz+Snu52cY6xwQAAAQEAsI9pQCwSKbtGquDCrxKO3ST1Q9QJFDhwrE8XyKxDexoX
-                xvYKFPrOGiXJlFQhDun/5hI6EFS16zV3QNCMkEPoHFRuQkYiRdDf7N6d/d8DYlGxKVePfC
-                4RAK8ecCpVkCHkuLnibprWF7ab8TtU8IAx78KBro0BTe4iFBFsE1oqveUva4ngqvgj3PNL
-                qZCy2MLruNP+Hqpz95sgdw6l4uGbGBij4oybap6kK3aJ1TMsWEC59JEmZYp9zEKwal6UUL
-                dVDX2Xz7RFiqCWgR4pOccZaU/V4hztaNDqKyCnYskks7xfiHYHEgDIJr/45ozNwbZQwQLM
-                ylkDAI8BeSNzh4nl4gAAAQEA5kyvM2JY14Qk3h8hLUUU31AKQSUR8+VYeqodKgDcikLMdr
-                9Guvhhg/9KZtq2+9kWVSqWtrAEcHi1A5bFI9qUEcgyWJnyqJshqAsiIdLk2i/rg0ISrLJU
-                BNPXlMXwJObwB/gzfaYULwr2XgVPXBrlTK9It9vAQa2/OrLgv4QTNKKqjqtFT9HwvztG1B
-                2HyQHncNX3GPbNF8Z48BOPK9SOr2glGc7iqNJjlf+Bd9Fh8q3ss3LLHBlHHxJ4UVFWZ37k
-                o9qmigkXnEe8CcgeMwXtGkZP2wuhZo1b0FXGQPvjctayYU2NmyqP5YAdYH5xiQjCPiG5q8
-                Aur2OGIVPjtbI4NwAAAQEA1d0ZtqQ0JJTYsAjALGtiTW/mCDWiv2TecOSqDyLZ9YWLfdzP
-                8ds43UkmxWTlovxjuvQjd+bTSbzO4D/OzlgkQl+mdnybo9p8oUKO6ZtY/D60FQ1nHw7PvE
-                DunFtVEcrgGA8YAZyn0/5IVc5tJoRdYsbxXwJn+SG4zlpKL7MFeQgjfyutaRiIivfrBK8O
-                3nQGZftzkL6rjXkHpefcxzUfj8k/LgWME/3HdaBa9VmmtpT33oMF+Qco4s7xK8wpskHjEh
-                VLqRhxUpTSSM34uG38S5oMGAVT8G8y68ybBrZ1rcCjjnqwfSyleBPSi5E2kcGZ3NyQ5V3x
-                ZGTn5xJqtzU6LQAAABlhbGV4YW5kZXIubmduOTdAZ21haWwuY29t
     docker-publisher:
         environment:
             NPSERVER_IMAGE: ninjaprep/npserver
@@ -70,12 +20,6 @@ jobs:
         executor:
             name: node/default
         steps:
-            - run:
-                  name: Create private keys
-                  command: |
-                      mkdir -p ~/.ssh/ && touch ~/.ssh/id_rsa
-                      echo -e "$PRIVATE_KEY" > ~/.ssh/id_rsa
-
             - checkout
             - node/install:
                   install-yarn: true
@@ -99,7 +43,7 @@ jobs:
                   name: Adding NPM/Yarn dependencies
                   command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
             - save_cache:
-                  name: Save Yarn Package Cache
+                  name: Save Client Yarn Package Cache
                   key: yarn-client-{{ checksum "client/yarn.lock" }}
                   paths:
                       - ~/.cache/client-yarn
