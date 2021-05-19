@@ -47,7 +47,7 @@
         "passport-github2": "^0.1.12",
         "passport-google-oauth20": "^2.0.0",
         "pretty-quick": "^3.1.0",
-        "question-database": "git+ssh://git@github.com:Ninja-Prep/question-database.git#main",
+        "question-database": "git+ssh://git@github.com/Ninja-Prep/question-database#main",
         "react": "^16.13.1",
         "stripe": "^8.132.0",
         "typescript": "^4.2.4",
