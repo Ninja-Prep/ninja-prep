@@ -24,6 +24,7 @@ jobs:
                   install-yarn: true
                   install-npm: false
                   node-version: latest
+            - add_ssh_keys
             - run:
                   name: Adding NPM/Yarn dependencies
                   command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
