@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import { connect, disconnect } from 'question-database'
 import { logError, logger } from '../logger'
 
 function dbconnect() {
@@ -13,10 +14,12 @@ function dbconnect() {
             else logger.info('MongoDB connected')
         }
     )
+    connect(process.env.MONGO_URL)
     return mongoose.connection
 }
 
 function dbclose() {
+    disconnect()
     return mongoose.disconnect()
 }
 

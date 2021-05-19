@@ -19,7 +19,7 @@ interface IUserModel extends Model<IUserDocument> {
     findOrCreate: (profile: any, callback: any) => any
 }
 
-userSchema.statics.findOrCreate = async function (profile, callback) {
+userSchema.statics.findOrCreate = async function (profile: any, callback: any) {
     let user = await this.findById(profile.id, (err: any, doc: any) => {
         if (err) {
             logError(err)

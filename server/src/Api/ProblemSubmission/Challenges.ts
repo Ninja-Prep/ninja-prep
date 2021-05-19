@@ -1,13 +1,14 @@
 import express, { Request, Response } from 'express'
+import { Problem, ProblemLanguageTemplate } from 'question-database'
 import _ from 'lodash'
-import mongoose from 'mongoose'
 
 const router = express.Router()
 
 router.get('/findchallenges', async (_req: Request, res: Response) => {
     const publicChallengesFields = ['title', 'problem_path']
-    const challenges = await mongoose.connection.db.collection('problems').find().toArray()
-    const filteredChallenges = challenges.map((challenge: string) => {
+
+    const challenges = await Problem.find()
+    const filteredChallenges = challenges.map((challenge) => {
         return _.pick(challenge, publicChallengesFields)
     })
     res.send(filteredChallenges)
@@ -15,21 +16,28 @@ router.get('/findchallenges', async (_req: Request, res: Response) => {
 
 router.get('/:problemPath', async (req: Request, res: Response) => {
     const language = 'java'
-    let problem = await mongoose.connection.db.collection('problems').findOne({
+    let problem = await Problem.findOne({
         problem_path: req.params.problemPath
     })
+        .populate({ path: 'templates.java', model: ProblemLanguageTemplate })
+        .exec()
+
     if (!problem) {
         res.send({})
     } else {
-        const problemTemplateCode = await mongoose.connection.db
-            .collection('problemlanguagetemplates')
-            .findOne({ _id: problem.templates[language] })
-        const starterCode = problemTemplateCode.starter_code_snippet
-        const title = problem.title
-        const description = problem.description
-        const hints = problem.hints
-        const testCases = problem.input_testcases
-        res.send({ starterCode, title, description, hints, testCases })
+        const templateObjectId = problem.templates.get(language)
+        const problemTemplateCode = await ProblemLanguageTemplate.findById(templateObjectId)
+
+        if (problemTemplateCode) {
+            const starterCode = problemTemplateCode.starter_code_snippet
+            const title = problem.title
+            const description = problem.description
+            const hints = problem.hints
+            const testCases = problem.input_testcases
+            res.send({ starterCode, title, description, hints, testCases })
+        } else {
+            res.send({})
+        }
     }
 })
 
