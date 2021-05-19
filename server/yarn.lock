@@ -4243,9 +4243,9 @@ qs@^6.6.0, qs@^6.7.0, qs@^6.9.4:
   dependencies:
     side-channel "^1.0.4"
 
-"question-database@https://github.com/Ninja-Prep/question-database.git#main":
+"question-database@ssh://git@github.com:Ninja-Prep/question-database.git#main":
   version "1.0.0"
-  resolved "https://github.com/Ninja-Prep/question-database.git#4e3866703d67895c7cc26c1a304e8e9dbbec0015"
+  resolved "ssh://git@github.com:Ninja-Prep/question-database.git#4e3866703d67895c7cc26c1a304e8e9dbbec0015"
   dependencies:
     "@typegoose/typegoose" "^7.6.0"
     express "^4.17.1"
