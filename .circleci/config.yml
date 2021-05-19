@@ -7,6 +7,7 @@ executors:
             NPCLIENT_IMAGE: ninjaprep/npclient
             NPBOX_IMAGE: ninjaprep/npbox
             BOX_IMAGE: ninjaprep/box
+
         docker:
             - image: circleci/buildpack-deps:stretch
 
@@ -24,10 +25,33 @@ jobs:
                   install-yarn: true
                   install-npm: false
                   node-version: latest
-            - add_ssh_keys
+            - add_ssh_keys:
+                  fingerprints:
+                      - '58:6d:7c:d2:a8:44:62:7a:2d:cd:7f:ba:1c:ea:a1:fa'
+            - restore_cache:
+                  name: Restore Client Yarn Package Cache
+                  keys:
+                      - yarn-client-{{ checksum "client/yarn.lock" }}
+            - restore_cache:
+                  name: Restore Server Yarn Package Cache
+                  keys:
+                      - yarn-server-{{ checksum "server/yarn.lock" }}
+            - run:
+                  name: Add private question-db repo
+                  command: yarn --cwd ./server add git+ssh://git@github.com/Ninja-Prep/question-database#main
             - run:
                   name: Adding NPM/Yarn dependencies
                   command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
+            - save_cache:
+                  name: Save Client Yarn Package Cache
+                  key: yarn-client-{{ checksum "client/yarn.lock" }}
+                  paths:
+                      - ~/.cache/client-yarn
+            - save_cache:
+                  name: Save Server Yarn Package Cache
+                  key: yarn-server-{{ checksum "server/yarn.lock" }}
+                  paths:
+                      - ~/.cache/server-yarn
             - run:
                   name: Testing Client Folder
                   command: cd client && yarn jest
