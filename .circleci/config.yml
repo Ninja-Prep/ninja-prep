@@ -91,7 +91,7 @@ jobs:
             - run:
                   name: Build Server Image
                   command: |
-                      docker build -t $NPSERVER_IMAGE:latest -f ./server/Dockerfile.prod.server ./server
+                      docker build --build-arg QUESTION_DB_SSH_KEY="$QUESTION_DB_BASE_64_KEY" -t $NPSERVER_IMAGE:latest -f ./server/Dockerfile.prod.server ./server
             - run:
                   name: Archive server Docker image
                   command: docker save -o server_image.tar $NPSERVER_IMAGE
