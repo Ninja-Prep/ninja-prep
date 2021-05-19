@@ -16,6 +16,8 @@ WORKDIR /app
 COPY package.json .yarnrc /app/
 COPY ./yarn.lock /app/yarn.lock
 
+RUN  yarn install --silent
+
 COPY . .
 RUN yarn build
 
