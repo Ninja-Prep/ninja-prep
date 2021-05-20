@@ -19,8 +19,6 @@ router.get('/:problemPath', async (req: Request, res: Response) => {
     let problem = await Problem.findOne({
         problem_path: req.params.problemPath
     })
-        .populate({ path: 'templates.java', model: ProblemLanguageTemplate })
-        .exec()
 
     if (!problem) {
         res.send({})

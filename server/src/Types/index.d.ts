@@ -13,7 +13,7 @@ declare global {
         interface Request {
             problemBO: {
                 testCases: Array<string>
-                snippets: { userCode: string; checkerCode: string }
+                snippets: { userCode: string; checkerCode: string; validateTestCaseCode: string }
             }
             id: string
         }

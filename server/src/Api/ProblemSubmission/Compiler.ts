@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express'
 import { logger } from '../../logger'
 import got from 'got'
-import mongoose from 'mongoose'
+import { Problem, ProblemLanguageTemplate } from 'question-database'
 
 const router = express.Router()
 
@@ -9,24 +9,27 @@ async function getProblemDetails(req: Request, res: Response, next: () => void) 
     logger.info(req.body)
     const programmingLanguage = req.body.programmingLanguage
     const userCodeSnippet = req.body.codeSnippet
-    let problem = await mongoose.connection.db.collection('problems').findOne({
+    let problem = await Problem.findOne({
         problem_path: req.params.problemPath
     })
-    const problemTemplateCode = await mongoose.connection.db
-        .collection('problemlanguagetemplates')
-        .findOne({ _id: problem.templates[programmingLanguage] })
 
-    const testCases = problem.input_testcases
-    const solutionCodeSnippet = problemTemplateCode.solution_code_snippet
-    const codeContainer = problemTemplateCode.executable_code_container
-    const userCode = codeContainer.replace('INSERT_SOLVER', userCodeSnippet)
+    const problemTemplateCode = await ProblemLanguageTemplate.findOne({ _id: problem?.templates.get(programmingLanguage) })
 
-    const checkerCode = problem.checker_code_snippet.replace('INSERT_SOLUTION_SNIPPET', solutionCodeSnippet)
+    if (problem && problemTemplateCode) {
+        const testCases = problem.input_testcases
+        const solutionCodeSnippet = problemTemplateCode.solution_code_snippet
+        const codeContainer = problemTemplateCode.executable_code_container
+        const userCode = codeContainer.replace('INSERT_SOLVER', userCodeSnippet)
 
-    req.problemBO = {
-        testCases,
-        snippets: { userCode, checkerCode }
+        const checkerCode = problem.checker_code_snippet.replace('INSERT_SOLUTION_SNIPPET', solutionCodeSnippet)
+        const validateTestCaseCode = problem.validate_test_case_snippet
+
+        req.problemBO = {
+            testCases,
+            snippets: { userCode, checkerCode, validateTestCaseCode }
+        }
     }
+
     next()
 }
 
