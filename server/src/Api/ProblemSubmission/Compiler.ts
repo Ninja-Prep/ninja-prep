@@ -17,11 +17,10 @@ async function getProblemDetails(req: Request, res: Response, next: () => void) 
 
     if (problem && problemTemplateCode) {
         const testCases = problem.input_testcases
-        const solutionCodeSnippet = problemTemplateCode.solution_code_snippet
         const codeContainer = problemTemplateCode.executable_code_container
         const userCode = codeContainer.replace('INSERT_SOLVER', userCodeSnippet)
 
-        const checkerCode = problem.checker_code_snippet.replace('INSERT_SOLUTION_SNIPPET', solutionCodeSnippet)
+        const checkerCode = problem.checker_code_snippet
         const validateTestCaseCode = problem.validate_test_case_snippet
 
         req.problemBO = {
