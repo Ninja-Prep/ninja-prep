@@ -14,8 +14,8 @@ router.get('/findchallenges', async (_req: Request, res: Response) => {
     res.send(filteredChallenges)
 })
 
-router.get('/:problemPath', async (req: Request, res: Response) => {
-    const language = 'java'
+router.post('/:problemPath', async (req: Request, res: Response) => {
+    const language = req.body.language
     let problem = await Problem.findOne({
         problem_path: req.params.problemPath
     })
@@ -33,6 +33,27 @@ router.get('/:problemPath', async (req: Request, res: Response) => {
             const hints = problem.hints
             const testCases = problem.input_testcases
             res.send({ starterCode, title, description, hints, testCases })
+        } else {
+            res.send({})
+        }
+    }
+})
+
+router.post('/:problemPath/startercode', async (req: Request, res: Response) => {
+    const language = req.body.language
+    let problem = await Problem.findOne({
+        problem_path: req.params.problemPath
+    })
+
+    if (!problem) {
+        res.send({})
+    } else {
+        const templateObjectId = problem.templates.get(language)
+        const problemTemplateCode = await ProblemLanguageTemplate.findById(templateObjectId)
+        console.log(problemTemplateCode)
+        if (problemTemplateCode) {
+            const starterCode = problemTemplateCode.starter_code_snippet
+            res.send({ starterCode })
         } else {
             res.send({})
         }

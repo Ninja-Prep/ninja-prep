@@ -5,6 +5,7 @@ import { getProblemDetails } from './CodeEditorBaseComponent'
 import Error404Component from '../Error404/Error404Component'
 import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
 import FadeIn from 'react-fade-in'
+import { connect, ConnectedProps } from 'react-redux'
 
 import { default as _ } from 'lodash'
 import AsyncSpinner from '../Routes/Util/AsyncSpinner'
@@ -13,7 +14,15 @@ interface MatchParams {
     id: string
 }
 
-interface Props extends RouteComponentProps<MatchParams> {}
+const mapStateToProps = (state: any) => ({
+    language: state.editor.language
+})
+
+const connector = connect(mapStateToProps)
+
+type PropsFromRedux = ConnectedProps<typeof connector>
+
+interface Props extends RouteComponentProps<MatchParams>, PropsFromRedux {}
 
 function CodeEditorComponent(props: Props) {
     const [isLoading, setLoadingStatus] = useState(true)
@@ -21,7 +30,7 @@ function CodeEditorComponent(props: Props) {
 
     useEffect(() => {
         const loadDetails = async () => {
-            const problemDetails = await getProblemDetails(props.match.params.id)
+            const problemDetails = await getProblemDetails(props.match.params.id, props.language)
             setProblemDetails(problemDetails)
             setLoadingStatus(false)
         }
@@ -48,4 +57,4 @@ function CodeEditorComponent(props: Props) {
     )
 }
 
-export default withRouter(CodeEditorComponent)
+export default connector(withRouter(CodeEditorComponent))

@@ -16,7 +16,7 @@ interface Map {
 export const languageMap: Map = {
     'text/x-java': 'java',
     'text/x-c++src': 'cpp14',
-    python: 'python3',
+    python: 'python',
     javascript: 'nodejs'
 }
 
@@ -28,8 +28,8 @@ export const themeOptions = [
 ]
 
 export const modeOptions = [
-    { value: 'text/x-java', label: 'Java' },
-    { value: 'text/x-c++src', label: 'C++' },
-    { value: 'javascript', label: 'Javascript' },
-    { value: 'python', label: 'Python' }
+    { value: 'text/x-java', label: 'java' },
+    { value: 'text/x-c++src', label: 'c++' },
+    { value: 'javascript', label: 'javascript' },
+    { value: 'python', label: 'python' }
 ]

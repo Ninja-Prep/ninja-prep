@@ -5,7 +5,7 @@ class ProblemTemplatePage extends Component {
     render() {
         return (
             <div>
-                <CodeEditorComponent {...this.props} />
+                <CodeEditorComponent />
             </div>
         )
     }

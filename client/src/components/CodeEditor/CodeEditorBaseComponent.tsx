@@ -2,12 +2,30 @@ import Axios from 'axios'
 import { UserSubmissionOutput, SubmissionStatus } from './CodeEditorOutput/TestCaseAreaHelper'
 import { languageMap } from './UserSettings/CodeEditorLanguages'
 
-export const getProblemDetails = async (paramsId: string) => {
+export interface MatchParams {
+    id: string
+}
+
+export const getProblemDetails = async (paramsId: string, language: string) => {
     const problemInfo = await Axios({
-        method: 'GET',
-        url: `/api/challenges/${paramsId}`
+        method: 'POST',
+        url: `/api/challenges/${paramsId}`,
+        data: {
+            language: language
+        }
     })
     return problemInfo.data
+}
+
+export const getStarterCode = async (paramsId: string, language: string) => {
+    const problemInfo = await Axios({
+        method: 'POST',
+        url: `/api/challenges/${paramsId}/startercode`,
+        data: {
+            language: language
+        }
+    })
+    return problemInfo.data.starterCode
 }
 
 export const handleSubmit = async (
