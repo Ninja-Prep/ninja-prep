@@ -18,7 +18,8 @@ describe('GET /api/challenges/:problemPath', function () {
     })
     it('can get Two-Sum', function (done) {
         request(app)
-            .get('/api/challenges/Two-Sum')
+            .post('/api/challenges/Two-Sum')
+            .send({ language: 'java' })
             .then((res) => {
                 chai.expect(res.status).to.eq(200)
                 chai.expect(res.body.title).equals('Two Sum')
@@ -30,7 +31,8 @@ describe('GET /api/challenges/:problemPath', function () {
     })
     it('can get longest-unique-substring', (done) => {
         request(app)
-            .get('/api/challenges/Longest-Unique-Substring')
+            .post('/api/challenges/Longest-Unique-Substring')
+            .send({ language: 'java' })
             .then((res) => {
                 chai.expect(res.status).to.eq(200)
                 chai.expect(res.body.title).equals('Longest Unique Substring')
@@ -42,7 +44,8 @@ describe('GET /api/challenges/:problemPath', function () {
     })
     it('has empty body for missing problem', (done) => {
         request(app)
-            .get('/api/challenges/nonExistingProblem')
+            .post('/api/challenges/nonExistingProblem')
+            .send({ language: 'java' })
             .then((res) => {
                 chai.expect(res.status).to.eq(200)
                 chai.expect(res.body).to.be.an('object').that.is.empty
