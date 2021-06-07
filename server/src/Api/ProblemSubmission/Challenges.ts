@@ -50,7 +50,6 @@ router.post('/:problemPath/startercode', async (req: Request, res: Response) => 
     } else {
         const templateObjectId = problem.templates.get(language)
         const problemTemplateCode = await ProblemLanguageTemplate.findById(templateObjectId)
-        console.log(problemTemplateCode)
         if (problemTemplateCode) {
             const starterCode = problemTemplateCode.starter_code_snippet
             res.send({ starterCode })

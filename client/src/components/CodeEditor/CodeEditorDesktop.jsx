@@ -30,7 +30,6 @@ class CodeEditorDesktop extends Component {
     }
 
     setInitialCode() {
-        console.log(this.state)
         const storageUserCode = this.getLanguageCookie()
         if (!_.isNull(storageUserCode)) {
             return storageUserCode

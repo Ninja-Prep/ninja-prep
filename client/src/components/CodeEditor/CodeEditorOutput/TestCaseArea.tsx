@@ -90,7 +90,6 @@ function SubmissionStatusHandler({
 }
 
 function TestCaseOutputHandler() {
-    console.log()
     return (
         <UserSubmissionContext.Consumer>
             {({ submissionOutput }) => {

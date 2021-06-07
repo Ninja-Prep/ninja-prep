@@ -17,7 +17,6 @@ async function getProblemDetails(req: Request, res: Response, next: () => void) 
         const testCases = problem.input_testcases
         const codeContainer = problemTemplateCode.executable_code_container
         const userCode = codeContainer.replace('INSERT_SOLVER', userCodeSnippet)
-        console.log(userCode)
         const checkerCode = problem.checker_code_snippet
         const validateTestCaseCode = problem.validate_test_case_snippet
 
