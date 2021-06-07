@@ -7,6 +7,7 @@ import CodeEditorNavbar from './CodeEditorNavbar/CodeEditorNavbar'
 import TestCaseArea from './CodeEditorOutput/TestCaseArea'
 
 import CodeMirrorWrapperComponent from './CodeMirrorWrapperComponent'
+import { getStarterCode } from './CodeEditorBaseComponent'
 
 import './CodeMirror.css'
 import 'codemirror/lib/codemirror.css'
@@ -29,7 +30,7 @@ class CodeEditorDesktop extends Component {
     }
 
     setInitialCode() {
-        const storageUserCode = localStorage.getItem(this.cookieUsercodeKey)
+        const storageUserCode = this.getLanguageCookie()
         if (!_.isNull(storageUserCode)) {
             return storageUserCode
         }
@@ -38,7 +39,28 @@ class CodeEditorDesktop extends Component {
 
     textHandler(value) {
         this.setState({ value })
-        localStorage.setItem(this.cookieUsercodeKey, value)
+        const cookieKey = this.getLanguageCookieKey()
+        localStorage.setItem(cookieKey, value)
+    }
+
+    getLanguageCookieKey() {
+        return [this.props.problemDetails.title, this.props.mode].join('_')
+    }
+
+    getLanguageCookie() {
+        return localStorage.getItem(this.getLanguageCookieKey())
+    }
+
+    async componentDidUpdate(prevProps) {
+        if (prevProps.mode !== this.props.mode) {
+            const userLanguageTextCookie = this.getLanguageCookie()
+            if (userLanguageTextCookie) {
+                this.setState({ value: userLanguageTextCookie })
+            } else {
+                const starterCode = await getStarterCode(this.props.match.params.id, this.props.language)
+                if (starterCode) this.setState({ value: starterCode })
+            }
+        }
     }
 
     render() {
@@ -85,6 +107,7 @@ class CodeEditorDesktop extends Component {
 }
 
 const mapStateToProps = (state) => ({
+    language: state.editor.language,
     theme: state.editor.theme,
     mode: state.editor.mode,
     lineNumbers: true,

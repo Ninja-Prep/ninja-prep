@@ -32,7 +32,6 @@ Router.post('/create-checkout-session', async (_req, res) => {
             sessionId: session.id
         })
     } catch (e) {
-        console.log('ERROR', e)
         res.status(400)
         res.send({
             error: {

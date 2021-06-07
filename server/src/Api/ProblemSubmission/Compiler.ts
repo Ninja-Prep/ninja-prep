@@ -12,14 +12,11 @@ async function getProblemDetails(req: Request, res: Response, next: () => void) 
     let problem = await Problem.findOne({
         problem_path: req.params.problemPath
     })
-
     const problemTemplateCode = await ProblemLanguageTemplate.findOne({ _id: problem?.templates.get(programmingLanguage) })
-
     if (problem && problemTemplateCode) {
         const testCases = problem.input_testcases
         const codeContainer = problemTemplateCode.executable_code_container
         const userCode = codeContainer.replace('INSERT_SOLVER', userCodeSnippet)
-
         const checkerCode = problem.checker_code_snippet
         const validateTestCaseCode = problem.validate_test_case_snippet
 
@@ -34,13 +31,13 @@ async function getProblemDetails(req: Request, res: Response, next: () => void) 
 
 router.post('/execute/:problemPath', getProblemDetails, async (req: Request, res: Response) => {
     const problemBO = req.problemBO
-
+    // console.log(req)
     try {
         const { body } = await got.post(`http://${process.env.COMPILER_HOST}:8000/compile/`, {
             json: {
                 snippets: problemBO.snippets,
                 testCases: problemBO.testCases,
-                language: 'java'
+                language: req.body.programmingLanguage
             },
             headers: {
                 'X-Request-Id': req.id
