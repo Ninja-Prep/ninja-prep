@@ -12,7 +12,7 @@
                     [
                         "@babel/preset-env",
                         {
-                            "modules": false
+                            "modules": true
                         }
                     ]
                 ],
@@ -79,12 +79,11 @@
         "redux-thunk": "^2.3.0",
         "rehype-raw": "^5.1.0",
         "stripe": "^8.132.0",
-        "typescript": "^4.2.4",
-        "universal-cookie": "^4.0.4"
+        "typescript": "^4.2.4"
     },
     "scripts": {
         "start": "react-scripts start",
-        "build": "GENERATE_SOURCEMAP=false react-scripts build",
+        "build": "react-scripts build && rimraf ./build/**/*.map",
         "test": "react-scripts test",
         "jest": "jest",
         "eject": "react-scripts eject",
