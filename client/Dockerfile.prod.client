@@ -1,5 +1,5 @@
 FROM node:15-alpine as build
-
+ENV GENERATE_SOURCEMAP=false
 WORKDIR /app
 
 COPY ./package.json /app/package.json
