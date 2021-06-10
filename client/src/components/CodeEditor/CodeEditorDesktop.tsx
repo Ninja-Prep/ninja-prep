@@ -17,9 +17,21 @@ import 'codemirror/addon/edit/closebrackets'
 import { ReflexContainer, ReflexSplitter, ReflexElement } from 'react-reflex'
 import { default as _ } from 'lodash'
 import 'react-reflex/styles.css'
+import { RouteComponentProps } from 'react-router-dom'
 
-class CodeEditorDesktop extends Component {
-    constructor(props) {
+interface Props extends RouteComponentProps {
+    problemDetails: any
+    mode: string
+}
+
+type State = {
+    value: string
+    output: string
+}
+
+class CodeEditorDesktop extends Component<Props, State> {
+    cookieUsercodeKey: string
+    constructor(props: Props) {
         super(props)
         this.cookieUsercodeKey = [props.problemDetails.title, props.mode].join('_')
         this.state = {
@@ -36,7 +48,7 @@ class CodeEditorDesktop extends Component {
         return this.props.problemDetails.starterCode
     }
 
-    textHandler(value) {
+    textHandler(value: string) {
         this.setState({ value })
         localStorage.setItem(this.cookieUsercodeKey, value)
     }
@@ -84,7 +96,7 @@ class CodeEditorDesktop extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
     theme: state.editor.theme,
     mode: state.editor.mode,
     lineNumbers: true,
