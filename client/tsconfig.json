@@ -16,7 +16,10 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react"
+        "jsx": "react-jsx",
+        "noFallthroughCasesInSwitch": true,
+        "baseUrl": "./src",
+        "sourceMap": false
     },
     "include": ["src", "tst"]
 }
