@@ -1,21 +1,22 @@
-import React from 'react'
-import FooterBarDesktop from './FooterBarDesktop'
-import FooterBarTablet from './FooterBarTablet'
-import FooterBarMobile from './FooterBarMobile'
-import { Desktop, Tablet, Mobile } from '../../MediaQuery/DeviceSizes'
+import React from 'react';
+
+import {Desktop, Tablet, Mobile} from '../../../utils/DeviceSizes';
+import FooterBarDesktop from './FooterBarDesktop';
+import FooterBarMobile from './FooterBarMobile';
+import FooterBarTablet from './FooterBarTablet';
 
 const FooterBarComponent = () => (
-    <div>
-        <Desktop>
-            <FooterBarDesktop />
-        </Desktop>
-        <Tablet>
-            <FooterBarTablet />
-        </Tablet>
-        <Mobile>
-            <FooterBarMobile />
-        </Mobile>
-    </div>
-)
+  <div>
+    <Desktop>
+      <FooterBarDesktop />
+    </Desktop>
+    <Tablet>
+      <FooterBarTablet />
+    </Tablet>
+    <Mobile>
+      <FooterBarMobile />
+    </Mobile>
+  </div>
+);
 
-export default FooterBarComponent
+export default FooterBarComponent;

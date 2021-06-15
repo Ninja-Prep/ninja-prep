@@ -1,4 +1,4 @@
 export interface BenefitsCardProps {
-    title: string
-    description: string
+  title: string;
+  description: string;
 }

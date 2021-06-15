@@ -1,21 +1,22 @@
-import React from 'react'
-import PremiumDesktop from './PremiumDesktop'
-import PremiumTablet from './PremiumTablet'
-import PremiumMobile from './PremiumMobile'
-import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
+import React from 'react';
+
+import {Desktop, Tablet, Mobile} from '../../utils/DeviceSizes';
+import PremiumDesktop from './PremiumDesktop';
+import PremiumMobile from './PremiumMobile';
+import PremiumTablet from './PremiumTablet';
 
 const PremiumComponent = () => (
-    <div>
-        <Desktop>
-            <PremiumDesktop />
-        </Desktop>
-        <Tablet>
-            <PremiumTablet />
-        </Tablet>
-        <Mobile>
-            <PremiumMobile />
-        </Mobile>
-    </div>
-)
+  <div>
+    <Desktop>
+      <PremiumDesktop />
+    </Desktop>
+    <Tablet>
+      <PremiumTablet />
+    </Tablet>
+    <Mobile>
+      <PremiumMobile />
+    </Mobile>
+  </div>
+);
 
-export default PremiumComponent
+export default PremiumComponent;

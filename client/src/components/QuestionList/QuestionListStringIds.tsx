@@ -1,6 +1,6 @@
 export const QuestionStatus = {
-    PENDING: 'Pending',
-    COMPLETED: 'Completed',
-    LOCKED: 'Locked',
-    NONE: 'NONE'
-}
+  PENDING: 'Pending',
+  COMPLETED: 'Completed',
+  LOCKED: 'Locked',
+  NONE: 'NONE',
+};
