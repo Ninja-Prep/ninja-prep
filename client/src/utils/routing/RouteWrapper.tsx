@@ -11,7 +11,11 @@ interface Props extends RouteProps {
 /**
  *
  */
-function RouteWrapper({component: Component, layout: Layout, ...rest}: Props) {
+function RouteWrapper({
+  component: Component,
+  layout: Layout,
+  ...rest
+}: Props): JSX.Element {
   return (
     <Route
       {...rest}

@@ -8,20 +8,18 @@ import {Desktop, Mobile} from '../../utils/DeviceSizes';
  * @returns Render of component if it is mobile or desktop
  */
 
-function withResponsiveness(
-  DesktopComponent: React.ComponentType,
-  MobileComponent: React.ComponentType = DesktopComponent,
-): JSX.Element {
+interface Props {
+  desktop: JSX.Element;
+  mobile: JSX.Element;
+}
+
+function Responsiveness({desktop, mobile = desktop}: Props): JSX.Element {
   return (
     <>
-      <Desktop>
-        <DesktopComponent />
-      </Desktop>
-      <Mobile>
-        <MobileComponent />
-      </Mobile>
+      <Desktop>{desktop}</Desktop>
+      <Mobile>{mobile}</Mobile>
     </>
   );
 }
 
-export default withResponsiveness;
+export default Responsiveness;

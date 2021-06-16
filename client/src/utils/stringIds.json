@@ -1,11 +1,20 @@
 {
-  "TEXT_404": 404,
-  "OOPS": "Oops!",
-  "MISSING_PAGE_TEXT": "We can't seem to find the page you are looking for...",
-  "REDIRECT_TEXT": "Back to home",
+  "CHALLENGES_NAVIGATION": "Challenges",
   "FACEBOOK_LOGIN": "Facebook Login",
+  "GET_PREMIUM_NAVIGATION": "Get Premium",
+  "GET_STARTED": "Get Started for Free",
   "GITHUB_LOGIN": "Github Login",
   "GOOGLE_LOGIN": "Google Login",
-  "GET_STARTED": "Get Started for Free",
-  "LOGIN_HEADER_TITLE": "Readily code along to step-by step video tutorials from beginner to mastery"
+  "LOGIN_HEADER_TITLE": "Readily code along to step-by step video tutorials from beginner to mastery",
+  "MEET_THE_TEAM_NAVIGATION": "Meet the Team",
+  "MISSING_PAGE_TEXT": "We can't seem to find the page you are looking for...",
+  "NINJA_PREP": "Ninjaprep",
+  "OOPS": "Oops!",
+  "REDIRECT_TEXT": "Back to home",
+  "REPORT_A_BUG": "Bug Report",
+  "SETTINGS": "Settings",
+  "SIGN_IN_NAVIGATION": "Sign Up",
+  "SIGN_OUT_NAVIGATION": "Log Out",
+  "SIGN_UP_POP_UP_BOX": "Sign Up or Login",
+  "TEXT_404": 404
 }

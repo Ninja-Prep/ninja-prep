@@ -2,7 +2,11 @@ import React from 'react';
 
 import {FACEBOOK_LOGIN, GITHUB_LOGIN, GOOGLE_LOGIN} from 'utils/stringIds.json';
 
-const SocialMediaButtons = (cssClass: string): JSX.Element => {
+interface Props {
+  readonly cssClass: string;
+}
+
+const SocialMediaButtons = ({cssClass}: Props): JSX.Element => {
   return (
     <div>
       <div className="lead">
@@ -18,7 +22,7 @@ const SocialMediaButtons = (cssClass: string): JSX.Element => {
         </a>
       </div>
       <div className="lead">
-        <a className={cssClass + '  black button'} href="/api/auth/github">
+        <a className={cssClass + ' black button'} href="/api/auth/github">
           <i className="github icon"></i>
           {GITHUB_LOGIN}
         </a>

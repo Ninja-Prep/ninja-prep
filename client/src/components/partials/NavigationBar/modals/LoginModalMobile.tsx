@@ -5,34 +5,28 @@ There is no login page, only a modal to log the user in
 import React from 'react';
 
 import {Modal, Row} from 'react-bootstrap';
+import {DarkNavbarNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 import SocialMediaButtons from 'utils/SocialMediaButtons';
-
 import '../NavigationBar.css';
-import {DarkNavbarNinjaPrepLogo} from '../../../../utils/NinjaPrepLogos';
-import {SIGN_UP_POPUP_BOX} from '../NavigationBarStringIds';
+import {SIGN_UP_POP_UP_BOX} from 'utils/stringIds.json';
 
 interface Props {
-  showShortcuts: boolean;
-  handleClose: () => void;
+  readonly showModal: boolean;
+  readonly toggleModal: () => void;
 }
 
-/**
- *
- */
-function NavigationBarLoginModalMobile({showShortcuts, handleClose}: Props) {
+function LoginModalMobile({showModal, toggleModal}: Props): JSX.Element {
   return (
-    <Modal show={showShortcuts} onHide={handleClose} centered className="px-5">
-      <Modal.Header closeButton className="modal-header">
-        <Modal.Title></Modal.Title>
-      </Modal.Header>
+    <Modal show={showModal} onHide={toggleModal} centered className="px-5">
+      <Modal.Header closeButton className="modal-header" />
       <Modal.Body className="p-0">
         <Row className="pb-5 px-0 mx-auto h-100 text-center w-75">
           <div className=" mx-0 px-0 center w-100">
             <DarkNavbarNinjaPrepLogo height={90} width={200} />
             <h3 className="font-weight-bold py-4 mx-auto">
-              {SIGN_UP_POPUP_BOX}
+              {SIGN_UP_POP_UP_BOX}
             </h3>
-            <div>{SocialMediaButtons('mx-auto fluid ui mb-3 py-3')}</div>
+            <SocialMediaButtons cssClass="mx-auto fluid ui mb-3 py-3" />
           </div>
         </Row>
       </Modal.Body>
@@ -40,4 +34,4 @@ function NavigationBarLoginModalMobile({showShortcuts, handleClose}: Props) {
   );
 }
 
-export default NavigationBarLoginModalMobile;
+export default LoginModalMobile;

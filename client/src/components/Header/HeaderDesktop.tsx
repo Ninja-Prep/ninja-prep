@@ -1,18 +1,15 @@
 import React from 'react';
 
 import {Container, Row, Col} from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import {GET_STARTED} from 'utils/stringIds.json';
 
+import './header.css';
+import SocialMediaButtons from '../../utils/SocialMediaButtons';
 import {
   ENHANCE_YOUR_SKILLS,
   HEADER_DESCRIPTION_1,
   HEADER_DESCRIPTION_2,
 } from './HeaderStringIds';
-
-import {GET_STARTED} from 'utils/stringIds.json';
-
-import './header.css';
-import SocialMediaButtons from '../../utils/SocialMediaButtons';
 
 const HeaderDesktop = () => (
   <div className="header-bg text-light px-5">

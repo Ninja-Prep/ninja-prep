@@ -8,8 +8,8 @@ Pick between two components to render
 
 import React from 'react';
 
-import Axios from 'axios';
 import {RouteComponentProps, RouteProps} from 'react-router';
+import {getAuthStatus} from 'services/auth/auth';
 
 import RouteWrapper from './RouteWrapper';
 
@@ -36,26 +36,19 @@ class ProtectedRoute extends React.Component<Props, State> {
   /**
    *
    */
-  async getAuthStatus() {
-    const authStatus = await Axios.get('/api/auth/authenticationStatus');
-    console.log(this.getAuthStatus);
-    this.setState({isAuthenticated: authStatus.data, isLoading: false});
+  async componentDidMount(): Promise<void> {
+    const status = await getAuthStatus();
+    this.setState({isAuthenticated: status, isLoading: false});
   }
 
   /**
    *
    */
-  componentDidMount() {
-    this.getAuthStatus();
-  }
-
-  /**
-   *
-   */
-  render() {
+  render(): JSX.Element | null {
     const Component = this.props.component;
     const AuthComponent = this.props.authComponent;
     const Layout = this.props.layout;
+
     if (this.state.isAuthenticated && AuthComponent) {
       return <RouteWrapper component={AuthComponent} layout={Layout} />;
     } else if (this.state.isLoading) {

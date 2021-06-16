@@ -9,7 +9,7 @@ import {
   MISSING_PAGE_TEXT,
   OOPS,
   REDIRECT_TEXT,
-} from 'utils/stringIds';
+} from 'utils/stringIds.json';
 
 import './Error404.module.scss';
 

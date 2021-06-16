@@ -6,15 +6,14 @@ import React, {Fragment} from 'react';
 
 import {Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-
 import './NavigationBar.css';
 import {
   GET_PREMIUM_NAVIGATION,
   CHALLENGES_NAVIGATION,
   MEET_THE_TEAM_NAVIGATION,
-} from './NavigationBarStringIds';
+} from 'utils/stringIds.json';
 
-export const NavigationBarLinks = () => {
+const NavLinks = (): JSX.Element => {
   return (
     <Fragment>
       <Nav.Link as={Link} to="/premium" className="pl-3">
@@ -29,3 +28,5 @@ export const NavigationBarLinks = () => {
     </Fragment>
   );
 };
+
+export default NavLinks;
