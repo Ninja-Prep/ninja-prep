@@ -16,15 +16,10 @@ function setUserCookie(req: Request) {
     const publicUser = _.pick(req.user, publicUserFields)
     req.session.publicUser = publicUser
     req.session.user = req.user
-    req.session.isAuthenticated = true
 }
 
-router.get('/authenticationStatus', (req: Request, res: Response) => {
-    if (req.session?.isAuthenticated) {
-        res.send(req.session.isAuthenticated)
-    } else {
-        res.send(false)
-    }
+router.get('/authStatus', (req: Request, res: Response) => {
+    res.send(!!req.session.user)
 })
 
 router.get('/getUser', (req: Request, res: Response) => {
@@ -44,6 +39,7 @@ router.get(
     }),
     (req: Request, res: Response) => {
         setUserCookie(req)
+        console.log("Original user:" , req.user)
         res.redirect('/')
     }
 )

@@ -10,3 +10,5 @@ export function useToggler(): Toggler {
   const toggle = () => setStatus(!isOn);
   return {isOn, toggle};
 }
+
+export default useToggler;

@@ -8,8 +8,8 @@ other components
 
 import React, {FunctionComponent} from 'react';
 
-import FooterBarComponent from 'components/partials/FooterBar/FooterBarComponent';
-import NavigationBar from 'containers/partials/NavigationBar/NavigationBar';
+import FooterBarComponent from 'components/FooterBar/FooterBarComponent';
+import NavigationBar from 'containers/NavigationBar/NavigationBar';
 
 import styles from './Layouts.module.scss';
 

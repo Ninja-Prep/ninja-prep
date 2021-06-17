@@ -4,27 +4,27 @@ Help maintain consistency when a link is added, removed, updated
 */
 import React, {Fragment} from 'react';
 
-import {Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import './NavigationBar.css';
 import {
   GET_PREMIUM_NAVIGATION,
   CHALLENGES_NAVIGATION,
   MEET_THE_TEAM_NAVIGATION,
 } from 'utils/stringIds.json';
 
+import NavLink from './styled';
+
 const NavLinks = (): JSX.Element => {
   return (
     <Fragment>
-      <Nav.Link as={Link} to="/premium" className="pl-3">
+      <NavLink as={Link} to="/premium">
         {GET_PREMIUM_NAVIGATION}
-      </Nav.Link>
-      <Nav.Link as={Link} to="/challenges" className="pl-3">
+      </NavLink>
+      <NavLink as={Link} to="/challenges">
         {CHALLENGES_NAVIGATION}
-      </Nav.Link>
-      <Nav.Link as={Link} to="/about" className="pl-3">
+      </NavLink>
+      <NavLink as={Link} to="/about">
         {MEET_THE_TEAM_NAVIGATION}
-      </Nav.Link>
+      </NavLink>
     </Fragment>
   );
 };

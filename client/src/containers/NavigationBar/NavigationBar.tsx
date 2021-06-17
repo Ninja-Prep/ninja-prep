@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 import Responsiveness from 'components/hocs/Responsiveness';
-import NavigationBarDesktop from 'components/partials/NavigationBar/NavigationBarDesktop';
-import NavigationBarMobile from 'components/partials/NavigationBar/NavigationBarMobile';
+import NavigationBarDesktop from 'components/NavigationBar/NavigationBarDesktop';
+import NavigationBarMobile from 'components/NavigationBar/NavigationBarMobile';
 import {getUser} from 'services/auth/auth';
 import {User} from 'types/user/user';
 

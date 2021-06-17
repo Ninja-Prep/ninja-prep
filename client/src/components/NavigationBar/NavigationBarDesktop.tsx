@@ -6,16 +6,16 @@ Wrapper component to add
 */
 import React from 'react';
 
-import {useToggler} from 'containers/partials/NavigationBar/hooks';
+import {useToggler} from 'containers/NavigationBar/hooks/useToggler';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './NavigationBar.css';
 import {User} from 'types/user/user';
 
-import {LightNavbarNinjaPrepLogo} from '../../../utils/NinjaPrepLogos';
+import {LightNavbarNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
 import ProfileDropdown from './dropdown/ProfileDropdown';
+import NavLinks from './links/NavLinks';
 import LoginModalDesktop from './modals/LoginModalDesktop';
-import NavLinks from './NavLinks';
 
 interface NavBarProps {
   readonly user: User;

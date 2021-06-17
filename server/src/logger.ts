@@ -79,7 +79,7 @@ function getLevel(req: any, res: any) {
     return level
 }
 
-const expressWinstonTransports = [new transports.Console({}), new LoggingWinston({})]
+const expressWinstonTransports = [new transports.Console({})]
 
 const expresslogger = expressWinston.logger({
     transports: expressWinstonTransports,
