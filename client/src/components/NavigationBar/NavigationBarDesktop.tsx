@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';
 import './NavigationBar.css';
 import {User} from 'types/user/user';
 
-import {LightNavbarNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
+import {LightNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
 import ProfileDropdown from './dropdown/ProfileDropdown';
 import NavLinks from './links/NavLinks';
 import LoginModalDesktop from './modals/LoginModalDesktop';
@@ -36,7 +36,7 @@ function NavigationBarDesktop(props: NavBarProps): JSX.Element {
       variant="dark"
     >
       <Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
-        <LightNavbarNinjaPrepLogo height={40} width={100} />
+        <LightNinjaPrepLogo height={40} width={100} />
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Desktop, Mobile} from '../../utils/DeviceSizes';
+import {Desktop, Mobile} from 'utils/DeviceSizes';
 
 /**
  * @param DesktopComponent Desktop component to render

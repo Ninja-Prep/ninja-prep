@@ -5,7 +5,7 @@ interface Props {
   width: number;
 }
 
-export const LightNavbarNinjaPrepLogo = (props: Props): JSX.Element => {
+export const LightNinjaPrepLogo = (props: Props): JSX.Element => {
   return (
     <svg width={props.width} height={props.height} viewBox="0 0 200 57">
       <g
@@ -39,7 +39,7 @@ export const LightNavbarNinjaPrepLogo = (props: Props): JSX.Element => {
   );
 };
 
-export const DarkNavbarNinjaPrepLogo = (props: Props): JSX.Element => {
+export const DarkNinjaPrepLogo = (props: Props): JSX.Element => {
   return (
     <svg width={props.width} height={props.height} viewBox="0 0 201 58">
       <g

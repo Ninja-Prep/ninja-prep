@@ -3,7 +3,7 @@ import React from 'react';
 import {Navbar, Nav, Row, Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-import {DarkNavbarNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
+import {DarkNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
 
 /**
  *
@@ -13,7 +13,7 @@ function FooterBarTablet() {
     <Navbar className="px-5 border-top">
       <Row className="py-5 mx-auto container">
         <Col className="my-auto p-0">
-          <DarkNavbarNinjaPrepLogo height={50} width={130} />
+          <DarkNinjaPrepLogo height={50} width={130} />
         </Col>
         <Col>
           <p className="font-weight-bold text-secondary">NINJAPREP</p>

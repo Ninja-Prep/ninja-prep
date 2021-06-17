@@ -1,12 +1,14 @@
 import React from 'react';
 
-import MeetTheTeamComponent from '../components/MeetTheTeam/MeetTheTeamComponent';
+import Responsiveness from 'components/hocs/Responsiveness';
 
-/**
- *
- */
-function MeetTheTeamPage() {
-  return <MeetTheTeamComponent />;
+import MeetTheTeamDesktop from './desktop/MeetTheTeamDesktop';
+import MeetTheTeamMobile from './mobile/MeetTheTeamMobile';
+
+function MeetTheTeamPage(): JSX.Element {
+  const desktop = <MeetTheTeamDesktop />;
+  const mobile = <MeetTheTeamMobile />;
+  return <Responsiveness desktop={desktop} mobile={mobile} />;
 }
 
 export default MeetTheTeamPage;

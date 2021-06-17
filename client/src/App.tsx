@@ -1,6 +1,3 @@
-import './App.module.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React, {Component} from 'react';
 
 import Error404Component from 'components/Error404/Error404';
@@ -32,18 +29,19 @@ class App extends Component {
             component={LandingPage}
             layout={HeaderLayout}
           />
-          {/* <RouteWrapper
-            path="/challenges"
-            exact
-            component={ChallengesPage}
-            layout={HeaderLayout}
-          />
           <RouteWrapper
             path="/about"
             exact
             component={MeetTheTeamPage}
             layout={HeaderandFooterLayout}
           />
+          {/* <RouteWrapper
+            path="/challenges"
+            exact
+            component={ChallengesPage}
+            layout={HeaderLayout}
+          />
+
           <RouteWrapper
             path="/premium"
             exact
@@ -51,11 +49,12 @@ class App extends Component {
             layout={HeaderandFooterLayout}
           />
           <Route path="/problem/:id" exact component={ProblemTemplatePage} />
+          */}
           <RouteWrapper
             exact
             component={Error404Component}
             layout={HeaderLayout}
-          /> */}
+          />
         </Switch>
       </Router>
     );
