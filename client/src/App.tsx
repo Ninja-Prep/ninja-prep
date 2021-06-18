@@ -8,9 +8,9 @@ import PremiumPage from 'pages/PremiumPage';
 import ProblemTemplatePage from 'pages/ProblemTemplatePage';
 import ReactGA from 'react-ga';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-import {HeaderLayout, HeaderandFooterLayout} from 'utils/routing/Layouts';
-import ProtectedRoute from 'utils/routing/ProtectedRoute';
-import RouteWrapper from 'utils/routing/RouteWrapper';
+import {HeaderLayout, HeaderandFooterLayout} from 'components/routing/Layouts';
+import ProtectedRoute from 'components/routing/ProtectedRoute';
+import RouteWrapper from 'components/routing/RouteWrapper';
 
 class App extends Component {
   componentDidMount(): void {

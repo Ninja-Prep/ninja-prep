@@ -17,7 +17,7 @@ const MeetTheTeamInfoDesktop = (): JSX.Element => {
           return (
             <StyledRow>
               <VerticalCenteredCol>{_.photo}</VerticalCenteredCol>
-              <VerticalCenteredCol>
+              <VerticalCenteredCol xs={8}>
                 <Name>{_.name}</Name>
                 <Description>{_.description}</Description>
               </VerticalCenteredCol>
@@ -26,7 +26,7 @@ const MeetTheTeamInfoDesktop = (): JSX.Element => {
         } else {
           return (
             <StyledRow>
-              <VerticalCenteredCol>
+              <VerticalCenteredCol xs={8}>
                 <Name>{_.name}</Name>
                 <Description>{_.description}</Description>
               </VerticalCenteredCol>

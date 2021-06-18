@@ -1,9 +1,7 @@
 import React from 'react';
 
-import {Col} from 'react-bootstrap';
-
 import {biographies} from '../biographies';
-import {Biography, BiographyContainer, Name} from './styled';
+import {Biography, BiographyContainer, Name, Photo} from './styled';
 
 const MeetTheTeamInfoMobile = (): JSX.Element => {
   return (
@@ -12,7 +10,7 @@ const MeetTheTeamInfoMobile = (): JSX.Element => {
         return (
           <div>
             <Name>{_.name}</Name>
-            <Col>{_.photo}</Col>
+            <Photo>{_.photo}</Photo>
             <Biography>{_.description}</Biography>
           </div>
         );

@@ -1,23 +1,15 @@
 import React from 'react';
 
-import {Desktop, Tablet, Mobile} from 'utils/DeviceSizes';
+import Responsiveness from 'utils/hocs/Responsiveness';
 
-import FooterBarDesktop from './FooterBarDesktop';
-import FooterBarMobile from './FooterBarMobile';
-import FooterBarTablet from './FooterBarTablet';
+import FooterBarDesktop from './desktop/FooterBarDesktop';
+import FooterBarMobile from './mobile/FooterBarMobile';
 
-const FooterBarComponent = () => (
-  <div>
-    <Desktop>
-      <FooterBarDesktop />
-    </Desktop>
-    <Tablet>
-      <FooterBarTablet />
-    </Tablet>
-    <Mobile>
-      <FooterBarMobile />
-    </Mobile>
-  </div>
-);
+const desktop = <FooterBarDesktop />;
+const mobile = <FooterBarMobile />;
+
+const FooterBarComponent = (): JSX.Element => {
+  return <Responsiveness desktop={desktop} mobile={mobile} />;
+};
 
 export default FooterBarComponent;

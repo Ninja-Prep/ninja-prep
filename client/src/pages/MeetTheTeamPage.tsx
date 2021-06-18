@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Responsiveness from 'components/hocs/Responsiveness';
+import Responsiveness from 'utils/hocs/Responsiveness';
 
 import MeetTheTeamDesktop from './desktop/MeetTheTeamDesktop';
 import MeetTheTeamMobile from './mobile/MeetTheTeamMobile';

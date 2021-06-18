@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Responsiveness from 'components/hocs/Responsiveness';
+import Responsiveness from 'utils/hocs/Responsiveness';
 import NavigationBarDesktop from 'components/NavigationBar/NavigationBarDesktop';
 import NavigationBarMobile from 'components/NavigationBar/NavigationBarMobile';
 import {getUser} from 'services/auth/auth';
