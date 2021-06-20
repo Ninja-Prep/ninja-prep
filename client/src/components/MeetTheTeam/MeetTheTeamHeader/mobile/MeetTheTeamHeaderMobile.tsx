@@ -13,7 +13,7 @@ function MeetTheTeamHeaderMobile(): JSX.Element {
   return (
     <Container>
       <CenteredText>
-        <DarkNinjaPrepLogo width={450} height={175} />
+        <DarkNinjaPrepLogo width={325} height={175} />
         <HeaderTitle>{MEET_THE_TEAM_HEADER_TITLE}</HeaderTitle>
         <HeaderDescription>
           {MEET_THE_TEAM_HEADER_DESCRIPTION}

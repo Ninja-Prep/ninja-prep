@@ -8,6 +8,7 @@ import MeetTheTeamMobile from './mobile/MeetTheTeamMobile';
 function MeetTheTeamPage(): JSX.Element {
   const desktop = <MeetTheTeamDesktop />;
   const mobile = <MeetTheTeamMobile />;
+
   return <Responsiveness desktop={desktop} mobile={mobile} />;
 }
 

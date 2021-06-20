@@ -1,18 +1,14 @@
 import React from 'react';
 
-import {Elements} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
+import Responsiveness from 'utils/hocs/Responsiveness';
 
-import PremiumComponent from '../components/Premium/PremiumComponent';
-import {STRIPE_KEY} from '../config/keys';
+import PremiumDesktop from './desktop/PremiumDesktop';
+import PremiumMobile from './mobile/PremiumMobile';
 
-const PremiumPage = () => {
-  const stripePromise = loadStripe(STRIPE_KEY);
+const PremiumPage = (): JSX.Element => {
+  const desktop = <PremiumDesktop />;
+  const mobile = <PremiumMobile />;
 
-  return (
-    <Elements stripe={stripePromise}>
-      <PremiumComponent />
-    </Elements>
-  );
+  return <Responsiveness desktop={desktop} mobile={mobile} />;
 };
 export default PremiumPage;

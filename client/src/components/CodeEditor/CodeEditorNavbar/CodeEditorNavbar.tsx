@@ -5,7 +5,7 @@ import React from 'react';
 import {Button, Col, Nav, Row} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-import {LightNavbarNinjaPrepLogo} from '../../../utils/NinjaPrepLogos';
+import {LightNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 
 interface Props {
   title: string;
@@ -30,7 +30,7 @@ function CodeEditorNavbar(props: Props) {
     <Row className="problem-navigation-bar m-0 p-0 align-items-center">
       <Col className="">
         <Nav.Link as={Link} to="/" className="d-inline-block">
-          <LightNavbarNinjaPrepLogo height={25} width={100} />
+          <LightNinjaPrepLogo height={25} width={100} />
         </Nav.Link>
       </Col>
 

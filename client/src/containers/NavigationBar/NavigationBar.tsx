@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
-import Responsiveness from 'utils/hocs/Responsiveness';
 import NavigationBarDesktop from 'components/NavigationBar/NavigationBarDesktop';
 import NavigationBarMobile from 'components/NavigationBar/NavigationBarMobile';
-import {getUser} from 'services/auth/auth';
-import {User} from 'types/user/user';
+import {getUser} from 'services/auth/authService';
+import Responsiveness from 'utils/hocs/Responsiveness';
+import {User} from 'utils/types/user';
 
 interface State {
   readonly user: User;
@@ -23,6 +23,7 @@ class NavigationBar extends Component<Record<string, never>, State> {
   render(): JSX.Element {
     const desktopComponent = <NavigationBarDesktop user={this.state.user} />;
     const mobileComponent = <NavigationBarMobile user={this.state.user} />;
+
     return (
       <Responsiveness desktop={desktopComponent} mobile={mobileComponent} />
     );

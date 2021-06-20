@@ -5,7 +5,7 @@ export const CenteredText = styled.div`
 `;
 
 export const HeaderTitle = styled.h1.attrs(() => ({
-  className: 'display-4 font-weight-bold pb-2',
+  className: 'display-4 font-weight-bold pb-2 pt-0 mt-0',
 }))``;
 
 export const HeaderDescription = styled.p.attrs(() => ({

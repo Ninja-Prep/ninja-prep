@@ -11,5 +11,6 @@ export const FooterLink = styled(Link)`
 
 export const FooterNavbar = styled(Navbar)`
   border-top: 1px solid #dee2e6 !important;
-  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
 `;

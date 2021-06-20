@@ -29,7 +29,7 @@ export const Tablet = ({children}: Props): JSX.Element => {
 };
 
 export const Mobile = ({children}: Props): JSX.Element => {
-  const isMobile: boolean = useMediaQuery({maxWidth: 992});
+  const isMobile: boolean = useMediaQuery({maxWidth: 991});
   if (isMobile) {
     if (children != null) return <Fragment>{children}</Fragment>;
   }

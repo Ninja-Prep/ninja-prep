@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {Context as ResponsiveContext} from 'react-responsive';
 import {DEVICE_TYPES, routeWrapper} from '../TestHelper';
-import ChallengesPage from '../../src/pages/ChallengesPage';
+import ChallengesPage from '../../src/pages/ChallengesPage/ChallengesPage';
 
 test.each(Object.entries(DEVICE_TYPES))(
   'renders successfully on %p',
