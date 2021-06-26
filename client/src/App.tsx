@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 
 import Error404Component from 'components/Error404/Error404';
-import {HeaderLayout, HeaderandFooterLayout} from 'utils/routing/Layouts';
-import ProtectedRoute from 'utils/routing/ProtectedRoute';
-import RouteWrapper from 'utils/routing/RouteWrapper';
 import ChallengesPage from 'pages/ChallengesPage/ChallengesPage';
 import LandingPage from 'pages/LandingPage';
 import MeetTheTeamPage from 'pages/MeetTheTeamPage';
 import PremiumPage from 'pages/PremiumPage';
-import ProblemTemplatePage from 'pages/ProblemTemplatePage';
+import ProblemSubmissionPage from 'pages/ProblemSubmissionPage/ProblemSubmissionPage';
 import ReactGA from 'react-ga';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {HeaderLayout, HeaderandFooterLayout} from 'utils/routing/Layouts';
+import ProtectedRoute from 'utils/routing/ProtectedRoute';
+import RouteWrapper from 'utils/routing/RouteWrapper';
 
 class App extends Component {
   componentDidMount(): void {
@@ -41,14 +41,13 @@ class App extends Component {
             component={ChallengesPage}
             layout={HeaderLayout}
           />
-
           <RouteWrapper
             path="/premium"
             exact
             component={PremiumPage}
             layout={HeaderandFooterLayout}
           />
-          <Route path="/problem/:id" exact component={ProblemTemplatePage} />
+          <Route path="/problem/:id" exact component={ProblemSubmissionPage} />
           <RouteWrapper
             exact
             component={Error404Component}

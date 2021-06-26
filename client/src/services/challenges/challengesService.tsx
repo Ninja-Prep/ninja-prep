@@ -1,6 +1,8 @@
 import axios from 'axios';
+import {UserSubmissionOutput} from 'components/CodeEditor/TestCaseOutput/TestCaseAreaHelper';
+import {ChallengeLink, ProblemDetails} from 'utils/types/challenges';
 
-import {ChallengeLink} from '../../utils/types/challenges/index';
+import {isUserSubmissionOutput} from '../../utils/types/challenges/index';
 
 /**
  * @returns List of links for each problem
@@ -24,4 +26,39 @@ export async function findChallengeLinks(): Promise<ChallengeLink[]> {
   );
 
   return challenges;
+}
+
+export const getProblemDetails = async (
+  paramsId: string,
+): Promise<ProblemDetails> => {
+  const responseData = (
+    await axios({
+      method: 'GET',
+      url: `/api/challenges/${paramsId}`,
+    })
+  ).data;
+
+  const problemDetails: ProblemDetails = {
+    description: responseData.description,
+    hints: responseData.hints,
+    starterCode: responseData.starterCode,
+    testCases: responseData.testCases,
+    title: responseData.title,
+  };
+  return problemDetails;
+};
+
+export async function submitProblem(
+  textValue: string,
+  language: string,
+  problemId: string,
+): Promise<UserSubmissionOutput> {
+  const response = (
+    await axios.post(`/api/submisson/execute/${problemId}`, {
+      codeSnippet: textValue,
+      programmingLanguage: language,
+    })
+  ).data;
+
+  return isUserSubmissionOutput(response) ? response : null;
 }

@@ -1,0 +1,71 @@
+/* Ensure page uses 100% viewport and does not scroll */
+.viewport-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  padding-bottom: 0px !important;
+}
+
+.CodeMirror {
+  height: 100% !important;
+  width: 100% !important;
+}
+.CodeMirror * {
+  font-family: 'Fira Code';
+}
+
+.outer-flexbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.middle-flexbox-wrapper {
+  flex: 1 1 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+}
+
+.inner-flexbox-wrapper {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.submit-area {
+  background-color: black;
+}
+
+.code-editor-settings-area {
+  border-bottom: black 1px solid;
+}
+
+.reflex-splitter-horizontal-editor-testcase {
+  height: 13px !important;
+  background-color: #d1d1d1 !important;
+  border-color: #f3f7f8 !important;
+}
+
+.reflex-element-testcase-area {
+  background-color: #f3f7f8 !important;
+}
+
+.reflex-element-hide-overflow {
+  overflow-x: hidden !important;
+}
+
+.settings-area-flex {
+  flex: none;
+}
+
+.run-code-btn {
+  border-radius: 30px;
+}
