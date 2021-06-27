@@ -1,13 +1,12 @@
 import React from 'react';
 
 import {EditorConfiguration} from 'codemirror';
-import {Controlled as CodeMirror} from 'react-codemirror2';
 
-import './CodeMirror.css';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/addon/selection/active-line';
 import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/edit/closebrackets';
+import {StyledCodeMirror} from './styled';
 
 interface CodeEditorProps {
   textValue: string;
@@ -17,7 +16,7 @@ interface CodeEditorProps {
 
 const CodeEditor = (props: CodeEditorProps): JSX.Element => {
   return (
-    <CodeMirror
+    <StyledCodeMirror
       value={props.textValue}
       options={props.editorConfig}
       onBeforeChange={(editor, data, value) => {

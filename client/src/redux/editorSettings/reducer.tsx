@@ -18,7 +18,6 @@ const editorSettingsReducer = (
   state = initialState,
   action: PayloadAction<string>,
 ): EditorState => {
-  console.log(action);
   switch (action.type) {
     case CHANGE_THEME:
       return {

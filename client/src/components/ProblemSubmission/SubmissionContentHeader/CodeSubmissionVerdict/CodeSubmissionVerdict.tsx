@@ -16,7 +16,7 @@ function CodeSubmissionVerdict({
   status,
   correctRatio,
 }: Props): JSX.Element {
-  if (status === Status.Submitted) {
+  if (status === Status.SUBMITTED) {
     switch (verdict) {
       case VerdictStatus.ACCEPTED: {
         return <Accepted>{verdict}</Accepted>;

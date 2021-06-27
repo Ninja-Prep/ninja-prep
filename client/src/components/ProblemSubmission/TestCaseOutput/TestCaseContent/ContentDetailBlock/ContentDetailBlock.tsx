@@ -12,7 +12,7 @@ function ContentDetailBlock({
   blockContent,
 }: BlockProps): JSX.Element {
   return (
-    <div className="pt-3">
+    <div>
       <HeaderText>{blockHeader}</HeaderText>
       <ContentDetail>{blockContent}</ContentDetail>
     </div>

@@ -1,17 +1,19 @@
 import React from 'react';
 
 import {Tab, Tabs} from 'react-bootstrap';
+import {ProblemDetails} from 'utils/types/challenges';
 
 import ConceptReview from './ConceptReview';
 import ProblemDescription from './ProblemDescription';
 import VideoSolution from './VideoSolution';
+
 import './Tabs.css';
 
 interface Props {
-  problemDetails: any;
+  problemDetails: ProblemDetails;
 }
 
-const TabsComponent = (props: Props) => {
+const TabsComponent = (props: Props): JSX.Element => {
   return (
     <div className="content-tabs-link">
       <Tabs defaultActiveKey="problem">

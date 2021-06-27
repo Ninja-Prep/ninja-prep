@@ -1,6 +1,8 @@
 export enum Status {
-  None,
-  Submitted,
+  NONE,
+  LOADING,
+  SUBMITTED,
+  ERROR,
 }
 
 export const VerdictStatus = {

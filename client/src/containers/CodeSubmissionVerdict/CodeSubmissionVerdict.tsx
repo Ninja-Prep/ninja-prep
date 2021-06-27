@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import CodeSubmissionVerdict from 'components/ProblemSubmission/CodeSubmissionVerdict/CodeSubmissionVerdict';
+import CodeSubmissionVerdict from 'components/ProblemSubmission/SubmissionContentHeader/CodeSubmissionVerdict/CodeSubmissionVerdict';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import {VerdictStatus} from 'utils/enums/userSubmission';
@@ -45,4 +45,4 @@ class CodeSubmissionVerdictContainer extends Component<Props> {
   }
 }
 
-export default CodeSubmissionVerdictContainer;
+export default connector(CodeSubmissionVerdictContainer);

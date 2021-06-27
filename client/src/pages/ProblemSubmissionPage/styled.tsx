@@ -16,7 +16,7 @@ export const CodeEditorReflex = styled(ReflexElement)`
   overflow-x: hidden !important;
 `;
 
-export const TestCaseReflex = styled(ReflexElement)`
+export const SubmissionContentReflex = styled(ReflexElement)`
   overflow-x: hidden !important;
   color: white;
   background-color: #f3f7f8 !important;

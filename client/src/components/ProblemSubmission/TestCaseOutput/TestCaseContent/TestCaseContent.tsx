@@ -5,12 +5,11 @@ import {VerdictStatus} from 'utils/enums/userSubmission';
 import {INPUT_TEXT} from 'utils/stringIds.json';
 import {UserSubmissionOutput} from 'utils/types/challenges';
 
-import './TestCaseArea.css';
 import ContentDetailBlock from './ContentDetailBlock/ContentDetailBlock';
 import {AcceptedStatus, ErrorStatus} from './styled';
 
 export interface ContentProps {
-  userSubmission: UserSubmissionOutput;
+  userSubmission?: UserSubmissionOutput;
   testCases: string[];
 }
 
@@ -43,22 +42,20 @@ function TestCaseContent({
     });
 
   return (
-    <div>
+    <Fragment>
       {testCases.map((testCase, index) => {
         return (
-          <Tab.Pane className="pr-3 py-3" eventKey={index.toString()}>
-            <div className="pt-3">
-              {HeaderStatus}
-              <ContentDetailBlock
-                blockHeader={INPUT_TEXT}
-                blockContent={testCase}
-              />
-              {judgedContentDetails}
-            </div>
+          <Tab.Pane eventKey={index.toString()}>
+            {HeaderStatus}
+            <ContentDetailBlock
+              blockHeader={INPUT_TEXT}
+              blockContent={testCase}
+            />
+            {judgedContentDetails}
           </Tab.Pane>
         );
       })}
-    </div>
+    </Fragment>
   );
 }
 

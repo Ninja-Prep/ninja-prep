@@ -15,7 +15,6 @@ class QuestionListContainer extends Component<Record<string, never>, State> {
 
   async componentDidMount(): Promise<void> {
     const links = await findChallengeLinks();
-    console.log(links);
     this.setState({challengeLinks: links});
   }
 

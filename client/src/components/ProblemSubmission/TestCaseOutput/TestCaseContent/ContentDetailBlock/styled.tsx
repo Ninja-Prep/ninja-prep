@@ -6,7 +6,7 @@ export const HeaderText = styled.p`
 `;
 
 export const ContentDetail = styled.p`
-  whitespace: 'pre-wrap';
+  white-space: pre;
   fontfamily: 'Fira Code';
   background-color: black;
 `;

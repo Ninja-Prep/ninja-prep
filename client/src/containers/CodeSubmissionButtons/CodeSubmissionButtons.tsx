@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 
-import CodeSubmissionButtons from 'components/ProblemSubmission/CodeSubmissionButtons/CodeSubmissionButtons';
+import CodeSubmissionButtons from 'components/ProblemSubmission/SubmissionContentHeader/CodeSubmissionButtons/CodeSubmissionButtons';
 import {connect, ConnectedProps} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import {getLanguage} from 'redux/editorSettings/reducer';
 import {RootState} from 'redux/rootReducer';
-import {setSubmissionOutput} from 'redux/userSubmission/action';
-import {submitProblem} from 'services/challenges/challengesService';
+import {submitProblem} from 'redux/userSubmission/action';
 import {MatchProps} from 'utils/types/routing';
 
 const mapStateToProps = (state: RootState) => {
@@ -16,19 +15,19 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const connector = connect(mapStateToProps, {setSubmissionOutput});
+const connector = connect(mapStateToProps, {submitProblem});
 
 type Props = ConnectedProps<typeof connector> & MatchProps;
 
 class CodeSubmissionButtonsContainer extends Component<Props> {
+  constructor(props: Props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
   async handleSubmit(event: {preventDefault: () => void}): Promise<void> {
     event.preventDefault();
-    const submissionOutput = await submitProblem(
-      this.props.textValue,
-      this.props.language,
-      this.props.match.params.id,
-    );
-    setSubmissionOutput(submissionOutput);
+    submitProblem(this.props.match.params.id);
   }
 
   render(): JSX.Element {

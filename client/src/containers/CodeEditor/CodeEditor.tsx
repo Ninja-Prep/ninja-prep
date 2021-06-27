@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import CodeEditor from 'components/ProblemSubmission/CodeEditor';
+import CodeEditor from 'components/ProblemSubmission/CodeEditor/CodeEditor';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import {updateEditorText} from 'redux/textEditor/actions';

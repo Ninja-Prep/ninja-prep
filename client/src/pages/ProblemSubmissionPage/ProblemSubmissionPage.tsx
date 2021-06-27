@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
 
+import CodeEditorUserSettings from 'components/ProblemSubmission/CodeEditor/UserSettings/CodeEditorUserSettings';
 import CodeEditorNavbar from 'components/ProblemSubmission/CodeEditorNavbar/CodeEditorNavbar';
 import TabComponent from 'components/ProblemSubmission/Tabs/TabsComponent';
-import TestCaseArea from 'components/ProblemSubmission/TestCaseOutput/TestCaseArea';
-import CodeEditorUserSettings from 'components/ProblemSubmission/UserSettings/CodeEditorUserSettings';
 import CodeEditor from 'containers/CodeEditor/CodeEditor';
+import SubmissionContent from 'containers/SubmissionContent/SubmissionContent';
 import FadeIn from 'react-fade-in';
+import {connect, ConnectedProps} from 'react-redux';
 import {ReflexContainer, ReflexSplitter, ReflexElement} from 'react-reflex';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
-import {getProblemDetails} from 'services/challenges/challengesService';
+import {getLanguage} from 'redux/editorSettings/reducer';
+import {loadProblemDetails} from 'redux/problemDetails/action';
+import {RootState} from 'redux/rootReducer';
 import AsyncSpinner from 'utils/AsyncSpinner';
-import {ProblemDetails} from 'utils/types/challenges';
 
 import styles from './ProblemSubmission.module.css';
 import {
@@ -19,47 +21,50 @@ import {
   InnerAreaWrapper,
   MiddleEditorWrapper,
   OuterEditorWrapper,
+  SubmissionContentReflex,
   SubmissionWrapper,
-  TestCaseReflex,
 } from './styled';
 
 import 'react-reflex/styles.css';
-
-interface ProblemSubmissionState {
-  isLoading: boolean;
-}
 
 interface MatchParams {
   id: string;
 }
 
-type Props = RouteComponentProps<MatchParams>;
-
-class ProblemSubmissionPage extends Component<Props, ProblemSubmissionState> {
-  problemDetails: ProblemDetails = null;
-
-  state: ProblemSubmissionState = {
-    isLoading: true,
+const mapStateToProps = (state: RootState) => {
+  return {
+    problemDetails: state.problemDetails.details,
+    isError: state.problemDetails.isError,
+    isLoading: state.problemDetails.isLoading,
+    language: getLanguage(state),
   };
+};
 
+const connector = connect(mapStateToProps, {loadProblemDetails});
+
+type Props = ConnectedProps<typeof connector> &
+  RouteComponentProps<MatchParams>;
+
+class ProblemSubmissionPage extends Component<Props> {
   async componentDidMount(): Promise<void> {
-    this.problemDetails = await getProblemDetails(this.props.match.params.id);
-    this.setState({isLoading: false});
+    this.props.loadProblemDetails(this.props.match.params.id);
   }
-  /**
-   *
-   */
+
+  get getStarterCode() {
+    return this.props.problemDetails?.starterCode || '';
+  }
+
   render(): JSX.Element {
-    if (this.state.isLoading) return <AsyncSpinner />;
+    if (this.props.isLoading) return <AsyncSpinner />;
     return (
       <FadeIn>
         <SubmissionWrapper>
-          <CodeEditorNavbar title={this.problemDetails?.title} />
+          <CodeEditorNavbar title={this.props.problemDetails?.title} />
           <ReflexContainer orientation="horizontal">
             <ReflexElement>
               <ReflexContainer orientation="vertical">
                 <ReflexElement>
-                  <TabComponent problemDetails={this.problemDetails} />
+                  <TabComponent problemDetails={this.props.problemDetails} />
                 </ReflexElement>
                 <ReflexSplitter style={{width: '10px'}} />
                 <ReflexElement>
@@ -73,20 +78,17 @@ class ProblemSubmissionPage extends Component<Props, ProblemSubmissionState> {
                         <MiddleEditorWrapper>
                           <InnerAreaWrapper>
                             <CodeEditor
-                              problemTitle={this.problemDetails?.title}
+                              starterCode={this.getStarterCode}
+                              problemTitle={this.props.match.params.id}
                             />
                           </InnerAreaWrapper>
                         </MiddleEditorWrapper>
                       </OuterEditorWrapper>
                     </CodeEditorReflex>
                     <ReflexSplitter className={styles.testcaseSplitter} />
-                    <TestCaseReflex flex={2}>
-                      {/* <TestCaseArea
-                        testCases={this.problemDetails.testCases}
-                        mode={this.props.mode}
-                        codeSnippet={this.state.value}
-                      /> */}
-                    </TestCaseReflex>
+                    <SubmissionContentReflex flex={2}>
+                      <SubmissionContent />
+                    </SubmissionContentReflex>
                   </ReflexContainer>
                 </ReflexElement>
               </ReflexContainer>
@@ -98,4 +100,4 @@ class ProblemSubmissionPage extends Component<Props, ProblemSubmissionState> {
   }
 }
 
-export default withRouter(ProblemSubmissionPage);
+export default withRouter(connector(ProblemSubmissionPage));
