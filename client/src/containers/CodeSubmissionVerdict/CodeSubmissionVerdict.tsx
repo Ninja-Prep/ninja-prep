@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import CodeSubmissionVerdict from 'components/ProblemSubmission/SubmissionContentHeader/CodeSubmissionVerdict/CodeSubmissionVerdict';
+import CodeSubmissionVerdict from 'components/SubmissionContent/SubmissionContentHeader/CodeSubmissionVerdict/CodeSubmissionVerdict';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import {VerdictStatus} from 'utils/enums/userSubmission';
@@ -10,7 +10,7 @@ import {JudgedTestCase} from 'utils/types/challenges';
 const mapStateToProps = (state: RootState) => {
   return {
     submissionOutput: state.userSubmission.output,
-    status: state.userSubmission.status,
+    status: state.userSubmission.submissionStatus,
   };
 };
 
@@ -20,15 +20,14 @@ type Props = ConnectedProps<typeof connector>;
 
 class CodeSubmissionVerdictContainer extends Component<Props> {
   get correctRatio(): string {
+    const output = this.props.submissionOutput;
     const countFailed =
-      this.props.submissionOutput?.judgedTestCases.filter(
-        (testCase: JudgedTestCase) => {
-          return testCase.status === VerdictStatus.ACCEPTED;
-        },
-      ).length || 0;
+      output?.judgedTestCases?.filter((testCase: JudgedTestCase) => {
+        return testCase.status === VerdictStatus.ACCEPTED;
+      }).length || 0;
 
     const testCaseLength =
-      this.props.submissionOutput?.judgedTestCases.length || 0;
+      this.props.submissionOutput?.judgedTestCases?.length || 0;
     return `${countFailed} / ${testCaseLength}`;
   }
 

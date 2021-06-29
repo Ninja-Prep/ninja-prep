@@ -10,6 +10,8 @@ import reducers from 'redux/rootReducer';
 
 const store = createStore(reducers, applyMiddleware(reduxThunk));
 
+export type GetState = typeof store.getState;
+
 ReactDOM.render(
   <Provider store={store}>
     <GlobalStyle />

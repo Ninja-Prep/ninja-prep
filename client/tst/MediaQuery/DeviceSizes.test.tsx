@@ -1,13 +1,8 @@
-import {
-  Default,
-  Desktop,
-  Mobile,
-  Tablet,
-} from '../../src/components/MediaQuery/DeviceSizes';
-
 import React from 'react';
-import {Context as ResponsiveContext} from 'react-responsive';
+
 import {mount} from 'enzyme';
+import {Context as ResponsiveContext} from 'react-responsive';
+import {Default, Desktop, Mobile, Tablet} from 'utils/DeviceSizes';
 
 it('renders successfully on desktop', () => {
   const wrappingComponent = ResponsiveContext.Provider;

@@ -1,8 +1,10 @@
 import React from 'react';
+
 import {shallow} from 'enzyme';
+import PremiumPage from 'pages/PremiumPage';
 import {Context as ResponsiveContext} from 'react-responsive';
+
 import {DEVICE_TYPES, routeWrapper} from '../TestHelper';
-import PremiumPage from '../../src/pages/PremiumPage';
 
 test.each(Object.entries(DEVICE_TYPES))(
   'renders successfully on %p',

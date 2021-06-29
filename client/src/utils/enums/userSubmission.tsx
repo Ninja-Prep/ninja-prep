@@ -1,4 +1,4 @@
-export enum Status {
+export enum SubmissionStatus {
   NONE,
   LOADING,
   SUBMITTED,

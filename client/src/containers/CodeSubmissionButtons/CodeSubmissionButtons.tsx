@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import CodeSubmissionButtons from 'components/ProblemSubmission/SubmissionContentHeader/CodeSubmissionButtons/CodeSubmissionButtons';
+import CodeSubmissionButtons from 'components/SubmissionContent/SubmissionContentHeader/CodeSubmissionButtons/CodeSubmissionButtons';
 import {connect, ConnectedProps} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import {getLanguage} from 'redux/editorSettings/reducer';
@@ -27,7 +27,7 @@ class CodeSubmissionButtonsContainer extends Component<Props> {
 
   async handleSubmit(event: {preventDefault: () => void}): Promise<void> {
     event.preventDefault();
-    submitProblem(this.props.match.params.id);
+    this.props.submitProblem(this.props.match.params.id);
   }
 
   render(): JSX.Element {

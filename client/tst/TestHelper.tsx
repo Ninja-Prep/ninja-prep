@@ -1,9 +1,10 @@
 import React from 'react';
-import {Router} from 'react-router-dom';
-import {createBrowserHistory} from 'history';
 import {ReactNode} from 'react';
 import {ReactElement} from 'react';
 import {ReactChild} from 'react';
+
+import {createBrowserHistory} from 'history';
+import {Router} from 'react-router-dom';
 
 const history = createBrowserHistory();
 

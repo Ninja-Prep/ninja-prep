@@ -66,7 +66,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3  red google button"
+                                  className="undefined red google button"
                                   href="/api/auth/google"
                                 >
                                   <i
@@ -79,7 +79,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3  facebook button"
+                                  className="undefined facebook button"
                                   href="/api/auth/facebook"
                                 >
                                   <i
@@ -92,7 +92,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3   black button"
+                                  className="undefined black button"
                                   href="/api/auth/github"
                                 >
                                   <i
@@ -157,7 +157,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                           className="lead"
                         >
                           <a
-                            className="mx-auto fluid ui mb-4 py-3  red google button"
+                            className="undefined red google button"
                             href="/api/auth/google"
                           >
                             <i
@@ -170,7 +170,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                           className="lead"
                         >
                           <a
-                            className="mx-auto fluid ui mb-4 py-3  facebook button"
+                            className="undefined facebook button"
                             href="/api/auth/facebook"
                           >
                             <i
@@ -183,7 +183,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                           className="lead"
                         >
                           <a
-                            className="mx-auto fluid ui mb-4 py-3   black button"
+                            className="undefined black button"
                             href="/api/auth/github"
                           >
                             <i
@@ -273,7 +273,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3  red google button"
+                                  className="undefined red google button"
                                   href="/api/auth/google"
                                 >
                                   <i
@@ -286,7 +286,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3  facebook button"
+                                  className="undefined facebook button"
                                   href="/api/auth/facebook"
                                 >
                                   <i
@@ -299,7 +299,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3   black button"
+                                  className="undefined black button"
                                   href="/api/auth/github"
                                 >
                                   <i
@@ -321,7 +321,83 @@ exports[`matches snapshot on "TABLET" 1`] = `
         </div>
       </HeaderTablet>
     </Tablet>
-    <Mobile />
+    <Mobile>
+      <HeaderMobile>
+        <div
+          className="header-bg-mobile"
+        >
+          <div
+            className="mx-5 header-container-mobile"
+          >
+            <Row
+              className=""
+              noGutters={false}
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="mx-auto text-light"
+                >
+                  <div
+                    className="pb-2"
+                  >
+                    <h3
+                      className="font-weight-bold pb-3 mx-auto text-light"
+                    >
+                      Start learning for free with NinjaPrep
+                    </h3>
+                    <div>
+                      <div>
+                        <div
+                          className="lead"
+                        >
+                          <a
+                            className="undefined red google button"
+                            href="/api/auth/google"
+                          >
+                            <i
+                              className="google icon"
+                            />
+                            Google Login
+                          </a>
+                        </div>
+                        <div
+                          className="lead"
+                        >
+                          <a
+                            className="undefined facebook button"
+                            href="/api/auth/facebook"
+                          >
+                            <i
+                              className="facebook icon"
+                            />
+                            Facebook Login
+                          </a>
+                        </div>
+                        <div
+                          className="lead"
+                        >
+                          <a
+                            className="undefined black button"
+                            href="/api/auth/github"
+                          >
+                            <i
+                              className="github icon"
+                            />
+                            Github Login
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Row>
+          </div>
+        </div>
+      </HeaderMobile>
+    </Mobile>
   </div>
 </HeaderComponent>
 `;

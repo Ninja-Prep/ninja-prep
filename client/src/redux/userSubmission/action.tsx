@@ -1,6 +1,6 @@
 import axios from 'axios';
+import {GetState} from 'index';
 import {Dispatch} from 'redux';
-import {RootState} from 'redux/rootReducer';
 import {UserSubmissionOutput} from 'utils/types/challenges';
 import {Action} from 'utils/types/redux';
 
@@ -30,13 +30,13 @@ export function submitProblemError(
 }
 
 export function submitProblem(problemId: string) {
-  return function (dispatch: Dispatch, getState: RootState): void {
+  return function (dispatch: Dispatch, getState: GetState): void {
     dispatch({type: SUBMIT_PROBLEM});
-
+    const state = getState();
     axios
       .post(`/api/submisson/execute/${problemId}`, {
-        codeSnippet: getState.textEditor.value,
-        programmingLanguage: getLanguage(getState),
+        codeSnippet: state.textEditor.value,
+        programmingLanguage: getLanguage(state),
       })
       .then((response) => {
         const output = response.data;

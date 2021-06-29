@@ -1,10 +1,11 @@
-import {DEVICE_TYPES, routeWrapper} from '../TestHelper';
-import {mount, shallow} from 'enzyme';
-
-import QuestionListComponent from '../../src/components/QuestionList/QuestionListComponent';
 import React from 'react';
-import {Context as ResponsiveContext} from 'react-responsive';
+
+import QuestionListComponent from 'containers/QuestionList/QuestionList';
+import {mount, shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
+import {Context as ResponsiveContext} from 'react-responsive';
+
+import {DEVICE_TYPES, routeWrapper} from '../TestHelper';
 
 test.each(Object.entries(DEVICE_TYPES))(
   'renders successfully on %p',

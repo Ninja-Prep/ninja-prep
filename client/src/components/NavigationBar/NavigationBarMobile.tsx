@@ -10,7 +10,7 @@ import {useToggler} from 'containers/NavigationBar/hooks/useToggler';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './NavigationBar.css';
-import {User} from 'types/user/user';
+import {User} from 'utils/types/user';
 
 import {LightNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
 import ProfileDropdown from './dropdown/ProfileDropdown';

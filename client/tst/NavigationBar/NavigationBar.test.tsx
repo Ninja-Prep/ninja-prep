@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Error404Component from 'components/Error404';
-import {shallow, mount} from 'enzyme';
+import NavigationBar from 'containers/NavigationBar/NavigationBar';
+import {mount, shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import {Context as ResponsiveContext} from 'react-responsive';
 
@@ -14,7 +14,7 @@ test.each(Object.entries(DEVICE_TYPES))(
     const wrappingComponentProps = {value: {width: deviceWidth}};
     const mountProps = {wrappingComponent, wrappingComponentProps};
 
-    const wrapper = shallow(routeWrapper(<Error404Component />), mountProps);
+    const wrapper = shallow(routeWrapper(<NavigationBar />), mountProps);
     expect(wrapper).toBeDefined();
   },
 );
@@ -26,7 +26,7 @@ test.each(Object.entries(DEVICE_TYPES))(
     const wrappingComponentProps = {value: {width: deviceWidth}};
     const mountProps = {wrappingComponent, wrappingComponentProps};
 
-    const wrapper = mount(routeWrapper(<Error404Component />), mountProps);
+    const wrapper = mount(routeWrapper(<NavigationBar />), mountProps);
     expect(toJson(wrapper)).toMatchSnapshot();
   },
 );

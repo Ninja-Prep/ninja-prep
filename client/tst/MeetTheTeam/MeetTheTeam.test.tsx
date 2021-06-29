@@ -1,10 +1,11 @@
+import React from 'react';
+
 import {mount, shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
+import MeetTheTeamComponent from 'pages/MeetTheTeamPage';
+import {Context as ResponsiveContext} from 'react-responsive';
 
 import {DEVICE_TYPES} from '../TestHelper';
-import MeetTheTeamComponent from '../../src/components/MeetTheTeam/MeetTheTeamComponent';
-import React from 'react';
-import {Context as ResponsiveContext} from 'react-responsive';
-import toJson from 'enzyme-to-json';
 
 test.each(Object.entries(DEVICE_TYPES))(
   'renders successfully on %p',

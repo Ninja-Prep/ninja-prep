@@ -1,0 +1,531 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot on "DESKTOP" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <FooterBarComponent>
+    <Responsiveness
+      desktop={<FooterBarDesktop />}
+      mobile={<FooterBarMobile />}
+    >
+      <Desktop>
+        <FooterBarDesktop>
+          <Styled(Row)>
+            <Row
+              className="sc-dlnjwi dGuFeR"
+              noGutters={false}
+            >
+              <div
+                className="sc-dlnjwi dGuFeR row"
+              >
+                <styled.div>
+                  <div
+                    className="sc-bdnxRM ejnGdQ col"
+                  >
+                    <DarkNinjaPrepLogo
+                      height={70}
+                      width={160}
+                    >
+                      <svg
+                        height={70}
+                        viewBox="0 0 201 58"
+                        width={160}
+                      >
+                        <g
+                          data-name="Group 119"
+                          id="Group_119"
+                          transform="translate(-1157 -10129)"
+                        >
+                          <text
+                            fill="#2a2a3a"
+                            fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                            fontSize="41"
+                            fontWeight="700"
+                            id="NinjaPrep"
+                            transform="translate(1157 10171)"
+                          >
+                            <tspan
+                              x="0"
+                              y="0"
+                            >
+                              NinjaPrep
+                            </tspan>
+                          </text>
+                          <circle
+                            cx="7.5"
+                            cy="7.5"
+                            data-name="Ellipse 44"
+                            fill="#25d0f3"
+                            id="Ellipse_44"
+                            r="7.5"
+                            transform="translate(1343 10158)"
+                          />
+                        </g>
+                      </svg>
+                    </DarkNinjaPrepLogo>
+                  </div>
+                </styled.div>
+                <Col>
+                  <div
+                    className="col"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-gtsrHT iUUIQL"
+                      >
+                        <styled.p>
+                          <p
+                            className="sc-hKFxyN macAL"
+                          >
+                            NINJAPREP
+                          </p>
+                        </styled.p>
+                        <Styled(NavLink)
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          to="/about"
+                        >
+                          <Link
+                            className="sc-eCApnc inrNnB"
+                            to="/about"
+                          >
+                            <LinkAnchor
+                              className="sc-eCApnc inrNnB"
+                              href="/about"
+                              navigate={[Function]}
+                            >
+                              <a
+                                className="sc-eCApnc inrNnB"
+                                href="/about"
+                                onClick={[Function]}
+                              >
+                                About Us
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </Styled(NavLink)>
+                        <Styled(NavLink)
+                          as={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "displayName": "Link",
+                              "propTypes": Object {
+                                "innerRef": [Function],
+                                "onClick": [Function],
+                                "replace": [Function],
+                                "target": [Function],
+                                "to": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          to="/premium"
+                        >
+                          <Link
+                            className="sc-eCApnc inrNnB"
+                            to="/premium"
+                          >
+                            <LinkAnchor
+                              className="sc-eCApnc inrNnB"
+                              href="/premium"
+                              navigate={[Function]}
+                            >
+                              <a
+                                className="sc-eCApnc inrNnB"
+                                href="/premium"
+                                onClick={[Function]}
+                              >
+                                Get Premium
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </Styled(NavLink)>
+                      </div>
+                    </styled.div>
+                  </div>
+                </Col>
+                <Col>
+                  <div
+                    className="col"
+                  >
+                    <styled.p>
+                      <p
+                        className="sc-hKFxyN macAL"
+                      >
+                        RESOURCES
+                      </p>
+                    </styled.p>
+                    <Styled(NavLink)
+                      as={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "displayName": "Link",
+                          "propTypes": Object {
+                            "innerRef": [Function],
+                            "onClick": [Function],
+                            "replace": [Function],
+                            "target": [Function],
+                            "to": [Function],
+                          },
+                          "render": [Function],
+                        }
+                      }
+                      to="/about"
+                    >
+                      <Link
+                        className="sc-eCApnc inrNnB"
+                        to="/about"
+                      >
+                        <LinkAnchor
+                          className="sc-eCApnc inrNnB"
+                          href="/about"
+                          navigate={[Function]}
+                        >
+                          <a
+                            className="sc-eCApnc inrNnB"
+                            href="/about"
+                            onClick={[Function]}
+                          >
+                            Articles
+                          </a>
+                        </LinkAnchor>
+                      </Link>
+                    </Styled(NavLink)>
+                    <Styled(NavLink)
+                      as={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "displayName": "Link",
+                          "propTypes": Object {
+                            "innerRef": [Function],
+                            "onClick": [Function],
+                            "replace": [Function],
+                            "target": [Function],
+                            "to": [Function],
+                          },
+                          "render": [Function],
+                        }
+                      }
+                      to="/challenges"
+                    >
+                      <Link
+                        className="sc-eCApnc inrNnB"
+                        to="/challenges"
+                      >
+                        <LinkAnchor
+                          className="sc-eCApnc inrNnB"
+                          href="/challenges"
+                          navigate={[Function]}
+                        >
+                          <a
+                            className="sc-eCApnc inrNnB"
+                            href="/challenges"
+                            onClick={[Function]}
+                          >
+                            Challenges
+                          </a>
+                        </LinkAnchor>
+                      </Link>
+                    </Styled(NavLink)>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </Styled(Row)>
+        </FooterBarDesktop>
+      </Desktop>
+      <Mobile />
+    </Responsiveness>
+  </FooterBarComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "MOBILE" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <FooterBarComponent>
+    <Responsiveness
+      desktop={<FooterBarDesktop />}
+      mobile={<FooterBarMobile />}
+    >
+      <Desktop />
+      <Mobile>
+        <FooterBarMobile>
+          <Styled(Navbar)>
+            <Navbar
+              className="sc-gKAaRy ibVuEc"
+              collapseOnSelect={false}
+              expand={true}
+              variant="light"
+            >
+              <nav
+                className="sc-gKAaRy ibVuEc navbar navbar-expand navbar-light"
+              >
+                <span>
+                  Copyright © 2020 NinjaPrep
+                </span>
+                <span>
+                  |
+                </span>
+                <Styled(Link)
+                  to="/about"
+                >
+                  <Link
+                    className="sc-jSFjdj ifXxgR"
+                    to="/about"
+                  >
+                    <LinkAnchor
+                      className="sc-jSFjdj ifXxgR"
+                      href="/about"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="sc-jSFjdj ifXxgR"
+                        href="/about"
+                        onClick={[Function]}
+                      >
+                        About
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
+                <span>
+                  |
+                </span>
+                <Styled(Link)
+                  to="/premium"
+                >
+                  <Link
+                    className="sc-jSFjdj ifXxgR"
+                    to="/premium"
+                  >
+                    <LinkAnchor
+                      className="sc-jSFjdj ifXxgR"
+                      href="/premium"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="sc-jSFjdj ifXxgR"
+                        href="/premium"
+                        onClick={[Function]}
+                      >
+                        Premium
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
+                <span>
+                  |
+                </span>
+                <Styled(Link)
+                  to="/roadmap"
+                >
+                  <Link
+                    className="sc-jSFjdj ifXxgR"
+                    to="/roadmap"
+                  >
+                    <LinkAnchor
+                      className="sc-jSFjdj ifXxgR"
+                      href="/roadmap"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="sc-jSFjdj ifXxgR"
+                        href="/roadmap"
+                        onClick={[Function]}
+                      >
+                        Roadmap
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
+              </nav>
+            </Navbar>
+          </Styled(Navbar)>
+        </FooterBarMobile>
+      </Mobile>
+    </Responsiveness>
+  </FooterBarComponent>
+</Router>
+`;
+
+exports[`matches snapshot on "TABLET" 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <FooterBarComponent>
+    <Responsiveness
+      desktop={<FooterBarDesktop />}
+      mobile={<FooterBarMobile />}
+    >
+      <Desktop />
+      <Mobile>
+        <FooterBarMobile>
+          <Styled(Navbar)>
+            <Navbar
+              className="sc-gKAaRy ibVuEc"
+              collapseOnSelect={false}
+              expand={true}
+              variant="light"
+            >
+              <nav
+                className="sc-gKAaRy ibVuEc navbar navbar-expand navbar-light"
+              >
+                <span>
+                  Copyright © 2020 NinjaPrep
+                </span>
+                <span>
+                  |
+                </span>
+                <Styled(Link)
+                  to="/about"
+                >
+                  <Link
+                    className="sc-jSFjdj ifXxgR"
+                    to="/about"
+                  >
+                    <LinkAnchor
+                      className="sc-jSFjdj ifXxgR"
+                      href="/about"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="sc-jSFjdj ifXxgR"
+                        href="/about"
+                        onClick={[Function]}
+                      >
+                        About
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
+                <span>
+                  |
+                </span>
+                <Styled(Link)
+                  to="/premium"
+                >
+                  <Link
+                    className="sc-jSFjdj ifXxgR"
+                    to="/premium"
+                  >
+                    <LinkAnchor
+                      className="sc-jSFjdj ifXxgR"
+                      href="/premium"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="sc-jSFjdj ifXxgR"
+                        href="/premium"
+                        onClick={[Function]}
+                      >
+                        Premium
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
+                <span>
+                  |
+                </span>
+                <Styled(Link)
+                  to="/roadmap"
+                >
+                  <Link
+                    className="sc-jSFjdj ifXxgR"
+                    to="/roadmap"
+                  >
+                    <LinkAnchor
+                      className="sc-jSFjdj ifXxgR"
+                      href="/roadmap"
+                      navigate={[Function]}
+                    >
+                      <a
+                        className="sc-jSFjdj ifXxgR"
+                        href="/roadmap"
+                        onClick={[Function]}
+                      >
+                        Roadmap
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
+              </nav>
+            </Navbar>
+          </Styled(Navbar)>
+        </FooterBarMobile>
+      </Mobile>
+    </Responsiveness>
+  </FooterBarComponent>
+</Router>
+`;

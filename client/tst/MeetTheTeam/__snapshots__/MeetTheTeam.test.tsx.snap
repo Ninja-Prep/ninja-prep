@@ -1,592 +1,730 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot on "DESKTOP" 1`] = `
-<MeetTheTeamComponent>
-  <div>
+<MeetTheTeamPage>
+  <Responsiveness
+    desktop={<MeetTheTeamDesktop />}
+    mobile={<MeetTheTeamMobile />}
+  >
     <Desktop>
       <MeetTheTeamDesktop>
         <div>
           <MeetTheTeamHeaderDesktop>
-            <div
-              className="py-5 text-center meet-the-team-header-bg"
-            >
-              <img
-                alt="logo"
-                className="w-auto img-fluid pt-3 pb-4"
-                src="/images/NinjaPrep-Logo.png"
-              />
-              <h1
-                className="display-5 font-weight-bold pb-2"
+            <styled.div>
+              <div
+                className="sc-bdnxRM ejnGdQ py-5"
               >
-                Meet The Team
-              </h1>
-              <p
-                className="text-secondary lead m-auto d-block"
-              >
-                A place to help you build a strong foundation in data structures and
-              </p>
-              <p
-                className="text-secondary lead m-auto d-block pb-4"
-              >
-                algorithms and prepare for technical interviews, all in one platform.
-              </p>
-            </div>
+                <DarkNinjaPrepLogo
+                  height={150}
+                  width={500}
+                >
+                  <svg
+                    height={150}
+                    viewBox="0 0 201 58"
+                    width={500}
+                  >
+                    <g
+                      data-name="Group 119"
+                      id="Group_119"
+                      transform="translate(-1157 -10129)"
+                    >
+                      <text
+                        fill="#2a2a3a"
+                        fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                        fontSize="41"
+                        fontWeight="700"
+                        id="NinjaPrep"
+                        transform="translate(1157 10171)"
+                      >
+                        <tspan
+                          x="0"
+                          y="0"
+                        >
+                          NinjaPrep
+                        </tspan>
+                      </text>
+                      <circle
+                        cx="7.5"
+                        cy="7.5"
+                        data-name="Ellipse 44"
+                        fill="#25d0f3"
+                        id="Ellipse_44"
+                        r="7.5"
+                        transform="translate(1343 10158)"
+                      />
+                    </g>
+                  </svg>
+                </DarkNinjaPrepLogo>
+                <styled.h1>
+                  <h1
+                    className="sc-dlnjwi display-5 font-weight-bold pb-2"
+                  >
+                    Meet The Team
+                  </h1>
+                </styled.h1>
+                <styled.p>
+                  <p
+                    className="sc-gtsrHT crKwMa text-secondary lead"
+                  >
+                    A place to help you build a strong foundation in data structures and
+                  </p>
+                </styled.p>
+                <styled.p>
+                  <p
+                    className="sc-gtsrHT crKwMa text-secondary lead"
+                  >
+                    algorithms and prepare for technical interviews, all in one platform.
+                  </p>
+                </styled.p>
+              </div>
+            </styled.div>
           </MeetTheTeamHeaderDesktop>
           <MeetTheTeamInfoDesktop>
-            <Container
-              className="px-5 pt-5 pb-3 w-75"
-              fluid={false}
-            >
-              <div
-                className="px-5 pt-5 pb-3 w-75 container"
+            <Styled(Col)>
+              <Col
+                className="sc-hKFxyN ecGXkA"
               >
                 <div
-                  className="px-5"
+                  className="sc-hKFxyN ecGXkA col"
                 >
-                  <Row
-                    className="pt-3 pb-5"
-                    noGutters={false}
-                  >
-                    <div
-                      className="pt-3 pb-5 row"
+                  <Styled(Row)>
+                    <Row
+                      className="sc-eCApnc hDmciy"
+                      noGutters={false}
                     >
-                      <Col
-                        className="pr-5"
+                      <div
+                        className="sc-eCApnc hDmciy row"
                       >
-                        <div
-                          className="pr-5 col"
+                        <Styled(Col)
+                          xs={8}
                         >
-                          <img
-                            alt="AlexPhoto"
-                            className="img-fluid rounded"
-                            src="/images/ALEX-PHOTO.png"
-                          />
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-5"
-                      >
-                        <div
-                          className="pl-5 col"
-                        >
-                          <h1
-                            className="display-5 pb-3 name-text font-weight-bold"
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
+                            xs={8}
                           >
-                            Alex Nguyen
-                          </h1>
-                          <p
-                            className="lead text-secondary"
+                            <div
+                              className="sc-jSFjdj iJtmkD col-8"
+                            >
+                              <styled.h1>
+                                <h1
+                                  className="sc-gKAaRy display-4 pb-3 font-weight-bold"
+                                >
+                                  Alex Nguyen
+                                </h1>
+                              </styled.h1>
+                              <styled.h1>
+                                <h1
+                                  className="sc-iCoGMd cLnfWA lead text-secondary"
+                                >
+                                  Alex Nguyen is the founder and content creator of NinjaPrep. He is currently a software engineer who has previously received offers from both Amazon and Microsoft. Alex graduated from New York University in 2019 with a degree in Computer Science with a focus on full-stack development. After endless practice preparing for algorithm questions, he wanted to provide an opportunity for all audiences to learn algorithmic problem solving as simply as possible. When he's not coding, he does photography and enjoys spending time with the friends around him.
+                                </h1>
+                              </styled.h1>
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                        <Styled(Col)>
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
                           >
-                            Alex Nguyen is the founder and content creator of NinjaPrep. He is currently a software engineer who has previously received offers from both Amazon and Microsoft. Alex graduated from New York University in 2019 with a degree in Computer Science with a focus on full-stack development. After endless practice preparing for algorithm questions, he wanted to provide an opportunity for all audiences to learn algorithmic problem solving as simply as possible. When he's not coding, he does photography and enjoys spending time with the friends around him.
-                          </p>
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
-                  <Row
-                    className="py-5"
-                    noGutters={false}
-                  >
-                    <div
-                      className="py-5 row"
+                            <div
+                              className="sc-jSFjdj iJtmkD col"
+                            >
+                              <img
+                                alt="AlexPhoto"
+                                className="img-fluid rounded"
+                                src="/images/ALEX-PHOTO.png"
+                              />
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                      </div>
+                    </Row>
+                  </Styled(Row)>
+                  <Styled(Row)>
+                    <Row
+                      className="sc-eCApnc hDmciy"
+                      noGutters={false}
                     >
-                      <Col
-                        className="pr-5"
+                      <div
+                        className="sc-eCApnc hDmciy row"
                       >
-                        <div
-                          className="pr-5 col"
-                        >
-                          <h1
-                            className="display-5 pb-3 name-text font-weight-bold"
+                        <Styled(Col)>
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
                           >
-                            Joanne Cheong
-                          </h1>
-                          <p
-                            className="lead text-secondary"
-                          >
-                            Joanne Cheong pursued her Bachelor's in Management Information Systems at the University of Connecticut. She enjoyed working at the school's innovation lab, where she taught students data analytics and curated online courses. Since her graduation in December 2019, she has been working with Pfizer as part of their Digital Rotational program, focusing on project management, automation and user experience. She has decided to learn full-stack development and has been applying her experiences to develop NinjaPrep's user interface and business operations.
-                          </p>
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-5"
-                      >
-                        <div
-                          className="pl-5 col"
+                            <div
+                              className="sc-jSFjdj iJtmkD col"
+                            >
+                              <img
+                                alt="AngelaSPhoto"
+                                className="img-fluid rounded"
+                                src="/images/ANGELA-S-PHOTO.png"
+                              />
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                        <Styled(Col)
+                          xs={8}
                         >
-                          <img
-                            alt="JoannePhoto"
-                            className="img-fluid rounded"
-                            src="/images/JOANNE-PHOTO.png"
-                          />
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
-                  <Row
-                    className="py-5"
-                    noGutters={false}
-                  >
-                    <div
-                      className="py-5 row"
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
+                            xs={8}
+                          >
+                            <div
+                              className="sc-jSFjdj iJtmkD col-8"
+                            >
+                              <styled.h1>
+                                <h1
+                                  className="sc-gKAaRy display-4 pb-3 font-weight-bold"
+                                >
+                                  Angela Sun
+                                </h1>
+                              </styled.h1>
+                              <styled.h1>
+                                <h1
+                                  className="sc-iCoGMd cLnfWA lead text-secondary"
+                                >
+                                  Angela Sun is a recent Computer Science Bachelor's graduate of the University of Washington in Seattle and also studied a semester at KTH in Sweden. She currently works as a software engineer at Bloomberg L.P. She has been contributing to developing NinjaPrep's user interface and content. Outside of work, she enjoys cooking, painting, and dancing.
+                                </h1>
+                              </styled.h1>
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                      </div>
+                    </Row>
+                  </Styled(Row)>
+                  <Styled(Row)>
+                    <Row
+                      className="sc-eCApnc hDmciy"
+                      noGutters={false}
                     >
-                      <Col
-                        className="pr-5"
+                      <div
+                        className="sc-eCApnc hDmciy row"
                       >
-                        <div
-                          className="pr-5 col"
+                        <Styled(Col)
+                          xs={8}
                         >
-                          <img
-                            alt="AngelaYPhoto"
-                            className="img-fluid rounded"
-                            src="/images/ANGELA-Y-PHOTO.png"
-                          />
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-5"
-                      >
-                        <div
-                          className="pl-5 col"
-                        >
-                          <h1
-                            className="display-5 pb-3 name-text font-weight-bold"
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
+                            xs={8}
                           >
-                            Angela Yeung
-                          </h1>
-                          <p
-                            className="lead text-secondary"
+                            <div
+                              className="sc-jSFjdj iJtmkD col-8"
+                            >
+                              <styled.h1>
+                                <h1
+                                  className="sc-gKAaRy display-4 pb-3 font-weight-bold"
+                                >
+                                  Angela Yeung
+                                </h1>
+                              </styled.h1>
+                              <styled.h1>
+                                <h1
+                                  className="sc-iCoGMd cLnfWA lead text-secondary"
+                                >
+                                  Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at.
+                                </h1>
+                              </styled.h1>
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                        <Styled(Col)>
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
                           >
-                            Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at.
-                          </p>
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
-                  <Row
-                    className="py-5"
-                    noGutters={false}
-                  >
-                    <div
-                      className="py-5 row"
+                            <div
+                              className="sc-jSFjdj iJtmkD col"
+                            >
+                              <img
+                                alt="AngelaYPhoto"
+                                className="img-fluid rounded"
+                                src="/images/ANGELA-Y-PHOTO.png"
+                              />
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                      </div>
+                    </Row>
+                  </Styled(Row)>
+                  <Styled(Row)>
+                    <Row
+                      className="sc-eCApnc hDmciy"
+                      noGutters={false}
                     >
-                      <Col
-                        className="pr-5"
+                      <div
+                        className="sc-eCApnc hDmciy row"
                       >
-                        <div
-                          className="pr-5 col"
-                        >
-                          <h1
-                            className="display-5 pb-3 name-text font-weight-bold"
+                        <Styled(Col)>
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
                           >
-                            Angela Sun
-                          </h1>
-                          <p
-                            className="lead text-secondary"
-                          >
-                            Angela Sun is a recent Computer Science Bachelor's graduate of the University of Washington in Seattle and also studied a semester at KTH in Sweden. She currently works as a software engineer at Bloomberg L.P. She has been contributing to developing NinjaPrep's user interface and content. Outside of work, she enjoys cooking, painting, and dancing.
-                          </p>
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-5"
-                      >
-                        <div
-                          className="pl-5 col"
+                            <div
+                              className="sc-jSFjdj iJtmkD col"
+                            >
+                              <img
+                                alt="JoannePhoto"
+                                className="img-fluid rounded"
+                                src="/images/JOANNE-PHOTO.png"
+                              />
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                        <Styled(Col)
+                          xs={8}
                         >
-                          <img
-                            alt="AngelaSPhoto"
-                            className="img-fluid rounded"
-                            src="/images/ANGELA-S-PHOTO.png"
-                          />
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
+                          <Col
+                            className="sc-jSFjdj iJtmkD"
+                            xs={8}
+                          >
+                            <div
+                              className="sc-jSFjdj iJtmkD col-8"
+                            >
+                              <styled.h1>
+                                <h1
+                                  className="sc-gKAaRy display-4 pb-3 font-weight-bold"
+                                >
+                                  Joanne Cheong
+                                </h1>
+                              </styled.h1>
+                              <styled.h1>
+                                <h1
+                                  className="sc-iCoGMd cLnfWA lead text-secondary"
+                                >
+                                  Joanne Cheong pursued her Bachelor's in Management Information Systems at the University of Connecticut. She enjoyed working at the school's innovation lab, where she taught students data analytics and curated online courses. Since her graduation in December 2019, she has been working with Pfizer as part of their Digital Rotational program, focusing on project management, automation and user experience. She has decided to learn full-stack development and has been applying her experiences to develop NinjaPrep's user interface and business operations.
+                                </h1>
+                              </styled.h1>
+                            </div>
+                          </Col>
+                        </Styled(Col)>
+                      </div>
+                    </Row>
+                  </Styled(Row)>
                 </div>
-              </div>
-            </Container>
+              </Col>
+            </Styled(Col)>
           </MeetTheTeamInfoDesktop>
         </div>
       </MeetTheTeamDesktop>
     </Desktop>
-    <Tablet />
     <Mobile />
-  </div>
-</MeetTheTeamComponent>
+  </Responsiveness>
+</MeetTheTeamPage>
 `;
 
 exports[`matches snapshot on "MOBILE" 1`] = `
-<MeetTheTeamComponent>
-  <div>
+<MeetTheTeamPage>
+  <Responsiveness
+    desktop={<MeetTheTeamDesktop />}
+    mobile={<MeetTheTeamMobile />}
+  >
     <Desktop />
-    <Tablet />
     <Mobile>
       <MeetTheTeamMobile>
         <div>
           <MeetTheTeamHeaderMobile>
-            <div
-              className="py-5 px-3 text-center meet-the-team-header-bg"
-            >
-              <Container
-                fluid={false}
-              >
-                <div
-                  className="container"
-                >
-                  <img
-                    alt="logo"
-                    className="w-25 img-fluid pt-3 pb-4"
-                    src="/images/NinjaPrep-Logo.png"
-                  />
-                  <h1
-                    className="display-5 font-weight-bold pb-2"
-                  >
-                    Meet The Team
-                  </h1>
-                  <p
-                    className="text-secondary lead m-auto d-block pb-4"
-                  >
-                    A place to help you build a strong foundation in data structures and algorithms and prepare for technical interviews, all in one platform.
-                  </p>
-                </div>
-              </Container>
-            </div>
-          </MeetTheTeamHeaderMobile>
-          <MeetTheTeamInfoMobile>
             <Container
-              className="px-5 pt-5 pb-3 w-75"
               fluid={false}
             >
               <div
-                className="px-5 pt-5 pb-3 w-75 container"
+                className="container"
               >
-                <div
-                  className="px-5"
-                >
-                  <h1
-                    className="display-5 m-auto py-4 name-text text-center font-weight-bold"
+                <styled.div>
+                  <div
+                    className="sc-fujyAs isvnWl"
                   >
-                    Alex Nguyen
-                  </h1>
-                  <Col
-                    className="pr-5"
-                  >
-                    <div
-                      className="pr-5 col"
+                    <DarkNinjaPrepLogo
+                      height={175}
+                      width={325}
                     >
-                      <img
-                        alt="AlexPhoto"
-                        className="img-fluid rounded"
-                        src="/images/ALEX-PHOTO.png"
-                      />
-                    </div>
-                  </Col>
-                  <p
-                    className="lead pt-3 pb-3 text-secondary"
-                  >
-                    Alex Nguyen is the founder and content creator of NinjaPrep. He is currently a software engineer who has previously received offers from both Amazon and Microsoft. Alex graduated from New York University in 2019 with a degree in Computer Science with a focus on full-stack development. After endless practice preparing for algorithm questions, he wanted to provide an opportunity for all audiences to learn algorithmic problem solving as simply as possible. When he's not coding, he does photography and enjoys spending time with the friends around him.
-                  </p>
-                  <h1
-                    className="display-5 m-auto py-4 name-text text-center font-weight-bold"
-                  >
-                    Joanne Cheong
-                  </h1>
-                  <Col
-                    className="pr-5"
-                  >
-                    <div
-                      className="pr-5 col"
-                    >
-                      <img
-                        alt="AngelaSPhoto"
-                        className="img-fluid rounded"
-                        src="/images/ANGELA-S-PHOTO.png"
-                      />
-                    </div>
-                  </Col>
-                  <p
-                    className="lead pt-3 pb-3 text-secondary"
-                  >
-                    Joanne Cheong pursued her Bachelor's in Management Information Systems at the University of Connecticut. She enjoyed working at the school's innovation lab, where she taught students data analytics and curated online courses. Since her graduation in December 2019, she has been working with Pfizer as part of their Digital Rotational program, focusing on project management, automation and user experience. She has decided to learn full-stack development and has been applying her experiences to develop NinjaPrep's user interface and business operations.
-                  </p>
-                  <h1
-                    className="display-5 m-auto py-4 name-text text-center font-weight-bold"
-                  >
-                    Angela Yeung
-                  </h1>
-                  <Col
-                    className="pr-5"
-                  >
-                    <div
-                      className="pr-5 col"
-                    >
-                      <img
-                        alt="AngelaYPhoto"
-                        className="img-fluid rounded"
-                        src="/images/ANGELA-Y-PHOTO.png"
-                      />
-                    </div>
-                  </Col>
-                  <p
-                    className="lead pt-3 pb-3 text-secondary"
-                  >
-                    Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at.
-                  </p>
-                  <h1
-                    className="display-5 m-auto py-4 name-text text-center font-weight-bold"
-                  >
-                    Angela Sun
-                  </h1>
-                  <Col
-                    className="pr-5"
-                  >
-                    <div
-                      className="pr-5 col"
-                    >
-                      <img
-                        alt="JoannePhoto"
-                        className="img-fluid rounded"
-                        src="/images/JOANNE-PHOTO.png"
-                      />
-                    </div>
-                  </Col>
-                  <p
-                    className="lead pt-3 pb-3 text-secondary"
-                  >
-                    Angela Sun is a recent Computer Science Bachelor's graduate of the University of Washington in Seattle and also studied a semester at KTH in Sweden. She currently works as a software engineer at Bloomberg L.P. She has been contributing to developing NinjaPrep's user interface and content. Outside of work, she enjoys cooking, painting, and dancing.
-                  </p>
-                </div>
+                      <svg
+                        height={175}
+                        viewBox="0 0 201 58"
+                        width={325}
+                      >
+                        <g
+                          data-name="Group 119"
+                          id="Group_119"
+                          transform="translate(-1157 -10129)"
+                        >
+                          <text
+                            fill="#2a2a3a"
+                            fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                            fontSize="41"
+                            fontWeight="700"
+                            id="NinjaPrep"
+                            transform="translate(1157 10171)"
+                          >
+                            <tspan
+                              x="0"
+                              y="0"
+                            >
+                              NinjaPrep
+                            </tspan>
+                          </text>
+                          <circle
+                            cx="7.5"
+                            cy="7.5"
+                            data-name="Ellipse 44"
+                            fill="#25d0f3"
+                            id="Ellipse_44"
+                            r="7.5"
+                            transform="translate(1343 10158)"
+                          />
+                        </g>
+                      </svg>
+                    </DarkNinjaPrepLogo>
+                    <styled.h1>
+                      <h1
+                        className="sc-pNWdM display-4 font-weight-bold pb-2 pt-0 mt-0"
+                      >
+                        Meet The Team
+                      </h1>
+                    </styled.h1>
+                    <styled.p>
+                      <p
+                        className="sc-jrsJWt text-secondary lead"
+                      >
+                        A place to help you build a strong foundation in data structures and algorithms and prepare for technical interviews, all in one platform.
+                      </p>
+                    </styled.p>
+                  </div>
+                </styled.div>
               </div>
             </Container>
+          </MeetTheTeamHeaderMobile>
+          <MeetTheTeamInfoMobile>
+            <Styled(Container)>
+              <Container
+                className="sc-crzoAE py-3 w-75"
+                fluid={false}
+              >
+                <div
+                  className="sc-crzoAE py-3 w-75 container"
+                >
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Alex Nguyen
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="AlexPhoto"
+                          className="img-fluid rounded"
+                          src="/images/ALEX-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Alex Nguyen is the founder and content creator of NinjaPrep. He is currently a software engineer who has previously received offers from both Amazon and Microsoft. Alex graduated from New York University in 2019 with a degree in Computer Science with a focus on full-stack development. After endless practice preparing for algorithm questions, he wanted to provide an opportunity for all audiences to learn algorithmic problem solving as simply as possible. When he's not coding, he does photography and enjoys spending time with the friends around him.
+                      </p>
+                    </styled.p>
+                  </div>
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Angela Sun
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="AngelaSPhoto"
+                          className="img-fluid rounded"
+                          src="/images/ANGELA-S-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Angela Sun is a recent Computer Science Bachelor's graduate of the University of Washington in Seattle and also studied a semester at KTH in Sweden. She currently works as a software engineer at Bloomberg L.P. She has been contributing to developing NinjaPrep's user interface and content. Outside of work, she enjoys cooking, painting, and dancing.
+                      </p>
+                    </styled.p>
+                  </div>
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Angela Yeung
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="AngelaYPhoto"
+                          className="img-fluid rounded"
+                          src="/images/ANGELA-Y-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at.
+                      </p>
+                    </styled.p>
+                  </div>
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Joanne Cheong
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="JoannePhoto"
+                          className="img-fluid rounded"
+                          src="/images/JOANNE-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Joanne Cheong pursued her Bachelor's in Management Information Systems at the University of Connecticut. She enjoyed working at the school's innovation lab, where she taught students data analytics and curated online courses. Since her graduation in December 2019, she has been working with Pfizer as part of their Digital Rotational program, focusing on project management, automation and user experience. She has decided to learn full-stack development and has been applying her experiences to develop NinjaPrep's user interface and business operations.
+                      </p>
+                    </styled.p>
+                  </div>
+                </div>
+              </Container>
+            </Styled(Container)>
           </MeetTheTeamInfoMobile>
         </div>
       </MeetTheTeamMobile>
     </Mobile>
-  </div>
-</MeetTheTeamComponent>
+  </Responsiveness>
+</MeetTheTeamPage>
 `;
 
 exports[`matches snapshot on "TABLET" 1`] = `
-<MeetTheTeamComponent>
-  <div>
+<MeetTheTeamPage>
+  <Responsiveness
+    desktop={<MeetTheTeamDesktop />}
+    mobile={<MeetTheTeamMobile />}
+  >
     <Desktop />
-    <Tablet>
-      <MeetTheTeamTablet>
+    <Mobile>
+      <MeetTheTeamMobile>
         <div>
-          <MeetTheTeamHeaderTablet>
-            <div
-              className="py-5 text-center meet-the-team-header-bg"
-            >
-              <Container
-                fluid={false}
-              >
-                <div
-                  className="container"
-                >
-                  <img
-                    alt="logo"
-                    className="img-fluid pt-3 pb-4"
-                    src="/images/NinjaPrep-Logo.png"
-                  />
-                  <h1
-                    className="display-5 font-weight-bold pb-2"
-                  >
-                    Meet The Team
-                  </h1>
-                  <p
-                    className="text-secondary lead m-auto d-block"
-                  >
-                    A place to help you build a strong foundation in data structures and
-                  </p>
-                  <p
-                    className="text-secondary lead m-auto d-block pb-4"
-                  >
-                    algorithms and prepare for technical interviews, all in one platform.
-                  </p>
-                </div>
-              </Container>
-            </div>
-          </MeetTheTeamHeaderTablet>
-          <MeetTheTeamInfoTablet>
+          <MeetTheTeamHeaderMobile>
             <Container
-              className="px-5 pt-5 pb-3 w-75"
               fluid={false}
             >
               <div
-                className="px-5 pt-5 pb-3 w-75 container"
+                className="container"
               >
-                <div
-                  className="px-5"
-                >
-                  <Row
-                    className="pt-3 pb-5"
-                    noGutters={false}
+                <styled.div>
+                  <div
+                    className="sc-fujyAs isvnWl"
                   >
-                    <div
-                      className="pt-3 pb-5 row"
+                    <DarkNinjaPrepLogo
+                      height={175}
+                      width={325}
                     >
-                      <Col
-                        className="pr-2"
+                      <svg
+                        height={175}
+                        viewBox="0 0 201 58"
+                        width={325}
                       >
-                        <div
-                          className="pr-2 col"
+                        <g
+                          data-name="Group 119"
+                          id="Group_119"
+                          transform="translate(-1157 -10129)"
                         >
-                          <img
-                            alt="AlexPhoto"
-                            className="img-fluid rounded"
-                            src="/images/ALEX-PHOTO.png"
+                          <text
+                            fill="#2a2a3a"
+                            fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                            fontSize="41"
+                            fontWeight="700"
+                            id="NinjaPrep"
+                            transform="translate(1157 10171)"
+                          >
+                            <tspan
+                              x="0"
+                              y="0"
+                            >
+                              NinjaPrep
+                            </tspan>
+                          </text>
+                          <circle
+                            cx="7.5"
+                            cy="7.5"
+                            data-name="Ellipse 44"
+                            fill="#25d0f3"
+                            id="Ellipse_44"
+                            r="7.5"
+                            transform="translate(1343 10158)"
                           />
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-2"
+                        </g>
+                      </svg>
+                    </DarkNinjaPrepLogo>
+                    <styled.h1>
+                      <h1
+                        className="sc-pNWdM display-4 font-weight-bold pb-2 pt-0 mt-0"
                       >
-                        <div
-                          className="pl-2 col"
-                        >
-                          <h1
-                            className="display-5 m-auto pb-3 name-text font-weight-bold"
-                          >
-                            Alex Nguyen
-                          </h1>
-                          <p
-                            className="lead text-secondary"
-                          >
-                            Alex Nguyen is the founder and content creator of NinjaPrep. He is currently a software engineer who has previously received offers from both Amazon and Microsoft. Alex graduated from New York University in 2019 with a degree in Computer Science with a focus on full-stack development. After endless practice preparing for algorithm questions, he wanted to provide an opportunity for all audiences to learn algorithmic problem solving as simply as possible. When he's not coding, he does photography and enjoys spending time with the friends around him.
-                          </p>
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
-                  <Row
-                    className="py-5"
-                    noGutters={false}
-                  >
-                    <div
-                      className="py-5 row"
-                    >
-                      <Col
-                        className="pr-4"
+                        Meet The Team
+                      </h1>
+                    </styled.h1>
+                    <styled.p>
+                      <p
+                        className="sc-jrsJWt text-secondary lead"
                       >
-                        <div
-                          className="pr-4 col"
-                        >
-                          <h1
-                            className="display-5 pb-3 name-text font-weight-bold"
-                          >
-                            Joanne Cheong
-                          </h1>
-                          <p
-                            className="lead text-secondary"
-                          >
-                            Joanne Cheong pursued her Bachelor's in Management Information Systems at the University of Connecticut. She enjoyed working at the school's innovation lab, where she taught students data analytics and curated online courses. Since her graduation in December 2019, she has been working with Pfizer as part of their Digital Rotational program, focusing on project management, automation and user experience. She has decided to learn full-stack development and has been applying her experiences to develop NinjaPrep's user interface and business operations.
-                          </p>
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-4"
-                      >
-                        <div
-                          className="pl-4 col"
-                        >
-                          <img
-                            alt="JoannePhoto"
-                            className="img-fluid rounded"
-                            src="/images/JOANNE-PHOTO.png"
-                          />
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
-                  <Row
-                    className="py-5"
-                    noGutters={false}
-                  >
-                    <div
-                      className="py-5 row"
-                    >
-                      <Col
-                        className="pr-4"
-                      >
-                        <div
-                          className="pr-4 col"
-                        >
-                          <img
-                            alt="AngelaYPhoto"
-                            className="img-fluid rounded"
-                            src="/images/ANGELA-Y-PHOTO.png"
-                          />
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-4"
-                      >
-                        <div
-                          className="pl-4 col"
-                        >
-                          <h1
-                            className="display-5 pb-3 name-text font-weight-bold"
-                          >
-                            Angela Yeung
-                          </h1>
-                          <p
-                            className="lead text-secondary"
-                          >
-                            Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at.
-                          </p>
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
-                  <Row
-                    className="py-5"
-                    noGutters={false}
-                  >
-                    <div
-                      className="py-5 row"
-                    >
-                      <Col
-                        className="pr-4"
-                      >
-                        <div
-                          className="pr-4 col"
-                        >
-                          <h1
-                            className="display-5 pb-3 name-text font-weight-bold"
-                          >
-                            Angela Sun
-                          </h1>
-                          <p
-                            className="lead text-secondary"
-                          >
-                            Angela Sun is a recent Computer Science Bachelor's graduate of the University of Washington in Seattle and also studied a semester at KTH in Sweden. She currently works as a software engineer at Bloomberg L.P. She has been contributing to developing NinjaPrep's user interface and content. Outside of work, she enjoys cooking, painting, and dancing.
-                          </p>
-                        </div>
-                      </Col>
-                      <Col
-                        className="pl-5"
-                      >
-                        <div
-                          className="pl-5 col"
-                        >
-                          <img
-                            alt="AngelaSPhoto"
-                            className="img-fluid rounded"
-                            src="/images/ANGELA-S-PHOTO.png"
-                          />
-                        </div>
-                      </Col>
-                    </div>
-                  </Row>
-                </div>
+                        A place to help you build a strong foundation in data structures and algorithms and prepare for technical interviews, all in one platform.
+                      </p>
+                    </styled.p>
+                  </div>
+                </styled.div>
               </div>
             </Container>
-          </MeetTheTeamInfoTablet>
+          </MeetTheTeamHeaderMobile>
+          <MeetTheTeamInfoMobile>
+            <Styled(Container)>
+              <Container
+                className="sc-crzoAE py-3 w-75"
+                fluid={false}
+              >
+                <div
+                  className="sc-crzoAE py-3 w-75 container"
+                >
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Alex Nguyen
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="AlexPhoto"
+                          className="img-fluid rounded"
+                          src="/images/ALEX-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Alex Nguyen is the founder and content creator of NinjaPrep. He is currently a software engineer who has previously received offers from both Amazon and Microsoft. Alex graduated from New York University in 2019 with a degree in Computer Science with a focus on full-stack development. After endless practice preparing for algorithm questions, he wanted to provide an opportunity for all audiences to learn algorithmic problem solving as simply as possible. When he's not coding, he does photography and enjoys spending time with the friends around him.
+                      </p>
+                    </styled.p>
+                  </div>
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Angela Sun
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="AngelaSPhoto"
+                          className="img-fluid rounded"
+                          src="/images/ANGELA-S-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Angela Sun is a recent Computer Science Bachelor's graduate of the University of Washington in Seattle and also studied a semester at KTH in Sweden. She currently works as a software engineer at Bloomberg L.P. She has been contributing to developing NinjaPrep's user interface and content. Outside of work, she enjoys cooking, painting, and dancing.
+                      </p>
+                    </styled.p>
+                  </div>
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Angela Yeung
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="AngelaYPhoto"
+                          className="img-fluid rounded"
+                          src="/images/ANGELA-Y-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at.
+                      </p>
+                    </styled.p>
+                  </div>
+                  <div>
+                    <styled.h1>
+                      <h1
+                        className="sc-iqAclL display-5  text-center"
+                      >
+                        Joanne Cheong
+                      </h1>
+                    </styled.h1>
+                    <styled.div>
+                      <div
+                        className="sc-dIsUp huUEVJ"
+                      >
+                        <img
+                          alt="JoannePhoto"
+                          className="img-fluid rounded"
+                          src="/images/JOANNE-PHOTO.png"
+                        />
+                      </div>
+                    </styled.div>
+                    <styled.p>
+                      <p
+                        className="sc-kEqXSa lead my-5 text-secondary"
+                      >
+                        Joanne Cheong pursued her Bachelor's in Management Information Systems at the University of Connecticut. She enjoyed working at the school's innovation lab, where she taught students data analytics and curated online courses. Since her graduation in December 2019, she has been working with Pfizer as part of their Digital Rotational program, focusing on project management, automation and user experience. She has decided to learn full-stack development and has been applying her experiences to develop NinjaPrep's user interface and business operations.
+                      </p>
+                    </styled.p>
+                  </div>
+                </div>
+              </Container>
+            </Styled(Container)>
+          </MeetTheTeamInfoMobile>
         </div>
-      </MeetTheTeamTablet>
-    </Tablet>
-    <Mobile />
-  </div>
-</MeetTheTeamComponent>
+      </MeetTheTeamMobile>
+    </Mobile>
+  </Responsiveness>
+</MeetTheTeamPage>
 `;
