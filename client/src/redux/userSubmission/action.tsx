@@ -2,6 +2,7 @@ import axios from 'axios';
 import {GetState} from 'index';
 import {Dispatch} from 'redux';
 import {UserSubmissionOutput} from 'utils/types/challenges';
+import {JudgedTestCase} from 'utils/types/challenges/index';
 import {Action} from 'utils/types/redux';
 
 import {getLanguage} from '../editorSettings/reducer';
@@ -40,7 +41,24 @@ export function submitProblem(problemId: string) {
       })
       .then((response) => {
         const output = response.data;
-        dispatch(submitProblemSuccess(output));
+        const formattedJudgedTestCases: JudgedTestCase[] =
+          output.judged_test_cases.map((testCase: any) => {
+            const judgedTestCase: JudgedTestCase = {
+              status: testCase.status,
+              stderr: testCase.stderr,
+              userStdout: testCase.user_stdout,
+              userOutput: testCase.user_output,
+              testCase: testCase.testcase,
+              expectedOutput: testCase.expected_output,
+            };
+            return judgedTestCase;
+          });
+        const payload: UserSubmissionOutput = {
+          judgedTestCases: formattedJudgedTestCases,
+          verdict: output.verdict,
+          stderr: output.stderr,
+        };
+        dispatch(submitProblemSuccess(payload));
       })
       .catch((err: Error) => {
         dispatch(submitProblemError(err.message));

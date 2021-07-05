@@ -5,13 +5,13 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LockIcon from '@material-ui/icons/Lock';
 import SettingsIcon from '@material-ui/icons/Settings';
 import {Image, Dropdown} from 'react-bootstrap';
-import {User} from 'types/user/user';
 import {
   GET_PREMIUM_NAVIGATION,
   SETTINGS,
   REPORT_A_BUG,
   SIGN_OUT_NAVIGATION,
 } from 'utils/stringIds.json';
+import {User} from 'utils/types/user';
 
 import DropdownItem from './DropdownItem';
 type ToggleDropdownProps = {

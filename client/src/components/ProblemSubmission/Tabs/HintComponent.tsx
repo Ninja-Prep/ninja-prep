@@ -4,7 +4,7 @@ import _ from 'lodash';
 import {Accordion, Card} from 'react-bootstrap';
 
 interface Props {
-  hints: Array<string>;
+  hints?: string[];
 }
 
 const HintCard = ({index, hint}: {index: number; hint: string}) => {
@@ -24,7 +24,7 @@ const HintCard = ({index, hint}: {index: number; hint: string}) => {
   );
 };
 
-const HintComponent = (props: Props) => {
+const HintComponent = (props: Props): JSX.Element => {
   if (_.isNull(props.hints)) {
     return <Fragment />;
   }
@@ -32,7 +32,7 @@ const HintComponent = (props: Props) => {
     <div className="text-dark pb-4">
       <p className="font-weight-bold lead">Hints</p>
       <Accordion>
-        {props.hints.map((hint, index) => {
+        {props.hints?.map((hint, index) => {
           return <HintCard index={index + 1} hint={hint} />;
         })}
       </Accordion>

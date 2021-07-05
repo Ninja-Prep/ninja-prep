@@ -2,8 +2,8 @@ import React from 'react';
 
 import {Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import {User} from 'types/user/user';
 import {SIGN_IN_NAVIGATION} from 'utils/stringIds.json';
+import {User} from 'utils/types/user';
 
 import DropdownMenu from './DropdownMenu';
 

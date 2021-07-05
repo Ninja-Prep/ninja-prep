@@ -24,7 +24,7 @@ export const biographies: TeamMate[] = [
     photo: (
       <img
         className="img-fluid rounded"
-        src="/images/ALEX-PHOTO.png"
+        src="/images/ALEX-PHOTO.jpg"
         alt="AlexPhoto"
       />
     ),
@@ -35,7 +35,7 @@ export const biographies: TeamMate[] = [
     photo: (
       <img
         className="img-fluid rounded"
-        src="/images/ANGELA-S-PHOTO.png"
+        src="/images/ANGELA-S-PHOTO.jpg"
         alt="AngelaSPhoto"
       />
     ),
@@ -46,7 +46,7 @@ export const biographies: TeamMate[] = [
     photo: (
       <img
         className="img-fluid rounded"
-        src="/images/ANGELA-Y-PHOTO.png"
+        src="/images/ANGELA-Y-PHOTO.jpg"
         alt="AngelaYPhoto"
       />
     ),
@@ -57,7 +57,7 @@ export const biographies: TeamMate[] = [
     photo: (
       <img
         className="img-fluid rounded"
-        src="/images/JOANNE-PHOTO.png"
+        src="/images/JOANNE-PHOTO.jpg"
         alt="JoannePhoto"
       />
     ),

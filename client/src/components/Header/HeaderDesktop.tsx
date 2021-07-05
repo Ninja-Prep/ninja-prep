@@ -1,17 +1,18 @@
 import React from 'react';
 
 import {Container, Row, Col} from 'react-bootstrap';
+import SocialMediaButtons from 'utils/SocialMediaButtons';
 import {GET_STARTED} from 'utils/stringIds.json';
 
 import './header.css';
-import SocialMediaButtons from '../../utils/SocialMediaButtons';
+
 import {
   ENHANCE_YOUR_SKILLS,
   HEADER_DESCRIPTION_1,
   HEADER_DESCRIPTION_2,
 } from './HeaderStringIds';
 
-const HeaderDesktop = () => (
+const HeaderDesktop = (): JSX.Element => (
   <div className="header-bg text-light px-5">
     <Container className="header-container">
       <Row>
@@ -29,7 +30,7 @@ const HeaderDesktop = () => (
               <h4 className="font-weight-bold pb-3 mx-auto text-light">
                 {GET_STARTED}
               </h4>
-              <div>{SocialMediaButtons('mx-auto fluid ui mb-4 py-3 ')}</div>
+              <SocialMediaButtons cssClass="mx-auto fluid ui mb-4 py-3" />
             </div>
           </div>
         </Col>

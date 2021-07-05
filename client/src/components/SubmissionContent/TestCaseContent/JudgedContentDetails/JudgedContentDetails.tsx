@@ -3,29 +3,28 @@ import React from 'react';
 import {JudgedTestCase} from 'utils/types/challenges/index';
 
 import ContentDetailBlock from '../ContentDetailBlock/ContentDetailBlock';
+import {ContentSpacing} from './styled';
 
 interface Props {
-  judgedTestCases: JudgedTestCase[];
+  judgedTestCase: JudgedTestCase;
 }
 
-function JudgedContentDetails({judgedTestCases}: Props): JSX.Element {
+function JudgedContentDetails({judgedTestCase}: Props): JSX.Element {
   return (
-    <>
-      {judgedTestCases.map((testCase, index) => {
-        return (
-          <div>
-            <ContentDetailBlock
-              blockHeader="Your Output"
-              blockContent={testCase.userOutput}
-            />
-            <ContentDetailBlock
-              blockHeader="Expected Output"
-              blockContent={testCase.expectedOutput}
-            />
-          </div>
-        );
-      })}
-    </>
+    <div>
+      <ContentSpacing>
+        <ContentDetailBlock
+          blockHeader="Your Output"
+          blockContent={judgedTestCase?.userOutput}
+        />
+      </ContentSpacing>
+      <ContentSpacing>
+        <ContentDetailBlock
+          blockHeader="Expected Output"
+          blockContent={judgedTestCase?.expectedOutput}
+        />
+      </ContentSpacing>
+    </div>
   );
 }
 
