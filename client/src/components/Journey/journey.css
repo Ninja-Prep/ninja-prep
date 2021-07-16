@@ -1,24 +1,12 @@
-.discover {
-    background-image: url('/images/blob1.png');
-}
+.discover { background-image: url('/images/blob1.png'); }
 
-.videos {
-    background-image: url('/images/blob2.png');
-}
+.videos { background-image: url('/images/blob2.png'); }
 
-.articles {
-    background-image: url('/images/blob3.png');
-}
-.feedback {
-    background-image: url('/images/blob4.png');
-}
-.job {
-    background-image: url('/images/blob5.png');
-}
+.articles { background-image: url('/images/blob3.png'); }
+.feedback { background-image: url('/images/blob4.png'); }
+.job { background-image: url('/images/blob5.png'); }
 
-.blob-bg {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: center;
-}
+.blob-bg { background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center; }

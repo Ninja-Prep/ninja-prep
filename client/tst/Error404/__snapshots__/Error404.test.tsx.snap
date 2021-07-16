@@ -23,68 +23,75 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
     }
   }
 >
-  <Error404Component>
-    <div>
-      <Desktop>
-        <Error404Desktop>
-          <div
-            className="container"
+  <Error404>
+    <styled.div>
+      <div
+        className="sc-bdnxRM eeGZGd"
+      >
+        <styled.h1>
+          <h1
+            className="sc-hKFxyN dIIkaJ display-1 mt-5"
           >
-            <h1
-              className="display-1 text-center mt-5"
-            >
-               
-              404
-               
-            </h1>
-            <div
-              className="text-center mt-5"
-            >
-               
-              Oops!
-               
-            </div>
-            <div
-              className="text-center"
-            >
-               
-              We can't seem to find the page you are looking for...
-               
-            </div>
-            <div
-              className="text-center my-5"
-            >
+             
+            404
+             
+          </h1>
+        </styled.h1>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+             
+            Oops!
+             
+          </div>
+        </styled.div>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+             
+            We can't seem to find the page you are looking for...
+             
+          </div>
+        </styled.div>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+            <styled.button>
               <button
-                className="btn btn-primary"
+                className="sc-dlnjwi mt-5 btn-primary btn"
               >
-                <Link
+                <Styled(Link)
                   to="/"
                 >
-                  <LinkAnchor
-                    href="/"
-                    navigate={[Function]}
+                  <Link
+                    className="sc-gtsrHT iZmkcW"
+                    to="/"
                   >
-                    <a
+                    <LinkAnchor
+                      className="sc-gtsrHT iZmkcW"
                       href="/"
-                      onClick={[Function]}
+                      navigate={[Function]}
                     >
-                      <p
-                        className="backHomeButton"
+                      <a
+                        className="sc-gtsrHT iZmkcW"
+                        href="/"
+                        onClick={[Function]}
                       >
                         Back to home
-                      </p>
-                    </a>
-                  </LinkAnchor>
-                </Link>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
               </button>
-            </div>
+            </styled.button>
           </div>
-        </Error404Desktop>
-      </Desktop>
-      <Tablet />
-      <Mobile />
-    </div>
-  </Error404Component>
+        </styled.div>
+      </div>
+    </styled.div>
+  </Error404>
 </Router>
 `;
 
@@ -111,68 +118,75 @@ exports[`matches snapshot on "MOBILE" 1`] = `
     }
   }
 >
-  <Error404Component>
-    <div>
-      <Desktop />
-      <Tablet />
-      <Mobile>
-        <Error404Mobile>
-          <div
-            className="container"
+  <Error404>
+    <styled.div>
+      <div
+        className="sc-bdnxRM eeGZGd"
+      >
+        <styled.h1>
+          <h1
+            className="sc-hKFxyN dIIkaJ display-1 mt-5"
           >
-            <h1
-              className="display-1 text-center mt-5"
-            >
-               
-              404
-               
-            </h1>
-            <div
-              className="text-center mt-5"
-            >
-               
-              Oops!
-               
-            </div>
-            <div
-              className="text-center"
-            >
-               
-              We can't seem to find the page you are looking for...
-               
-            </div>
-            <div
-              className="text-center my-5"
-            >
+             
+            404
+             
+          </h1>
+        </styled.h1>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+             
+            Oops!
+             
+          </div>
+        </styled.div>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+             
+            We can't seem to find the page you are looking for...
+             
+          </div>
+        </styled.div>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+            <styled.button>
               <button
-                className="btn btn-primary"
+                className="sc-dlnjwi mt-5 btn-primary btn"
               >
-                <Link
+                <Styled(Link)
                   to="/"
                 >
-                  <LinkAnchor
-                    href="/"
-                    navigate={[Function]}
+                  <Link
+                    className="sc-gtsrHT iZmkcW"
+                    to="/"
                   >
-                    <a
+                    <LinkAnchor
+                      className="sc-gtsrHT iZmkcW"
                       href="/"
-                      onClick={[Function]}
+                      navigate={[Function]}
                     >
-                      <p
-                        className="backHomeButton"
+                      <a
+                        className="sc-gtsrHT iZmkcW"
+                        href="/"
+                        onClick={[Function]}
                       >
                         Back to home
-                      </p>
-                    </a>
-                  </LinkAnchor>
-                </Link>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
               </button>
-            </div>
+            </styled.button>
           </div>
-        </Error404Mobile>
-      </Mobile>
-    </div>
-  </Error404Component>
+        </styled.div>
+      </div>
+    </styled.div>
+  </Error404>
 </Router>
 `;
 
@@ -199,67 +213,74 @@ exports[`matches snapshot on "TABLET" 1`] = `
     }
   }
 >
-  <Error404Component>
-    <div>
-      <Desktop />
-      <Tablet>
-        <Error404Tablet>
-          <div
-            className="container"
+  <Error404>
+    <styled.div>
+      <div
+        className="sc-bdnxRM eeGZGd"
+      >
+        <styled.h1>
+          <h1
+            className="sc-hKFxyN dIIkaJ display-1 mt-5"
           >
-            <h1
-              className="display-1 text-center mt-5"
-            >
-               
-              404
-               
-            </h1>
-            <div
-              className="text-center mt-5"
-            >
-               
-              Oops!
-               
-            </div>
-            <div
-              className="text-center"
-            >
-               
-              We can't seem to find the page you are looking for...
-               
-            </div>
-            <div
-              className="text-center my-5"
-            >
+             
+            404
+             
+          </h1>
+        </styled.h1>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+             
+            Oops!
+             
+          </div>
+        </styled.div>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+             
+            We can't seem to find the page you are looking for...
+             
+          </div>
+        </styled.div>
+        <styled.div>
+          <div
+            className="sc-eCApnc fLcWfp mt-3"
+          >
+            <styled.button>
               <button
-                className="btn btn-primary"
+                className="sc-dlnjwi mt-5 btn-primary btn"
               >
-                <Link
+                <Styled(Link)
                   to="/"
                 >
-                  <LinkAnchor
-                    href="/"
-                    navigate={[Function]}
+                  <Link
+                    className="sc-gtsrHT iZmkcW"
+                    to="/"
                   >
-                    <a
+                    <LinkAnchor
+                      className="sc-gtsrHT iZmkcW"
                       href="/"
-                      onClick={[Function]}
+                      navigate={[Function]}
                     >
-                      <p
-                        className="backHomeButton"
+                      <a
+                        className="sc-gtsrHT iZmkcW"
+                        href="/"
+                        onClick={[Function]}
                       >
                         Back to home
-                      </p>
-                    </a>
-                  </LinkAnchor>
-                </Link>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </Styled(Link)>
               </button>
-            </div>
+            </styled.button>
           </div>
-        </Error404Tablet>
-      </Tablet>
-      <Mobile />
-    </div>
-  </Error404Component>
+        </styled.div>
+      </div>
+    </styled.div>
+  </Error404>
 </Router>
 `;

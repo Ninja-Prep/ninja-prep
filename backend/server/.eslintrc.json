@@ -1,0 +1,54 @@
+{
+  "extends": [
+    "google",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "sort-imports-es6-autofix", "jsdoc"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "indent": [
+      "error",
+      2,
+      {"FunctionDeclaration": {"parameters": "first"}, "SwitchCase": 1}
+    ],
+    "sort-imports-es6-autofix/sort-imports-es6": [
+      2,
+      {
+        "ignoreCase": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ],
+    "require-jsdoc": ["off"],
+    "spaced-comment": ["error", "always"],
+    "max-len": [
+      "error",
+      {
+        "ignoreStrings": true,
+        "ignoreComments": true
+      }
+    ],
+    "valid-jsdoc": "off",
+    "new-cap": "off"
+  },
+  "overrides": [
+    {
+      "files": "*.js",
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "new-cap": ["error", {"properties": false}]
+      }
+    }
+  ]
+}

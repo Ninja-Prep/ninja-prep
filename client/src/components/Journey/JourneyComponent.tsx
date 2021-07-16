@@ -1,26 +1,27 @@
 /*
-Landing page section to inform users what ninjaprep.io 
+Landing page section to inform users what ninjaprep.io
 and how it can be helpful for customer
 */
 
-import React from 'react'
-import JourneyDesktop from './JourneyDesktop'
-import JourneyTablet from './JourneyTablet'
-import JourneyMobile from './JourneyMobile'
-import { Desktop, Tablet, Mobile } from '../MediaQuery/DeviceSizes'
+import React from 'react';
+
+import {Desktop, Tablet, Mobile} from '../../utils/DeviceSizes';
+import JourneyDesktop from './JourneyDesktop';
+import JourneyMobile from './JourneyMobile';
+import JourneyTablet from './JourneyTablet';
 
 const JourneyComponent = () => (
-    <div>
-        <Desktop>
-            <JourneyDesktop />
-        </Desktop>
-        <Tablet>
-            <JourneyTablet />
-        </Tablet>
-        <Mobile>
-            <JourneyMobile />
-        </Mobile>
-    </div>
-)
+  <div>
+    <Desktop>
+      <JourneyDesktop />
+    </Desktop>
+    <Tablet>
+      <JourneyTablet />
+    </Tablet>
+    <Mobile>
+      <JourneyMobile />
+    </Mobile>
+  </div>
+);
 
-export default JourneyComponent
+export default JourneyComponent;

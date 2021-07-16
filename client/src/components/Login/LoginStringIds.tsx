@@ -1,5 +1,0 @@
-export const GOOGLE_LOGIN = 'Google Login'
-export const FACEBOOK_LOGIN = 'Facebook Login'
-export const GITHUB_LOGIN = 'Github Login'
-export const GET_STARTED = 'Get Started for Free'
-export const LOGIN_HEADER_TITLE = 'Readily code along to step-by step video tutorials from beginner to mastery'

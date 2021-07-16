@@ -1,3 +1,3 @@
 #!/bin/bash
 yarn --cwd ./client install
-yarn --cwd ./server install
+yarn --cwd ./backend/server install

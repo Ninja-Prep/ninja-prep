@@ -1,17 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './components/App/App'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
-import reduxThunk from 'redux-thunk'
-import reducers from './reducers'
+import React from 'react';
 
-const store = createStore(reducers, applyMiddleware(reduxThunk))
+import App from 'App';
+import GlobalStyle from 'GlobalStyle';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import reduxThunk from 'redux-thunk';
+import reducers from 'redux/rootReducer';
+
+const store = createStore(reducers, applyMiddleware(reduxThunk));
+
+export type GetState = typeof store.getState;
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
-)
+  <Provider store={store}>
+    <GlobalStyle />
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);

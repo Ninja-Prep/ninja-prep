@@ -1,0 +1,9 @@
+{
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "setupFiles": ["./tst/setupTests.js"],
+    "moduleDirectories": ["node_modules", "src", "tst"],
+    "moduleNameMapper": {
+        "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+}

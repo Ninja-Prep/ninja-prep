@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es6",
+    "composite": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "declaration": true,
+    "typeRoots": ["./node_modules/types"],
+    "baseUrl": "./",
+    "types": ["node", "jest"],
+    "paths": {
+      "@problems/*": ["problems/*"],
+      "@problems": ["problems"],
+      "@mongoose/*": ["../server/src/initializers/mongoose/*"],
+      "@mongoose": ["../server/src/initializers/mongoose"]
+    }
+  },
+  "references": [{"path": "../server/tsconfig.json"}],
+  "include": ["models/", "parser/", "problems/", "utils/", "../server/src"],
+  "exclude": ["./node_modules"],
+  "lib": ["es6"],
+  "preserveSymlinks": true
+}

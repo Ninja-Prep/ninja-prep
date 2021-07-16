@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es6",
+    "module": "commonjs",
+    "composite": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "rootDir": "../",
+    "declaration": true,
+    "baseUrl": "./src",
+    "types": ["node", "lodash", "mocha"],
+    "typeRoots": ["./server/src/utils/types", "./node_modules/@types"],
+    "paths": {
+      "@mongoose/*": ["initializers/mongoose/*"],
+      "@mongoose": ["initializers/mongoose"],
+      "@logger/*": ["utils/logging/*"],
+      "@models/*": ["../../database/models/*"]
+    },
+    "plugins": [{"transform": "@zerollup/ts-transform-paths"}]
+  },
+  "include": [
+    "src/",
+    "src/utils/types/*",
+    "tst",
+    "tst/*",
+    "server.ts",
+    "../database/models",
+    "../database/utils",
+    "node_modules/@types"
+  ],
+  "exclude": ["./node_modules"],
+  "files": ["server.ts"],
+  "preserveSymlinks": true,
+  "ts-node": {
+    "transpileOnly": true
+  }
+}

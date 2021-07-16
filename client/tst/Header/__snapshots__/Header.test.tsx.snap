@@ -60,13 +60,15 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                           >
                             Get Started for Free
                           </h4>
-                          <div>
+                          <SocialMediaButtons
+                            cssClass="mx-auto fluid ui mb-4 py-3"
+                          >
                             <div>
                               <div
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3  red google button"
+                                  className="mx-auto fluid ui mb-4 py-3 red google button"
                                   href="/api/auth/google"
                                 >
                                   <i
@@ -79,7 +81,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3  facebook button"
+                                  className="mx-auto fluid ui mb-4 py-3 facebook button"
                                   href="/api/auth/facebook"
                                 >
                                   <i
@@ -92,7 +94,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                 className="lead"
                               >
                                 <a
-                                  className="mx-auto fluid ui mb-4 py-3   black button"
+                                  className="mx-auto fluid ui mb-4 py-3 black button"
                                   href="/api/auth/github"
                                 >
                                   <i
@@ -102,7 +104,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                 </a>
                               </div>
                             </div>
-                          </div>
+                          </SocialMediaButtons>
                         </div>
                       </div>
                     </div>
@@ -152,47 +154,51 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                       Start learning for free with NinjaPrep
                     </h3>
                     <div>
-                      <div>
-                        <div
-                          className="lead"
-                        >
-                          <a
-                            className="mx-auto fluid ui mb-4 py-3  red google button"
-                            href="/api/auth/google"
+                      <SocialMediaButtons
+                        cssClass="mx-auto fluid ui mb-4 py-3 "
+                      >
+                        <div>
+                          <div
+                            className="lead"
                           >
-                            <i
-                              className="google icon"
-                            />
-                            Google Login
-                          </a>
-                        </div>
-                        <div
-                          className="lead"
-                        >
-                          <a
-                            className="mx-auto fluid ui mb-4 py-3  facebook button"
-                            href="/api/auth/facebook"
+                            <a
+                              className="mx-auto fluid ui mb-4 py-3  red google button"
+                              href="/api/auth/google"
+                            >
+                              <i
+                                className="google icon"
+                              />
+                              Google Login
+                            </a>
+                          </div>
+                          <div
+                            className="lead"
                           >
-                            <i
-                              className="facebook icon"
-                            />
-                            Facebook Login
-                          </a>
-                        </div>
-                        <div
-                          className="lead"
-                        >
-                          <a
-                            className="mx-auto fluid ui mb-4 py-3   black button"
-                            href="/api/auth/github"
+                            <a
+                              className="mx-auto fluid ui mb-4 py-3  facebook button"
+                              href="/api/auth/facebook"
+                            >
+                              <i
+                                className="facebook icon"
+                              />
+                              Facebook Login
+                            </a>
+                          </div>
+                          <div
+                            className="lead"
                           >
-                            <i
-                              className="github icon"
-                            />
-                            Github Login
-                          </a>
+                            <a
+                              className="mx-auto fluid ui mb-4 py-3  black button"
+                              href="/api/auth/github"
+                            >
+                              <i
+                                className="github icon"
+                              />
+                              Github Login
+                            </a>
+                          </div>
                         </div>
-                      </div>
+                      </SocialMediaButtons>
                     </div>
                   </div>
                 </div>
@@ -268,47 +274,51 @@ exports[`matches snapshot on "TABLET" 1`] = `
                             Get Started for Free
                           </h4>
                           <div>
-                            <div>
-                              <div
-                                className="lead"
-                              >
-                                <a
-                                  className="mx-auto fluid ui mb-4 py-3  red google button"
-                                  href="/api/auth/google"
+                            <SocialMediaButtons
+                              cssClass="mx-auto fluid ui mb-4 py-3"
+                            >
+                              <div>
+                                <div
+                                  className="lead"
                                 >
-                                  <i
-                                    className="google icon"
-                                  />
-                                  Google Login
-                                </a>
-                              </div>
-                              <div
-                                className="lead"
-                              >
-                                <a
-                                  className="mx-auto fluid ui mb-4 py-3  facebook button"
-                                  href="/api/auth/facebook"
+                                  <a
+                                    className="mx-auto fluid ui mb-4 py-3 red google button"
+                                    href="/api/auth/google"
+                                  >
+                                    <i
+                                      className="google icon"
+                                    />
+                                    Google Login
+                                  </a>
+                                </div>
+                                <div
+                                  className="lead"
                                 >
-                                  <i
-                                    className="facebook icon"
-                                  />
-                                  Facebook Login
-                                </a>
-                              </div>
-                              <div
-                                className="lead"
-                              >
-                                <a
-                                  className="mx-auto fluid ui mb-4 py-3   black button"
-                                  href="/api/auth/github"
+                                  <a
+                                    className="mx-auto fluid ui mb-4 py-3 facebook button"
+                                    href="/api/auth/facebook"
+                                  >
+                                    <i
+                                      className="facebook icon"
+                                    />
+                                    Facebook Login
+                                  </a>
+                                </div>
+                                <div
+                                  className="lead"
                                 >
-                                  <i
-                                    className="github icon"
-                                  />
-                                  Github Login
-                                </a>
+                                  <a
+                                    className="mx-auto fluid ui mb-4 py-3 black button"
+                                    href="/api/auth/github"
+                                  >
+                                    <i
+                                      className="github icon"
+                                    />
+                                    Github Login
+                                  </a>
+                                </div>
                               </div>
-                            </div>
+                            </SocialMediaButtons>
                           </div>
                         </div>
                       </div>
@@ -321,7 +331,87 @@ exports[`matches snapshot on "TABLET" 1`] = `
         </div>
       </HeaderTablet>
     </Tablet>
-    <Mobile />
+    <Mobile>
+      <HeaderMobile>
+        <div
+          className="header-bg-mobile"
+        >
+          <div
+            className="mx-5 header-container-mobile"
+          >
+            <Row
+              className=""
+              noGutters={false}
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="mx-auto text-light"
+                >
+                  <div
+                    className="pb-2"
+                  >
+                    <h3
+                      className="font-weight-bold pb-3 mx-auto text-light"
+                    >
+                      Start learning for free with NinjaPrep
+                    </h3>
+                    <div>
+                      <SocialMediaButtons
+                        cssClass="mx-auto fluid ui mb-4 py-3 "
+                      >
+                        <div>
+                          <div
+                            className="lead"
+                          >
+                            <a
+                              className="mx-auto fluid ui mb-4 py-3  red google button"
+                              href="/api/auth/google"
+                            >
+                              <i
+                                className="google icon"
+                              />
+                              Google Login
+                            </a>
+                          </div>
+                          <div
+                            className="lead"
+                          >
+                            <a
+                              className="mx-auto fluid ui mb-4 py-3  facebook button"
+                              href="/api/auth/facebook"
+                            >
+                              <i
+                                className="facebook icon"
+                              />
+                              Facebook Login
+                            </a>
+                          </div>
+                          <div
+                            className="lead"
+                          >
+                            <a
+                              className="mx-auto fluid ui mb-4 py-3  black button"
+                              href="/api/auth/github"
+                            >
+                              <i
+                                className="github icon"
+                              />
+                              Github Login
+                            </a>
+                          </div>
+                        </div>
+                      </SocialMediaButtons>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Row>
+          </div>
+        </div>
+      </HeaderMobile>
+    </Mobile>
   </div>
 </HeaderComponent>
 `;

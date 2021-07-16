@@ -1,0 +1,23 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        "@babel/preset-react",
+        "@babel/preset-typescript",
+        [
+          "@babel/preset-env",
+          {
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": [
+        "emotion",
+        "@babel/plugin-transform-regenerator",
+        "@babel/plugin-transform-modules-commonjs",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-runtime"
+      ]
+    }
+  }
+}
