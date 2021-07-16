@@ -11,7 +11,6 @@ export async function getChallengesList(
 
   const challenges = await Problem.find();
   const filteredChallenges = challenges.map((challenge: IProblemDocument) => {
-    console.log(challenge);
     return _.pick(challenge, publicChallengesFields);
   });
 
@@ -26,9 +25,6 @@ export async function getProblemDetails(
   const problem = await Problem.findOne({
     problemPath: req.params.problemPath,
   });
-  console.log('Problem Details');
-  console.log(req.params.problemPath);
-  console.log(problem);
   if (problem) {
     const templateObjectId = problem.templates.get(language);
     const problemTemplateCode = await ProblemLanguageTemplate.findById(

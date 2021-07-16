@@ -42,6 +42,5 @@ export function setUserCookie(
   req.session.publicUser = publicUser;
   req.session.user = req.user;
   req.session.isAuthenticated = true;
-  console.log('User cookie user', req.session.publicUser);
   next();
 }
