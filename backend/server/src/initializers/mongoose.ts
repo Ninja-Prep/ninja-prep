@@ -10,15 +10,15 @@ function dbconnect(): mongoose.Connection {
     },
     (err) => {
       if (err) logError(err);
-      else logger.info('MongoDB connected');
+      else {
+        logger.info('MongoDB connected');
+      }
     },
   );
-  // connect(process.env.MONGO_URL);
   return mongoose.connection;
 }
 
 function dbclose(): Promise<void> {
-  // disconnect();
   return mongoose.disconnect();
 }
 

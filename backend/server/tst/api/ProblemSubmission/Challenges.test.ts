@@ -1,3 +1,4 @@
+import {afterEach, beforeEach} from 'mocha';
 import {dbclose, dbconnect} from 'initializers/mongoose';
 import chai from 'chai';
 import express from 'express';
@@ -7,18 +8,18 @@ import request from 'supertest';
 const app = express();
 initializeMiddleWare(app);
 
-describe('GET /api/challenges/:problemPath', function () {
-  beforeAll(function (done) {
+describe('POST /api/challenges/:problemPath', function () {
+  beforeEach(function (done) {
     dbconnect()
       .once('open', () => done())
       .on('error', (error) => done(error));
   });
-  afterAll(function (done) {
+  afterEach(function (done) {
     dbclose().then(() => done());
   });
   it('can get Two-Sum', function (done) {
     request(app)
-      .get('/api/challenges/Two-Sum')
+      .post('/api/challenges/Two-Sum')
       .then((res) => {
         chai.expect(res.status).to.eq(200);
         chai.expect(res.body.title).equals('Two Sum');
@@ -30,7 +31,7 @@ describe('GET /api/challenges/:problemPath', function () {
   });
   it('can get longest-unique-substring', (done) => {
     request(app)
-      .get('/api/challenges/Longest-Unique-Substring')
+      .post('/api/challenges/Longest-Unique-Substring')
       .then((res) => {
         chai.expect(res.status).to.eq(200);
         chai.expect(res.body.title).equals('Longest Unique Substring');
@@ -42,7 +43,7 @@ describe('GET /api/challenges/:problemPath', function () {
   });
   it('has empty body for missing problem', (done) => {
     request(app)
-      .get('/api/challenges/nonExistingProblem')
+      .post('/api/challenges/nonExistingProblem')
       .then((res) => {
         chai.expect(res.status).to.eq(200);
         chai.expect(res.body).to.be.an('object').that.is.empty;
@@ -51,18 +52,18 @@ describe('GET /api/challenges/:problemPath', function () {
   });
 });
 
-describe('GET /api/challenges/findchallenges', function () {
-  beforeAll(function (done) {
+describe('GET /api/challenges/getchallenges', function () {
+  before(function (done) {
     dbconnect()
       .once('open', () => done())
       .on('error', (error) => done(error));
   });
-  afterAll(function (done) {
+  after(function (done) {
     dbclose().then(() => done());
   });
   it('can get all challenges', function (done) {
     request(app)
-      .get('/api/challenges/findchallenges')
+      .get('/api/challenges/getchallenges')
       .then((res) => {
         chai.expect(res.status).to.eq(200);
         chai.expect(res.body).to.be.an('array');

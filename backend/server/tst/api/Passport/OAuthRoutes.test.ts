@@ -18,24 +18,22 @@ describe('GET /api/auth/logout', function () {
   });
 });
 
-describe('GET /api/auth/authenticationStatus', function () {
+describe('GET /api/auth/authStatus', function () {
   const agent = request(app);
   it('returns false if not authenticated', (done) => {
     request(app)
-      .get('/api/auth/authenticationStatus')
+      .get('/api/auth/authStatus')
       .set('session', 'isAuthenticated=false')
       .expect('false', done);
   });
 
-  const cookie = Buffer.from(JSON.stringify({isAuthenticated: true})).toString(
-    'base64',
-  ); // base64 converted value of cookie
+  const cookie = Buffer.from(JSON.stringify({user: {}})).toString('base64'); // base64 converted value of cookie
 
   const kg = keygrip(['keyboard cat']);
   const hash = kg.sign('session=' + cookie);
   it('returns true if authenticated', (done) => {
     agent
-      .get('/api/auth/authenticationStatus')
+      .get('/api/auth/authStatus')
       .set('Cookie', ['session=' + cookie + '; ' + 'session.sig=' + hash + ';'])
       .expect('true', done);
   });

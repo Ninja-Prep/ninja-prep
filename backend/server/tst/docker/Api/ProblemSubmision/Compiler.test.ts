@@ -9,13 +9,14 @@ const app = express();
 initializeMiddleWare(app);
 
 describe('POST /api/challenges/execute/Two-Sum', function () {
-  jest.setTimeout(5000);
-  beforeAll(function (done) {
+  // eslint-disable-next-line no-invalid-this
+  this.timeout(5000);
+  beforeEach(function (done) {
     dbconnect()
       .once('open', () => done())
       .on('error', (error) => done(error));
   });
-  afterAll(function (done) {
+  afterEach(function (done) {
     dbclose().then(() => done());
   });
 

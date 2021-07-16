@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "target": "ES2017",
-    "module": "CommonJS",
+    "target": "es6",
+    "module": "commonjs",
     "composite": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,
@@ -15,8 +15,8 @@
     "rootDir": "../",
     "declaration": true,
     "baseUrl": "./src",
-    "types": ["jest", "node", "lodash"],
-    "typeRoots": ["src/utils/types", "./node_modules/types"],
+    "types": ["jest", "node", "lodash", "mocha"],
+    "typeRoots": ["./server/src/utils/types", "./node_modules/@types"],
     "paths": {
       "@mongoose/*": ["initializers/mongoose/*"],
       "@mongoose": ["initializers/mongoose"],
@@ -32,9 +32,13 @@
     "tst/*",
     "server.ts",
     "../database/models",
-    "../database/utils"
+    "../database/utils",
+    "node_modules/@types"
   ],
   "exclude": ["./node_modules"],
   "files": ["server.ts"],
-  "preserveSymlinks": true
+  "preserveSymlinks": true,
+  "ts-node": {
+    "transpileOnly": true
+  }
 }

@@ -32,7 +32,7 @@ jobs:
       - restore_cache:
           name: Restore Server Yarn Package Cache
           keys:
-            - yarn-server-{{ checksum "server/yarn.lock" }}
+            - yarn-server-{{ checksum "backend/server/yarn.lock" }}
       - run:
           name: Adding NPM/Yarn dependencies
           command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
@@ -43,7 +43,7 @@ jobs:
             - ~/.cache/client-yarn
       - save_cache:
           name: Save Server Yarn Package Cache
-          key: yarn-server-{{ checksum "server/yarn.lock" }}
+          key: yarn-server-{{ checksum "backend/server/yarn.lock" }}
           paths:
             - ~/.cache/server-yarn
       - run:

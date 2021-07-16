@@ -3,7 +3,7 @@
   "ignore": [".git", "node_modules/", "build/", "coverage/"],
   "watch": ["src/", "server.ts", "tsconfig.json", "../database"],
   "execMap": {
-    "ts": " ts-node -r tsconfig-paths/register --files"
+    "ts": "ts-node -r tsconfig-paths/register --files"
   },
   "env": {
     "NODE_ENV": "development",

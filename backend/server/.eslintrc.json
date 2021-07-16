@@ -5,12 +5,7 @@
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "sort-imports-es6-autofix",
-    "jest",
-    "jsdoc"
-  ],
+  "plugins": ["@typescript-eslint", "sort-imports-es6-autofix", "jsdoc"],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
@@ -34,10 +29,6 @@
         "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
       }
     ],
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
     "require-jsdoc": ["off"],
     "spaced-comment": ["error", "always"],
     "max-len": [
