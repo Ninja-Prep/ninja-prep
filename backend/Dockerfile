@@ -14,8 +14,8 @@ RUN (curl -Ls https://cli.doppler.com/install.sh || wget -qO- https://cli.dopple
 WORKDIR /backend
 
 # Paths relative to backend directory
-COPY ./server/package.json ./server/yarn.lock backend/server
-COPY ./database/models ./database/utils backend/database
+COPY ./server/package.json ./server/yarn.lock backend/server/
+COPY ./database/models ./database/utils backend/database/
 
 COPY . .
 RUN yarn --cwd ./server build 
