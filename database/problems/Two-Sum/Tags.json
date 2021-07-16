@@ -1,0 +1,5 @@
+{
+    "title": "Two Sum",
+    "problemPath": "Two-Sum",
+    "hints": ["Can you improve runtime by sorting the array first?", "Think about how to use two pointers"]
+}

@@ -25,9 +25,6 @@ jobs:
           install-yarn: true
           install-npm: false
           node-version: latest
-      - add_ssh_keys:
-          fingerprints:
-            - "58:6d:7c:d2:a8:44:62:7a:2d:cd:7f:ba:1c:ea:a1:fa"
       - restore_cache:
           name: Restore Client Yarn Package Cache
           keys:
