@@ -1,5 +1,4 @@
-import {connect, disconnect} from 'question-database';
-import {logError, logger} from 'utils/logging/logger';
+import {logError, logger} from '@logger/logger';
 import mongoose from 'mongoose';
 
 function dbconnect(): mongoose.Connection {
@@ -14,13 +13,14 @@ function dbconnect(): mongoose.Connection {
       else logger.info('MongoDB connected');
     },
   );
-  connect(process.env.MONGO_URL);
+  // connect(process.env.MONGO_URL);
   return mongoose.connection;
 }
 
 function dbclose(): Promise<void> {
-  disconnect();
+  // disconnect();
   return mongoose.disconnect();
 }
 
+export default mongoose;
 export {dbclose, dbconnect};

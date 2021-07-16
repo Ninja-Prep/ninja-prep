@@ -1,16 +1,17 @@
-import {Problem} from 'question-database';
-import {ProblemLanguageTemplate} from 'question-database';
 import {Request, Response} from 'express';
+import Problem, {IProblemDocument} from '@models/ProblemDetails';
+import ProblemLanguageTemplate from '@models/ProblemLanguageTemplate';
 import _ from 'lodash';
 
 export async function getChallengesList(
   req: Request,
   res: Response,
 ): Promise<void> {
-  const publicChallengesFields = ['title', 'problem_path'];
+  const publicChallengesFields = ['title', 'problemPath'];
 
   const challenges = await Problem.find();
-  const filteredChallenges = challenges.map((challenge) => {
+  const filteredChallenges = challenges.map((challenge: IProblemDocument) => {
+    console.log(challenge);
     return _.pick(challenge, publicChallengesFields);
   });
 
@@ -23,20 +24,22 @@ export async function getProblemDetails(
 ): Promise<void> {
   const language = req.body.programmingLanguage?.toLowerCase() || 'java';
   const problem = await Problem.findOne({
-    problem_path: req.params.problemPath,
+    problemPath: req.params.problemPath,
   });
-
+  console.log('Problem Details');
+  console.log(req.params.problemPath);
+  console.log(problem);
   if (problem) {
     const templateObjectId = problem.templates.get(language);
     const problemTemplateCode = await ProblemLanguageTemplate.findById(
       templateObjectId,
     );
 
-    const starterCode = problemTemplateCode?.starter_code_snippet;
+    const starterCode = problemTemplateCode?.starterCodeSnippet;
     const title = problem.title;
     const description = problem.description;
     const hints = problem.hints;
-    const testCases = problem.input_testcases;
+    const testCases = problem.inputTestCases;
     res.send({starterCode, title, description, hints, testCases});
   } else {
     res.send({}).sendStatus(500);

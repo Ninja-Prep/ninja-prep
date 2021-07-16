@@ -3,7 +3,7 @@ import {Strategy as GitHubStrategy} from 'passport-github2';
 import {Strategy as GoogleStrategy} from 'passport-google-oauth20';
 import {METRIC_MEASURES, recordMetric} from '../utils/logging/GCPMetrics';
 import {logError} from 'utils/logging/logger';
-import User, {IUserDocument} from '../models/user';
+import User, {IUserDocument} from '@models/User';
 import passport, {Profile} from 'passport';
 
 type Done = (err?: Error | null, profile?: any) => void;
@@ -18,7 +18,6 @@ passport.use(
     },
     function (accessToken, refreshToken, profile, done) {
       recordMetric(METRIC_MEASURES.GOOGLE_OAUTH_COUNT_MEASURE, 1);
-      console.log('The profile', profile);
       User.findOrCreate(
         profile,
         function (err: string | Error, user: Express.User) {
@@ -76,7 +75,6 @@ passport.use(
 );
 
 passport.serializeUser(async function (user, done: Done) {
-  console.log('Serializing user', user);
   done(null, user);
 });
 
@@ -84,7 +82,6 @@ passport.deserializeUser(function (
   user: IUserDocument,
   done: (err: Error, user?: Express.User | false | null) => void,
 ) {
-  console.log('deserializing user', user);
   User.findById(user.id, function (err: Error, user: boolean | Express.User) {
     done(err, user);
   });

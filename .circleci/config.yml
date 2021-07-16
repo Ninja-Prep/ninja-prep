@@ -1,193 +1,190 @@
 version: 2.1
 
 executors:
-    docker-publisher:
-        environment:
-            NPSERVER_IMAGE: ninjaprep/npserver
-            NPCLIENT_IMAGE: ninjaprep/npclient
-            NPBOX_IMAGE: ninjaprep/npbox
-            BOX_IMAGE: ninjaprep/box
+  docker-publisher:
+    environment:
+      NPSERVER_IMAGE: ninjaprep/npserver
+      NPCLIENT_IMAGE: ninjaprep/npclient
+      NPBOX_IMAGE: ninjaprep/npbox
+      BOX_IMAGE: ninjaprep/box
 
-        docker:
-            - image: circleci/buildpack-deps:stretch
+    docker:
+      - image: circleci/buildpack-deps:stretch
 
 orbs:
-    node: circleci/node@3.0.1
-    codecov: codecov/codecov@1.1.0
+  node: circleci/node@3.0.1
+  codecov: codecov/codecov@1.1.0
 
 jobs:
-    build-and-test:
-        executor:
-            name: node/default
-        steps:
-            - checkout
-            - node/install:
-                  install-yarn: true
-                  install-npm: false
-                  node-version: latest
-            - add_ssh_keys:
-                  fingerprints:
-                      - '58:6d:7c:d2:a8:44:62:7a:2d:cd:7f:ba:1c:ea:a1:fa'
-            - restore_cache:
-                  name: Restore Client Yarn Package Cache
-                  keys:
-                      - yarn-client-{{ checksum "client/yarn.lock" }}
-            - restore_cache:
-                  name: Restore Server Yarn Package Cache
-                  keys:
-                      - yarn-server-{{ checksum "server/yarn.lock" }}
-            - run:
-                  name: Add private question-db repo
-                  command: yarn --cwd ./server add git+ssh://git@github.com/Ninja-Prep/question-database#main
-            - run:
-                  name: Adding NPM/Yarn dependencies
-                  command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
-            - save_cache:
-                  name: Save Client Yarn Package Cache
-                  key: yarn-client-{{ checksum "client/yarn.lock" }}
-                  paths:
-                      - ~/.cache/client-yarn
-            - save_cache:
-                  name: Save Server Yarn Package Cache
-                  key: yarn-server-{{ checksum "server/yarn.lock" }}
-                  paths:
-                      - ~/.cache/server-yarn
-            - run:
-                  name: Testing Client Folder
-                  command: cd client && yarn jest
-            - run:
-                  name: Client Build Attempt
-                  command: CI=false yarn --cwd ./client run build
-            - run:
-                  name: Server Build Attempt
-                  command: CI=false yarn --cwd ./server run build
-            - run:
-                  name: Install Doppler CLI to current directory
-                  command: (curl -Ls https://cli.doppler.com/install.sh || wget -qO- https://cli.doppler.com/install.sh) | sh -s -- --no-install --no-package-manager
-            - run:
-                  name: Testing Server Folder
-                  command: ./doppler run -- yarn --cwd ./server yarn test
-            - codecov/upload:
-                  file: ./client/coverage/coverage-final.json
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+          install-npm: false
+          node-version: latest
+      - add_ssh_keys:
+          fingerprints:
+            - "58:6d:7c:d2:a8:44:62:7a:2d:cd:7f:ba:1c:ea:a1:fa"
+      - restore_cache:
+          name: Restore Client Yarn Package Cache
+          keys:
+            - yarn-client-{{ checksum "client/yarn.lock" }}
+      - restore_cache:
+          name: Restore Server Yarn Package Cache
+          keys:
+            - yarn-server-{{ checksum "server/yarn.lock" }}
+      - run:
+          name: Adding NPM/Yarn dependencies
+          command: sudo chmod +x ./bin/InstallDependencies.sh && sudo ./bin/InstallDependencies.sh
+      - save_cache:
+          name: Save Client Yarn Package Cache
+          key: yarn-client-{{ checksum "client/yarn.lock" }}
+          paths:
+            - ~/.cache/client-yarn
+      - save_cache:
+          name: Save Server Yarn Package Cache
+          key: yarn-server-{{ checksum "server/yarn.lock" }}
+          paths:
+            - ~/.cache/server-yarn
+      - run:
+          name: Testing Client Folder
+          command: cd client && yarn jest
+      - run:
+          name: Client Build Attempt
+          command: CI=false yarn --cwd ./client run build
+      - run:
+          name: Server Build Attempt
+          command: CI=false yarn --cwd ./server run build
+      - run:
+          name: Install Doppler CLI to current directory
+          command: (curl -Ls https://cli.doppler.com/install.sh || wget -qO- https://cli.doppler.com/install.sh) | sh -s -- --no-install --no-package-manager
+      - run:
+          name: Testing Server Folder
+          command: ./doppler run -- yarn --cwd ./server yarn test
+      - codecov/upload:
+          file: ./client/coverage/coverage-final.json
 
-    build-remote-docker-image:
-        executor: docker-publisher
-        steps:
-            - checkout
-            - setup_remote_docker:
-                  version: 19.03.13
-                  # docker_layer_caching: true
-            - run:
-                  name: Build Nginx Client Image
-                  command: |
-                      docker build -t $NPCLIENT_IMAGE:latest -f ./client/Dockerfile.prod.client ./client
-            - run:
-                  name: Archive client Docker image
-                  command: docker save -o client_image.tar $NPCLIENT_IMAGE
-            - persist_to_workspace:
-                  root: .
-                  paths:
-                      - ./client_image.tar
-            - run:
-                  name: Build Server Image
-                  command: |
-                      docker build --build-arg QUESTION_DB_SSH_KEY="$QUESTION_DB_BASE_64_KEY" -t $NPSERVER_IMAGE:latest -f ./server/Dockerfile.prod.server ./server
-            - run:
-                  name: Archive server Docker image
-                  command: docker save -o server_image.tar $NPSERVER_IMAGE
-            - persist_to_workspace:
-                  root: .
-                  paths:
-                      - ./server_image.tar
+  build-remote-docker-image:
+    executor: docker-publisher
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 19.03.13
+          # docker_layer_caching: true
+      - run:
+          name: Build Nginx Client Image
+          command: |
+            docker build -t $NPCLIENT_IMAGE:latest -f ./client/Dockerfile ./client
+      - run:
+          name: Archive client Docker image
+          command: docker save -o client_image.tar $NPCLIENT_IMAGE
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./client_image.tar
+      - run:
+          name: Build Server Image
+          command: |
+            docker build -t $NPSERVER_IMAGE:latest -f ./server/Dockerfile ./server
+      - run:
+          name: Archive server Docker image
+          command: docker save -o server_image.tar $NPSERVER_IMAGE
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./server_image.tar
 
-    integration-tests:
-        executor: docker-publisher
-        steps:
-            - checkout
-            - setup_remote_docker:
-                  version: 19.03.13
-            - attach_workspace:
-                  at: /tmp/workspace
-            - run:
-                  name: Load archived server Docker image
-                  command: docker load -i /tmp/workspace/server_image.tar
-            - run:
-                  name: Pull npbox image
-                  command: |
-                      echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-                      docker pull $NPBOX_IMAGE:latest
-            - run:
-                  name: Pull box image
-                  command: |
-                      echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-                      docker pull $BOX_IMAGE:latest
-            - run:
-                  name: Run server integration tests
-                  command: docker-compose -f circleci-compose.yml up --scale box=0 --exit-code-from npserver
+  integration-tests:
+    executor: docker-publisher
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 19.03.13
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Load archived server Docker image
+          command: docker load -i /tmp/workspace/server_image.tar
+      - run:
+          name: Pull npbox image
+          command: |
+            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker pull $NPBOX_IMAGE:latest
+      - run:
+          name: Pull box image
+          command: |
+            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker pull $BOX_IMAGE:latest
+      - run:
+          name: Run server integration tests
+          command: docker-compose -f circleci-compose.yml up --scale box=0 --exit-code-from npserver
 
-    publish-latest:
-        executor: docker-publisher
-        steps:
-            - setup_remote_docker:
-                  version: 19.03.13
-                  # docker_layer_caching: true
-            - attach_workspace:
-                  at: /tmp/workspace
-            - run:
-                  name: Load archived client Docker image
-                  command: docker load -i /tmp/workspace/client_image.tar
-            - run:
-                  name: Publish Docker Image to Docker Hub
-                  command: |
-                      echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-                      docker push $NPCLIENT_IMAGE:latest
-            - run:
-                  name: Load archived server Docker image
-                  command: docker load -i /tmp/workspace/server_image.tar
-            - run:
-                  name: Publish Docker Image to Docker Hub
-                  command: |
-                      echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-                      docker push $NPSERVER_IMAGE:latest
+  publish-latest:
+    executor: docker-publisher
+    steps:
+      - setup_remote_docker:
+          version: 19.03.13
+          # docker_layer_caching: true
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Load archived client Docker image
+          command: docker load -i /tmp/workspace/client_image.tar
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push $NPCLIENT_IMAGE:latest
+      - run:
+          name: Load archived server Docker image
+          command: docker load -i /tmp/workspace/server_image.tar
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push $NPSERVER_IMAGE:latest
 
-    deploy-prod:
-        executor:
-            name: node/default
-        steps:
-            - checkout
-            - run:
-                  name: Deploy to Production
-                  command: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP -p $SSH_PORT "./deploy_project.sh"
+  deploy-prod:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run:
+          name: Deploy to Production
+          command: ssh -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP -p $SSH_PORT "./deploy_project.sh"
 
 workflows:
-    build-and-test:
-        jobs:
+  build-and-test:
+    jobs:
+      - build-and-test
+      - build-remote-docker-image:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
             - build-and-test
-            - build-remote-docker-image:
-                  filters:
-                      branches:
-                          only:
-                              - master
-                  requires:
-                      - build-and-test
-            - integration-tests:
-                  filters:
-                      branches:
-                          only:
-                              - master
-                  requires:
-                      - build-remote-docker-image
-            - publish-latest:
-                  filters:
-                      branches:
-                          only:
-                              - master
-                  requires:
-                      - integration-tests
-            - deploy-prod:
-                  filters:
-                      branches:
-                          only:
-                              - master
-                  requires:
-                      - publish-latest
+      - integration-tests:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build-remote-docker-image
+      - publish-latest:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - integration-tests
+      - deploy-prod:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - publish-latest

@@ -7,20 +7,20 @@ import {isUserSubmissionOutput} from '../../utils/types/challenges/index';
 /**
  * @returns List of links for each problem
  */
-export async function findChallengeLinks(): Promise<ChallengeLink[]> {
+export async function getChallengeLinks(): Promise<ChallengeLink[]> {
   const challengesResponse = (
     await axios({
       method: 'GET',
-      url: `/api/challenges/findchallenges`,
+      url: `/api/challenges/getchallenges`,
     })
   ).data;
 
   const challenges: ChallengeLink[] = challengesResponse.map(
     // eslint-disable-next-line camelcase
-    (challenge: {title: string; problem_path: string}) => {
+    (challenge: {title: string; problemPath: string}) => {
       return {
         title: challenge.title,
-        problemPath: challenge.problem_path,
+        problemPath: challenge.problemPath,
       };
     },
   );
@@ -32,7 +32,6 @@ export const getProblemDetails = async (
   paramsId: string,
   programmingLanguage: string,
 ): Promise<ProblemDetails> => {
-  console.log(programmingLanguage);
   const responseData = (
     await axios({
       method: 'POST',
@@ -58,7 +57,6 @@ export async function submitProblem(
   language: string,
   problemId: string,
 ): Promise<UserSubmissionOutput> {
-  console.log(textValue);
   const response = (
     await axios.post(`/api/submisson/execute/${problemId}`, {
       codeSnippet: textValue,

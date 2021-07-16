@@ -2,6 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "target": "es6",
+    "composite": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,
     "strict": true,
@@ -15,9 +16,12 @@
     "types": ["jest", "node", "lodash"],
     "typeRoots": ["src/utils/types", "./node_modules/types"],
     "paths": {
-      "@logger/*": ["utils/logging/*"]
+      "@mongoose": ["initializers/mongoose"],
+      "@logger/*": ["utils/logging/*"],
+      "@models/*": ["../../database/models/*"]
     }
   },
+  "references": [{"path": "../database/tsconfig.json"}],
   "include": [
     "src",
     "src/utils/types/*, ./config",

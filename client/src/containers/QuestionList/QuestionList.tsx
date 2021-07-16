@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import QuestionList from 'components/QuestionList/QuestionList';
-import {findChallengeLinks} from 'services/challenges/challengesService';
+import {getChallengeLinks} from 'services/challenges/challengesService';
 import {ChallengeLink} from 'utils/types/challenges';
 
 interface State {
@@ -14,7 +14,7 @@ class QuestionListContainer extends Component<Record<string, never>, State> {
   };
 
   async componentDidMount(): Promise<void> {
-    const links = await findChallengeLinks();
+    const links = await getChallengeLinks();
     this.setState({challengeLinks: links});
   }
 

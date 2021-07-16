@@ -132,7 +132,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                               <img
                                 alt="AlexPhoto"
                                 className="img-fluid rounded"
-                                src="/images/ALEX-PHOTO.png"
+                                src="/images/ALEX-PHOTO.jpg"
                               />
                             </div>
                           </Col>
@@ -158,7 +158,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                               <img
                                 alt="AngelaSPhoto"
                                 className="img-fluid rounded"
-                                src="/images/ANGELA-S-PHOTO.png"
+                                src="/images/ANGELA-S-PHOTO.jpg"
                               />
                             </div>
                           </Col>
@@ -238,7 +238,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                               <img
                                 alt="AngelaYPhoto"
                                 className="img-fluid rounded"
-                                src="/images/ANGELA-Y-PHOTO.png"
+                                src="/images/ANGELA-Y-PHOTO.jpg"
                               />
                             </div>
                           </Col>
@@ -264,7 +264,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                               <img
                                 alt="JoannePhoto"
                                 className="img-fluid rounded"
-                                src="/images/JOANNE-PHOTO.png"
+                                src="/images/JOANNE-PHOTO.jpg"
                               />
                             </div>
                           </Col>
@@ -416,7 +416,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         <img
                           alt="AlexPhoto"
                           className="img-fluid rounded"
-                          src="/images/ALEX-PHOTO.png"
+                          src="/images/ALEX-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>
@@ -443,7 +443,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         <img
                           alt="AngelaSPhoto"
                           className="img-fluid rounded"
-                          src="/images/ANGELA-S-PHOTO.png"
+                          src="/images/ANGELA-S-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>
@@ -470,7 +470,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         <img
                           alt="AngelaYPhoto"
                           className="img-fluid rounded"
-                          src="/images/ANGELA-Y-PHOTO.png"
+                          src="/images/ANGELA-Y-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>
@@ -497,7 +497,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         <img
                           alt="JoannePhoto"
                           className="img-fluid rounded"
-                          src="/images/JOANNE-PHOTO.png"
+                          src="/images/JOANNE-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>
@@ -625,7 +625,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         <img
                           alt="AlexPhoto"
                           className="img-fluid rounded"
-                          src="/images/ALEX-PHOTO.png"
+                          src="/images/ALEX-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>
@@ -652,7 +652,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         <img
                           alt="AngelaSPhoto"
                           className="img-fluid rounded"
-                          src="/images/ANGELA-S-PHOTO.png"
+                          src="/images/ANGELA-S-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>
@@ -679,7 +679,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         <img
                           alt="AngelaYPhoto"
                           className="img-fluid rounded"
-                          src="/images/ANGELA-Y-PHOTO.png"
+                          src="/images/ANGELA-Y-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>
@@ -706,7 +706,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         <img
                           alt="JoannePhoto"
                           className="img-fluid rounded"
-                          src="/images/JOANNE-PHOTO.png"
+                          src="/images/JOANNE-PHOTO.jpg"
                         />
                       </div>
                     </styled.div>

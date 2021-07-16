@@ -29,7 +29,6 @@ export async function checkout(req: Request, res: Response): Promise<void> {
       sessionId: session.id,
     });
   } catch (e) {
-    console.log('ERROR', e);
     res.status(400);
     res.send({
       error: {
