@@ -54,13 +54,13 @@ jobs:
           command: CI=false yarn --cwd ./client run build
       - run:
           name: Server Build Attempt
-          command: CI=false yarn --cwd ./server run build
+          command: CI=false yarn --cwd ./backend/server run build
       - run:
           name: Install Doppler CLI to current directory
           command: (curl -Ls https://cli.doppler.com/install.sh || wget -qO- https://cli.doppler.com/install.sh) | sh -s -- --no-install --no-package-manager
       - run:
           name: Testing Server Folder
-          command: ./doppler run -- yarn --cwd ./server yarn test
+          command: ./doppler run -- yarn --cwd ./backend/server yarn test
       - codecov/upload:
           file: ./client/coverage/coverage-final.json
 
