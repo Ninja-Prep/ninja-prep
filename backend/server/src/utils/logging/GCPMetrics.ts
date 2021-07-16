@@ -30,7 +30,8 @@ export const METRIC_MEASURES = {
 export function initializeGCPMetrics(): void {
   const projectId = 'ninjaprep-prod';
   if (!projectId || !process.env.GOOGLE_APPLICATION_CREDENTIALS) {
-    throw Error('Unable to proceed without a Project ID');
+    // throw Error('Unable to proceed without a Project ID');
+    return;
   }
 
   const EXPORT_INTERVAL = 60;

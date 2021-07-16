@@ -2,18 +2,18 @@
   "name": "ninja-prep",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "build/server/server.js",
   "engines": {
     "node": ">=14.x"
   },
   "scripts": {
-    "build": "tsc -p .",
+    "build": "ttsc --build tsconfig.json",
     "test": "cross-env MOCHA_TEST=true mocha -r ts-node/register  tst/src/**/*.test.ts",
     "integration-test": "cross-env MOCHA_TEST=true mocha -r ts-node/register  tst/docker/**/*.test.ts",
     "server": "nodemon --verbose --config nodemon.json ./server.ts",
     "client": "cd ../client && yarn start",
     "lint": "eslint --ext js,jsx,ts,tsx src/",
-    "prod": "cross-env NODE_ENV=production node build/server.js",
+    "prod": "cross-env NODE_ENV=production node build/server/server.js",
     "dev": "doppler run -- cross-env NODE_ENV=development concurrently \"yarn run server\" \"yarn run client\""
   },
   "author": "",
@@ -81,6 +81,7 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
+    "@zerollup/ts-transform-paths": "^1.7.18",
     "chai": "^4.3.4",
     "eslint": "^7.4.0",
     "eslint-config-google": "^0.14.0",
@@ -97,10 +98,12 @@
     "jsonschema": "^1.4.0",
     "keygrip": "^1.1.0",
     "mocha": "^8.3.2",
+    "module-alias": "^2.2.2",
     "nodemon": "^2.0.6",
     "prettier": "^2.0.5",
     "supertest": "^6.1.3",
     "ts-node": "^9.1.1",
+    "ttypescript": "^1.5.12",
     "typescript": "^4.2.4"
   },
   "lint-staged": {

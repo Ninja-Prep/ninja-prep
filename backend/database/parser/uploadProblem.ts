@@ -50,7 +50,7 @@ async function uploadProblemAndTemplate(
       new: true,
     };
 
-    const enumLanguage = ProgrammingLanguages[language];
+    const enumLanguage: ProgrammingLanguages = ProgrammingLanguages[language as ProgrammingLanguages];
     const updateTemplateResult = await updateLanguageTemplate(
       codeSnippets,
       problemBO.problemTagsJson.title,
@@ -60,12 +60,14 @@ async function uploadProblemAndTemplate(
     console.log(
       `Successfully updated problem: ${problemBO.problemTagsJson.title}`,
     );
-    return await updateProblem(
-      problemBO,
-      updateTemplateResult._id,
-      language,
-      options,
-    );
+    if (updateTemplateResult) {
+      return await updateProblem(
+        problemBO,
+        updateTemplateResult._id,
+        language,
+        options,
+      );
+    }
   } catch (err) {
     console.log(err);
     throw new Error(

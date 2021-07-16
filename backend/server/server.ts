@@ -1,5 +1,5 @@
+import * as traceAgent from '@google-cloud/trace-agent';
 import {initializeGCPMetrics} from 'utils/logging/GCPMetrics';
-import traceAgent from '@google-cloud/trace-agent';
 if (process.env.NODE_ENV === 'production') {
   traceAgent.start();
   initializeGCPMetrics();

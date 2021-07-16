@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "target": "es6",
+    "target": "ES2017",
+    "module": "CommonJS",
     "composite": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,
@@ -11,23 +12,27 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "outDir": "build",
+    "rootDir": "../",
     "declaration": true,
     "baseUrl": "./src",
     "types": ["jest", "node", "lodash"],
     "typeRoots": ["src/utils/types", "./node_modules/types"],
     "paths": {
+      "@mongoose/*": ["initializers/mongoose/*"],
       "@mongoose": ["initializers/mongoose"],
       "@logger/*": ["utils/logging/*"],
       "@models/*": ["../../database/models/*"]
-    }
+    },
+    "plugins": [{"transform": "@zerollup/ts-transform-paths"}]
   },
-  "references": [{"path": "../database/tsconfig.json"}],
   "include": [
-    "src",
-    "src/utils/types/*, ./config",
+    "src/",
+    "src/utils/types/*",
     "tst",
     "tst/*",
-    "server.ts"
+    "server.ts",
+    "../database/models",
+    "../database/utils"
   ],
   "exclude": ["./node_modules"],
   "files": ["server.ts"],
