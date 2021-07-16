@@ -9,7 +9,7 @@
   "scripts": {
     "build": "ttsc --build tsconfig.json",
     "test": "cross-env MOCHA_TEST=true mocha -r ts-node/register -r tsconfig-paths/register tst/api/**/*.test.ts",
-    "integration-test": "cross-env MOCHA_TEST=true mocha -r ts-node/register -r tsconfig-paths/register  tst/docker/**/*.test.ts",
+    "integration-test": "doppler run -- cross-env MOCHA_TEST=true mocha -r ts-node/register -r tsconfig-paths/register  tst/docker/**/*.test.ts",
     "server": "nodemon --verbose --config nodemon.json ./server.ts",
     "client": "cd ../../client && yarn start",
     "lint": "eslint --ext js,jsx,ts,tsx src/",

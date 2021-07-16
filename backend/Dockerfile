@@ -18,10 +18,12 @@ COPY ./server/package.json ./server/yarn.lock backend/server/
 COPY ./database/models ./database/utils backend/database/
 
 COPY . .
-RUN yarn --cwd ./server install
-RUN yarn --cwd ./server build
+
+WORKDIR /backend/server
+RUN yarn install
+RUN yarn build
 
 # Exports
 EXPOSE 5000
 
-CMD ["doppler", "run", "--", "yarn", "--cwd", "./server","prod"]
+CMD ["doppler", "run", "--", "yarn","prod"]

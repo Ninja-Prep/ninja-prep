@@ -10,7 +10,7 @@ initializeMiddleWare(app);
 
 describe('POST /api/challenges/execute/Two-Sum', function () {
   // eslint-disable-next-line no-invalid-this
-  this.timeout(5000);
+  this.timeout(8000);
   beforeEach(function (done) {
     dbconnect()
       .once('open', () => done())

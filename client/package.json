@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "main": "index",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "doppler run -- react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "jest": "jest -c ./jest.config.json",
