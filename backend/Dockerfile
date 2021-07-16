@@ -18,7 +18,8 @@ COPY ./server/package.json ./server/yarn.lock backend/server/
 COPY ./database/models ./database/utils backend/database/
 
 COPY . .
-RUN yarn --cwd ./server build 
+RUN yarn --cwd ./server install
+RUN yarn --cwd ./server build
 
 # Exports
 EXPOSE 5000
