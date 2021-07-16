@@ -15,7 +15,7 @@
     "rootDir": "../",
     "declaration": true,
     "baseUrl": "./src",
-    "types": ["jest", "node", "lodash", "mocha"],
+    "types": ["node", "lodash", "mocha"],
     "typeRoots": ["./server/src/utils/types", "./node_modules/@types"],
     "paths": {
       "@mongoose/*": ["initializers/mongoose/*"],
