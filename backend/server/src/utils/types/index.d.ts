@@ -11,15 +11,7 @@ import 'express';
 declare global {
   namespace Express {
     interface Request {
-      problemBO: {
-        programmingLanguage: string;
-        testCases: string[];
-        snippets: {
-          userCode: string;
-          checkerCode: string;
-          validateTestCaseCode: string;
-        };
-      };
+      problemSubmissionInput: ProblemSubmissionInput;
       id: string;
     }
   }
