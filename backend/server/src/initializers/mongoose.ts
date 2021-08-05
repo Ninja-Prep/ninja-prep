@@ -7,6 +7,7 @@ function dbconnect(): mongoose.Connection {
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     },
     (err) => {
       if (err) logError(err);

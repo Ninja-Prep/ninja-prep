@@ -1,8 +1,8 @@
-import OAuthAPI from './Passport/routes';
-import challengesAPI from './ProblemTemplate/routes';
-import compilerAPI from './ProblemSubmission/routes';
+import OAuthAPI from './passport/routes';
+import challengesAPI from './problemTemplate/routes';
+import compilerAPI from './problemSubmission/routes';
 import express from 'express';
-import stripeAPI from './Stripe/routes';
+import stripeAPI from './stripe/routes';
 
 export default function routingMiddleWare(app: express.Application): void {
   app.use('/api/submisson', compilerAPI);

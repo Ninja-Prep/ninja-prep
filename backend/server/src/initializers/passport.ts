@@ -1,7 +1,6 @@
 import {Strategy as FacebookStrategy} from 'passport-facebook';
 import {Strategy as GitHubStrategy} from 'passport-github2';
 import {Strategy as GoogleStrategy} from 'passport-google-oauth20';
-import {METRIC_MEASURES, recordMetric} from '../utils/logging/GCPMetrics';
 import {logError} from 'utils/logging/logger';
 import User, {IUserDocument} from '@models/User';
 import passport, {Profile} from 'passport';
@@ -17,7 +16,6 @@ passport.use(
       proxy: true,
     },
     function (accessToken, refreshToken, profile, done) {
-      recordMetric(METRIC_MEASURES.GOOGLE_OAUTH_COUNT_MEASURE, 1);
       User.findOrCreate(
         profile,
         function (err: string | Error, user: Express.User) {

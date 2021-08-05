@@ -10,7 +10,7 @@ import {
 export interface UserSubmissionState {
   isLoading: boolean;
   isError: boolean;
-  details: ProblemDetails;
+  details: ProblemDetails | null;
 }
 
 const initialState: UserSubmissionState = {

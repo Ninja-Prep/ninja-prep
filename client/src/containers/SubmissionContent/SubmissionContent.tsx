@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
 import CodeSubmissionLoadBar from 'components/ProblemSubmission/CodeSubmissionLoadBar/CodeSubmissionLoadBar';
-import TestCaseOutput from 'components/SubmissionContent/TestCaseOutput/TestCaseOutput';
-import TestCaseTabs from 'containers/TestCaseTabs/TestCaseTabs';
+import SubmissionContent from 'components/SubmissionContent/SubmissionContent';
+import TestCaseTabs from 'components/SubmissionContent/SubmissionContentTestCases/SubmissionContentTestCases';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import {SubmissionStatus} from 'utils/enums/userSubmission';
 
-import TestCaseErrorOutput from '../../components/SubmissionContent/TestCaseErrorOutput/TestCaseErrorOutput';
-import {VerdictStatus} from '../../utils/enums/userSubmission';
+import TestCaseErrorOutput from 'components/SubmissionContent/SubmissionContentTestCases/TestCaseErrorOutput/TestCaseErrorOutput';
+import {VerdictStatus} from 'utils/enums/userSubmission';
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -33,15 +33,15 @@ class SubmisssionContentContainer extends Component<Props> {
         const WrongAnswer = VerdictStatus.Wrong_Answer;
         if (verdict !== ACCEPTED && verdict !== WrongAnswer)
           return (
-            <TestCaseOutput>
+            <SubmissionContent>
               <TestCaseErrorOutput content={this.props.stderr} />
-            </TestCaseOutput>
+            </SubmissionContent>
           );
     }
     return (
-      <TestCaseOutput>
+      <SubmissionContent>
         <TestCaseTabs />
-      </TestCaseOutput>
+      </SubmissionContent>
     );
   }
 }

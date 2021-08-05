@@ -1,12 +1,8 @@
 import {config, createLogger, format, transports} from 'winston';
 const {combine, json, prettyPrint, colorize, printf} = format;
-import {ErrorReporting} from '@google-cloud/error-reporting';
-import {LoggingWinston} from '@google-cloud/logging-winston';
 import express, {Request, Response} from 'express';
 import expressWinston from 'express-winston';
 import httpContext from 'express-http-context';
-
-const errors = new ErrorReporting({});
 
 const printFormat = printf((info) => {
   const reqId = httpContext.get('reqId') || '';
@@ -21,13 +17,12 @@ const printFormat = printf((info) => {
   }
 });
 
-const loggingWinston = new LoggingWinston({});
 const isProduction = process.env.NODE_ENV === 'production';
 const isTest = process.env.MOCHA_TEST === 'true';
 
 let loggingTransports = [];
 if (isProduction) {
-  loggingTransports = [new transports.Console({}), loggingWinston];
+  loggingTransports = [new transports.Console({})];
 } else {
   loggingTransports = [
     new transports.Console({
@@ -63,14 +58,10 @@ const consoleErrorLogger = createLogger({
 });
 
 export const logError = (content: string | Error): void => {
-  const reqId = httpContext.get('reqId') || '';
   if (typeof content === 'object') {
-    const objString = JSON.stringify(content, null, 4);
     consoleErrorLogger.error(content);
-    errors.report(`[ERROR] ${reqId} ${objString}`);
   } else {
     consoleErrorLogger.error(content);
-    errors.report(`[ERROR] ${reqId} ${content}`);
   }
 };
 
@@ -121,6 +112,5 @@ export default function (app: express.Application): void {
   if (process.env.MOCHA_TEST !== 'true') {
     app.use(expressErrorLogger);
     app.use(expresslogger);
-    app.use(errors.express);
   }
 }
