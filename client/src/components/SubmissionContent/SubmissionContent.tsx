@@ -9,7 +9,7 @@ interface Props {
   children?: React.ReactChild;
 }
 
-function TestCaseOutput(props: Props): JSX.Element {
+function SubmissionContent(props: Props): JSX.Element {
   return (
     <div>
       <HeaderContainer>
@@ -23,4 +23,4 @@ function TestCaseOutput(props: Props): JSX.Element {
   );
 }
 
-export default TestCaseOutput;
+export default SubmissionContent;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {VerdictStatus} from 'utils/enums/userSubmission';
 
-import {AcceptedStatus, ErrorStatus} from './styled';
+import {AcceptedStatus, ErrorStatus} from '../TestCaseContent/styled';
 
 interface FormatHeaderProps {
   verdictStatus: string;

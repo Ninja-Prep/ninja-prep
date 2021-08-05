@@ -2,7 +2,7 @@ import React from 'react';
 
 import {JudgedTestCase} from 'utils/types/challenges/index';
 
-import ContentDetailBlock from '../ContentDetailBlock/ContentDetailBlock';
+import ContentDetailBlock from '../../TestCaseContent/ContentDetailBlock/ContentDetailBlock';
 import {ContentSpacing} from './styled';
 
 interface Props {
