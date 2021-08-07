@@ -21,6 +21,7 @@ function JourneyTablet() {
           <img className="float-right img-fluid" src={props.imagePath} />
         </Col>
         <Col className="my-auto pl-5">
+          <h4 className="font-weight-bold">{props.stepNumber}</h4>
           <h4 className="font-weight-bold">{props.title}</h4>
           <p className="lead text-secondary">{props.description}</p>
         </Col>
@@ -38,6 +39,7 @@ function JourneyTablet() {
           <JourneyCard
             key={i}
             imagePath={card.imagePath}
+            stepNumber={card.stepNumber}
             title={card.title}
             description={card.description}
           />

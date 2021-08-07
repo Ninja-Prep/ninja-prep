@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="401" height="246" viewBox="0 0 401 246">
+  <defs>
+    <filter id="Rectangle_47" x="0" y="0" width="401" height="246" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Job_Img" data-name="Job Img" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Rectangle_47)">
+      <rect id="Rectangle_47-2" data-name="Rectangle 47" width="383" height="228" rx="5" transform="translate(9 6)" fill="#f9fbfd"/>
+    </g>
+    <g id="Group_41" data-name="Group 41" transform="translate(51.472 52.451)">
+      <g id="Group_39" data-name="Group 39" transform="translate(169.412 14.127)">
+        <g id="integration_instructions-24px">
+          <rect id="Rectangle_92" data-name="Rectangle 92" width="110.298" height="110.298" fill="none"/>
+          <circle id="Ellipse_28" data-name="Ellipse 28" cx="3.447" cy="3.447" r="3.447" transform="translate(51.702 12.638)" fill="none"/>
+          <circle id="Ellipse_29" data-name="Ellipse 29" cx="3.447" cy="3.447" r="3.447" transform="translate(51.702 12.638)" fill="none"/>
+          <circle id="Ellipse_30" data-name="Ellipse 30" cx="3.447" cy="3.447" r="3.447" transform="translate(51.702 12.638)" fill="none"/>
+          <path id="Path_135" data-name="Path 135" d="M121.657,25.233h-19.21a13.733,13.733,0,0,0-25.92,0H57.317a8.051,8.051,0,0,0-1.838.184,9.286,9.286,0,0,0-6.618,5.469,8.853,8.853,0,0,0-.735,3.539V98.765a9.429,9.429,0,0,0,.735,3.585,9.74,9.74,0,0,0,1.976,2.941,9.227,9.227,0,0,0,4.642,2.528,11.927,11.927,0,0,0,1.838.138h64.341a9.219,9.219,0,0,0,9.192-9.192V34.425A9.219,9.219,0,0,0,121.657,25.233ZM84.891,76.568l-6.48,6.526-16.5-16.5,16.5-16.5,6.48,6.526L74.918,66.6Zm4.6-45.59a3.447,3.447,0,1,1,3.447-3.447A3.472,3.472,0,0,1,89.487,30.978Zm11.076,52.116-6.48-6.526,9.973-9.973-9.973-9.973,6.48-6.526,16.5,16.5Z" transform="translate(-34.338 -11.446)" fill="#57bafc"/>
+        </g>
+      </g>
+      <g id="Group_40" data-name="Group 40" transform="translate(0 0)">
+        <g id="school-24px">
+          <path id="Path_136" data-name="Path 136" d="M0,0H124.425V124.425H0Z" fill="none"/>
+          <path id="Path_137" data-name="Path 137" d="M36.779,100.9v20.737l36.291,19.8,36.291-19.8V100.9l-36.291,19.8ZM73.07,48.125,16.042,79.231,73.07,110.337l46.659-25.455v35.824H130.1V79.231Z" transform="translate(-10.857 -32.572)" fill="#2a2a3a"/>
+        </g>
+      </g>
+      <g id="Next" transform="translate(146.2 59.928)">
+        <path id="Path_116" data-name="Path 116" d="M10.8,6,8.59,8.211l7.181,7.2L8.59,22.6,10.8,24.814l9.407-9.407Z" transform="translate(-8.59 -6)" fill="#2a2a3a"/>
+      </g>
+    </g>
+  </g>
+</svg>

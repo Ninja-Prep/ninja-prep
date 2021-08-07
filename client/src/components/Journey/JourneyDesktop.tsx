@@ -7,38 +7,36 @@ import {JourneyList} from './JourneyList';
 import {JOURNEY_TITLE, JOURNEY_DESCRIPTION} from './JourneyStringIds';
 import './journey.css';
 
-/**
- *
- */
+function JourneyCard(props: JourneyCardProps) {
+  return (
+    <Row className={' my-5 py-5 blob-bg ' + props.backgroundImage}>
+      <Col className="pr-5 ">
+        <img className="float-right img-fluid" src={props.imagePath} />
+      </Col>
+      <Col className="my-auto pl-5 ">
+        <h2 className="step-number m-0">{props.stepNumber}</h2>
+        <h1 className="font-weight-bold my-3">{props.title}</h1>
+        <h2 className="w-80 font-weight-light text-secondary m-0">{props.description}</h2>
+      </Col>
+    </Row>
+  );
+}
+
+
 function JourneyDesktop() {
-  /**
-   *
-   */
-  function JourneyCard(props: JourneyCardProps) {
-    return (
-      <Row className={' py-5 blob-bg ' + props.backgroundImage}>
-        <Col className="pr-5">
-          <img className="float-right img-fluid" src={props.imagePath} />
-        </Col>
-        <Col className="my-auto pl-5">
-          <h4 className="font-weight-bold">{props.title}</h4>
-          <p className="w-75 lead text-secondary">{props.description}</p>
-        </Col>
-      </Row>
-    );
-  }
   return (
     <div className="pb-5 pt-4">
       <Container>
         <div className="text-center pb-4">
-          <h3 className="font-weight-bold pb-2">{JOURNEY_TITLE}</h3>
-          <p className="lead">{JOURNEY_DESCRIPTION}</p>
+          <h1 className="font-weight-bold pb-2 display-4">{JOURNEY_TITLE}</h1>
+          <h2>{JOURNEY_DESCRIPTION}</h2>
         </div>
         {JourneyList.map((card, i) => (
           <JourneyCard
             key={i}
             backgroundImage={card.backgroundImage}
             imagePath={card.imagePath}
+            stepNumber={card.stepNumber}
             title={card.title}
             description={card.description}
           />

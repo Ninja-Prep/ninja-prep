@@ -7,13 +7,7 @@ import {JourneyList} from './JourneyList';
 import {JOURNEY_TITLE, JOURNEY_DESCRIPTION} from './JourneyStringIds';
 import './journey.css';
 
-/**
- *
- */
 function JourneyMobile() {
-  /**
-   *
-   */
   function JourneyCard(props: JourneyCardProps) {
     return (
       <Col className="py-5">
@@ -21,6 +15,7 @@ function JourneyMobile() {
           <img className="mx-auto img-fluid w-50" src={props.imagePath} />
         </Row>
         <Row>
+          <h4 className="font-weight-bold">{props.stepNumber}</h4>
           <h4 className="font-weight-bold mx-auto pb-2 text-center">
             {props.title}
           </h4>
@@ -40,6 +35,7 @@ function JourneyMobile() {
           <JourneyCard
             key={i}
             imagePath={card.imagePath}
+            stepNumber={card.stepNumber}
             title={card.title}
             description={card.description}
           />

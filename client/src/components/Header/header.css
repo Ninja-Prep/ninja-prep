@@ -1,15 +1,5 @@
-/* Wave image is not responsive */
-.header-bg {
-  background-image: url('/images/wave.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: auto;
-  height: 100%;
-  background-position: center center;
-}
-
 .header-bg-mobile {
-  background-image: url('/images/wave.png');
+  background-image: url('/images/Header-Background.svg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 75%;
@@ -17,15 +7,7 @@
   background-position: center center;
 }
 
-.header-container {
-  position: relative;
-  top: 15%;
-}
-
 .header-container-mobile {
   position: relative;
   top: 12%;
-}
-.form-bg {
-  background-color: #404053;
 }

@@ -1,36 +1,42 @@
-export const JOURNEY_TITLE = 'This might just be the easiest way to learn.';
+export const JOURNEY_TITLE = 'The NinjaPrep Journey';
 export const JOURNEY_DESCRIPTION =
-  'With everything you need, all in one platform.';
+  'This might just be the easiest way to learn.';
+
 export const DISCOVER_CONCEPTS = {
-  IMAGE_PATH: './images/Discover Img.png',
-  TITLE: 'Discover In-demand Concepts',
+  IMAGE_PATH: './images/Discover Img.svg',
+  TITLE: 'Discover In-demand concepts',
+  STEP_NUMBER: 'Step 1',
   DESCRIPTION:
-    'Choose from our wide selection of problems and go from beginner to mastery level.',
+    'Choose from our wide selection of problems that touches upon in-demand concepts and go from beginner to mastery.',
 };
 
 export const VIDEOS = {
-  IMAGE_PATH: './images/Videos Img.png',
-  TITLE: 'Code Walkthroughs',
+  IMAGE_PATH: './images/Articles Img.svg',
+  TITLE: 'Learn core concepts',
+  STEP_NUMBER: 'Step 2',
   DESCRIPTION:
-    'Code alongside with our step-by-step videos that includes conceptual overview and visual diagrams',
+    'No matter your experience level, you\'ll learn complex concepts in and out through in-depth articles',
 };
 
 export const ARTICLES = {
-  IMAGE_PATH: './images/Articles Img.png',
-  TITLE: 'In-depth Articles',
+  IMAGE_PATH: './images/Videos Img.svg',
+  TITLE: 'Code along to video solutions',
+  STEP_NUMBER: 'Step 3',
   DESCRIPTION:
-    "No matter your experience level, you'll learn complex concepts in and out.",
+    "Stuck on a problem? Code alongside with our step-by-step videos.",
 };
 
 export const FEEDBACK = {
-  IMAGE_PATH: './images/Feedback Img.png',
-  TITLE: 'Instant Feedback',
+  IMAGE_PATH: './images/Feedback Img.svg',
+  TITLE: 'Get instant feedback',
+  STEP_NUMBER: 'Step 4',
   DESCRIPTION:
-    "Your code is tested once you press submit, so you always know if you're on the right track.",
+    "Your code is tested against various test cases as soon as you run your code, so you always know if you're on the right track.",
 };
 export const JOB = {
-  IMAGE_PATH: './images/Job Img.png',
+  IMAGE_PATH: './images/Job Img.svg',
   TITLE: 'Land your dream job',
+  STEP_NUMBER: 'Step 5',
   DESCRIPTION:
-    'Learn, practice, and apply your coding skills with NinjaPrep to take your programming career to the next level.',
+    'All hard work pays off. Learn, practice, and apply in-demand coding skills with NinjaPrep to take your career to the next level.',
 };

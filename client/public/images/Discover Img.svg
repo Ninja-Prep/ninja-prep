@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="383" height="230" viewBox="0 0 383 230">
+  <g id="Discover_Img" data-name="Discover Img" transform="translate(0 0.394)">
+    <g id="Discover_Column" data-name="Discover Column" transform="translate(201 0)">
+      <g id="Discover_Image" data-name="Discover Image" transform="translate(5 5)" opacity="0.11">
+        <g id="Discover_card" data-name="Discover card" transform="translate(0 0)">
+          <rect id="Rectangle_74" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Array_Strings" data-name="Array &amp; Strings" transform="translate(26 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Array &amp; Strings</tspan></text>
+        </g>
+        <g id="Discover_card-2" data-name="Discover card" transform="translate(0 59)">
+          <rect id="Rectangle_74-2" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Trees_Graphs" data-name="Trees &amp; Graphs" transform="translate(26 27.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Trees &amp; Graphs</tspan></text>
+        </g>
+        <g id="Discover_card-3" data-name="Discover card" transform="translate(0 120)">
+          <rect id="Rectangle_74-3" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Hashing" transform="translate(26 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Hashing</tspan></text>
+        </g>
+        <g id="Discover_card-4" data-name="Discover card" transform="translate(0 180)">
+          <rect id="Rectangle_74-4" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Binary_Search" data-name="Binary Search" transform="translate(26 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Binary Search</tspan></text>
+        </g>
+      </g>
+      <g id="Discover_Image-2" data-name="Discover Image" transform="translate(0)">
+        <g id="Discover_card-5" data-name="Discover card">
+          <rect id="Rectangle_74-5" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="Sorting" transform="translate(25 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Sorting</tspan></text>
+        </g>
+        <g id="Discover_card-6" data-name="Discover card" transform="translate(0 60)">
+          <rect id="Rectangle_74-6" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="Recursion" transform="translate(25 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Recursion</tspan></text>
+        </g>
+        <g id="Discover_card-7" data-name="Discover card" transform="translate(0 121)">
+          <rect id="Rectangle_74-7" data-name="Rectangle 74" width="177" height="43" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="Queues_Stacks" data-name="Queues &amp; Stacks" transform="translate(25 25.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Queues &amp; Stacks</tspan></text>
+        </g>
+        <g id="Discover_card-8" data-name="Discover card" transform="translate(0 180)">
+          <rect id="Rectangle_74-8" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="More" transform="translate(25 27.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">More</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="Discover_Column-2" data-name="Discover Column" transform="translate(0 0)">
+      <g id="Discover_Image-3" data-name="Discover Image" transform="translate(5 5)" opacity="0.11">
+        <g id="Discover_card-9" data-name="Discover card" transform="translate(0 0)">
+          <rect id="Rectangle_74-9" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Array_Strings-2" data-name="Array &amp; Strings" transform="translate(25 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Array &amp; Strings</tspan></text>
+        </g>
+        <g id="Discover_card-10" data-name="Discover card" transform="translate(0 59)">
+          <rect id="Rectangle_74-10" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Trees_Graphs-2" data-name="Trees &amp; Graphs" transform="translate(25 27.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Trees &amp; Graphs</tspan></text>
+        </g>
+        <g id="Discover_card-11" data-name="Discover card" transform="translate(0 120)">
+          <rect id="Rectangle_74-11" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Hashing-2" data-name="Hashing" transform="translate(25 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Hashing</tspan></text>
+        </g>
+        <g id="Discover_card-12" data-name="Discover card" transform="translate(0 180)">
+          <rect id="Rectangle_74-12" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#2a2a3a"/>
+          <text id="Binary_Search-2" data-name="Binary Search" transform="translate(25 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Binary Search</tspan></text>
+        </g>
+      </g>
+      <g id="Discover_Image-4" data-name="Discover Image">
+        <g id="Discover_card-13" data-name="Discover card">
+          <rect id="Rectangle_74-13" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="Array_Strings-3" data-name="Array &amp; Strings" transform="translate(25 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Array &amp; Strings</tspan></text>
+        </g>
+        <g id="Discover_card-14" data-name="Discover card" transform="translate(0 60)">
+          <rect id="Rectangle_74-14" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="Trees_Graphs-3" data-name="Trees &amp; Graphs" transform="translate(25 26.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Trees &amp; Graphs</tspan></text>
+        </g>
+        <g id="Discover_card-15" data-name="Discover card" transform="translate(0 121)">
+          <rect id="Rectangle_74-15" data-name="Rectangle 74" width="177" height="43" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="Hashing-3" data-name="Hashing" transform="translate(25 25.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Hashing</tspan></text>
+        </g>
+        <g id="Discover_card-16" data-name="Discover card" transform="translate(0 180)">
+          <rect id="Rectangle_74-16" data-name="Rectangle 74" width="177" height="45" rx="5" transform="translate(0 -0.394)" fill="#404053"/>
+          <text id="Binary_Search-3" data-name="Binary Search" transform="translate(25 27.606)" fill="#f7f8fc" font-size="19" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Binary Search</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

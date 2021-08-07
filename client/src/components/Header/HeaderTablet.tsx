@@ -5,7 +5,7 @@ import SocialMediaButtons from 'utils/SocialMediaButtons';
 import {GET_STARTED} from 'utils/stringIds.json';
 
 import {
-  ENHANCE_YOUR_SKILLS,
+  HEADER_TITLE_1,
   HEADER_DESCRIPTION_1,
   HEADER_DESCRIPTION_2,
 } from './HeaderStringIds';
@@ -18,7 +18,7 @@ const HeaderTablet = (): JSX.Element => (
       <Row>
         <Col className="my-auto pr-4 pl-0">
           <div>
-            <h3 className="font-weight-bold pb-2">{ENHANCE_YOUR_SKILLS}</h3>
+            <h3 className="font-weight-bold pb-2">{HEADER_TITLE_1}</h3>
             <p className="lead">
               {HEADER_DESCRIPTION_1} {HEADER_DESCRIPTION_2}
             </p>
