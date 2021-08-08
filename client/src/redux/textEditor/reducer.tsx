@@ -1,4 +1,5 @@
 import {PayloadAction} from '@reduxjs/toolkit';
+import {RootState} from 'redux/rootReducer';
 
 import {UPDATE_TEXT} from './actionTypes';
 
@@ -25,5 +26,11 @@ const textEditorReducer = (
       return state;
   }
 };
+
+export function getCookieUsercodeKey(state: RootState) {
+  const problemTitle = state.problemDetails.details?.title;
+  const mode = state.editorSettings.mode;
+  return [problemTitle, mode].join('_');
+}
 
 export default textEditorReducer;

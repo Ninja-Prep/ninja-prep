@@ -52,6 +52,29 @@ export const getProblemDetails = async (
   return problemDetails;
 };
 
+/**
+ * 
+ * @param paramsId Problem ID
+ * @param programmingLanguage 
+ * @returns the starter code for the problem in the selected language.
+ */
+export const getProblemStarterCode = async (
+  paramsId: string,
+  programmingLanguage: string,
+): Promise<string> => {
+  const responseData = (
+    await axios({
+      method: 'POST',
+      url: `/api/challenges/${paramsId}/getStarterCode`,
+      data: {
+        programmingLanguage,
+      },
+    })
+  ).data;
+
+  return responseData.starterCode;
+};
+
 export async function submitProblem(
   textValue: string,
   language: string,
