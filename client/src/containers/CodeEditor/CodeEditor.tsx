@@ -4,11 +4,11 @@ import CodeEditor from 'components/ProblemSubmission/CodeEditor/CodeEditor';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import {updateEditorText} from 'redux/textEditor/actions';
-import {getCookieUsercodeKey} from 'redux/textEditor/reducer';
+import {getCookieUserCodeKey} from 'redux/textEditor/reducer';
 
 const mapStateToProps = (state: RootState) => {
   return {
-    cookieUsercodeKey: getCookieUsercodeKey(state),
+    cookieUsercodeKey: getCookieUserCodeKey(state),
     textValue: state.textEditor.value,
     theme: state.editorSettings.theme,
     mode: state.editorSettings.mode,

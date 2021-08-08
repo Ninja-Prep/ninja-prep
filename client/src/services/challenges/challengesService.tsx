@@ -53,9 +53,9 @@ export const getProblemDetails = async (
 };
 
 /**
- * 
+ *
  * @param paramsId Problem ID
- * @param programmingLanguage 
+ * @param programmingLanguage
  * @returns the starter code for the problem in the selected language.
  */
 export const getProblemStarterCode = async (

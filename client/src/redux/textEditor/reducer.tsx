@@ -27,7 +27,7 @@ const textEditorReducer = (
   }
 };
 
-export function getCookieUsercodeKey(state: RootState) {
+export function getCookieUserCodeKey(state: RootState): string {
   const problemTitle = state.problemDetails.details?.title;
   const mode = state.editorSettings.mode;
   return [problemTitle, mode].join('_');
