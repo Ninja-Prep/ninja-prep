@@ -1,14 +1,14 @@
 import {
   getChallengesList,
   getProblemDetails,
-  getProblemStarterCode,
+  getStarterCode,
 } from './controller';
 import express from 'express';
 
 const router = express.Router();
 
-router.get('/getchallenges', getChallengesList);
+router.get('/getChallenges', getChallengesList);
 router.post('/:problemPath', getProblemDetails);
-router.post('/:problemPath/getstartercode', getProblemStarterCode);
+router.post('/:problemPath/getStarterCode', getStarterCode);
 
 export default router;

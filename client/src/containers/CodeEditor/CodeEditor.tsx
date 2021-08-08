@@ -8,7 +8,7 @@ import {getCookieUserCodeKey} from 'redux/textEditor/reducer';
 
 const mapStateToProps = (state: RootState) => {
   return {
-    cookieUsercodeKey: getCookieUserCodeKey(state),
+    cookieUserCodeKey: getCookieUserCodeKey(state),
     textValue: state.textEditor.value,
     theme: state.editorSettings.theme,
     mode: state.editorSettings.mode,
@@ -39,14 +39,14 @@ class CodeEditorContainer extends Component<Props, State> {
   }
 
   setInitialCode(): void {
-    const storageUserCode = localStorage.getItem(this.props.cookieUsercodeKey);
+    const storageUserCode = localStorage.getItem(this.props.cookieUserCodeKey);
 
     const initialCode = storageUserCode || this.props.starterCode || '';
     this.props.updateEditorText(initialCode);
   }
 
   textHandler(value: string): void {
-    localStorage.setItem(this.props.cookieUsercodeKey, value);
+    localStorage.setItem(this.props.cookieUserCodeKey, value);
     this.props.updateEditorText(value);
   }
 

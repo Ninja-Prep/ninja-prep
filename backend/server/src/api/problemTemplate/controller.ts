@@ -42,7 +42,7 @@ export async function getProblemDetails(
   }
 }
 
-export async function getProblemStarterCode(
+export async function getStarterCode(
   req: Request,
   res: Response,
 ): Promise<void> {

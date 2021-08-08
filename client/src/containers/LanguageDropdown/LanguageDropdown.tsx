@@ -8,7 +8,7 @@ import {getLanguage} from 'redux/editorSettings/reducer';
 import {RootState} from 'redux/rootReducer';
 import {updateEditorText} from 'redux/textEditor/actions';
 import {getCookieUserCodeKey} from 'redux/textEditor/reducer';
-import {getProblemStarterCode} from 'services/challenges/challengesService';
+import {getStarterCode} from 'services/challenges/challengesService';
 import {modeOptions} from 'utils/CodeEditorLanguages';
 
 interface MatchParams {
@@ -16,7 +16,7 @@ interface MatchParams {
 }
 
 const mapStateToProps = (state: RootState) => ({
-  cookieUsercodeKey: getCookieUserCodeKey(state),
+  cookieUserCodeKey: getCookieUserCodeKey(state),
   language: getLanguage(state),
 });
 
@@ -36,8 +36,8 @@ class LanguageDropdownContainer extends Component<Props> {
     // from LocalStorage, or make a request for the starter code.
     if (this.props.language !== prevProps.language) {
       const value =
-        localStorage.getItem(this.props.cookieUsercodeKey) ||
-        (await getProblemStarterCode(
+        localStorage.getItem(this.props.cookieUserCodeKey) ||
+        (await getStarterCode(
           this.props.match.params.id,
           this.props.language,
         )) ||
