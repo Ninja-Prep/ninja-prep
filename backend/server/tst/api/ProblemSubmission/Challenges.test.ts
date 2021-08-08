@@ -52,7 +52,7 @@ describe('POST /api/challenges/:problemPath', function () {
   });
 });
 
-describe('GET /api/challenges/getchallenges', function () {
+describe('GET /api/challenges/getChallenges', function () {
   before(function (done) {
     dbconnect()
       .once('open', () => done())
@@ -63,7 +63,7 @@ describe('GET /api/challenges/getchallenges', function () {
   });
   it('can get all challenges', function (done) {
     request(app)
-      .get('/api/challenges/getchallenges')
+      .get('/api/challenges/getChallenges')
       .then((res) => {
         chai.expect(res.status).to.eq(200);
         chai.expect(res.body).to.be.an('array');
