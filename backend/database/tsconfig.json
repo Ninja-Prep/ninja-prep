@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "target": "es6",
+    "target": "es2017",
     "composite": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,
@@ -19,7 +19,8 @@
       "@problems/*": ["problems/*"],
       "@problems": ["problems"],
       "@mongoose/*": ["../server/src/initializers/mongoose/*"],
-      "@mongoose": ["../server/src/initializers/mongoose"]
+      "@mongoose": ["../server/src/initializers/mongoose"],
+      "@logger/*": ["../server/src/utils/logging/*"]
     }
   },
   "references": [{"path": "../server/tsconfig.json"}],

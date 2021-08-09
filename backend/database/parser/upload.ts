@@ -1,5 +1,5 @@
 import fs from 'fs';
-import mongoose from 'mongoose';
+
 import path from 'path';
 
 import {isValidProblem, isValidProblemTemplateFiles} from './parser';
@@ -11,7 +11,7 @@ For each Problem
 - Update problem for each language template 
 */
 
-async function parseProblems() {
+export async function parseProblems(): Promise<void> {
   const rootFolder = 'problems';
 
   const problemNamesList = fs.readdirSync(rootFolder);
@@ -74,24 +74,3 @@ async function getUploadPromises(
   await Promise.all(uploadPromises);
   return uploadPromises;
 }
-
-mongoose.connect(
-  process.env.MONGO_URL,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  },
-  async (err) => {
-    if (err) console.log(err);
-    else {
-      console.log('MongoDB connected');
-      try {
-        await parseProblems();
-      } finally {
-        console.log('Server Closed');
-        mongoose.connection.close();
-      }
-    }
-  },
-);
