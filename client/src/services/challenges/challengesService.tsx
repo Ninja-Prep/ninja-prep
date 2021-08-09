@@ -11,7 +11,7 @@ export async function getChallengeLinks(): Promise<ChallengeLink[]> {
   const challengesResponse = (
     await axios({
       method: 'GET',
-      url: `/api/challenges/getchallenges`,
+      url: `/api/challenges/getChallenges`,
     })
   ).data;
 
@@ -50,6 +50,29 @@ export const getProblemDetails = async (
     title: responseData.title,
   };
   return problemDetails;
+};
+
+/**
+ *
+ * @param paramsId Problem ID
+ * @param programmingLanguage
+ * @returns the starter code for the problem in the selected language.
+ */
+export const getStarterCode = async (
+  paramsId: string,
+  programmingLanguage: string,
+): Promise<string> => {
+  const responseData = (
+    await axios({
+      method: 'POST',
+      url: `/api/challenges/${paramsId}/getStarterCode`,
+      data: {
+        programmingLanguage,
+      },
+    })
+  ).data;
+
+  return responseData.starterCode;
 };
 
 export async function submitProblem(

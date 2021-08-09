@@ -41,3 +41,23 @@ export async function getProblemDetails(
     res.send({}).sendStatus(500);
   }
 }
+
+export async function getStarterCode(
+  req: Request,
+  res: Response,
+): Promise<void> {
+  const language = req.body.programmingLanguage?.toLowerCase() || 'java';
+  const problem = await Problem.findOne({
+    problemPath: req.params.problemPath,
+  });
+  if (problem) {
+    const templateObjectId = problem.templates.get(language);
+    const problemTemplateCode = await ProblemLanguageTemplate.findById(
+      templateObjectId,
+    );
+    const starterCode = problemTemplateCode?.starterCodeSnippet;
+    res.send({starterCode});
+  } else {
+    res.send({}).sendStatus(500);
+  }
+}

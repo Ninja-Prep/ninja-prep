@@ -4,9 +4,11 @@ import CodeEditor from 'components/ProblemSubmission/CodeEditor/CodeEditor';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import {updateEditorText} from 'redux/textEditor/actions';
+import {getCookieUserCodeKey} from 'redux/textEditor/reducer';
 
 const mapStateToProps = (state: RootState) => {
   return {
+    cookieUserCodeKey: getCookieUserCodeKey(state),
     textValue: state.textEditor.value,
     theme: state.editorSettings.theme,
     mode: state.editorSettings.mode,
@@ -31,23 +33,20 @@ interface State {
 }
 
 class CodeEditorContainer extends Component<Props, State> {
-  cookieUsercodeKey: string;
-
   constructor(props: Props) {
     super(props);
-    this.cookieUsercodeKey = [props.problemTitle, props.mode].join('_');
     this.setInitialCode();
   }
 
   setInitialCode(): void {
-    const storageUserCode = localStorage.getItem(this.cookieUsercodeKey);
+    const storageUserCode = localStorage.getItem(this.props.cookieUserCodeKey);
 
     const initialCode = storageUserCode || this.props.starterCode || '';
     this.props.updateEditorText(initialCode);
   }
 
   textHandler(value: string): void {
-    localStorage.setItem(this.cookieUsercodeKey, value);
+    localStorage.setItem(this.props.cookieUserCodeKey, value);
     this.props.updateEditorText(value);
   }
 
