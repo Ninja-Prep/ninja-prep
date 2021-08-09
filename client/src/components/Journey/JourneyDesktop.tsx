@@ -25,12 +25,12 @@ function JourneyCard(props: JourneyCardProps) {
 
 function JourneyDesktop() {
   return (
-    <div className="pb-5 pt-4">
-      <Container>
-        <div className="text-center pb-4">
+    <div className="py-5">
+      <div className="text-center pb-4">
           <h1 className="font-weight-bold pb-2 display-4">{JOURNEY_TITLE}</h1>
-          <h2>{JOURNEY_DESCRIPTION}</h2>
+          <h2 className="font-weight-light">{JOURNEY_DESCRIPTION}</h2>
         </div>
+      <Container>
         {JourneyList.map((card, i) => (
           <JourneyCard
             key={i}
