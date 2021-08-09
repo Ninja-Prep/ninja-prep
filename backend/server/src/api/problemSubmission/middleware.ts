@@ -29,7 +29,7 @@ export async function getProblemSubmissionDetails(
     const checkerCode = problem.checkerCodeSnippet;
     const validateTestCaseCode = problem.validateTestCaseSnippet;
 
-    req.problemSubmissionInput = {
+    req.problemBO = {
       programmingLanguage,
       testCases,
       snippets: {userCode, checkerCode, validateTestCaseCode},

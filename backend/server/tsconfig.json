@@ -16,13 +16,12 @@
     "declaration": true,
     "baseUrl": "./src",
     "types": ["node", "lodash", "mocha"],
-    "typeRoots": ["./server/src/utils/types/*", "./node_modules/@types"],
+    "typeRoots": ["./server/src/utils/types", "./node_modules/@types"],
     "paths": {
       "@mongoose/*": ["initializers/mongoose/*"],
       "@mongoose": ["initializers/mongoose"],
       "@logger/*": ["utils/logging/*"],
-      "@models/*": ["../../database/models/*"],
-      "@ninjaprep/types/*": ["utils/types/*"]
+      "@models/*": ["../../database/models/*"]
     },
     "plugins": [{"transform": "@zerollup/ts-transform-paths"}]
   },

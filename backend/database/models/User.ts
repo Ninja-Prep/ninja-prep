@@ -1,6 +1,13 @@
 import mongoose from '@mongoose';
 
-export interface IUserDocument {
+const userSchema = new mongoose.Schema({
+  _id: String,
+  firstName: String,
+  premiumExpirationDate: Date,
+  profilePicture: String,
+});
+
+export interface IUserDocument extends mongoose.Document {
   id: string;
   firstName: string;
   premiumExpirationDate: Date;
@@ -10,13 +17,6 @@ export interface IUserDocument {
 interface IUserModel extends mongoose.Model<IUserDocument> {
   findOrCreate: (profile: any, callback: any) => any;
 }
-
-const userSchema = new mongoose.Schema<IUserDocument, IUserModel>({
-  _id: String,
-  firstName: String,
-  premiumExpirationDate: Date,
-  profilePicture: String,
-});
 
 userSchema.statics.findOrCreate = async function (profile: any, callback: any) {
   let user = await this.findById(profile.id, (err: any, doc: any) => {

@@ -11,7 +11,15 @@ import 'express';
 declare global {
   namespace Express {
     interface Request {
-      problemSubmissionInput: ProblemSubmissionInput;
+      problemBO: {
+        programmingLanguage: string;
+        testCases: string[];
+        snippets: {
+          userCode: string;
+          checkerCode: string;
+          validateTestCaseCode: string;
+        };
+      };
       id: string;
     }
   }
