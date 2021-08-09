@@ -6,7 +6,7 @@ export async function submitProblem(
   req: Request,
   res: Response,
 ): Promise<void> {
-  const problemBO = req.problemBO;
+  const problemBO = req.problemSubmissionInput;
   try {
     const {body} = await got.post(
       `http://${process.env.COMPILER_HOST}:8000/compile/`,
@@ -14,7 +14,7 @@ export async function submitProblem(
         json: {
           snippets: problemBO.snippets,
           testCases: problemBO.testCases,
-          language: req.problemBO.programmingLanguage,
+          language: problemBO.programmingLanguage,
         },
         headers: {
           'X-Request-Id': req.id,
