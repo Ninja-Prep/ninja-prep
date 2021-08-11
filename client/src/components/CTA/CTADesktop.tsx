@@ -1,19 +1,19 @@
 import React from 'react';
 import {CTABackground, CTAContainer, CTATitle, CTAButton} from './styled';
-import {Container, Button} from 'react-bootstrap';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import {CTA_TITLE, CTA_BUTTON} from './CTAStringIds';
 
 function CTADesktop(): JSX.Element {
   return (
     <CTABackground>
       <CTAContainer>
-        <CTATitle>
-          NinjaPrep, the platform that offers everything you need to go from
-          beginner to mastery
-        </CTATitle>
+        <CTATitle>{CTA_TITLE}</CTATitle>
         <CTAButton>
           <h2>
-            START LEARNING <NavigateNextIcon />
+            {CTA_BUTTON}
+            <span>
+              <NavigateNextIcon />
+            </span>
           </h2>
         </CTAButton>
       </CTAContainer>

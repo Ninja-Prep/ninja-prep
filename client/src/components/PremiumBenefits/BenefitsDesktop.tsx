@@ -30,9 +30,7 @@ function BenefitsCard(props: BenefitsCardProps) {
         <span className="align-middle" style={styles.benefitIcon}>
           {props.icon}
         </span>
-        <h2 className="font-weight-bold d-inline align-middle pl-3">
-          {props.title}
-        </h2>
+        <h2 className="font-weight-bold d-inline  pl-3">{props.title}</h2>
       </div>
       <h2 className="font-weight-light text-secondary m-0">
         {props.description}
