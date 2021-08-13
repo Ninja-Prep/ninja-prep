@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 
 import {JourneyCardProps} from './JourneyCardInterface';
 import {JourneyList} from './JourneyList';
-import {JOURNEY_TITLE, JOURNEY_DESCRIPTION} from './JourneyStringIds';
+import {JOURNEY_TITLE, JOURNEY_DESCRIPTION} from 'utils/stringIds.json';
 import './journey.css';
 
 /**

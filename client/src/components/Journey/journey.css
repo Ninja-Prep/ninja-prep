@@ -1,11 +1,9 @@
 .discover {
   background-image: url('/images/blob1.svg');
 }
-
 .videos {
   background-image: url('/images/blob2.svg');
 }
-
 .articles {
   background-image: url('/images/blob3.svg');
 }
@@ -14,15 +12,4 @@
 }
 .job {
   background-image: url('/images/blob5.svg');
-}
-
-.blob-bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: center;
-}
-
-.step-number{
-  color: #38C0B8;
 }

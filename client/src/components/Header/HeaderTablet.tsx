@@ -2,15 +2,7 @@ import React from 'react';
 
 import {Container, Row, Col} from 'react-bootstrap';
 import SocialMediaButtons from 'utils/SocialMediaButtons';
-import {GET_STARTED} from 'utils/stringIds.json';
-
-import {
-  HEADER_TITLE_1,
-  HEADER_DESCRIPTION_1,
-  HEADER_DESCRIPTION_2,
-} from './HeaderStringIds';
-
-import './header.css';
+import {HEADER_TITLE, HEADER_DESCRIPTION, GET_STARTED} from 'utils/stringIds.json';
 
 const HeaderTablet = (): JSX.Element => (
   <div className="header-bg text-light">
@@ -18,9 +10,9 @@ const HeaderTablet = (): JSX.Element => (
       <Row>
         <Col className="my-auto pr-4 pl-0">
           <div>
-            <h3 className="font-weight-bold pb-2">{HEADER_TITLE_1}</h3>
+            <h3 className="font-weight-bold pb-2">{HEADER_TITLE}</h3>
             <p className="lead">
-              {HEADER_DESCRIPTION_1} {HEADER_DESCRIPTION_2}
+              {HEADER_DESCRIPTION}
             </p>
           </div>
         </Col>

@@ -10,8 +10,13 @@ export const JourneyCardRightColumn = styled(Col).attrs(() => ({
 }))``;
 
 export const JourneyCardBackground = styled(Row).attrs(() => ({
-  className: 'my-5 py-5 blob-bg',
-}))``;
+  className: 'my-5 py-5',
+}))`
+background-size: cover;
+background-repeat: no-repeat;
+background-size: 70%;
+background-position: center;
+`;
 
 export const JourneyCardImage = styled.img.attrs(() => ({
   className: 'float-right img-fluid',
@@ -19,7 +24,9 @@ export const JourneyCardImage = styled.img.attrs(() => ({
 
 export const JourneyCardStepNumber = styled.h2.attrs(() => ({
   className: 'step-number m-0',
-}))``;
+}))`
+color: #38C0B8;
+`;
 
 export const JourneyCardTitle = styled.h1.attrs(() => ({
   className: 'font-weight-bold my-3',

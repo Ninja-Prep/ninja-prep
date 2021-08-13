@@ -1,10 +1,7 @@
 import React from 'react';
-
 import {Row} from 'react-bootstrap';
-import './header.css';
 import SocialMediaButtons from 'utils/SocialMediaButtons';
-
-import {START_LEARNING_FOR_FREE} from './HeaderStringIds';
+import {HEADER_TITLE, HEADER_DESCRIPTION, GET_STARTED} from 'utils/stringIds.json';
 
 const HeaderMobile = (): JSX.Element => (
   <div className="header-bg-mobile">
@@ -13,7 +10,7 @@ const HeaderMobile = (): JSX.Element => (
         <div className="mx-auto text-light">
           <div className="pb-2">
             <h3 className="font-weight-bold pb-3 mx-auto text-light">
-              {START_LEARNING_FOR_FREE}
+              {GET_STARTED}
             </h3>
             <div>
               <SocialMediaButtons cssClass="mx-auto fluid ui mb-4 py-3 " />

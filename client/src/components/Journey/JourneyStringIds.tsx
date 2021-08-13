@@ -1,7 +1,3 @@
-export const JOURNEY_TITLE = 'The NinjaPrep Journey';
-export const JOURNEY_DESCRIPTION =
-  'This might just be the easiest way to learn.';
-
 export const DISCOVER_CONCEPTS = {
   IMAGE_PATH: './images/Discover Img.svg',
   TITLE: 'Discover In-demand concepts',

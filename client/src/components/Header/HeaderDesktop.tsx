@@ -1,12 +1,6 @@
 import React from 'react';
 import SocialMediaButtons from 'utils/SocialMediaButtons';
-import {GET_STARTED} from 'utils/stringIds.json';
-
-import {
-  HEADER_TITLE_1,
-  HEADER_DESCRIPTION_1,
-  HEADER_DESCRIPTION_2,
-} from './HeaderStringIds';
+import {HEADER_TITLE, HEADER_DESCRIPTION, GET_STARTED} from 'utils/stringIds.json';
 
 import {
   HeaderBackground,
@@ -23,9 +17,9 @@ function HeaderDesktop(): JSX.Element {
     <HeaderBackground>
       <HeaderLeftContainer>
         <MottoContainer>
-          <HeaderTitle>{HEADER_TITLE_1}</HeaderTitle>
+          <HeaderTitle>{HEADER_TITLE}</HeaderTitle>
           <h2>
-            {HEADER_DESCRIPTION_1} {HEADER_DESCRIPTION_2}
+            {HEADER_DESCRIPTION}
           </h2>
         </MottoContainer>
         <HeaderRightColumn>
