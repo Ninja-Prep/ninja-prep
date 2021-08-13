@@ -8,10 +8,12 @@ declare module 'express-session' {
 }
 
 import 'express';
+import DockerService from 'services/docker/docker';
 declare global {
   namespace Express {
     interface Request {
       problemSubmissionInput: ProblemSubmissionInput;
+      dockerService: DockerService;
       id: string;
     }
   }
