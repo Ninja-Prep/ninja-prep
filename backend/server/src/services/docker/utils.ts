@@ -104,7 +104,10 @@ export async function createContainer(input: CreateContainerInput): Promise<{
     Cmd: ['/bin/sh', '-c', input.command],
     User: input.user,
     HostConfig: {
-      Binds: [`${input.volumeName}:/ninjaprep`],
+      Binds: [
+        `${input.volumeName}:/ninjaprep`,
+        '/var/run/docker.sock:/var/run/docker.sock',
+      ],
       AutoRemove: input.autoRemove ?? true,
       SecurityOpt: securityOpts,
     },
