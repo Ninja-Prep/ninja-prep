@@ -21,7 +21,7 @@ function CodeSubmissionVerdict({
       case VerdictStatus.ACCEPTED: {
         return <Accepted>{verdict}</Accepted>;
       }
-      case VerdictStatus.Wrong_Answer: {
+      case VerdictStatus.WrongAnswer: {
         return (
           <Incorrect>
             {correctRatio} {TEST_CASES_PASSED}
@@ -32,9 +32,8 @@ function CodeSubmissionVerdict({
         return <Incorrect>{verdict}</Incorrect>;
       }
     }
-  } else {
-    return <Default>{SUBMIT_YOUR_CODE}</Default>;
-  }
+  } 
+  return <Default>{SUBMIT_YOUR_CODE}</Default>;
 }
 
 export default CodeSubmissionVerdict;
