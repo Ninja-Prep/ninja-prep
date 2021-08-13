@@ -20,10 +20,9 @@ interface DockerStreamsOutput {
   exitCode: number;
 }
 
-/*
-Interface returned from the docker container after successfully running the user's code against the testcases
-*/
 /**
+ * Interface for object returned after running user code against test cases inside docker container
+ *
  * @testCase - Plain test case the user code was run against
  * @runtimeExitCode - Exit code when running user code against testCase
  * @verdictExitCode - Exit code when running checker file to judge user submission
