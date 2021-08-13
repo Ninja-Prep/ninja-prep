@@ -30,7 +30,7 @@ class SubmisssionContentContainer extends Component<Props> {
       case SubmissionStatus.SUBMITTED:
         const verdict = this.props.verdict;
         const ACCEPTED = VerdictStatus.ACCEPTED;
-        const WrongAnswer = VerdictStatus.Wrong_Answer;
+        const WrongAnswer = VerdictStatus.WrongAnswer;
         if (verdict !== ACCEPTED && verdict !== WrongAnswer)
           return (
             <SubmissionContent>

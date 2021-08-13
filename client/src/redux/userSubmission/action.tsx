@@ -41,15 +41,16 @@ export function submitProblem(problemId: string) {
       })
       .then((response) => {
         const output = response.data;
+        console.log(output);
         const formattedJudgedTestCases: JudgedTestCase[] =
-          output.judged_test_cases.map((testCase: any) => {
+          output.judgedTestCases.map((testCase: any) => {
             const judgedTestCase: JudgedTestCase = {
               status: testCase.status,
-              stderr: testCase.stderr,
-              userStdout: testCase.user_stdout,
-              userOutput: testCase.user_output,
+              stderr: testCase.userStderr,
+              userStdout: testCase.userStdout,
+              userOutput: testCase.userOutput,
               testCase: testCase.testcase,
-              expectedOutput: testCase.expected_output,
+              expectedOutput: testCase.expectedOutput,
             };
             return judgedTestCase;
           });

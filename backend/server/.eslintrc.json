@@ -35,7 +35,8 @@
       "error",
       {
         "ignoreStrings": true,
-        "ignoreComments": true
+        "ignoreComments": true,
+        "code": 120
       }
     ],
     "valid-jsdoc": "off",
