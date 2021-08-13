@@ -20,6 +20,18 @@ interface DockerStreamsOutput {
   exitCode: number;
 }
 
+/*
+Interface returned from the docker container after successfully running the user's code against the testcases
+*/
+/**
+ * @testCase - Plain test case the user code was run against
+ * @runtimeExitCode - Exit code when running user code against testCase
+ * @verdictExitCode - Exit code when running checker file to judge user submission
+ * @userStdout - Stdout if the user wrote any stdout in their file (ex. System.out.println("Inside loop"))
+ * @userStderr - Stderr to see where any runtime error messaging
+ * @userOutput - User output when run against test case
+ * @expectedOutput - Correct answer to problem run against testcase
+ */
 export interface DockerSubmissionResult {
   testCase: string;
   runtimeExitCode: number;

@@ -1,11 +1,12 @@
 export enum StatusCode {
-  TLE = 'Time Limit Exceeded',
+  TimeLimitExceeded = 'Time Limit Exceeded',
   Accepted = 'ACCEPTED',
   WrongAnswer = 'Wrong Answer',
   CompileError = 'Compile Error',
   UnkownError = 'Unknown Error',
   RuntimeError = 'Runtime Error',
   InternalError = 'Internal Error',
+  MemoryLimitExceeded = 'MemoryLimitExceeded',
 }
 
 export function convertRuntimeVerdictExitCodes(
@@ -17,7 +18,7 @@ export function convertRuntimeVerdictExitCodes(
       case 1:
         return StatusCode.RuntimeError;
       case 137:
-        return StatusCode.TLE;
+        return StatusCode.TimeLimitExceeded;
       default:
         return StatusCode.UnkownError;
     }
@@ -28,7 +29,7 @@ export function convertRuntimeVerdictExitCodes(
     case 1:
       return StatusCode.WrongAnswer;
     case 137:
-      return StatusCode.TLE;
+      return StatusCode.TimeLimitExceeded;
     default:
       return StatusCode.UnkownError;
   }

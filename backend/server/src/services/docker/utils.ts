@@ -51,6 +51,7 @@ export async function getArchive(
     stream.pipe(extract);
   });
 }
+
 export interface CreateContainerInput {
   dockerode: Dockerode;
   command: string;
@@ -134,6 +135,12 @@ export async function createContainer(input: CreateContainerInput): Promise<{
   return {container, outputStream, errorStream};
 }
 
+/**
+ *
+ * @returns - Eligible syscalls needed to run user code in docker container
+ *
+ * (Ex. ls, pwd, cat, chroot)
+ */
 function getSeccompProfile(): Promise<string> {
   return new Promise((resolve, reject) => {
     fs.readFile(__dirname + '/seccomp.json', (err, data) => {
