@@ -13,7 +13,7 @@
     "build": "tsc",
     "lint": "eslint --ext js,jsx,ts,tsx .",
     "setUploadDirectory": "cd ./parser",
-    "upload": "doppler run -- ts-node ./parser/upload.ts"
+    "upload": "doppler run -- ts-node -r tsconfig-paths/register --files ./parser/uploadToDatabase.ts"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.171",

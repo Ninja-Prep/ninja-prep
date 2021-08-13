@@ -50,7 +50,8 @@ async function uploadProblemAndTemplate(
       new: true,
     };
 
-    const enumLanguage: ProgrammingLanguages = ProgrammingLanguages[language as ProgrammingLanguages];
+    const enumLanguage: ProgrammingLanguages =
+      ProgrammingLanguages[language as ProgrammingLanguages];
     const updateTemplateResult = await updateLanguageTemplate(
       codeSnippets,
       problemBO.problemTagsJson.title,
