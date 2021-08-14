@@ -17,15 +17,21 @@ export const PLAN_A: Plan = {
   title: 'Plan A',
   cost: '$35',
   description: 'Access to guided and convenient features, all in one platform.',
-  backgroundColor: '#259af3',
+  backgroundColor: '#25d0f3',
 };
 export const PLAN_B = {
   title: 'Plan B',
+  cost: '$35',
+  description: 'Access to guided and convenient features, all in one platform.',
+  backgroundColor: '#259af3',
+};
+export const PLAN_C = {
+  title: 'Plan C',
   cost: '$35',
   description: 'Access to guided and convenient features, all in one platform.',
   backgroundColor: '#2a2a3a',
 };
 
 export const PlanCardsList: PlanCards = {
-  plans: [PLAN_A, PLAN_B],
+  plans: [PLAN_A, PLAN_B, PLAN_C],
 };
