@@ -8,11 +8,8 @@ import {
 } from './utils';
 import {ProblemSubmissionInput} from '@ninjaprep/types/ProblemSubmission';
 import {v4 as uuid} from 'uuid';
-import Dockerode from 'dockerode';
+import Dockerode, {ExecCreateOptions} from 'dockerode';
 import OutputStream from 'utils/stream/OutputStream';
-
-const checkerCodeFileName = 'Checker.java';
-const validateTestCaseName = 'ValidateTestCase.py';
 
 interface DockerStreamsOutput {
   outputStream: OutputStream;
@@ -47,16 +44,24 @@ interface ExecuteCodeOutput {
   testCaseResults: DockerSubmissionResult[];
 }
 
+const checkerCodeFileName = 'Checker.java';
+const validateTestCaseName = 'ValidateTestCase.py';
+const dockerRunTimeout = 3000;
+
 export class DockerService {
   private dockerode: Dockerode;
   private volumeName: string;
+  private container?: Dockerode.Container;
 
   constructor() {
-    this.dockerode = new Dockerode();
+    this.dockerode = new Dockerode({timeout: dockerRunTimeout});
     this.volumeName = 'ninja-prep-' + uuid();
   }
 
   public cleanDockerode(): void {
+    try {
+      this.container?.kill();
+    } catch (err) {}
     this.dockerode.pruneVolumes();
   }
 
@@ -99,41 +104,91 @@ export class DockerService {
     const containerInput: CreateContainerInput = {
       dockerode: this.dockerode,
       volumeName: this.volumeName,
-      command: `${languageCommands.compileCommand} && javac ${checkerCodeFileName}`,
       files: putArchiveFiles,
       user: 'root',
+      autoRemove: true,
+      hasSeccomp: true,
     };
+
     const {container, outputStream, errorStream} = await createContainer(
       containerInput,
     );
-    await container.start();
-    const exitCode = (await container.wait()).StatusCode;
-    return {outputStream, errorStream, exitCode};
+
+    this.container = container;
+    await this.container.start();
+
+    const options: ExecCreateOptions = {
+      Cmd: [
+        'bash',
+        '-c',
+        `${languageCommands.compileCommand} && javac ${checkerCodeFileName} && ls`,
+      ],
+      User: 'root',
+      AttachStdout: true,
+      AttachStderr: true,
+    };
+
+    const exec = await this.container?.exec(options);
+    const stream = await exec?.start({Tty: false});
+
+    container.modem.demuxStream(
+      stream,
+      outputStream.stream,
+      errorStream.stream,
+    );
+
+    return new Promise((resolve) => {
+      stream.on('end', async () => {
+        const exitCode = (await exec.inspect()).ExitCode ?? 1;
+        if (exitCode) this.cleanDockerode();
+        resolve({outputStream, errorStream, exitCode: exitCode ?? 1});
+      });
+    });
   }
 
   public async executeCode(
     input: ProblemSubmissionInput,
   ): Promise<ExecuteCodeOutput> {
+    if (!this.container) {
+      throw new Error(
+        'Internal Error.  Expected a running container to be defined',
+      );
+    }
+
     const languageCommands = languageSelection[input.programmingLanguage];
 
-    const containerInput: CreateContainerInput = {
-      dockerode: this.dockerode,
-      volumeName: this.volumeName,
-      command: `python3 run_code.py ${languageCommands.runCommand}`,
-      user: 'ninjaprep',
-      autoRemove: false,
-      networkDisabled: true,
-      hasSeccomp: true,
-    };
-    const {container, errorStream} = await createContainer(containerInput);
+    const options: ExecCreateOptions = {
+      Cmd: ['bash', '-c', `python3 run_code.py ${languageCommands.runCommand}`],
+      User: 'ninjaprep',
 
-    await container.start();
-    const exitCode = (await container.wait()).StatusCode;
-    const outputFile = await getArchive('/ninjaprep/output.json', container);
-    const testCaseResults = tryParseJSON(outputFile) || [];
-    container.remove();
-    this.cleanDockerode();
-    return {testCaseResults, exitCode, stderr: errorStream.text};
+      AttachStdout: true,
+      AttachStderr: true,
+    };
+
+    const exec = await this.container.exec(options);
+    const stream = await exec?.start({Tty: false});
+    const outputStream = new OutputStream();
+    const errorStream = new OutputStream();
+
+    this.container?.modem.demuxStream(
+      stream,
+      outputStream.stream,
+      errorStream.stream,
+    );
+
+    return new Promise((resolve) => {
+      stream.on('end', async () => {
+        const exitCode = (await exec.inspect()).ExitCode ?? 1;
+
+        const outputFile = await getArchive(
+          '/ninjaprep/output.json',
+          this.container,
+        );
+        const testCaseResults = tryParseJSON(outputFile) || [];
+        this.cleanDockerode();
+        resolve({testCaseResults, exitCode, stderr: errorStream.text});
+      });
+    });
   }
 }
 

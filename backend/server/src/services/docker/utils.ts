@@ -33,8 +33,9 @@ async function putArchive(
 
 export async function getArchive(
   filePath: string,
-  container: Container,
+  container?: Container,
 ): Promise<string> {
+  if (!container) return '';
   const stream = await container.getArchive({path: filePath});
   const extract = tar.extract();
   const buffer: Buffer[] = [];
@@ -51,10 +52,9 @@ export async function getArchive(
     stream.pipe(extract);
   });
 }
-
 export interface CreateContainerInput {
   dockerode: Dockerode;
-  command: string;
+  command?: string;
   volumeName: string;
   files?: PutArchiveFile[];
   autoRemove?: boolean;
@@ -84,7 +84,7 @@ export const languageSelection: {[key: string]: DockerLanguageCommands} = {
   python: {
     fileName: 'File.py',
     runCommand: 'python3 File.py',
-    compileCommand: 'python -m py_compile File.py',
+    compileCommand: ':' /* Bash No-op command*/,
   },
 };
 
@@ -102,7 +102,8 @@ export async function createContainer(input: CreateContainerInput): Promise<{
   const container = await dockerode.createContainer({
     Image: 'ninjaprep/box',
     WorkingDir: '/ninjaprep',
-    Cmd: ['/bin/sh', '-c', input.command],
+    Cmd: ['/bin/bash'],
+    Tty: true /* Keep Docker container up for exec commands */,
     User: input.user,
     HostConfig: {
       Binds: [
@@ -139,7 +140,7 @@ export async function createContainer(input: CreateContainerInput): Promise<{
  *
  * @returns - Eligible syscalls needed to run user code in docker container
  *
- * (Ex. ls, pwd, cat, chroot)
+ * (Ex. ls, mkdir, cat, chroot)
  */
 function getSeccompProfile(): Promise<string> {
   return new Promise((resolve, reject) => {
