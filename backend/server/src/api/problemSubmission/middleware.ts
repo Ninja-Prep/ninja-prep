@@ -1,15 +1,47 @@
 import {NextFunction, Request, Response} from 'express';
-import {logger} from '@logger/logger';
+import {StatusCode} from 'services/docker/statusCodes';
+import DockerService from 'services/docker/docker';
 import Problem from '@models/ProblemDetails';
 import ProblemLanguageTemplate from '@models/ProblemLanguageTemplate';
+
+export async function compileCode(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): Promise<void> {
+  const dockerService = new DockerService();
+  const compileOutput = await dockerService.compileCode(
+    req.problemSubmissionInput,
+  );
+  try {
+    const stderr = compileOutput.errorStream.text;
+
+    if (compileOutput.exitCode != 0) {
+      dockerService.cleanDockerode();
+      res.send({
+        judgedTestCases: [],
+        verdict: StatusCode.CompileError,
+        stderr,
+      });
+      return;
+    }
+
+    req.dockerService = dockerService;
+    next();
+  } catch (e) {
+    res.send({
+      judgedTestCases: [],
+      verdict: StatusCode.InternalError,
+      stderr: e,
+    });
+  }
+}
 
 export async function getProblemSubmissionDetails(
   req: Request,
   res: Response,
   next: NextFunction,
 ): Promise<void> {
-  logger.info(req.body);
-
   const programmingLanguage = req.body.programmingLanguage.toLowerCase();
   const userCodeSnippet = req.body.codeSnippet;
 
