@@ -11,9 +11,6 @@ import {v4 as uuid} from 'uuid';
 import Dockerode, {ExecCreateOptions} from 'dockerode';
 import OutputStream from 'utils/stream/OutputStream';
 
-const checkerCodeFileName = 'Checker.java';
-const validateTestCaseName = 'ValidateTestCase.py';
-
 interface DockerStreamsOutput {
   outputStream: OutputStream;
   errorStream: OutputStream;
@@ -47,13 +44,17 @@ interface ExecuteCodeOutput {
   testCaseResults: DockerSubmissionResult[];
 }
 
+const checkerCodeFileName = 'Checker.java';
+const validateTestCaseName = 'ValidateTestCase.py';
+const dockerRunTimeout = 3000;
+
 export class DockerService {
   private dockerode: Dockerode;
   private volumeName: string;
   private container?: Dockerode.Container;
 
   constructor() {
-    this.dockerode = new Dockerode({timeout: 3000});
+    this.dockerode = new Dockerode({timeout: dockerRunTimeout});
     this.volumeName = 'ninja-prep-' + uuid();
   }
 
