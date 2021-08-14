@@ -136,6 +136,12 @@ export async function createContainer(input: CreateContainerInput): Promise<{
   return {container, outputStream, errorStream};
 }
 
+/**
+ *
+ * @returns - Eligible syscalls needed to run user code in docker container
+ *
+ * (Ex. ls, mkdir, cat, chroot)
+ */
 function getSeccompProfile(): Promise<string> {
   return new Promise((resolve, reject) => {
     fs.readFile(__dirname + '/seccomp.json', (err, data) => {
