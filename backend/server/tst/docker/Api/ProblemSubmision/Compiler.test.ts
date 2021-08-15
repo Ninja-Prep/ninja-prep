@@ -10,7 +10,7 @@ initializeMiddleWare(app);
 
 describe('POST /api/challenges/execute/Two-Sum', function () {
   // eslint-disable-next-line no-invalid-this
-  this.timeout(8000);
+  this.timeout(10000);
   beforeEach(function (done) {
     dbconnect()
       .once('open', () => done())
@@ -25,16 +25,16 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
     id: '/TestCases',
     verdict: {type: 'string'},
     stderr: {type: 'string'},
-    judged_test_cases: {
+    judgedTestCases: {
       type: 'array',
       items: {
         properties: {
           status: {type: 'string'},
           stderr: {type: 'string'},
-          user_stdout: {type: 'string'},
-          user_output: {type: 'string'},
-          test_case: {type: 'string'},
-          expected_output: {type: 'string'},
+          userStdout: {type: 'string'},
+          userOutput: {type: 'string'},
+          testCase: {type: 'string'},
+          expectedOutput: {type: 'string'},
         },
       },
     },
@@ -65,8 +65,8 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
         chai.expect(result.valid).to.be.true;
         chai.expect(output.verdict).to.eq('ACCEPTED');
         chai.expect(output.stderr).to.eq('');
-        output.judged_test_cases.forEach((testCase: any) => {
-          chai.expect(testCase.user_output).to.eq(testCase.expected_output);
+        output.judgedTestCases.forEach((testCase: any) => {
+          chai.expect(testCase.userOutput).to.eq(testCase.expectedOutput);
           chai.expect(testCase.status).to.eq('ACCEPTED');
         });
         chai.expect(res.status).to.eq(200);
@@ -89,8 +89,8 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
         chai.expect(result.valid).to.be.true;
         chai.expect(output.verdict).to.eq('Wrong Answer');
         chai.expect(output.stderr).to.eq('');
-        output.judged_test_cases.forEach((testCase: any) => {
-          chai.expect(testCase.user_output).to.not.eq(testCase.expected_output);
+        output.judgedTestCases.forEach((testCase: any) => {
+          chai.expect(testCase.userOutput).to.not.eq(testCase.expectedOutput);
           chai.expect(testCase.status).to.eq('Wrong Answer');
         });
         chai.expect(res.status).to.eq(200);
@@ -113,7 +113,7 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
         chai.expect(result.valid).to.be.true;
         chai.expect(output.verdict).to.eq('Compile Error');
         chai.expect(output.stderr).to.not.be.empty;
-        chai.expect(output.judged_test_cases).to.be.empty;
+        chai.expect(output.judgedTestCases).to.be.empty;
         chai.expect(res.status).to.eq(200);
         done();
       });

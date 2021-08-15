@@ -1,0 +1,80 @@
+import subprocess
+import sys
+import glob
+import json
+
+from concurrent.futures import ThreadPoolExecutor
+from ValidateTestCase import validate_testcase
+
+
+def execute_code_submission(test_case_path, id):
+    user_result = {
+        'test_case': b'',
+        'runtimeExitCode': b'',
+        'verdictExitCode': b'',
+        'userStdout': b'',
+        'userStderr': b'',
+        'userOutput': b'',
+        'expectedOutput': b'',
+        'duration': b''
+    }
+
+    test_file = open(test_case_path, "r")
+    test_input = test_file.read()
+
+    user_result['test_case'] = test_input
+    # (Move the user answer to file: UserOutput1.txt)
+    user_output_file_name = "UserOutput"+str(id)+".txt"
+
+    runnable_file_map = {
+        "python3": "File.py",
+        "java": "File"
+    }
+
+    try: 
+        validate_testcase(test_case_path)
+    except (SyntaxError, ValueError) as e:
+        user_result['userStderr'] = "{}:\n{}".format(test_input, str(e))
+    except AssertionError as e:
+        user_result['userStderr'] = str(e)
+    except Exception as e:
+        user_result['userStderr'] = str(e)
+
+    if user_result['userStderr'] == b'':
+        executor = sys.argv[1]
+        try: 
+            run_result = subprocess.run([executor, runnable_file_map[executor], user_output_file_name], text=True, input=test_input, capture_output=True, timeout=2)
+            user_result['runtimeExitCode'] = run_result.returncode
+            user_result['userStderr'] = run_result.stderr
+            user_result['userStdout'] = run_result.stdout   
+        except subprocess.TimeoutExpired as e:
+            user_result['runtimeExitCode'] = 137
+            user_result['userStderr'] = e.stderr
+            user_result['userStdout'] = e.stdout   
+
+        if user_result['runtimeExitCode'] == 0:
+            user_output_file = open(user_output_file_name, "r")
+            user_output_content = user_output_file.read()
+            user_result['userOutput'] = user_output_content
+            checker_result = subprocess.run(["java", "Checker", test_case_path], text=True, input=user_output_content, capture_output=True)
+            user_result['verdictExitCode'] = checker_result.returncode
+            user_result['expectedOutput'] = checker_result.stdout
+
+    for key in user_result:
+        if isinstance(user_result[key], bytes):
+            user_result[key] = user_result[key].decode('utf-8')
+    return user_result
+
+test_case_paths = glob.glob("TestCase*.txt")
+test_case_paths.sort()
+
+submissionOutput = []
+
+with ThreadPoolExecutor() as executor:
+    judged_test_case_futures = [executor.submit(execute_code_submission, test_case_path, id) 
+        for id, test_case_path in enumerate(test_case_paths)]
+    judged_test_cases = [future.result() for future in judged_test_case_futures]
+
+    with open("output.json", 'w') as output_file:
+        json.dump(judged_test_cases, output_file)
+    

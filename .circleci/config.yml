@@ -5,8 +5,7 @@ executors:
     environment:
       NPSERVER_IMAGE: ninjaprep/npserver
       NPCLIENT_IMAGE: ninjaprep/npclient
-      NPBOX_IMAGE: ninjaprep/npbox
-      BOX_IMAGE: ninjaprep/box
+      NPBOX_IMAGE: ninjaprep/box
 
     docker:
       - image: circleci/buildpack-deps:stretch
@@ -87,6 +86,17 @@ jobs:
           root: .
           paths:
             - ./server_image.tar
+      - run:
+          name: Build box Image
+          command: |
+            docker build -t $NPBOX_IMAGE:latest -f ./box/Dockerfile ./box
+      - run:
+          name: Archive Box Docker image
+          command: docker save -o box_image.tar $NPBOX_IMAGE
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./box_image.tar
 
   integration-tests:
     executor: docker-publisher
@@ -100,15 +110,8 @@ jobs:
           name: Load archived server Docker image
           command: docker load -i /tmp/workspace/server_image.tar
       - run:
-          name: Pull npbox image
-          command: |
-            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-            docker pull $NPBOX_IMAGE:latest
-      - run:
-          name: Pull box image
-          command: |
-            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-            docker pull $BOX_IMAGE:latest
+          name: Load archived box Docker image
+          command: docker load -i /tmp/workspace/box_image.tar
       - run:
           name: Run server integration tests
           command: docker-compose -f circleci-compose.yml up --scale box=0 --exit-code-from npserver
