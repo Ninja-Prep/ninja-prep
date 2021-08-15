@@ -55,6 +55,7 @@ export class DockerService {
     try {
       this.container?.kill();
     } catch (err) {}
+    this.dockerode.pruneVolumes();
   }
 
   public async compileCode(input: ProblemSubmissionInput): Promise<DockerStreamsOutput> {
@@ -147,7 +148,7 @@ export class DockerService {
 
     this.container?.modem.demuxStream(stream, outputStream.stream, errorStream.stream);
 
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       stream.on('end', async () => {
         const exitCode = (await exec.inspect()).ExitCode ?? 1;
 
@@ -155,6 +156,9 @@ export class DockerService {
         const testCaseResults = tryParseJSON(outputFile) || [];
         this.cleanDockerode();
         resolve({testCaseResults, exitCode, stderr: errorStream.text});
+      });
+      stream.on('error', (err) => {
+        reject(err);
       });
     });
   }

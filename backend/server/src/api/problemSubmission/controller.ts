@@ -1,15 +1,9 @@
 import {DockerSubmissionResult} from 'services/docker/docker';
 import {Request, Response} from 'express';
-import {
-  StatusCode,
-  convertRuntimeVerdictExitCodes,
-} from 'services/docker/statusCodes';
+import {StatusCode, convertRuntimeVerdictExitCodes} from 'services/docker/statusCodes';
 import {logger} from '@logger/logger';
 
-export async function submitProblem(
-  req: Request,
-  res: Response,
-): Promise<void> {
+export async function submitProblem(req: Request, res: Response): Promise<void> {
   try {
     const problemSubmissionInput = req.problemSubmissionInput;
     const dockerService = req.dockerService;
@@ -48,15 +42,10 @@ function getVerdict(judgedTestCases: JudgedTestCase[]): StatusCode {
   return StatusCode.Accepted;
 }
 
-function formatTestCases(
-  testCaseResults: DockerSubmissionResult[],
-): JudgedTestCase[] {
+function formatTestCases(testCaseResults: DockerSubmissionResult[]): JudgedTestCase[] {
   const formattedTestCases: JudgedTestCase[] = testCaseResults.map((result) => {
     return {
-      status: convertRuntimeVerdictExitCodes(
-        result.runtimeExitCode,
-        result.verdictExitCode,
-      ),
+      status: convertRuntimeVerdictExitCodes(result.runtimeExitCode, result.verdictExitCode),
       ...result,
     };
   });
