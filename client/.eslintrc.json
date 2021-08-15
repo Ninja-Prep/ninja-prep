@@ -1,20 +1,11 @@
 {
-  "extends": [
-    "react-app",
-    "google",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["react-app", "google", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "jest", "jsdoc"],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/no-unused-vars": "error",
-    "indent": [
-      "error",
-      2,
-      {"FunctionDeclaration": {"parameters": "first"}, "SwitchCase": 1}
-    ],
+    "indent": ["error", 2, {"FunctionDeclaration": {"parameters": "first"}, "SwitchCase": 1}],
     "import/order": [
       "error",
       {
@@ -40,13 +31,7 @@
     "jest/prefer-to-have-length": "warn",
     "require-jsdoc": ["off"],
     "spaced-comment": ["error", "always"],
-    "max-len": [
-      "error",
-      {
-        "ignoreStrings": true,
-        "ignoreComments": true
-      }
-    ],
+    "max-len": ["off"],
     "valid-jsdoc": "off"
   },
   "overrides": [

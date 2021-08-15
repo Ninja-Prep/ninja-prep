@@ -23,14 +23,7 @@
     ],
     "require-jsdoc": ["off"],
     "spaced-comment": ["error", "always"],
-    "max-len": [
-      "error",
-      {
-        "code": 200,
-        "ignoreStrings": true,
-        "ignoreComments": true
-      }
-    ],
+    "max-len": ["off"],
     "valid-jsdoc": "off",
     "new-cap": "off"
   },
