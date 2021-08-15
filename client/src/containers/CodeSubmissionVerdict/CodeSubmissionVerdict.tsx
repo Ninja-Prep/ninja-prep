@@ -23,7 +23,7 @@ class CodeSubmissionVerdictContainer extends Component<Props> {
     const output = this.props.submissionOutput;
     const countFailed =
       output?.judgedTestCases?.filter((testCase: JudgedTestCase) => {
-        return testCase.status === VerdictStatus.ACCEPTED;
+        return testCase.status === VerdictStatus.Accepted;
       }).length || 0;
 
     const testCaseLength =

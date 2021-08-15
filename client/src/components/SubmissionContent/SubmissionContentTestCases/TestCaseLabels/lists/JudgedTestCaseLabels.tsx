@@ -15,7 +15,7 @@ function JudgedTestCaseLabels({judgedTestCases}: Props): JSX.Element {
     <div>
       {judgedTestCases.map((_, index) => {
         const labelString = `Testcase ${index + 1}`;
-        if (_.status === VerdictStatus.ACCEPTED)
+        if (_.status === VerdictStatus.Accepted)
           return (
             <AcceptedTabLabel
               labelText={labelString}

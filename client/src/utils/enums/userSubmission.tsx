@@ -6,6 +6,6 @@ export enum SubmissionStatus {
 }
 
 export const VerdictStatus = {
-  ACCEPTED: 'ACCEPTED',
-  Wrong_Answer: 'Wrong Answer',
+  Accepted: 'ACCEPTED',
+  WrongAnswer: 'Wrong Answer',
 };

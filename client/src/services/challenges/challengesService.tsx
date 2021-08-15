@@ -1,8 +1,5 @@
 import axios from 'axios';
-import {UserSubmissionOutput} from 'utils/types/challenges';
 import {ChallengeLink, ProblemDetails} from 'utils/types/challenges';
-
-import {isUserSubmissionOutput} from '../../utils/types/challenges/index';
 
 /**
  * @returns List of links for each problem
@@ -74,18 +71,3 @@ export const getStarterCode = async (
 
   return responseData.starterCode;
 };
-
-export async function submitProblem(
-  textValue: string,
-  language: string,
-  problemId: string,
-): Promise<UserSubmissionOutput> {
-  const response = (
-    await axios.post(`/api/submisson/execute/${problemId}`, {
-      codeSnippet: textValue,
-      programmingLanguage: language,
-    })
-  ).data;
-
-  return isUserSubmissionOutput(response) ? response : null;
-}
