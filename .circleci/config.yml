@@ -140,6 +140,14 @@ jobs:
           command: |
             echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
             docker push $NPSERVER_IMAGE:latest
+      - run:
+          name: Load archived box Docker image
+          command: docker load -i /tmp/workspace/box_image.tar
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push $NPBOX_IMAGE:latest
 
   deploy-prod:
     executor:
