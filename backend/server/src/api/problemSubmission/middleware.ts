@@ -17,7 +17,6 @@ export async function compileCode(
     const stderr = compileOutput.errorStream.text;
 
     if (compileOutput.exitCode != 0) {
-      dockerService.cleanDockerode();
       res.send({
         judgedTestCases: [],
         verdict: StatusCode.CompileError,
