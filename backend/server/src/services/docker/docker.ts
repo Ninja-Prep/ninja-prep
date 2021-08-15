@@ -1,11 +1,4 @@
-import {
-  CreateContainerInput,
-  PutArchiveFile,
-  createContainer,
-  getArchive,
-  languageSelection,
-  tryParseJSON,
-} from './utils';
+import {CreateContainerInput, PutArchiveFile, createContainer, getArchive, languageSelection, tryParseJSON} from './utils';
 import {ProblemSubmissionInput} from '@ninjaprep/types/ProblemSubmission';
 import {v4 as uuid} from 'uuid';
 import Dockerode, {ExecCreateOptions} from 'dockerode';
@@ -46,7 +39,7 @@ interface ExecuteCodeOutput {
 
 const checkerCodeFileName = 'Checker.java';
 const validateTestCaseName = 'ValidateTestCase.py';
-const dockerRunTimeout = 3000;
+const dockerRunTimeout = 7000;
 
 export class DockerService {
   private dockerode: Dockerode;
@@ -65,9 +58,7 @@ export class DockerService {
     this.dockerode.pruneVolumes();
   }
 
-  public async compileCode(
-    input: ProblemSubmissionInput,
-  ): Promise<DockerStreamsOutput> {
+  public async compileCode(input: ProblemSubmissionInput): Promise<DockerStreamsOutput> {
     const languageCommands = languageSelection[input.programmingLanguage];
 
     const putArchiveFiles: PutArchiveFile[] = [];
@@ -90,14 +81,12 @@ export class DockerService {
     };
     putArchiveFiles.push(validateTestCaseFile);
 
-    const putArchiveTestCases = input.testCases.map(
-      (testCase, index): PutArchiveFile => {
-        return {
-          name: `TestCase${index + 1}.txt`,
-          content: testCase,
-        };
-      },
-    );
+    const putArchiveTestCases = input.testCases.map((testCase, index): PutArchiveFile => {
+      return {
+        name: `TestCase${index + 1}.txt`,
+        content: testCase,
+      };
+    });
 
     putArchiveFiles.push(...putArchiveTestCases);
 
@@ -110,19 +99,12 @@ export class DockerService {
       hasSeccomp: true,
     };
 
-    const {container, outputStream, errorStream} = await createContainer(
-      containerInput,
-    );
+    const {container, outputStream, errorStream} = await createContainer(containerInput);
 
     this.container = container;
     await this.container.start();
-
     const options: ExecCreateOptions = {
-      Cmd: [
-        'bash',
-        '-c',
-        `${languageCommands.compileCommand} && javac ${checkerCodeFileName} && ls`,
-      ],
+      Cmd: ['bash', '-c', `${languageCommands.compileCommand} && javac ${checkerCodeFileName} && ls`],
       User: 'root',
       AttachStdout: true,
       AttachStderr: true,
@@ -130,29 +112,23 @@ export class DockerService {
 
     const exec = await this.container?.exec(options);
     const stream = await exec?.start({Tty: false});
+    container.modem.demuxStream(stream, outputStream.stream, errorStream.stream);
 
-    container.modem.demuxStream(
-      stream,
-      outputStream.stream,
-      errorStream.stream,
-    );
-
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       stream.on('end', async () => {
         const exitCode = (await exec.inspect()).ExitCode ?? 1;
         if (exitCode) this.cleanDockerode();
         resolve({outputStream, errorStream, exitCode: exitCode ?? 1});
       });
+      stream.on('error', (err) => {
+        reject(err);
+      });
     });
   }
 
-  public async executeCode(
-    input: ProblemSubmissionInput,
-  ): Promise<ExecuteCodeOutput> {
+  public async executeCode(input: ProblemSubmissionInput): Promise<ExecuteCodeOutput> {
     if (!this.container) {
-      throw new Error(
-        'Internal Error.  Expected a running container to be defined',
-      );
+      throw new Error('Internal Error.  Expected a running container to be defined');
     }
 
     const languageCommands = languageSelection[input.programmingLanguage];
@@ -170,23 +146,19 @@ export class DockerService {
     const outputStream = new OutputStream();
     const errorStream = new OutputStream();
 
-    this.container?.modem.demuxStream(
-      stream,
-      outputStream.stream,
-      errorStream.stream,
-    );
+    this.container?.modem.demuxStream(stream, outputStream.stream, errorStream.stream);
 
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       stream.on('end', async () => {
         const exitCode = (await exec.inspect()).ExitCode ?? 1;
 
-        const outputFile = await getArchive(
-          '/ninjaprep/output.json',
-          this.container,
-        );
+        const outputFile = await getArchive('/ninjaprep/output.json', this.container);
         const testCaseResults = tryParseJSON(outputFile) || [];
         this.cleanDockerode();
         resolve({testCaseResults, exitCode, stderr: errorStream.text});
+      });
+      stream.on('error', (err) => {
+        reject(err);
       });
     });
   }

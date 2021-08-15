@@ -4,20 +4,13 @@ import DockerService from 'services/docker/docker';
 import Problem from '@models/ProblemDetails';
 import ProblemLanguageTemplate from '@models/ProblemLanguageTemplate';
 
-export async function compileCode(
-  req: Request,
-  res: Response,
-  next: NextFunction,
-): Promise<void> {
-  const dockerService = new DockerService();
-  const compileOutput = await dockerService.compileCode(
-    req.problemSubmissionInput,
-  );
+export async function compileCode(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
+    const dockerService = new DockerService();
+    const compileOutput = await dockerService.compileCode(req.problemSubmissionInput);
     const stderr = compileOutput.errorStream.text;
 
     if (compileOutput.exitCode != 0) {
-      dockerService.cleanDockerode();
       res.send({
         judgedTestCases: [],
         verdict: StatusCode.CompileError,
@@ -37,11 +30,7 @@ export async function compileCode(
   }
 }
 
-export async function getProblemSubmissionDetails(
-  req: Request,
-  res: Response,
-  next: NextFunction,
-): Promise<void> {
+export async function getProblemSubmissionDetails(req: Request, res: Response, next: NextFunction): Promise<void> {
   const programmingLanguage = req.body.programmingLanguage.toLowerCase();
   const userCodeSnippet = req.body.codeSnippet;
 
