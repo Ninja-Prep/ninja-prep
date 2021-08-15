@@ -29,9 +29,9 @@ class SubmisssionContentContainer extends Component<Props> {
         return <CodeSubmissionLoadBar />;
       case SubmissionStatus.SUBMITTED:
         const verdict = this.props.verdict;
-        const ACCEPTED = VerdictStatus.ACCEPTED;
+        const Accepted = VerdictStatus.Accepted;
         const WrongAnswer = VerdictStatus.WrongAnswer;
-        if (verdict !== ACCEPTED && verdict !== WrongAnswer)
+        if (verdict !== Accepted && verdict !== WrongAnswer)
           return (
             <SubmissionContent>
               <TestCaseErrorOutput content={this.props.stderr} />

@@ -18,7 +18,7 @@ function CodeSubmissionVerdict({
 }: Props): JSX.Element {
   if (status === SubmissionStatus.SUBMITTED) {
     switch (verdict) {
-      case VerdictStatus.ACCEPTED: {
+      case VerdictStatus.Accepted: {
         return <Accepted>{verdict}</Accepted>;
       }
       case VerdictStatus.WrongAnswer: {
@@ -32,7 +32,7 @@ function CodeSubmissionVerdict({
         return <Incorrect>{verdict}</Incorrect>;
       }
     }
-  } 
+  }
   return <Default>{SUBMIT_YOUR_CODE}</Default>;
 }
 

@@ -9,7 +9,7 @@ interface FormatHeaderProps {
 }
 
 function FormatHeader(props: FormatHeaderProps): JSX.Element {
-  if (props.verdictStatus === VerdictStatus.ACCEPTED) {
+  if (props.verdictStatus === VerdictStatus.Accepted) {
     return <AcceptedStatus>{props.verdictStatus}</AcceptedStatus>;
   } else if (props.verdictStatus) {
     return <ErrorStatus>{props.verdictStatus}</ErrorStatus>;
