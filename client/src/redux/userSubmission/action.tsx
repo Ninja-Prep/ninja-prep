@@ -41,7 +41,6 @@ export function submitProblem(problemId: string) {
       })
       .then((response) => {
         const output = response.data;
-        console.log(output);
         const formattedJudgedTestCases: JudgedTestCase[] =
           output.judgedTestCases.map((testCase: any) => {
             const judgedTestCase: JudgedTestCase = {
