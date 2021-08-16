@@ -89,7 +89,7 @@ jobs:
       - run:
           name: Build box Image
           command: |
-            docker build -t $NPBOX_IMAGE:latest -f ./box/Dockerfile ./box
+            docker build -t $NPBOX_IMAGE:latest -f ./backend/box/Dockerfile ./backend/box
       - run:
           name: Archive Box Docker image
           command: docker save -o box_image.tar $NPBOX_IMAGE
