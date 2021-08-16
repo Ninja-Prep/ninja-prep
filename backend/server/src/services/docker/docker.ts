@@ -104,7 +104,7 @@ export class DockerService {
     this.container = container;
     await this.container.start();
     const options: ExecCreateOptions = {
-      Cmd: ['bash', '-c', `${languageCommands.compileCommand} && javac ${checkerCodeFileName} && ls`],
+      Cmd: ['bash', '-c', `${languageCommands.compileCommand} && javac ${checkerCodeFileName}`],
       User: 'root',
       AttachStdout: true,
       AttachStderr: true,

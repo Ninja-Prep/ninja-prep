@@ -4,11 +4,6 @@ import express from 'express';
 
 const router = express.Router();
 
-router.post(
-  '/execute/:problemPath',
-  getProblemSubmissionDetails,
-  compileCode,
-  submitProblem,
-);
+router.post('/execute/:problemPath', getProblemSubmissionDetails, compileCode, submitProblem);
 
 export default router;
