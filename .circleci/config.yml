@@ -87,6 +87,17 @@ jobs:
           root: .
           paths:
             - ./server_image.tar
+      - run:
+          name: Build box Image
+          command: |
+            docker build -t $NPBOX_IMAGE:latest -f ./backend/box/Dockerfile ./backend/box
+      - run:
+          name: Archive Box Docker image
+          command: docker save -o box_image.tar $NPBOX_IMAGE
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./box_image.tar
 
   integration-tests:
     executor: docker-publisher
