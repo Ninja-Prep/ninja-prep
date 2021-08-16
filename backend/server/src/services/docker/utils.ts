@@ -8,10 +8,7 @@ export interface PutArchiveFile {
   name: string;
 }
 
-async function putArchive(
-  container: Container,
-  files: PutArchiveFile[],
-): Promise<void> {
+async function putArchive(container: Container, files: PutArchiveFile[]): Promise<void> {
   for (const file of files) {
     if (file) {
       const pack = tar.pack();
@@ -31,10 +28,7 @@ async function putArchive(
   }
 }
 
-export async function getArchive(
-  filePath: string,
-  container?: Container,
-): Promise<string> {
+export async function getArchive(filePath: string, container?: Container): Promise<string> {
   if (!container) return '';
   const stream = await container.getArchive({path: filePath});
   const extract = tar.extract();
@@ -106,10 +100,7 @@ export async function createContainer(input: CreateContainerInput): Promise<{
     Tty: true /* Keep Docker container up for exec commands */,
     User: input.user,
     HostConfig: {
-      Binds: [
-        `${input.volumeName}:/ninjaprep`,
-        '/var/run/docker.sock:/var/run/docker.sock',
-      ],
+      Binds: [`${input.volumeName}:/ninjaprep`, '/var/run/docker.sock:/var/run/docker.sock'],
       AutoRemove: input.autoRemove ?? true,
       SecurityOpt: securityOpts,
     },
@@ -127,11 +118,7 @@ export async function createContainer(input: CreateContainerInput): Promise<{
     stderr: true,
   });
 
-  await container.modem.demuxStream(
-    stream,
-    outputStream.stream,
-    errorStream.stream,
-  );
+  await container.modem.demuxStream(stream, outputStream.stream, errorStream.stream);
 
   return {container, outputStream, errorStream};
 }
