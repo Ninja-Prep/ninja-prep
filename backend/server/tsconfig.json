@@ -9,6 +9,7 @@
     "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "outDir": "build",
@@ -26,16 +27,7 @@
     },
     "plugins": [{"transform": "@zerollup/ts-transform-paths"}]
   },
-  "include": [
-    "src/",
-    "src/utils/types/*",
-    "tst",
-    "tst/*",
-    "server.ts",
-    "../database/models",
-    "../database/utils",
-    "node_modules/@types"
-  ],
+  "include": ["src/", "src/utils/types/*", "tst", "tst/*", "server.ts", "../database/models", "../database/utils", "node_modules/@types", "src/**/*.json"],
   "exclude": ["./node_modules"],
   "files": ["server.ts"],
   "preserveSymlinks": true,

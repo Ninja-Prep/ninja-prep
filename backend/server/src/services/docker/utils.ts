@@ -1,6 +1,6 @@
+import * as seccompData from './seccomp.json';
 import Dockerode, {Container} from 'dockerode';
 import OutputStream from 'utils/stream/OutputStream';
-import fs from 'fs';
 import tar from 'tar-stream';
 
 export interface PutArchiveFile {
@@ -90,7 +90,13 @@ export async function createContainer(input: CreateContainerInput): Promise<{
   const dockerode = input.dockerode;
   const securityOpts = ['no-new-privileges'];
   if (input.hasSeccomp) {
-    const seccompString = await getSeccompProfile();
+    /**
+     *
+     * @seccompString - Eligible syscalls needed to run user code in docker container
+     *
+     * (Ex. ls, mkdir, cat, chroot)
+     */
+    const seccompString = JSON.stringify(seccompData);
     securityOpts.push(`seccomp:${seccompString}`);
   }
   const container = await dockerode.createContainer({
@@ -121,21 +127,4 @@ export async function createContainer(input: CreateContainerInput): Promise<{
   await container.modem.demuxStream(stream, outputStream.stream, errorStream.stream);
 
   return {container, outputStream, errorStream};
-}
-
-/**
- *
- * @returns - Eligible syscalls needed to run user code in docker container
- *
- * (Ex. ls, mkdir, cat, chroot)
- */
-function getSeccompProfile(): Promise<string> {
-  return new Promise((resolve, reject) => {
-    fs.readFile(__dirname + '/seccomp.json', (err, data) => {
-      if (err) {
-        reject(err);
-      }
-      resolve(data.toString('utf-8'));
-    });
-  });
 }
