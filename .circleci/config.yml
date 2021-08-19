@@ -114,7 +114,7 @@ jobs:
           command: docker load -i /tmp/workspace/box_image.tar
       - run:
           name: Run server integration tests
-          command: docker-compose -f circleci-compose.yml up --scale box=0 --exit-code-from npserver
+          command: docker-compose -f circleci-compose.yml up --scale box=0
 
   publish-latest:
     executor: docker-publisher
