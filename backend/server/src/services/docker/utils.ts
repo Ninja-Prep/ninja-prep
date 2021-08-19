@@ -130,6 +130,7 @@ export async function findAvailableContainer(input: CreateContainerInput): Promi
     const dockerodeContainer = input.dockerode.getContainer(container.Id);
     inspectPromises.push(dockerodeContainer.inspect());
   });
+
   const inspectData = await Promise.all(inspectPromises);
   const validContainerData = inspectData.find((data) => {
     return data.ExecIDs == null;
