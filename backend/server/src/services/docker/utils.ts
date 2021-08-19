@@ -1,5 +1,6 @@
 import * as seccompData from './seccomp.json';
-import Dockerode, {Container} from 'dockerode';
+import * as stream from 'stream';
+import Dockerode, {Container, ContainerInspectInfo, Exec, ExecCreateOptions} from 'dockerode';
 import OutputStream from 'utils/stream/OutputStream';
 import tar from 'tar-stream';
 
@@ -8,7 +9,7 @@ export interface PutArchiveFile {
   name: string;
 }
 
-async function putArchive(container: Container, files: PutArchiveFile[]): Promise<void> {
+export async function putArchive(container: Container, files: PutArchiveFile[]): Promise<void> {
   for (const file of files) {
     if (file) {
       const pack = tar.pack();
@@ -26,6 +27,17 @@ async function putArchive(container: Container, files: PutArchiveFile[]): Promis
       });
     }
   }
+}
+
+export async function runExec(container: Container, options: ExecCreateOptions): Promise<{outputStream: OutputStream; errorStream: OutputStream; exec: Exec; stream: stream.Duplex}> {
+  const exec = await container.exec(options);
+  const stream = await exec?.start({Tty: false});
+  const outputStream = new OutputStream();
+  const errorStream = new OutputStream();
+
+  container.modem.demuxStream(stream, outputStream.stream, errorStream.stream);
+
+  return {outputStream, errorStream, exec, stream};
 }
 
 export async function getArchive(filePath: string, container?: Container): Promise<string> {
@@ -49,8 +61,6 @@ export async function getArchive(filePath: string, container?: Container): Promi
 export interface CreateContainerInput {
   dockerode: Dockerode;
   command?: string;
-  volumeName: string;
-  files?: PutArchiveFile[];
   autoRemove?: boolean;
   user: string;
   networkDisabled?: boolean;
@@ -82,11 +92,7 @@ export const languageSelection: {[key: string]: DockerLanguageCommands} = {
   },
 };
 
-export async function createContainer(input: CreateContainerInput): Promise<{
-  container: Dockerode.Container;
-  outputStream: OutputStream;
-  errorStream: OutputStream;
-}> {
+export async function createContainer(input: CreateContainerInput): Promise<Dockerode.Container> {
   const dockerode = input.dockerode;
   const securityOpts = ['no-new-privileges'];
   if (input.hasSeccomp) {
@@ -106,25 +112,41 @@ export async function createContainer(input: CreateContainerInput): Promise<{
     Tty: true /* Keep Docker container up for exec commands */,
     User: input.user,
     HostConfig: {
-      Binds: [`${input.volumeName}:/ninjaprep`, '/var/run/docker.sock:/var/run/docker.sock'],
+      Binds: ['/var/run/docker.sock:/var/run/docker.sock'],
       AutoRemove: input.autoRemove ?? true,
       SecurityOpt: securityOpts,
     },
     NetworkDisabled: input.networkDisabled,
   });
 
-  if (input.files) await putArchive(container, input.files);
+  return container;
+}
 
-  const outputStream = new OutputStream();
-  const errorStream = new OutputStream();
+export async function findAvailableContainer(input: CreateContainerInput): Promise<Dockerode.Container> {
+  const listContainers = await input.dockerode.listContainers();
+  const inspectPromises: Promise<ContainerInspectInfo>[] = [];
 
-  const stream = await container.attach({
-    stream: true,
-    stdout: true,
-    stderr: true,
+  listContainers.map((container) => {
+    const dockerodeContainer = input.dockerode.getContainer(container.Id);
+    inspectPromises.push(dockerodeContainer.inspect());
+  });
+  const inspectData = await Promise.all(inspectPromises);
+  const validContainerData = inspectData.find((data) => {
+    return data.ExecIDs == null;
   });
 
-  await container.modem.demuxStream(stream, outputStream.stream, errorStream.stream);
-
-  return {container, outputStream, errorStream};
+  /*
+  Use a running container else start a new container
+  */
+  if (validContainerData) {
+    const container = input.dockerode.getContainer(validContainerData?.Id);
+    if (!validContainerData.State.Running) {
+      await container.start();
+    }
+    return container;
+  } else {
+    const container = await createContainer(input);
+    await container.start();
+    return container;
+  }
 }
