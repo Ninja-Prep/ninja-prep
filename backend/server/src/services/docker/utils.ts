@@ -124,7 +124,7 @@ export async function createContainer(input: CreateContainerInput): Promise<Dock
 }
 
 export async function findAvailableContainer(input: CreateContainerInput): Promise<Dockerode.Container> {
-  const listContainers = await input.dockerode.listContainers();
+  const listContainers = await input.dockerode.listContainers({filters: {ancestor: [boxImageName]}});
   const inspectPromises: Promise<ContainerInspectInfo>[] = [];
 
   listContainers.map((container) => {
@@ -134,7 +134,7 @@ export async function findAvailableContainer(input: CreateContainerInput): Promi
 
   const inspectData = await Promise.all(inspectPromises);
   const validContainerData = inspectData.find((data) => {
-    return data.ExecIDs == null && data.Image === boxImageName;
+    return data.ExecIDs == null;
   });
 
   /*
