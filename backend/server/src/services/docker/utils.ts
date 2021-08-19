@@ -4,6 +4,7 @@ import Dockerode, {Container, ContainerInspectInfo, Exec, ExecCreateOptions} fro
 import OutputStream from 'utils/stream/OutputStream';
 import tar from 'tar-stream';
 
+const boxImageName = 'ninjaprep/box';
 export interface PutArchiveFile {
   content: string;
   name: string;
@@ -106,7 +107,7 @@ export async function createContainer(input: CreateContainerInput): Promise<Dock
     securityOpts.push(`seccomp:${seccompString}`);
   }
   const container = await dockerode.createContainer({
-    Image: 'ninjaprep/box',
+    Image: boxImageName,
     WorkingDir: '/ninjaprep',
     Cmd: ['/bin/bash'],
     Tty: true /* Keep Docker container up for exec commands */,
@@ -133,7 +134,7 @@ export async function findAvailableContainer(input: CreateContainerInput): Promi
 
   const inspectData = await Promise.all(inspectPromises);
   const validContainerData = inspectData.find((data) => {
-    return data.ExecIDs == null;
+    return data.ExecIDs == null && data.Image === boxImageName;
   });
 
   /*
