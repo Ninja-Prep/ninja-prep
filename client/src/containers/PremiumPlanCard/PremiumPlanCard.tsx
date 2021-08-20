@@ -5,12 +5,16 @@ import {loadStripe} from '@stripe/stripe-js';
 import PremiumPlanCard from 'components/Premium/PremiumPlanCard/PremiumPlanCard';
 import {STRIPE_KEY} from 'config/keys';
 import {redirectToCheckoutForm} from 'services/stripe/stripeService';
-import {StripeInterface} from 'utils/types/plans';
+import {PurchasePlan} from 'utils/types/plans/plans';
 
-class PremiumPlanCardContainer extends Component<StripeInterface> {
+interface PremiumPlanCardContainerProps {
+  purchasePlan: PurchasePlan;
+}
+
+class PremiumPlanCardContainer extends Component<PremiumPlanCardContainerProps> {
   stripePromise: Promise<import('@stripe/stripe-js').Stripe | null>;
 
-  constructor(props: StripeInterface | Readonly<StripeInterface>) {
+  constructor(props: Readonly<PremiumPlanCardContainerProps>) {
     super(props);
     this.stripePromise = loadStripe(STRIPE_KEY);
   }
@@ -18,16 +22,7 @@ class PremiumPlanCardContainer extends Component<StripeInterface> {
   render(): JSX.Element {
     return (
       <Elements stripe={this.stripePromise}>
-        <ElementsConsumer>
-          {({elements, stripe}) => (
-            <PremiumPlanCard
-              {...this.props}
-              purchaseHandler={() =>
-                redirectToCheckoutForm(this.props.url, stripe)
-              }
-            />
-          )}
-        </ElementsConsumer>
+        <ElementsConsumer>{({elements, stripe}) => <PremiumPlanCard purchasePlan={this.props.purchasePlan} purchaseHandler={() => redirectToCheckoutForm(stripe)} />}</ElementsConsumer>
       </Elements>
     );
   }

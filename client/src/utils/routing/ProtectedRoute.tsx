@@ -7,9 +7,11 @@ Pick between two components to render
 */
 
 import React from 'react';
+import FadeIn from 'react-fade-in';
 
 import {RouteComponentProps, RouteProps} from 'react-router';
 import {getAuthStatus} from 'services/auth/authService';
+import AsyncSpinner from 'utils/AsyncSpinner';
 
 import RouteWrapper from './RouteWrapper';
 
@@ -52,7 +54,7 @@ class ProtectedRoute extends React.Component<Props, State> {
     if (this.state.isAuthenticated && AuthComponent) {
       return <RouteWrapper component={AuthComponent} layout={Layout} />;
     } else if (this.state.isLoading) {
-      return null;
+      return <Layout> </Layout>;
     }
     return <RouteWrapper component={Component} layout={Layout} />;
   }

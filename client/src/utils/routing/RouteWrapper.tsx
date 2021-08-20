@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeIn from 'react-fade-in';
 
 import {RouteComponentProps, RouteProps} from 'react-router';
 import {Route} from 'react-router-dom';
@@ -11,17 +12,15 @@ interface Props extends RouteProps {
 /**
  *
  */
-function RouteWrapper({
-  component: Component,
-  layout: Layout,
-  ...rest
-}: Props): JSX.Element {
+function RouteWrapper({component: Component, layout: Layout, ...rest}: Props): JSX.Element {
   return (
     <Route
       {...rest}
       render={(props) => (
         <Layout {...props}>
-          <Component {...props} />
+          <FadeIn delay={200} transitionDuration={1500}>
+            <Component {...props} />
+          </FadeIn>
         </Layout>
       )}
     />

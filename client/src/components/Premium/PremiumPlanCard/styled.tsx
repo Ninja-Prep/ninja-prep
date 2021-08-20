@@ -1,24 +1,13 @@
 import {Card, Button} from 'react-bootstrap';
 import styled from 'styled-components';
 
-interface IMap<T> {
-  [index: string]: T;
-  [index: number]: T;
-}
-
-const CardHeaderColor: IMap<string> = {
-  'Plan A': '#25d0f3',
-  'Plan B': '#259af3',
-  'Plan C': '#2a2a3a',
-};
-
 export const PlanCardHeader = styled(Card.Header)`
   display: flex;
   justify-content: space-between !important;
   color: white;
   padding: 1.5rem;
 
-  background-color: ${(props) => CardHeaderColor[props.backgroundColor]};
+  background-color: ${(props) => props.backgroundColor};
 `;
 
 export const PlanCardName = styled.h2`
