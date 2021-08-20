@@ -17,7 +17,7 @@ function RouteWrapper({component: Component, layout: Layout, ...rest}: Props): J
     <Route
       {...rest}
       render={(props) => (
-        <Layout {...props}>
+        <Layout {...props} key={Date.now()}>
           <FadeIn delay={200} transitionDuration={1500}>
             <Component {...props} />
           </FadeIn>
