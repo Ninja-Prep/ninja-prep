@@ -15,15 +15,7 @@ import {RootState} from 'redux/rootReducer';
 import AsyncSpinner from 'utils/AsyncSpinner';
 
 import styles from './ProblemSubmission.module.css';
-import {
-  CodeEditorReflex,
-  EditorSettingsWrapper,
-  InnerAreaWrapper,
-  MiddleEditorWrapper,
-  OuterEditorWrapper,
-  SubmissionContentReflex,
-  SubmissionWrapper,
-} from './styled';
+import {CodeEditorReflex, EditorSettingsWrapper, InnerAreaWrapper, MiddleEditorWrapper, OuterEditorWrapper, SubmissionContentReflex, SubmissionWrapper} from './styled';
 
 import 'react-reflex/styles.css';
 
@@ -42,8 +34,7 @@ const mapStateToProps = (state: RootState) => {
 
 const connector = connect(mapStateToProps, {loadProblemDetails});
 
-type Props = ConnectedProps<typeof connector> &
-  RouteComponentProps<MatchParams>;
+type Props = ConnectedProps<typeof connector> & RouteComponentProps<MatchParams>;
 
 class ProblemSubmissionPage extends Component<Props> {
   async componentDidMount(): Promise<void> {
@@ -57,7 +48,7 @@ class ProblemSubmissionPage extends Component<Props> {
   render(): JSX.Element {
     if (this.props.isLoading) return <AsyncSpinner />;
     return (
-      <FadeIn>
+      <FadeIn delay={500} transitionDuration={1500}>
         <SubmissionWrapper>
           <CodeEditorNavbar title={this.props.problemDetails?.title} />
           <ReflexContainer orientation="horizontal">
@@ -77,10 +68,7 @@ class ProblemSubmissionPage extends Component<Props> {
 
                         <MiddleEditorWrapper>
                           <InnerAreaWrapper>
-                            <CodeEditor
-                              starterCode={this.getStarterCode}
-                              problemTitle={this.props.match.params.id}
-                            />
+                            <CodeEditor starterCode={this.getStarterCode} problemTitle={this.props.match.params.id} />
                           </InnerAreaWrapper>
                         </MiddleEditorWrapper>
                       </OuterEditorWrapper>

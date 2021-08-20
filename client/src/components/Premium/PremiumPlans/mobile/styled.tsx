@@ -8,7 +8,7 @@ export const OurPlansHeader = styled.h2`
 export const FlexCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   gap: 3rem;
-  padding: 0 15%;
+  margin: auto;
+  width: 50%;
 `;

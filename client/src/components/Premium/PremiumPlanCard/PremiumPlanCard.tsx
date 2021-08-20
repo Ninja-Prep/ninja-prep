@@ -2,38 +2,29 @@ import React from 'react';
 
 import Stripe from 'stripe';
 import {SUBSCRIBE} from 'utils/stringIds.json';
-import {StripeInterface} from 'utils/types/plans';
 
+import {PurchasePlan} from 'utils/types/plans/plans';
 import {CardBody} from './styled';
-import {
-  MonthlyText,
-  PlanCardHeader,
-  PlanCardName,
-  HoverWrapper,
-  CenteredButton,
-  PlanDescription,
-} from './styled';
+import {MonthlyText, PlanCardHeader, PlanCardName, HoverWrapper, CenteredButton, PlanDescription} from './styled';
 
-interface PlanCardProps extends StripeInterface {
-  purchaseHandler: (urlString: string, stripe: Stripe | null) => void;
+interface PlanCardProps {
+  purchaseHandler: (stripe: Stripe | null) => void;
+  purchasePlan: PurchasePlan;
 }
 
-function PlanCard(props: PlanCardProps): JSX.Element {
+function PlanCard({purchasePlan, purchaseHandler}: PlanCardProps): JSX.Element {
   return (
     <HoverWrapper>
-      <PlanCardHeader backgroundColor={props.title}>
-        <PlanCardName>{props.title}</PlanCardName>
+      <PlanCardHeader backgroundColor={purchasePlan.backgroundColor}>
+        <PlanCardName>{purchasePlan.title}</PlanCardName>
         <PlanCardName>
-          {props.cost}
+          {purchasePlan.cost}
           <MonthlyText>/mo</MonthlyText>
         </PlanCardName>
       </PlanCardHeader>
       <CardBody>
-        <PlanDescription>{props.description}</PlanDescription>
-        <CenteredButton
-          variant="outline-secondary"
-          onClick={props.purchaseHandler}
-        >
+        <PlanDescription>{purchasePlan.description}</PlanDescription>
+        <CenteredButton variant="outline-secondary" onClick={purchaseHandler}>
           {SUBSCRIBE}
         </CenteredButton>
       </CardBody>
