@@ -10,6 +10,25 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
   
   @media only screen and (min-width: 768px) {
     body {
@@ -19,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
       min-height: 100vh;
+      overflow-y: scroll
     }
   }
   
@@ -31,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
       overflow-x: hidden;
     }
   }
+
   `;
 
 export default GlobalStyle;

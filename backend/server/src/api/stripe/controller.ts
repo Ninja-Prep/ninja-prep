@@ -8,7 +8,6 @@ const stripe = new Stripe(process.env.STRIPE_TEST_KEY, {
 export async function checkout(req: Request, res: Response): Promise<void> {
   // See https://stripe.com/docs/api/checkout/sessions/create
   // for additional parameters to pass.
-  console.log('checkout endpoint hit');
   try {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
