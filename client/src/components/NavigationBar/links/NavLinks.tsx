@@ -5,11 +5,7 @@ Help maintain consistency when a link is added, removed, updated
 import React, {Fragment} from 'react';
 
 import {Link} from 'react-router-dom';
-import {
-  GET_PREMIUM_NAVIGATION,
-  CHALLENGES_NAVIGATION,
-  MEET_THE_TEAM_NAVIGATION,
-} from 'utils/stringIds.json';
+import {GET_PREMIUM_NAVIGATION, CHALLENGES_NAVIGATION, MEET_THE_TEAM_NAVIGATION} from 'utils/stringIds.json';
 
 import NavLink from './styled';
 

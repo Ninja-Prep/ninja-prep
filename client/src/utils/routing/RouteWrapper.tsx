@@ -16,13 +16,15 @@ function RouteWrapper({component: Component, layout: Layout, ...rest}: Props): J
   return (
     <Route
       {...rest}
-      render={(props) => (
-        <Layout {...props} key={Date.now()}>
-          <FadeIn delay={200} transitionDuration={1500}>
-            <Component {...props} />
-          </FadeIn>
-        </Layout>
-      )}
+      render={(props) => {
+        return (
+          <Layout {...props} key={props.location.pathname}>
+            <FadeIn delay={200} transitionDuration={1500}>
+              <Component {...props} />
+            </FadeIn>
+          </Layout>
+        );
+      }}
     />
   );
 }

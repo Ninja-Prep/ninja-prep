@@ -33,9 +33,7 @@ export const FooterLayout = ({children}: Props): JSX.Element => (
   </div>
 );
 
-export const HeaderandFooterLayout: FunctionComponent<Props> = ({
-  children,
-}: Props) => (
+export const HeaderandFooterLayout: FunctionComponent<Props> = ({children}: Props) => (
   <HeaderPadding>
     <NavigationBar />
     {children}
