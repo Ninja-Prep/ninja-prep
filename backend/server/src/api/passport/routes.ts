@@ -1,15 +1,5 @@
-import {
-  OAuthCallback,
-  getAuthStatus,
-  getPublicUser,
-  logoutUser,
-} from './controller';
-import {
-  facebookOauth,
-  githubOauth,
-  googleOauth,
-  setUserCookie,
-} from './middleware';
+import {OAuthCallback, getAuthStatus, getPublicUser, logoutUser} from './controller';
+import {facebookOauth, githubOauth, googleOauth, setUserCookie} from './middleware';
 import express from 'express';
 import passport from 'passport';
 

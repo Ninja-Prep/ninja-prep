@@ -2,32 +2,45 @@ import React, {Component} from 'react';
 
 import NavigationBarDesktop from 'components/NavigationBar/NavigationBarDesktop';
 import NavigationBarMobile from 'components/NavigationBar/NavigationBarMobile';
-import {getUser} from 'services/auth/authService';
 import Responsiveness from 'utils/hocs/Responsiveness';
-import {User} from 'utils/types/user';
+import {connect, ConnectedProps} from 'react-redux';
+import {RootState} from 'redux/rootReducer';
 
+const mapStateToProps = (state: RootState) => {
+  return {
+    authUser: state.authReducer.authUser,
+    isLoadingUser: state.authReducer.isLoadingUser,
+  };
+};
+
+const connector = connect(mapStateToProps);
+
+type Props = ConnectedProps<typeof connector>;
 interface State {
-  readonly user: User;
+  loadFadeIn: boolean;
 }
 
-class NavigationBar extends Component<Record<string, never>, State> {
-  state: State = {
-    user: null,
+class NavigationBar extends Component<Props, State> {
+  state = {
+    loadFadeIn: false,
   };
 
-  async componentDidMount(): Promise<void> {
-    const user = await getUser();
-    this.setState({user});
+  constructor(props: Props) {
+    super(props);
   }
 
+  shouldComponentUpdate(nextProps: Props) {
+    if (nextProps.isLoadingUser !== this.props.isLoadingUser) {
+      this.setState({loadFadeIn: true});
+    }
+    return !!nextProps.authUser !== !!this.props.authUser || nextProps.isLoadingUser !== this.props.isLoadingUser;
+  }
   render(): JSX.Element {
-    const desktopComponent = <NavigationBarDesktop user={this.state.user} />;
-    const mobileComponent = <NavigationBarMobile user={this.state.user} />;
+    const desktopComponent = <NavigationBarDesktop {...this.props} loadFadeIn={this.state.loadFadeIn} />;
+    const mobileComponent = <NavigationBarMobile {...this.props} />;
 
-    return (
-      <Responsiveness desktop={desktopComponent} mobile={mobileComponent} />
-    );
+    return <Responsiveness desktop={desktopComponent} mobile={mobileComponent} />;
   }
 }
 
-export default NavigationBar;
+export default connector(NavigationBar);

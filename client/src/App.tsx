@@ -11,52 +11,36 @@ import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import {HeaderLayout, HeaderandFooterLayout} from 'utils/routing/Layouts';
 import ProtectedRoute from 'utils/routing/ProtectedRoute';
 import RouteWrapper from 'utils/routing/RouteWrapper';
+import {connect, ConnectedProps} from 'react-redux';
+import {loadingUser, loadingUserSuccess, setUser} from 'redux/auth/actions';
+import {getUser} from 'services/auth/authService';
 
-class App extends Component {
-  componentDidMount(): void {
+const connector = connect(null, {loadingUser, setUser, loadingUserSuccess});
+
+class App extends Component<ConnectedProps<typeof connector>> {
+  async componentDidMount(): Promise<void> {
     ReactGA.initialize('UA-196048314-3');
     ReactGA.pageview(window.location.pathname + window.location.search);
+    this.props.loadingUser();
+    const user = await getUser();
+    this.props.loadingUserSuccess();
+    this.props.setUser(user);
   }
 
   render(): JSX.Element {
     return (
       <Router>
         <Switch>
-          <ProtectedRoute
-            path="/"
-            exact
-            authComponent={ChallengesPage}
-            component={LandingPage}
-            layout={HeaderLayout}
-          />
-          <RouteWrapper
-            path="/about"
-            exact
-            component={MeetTheTeamPage}
-            layout={HeaderandFooterLayout}
-          />
-          <RouteWrapper
-            path="/challenges"
-            exact
-            component={ChallengesPage}
-            layout={HeaderLayout}
-          />
-          <RouteWrapper
-            path="/premium"
-            exact
-            component={PremiumPage}
-            layout={HeaderandFooterLayout}
-          />
+          <ProtectedRoute path="/" exact authComponent={ChallengesPage} component={LandingPage} layout={HeaderLayout} />
+          <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={HeaderandFooterLayout} />
+          <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={HeaderLayout} />
+          <RouteWrapper path="/premium" exact component={PremiumPage} layout={HeaderandFooterLayout} />
           <Route path="/problem/:id" exact component={ProblemSubmissionPage} />
-          <RouteWrapper
-            exact
-            component={Error404Component}
-            layout={HeaderLayout}
-          />
+          <RouteWrapper exact component={Error404Component} layout={HeaderLayout} />
         </Switch>
       </Router>
     );
   }
 }
 
-export default App;
+export default connector(App);
