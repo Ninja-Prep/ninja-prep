@@ -7,57 +7,39 @@ Pick between two components to render
 */
 
 import React from 'react';
-import FadeIn from 'react-fade-in';
 
 import {RouteComponentProps, RouteProps} from 'react-router';
-import {getAuthStatus} from 'services/auth/authService';
-import AsyncSpinner from 'utils/AsyncSpinner';
+import {RootState} from 'redux/rootReducer';
+import {connect, ConnectedProps} from 'react-redux';
 
 import RouteWrapper from './RouteWrapper';
 
-interface Props extends RouteProps {
+const mapStateToProps = (state: RootState) => {
+  return {
+    authUser: state.authReducer.authUser,
+  };
+};
+
+const connector = connect(mapStateToProps);
+
+type Props = {
   component: React.ComponentType<RouteComponentProps>;
   authComponent: React.ComponentType<RouteComponentProps>;
   layout: React.ComponentType<{children: React.ReactChild}>;
-}
+} & ConnectedProps<typeof connector> &
+  RouteProps;
 
-type State = {
-  isAuthenticated: boolean;
-  isLoading: boolean;
-};
-
-/**
- *
- */
-class ProtectedRoute extends React.Component<Props, State> {
-  state: State = {
-    isAuthenticated: false,
-    isLoading: true, // Wait to fetch authentication status before picking component to render
-  };
-
-  /**
-   *
-   */
-  async componentDidMount(): Promise<void> {
-    const status = await getAuthStatus();
-    this.setState({isAuthenticated: status, isLoading: false});
-  }
-
-  /**
-   *
-   */
+class ProtectedRoute extends React.Component<Props> {
   render(): JSX.Element | null {
     const Component = this.props.component;
     const AuthComponent = this.props.authComponent;
     const Layout = this.props.layout;
 
-    if (this.state.isAuthenticated && AuthComponent) {
+    if (this.props.authUser && AuthComponent) {
       return <RouteWrapper component={AuthComponent} layout={Layout} />;
-    } else if (this.state.isLoading) {
-      return <Layout> </Layout>;
     }
     return <RouteWrapper component={Component} layout={Layout} />;
   }
 }
 
-export default ProtectedRoute;
+export default connector(ProtectedRoute);

@@ -14,18 +14,18 @@ interface Props extends RouteProps {
  */
 function RouteWrapper({component: Component, layout: Layout, ...rest}: Props): JSX.Element {
   return (
-    <Route
-      {...rest}
-      render={(props) => {
-        return (
-          <Layout {...props} key={props.location.pathname}>
-            <FadeIn delay={200} transitionDuration={1500}>
-              <Component {...props} />
+    <Layout>
+      <Route
+        {...rest}
+        render={(props) => {
+          return (
+            <FadeIn delay={200} transitionDuration={1500} key={props.location.pathname}>
+              <Component {...props} />;
             </FadeIn>
-          </Layout>
-        );
-      }}
-    />
+          );
+        }}
+      />
+    </Layout>
   );
 }
 
