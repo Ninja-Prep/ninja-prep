@@ -1,4 +1,5 @@
 import {PayloadAction} from '@reduxjs/toolkit';
+import {RootState} from 'redux/rootReducer';
 import {User} from 'utils/types/user';
 
 import {LOADING_USER, LOADING_USER_SUCCESS, SET_USER} from './actionTypes';
@@ -36,5 +37,16 @@ const authReducer = (state = initialState, action: PayloadAction<User>): AuthSta
       return state;
   }
 };
+
+export function isPremiumUser(state: RootState): boolean {
+  const premiumExpirationDate = state.authReducer.authUser?.premiumExpirationDate;
+  if (premiumExpirationDate) {
+    const currentTime = Date.now();
+    const expirationDate = new Date(premiumExpirationDate).getTime();
+    return expirationDate > currentTime;
+  }
+
+  return false;
+}
 
 export default authReducer;

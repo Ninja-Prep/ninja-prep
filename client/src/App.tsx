@@ -7,13 +7,14 @@ import MeetTheTeamPage from 'pages/MeetTheTeamPage';
 import PremiumPage from 'pages/PremiumPage';
 import ProblemSubmissionPage from 'pages/ProblemSubmissionPage/ProblemSubmissionPage';
 import ReactGA from 'react-ga';
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom';
 import {HeaderLayout, HeaderandFooterLayout} from 'utils/routing/Layouts';
 import ProtectedRoute from 'utils/routing/ProtectedRoute';
 import RouteWrapper from 'utils/routing/RouteWrapper';
 import {connect, ConnectedProps} from 'react-redux';
 import {loadingUser, loadingUserSuccess, setUser} from 'redux/auth/actions';
 import {getUser} from 'services/auth/authService';
+import UnsubscribedRoute from 'utils/routing/UnsubscribedRoute';
 
 const connector = connect(null, {loadingUser, setUser, loadingUserSuccess});
 
@@ -34,7 +35,7 @@ class App extends Component<ConnectedProps<typeof connector>> {
           <ProtectedRoute path="/" exact authComponent={ChallengesPage} component={LandingPage} layout={HeaderLayout} />
           <RouteWrapper path="/about" exact component={MeetTheTeamPage} layout={HeaderandFooterLayout} />
           <RouteWrapper path="/challenges" exact component={ChallengesPage} layout={HeaderLayout} />
-          <RouteWrapper path="/premium" exact component={PremiumPage} layout={HeaderandFooterLayout} />
+          <UnsubscribedRoute path="/premium" exact unsubscribedComponent={PremiumPage} fallbackRedirectTo="/" layout={HeaderandFooterLayout} />
           <Route path="/problem/:id" exact component={ProblemSubmissionPage} />
           <RouteWrapper exact component={Error404Component} layout={HeaderLayout} />
         </Switch>

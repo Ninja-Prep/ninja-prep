@@ -3,22 +3,22 @@ export interface PurchasePlan {
   description: string;
   cost: string;
   backgroundColor: string;
-  stripePurchaseId: string;
+  stripePriceId: string;
 }
 
-export const PLAN_A: PurchasePlan = {
+export const monthlyPricing: PurchasePlan = {
   title: 'Monthly',
   cost: '$15',
   description: 'Monthly NinjaPrep subscription to quickly study for your upcoming interview.',
   backgroundColor: '#259af3',
-  stripePurchaseId: 'price_1JQ1BrD8LTDC9rJz7nYaAZMM',
+  stripePriceId: process.env.REACT_APP_STRIPE_MONTHLY_PRICING || '',
 };
-export const PLAN_B: PurchasePlan = {
+export const yearlyPricing: PurchasePlan = {
   title: 'Yearly',
   cost: '$10',
   description: `Best for long term studying to never miss an algorithm interview question again`,
   backgroundColor: '#2a2a3a',
-  stripePurchaseId: 'price_1JQ1D9D8LTDC9rJzjH2aXzJX',
+  stripePriceId: process.env.REACT_APP_STRIPE_YEARLY_PRICING || '',
 };
 
-export const planCards: PurchasePlan[] = [PLAN_A, PLAN_B];
+export const planCards: PurchasePlan[] = [monthlyPricing, yearlyPricing];

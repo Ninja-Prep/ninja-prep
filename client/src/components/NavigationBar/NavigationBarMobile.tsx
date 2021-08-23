@@ -14,7 +14,7 @@ import {User} from 'utils/types/user';
 
 import {LightNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
 import ProfileDropdown from './dropdown/ProfileDropdown';
-import NavLinks from './links/NavLinks';
+import NavLinks from 'containers/NavigationBar/NavLinks';
 import NavigationBarLoginModalMobile from './modals/LoginModalMobile';
 
 interface NavBarProps {

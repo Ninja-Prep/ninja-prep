@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Nav} from 'react-bootstrap';
-import FadeIn from 'react-fade-in';
 import {Link} from 'react-router-dom';
 import {SIGN_IN_NAVIGATION} from 'utils/stringIds.json';
 import {User} from 'utils/types/user';
