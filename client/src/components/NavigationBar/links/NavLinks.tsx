@@ -9,12 +9,18 @@ import {GET_PREMIUM_NAVIGATION, CHALLENGES_NAVIGATION, MEET_THE_TEAM_NAVIGATION}
 
 import NavLink from './styled';
 
-const NavLinks = (): JSX.Element => {
+interface Props {
+  isPremiumUser: boolean;
+}
+
+const NavLinks = (props: Props): JSX.Element => {
   return (
     <Fragment>
-      <NavLink as={Link} to="/premium">
-        {GET_PREMIUM_NAVIGATION}
-      </NavLink>
+      {!props.isPremiumUser && (
+        <NavLink as={Link} to="/premium">
+          {GET_PREMIUM_NAVIGATION}
+        </NavLink>
+      )}
       <NavLink as={Link} to="/challenges">
         {CHALLENGES_NAVIGATION}
       </NavLink>

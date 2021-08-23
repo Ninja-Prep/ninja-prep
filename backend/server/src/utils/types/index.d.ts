@@ -1,9 +1,8 @@
 import 'express-session';
+import {IUserDocument} from '@models/User';
 declare module 'express-session' {
   interface SessionData {
-    isAuthenticated: boolean;
-    user: {[key: string]: any} | null;
-    publicUser: {[key: string]: any} | null;
+    user: IUserDocument;
   }
 }
 

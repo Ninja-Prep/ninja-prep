@@ -1,5 +1,5 @@
+import {IUserDocument} from '@models/User';
 import {NextFunction, Request, Response} from 'express';
-import _ from 'lodash';
 import passport from 'passport';
 
 export function googleOauth(req: Request, res: Response, next: NextFunction): void {
@@ -19,12 +19,7 @@ export function githubOauth(req: Request, res: Response, next: NextFunction): vo
   })(req, res, next);
 }
 
-const publicUserFields = ['firstName', '_id', 'profilePicture'];
-
 export function setUserCookie(req: Request, res: Response, next: NextFunction): void {
-  const publicUser = _.pick(req.user, publicUserFields);
-  req.session.publicUser = publicUser;
-  req.session.user = req.user;
-  req.session.isAuthenticated = true;
+  req.session.user = req.user as IUserDocument;
   next();
 }

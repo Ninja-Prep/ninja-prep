@@ -5,10 +5,18 @@ export interface IUserDocument {
   firstName: string;
   premiumExpirationDate: Date;
   profilePicture: string;
+  emailAddress: string;
+}
+
+export interface FindOrCreateUserInput {
+  id: string;
+  firstName: string;
+  profilePicture?: string;
+  emailAddress?: string;
 }
 
 interface IUserModel extends mongoose.Model<IUserDocument> {
-  findOrCreate: (profile: any, callback: any) => any;
+  findOrCreate: (input: FindOrCreateUserInput, callback: any) => void;
 }
 
 const userSchema = new mongoose.Schema<IUserDocument, IUserModel>({
@@ -16,10 +24,14 @@ const userSchema = new mongoose.Schema<IUserDocument, IUserModel>({
   firstName: String,
   premiumExpirationDate: Date,
   profilePicture: String,
+  emailAddress: String,
 });
 
-userSchema.statics.findOrCreate = async function (profile: any, callback: any) {
-  let user = await this.findById(profile.id, (err: any, doc: any) => {
+userSchema.statics.findOrCreate = async function (
+  input: FindOrCreateUserInput,
+  callback: any,
+) {
+  let user = await this.findById(input.id, (err: any, doc: any) => {
     if (err) {
       callback(err, null);
     } else if (doc) {
@@ -27,18 +39,11 @@ userSchema.statics.findOrCreate = async function (profile: any, callback: any) {
     }
   });
   if (!user) {
-    let name = '';
-    if (profile.displayName) {
-      name = profile.displayName.split(' ')[0];
-    } else if (profile.username) {
-      name = profile.username;
-    }
-
     user = await new this({
-      _id: profile.id,
-      firstName: name,
+      _id: input.id,
+      firstName: input.firstName,
       premiumExpirationDate: new Date(Date.now()),
-      profilePicture: profile.photos[0].value,
+      profilePicture: input.profilePicture,
     }).save();
   }
   callback(null, user);

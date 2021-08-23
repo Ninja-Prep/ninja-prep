@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {Elements, ElementsConsumer} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import PremiumPlanCard from 'components/Premium/PremiumPlanCard/PremiumPlanCard';
-import {STRIPE_KEY} from 'config/keys';
 import {redirectToCheckoutForm} from 'services/stripe/stripeService';
 import {PurchasePlan} from 'utils/types/plans/plans';
 
@@ -16,13 +15,16 @@ class PremiumPlanCardContainer extends Component<PremiumPlanCardContainerProps> 
 
   constructor(props: Readonly<PremiumPlanCardContainerProps>) {
     super(props);
-    this.stripePromise = loadStripe(STRIPE_KEY);
+    this.stripePromise = loadStripe(process.env.REACT_APP_STRIPE_TEST_KEY || '');
   }
 
   render(): JSX.Element {
+    const purchasePlan = this.props.purchasePlan;
     return (
       <Elements stripe={this.stripePromise}>
-        <ElementsConsumer>{({elements, stripe}) => <PremiumPlanCard purchasePlan={this.props.purchasePlan} purchaseHandler={() => redirectToCheckoutForm(stripe)} />}</ElementsConsumer>
+        <ElementsConsumer>
+          {({elements, stripe}) => <PremiumPlanCard purchasePlan={purchasePlan} purchaseHandler={() => redirectToCheckoutForm(stripe, purchasePlan.stripePriceId)} />}
+        </ElementsConsumer>
       </Elements>
     );
   }
