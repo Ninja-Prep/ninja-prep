@@ -1,286 +1,325 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot on "DESKTOP" 1`] = `
-<Router
-  history={
+<Provider
+  store={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <Error404>
-    <styled.div>
-      <div
-        className="sc-bdnxRM eeGZGd"
-      >
-        <styled.h1>
-          <h1
-            className="sc-hKFxyN dIIkaJ display-1 mt-5"
-          >
-             
-            404
-             
-          </h1>
-        </styled.h1>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-             
-            Oops!
-             
-          </div>
-        </styled.div>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-             
-            We can't seem to find the page you are looking for...
-             
-          </div>
-        </styled.div>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-            <styled.button>
-              <button
-                className="sc-dlnjwi mt-5 btn-primary btn"
-              >
-                <Styled(Link)
-                  to="/"
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Error404>
+      <styled.div>
+        <div
+          className="sc-bdnxRM eeGZGd"
+        >
+          <styled.h1>
+            <h1
+              className="sc-hKFxyN dIIkaJ display-1 mt-5"
+            >
+               
+              404
+               
+            </h1>
+          </styled.h1>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+               
+              Oops!
+               
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+               
+              We can't seem to find the page you are looking for...
+               
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+              <styled.button>
+                <button
+                  className="sc-dlnjwi mt-5 btn-primary btn"
                 >
-                  <Link
-                    className="sc-gtsrHT iZmkcW"
+                  <Styled(Link)
                     to="/"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-gtsrHT iZmkcW"
-                      href="/"
-                      navigate={[Function]}
+                      to="/"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-gtsrHT iZmkcW"
                         href="/"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        Back to home
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-              </button>
-            </styled.button>
-          </div>
-        </styled.div>
-      </div>
-    </styled.div>
-  </Error404>
-</Router>
+                        <a
+                          className="sc-gtsrHT iZmkcW"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          Back to home
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </button>
+              </styled.button>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </Error404>
+  </Router>
+</Provider>
 `;
 
 exports[`matches snapshot on "MOBILE" 1`] = `
-<Router
-  history={
+<Provider
+  store={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <Error404>
-    <styled.div>
-      <div
-        className="sc-bdnxRM eeGZGd"
-      >
-        <styled.h1>
-          <h1
-            className="sc-hKFxyN dIIkaJ display-1 mt-5"
-          >
-             
-            404
-             
-          </h1>
-        </styled.h1>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-             
-            Oops!
-             
-          </div>
-        </styled.div>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-             
-            We can't seem to find the page you are looking for...
-             
-          </div>
-        </styled.div>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-            <styled.button>
-              <button
-                className="sc-dlnjwi mt-5 btn-primary btn"
-              >
-                <Styled(Link)
-                  to="/"
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Error404>
+      <styled.div>
+        <div
+          className="sc-bdnxRM eeGZGd"
+        >
+          <styled.h1>
+            <h1
+              className="sc-hKFxyN dIIkaJ display-1 mt-5"
+            >
+               
+              404
+               
+            </h1>
+          </styled.h1>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+               
+              Oops!
+               
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+               
+              We can't seem to find the page you are looking for...
+               
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+              <styled.button>
+                <button
+                  className="sc-dlnjwi mt-5 btn-primary btn"
                 >
-                  <Link
-                    className="sc-gtsrHT iZmkcW"
+                  <Styled(Link)
                     to="/"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-gtsrHT iZmkcW"
-                      href="/"
-                      navigate={[Function]}
+                      to="/"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-gtsrHT iZmkcW"
                         href="/"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        Back to home
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-              </button>
-            </styled.button>
-          </div>
-        </styled.div>
-      </div>
-    </styled.div>
-  </Error404>
-</Router>
+                        <a
+                          className="sc-gtsrHT iZmkcW"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          Back to home
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </button>
+              </styled.button>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </Error404>
+  </Router>
+</Provider>
 `;
 
 exports[`matches snapshot on "TABLET" 1`] = `
-<Router
-  history={
+<Provider
+  store={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <Error404>
-    <styled.div>
-      <div
-        className="sc-bdnxRM eeGZGd"
-      >
-        <styled.h1>
-          <h1
-            className="sc-hKFxyN dIIkaJ display-1 mt-5"
-          >
-             
-            404
-             
-          </h1>
-        </styled.h1>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-             
-            Oops!
-             
-          </div>
-        </styled.div>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-             
-            We can't seem to find the page you are looking for...
-             
-          </div>
-        </styled.div>
-        <styled.div>
-          <div
-            className="sc-eCApnc fLcWfp mt-3"
-          >
-            <styled.button>
-              <button
-                className="sc-dlnjwi mt-5 btn-primary btn"
-              >
-                <Styled(Link)
-                  to="/"
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Error404>
+      <styled.div>
+        <div
+          className="sc-bdnxRM eeGZGd"
+        >
+          <styled.h1>
+            <h1
+              className="sc-hKFxyN dIIkaJ display-1 mt-5"
+            >
+               
+              404
+               
+            </h1>
+          </styled.h1>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+               
+              Oops!
+               
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+               
+              We can't seem to find the page you are looking for...
+               
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-eCApnc fLcWfp mt-3"
+            >
+              <styled.button>
+                <button
+                  className="sc-dlnjwi mt-5 btn-primary btn"
                 >
-                  <Link
-                    className="sc-gtsrHT iZmkcW"
+                  <Styled(Link)
                     to="/"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-gtsrHT iZmkcW"
-                      href="/"
-                      navigate={[Function]}
+                      to="/"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-gtsrHT iZmkcW"
                         href="/"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        Back to home
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-              </button>
-            </styled.button>
-          </div>
-        </styled.div>
-      </div>
-    </styled.div>
-  </Error404>
-</Router>
+                        <a
+                          className="sc-gtsrHT iZmkcW"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          Back to home
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </button>
+              </styled.button>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </Error404>
+  </Router>
+</Provider>
 `;

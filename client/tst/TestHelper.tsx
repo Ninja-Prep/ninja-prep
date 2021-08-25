@@ -5,6 +5,12 @@ import {ReactChild} from 'react';
 
 import {createBrowserHistory} from 'history';
 import {Router} from 'react-router-dom';
+import thunk from 'redux-thunk';
+import fetchMock from 'fetch-mock';
+import configureMockStore from 'redux-mock-store';
+import {Provider} from 'react-redux';
+const middlewares = [thunk];
+const mockStore = configureMockStore(middlewares);
 
 const history = createBrowserHistory();
 
@@ -21,8 +27,16 @@ export const DEVICE_TYPES: DEVICE_WIDTHS = {
   TABLET: 800,
 };
 
-export const routeWrapper = (
-  children: React.ReactChild,
-): ReactElement<(children: ReactChild) => ReactNode> => {
-  return <Router history={history}>{children}</Router>;
+export const routeWrapper = (children: React.ReactChild): ReactElement<(children: ReactChild) => ReactNode> => {
+  const store = mockStore({
+    authReducer: {
+      authUser: {},
+    },
+  });
+
+  return (
+    <Provider store={store}>
+      <Router history={history}>{children}</Router>
+    </Provider>
+  );
 };
