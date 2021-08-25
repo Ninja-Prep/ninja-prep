@@ -15,6 +15,7 @@ passport.use(
       clientID: process.env.GOOGLE_CLIENT,
       clientSecret: process.env.GOOGLE_SECRET,
       callbackURL: '/api/auth/google/callback',
+      proxy: true /* Required to pass https in oauth for callback redirect url*/,
     },
     function (accessToken: string, refreshToken: string, profile: GoogleProfile, done) {
       const input: FindOrCreateUserInput = {
