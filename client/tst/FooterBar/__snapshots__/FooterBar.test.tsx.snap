@@ -1,531 +1,570 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot on "DESKTOP" 1`] = `
-<Router
-  history={
+<Provider
+  store={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <FooterBarComponent>
-    <Responsiveness
-      desktop={<FooterBarDesktop />}
-      mobile={<FooterBarMobile />}
-    >
-      <Desktop>
-        <FooterBarDesktop>
-          <Styled(Row)>
-            <Row
-              className="sc-dlnjwi dGuFeR"
-              noGutters={false}
-            >
-              <div
-                className="sc-dlnjwi dGuFeR row"
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <FooterBarComponent>
+      <Responsiveness
+        desktop={<FooterBarDesktop />}
+        mobile={<FooterBarMobile />}
+      >
+        <Desktop>
+          <FooterBarDesktop>
+            <Styled(Row)>
+              <Row
+                className="sc-dlnjwi dGuFeR"
+                noGutters={false}
               >
-                <styled.div>
-                  <div
-                    className="sc-bdnxRM ejnGdQ col"
-                  >
-                    <DarkNinjaPrepLogo
-                      height={70}
-                      width={160}
+                <div
+                  className="sc-dlnjwi dGuFeR row"
+                >
+                  <styled.div>
+                    <div
+                      className="sc-bdnxRM ejnGdQ col"
                     >
-                      <svg
+                      <DarkNinjaPrepLogo
                         height={70}
-                        viewBox="0 0 201 58"
                         width={160}
                       >
-                        <g
-                          data-name="Group 119"
-                          id="Group_119"
-                          transform="translate(-1157 -10129)"
+                        <svg
+                          height={70}
+                          viewBox="0 0 201 58"
+                          width={160}
                         >
-                          <text
-                            fill="#2a2a3a"
-                            fontFamily="SourceSansPro-Bold, Source Sans Pro"
-                            fontSize="41"
-                            fontWeight="700"
-                            id="NinjaPrep"
-                            transform="translate(1157 10171)"
+                          <g
+                            data-name="Group 119"
+                            id="Group_119"
+                            transform="translate(-1157 -10129)"
                           >
-                            <tspan
-                              x="0"
-                              y="0"
+                            <text
+                              fill="#2a2a3a"
+                              fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                              fontSize="41"
+                              fontWeight="700"
+                              id="NinjaPrep"
+                              transform="translate(1157 10171)"
                             >
-                              NinjaPrep
-                            </tspan>
-                          </text>
-                          <circle
-                            cx="7.5"
-                            cy="7.5"
-                            data-name="Ellipse 44"
-                            fill="#25d0f3"
-                            id="Ellipse_44"
-                            r="7.5"
-                            transform="translate(1343 10158)"
-                          />
-                        </g>
-                      </svg>
-                    </DarkNinjaPrepLogo>
-                  </div>
-                </styled.div>
-                <Col>
-                  <div
-                    className="col"
-                  >
-                    <styled.div>
-                      <div
-                        className="sc-gtsrHT iUUIQL"
-                      >
-                        <styled.p>
-                          <p
-                            className="sc-hKFxyN macAL"
-                          >
-                            NINJAPREP
-                          </p>
-                        </styled.p>
-                        <Styled(NavLink)
-                          as={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "displayName": "Link",
-                              "propTypes": Object {
-                                "innerRef": [Function],
-                                "onClick": [Function],
-                                "replace": [Function],
-                                "target": [Function],
-                                "to": [Function],
-                              },
-                              "render": [Function],
-                            }
-                          }
-                          to="/about"
+                              <tspan
+                                x="0"
+                                y="0"
+                              >
+                                NinjaPrep
+                              </tspan>
+                            </text>
+                            <circle
+                              cx="7.5"
+                              cy="7.5"
+                              data-name="Ellipse 44"
+                              fill="#25d0f3"
+                              id="Ellipse_44"
+                              r="7.5"
+                              transform="translate(1343 10158)"
+                            />
+                          </g>
+                        </svg>
+                      </DarkNinjaPrepLogo>
+                    </div>
+                  </styled.div>
+                  <Col>
+                    <div
+                      className="col"
+                    >
+                      <styled.div>
+                        <div
+                          className="sc-gtsrHT iUUIQL"
                         >
-                          <Link
-                            className="sc-eCApnc inrNnB"
+                          <styled.p>
+                            <p
+                              className="sc-hKFxyN macAL"
+                            >
+                              NINJAPREP
+                            </p>
+                          </styled.p>
+                          <Styled(NavLink)
+                            as={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "displayName": "Link",
+                                "propTypes": Object {
+                                  "innerRef": [Function],
+                                  "onClick": [Function],
+                                  "replace": [Function],
+                                  "target": [Function],
+                                  "to": [Function],
+                                },
+                                "render": [Function],
+                              }
+                            }
                             to="/about"
                           >
-                            <LinkAnchor
+                            <Link
                               className="sc-eCApnc inrNnB"
-                              href="/about"
-                              navigate={[Function]}
+                              to="/about"
                             >
-                              <a
+                              <LinkAnchor
                                 className="sc-eCApnc inrNnB"
                                 href="/about"
-                                onClick={[Function]}
+                                navigate={[Function]}
                               >
-                                About Us
-                              </a>
-                            </LinkAnchor>
-                          </Link>
-                        </Styled(NavLink)>
-                        <Styled(NavLink)
-                          as={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "displayName": "Link",
-                              "propTypes": Object {
-                                "innerRef": [Function],
-                                "onClick": [Function],
-                                "replace": [Function],
-                                "target": [Function],
-                                "to": [Function],
-                              },
-                              "render": [Function],
+                                <a
+                                  className="sc-eCApnc inrNnB"
+                                  href="/about"
+                                  onClick={[Function]}
+                                >
+                                  About Us
+                                </a>
+                              </LinkAnchor>
+                            </Link>
+                          </Styled(NavLink)>
+                          <Styled(NavLink)
+                            as={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "displayName": "Link",
+                                "propTypes": Object {
+                                  "innerRef": [Function],
+                                  "onClick": [Function],
+                                  "replace": [Function],
+                                  "target": [Function],
+                                  "to": [Function],
+                                },
+                                "render": [Function],
+                              }
                             }
-                          }
-                          to="/premium"
-                        >
-                          <Link
-                            className="sc-eCApnc inrNnB"
                             to="/premium"
                           >
-                            <LinkAnchor
+                            <Link
                               className="sc-eCApnc inrNnB"
-                              href="/premium"
-                              navigate={[Function]}
+                              to="/premium"
                             >
-                              <a
+                              <LinkAnchor
                                 className="sc-eCApnc inrNnB"
                                 href="/premium"
-                                onClick={[Function]}
+                                navigate={[Function]}
                               >
-                                Get Premium
-                              </a>
-                            </LinkAnchor>
-                          </Link>
-                        </Styled(NavLink)>
-                      </div>
-                    </styled.div>
-                  </div>
-                </Col>
-                <Col>
-                  <div
-                    className="col"
-                  >
-                    <styled.p>
-                      <p
-                        className="sc-hKFxyN macAL"
-                      >
-                        RESOURCES
-                      </p>
-                    </styled.p>
-                    <Styled(NavLink)
-                      as={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "displayName": "Link",
-                          "propTypes": Object {
-                            "innerRef": [Function],
-                            "onClick": [Function],
-                            "replace": [Function],
-                            "target": [Function],
-                            "to": [Function],
-                          },
-                          "render": [Function],
-                        }
-                      }
-                      to="/about"
+                                <a
+                                  className="sc-eCApnc inrNnB"
+                                  href="/premium"
+                                  onClick={[Function]}
+                                >
+                                  Get Premium
+                                </a>
+                              </LinkAnchor>
+                            </Link>
+                          </Styled(NavLink)>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div
+                      className="col"
                     >
-                      <Link
-                        className="sc-eCApnc inrNnB"
+                      <styled.p>
+                        <p
+                          className="sc-hKFxyN macAL"
+                        >
+                          RESOURCES
+                        </p>
+                      </styled.p>
+                      <Styled(NavLink)
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
                         to="/about"
                       >
-                        <LinkAnchor
+                        <Link
                           className="sc-eCApnc inrNnB"
-                          href="/about"
-                          navigate={[Function]}
+                          to="/about"
                         >
-                          <a
+                          <LinkAnchor
                             className="sc-eCApnc inrNnB"
                             href="/about"
-                            onClick={[Function]}
+                            navigate={[Function]}
                           >
-                            Articles
-                          </a>
-                        </LinkAnchor>
-                      </Link>
-                    </Styled(NavLink)>
-                    <Styled(NavLink)
-                      as={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "displayName": "Link",
-                          "propTypes": Object {
-                            "innerRef": [Function],
-                            "onClick": [Function],
-                            "replace": [Function],
-                            "target": [Function],
-                            "to": [Function],
-                          },
-                          "render": [Function],
+                            <a
+                              className="sc-eCApnc inrNnB"
+                              href="/about"
+                              onClick={[Function]}
+                            >
+                              Articles
+                            </a>
+                          </LinkAnchor>
+                        </Link>
+                      </Styled(NavLink)>
+                      <Styled(NavLink)
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
                         }
-                      }
-                      to="/challenges"
-                    >
-                      <Link
-                        className="sc-eCApnc inrNnB"
                         to="/challenges"
                       >
-                        <LinkAnchor
+                        <Link
                           className="sc-eCApnc inrNnB"
-                          href="/challenges"
-                          navigate={[Function]}
+                          to="/challenges"
                         >
-                          <a
+                          <LinkAnchor
                             className="sc-eCApnc inrNnB"
                             href="/challenges"
-                            onClick={[Function]}
+                            navigate={[Function]}
                           >
-                            Challenges
-                          </a>
-                        </LinkAnchor>
-                      </Link>
-                    </Styled(NavLink)>
-                  </div>
-                </Col>
-              </div>
-            </Row>
-          </Styled(Row)>
-        </FooterBarDesktop>
-      </Desktop>
-      <Mobile />
-    </Responsiveness>
-  </FooterBarComponent>
-</Router>
+                            <a
+                              className="sc-eCApnc inrNnB"
+                              href="/challenges"
+                              onClick={[Function]}
+                            >
+                              Challenges
+                            </a>
+                          </LinkAnchor>
+                        </Link>
+                      </Styled(NavLink)>
+                    </div>
+                  </Col>
+                </div>
+              </Row>
+            </Styled(Row)>
+          </FooterBarDesktop>
+        </Desktop>
+        <Mobile />
+      </Responsiveness>
+    </FooterBarComponent>
+  </Router>
+</Provider>
 `;
 
 exports[`matches snapshot on "MOBILE" 1`] = `
-<Router
-  history={
+<Provider
+  store={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <FooterBarComponent>
-    <Responsiveness
-      desktop={<FooterBarDesktop />}
-      mobile={<FooterBarMobile />}
-    >
-      <Desktop />
-      <Mobile>
-        <FooterBarMobile>
-          <Styled(Navbar)>
-            <Navbar
-              className="sc-gKAaRy ibVuEc"
-              collapseOnSelect={false}
-              expand={true}
-              variant="light"
-            >
-              <nav
-                className="sc-gKAaRy ibVuEc navbar navbar-expand navbar-light"
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <FooterBarComponent>
+      <Responsiveness
+        desktop={<FooterBarDesktop />}
+        mobile={<FooterBarMobile />}
+      >
+        <Desktop />
+        <Mobile>
+          <FooterBarMobile>
+            <Styled(Navbar)>
+              <Navbar
+                className="sc-gKAaRy ibVuEc"
+                collapseOnSelect={false}
+                expand={true}
+                variant="light"
               >
-                <span>
-                  Copyright © 2020 NinjaPrep
-                </span>
-                <span>
-                  |
-                </span>
-                <Styled(Link)
-                  to="/about"
+                <nav
+                  className="sc-gKAaRy ibVuEc navbar navbar-expand navbar-light"
                 >
-                  <Link
-                    className="sc-jSFjdj ifXxgR"
+                  <span>
+                    Copyright © 2020 NinjaPrep
+                  </span>
+                  <span>
+                    |
+                  </span>
+                  <Styled(Link)
                     to="/about"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-jSFjdj ifXxgR"
-                      href="/about"
-                      navigate={[Function]}
+                      to="/about"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-jSFjdj ifXxgR"
                         href="/about"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        About
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-                <span>
-                  |
-                </span>
-                <Styled(Link)
-                  to="/premium"
-                >
-                  <Link
-                    className="sc-jSFjdj ifXxgR"
+                        <a
+                          className="sc-jSFjdj ifXxgR"
+                          href="/about"
+                          onClick={[Function]}
+                        >
+                          About
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                  <span>
+                    |
+                  </span>
+                  <Styled(Link)
                     to="/premium"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-jSFjdj ifXxgR"
-                      href="/premium"
-                      navigate={[Function]}
+                      to="/premium"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-jSFjdj ifXxgR"
                         href="/premium"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        Premium
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-                <span>
-                  |
-                </span>
-                <Styled(Link)
-                  to="/roadmap"
-                >
-                  <Link
-                    className="sc-jSFjdj ifXxgR"
+                        <a
+                          className="sc-jSFjdj ifXxgR"
+                          href="/premium"
+                          onClick={[Function]}
+                        >
+                          Premium
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                  <span>
+                    |
+                  </span>
+                  <Styled(Link)
                     to="/roadmap"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-jSFjdj ifXxgR"
-                      href="/roadmap"
-                      navigate={[Function]}
+                      to="/roadmap"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-jSFjdj ifXxgR"
                         href="/roadmap"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        Roadmap
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-              </nav>
-            </Navbar>
-          </Styled(Navbar)>
-        </FooterBarMobile>
-      </Mobile>
-    </Responsiveness>
-  </FooterBarComponent>
-</Router>
+                        <a
+                          className="sc-jSFjdj ifXxgR"
+                          href="/roadmap"
+                          onClick={[Function]}
+                        >
+                          Roadmap
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </nav>
+              </Navbar>
+            </Styled(Navbar)>
+          </FooterBarMobile>
+        </Mobile>
+      </Responsiveness>
+    </FooterBarComponent>
+  </Router>
+</Provider>
 `;
 
 exports[`matches snapshot on "TABLET" 1`] = `
-<Router
-  history={
+<Provider
+  store={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <FooterBarComponent>
-    <Responsiveness
-      desktop={<FooterBarDesktop />}
-      mobile={<FooterBarMobile />}
-    >
-      <Desktop />
-      <Mobile>
-        <FooterBarMobile>
-          <Styled(Navbar)>
-            <Navbar
-              className="sc-gKAaRy ibVuEc"
-              collapseOnSelect={false}
-              expand={true}
-              variant="light"
-            >
-              <nav
-                className="sc-gKAaRy ibVuEc navbar navbar-expand navbar-light"
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <FooterBarComponent>
+      <Responsiveness
+        desktop={<FooterBarDesktop />}
+        mobile={<FooterBarMobile />}
+      >
+        <Desktop />
+        <Mobile>
+          <FooterBarMobile>
+            <Styled(Navbar)>
+              <Navbar
+                className="sc-gKAaRy ibVuEc"
+                collapseOnSelect={false}
+                expand={true}
+                variant="light"
               >
-                <span>
-                  Copyright © 2020 NinjaPrep
-                </span>
-                <span>
-                  |
-                </span>
-                <Styled(Link)
-                  to="/about"
+                <nav
+                  className="sc-gKAaRy ibVuEc navbar navbar-expand navbar-light"
                 >
-                  <Link
-                    className="sc-jSFjdj ifXxgR"
+                  <span>
+                    Copyright © 2020 NinjaPrep
+                  </span>
+                  <span>
+                    |
+                  </span>
+                  <Styled(Link)
                     to="/about"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-jSFjdj ifXxgR"
-                      href="/about"
-                      navigate={[Function]}
+                      to="/about"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-jSFjdj ifXxgR"
                         href="/about"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        About
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-                <span>
-                  |
-                </span>
-                <Styled(Link)
-                  to="/premium"
-                >
-                  <Link
-                    className="sc-jSFjdj ifXxgR"
+                        <a
+                          className="sc-jSFjdj ifXxgR"
+                          href="/about"
+                          onClick={[Function]}
+                        >
+                          About
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                  <span>
+                    |
+                  </span>
+                  <Styled(Link)
                     to="/premium"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-jSFjdj ifXxgR"
-                      href="/premium"
-                      navigate={[Function]}
+                      to="/premium"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-jSFjdj ifXxgR"
                         href="/premium"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        Premium
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-                <span>
-                  |
-                </span>
-                <Styled(Link)
-                  to="/roadmap"
-                >
-                  <Link
-                    className="sc-jSFjdj ifXxgR"
+                        <a
+                          className="sc-jSFjdj ifXxgR"
+                          href="/premium"
+                          onClick={[Function]}
+                        >
+                          Premium
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                  <span>
+                    |
+                  </span>
+                  <Styled(Link)
                     to="/roadmap"
                   >
-                    <LinkAnchor
+                    <Link
                       className="sc-jSFjdj ifXxgR"
-                      href="/roadmap"
-                      navigate={[Function]}
+                      to="/roadmap"
                     >
-                      <a
+                      <LinkAnchor
                         className="sc-jSFjdj ifXxgR"
                         href="/roadmap"
-                        onClick={[Function]}
+                        navigate={[Function]}
                       >
-                        Roadmap
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </Styled(Link)>
-              </nav>
-            </Navbar>
-          </Styled(Navbar)>
-        </FooterBarMobile>
-      </Mobile>
-    </Responsiveness>
-  </FooterBarComponent>
-</Router>
+                        <a
+                          className="sc-jSFjdj ifXxgR"
+                          href="/roadmap"
+                          onClick={[Function]}
+                        >
+                          Roadmap
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </nav>
+              </Navbar>
+            </Styled(Navbar)>
+          </FooterBarMobile>
+        </Mobile>
+      </Responsiveness>
+    </FooterBarComponent>
+  </Router>
+</Provider>
 `;
