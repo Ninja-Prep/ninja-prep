@@ -9,10 +9,12 @@ const stripe = new Stripe(process.env.STRIPE_TEST_KEY, {
 export async function checkout(req: Request, res: Response): Promise<void> {
   // See https://stripe.com/docs/api/checkout/sessions/create
   // for additional parameters to pass.
-  const userId = req.session.user?.id;
+  const userEmail = req.body.userEmail;
+  const userId = req.session.user?._id;
   if (userId) {
     try {
       const session = await stripe.checkout.sessions.create({
+        customer_email: userEmail,
         client_reference_id: userId,
         mode: 'subscription',
         payment_method_types: ['card'],
@@ -33,7 +35,6 @@ export async function checkout(req: Request, res: Response): Promise<void> {
         sessionId: session.id,
       });
     } catch (e) {
-      console.log(e);
       res.send({
         error: {
           message: e.message,
@@ -74,6 +75,29 @@ async function addPremiumStatus(session: Stripe.Checkout.Session) {
   if (session.subscription) {
     const subscriptionId = session.subscription as string;
     const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-    User.findOneAndUpdate({_id: session.client_reference_id}, {premiumExpirationDate: new Date(subscription.current_period_end * 1000)}, {new: true});
+    User.findOneAndUpdate({id: session.client_reference_id}, {premiumExpirationDate: new Date(subscription.current_period_end * 1000)}, {new: true});
+  }
+}
+
+export async function getCheckoutSession(req: Request, res: Response): Promise<void> {
+  const sessionId = req.body.checkoutSessionId;
+
+  try {
+    const session = await stripe.checkout.sessions.retrieve(sessionId);
+    if (session.client_reference_id !== req.session.user?._id) {
+      res.status(400);
+      res.send();
+      return;
+    }
+    const subscriptionId = session.subscription as string;
+    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+    const expirationDate = new Date(subscription.current_period_end * 1000);
+    const formattedDate = expirationDate.toLocaleString('default', {year: 'numeric', month: 'long', day: 'numeric'});
+    res.send({email: session.customer_email, expirationDate: formattedDate});
+    return;
+  } catch (err) {
+    res.status(400);
+    res.send();
+    return;
   }
 }

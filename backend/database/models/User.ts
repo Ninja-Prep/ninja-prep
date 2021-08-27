@@ -1,18 +1,20 @@
 import mongoose from '@mongoose';
 
 export interface IUserDocument {
-  id: string;
+  _id: string;
   firstName: string;
   premiumExpirationDate: Date;
   profilePicture: string;
-  emailAddress: string;
+  email: string;
+  oauthProvider: string;
 }
 
 export interface FindOrCreateUserInput {
   id: string;
   firstName: string;
   profilePicture?: string;
-  emailAddress?: string;
+  email: string;
+  oauthProvider: string;
 }
 
 interface IUserModel extends mongoose.Model<IUserDocument> {
@@ -24,7 +26,8 @@ const userSchema = new mongoose.Schema<IUserDocument, IUserModel>({
   firstName: String,
   premiumExpirationDate: Date,
   profilePicture: String,
-  emailAddress: String,
+  email: String,
+  oauthProvider: String,
 });
 
 userSchema.statics.findOrCreate = async function (
@@ -44,6 +47,8 @@ userSchema.statics.findOrCreate = async function (
       firstName: input.firstName,
       premiumExpirationDate: new Date(Date.now()),
       profilePicture: input.profilePicture,
+      email: input.email,
+      oauthProvider: input.oauthProvider,
     }).save();
   }
   callback(null, user);

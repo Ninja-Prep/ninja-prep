@@ -4,7 +4,7 @@ Wrapper component to add
 - Modal
 - Logged in dropdown
 */
-import React from 'react';
+import React, {Fragment} from 'react';
 
 import {useToggler} from 'containers/NavigationBar/hooks/useToggler';
 import {Navbar, Nav} from 'react-bootstrap';
@@ -24,14 +24,11 @@ interface NavBarProps {
   readonly loadFadeIn: boolean;
 }
 
-/**
- *
- */
 function NavigationBarDesktop(props: NavBarProps): JSX.Element {
   // For Shortcuts Icon
   const {isOn, toggle} = useToggler();
   const loadFadeIn = props.loadFadeIn;
-  const NavBarContent = (
+  let NavBarContent = (
     <Navbar.Collapse>
       <Nav className="ml-auto pr-5 mr-5">
         <NavLinks />
@@ -39,16 +36,20 @@ function NavigationBarDesktop(props: NavBarProps): JSX.Element {
       </Nav>
     </Navbar.Collapse>
   );
+
+  if (!props.isLoadingUser && loadFadeIn) {
+    NavBarContent = <FadeIn>{NavBarContent}</FadeIn>;
+  } else if (props.isLoadingUser) {
+    NavBarContent = <Fragment />;
+  }
+
   return (
     <Navbar fixed="top" expand="lg" className="px-5 py-3 navigation-bar" variant="dark">
       <Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
         <LightNinjaPrepLogo height={40} width={100} />
       </Navbar.Brand>
       <Navbar.Toggle />
-      <div className="w-100">
-        {!props.isLoadingUser && loadFadeIn && <FadeIn>{NavBarContent}</FadeIn>}
-        {!props.isLoadingUser && !loadFadeIn && NavBarContent}
-      </div>
+      <div className="w-100">{NavBarContent}</div>
       <LoginModalDesktop showModal={isOn} toggleModal={toggle} />
     </Navbar>
   );
