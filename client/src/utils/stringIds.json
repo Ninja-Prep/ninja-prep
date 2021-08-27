@@ -6,6 +6,8 @@
   "ANGELA_YEUNG": "Angela Yeung",
   "ANGELA_Y_DESCRIPTION": "Angela Yeung is currently a student at New York University majoring in Computer Science earning her Bachelor's Degree. As a student herself, Angela uses the provided resources to practice algorithm problems and is passionate about creating a way for others to learn more about coding. She is a content contributor at NinjaPrep and has been developing NinjaPrep's back-end server as well. In her free time, Angela enjoys listening to music and finding new places to eat at.",
   "CHALLENGES_NAVIGATION": "Challenges",
+  "CONFIRMATION_RECEIPT_WILL_BE_SENT": "Confirmation receipt will be sent to your email shortly",
+  "EXPLORE_PROBLEMS": "Explore Problems",
   "FACEBOOK_LOGIN": "Facebook Login",
   "GET_PREMIUM_NAVIGATION": "Get Premium",
   "GET_STARTED": "Get Started for Free",
@@ -21,10 +23,15 @@
   "MEET_THE_TEAM_HEADER_DESCRIPTION_2": "algorithms and prepare for technical interviews, all in one platform.",
   "MEET_THE_TEAM_HEADER_TITLE": "Meet The Team",
   "MEET_THE_TEAM_NAVIGATION": "Meet the Team",
+  "MISSING_ORDER_TEXT": "Sorry, we are not able to find the order you were looking for.",
   "MISSING_PAGE_TEXT": "We can't seem to find the page you are looking for...",
   "NINJA_PREP": "Ninjaprep",
   "OOPS": "Oops!",
+  "ORDER_NOT_FOUND": "Order Not Found",
   "OUR_PLANS": "Our Plans",
+  "PREMIUM": "Premium",
+  "PREMIUM_ACCOUNT_LOGIN": "Your Premium Account Login",
+  "PREMIUM_EXPIRATION_DATE": "Premium Expiration Date",
   "PREMIUM_HEADER_DESCRIPTION": "Access to guided and convenient features, all in one platform.",
   "PREMIUM_HEADER_TITLE": "Learn, practice, and apply in-demand skills with a NinjaPrep subscription.",
   "PROCESSING_TEXT": "Processing...",
@@ -38,5 +45,7 @@
   "SUBMIT_YOUR_CODE": "Submit your code",
   "SUBSCRIBE": "Subscribe",
   "TEST_CASES_PASSED": "Test Cases Passed",
-  "TEXT_404": 404
+  "TEXT_404": 404,
+  "THANK_YOU_FOR_CHOOSING_NINJAPREP": "access, thank you for choosing NinjaPrep!",
+  "YOU_NOW_HAVE": "You now have"
 }

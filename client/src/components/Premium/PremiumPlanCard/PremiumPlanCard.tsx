@@ -8,7 +8,7 @@ import {CardBody} from './styled';
 import {MonthlyText, PlanCardHeader, PlanCardName, HoverWrapper, CenteredButton, PlanDescription} from './styled';
 
 interface PlanCardProps {
-  purchaseHandler: (stripe: Stripe | null) => void;
+  purchaseHandler?: (stripe: Stripe | null) => void;
   purchasePlan: PurchasePlan;
 }
 

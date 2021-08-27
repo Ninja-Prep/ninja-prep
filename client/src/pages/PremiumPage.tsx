@@ -2,8 +2,8 @@ import React from 'react';
 
 import Responsiveness from 'utils/hocs/Responsiveness';
 
-import PremiumDesktop from './desktop/PremiumDesktop';
-import PremiumMobile from './mobile/PremiumMobile';
+import PremiumDesktop from './Premium/PremiumDesktop';
+import PremiumMobile from './Premium/PremiumMobile';
 
 const PremiumPage = (): JSX.Element => {
   const desktop = <PremiumDesktop />;

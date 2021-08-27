@@ -18,11 +18,15 @@ passport.use(
       proxy: true /* Required to pass https in oauth for callback redirect url*/,
     },
     function (accessToken: string, refreshToken: string, profile: GoogleProfile, done) {
+      if (!profile.emails || !profile.emails[0].value) {
+        throw new Error('Missing User Email');
+      }
       const input: FindOrCreateUserInput = {
         id: profile.id,
         firstName: profile.name?.givenName || DEFAULT_NINJAPREP_NAME,
         profilePicture: profile.photos && profile.photos[0].value,
-        emailAddress: profile.emails && profile.emails[0].value,
+        email: profile.emails[0].value,
+        oauthProvider: profile.provider,
       };
       User.findOrCreate(input, function (err: string | Error, user: IUserDocument) {
         if (err) logError(err);
@@ -41,11 +45,15 @@ passport.use(
       profileFields: ['email', 'name', 'picture'],
     },
     function (accessToken: string, refreshToken: string, profile: FacebookProfile, done: Done) {
+      if (!profile.emails || !profile.emails[0].value) {
+        throw new Error('Missing User Email');
+      }
       const input: FindOrCreateUserInput = {
         id: profile.id,
         firstName: profile.name?.givenName || DEFAULT_NINJAPREP_NAME,
         profilePicture: profile.photos && profile.photos[0].value,
-        emailAddress: profile.emails && profile.emails[0].value,
+        email: profile.emails[0].value,
+        oauthProvider: profile.provider,
       };
       User.findOrCreate(input, function (err: Error, user: IUserDocument) {
         if (err) {
@@ -68,11 +76,15 @@ passport.use(
       callbackURL: '/api/auth/github/callback',
     },
     function (accessToken: string, refreshToken: string, profile: Profile, done: Done) {
+      if (!profile.emails || !profile.emails[0].value) {
+        throw new Error('Missing User Email');
+      }
       const input: FindOrCreateUserInput = {
         id: profile.id,
         firstName: profile.displayName || profile.username || DEFAULT_NINJAPREP_NAME,
         profilePicture: profile.photos && profile.photos[0].value,
-        emailAddress: profile.emails && profile.emails[0].value,
+        email: profile.emails[0].value,
+        oauthProvider: profile.provider,
       };
       User.findOrCreate(input, function (err: Error, user: IUserDocument) {
         if (err) {
@@ -90,7 +102,7 @@ passport.serializeUser(function (user: Express.User, done: Done) {
 });
 
 passport.deserializeUser(function (user: IUserDocument, done: (err: Error, user?: Express.User | false | null) => void) {
-  User.findById(user.id, function (err: Error, user: boolean | Express.User) {
+  User.findById(user._id, function (err: Error, user: boolean | Express.User) {
     done(err, user);
   });
 });

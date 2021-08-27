@@ -2,8 +2,8 @@ import React from 'react';
 
 import Responsiveness from 'utils/hocs/Responsiveness';
 
-import MeetTheTeamDesktop from './desktop/MeetTheTeamDesktop';
-import MeetTheTeamMobile from './mobile/MeetTheTeamMobile';
+import MeetTheTeamDesktop from './MeetTheTeam/MeetTheTeamDesktop';
+import MeetTheTeamMobile from './MeetTheTeam/MeetTheTeamMobile';
 
 function MeetTheTeamPage(): JSX.Element {
   const desktop = <MeetTheTeamDesktop />;

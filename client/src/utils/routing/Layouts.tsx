@@ -14,7 +14,7 @@ import NavigationBar from 'containers/NavigationBar/NavigationBar';
 import {FooterMargin, HeaderPadding} from './styledLayouts';
 
 interface Props {
-  children: React.ReactChild;
+  children: React.ReactChild | React.ReactChild[];
 }
 
 export const HeaderLayout = ({children}: Props): JSX.Element => (

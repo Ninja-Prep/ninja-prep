@@ -3,4 +3,6 @@ export type User = {
   readonly firstName: string;
   readonly _id: string;
   readonly premiumExpirationDate: Date;
+  readonly email: string;
+  readonly oauthProvider: string;
 } | null;
