@@ -42,7 +42,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
       >
         <Responsiveness
           desktop={
-            <NavigationBarDesktop
+            <UNDEFINED
               authUser={Object {}}
               dispatch={[Function]}
               loadFadeIn={false}
@@ -56,7 +56,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
           }
         >
           <Desktop>
-            <NavigationBarDesktop
+            <Memo(NavigationBarDesktop)
               authUser={Object {}}
               dispatch={[Function]}
               loadFadeIn={false}
@@ -328,70 +328,77 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                       </NavLinks>
                                     </NavigationBar>
                                   </Connect(NavigationBar)>
-                                  <ProfileDropdown
+                                  <Memo()
                                     authUser={Object {}}
                                     dispatch={[Function]}
                                     loadFadeIn={false}
                                     toggleModal={[Function]}
                                   >
-                                    <DropdownMenu
-                                      user={Object {}}
+                                    <Dropdown
+                                      className="pl-3"
+                                      navbar={false}
                                     >
-                                      <Dropdown
-                                        className="pl-3"
-                                        navbar={false}
+                                      <ReactOverlaysDropdown
+                                        itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
+                                        onToggle={[Function]}
                                       >
-                                        <ReactOverlaysDropdown
-                                          itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
-                                          onToggle={[Function]}
+                                        <div
+                                          className="pl-3 dropdown"
                                         >
-                                          <div
-                                            className="pl-3 dropdown"
-                                          >
-                                            <DropdownToggle
-                                              as={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "render": [Function],
-                                                }
+                                          <DropdownToggle
+                                            as={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "render": [Function],
                                               }
+                                            }
+                                          >
+                                            <ForwardRef
+                                              aria-expanded={false}
+                                              aria-haspopup={true}
+                                              className="dropdown-toggle"
+                                              onClick={[Function]}
                                             >
-                                              <ForwardRef
-                                                aria-expanded={false}
-                                                aria-haspopup={true}
-                                                className="dropdown-toggle"
+                                              <a
+                                                href="#"
                                                 onClick={[Function]}
                                               >
-                                                <a
-                                                  href="#"
-                                                  onClick={[Function]}
-                                                >
+                                                <Memo()>
                                                   <Image
                                                     alt="ProfilePhoto"
-                                                    className="profile-picture"
                                                     fluid={false}
                                                     rounded={false}
                                                     roundedCircle={true}
+                                                    style={
+                                                      Object {
+                                                        "width": 30,
+                                                      }
+                                                    }
                                                     thumbnail={false}
                                                   >
                                                     <img
                                                       alt="ProfilePhoto"
-                                                      className="profile-picture rounded-circle"
+                                                      className="rounded-circle"
+                                                      style={
+                                                        Object {
+                                                          "width": 30,
+                                                        }
+                                                      }
                                                     />
                                                   </Image>
-                                                </a>
-                                              </ForwardRef>
-                                            </DropdownToggle>
-                                            <DropdownMenu
-                                              align="left"
-                                              alignRight={false}
-                                              flip={true}
-                                            />
-                                          </div>
-                                        </ReactOverlaysDropdown>
-                                      </Dropdown>
-                                    </DropdownMenu>
-                                  </ProfileDropdown>
+                                                </Memo()>
+                                              </a>
+                                            </ForwardRef>
+                                          </DropdownToggle>
+                                          <DropdownMenu
+                                            align="left"
+                                            alignRight={false}
+                                            flip={true}
+                                          />
+                                        </div>
+                                      </ReactOverlaysDropdown>
+                                    </Dropdown>
+                                  </Memo()>
                                 </div>
                               </ForwardRef>
                             </Nav>
@@ -455,7 +462,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                   </LoginModalDesktop>
                 </nav>
               </Navbar>
-            </NavigationBarDesktop>
+            </Memo(NavigationBarDesktop)>
           </Desktop>
           <Mobile />
         </Responsiveness>
@@ -507,7 +514,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
       >
         <Responsiveness
           desktop={
-            <NavigationBarDesktop
+            <UNDEFINED
               authUser={Object {}}
               dispatch={[Function]}
               loadFadeIn={false}
@@ -796,69 +803,76 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                     </NavLinks>
                                   </NavigationBar>
                                 </Connect(NavigationBar)>
-                                <ProfileDropdown
+                                <Memo()
                                   authUser={Object {}}
                                   dispatch={[Function]}
                                   toggleModal={[Function]}
                                 >
-                                  <DropdownMenu
-                                    user={Object {}}
+                                  <Dropdown
+                                    className="pl-3"
+                                    navbar={false}
                                   >
-                                    <Dropdown
-                                      className="pl-3"
-                                      navbar={false}
+                                    <ReactOverlaysDropdown
+                                      itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
+                                      onToggle={[Function]}
                                     >
-                                      <ReactOverlaysDropdown
-                                        itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
-                                        onToggle={[Function]}
+                                      <div
+                                        className="pl-3 dropdown"
                                       >
-                                        <div
-                                          className="pl-3 dropdown"
-                                        >
-                                          <DropdownToggle
-                                            as={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "render": [Function],
-                                              }
+                                        <DropdownToggle
+                                          as={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "render": [Function],
                                             }
+                                          }
+                                        >
+                                          <ForwardRef
+                                            aria-expanded={false}
+                                            aria-haspopup={true}
+                                            className="dropdown-toggle"
+                                            onClick={[Function]}
                                           >
-                                            <ForwardRef
-                                              aria-expanded={false}
-                                              aria-haspopup={true}
-                                              className="dropdown-toggle"
+                                            <a
+                                              href="#"
                                               onClick={[Function]}
                                             >
-                                              <a
-                                                href="#"
-                                                onClick={[Function]}
-                                              >
+                                              <Memo()>
                                                 <Image
                                                   alt="ProfilePhoto"
-                                                  className="profile-picture"
                                                   fluid={false}
                                                   rounded={false}
                                                   roundedCircle={true}
+                                                  style={
+                                                    Object {
+                                                      "width": 30,
+                                                    }
+                                                  }
                                                   thumbnail={false}
                                                 >
                                                   <img
                                                     alt="ProfilePhoto"
-                                                    className="profile-picture rounded-circle"
+                                                    className="rounded-circle"
+                                                    style={
+                                                      Object {
+                                                        "width": 30,
+                                                      }
+                                                    }
                                                   />
                                                 </Image>
-                                              </a>
-                                            </ForwardRef>
-                                          </DropdownToggle>
-                                          <DropdownMenu
-                                            align="left"
-                                            alignRight={false}
-                                            flip={true}
-                                          />
-                                        </div>
-                                      </ReactOverlaysDropdown>
-                                    </Dropdown>
-                                  </DropdownMenu>
-                                </ProfileDropdown>
+                                              </Memo()>
+                                            </a>
+                                          </ForwardRef>
+                                        </DropdownToggle>
+                                        <DropdownMenu
+                                          align="left"
+                                          alignRight={false}
+                                          flip={true}
+                                        />
+                                      </div>
+                                    </ReactOverlaysDropdown>
+                                  </Dropdown>
+                                </Memo()>
                               </div>
                             </ForwardRef>
                           </Nav>
@@ -975,7 +989,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
       >
         <Responsiveness
           desktop={
-            <NavigationBarDesktop
+            <UNDEFINED
               authUser={Object {}}
               dispatch={[Function]}
               loadFadeIn={false}
@@ -1264,69 +1278,76 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                     </NavLinks>
                                   </NavigationBar>
                                 </Connect(NavigationBar)>
-                                <ProfileDropdown
+                                <Memo()
                                   authUser={Object {}}
                                   dispatch={[Function]}
                                   toggleModal={[Function]}
                                 >
-                                  <DropdownMenu
-                                    user={Object {}}
+                                  <Dropdown
+                                    className="pl-3"
+                                    navbar={false}
                                   >
-                                    <Dropdown
-                                      className="pl-3"
-                                      navbar={false}
+                                    <ReactOverlaysDropdown
+                                      itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
+                                      onToggle={[Function]}
                                     >
-                                      <ReactOverlaysDropdown
-                                        itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
-                                        onToggle={[Function]}
+                                      <div
+                                        className="pl-3 dropdown"
                                       >
-                                        <div
-                                          className="pl-3 dropdown"
-                                        >
-                                          <DropdownToggle
-                                            as={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "render": [Function],
-                                              }
+                                        <DropdownToggle
+                                          as={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "render": [Function],
                                             }
+                                          }
+                                        >
+                                          <ForwardRef
+                                            aria-expanded={false}
+                                            aria-haspopup={true}
+                                            className="dropdown-toggle"
+                                            onClick={[Function]}
                                           >
-                                            <ForwardRef
-                                              aria-expanded={false}
-                                              aria-haspopup={true}
-                                              className="dropdown-toggle"
+                                            <a
+                                              href="#"
                                               onClick={[Function]}
                                             >
-                                              <a
-                                                href="#"
-                                                onClick={[Function]}
-                                              >
+                                              <Memo()>
                                                 <Image
                                                   alt="ProfilePhoto"
-                                                  className="profile-picture"
                                                   fluid={false}
                                                   rounded={false}
                                                   roundedCircle={true}
+                                                  style={
+                                                    Object {
+                                                      "width": 30,
+                                                    }
+                                                  }
                                                   thumbnail={false}
                                                 >
                                                   <img
                                                     alt="ProfilePhoto"
-                                                    className="profile-picture rounded-circle"
+                                                    className="rounded-circle"
+                                                    style={
+                                                      Object {
+                                                        "width": 30,
+                                                      }
+                                                    }
                                                   />
                                                 </Image>
-                                              </a>
-                                            </ForwardRef>
-                                          </DropdownToggle>
-                                          <DropdownMenu
-                                            align="left"
-                                            alignRight={false}
-                                            flip={true}
-                                          />
-                                        </div>
-                                      </ReactOverlaysDropdown>
-                                    </Dropdown>
-                                  </DropdownMenu>
-                                </ProfileDropdown>
+                                              </Memo()>
+                                            </a>
+                                          </ForwardRef>
+                                        </DropdownToggle>
+                                        <DropdownMenu
+                                          align="left"
+                                          alignRight={false}
+                                          flip={true}
+                                        />
+                                      </div>
+                                    </ReactOverlaysDropdown>
+                                  </Dropdown>
+                                </Memo()>
                               </div>
                             </ForwardRef>
                           </Nav>
