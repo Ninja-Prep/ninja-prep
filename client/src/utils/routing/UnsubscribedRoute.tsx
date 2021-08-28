@@ -27,24 +27,18 @@ const connector = connect(mapStateToProps);
 type Props = {
   fallbackRedirectTo: string;
   unsubscribedComponent: React.ComponentType<RouteComponentProps>;
-  layout: React.ComponentType<{children: React.ReactChild | React.ReactChild[]}>;
 } & ConnectedProps<typeof connector> &
   RouteProps;
 
-class ProtectedRoute extends React.Component<Props> {
+class UnsubscribedRoute extends React.Component<Props> {
   render(): JSX.Element | null {
     const UnsubscribedComponent = this.props.unsubscribedComponent;
-    const Layout = this.props.layout;
 
     if (this.props.isUnsubscribedUser && UnsubscribedComponent) {
-      return (
-        <Layout>
-          <RouteWrapper component={UnsubscribedComponent} />
-        </Layout>
-      );
+      return <RouteWrapper component={UnsubscribedComponent} />;
     }
     return <Redirect to={this.props.fallbackRedirectTo} />;
   }
 }
 
-export default connector(ProtectedRoute);
+export default connector(UnsubscribedRoute);

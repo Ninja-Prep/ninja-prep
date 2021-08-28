@@ -8,9 +8,6 @@ interface Props extends RouteProps {
   component: React.ComponentType<RouteComponentProps>;
 }
 
-/**
- *
- */
 function RouteWrapper({component: Component, ...rest}: Props): JSX.Element {
   return (
     <Route
@@ -18,7 +15,7 @@ function RouteWrapper({component: Component, ...rest}: Props): JSX.Element {
       render={(props) => {
         return (
           <FadeIn delay={200} transitionDuration={1500} key={props.location.pathname}>
-            <Component {...props} />;
+            <Component {...props} />
           </FadeIn>
         );
       }}

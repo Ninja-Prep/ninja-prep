@@ -10,7 +10,7 @@ export async function checkout(req: Request, res: Response): Promise<void> {
   // See https://stripe.com/docs/api/checkout/sessions/create
   // for additional parameters to pass.
   const userEmail = req.body.userEmail;
-  const userId = req.session.user?._id;
+  const userId = req.session.user?.userId;
   if (userId) {
     try {
       const session = await stripe.checkout.sessions.create({
@@ -59,7 +59,7 @@ export async function webhook(req: Request, res: Response): Promise<void> {
   switch (event.type) {
     case 'checkout.session.completed':
       const paymentIntent = event.data.object;
-      addPremiumStatus(paymentIntent);
+      await addPremiumStatus(paymentIntent);
       // Then define and call a method to handle the successful payment intent.
       // handlePaymentIntentSucceeded(paymentIntent);
       break;
@@ -72,10 +72,10 @@ export async function webhook(req: Request, res: Response): Promise<void> {
 }
 
 async function addPremiumStatus(session: Stripe.Checkout.Session) {
-  if (session.subscription) {
+  if (session.subscription && session.client_reference_id) {
     const subscriptionId = session.subscription as string;
     const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-    User.findOneAndUpdate({id: session.client_reference_id}, {premiumExpirationDate: new Date(subscription.current_period_end * 1000)}, {new: true});
+    await User.findOneAndUpdate({userId: session.client_reference_id}, {premiumExpirationDate: new Date(subscription.current_period_end * 1000)}, {new: true});
   }
 }
 
@@ -84,7 +84,7 @@ export async function getCheckoutSession(req: Request, res: Response): Promise<v
 
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-    if (session.client_reference_id !== req.session.user?._id) {
+    if (session.client_reference_id !== req.session.user?.userId) {
       res.status(400);
       res.send();
       return;

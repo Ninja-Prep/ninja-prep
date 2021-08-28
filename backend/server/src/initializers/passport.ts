@@ -22,7 +22,7 @@ passport.use(
         throw new Error('Missing User Email');
       }
       const input: FindOrCreateUserInput = {
-        id: profile.id,
+        userId: profile.id,
         firstName: profile.name?.givenName || DEFAULT_NINJAPREP_NAME,
         profilePicture: profile.photos && profile.photos[0].value,
         email: profile.emails[0].value,
@@ -49,7 +49,7 @@ passport.use(
         throw new Error('Missing User Email');
       }
       const input: FindOrCreateUserInput = {
-        id: profile.id,
+        userId: profile.id,
         firstName: profile.name?.givenName || DEFAULT_NINJAPREP_NAME,
         profilePicture: profile.photos && profile.photos[0].value,
         email: profile.emails[0].value,
@@ -80,7 +80,7 @@ passport.use(
         throw new Error('Missing User Email');
       }
       const input: FindOrCreateUserInput = {
-        id: profile.id,
+        userId: profile.id,
         firstName: profile.displayName || profile.username || DEFAULT_NINJAPREP_NAME,
         profilePicture: profile.photos && profile.photos[0].value,
         email: profile.emails[0].value,
@@ -102,7 +102,7 @@ passport.serializeUser(function (user: Express.User, done: Done) {
 });
 
 passport.deserializeUser(function (user: IUserDocument, done: (err: Error, user?: Express.User | false | null) => void) {
-  User.findById(user._id, function (err: Error, user: boolean | Express.User) {
+  User.findOne({userId: user.userId}, function (err: Error, user: boolean | Express.User) {
     done(err, user);
   });
 });

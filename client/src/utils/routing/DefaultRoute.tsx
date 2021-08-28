@@ -5,20 +5,14 @@ import {RouteComponentProps, RouteProps} from 'react-router';
 import RouteWrapper from './RouteWrapper';
 
 type Props = {
-  component: React.ComponentType<RouteComponentProps>;
-  layout: React.ComponentType<{children: React.ReactChild | React.ReactChild[]}>;
+  component: React.ComponentType<RouteComponentProps<any>> | React.ComponentClass<any>;
 } & RouteProps;
 
 class DefaultRoute extends React.Component<Props> {
   render(): JSX.Element {
     const Component = this.props.component;
-    const Layout = this.props.layout;
 
-    return (
-      <Layout>
-        <RouteWrapper component={Component} />
-      </Layout>
-    );
+    return <RouteWrapper {...this.props} component={Component} />;
   }
 }
 

@@ -7,6 +7,8 @@ import qs from 'query-string';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import AsyncSpinner from 'utils/AsyncSpinner';
+import {getAndSetUser} from 'redux/auth/actions';
+
 import OrderSuccessNotFound from 'components/OrderSuccess/OrderSuccessNotFound';
 
 const mapStateToProps = (state: RootState) => {
@@ -15,7 +17,7 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const connector = connect(mapStateToProps);
+const connector = connect(mapStateToProps, {getAndSetUser});
 type OrderSuccessProps = {} & MatchProps & ConnectedProps<typeof connector>;
 type State = {
   isLoadingCheckoutSession: boolean;
@@ -35,6 +37,7 @@ class OrderSuccessContainer extends Component<OrderSuccessProps, State> {
     const sessionId = query.session_id as string;
     try {
       const checkoutSession = await getCheckoutSession(sessionId);
+      await this.props.getAndSetUser();
       this.setState({isLoadingCheckoutSession: false, email: checkoutSession.email, expirationDate: checkoutSession.expirationDate});
     } catch (error) {
       this.setState({isLoadingCheckoutSession: false, error: error});
