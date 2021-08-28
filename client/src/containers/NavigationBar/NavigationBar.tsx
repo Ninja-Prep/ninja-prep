@@ -25,10 +25,6 @@ class NavigationBar extends Component<Props, State> {
     loadFadeIn: false,
   };
 
-  constructor(props: Props) {
-    super(props);
-  }
-
   shouldComponentUpdate(nextProps: Props) {
     if (nextProps.isLoadingUser !== this.props.isLoadingUser) {
       this.setState({loadFadeIn: true});

@@ -12,7 +12,7 @@ import FooterBarComponent from 'components/FooterBar/FooterBarComponent';
 import NavigationBar from 'containers/NavigationBar/NavigationBar';
 
 import {FooterMargin, HeaderPadding} from './styledLayouts';
-import {RouteComponentProps, RouteProps} from 'react-router';
+import {RouteProps} from 'react-router';
 
 interface Props extends RouteProps {
   children: React.ReactChild | React.ReactChild[];

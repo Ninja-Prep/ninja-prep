@@ -1,4 +1,4 @@
-import {Button, Container} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';

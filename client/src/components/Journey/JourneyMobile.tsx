@@ -18,12 +18,10 @@ function JourneyMobile() {
     return (
       <Col className="py-5">
         <Row className="mx-auto mb-2">
-          <img className="mx-auto img-fluid w-50" src={props.imagePath} />
+          <img className="mx-auto img-fluid w-50" src={props.imagePath} alt="" />
         </Row>
         <Row>
-          <h4 className="font-weight-bold mx-auto pb-2 text-center">
-            {props.title}
-          </h4>
+          <h4 className="font-weight-bold mx-auto pb-2 text-center">{props.title}</h4>
           <p className="lead text-secondary text-center">{props.description}</p>
         </Row>
       </Col>
@@ -37,12 +35,7 @@ function JourneyMobile() {
           <p className="lead">{JOURNEY_DESCRIPTION}</p>
         </div>
         {JourneyList.map((card, i) => (
-          <JourneyCard
-            key={i}
-            imagePath={card.imagePath}
-            title={card.title}
-            description={card.description}
-          />
+          <JourneyCard key={i} imagePath={card.imagePath} title={card.title} description={card.description} />
         ))}
       </Container>
     </div>

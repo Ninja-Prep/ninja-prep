@@ -18,7 +18,7 @@ function JourneyTablet() {
     return (
       <Row className="py-5">
         <Col className="pr-5">
-          <img className="float-right img-fluid" src={props.imagePath} />
+          <img className="float-right img-fluid" src={props.imagePath} alt="" />
         </Col>
         <Col className="my-auto pl-5">
           <h4 className="font-weight-bold">{props.title}</h4>
@@ -35,12 +35,7 @@ function JourneyTablet() {
           <p className="lead">{JOURNEY_DESCRIPTION}</p>
         </div>
         {JourneyList.map((card, i) => (
-          <JourneyCard
-            key={i}
-            imagePath={card.imagePath}
-            title={card.title}
-            description={card.description}
-          />
+          <JourneyCard key={i} imagePath={card.imagePath} title={card.title} description={card.description} />
         ))}
       </Container>
     </div>

@@ -4,7 +4,7 @@ Wrapper component to add
 - Modal
 - Logged in dropdown
 */
-import React, {Fragment, useState} from 'react';
+import React, {Fragment} from 'react';
 
 import {useToggler} from 'containers/NavigationBar/hooks/useToggler';
 import {Navbar, Nav} from 'react-bootstrap';
