@@ -1,5 +1,5 @@
 import React from 'react';
-import OrderSuccess from 'components/OrderSuccess/OrderSuccess';
+import OrderSuccess from 'containers/OrderSuccess/OrderSuccess';
 import ChallengesPage from 'pages/ChallengesPage/ChallengesPage';
 import LandingPage from 'pages/LandingPage';
 import MeetTheTeamPage from 'pages/MeetTheTeamPage';
