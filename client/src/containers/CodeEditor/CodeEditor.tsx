@@ -51,13 +51,7 @@ class CodeEditorContainer extends Component<Props, State> {
   }
 
   render(): JSX.Element {
-    return (
-      <CodeEditor
-        textValue={this.props.textValue}
-        textHandler={(value: string) => this.textHandler(value)}
-        editorConfig={this.props}
-      />
-    );
+    return <CodeEditor textValue={this.props.textValue} textHandler={(value: string) => this.textHandler(value)} editorConfig={this.props} />;
   }
 }
 

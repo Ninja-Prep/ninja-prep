@@ -1,8 +1,4 @@
-import {
-  getChallengesList,
-  getProblemDetails,
-  getStarterCode,
-} from './controller';
+import {getChallengesList, getProblemDetails, getStarterCode} from './controller';
 import express from 'express';
 
 const router = express.Router();

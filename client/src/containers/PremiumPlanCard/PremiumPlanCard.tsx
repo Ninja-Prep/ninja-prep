@@ -8,7 +8,6 @@ import {PurchasePlan} from 'utils/types/plans/plans';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import LoginModalDesktop from 'components/NavigationBar/modals/LoginModalDesktop';
-import {useToggler} from 'containers/NavigationBar/hooks/useToggler';
 
 const mapStateToProps = (state: RootState) => {
   return {

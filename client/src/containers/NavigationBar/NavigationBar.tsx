@@ -35,6 +35,7 @@ class NavigationBar extends Component<Props, State> {
     }
     return !!nextProps.authUser !== !!this.props.authUser || nextProps.isLoadingUser !== this.props.isLoadingUser;
   }
+
   render(): JSX.Element {
     const desktopComponent = <NavigationBarDesktop {...this.props} loadFadeIn={this.state.loadFadeIn} />;
     const mobileComponent = <NavigationBarMobile {...this.props} />;

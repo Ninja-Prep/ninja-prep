@@ -7,6 +7,8 @@ export interface Toggler {
 
 export function useToggler(): Toggler {
   const [isOn, setStatus] = useState(false);
-  const toggle = () => setStatus(!isOn);
+  const toggle = () => {
+    setStatus(!isOn);
+  };
   return {isOn, toggle};
 }

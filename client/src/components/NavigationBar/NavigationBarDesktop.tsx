@@ -4,7 +4,7 @@ Wrapper component to add
 - Modal
 - Logged in dropdown
 */
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 
 import {useToggler} from 'containers/NavigationBar/hooks/useToggler';
 import {Navbar, Nav} from 'react-bootstrap';
@@ -27,7 +27,9 @@ interface NavBarProps {
 function NavigationBarDesktop(props: NavBarProps): JSX.Element {
   // For Shortcuts Icon
   const {isOn, toggle} = useToggler();
+
   const loadFadeIn = props.loadFadeIn;
+
   let NavBarContent = (
     <Navbar.Collapse>
       <Nav className="ml-auto pr-5 mr-5">
@@ -55,4 +57,4 @@ function NavigationBarDesktop(props: NavBarProps): JSX.Element {
   );
 }
 
-export default NavigationBarDesktop;
+export default React.memo(NavigationBarDesktop);

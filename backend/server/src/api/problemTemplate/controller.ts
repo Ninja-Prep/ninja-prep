@@ -3,10 +3,7 @@ import Problem, {IProblemDocument} from '@models/ProblemDetails';
 import ProblemLanguageTemplate from '@models/ProblemLanguageTemplate';
 import _ from 'lodash';
 
-export async function getChallengesList(
-  req: Request,
-  res: Response,
-): Promise<void> {
+export async function getChallengesList(req: Request, res: Response): Promise<void> {
   const publicChallengesFields = ['title', 'problemPath'];
 
   const challenges = await Problem.find();
@@ -17,19 +14,14 @@ export async function getChallengesList(
   res.send(filteredChallenges);
 }
 
-export async function getProblemDetails(
-  req: Request,
-  res: Response,
-): Promise<void> {
+export async function getProblemDetails(req: Request, res: Response): Promise<void> {
   const language = req.body.programmingLanguage?.toLowerCase() || 'java';
   const problem = await Problem.findOne({
     problemPath: req.params.problemPath,
   });
   if (problem) {
     const templateObjectId = problem.templates.get(language);
-    const problemTemplateCode = await ProblemLanguageTemplate.findById(
-      templateObjectId,
-    );
+    const problemTemplateCode = await ProblemLanguageTemplate.findById(templateObjectId);
 
     const starterCode = problemTemplateCode?.starterCodeSnippet;
     const title = problem.title;
@@ -42,19 +34,14 @@ export async function getProblemDetails(
   }
 }
 
-export async function getStarterCode(
-  req: Request,
-  res: Response,
-): Promise<void> {
+export async function getStarterCode(req: Request, res: Response): Promise<void> {
   const language = req.body.programmingLanguage?.toLowerCase() || 'java';
   const problem = await Problem.findOne({
     problemPath: req.params.problemPath,
   });
   if (problem) {
     const templateObjectId = problem.templates.get(language);
-    const problemTemplateCode = await ProblemLanguageTemplate.findById(
-      templateObjectId,
-    );
+    const problemTemplateCode = await ProblemLanguageTemplate.findById(templateObjectId);
     const starterCode = problemTemplateCode?.starterCodeSnippet;
     res.send({starterCode});
   } else {

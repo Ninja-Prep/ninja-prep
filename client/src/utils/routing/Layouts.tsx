@@ -12,33 +12,39 @@ import FooterBarComponent from 'components/FooterBar/FooterBarComponent';
 import NavigationBar from 'containers/NavigationBar/NavigationBar';
 
 import {FooterMargin, HeaderPadding} from './styledLayouts';
+import {RouteComponentProps, RouteProps} from 'react-router';
 
-interface Props {
+interface Props extends RouteProps {
   children: React.ReactChild | React.ReactChild[];
+  hasFooter?: boolean;
 }
 
-export const HeaderLayout = ({children}: Props): JSX.Element => (
+export const HeaderLayout = React.memo(
+  ({children}: Props): JSX.Element => (
+    <HeaderPadding>
+      <NavigationBar />
+      {children}
+    </HeaderPadding>
+  ),
+);
+
+export const FooterLayout = React.memo(
+  ({children}: Props): JSX.Element => (
+    <div>
+      {children}
+      <FooterMargin>
+        <FooterBarComponent />
+      </FooterMargin>
+    </div>
+  ),
+);
+
+export const HeaderandFooterLayout: FunctionComponent<Props> = React.memo(({children, hasFooter}: Props) => (
   <HeaderPadding>
     <NavigationBar />
     {children}
-  </HeaderPadding>
-);
-
-export const FooterLayout = ({children}: Props): JSX.Element => (
-  <div>
-    {children}
-    <FooterMargin>
-      <FooterBarComponent />
-    </FooterMargin>
-  </div>
-);
-
-export const HeaderandFooterLayout: FunctionComponent<Props> = ({children}: Props) => (
-  <HeaderPadding>
-    <NavigationBar />
-    {children}
-    <FooterMargin>
+    <FooterMargin style={hasFooter ? {} : {display: 'none'}}>
       <FooterBarComponent />
     </FooterMargin>
   </HeaderPadding>
-);
+));
