@@ -9,6 +9,7 @@ export interface IProblem {
   title: string;
   description: string;
   hints: string[];
+  isFree: boolean;
   problemPath: string;
   inputTestCases: string[];
   templates: Map<string, mongoose.Types.ObjectId>;
@@ -30,6 +31,7 @@ const ProblemSchema: mongoose.Schema = new mongoose.Schema({
   },
   checkerCodeSnippet: {type: String, required: true},
   validateTestCaseSnippet: {type: String, required: true},
+  isFree: {type: Boolean},
 });
 
 export default mongoose.model<IProblemDocument>('Problems', ProblemSchema);

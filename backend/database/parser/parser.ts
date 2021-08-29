@@ -8,6 +8,7 @@ import path from 'path';
 export interface jsonTags {
   title: string;
   problemPath: string;
+  isFree: boolean;
   hints: string[];
 }
 

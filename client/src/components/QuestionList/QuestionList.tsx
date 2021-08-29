@@ -4,18 +4,16 @@ import QuestionCard from 'components/QuestionCard/QuestionCard';
 import FadeIn from 'react-fade-in';
 import {ChallengeLink} from 'utils/types/challenges';
 
-const QuestionList = (props: {
+interface Props {
   challengeLinks: ChallengeLink[];
-}): JSX.Element => {
+  isPremiumUser?: boolean;
+}
+
+const QuestionList = (props: Props): JSX.Element => {
   return (
-    <FadeIn delay={250} transitionDuration={450}>
+    <FadeIn>
       {props.challengeLinks.map((challenge: ChallengeLink) => {
-        return (
-          <QuestionCard
-            questionTitle={challenge.title}
-            path={challenge.problemPath}
-          />
-        );
+        return <QuestionCard challenge={challenge} isPremiumUser={props.isPremiumUser} />;
       })}
     </FadeIn>
   );

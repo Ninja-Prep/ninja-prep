@@ -2,6 +2,7 @@ import {DockerSubmissionResult} from 'services/docker/docker';
 import {Request, Response} from 'express';
 import {StatusCode, convertRuntimeVerdictExitCodes} from 'services/docker/statusCodes';
 import {logger} from '@logger/logger';
+import User from '@models/User';
 
 export async function submitProblem(req: Request, res: Response): Promise<void> {
   try {
@@ -10,6 +11,10 @@ export async function submitProblem(req: Request, res: Response): Promise<void> 
     const userOutput = await dockerService.executeCode(problemSubmissionInput);
     const judgedTestCases = formatTestCases(userOutput.testCaseResults);
 
+    const verdict = getVerdict(judgedTestCases);
+    if (req.session.user && verdict === StatusCode.Accepted) {
+      await User.updateOne({userId: req.session.user?.userId}, {$addToSet: {completedProblems: req.params.problemPath}});
+    }
     res.send({
       judgedTestCases: judgedTestCases,
       verdict: getVerdict(judgedTestCases),

@@ -5,4 +5,5 @@ export type User = {
   readonly premiumExpirationDate: Date;
   readonly email: string;
   readonly oauthProvider: string;
+  readonly completedProblems: string[];
 } | null;

@@ -20,7 +20,7 @@ export const setUser = (user: User): Action<string, User> => ({
 });
 
 export function getAndSetUser() {
-  return async function (dispatch: Dispatch, getState: GetState): Promise<void> {
+  return async function (dispatch: Dispatch): Promise<void> {
     dispatch({type: LOADING_USER});
     const user = await getUser();
     dispatch({type: SET_USER, payload: user});

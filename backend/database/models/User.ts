@@ -7,6 +7,7 @@ export interface IUserDocument {
   profilePicture: string;
   email: string;
   oauthProvider: string;
+  completedProblems: string[];
 }
 
 export interface FindOrCreateUserInput {
@@ -29,6 +30,7 @@ const userSchema = new mongoose.Schema<IUserDocument, IUserModel>({
   profilePicture: String,
   email: String,
   oauthProvider: String,
+  completedProblems: [String],
 });
 
 userSchema.statics.findOrCreate = async function (
@@ -54,6 +56,7 @@ userSchema.statics.findOrCreate = async function (
       profilePicture: input.profilePicture,
       email: input.email,
       oauthProvider: input.oauthProvider,
+      completedProblems: [],
     }).save();
   }
   callback(null, user);

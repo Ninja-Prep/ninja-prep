@@ -1,5 +1,9 @@
 {
-    "title": "Two Sum",
-    "problemPath": "Two-Sum",
-    "hints": ["Can you improve runtime by sorting the array first?", "Think about how to use two pointers"]
+  "title": "Two Sum",
+  "problemPath": "Two-Sum",
+  "hints": [
+    "Can you improve runtime by sorting the array first?",
+    "Think about how to use two pointers"
+  ],
+  "isFree": true
 }
