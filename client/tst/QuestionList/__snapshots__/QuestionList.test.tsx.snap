@@ -35,18 +35,21 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
       }
     }
   >
-    <QuestionListContainer>
-      <QuestionList
-        challengeLinks={Array []}
+    <Connect(QuestionListContainer)>
+      <QuestionListContainer
+        getAndSetUser={[Function]}
+        isPremiumUser={false}
       >
-        <FadeIn
-          delay={250}
-          transitionDuration={450}
+        <QuestionList
+          challengeLinks={Array []}
+          isPremiumUser={false}
         >
-          <div />
-        </FadeIn>
-      </QuestionList>
-    </QuestionListContainer>
+          <FadeIn>
+            <div />
+          </FadeIn>
+        </QuestionList>
+      </QuestionListContainer>
+    </Connect(QuestionListContainer)>
   </Router>
 </Provider>
 `;
@@ -86,18 +89,21 @@ exports[`matches snapshot on "MOBILE" 1`] = `
       }
     }
   >
-    <QuestionListContainer>
-      <QuestionList
-        challengeLinks={Array []}
+    <Connect(QuestionListContainer)>
+      <QuestionListContainer
+        getAndSetUser={[Function]}
+        isPremiumUser={false}
       >
-        <FadeIn
-          delay={250}
-          transitionDuration={450}
+        <QuestionList
+          challengeLinks={Array []}
+          isPremiumUser={false}
         >
-          <div />
-        </FadeIn>
-      </QuestionList>
-    </QuestionListContainer>
+          <FadeIn>
+            <div />
+          </FadeIn>
+        </QuestionList>
+      </QuestionListContainer>
+    </Connect(QuestionListContainer)>
   </Router>
 </Provider>
 `;
@@ -137,18 +143,21 @@ exports[`matches snapshot on "TABLET" 1`] = `
       }
     }
   >
-    <QuestionListContainer>
-      <QuestionList
-        challengeLinks={Array []}
+    <Connect(QuestionListContainer)>
+      <QuestionListContainer
+        getAndSetUser={[Function]}
+        isPremiumUser={false}
       >
-        <FadeIn
-          delay={250}
-          transitionDuration={450}
+        <QuestionList
+          challengeLinks={Array []}
+          isPremiumUser={false}
         >
-          <div />
-        </FadeIn>
-      </QuestionList>
-    </QuestionListContainer>
+          <FadeIn>
+            <div />
+          </FadeIn>
+        </QuestionList>
+      </QuestionListContainer>
+    </Connect(QuestionListContainer)>
   </Router>
 </Provider>
 `;
