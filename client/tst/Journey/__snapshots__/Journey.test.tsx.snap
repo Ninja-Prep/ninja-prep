@@ -49,6 +49,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Discover Img.png"
                         />
@@ -96,6 +97,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Videos Img.png"
                         />
@@ -143,6 +145,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Articles Img.png"
                         />
@@ -190,6 +193,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Feedback Img.png"
                         />
@@ -237,6 +241,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Job Img.png"
                         />
@@ -324,6 +329,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Discover Img.png"
                         />
@@ -370,6 +376,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Videos Img.png"
                         />
@@ -416,6 +423,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Articles Img.png"
                         />
@@ -462,6 +470,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Feedback Img.png"
                         />
@@ -508,6 +517,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Job Img.png"
                         />
@@ -592,6 +602,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Discover Img.png"
                         />
@@ -638,6 +649,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Videos Img.png"
                         />
@@ -684,6 +696,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Articles Img.png"
                         />
@@ -730,6 +743,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Feedback Img.png"
                         />
@@ -776,6 +790,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="pr-5 col"
                       >
                         <img
+                          alt=""
                           className="float-right img-fluid"
                           src="./images/Job Img.png"
                         />
@@ -852,6 +867,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Discover Img.png"
                         />
@@ -898,6 +914,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Videos Img.png"
                         />
@@ -944,6 +961,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Articles Img.png"
                         />
@@ -990,6 +1008,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Feedback Img.png"
                         />
@@ -1036,6 +1055,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                         className="mx-auto mb-2 row"
                       >
                         <img
+                          alt=""
                           className="mx-auto img-fluid w-50"
                           src="./images/Job Img.png"
                         />
