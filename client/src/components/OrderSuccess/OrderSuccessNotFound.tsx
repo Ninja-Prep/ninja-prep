@@ -2,7 +2,7 @@
 404 Not Found pages when user goes to route that does not exist
 */
 import React from 'react';
-import {Button, Container} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import {BoldThankYouHeader, OrderContainer, TextSizing, SubcontentPadding, ExploreProblemsIcon, ButtonContainer, ErrorIcon} from './styled';
 import {Link} from 'react-router-dom';
 import {ORDER_NOT_FOUND, MISSING_ORDER_TEXT, EXPLORE_PROBLEMS} from 'utils/stringIds.json';

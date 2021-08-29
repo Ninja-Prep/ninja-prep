@@ -6,39 +6,33 @@ Wrapper component to add
 */
 import React from 'react';
 
-import {useToggler} from 'containers/NavigationBar/hooks/useToggler';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import './NavigationBar.css';
 import {User} from 'utils/types/user';
 
 import {LightNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
-import ProfileDropdown from './dropdown/ProfileDropdown';
-import NavLinks from 'containers/NavigationBar/NavLinks';
-import NavigationBarLoginModalMobile from './modals/LoginModalMobile';
+import NavigationBarDropdownMenu from 'containers/NavigationBarDropdownMenu/NavigationBarDropdownMenu';
+import NavLinks from 'containers/NavigationLinks/NavigationLinks';
+import {FixedNavigationBar, NavigationDropdownPadding} from './styled';
+import LoginModal from 'containers/LoginModal/LoginModal';
 
-interface NavBarProps {
-  readonly authUser: User;
-  readonly isLoadingUser: boolean;
-}
-
-function NavigationBarMobile(props: NavBarProps): JSX.Element {
-  const {isOn, toggle} = useToggler();
-
+function NavigationBarMobile(): JSX.Element {
   return (
-    <Navbar fixed="top" expand="lg" className="pr-5 pl-2 py-3 navigation-bar" variant="dark">
-      <Navbar.Brand as={Link} to="/" className="pl-5 ml-5">
+    <FixedNavigationBar fixed="top" expand="lg" variant="dark">
+      <Navbar.Brand as={Link} to="/">
         <LightNinjaPrepLogo height={40} width={100} />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Toggle />
+      <Navbar.Collapse>
         <Nav>
           <NavLinks />
-          <ProfileDropdown {...props} toggleModal={toggle} />
+          <NavigationDropdownPadding>
+            <NavigationBarDropdownMenu />
+          </NavigationDropdownPadding>
         </Nav>
-        <NavigationBarLoginModalMobile {...props} showModal={isOn} toggleModal={toggle} />
+        <LoginModal />
       </Navbar.Collapse>
-    </Navbar>
+    </FixedNavigationBar>
   );
 }
 
