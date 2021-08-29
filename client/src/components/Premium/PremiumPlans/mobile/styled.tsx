@@ -10,5 +10,5 @@ export const FlexCardContainer = styled.div`
   flex-direction: column;
   gap: 3rem;
   margin: auto;
-  width: 50%;
+  width: 350px;
 `;
