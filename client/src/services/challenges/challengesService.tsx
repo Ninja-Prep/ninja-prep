@@ -12,23 +12,10 @@ export async function getChallengeLinks(): Promise<ChallengeLink[]> {
     })
   ).data;
 
-  const challenges: ChallengeLink[] = challengesResponse.map(
-    // eslint-disable-next-line camelcase
-    (challenge: {title: string; problemPath: string}) => {
-      return {
-        title: challenge.title,
-        problemPath: challenge.problemPath,
-      };
-    },
-  );
-
-  return challenges;
+  return challengesResponse;
 }
 
-export const getProblemDetails = async (
-  paramsId: string,
-  programmingLanguage: string,
-): Promise<ProblemDetails> => {
+export const getProblemDetails = async (paramsId: string, programmingLanguage: string): Promise<ProblemDetails> => {
   const responseData = (
     await axios({
       method: 'POST',
@@ -45,6 +32,7 @@ export const getProblemDetails = async (
     starterCode: responseData.starterCode,
     testCases: responseData.testCases,
     title: responseData.title,
+    isFree: responseData.isFree,
   };
   return problemDetails;
 };
@@ -55,10 +43,7 @@ export const getProblemDetails = async (
  * @param programmingLanguage
  * @returns the starter code for the problem in the selected language.
  */
-export const getStarterCode = async (
-  paramsId: string,
-  programmingLanguage: string,
-): Promise<string> => {
+export const getStarterCode = async (paramsId: string, programmingLanguage: string): Promise<string> => {
   const responseData = (
     await axios({
       method: 'POST',

@@ -18,6 +18,7 @@ interface UpdateFields {
   inputTestCases: string[];
   checkerCodeSnippet: string;
   validateTestCaseSnippet: string;
+  isFree: boolean;
   $set: {
     [x: string]: mongoose.Types.ObjectId;
   };
@@ -92,6 +93,7 @@ async function updateProblem(
     inputTestCases: problemBO.testCases,
     checkerCodeSnippet: problemBO.checkerFile,
     validateTestCaseSnippet: problemBO.validateTestCaseFile,
+    isFree: problemBO.problemTagsJson.isFree,
     $set: {
       [`templates.${language}`]: templateId,
     },

@@ -17,6 +17,8 @@ export type UserSubmissionOutput = {
 export interface ChallengeLink {
   readonly title: string;
   readonly problemPath: string;
+  readonly isFree: boolean;
+  readonly isCompleted?: boolean;
 }
 
 export type ProblemDetails = {
@@ -25,6 +27,7 @@ export type ProblemDetails = {
   readonly starterCode: string;
   readonly testCases: string[];
   readonly title: string;
+  readonly isFree: boolean;
 } | null;
 
 export function isUserSubmissionOutput(

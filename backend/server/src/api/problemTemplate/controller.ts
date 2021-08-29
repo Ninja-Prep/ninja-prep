@@ -1,17 +1,32 @@
 import {Request, Response} from 'express';
-import Problem, {IProblemDocument} from '@models/ProblemDetails';
+import Problem from '@models/ProblemDetails';
+import User from '@models/User';
+
 import ProblemLanguageTemplate from '@models/ProblemLanguageTemplate';
-import _ from 'lodash';
 
+interface ChallengeLink {
+  title: string;
+  problemPath: string;
+  isFree: boolean;
+  isCompleted?: boolean;
+}
 export async function getChallengesList(req: Request, res: Response): Promise<void> {
-  const publicChallengesFields = ['title', 'problemPath'];
-
-  const challenges = await Problem.find();
-  const filteredChallenges = challenges.map((challenge: IProblemDocument) => {
-    return _.pick(challenge, publicChallengesFields);
+  const challenges = await Problem.find({}, 'title problemPath isFree').exec();
+  const challengeLinks: ChallengeLink[] = challenges.map((challenge) => {
+    return {
+      title: challenge.title,
+      problemPath: challenge.problemPath,
+      isFree: challenge.isFree,
+    };
   });
 
-  res.send(filteredChallenges);
+  if (req.session.user) {
+    const user = await User.findOne({userId: req.session?.user?.userId}, 'completedProblems').exec();
+    challengeLinks.map((link) => {
+      link.isCompleted = user?.completedProblems.some((completedPath) => completedPath === link.problemPath);
+    });
+  }
+  res.send(challengeLinks);
 }
 
 export async function getProblemDetails(req: Request, res: Response): Promise<void> {
