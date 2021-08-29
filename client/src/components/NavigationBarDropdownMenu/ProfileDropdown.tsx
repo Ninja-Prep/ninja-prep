@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {SIGN_IN_NAVIGATION} from 'utils/stringIds.json';
 import {User} from 'utils/types/user';
@@ -58,7 +57,7 @@ const ProfileDropdown = (props: ProfileProps): JSX.Element => {
           <ImageWrapper roundedCircle src={props.authUser.profilePicture} alt="ProfilePhoto" />
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          {props.isPremium && (
+          {!props.isPremium && (
             <DropdownItem to="/Premium" as={Link} DropdownIcon={PremiumLockIcon}>
               <PremiumTextColor>{GET_PREMIUM_NAVIGATION}</PremiumTextColor>
             </DropdownItem>
@@ -66,7 +65,7 @@ const ProfileDropdown = (props: ProfileProps): JSX.Element => {
           <DropdownItem to="#/action-3" as={Link} DropdownIcon={BugReportIcon}>
             {REPORT_A_BUG}
           </DropdownItem>
-          <DropdownItem to="#/action-2" as={Link} DropdownIcon={SettingsIcon}>
+          <DropdownItem to="/settings" as={Link} DropdownIcon={SettingsIcon}>
             {SETTINGS}
           </DropdownItem>
           <Dropdown.Divider />

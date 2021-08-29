@@ -8,7 +8,6 @@ import React from 'react';
 
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import {User} from 'utils/types/user';
 
 import {LightNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
 import NavigationBarDropdownMenu from 'containers/NavigationBarDropdownMenu/NavigationBarDropdownMenu';

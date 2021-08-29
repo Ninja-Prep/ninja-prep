@@ -49,4 +49,13 @@ export function isPremiumUser(state: RootState): boolean {
   return false;
 }
 
+export function formattedPremiumExpirationDate(state: RootState): string | undefined {
+  const premiumExpirationDate = state.authReducer.authUser?.premiumExpirationDate;
+  if (premiumExpirationDate) {
+    const formattedDate = new Date(premiumExpirationDate).toLocaleString('default', {year: 'numeric', month: 'long', day: 'numeric'});
+    return formattedDate;
+  }
+  return undefined;
+}
+
 export default authReducer;
