@@ -5,9 +5,9 @@ import ReactGA from 'react-ga';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import {connect, ConnectedProps} from 'react-redux';
 import {getAndSetUser} from 'redux/auth/actions';
-import DefaultRoute from 'utils/routing/DefaultRoute';
-import HeaderNavbarRoute from 'utils/routing/HeaderNavbarRoute';
-import {AboutRoute, ChallengesRoute, Error404Route, LandingPageRoute, OrderSuccessRoute, PremiumRoute} from 'utils/routing/routes';
+import DefaultRoute from 'routing/DefaultRoute';
+import HeaderNavbarRoute from 'routing/HeaderNavbarRoute';
+import {AboutRoute, ChallengesRoute, Error404Route, LandingPageRoute, OrderSuccessRoute, PremiumRoute, SettingsPageRoute} from 'routing/routes';
 
 const connector = connect(null, {getAndSetUser});
 
@@ -27,8 +27,9 @@ class App extends Component<ConnectedProps<typeof connector>> {
           <HeaderNavbarRoute path="/challenges" exact routeComponent={ChallengesRoute} />
           <HeaderNavbarRoute path="/order/success" exact routeComponent={OrderSuccessRoute} hasFooter />
           <HeaderNavbarRoute path="/premium" exact routeComponent={PremiumRoute} hasFooter />
+          <HeaderNavbarRoute path="/settings" exact routeComponent={SettingsPageRoute} hasFooter />
           <DefaultRoute path="/problem/:id" exact component={ProblemSubmissionPage} />
-          <HeaderNavbarRoute path="/" exact routeComponent={Error404Route} hasFooter />
+          <HeaderNavbarRoute routeComponent={Error404Route} />
         </Switch>
       </Router>
     );
