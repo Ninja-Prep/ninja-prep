@@ -35,439 +35,530 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
       }
     }
   >
-    <Connect(NavigationBar)>
-      <NavigationBar
-        authUser={Object {}}
-        dispatch={[Function]}
-      >
-        <Responsiveness
-          desktop={
-            <UNDEFINED
-              authUser={Object {}}
-              dispatch={[Function]}
-              loadFadeIn={false}
-            />
-          }
-          mobile={
-            <NavigationBarMobile
-              authUser={Object {}}
-              dispatch={[Function]}
-            />
-          }
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Connect(NavigationBar)>
+        <NavigationBar
+          authUser={null}
+          isLoadingUser={false}
+          showLoginModal={false}
+          toggleLoginModal={[Function]}
         >
-          <Desktop>
-            <Memo(NavigationBarDesktop)
-              authUser={Object {}}
-              dispatch={[Function]}
-              loadFadeIn={false}
-            >
-              <Navbar
-                className="px-5 py-3 navigation-bar"
-                collapseOnSelect={false}
-                expand="lg"
-                fixed="top"
-                variant="dark"
-              >
-                <nav
-                  className="px-5 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
+          <Responsiveness
+            desktop={<UNDEFINED />}
+            mobile={
+              <NavigationBarMobile
+                authUser={null}
+                isLoadingUser={false}
+                showLoginModal={false}
+                toggleLoginModal={[Function]}
+              />
+            }
+          >
+            <Desktop>
+              <Memo(NavigationBarDesktop)>
+                <Styled(Navbar)
+                  expand="lg"
+                  fixed="top"
+                  variant="dark"
                 >
-                  <NavbarBrand
-                    as={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "Link",
-                        "propTypes": Object {
-                          "innerRef": [Function],
-                          "onClick": [Function],
-                          "replace": [Function],
-                          "target": [Function],
-                          "to": [Function],
-                        },
-                        "render": [Function],
-                      }
-                    }
-                    className="pl-5 ml-5"
-                    to="/"
+                  <Navbar
+                    className="sc-gtsrHT dSKHVb"
+                    collapseOnSelect={false}
+                    expand="lg"
+                    fixed="top"
+                    variant="dark"
                   >
-                    <Link
-                      className="pl-5 ml-5 navbar-brand"
-                      to="/"
+                    <nav
+                      className="sc-gtsrHT dSKHVb navbar navbar-expand-lg navbar-dark fixed-top"
                     >
-                      <LinkAnchor
-                        className="pl-5 ml-5 navbar-brand"
-                        href="/"
-                        navigate={[Function]}
+                      <styled.div>
+                        <div
+                          className="sc-dlnjwi bYEfmP"
+                        >
+                          <styled.div>
+                            <div
+                              className="sc-hKFxyN dIIkaJ"
+                            >
+                              <NavbarBrand
+                                as={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "displayName": "Link",
+                                    "propTypes": Object {
+                                      "innerRef": [Function],
+                                      "onClick": [Function],
+                                      "replace": [Function],
+                                      "target": [Function],
+                                      "to": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                to="/"
+                              >
+                                <Link
+                                  className="navbar-brand"
+                                  to="/"
+                                >
+                                  <LinkAnchor
+                                    className="navbar-brand"
+                                    href="/"
+                                    navigate={[Function]}
+                                  >
+                                    <a
+                                      className="navbar-brand"
+                                      href="/"
+                                      onClick={[Function]}
+                                    >
+                                      <LightNinjaPrepLogo
+                                        height={40}
+                                        width={100}
+                                      >
+                                        <svg
+                                          height={40}
+                                          viewBox="0 0 200 57"
+                                          width={100}
+                                        >
+                                          <g
+                                            data-name="Group 120"
+                                            id="Group_120"
+                                            transform="translate(-1157 -10208)"
+                                          >
+                                            <text
+                                              fill="#f9fbfd"
+                                              fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                                              fontSize="40"
+                                              fontWeight="700"
+                                              id="NinjaPrep"
+                                              transform="translate(1157 10249)"
+                                            >
+                                              <tspan
+                                                x="0"
+                                                y="0"
+                                              >
+                                                NinjaPrep
+                                              </tspan>
+                                            </text>
+                                            <circle
+                                              cx="7.5"
+                                              cy="7.5"
+                                              data-name="Ellipse 44"
+                                              fill="#25d0f3"
+                                              id="Ellipse_44"
+                                              r="7.5"
+                                              transform="translate(1342 10237)"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </LightNinjaPrepLogo>
+                                    </a>
+                                  </LinkAnchor>
+                                </Link>
+                              </NavbarBrand>
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <NavbarToggle
+                        label="Toggle navigation"
                       >
-                        <a
-                          className="pl-5 ml-5 navbar-brand"
-                          href="/"
+                        <button
+                          aria-label="Toggle navigation"
+                          className="navbar-toggler collapsed"
                           onClick={[Function]}
+                          type="button"
                         >
-                          <LightNinjaPrepLogo
-                            height={40}
-                            width={100}
-                          >
-                            <svg
-                              height={40}
-                              viewBox="0 0 200 57"
-                              width={100}
-                            >
-                              <g
-                                data-name="Group 120"
-                                id="Group_120"
-                                transform="translate(-1157 -10208)"
-                              >
-                                <text
-                                  fill="#f9fbfd"
-                                  fontFamily="SourceSansPro-Bold, Source Sans Pro"
-                                  fontSize="40"
-                                  fontWeight="700"
-                                  id="NinjaPrep"
-                                  transform="translate(1157 10249)"
-                                >
-                                  <tspan
-                                    x="0"
-                                    y="0"
-                                  >
-                                    NinjaPrep
-                                  </tspan>
-                                </text>
-                                <circle
-                                  cx="7.5"
-                                  cy="7.5"
-                                  data-name="Ellipse 44"
-                                  fill="#25d0f3"
-                                  id="Ellipse_44"
-                                  r="7.5"
-                                  transform="translate(1342 10237)"
-                                />
-                              </g>
-                            </svg>
-                          </LightNinjaPrepLogo>
-                        </a>
-                      </LinkAnchor>
-                    </Link>
-                  </NavbarBrand>
-                  <NavbarToggle
-                    label="Toggle navigation"
-                  >
-                    <button
-                      aria-label="Toggle navigation"
-                      className="navbar-toggler collapsed"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <span
-                        className="navbar-toggler-icon"
-                      />
-                    </button>
-                  </NavbarToggle>
-                  <div
-                    className="w-100"
-                  >
-                    <NavbarCollapse>
-                      <ForwardRef
-                        appear={false}
-                        getDimensionValue={[Function]}
-                        in={false}
-                        mountOnEnter={false}
-                        timeout={300}
-                        unmountOnExit={false}
-                      >
-                        <Transition
-                          addEndListener={[Function]}
-                          appear={false}
-                          aria-expanded={null}
-                          enter={true}
-                          exit={true}
-                          in={false}
-                          mountOnEnter={false}
-                          onEnter={[Function]}
-                          onEntered={[Function]}
-                          onEntering={[Function]}
-                          onExit={[Function]}
-                          onExited={[Function]}
-                          onExiting={[Function]}
-                          timeout={300}
-                          unmountOnExit={false}
+                          <span
+                            className="navbar-toggler-icon"
+                          />
+                        </button>
+                      </NavbarToggle>
+                      <styled.div>
+                        <div
+                          className="sc-bdnxRM eaWVJw"
                         >
-                          <div
-                            aria-expanded={null}
-                            className="navbar-collapse collapse"
-                          >
-                            <Nav
-                              className="ml-auto pr-5 mr-5"
-                              fill={false}
-                              justify={false}
+                          <styled.div>
+                            <div
+                              className="sc-eCApnc fylMYb"
                             >
-                              <ForwardRef
-                                as="div"
-                                className="ml-auto pr-5 mr-5 navbar-nav"
-                                onSelect={[Function]}
-                              >
-                                <div
-                                  className="ml-auto pr-5 mr-5 navbar-nav"
-                                  onKeyDown={[Function]}
+                              <Connect(NavigationBarContentContainer)>
+                                <NavigationBarContentContainer
+                                  isLoadingUser={false}
+                                  toggleLoginModal={[Function]}
                                 >
-                                  <Connect(NavigationBar)>
-                                    <NavigationBar
-                                      dispatch={[Function]}
-                                      isPremiumUser={false}
-                                    >
-                                      <NavLinks
-                                        isPremiumUser={false}
-                                      >
-                                        <styled.a
-                                          as={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "displayName": "Link",
-                                              "propTypes": Object {
-                                                "innerRef": [Function],
-                                                "onClick": [Function],
-                                                "replace": [Function],
-                                                "target": [Function],
-                                                "to": [Function],
-                                              },
-                                              "render": [Function],
-                                            }
-                                          }
-                                          to="/premium"
-                                        >
-                                          <Link
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            to="/premium"
-                                          >
-                                            <LinkAnchor
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/premium"
-                                              navigate={[Function]}
-                                            >
-                                              <a
-                                                className="sc-bdnxRM bWMeOf pl-3"
-                                                href="/premium"
-                                                onClick={[Function]}
-                                              >
-                                                Get Premium
-                                              </a>
-                                            </LinkAnchor>
-                                          </Link>
-                                        </styled.a>
-                                        <styled.a
-                                          as={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "displayName": "Link",
-                                              "propTypes": Object {
-                                                "innerRef": [Function],
-                                                "onClick": [Function],
-                                                "replace": [Function],
-                                                "target": [Function],
-                                                "to": [Function],
-                                              },
-                                              "render": [Function],
-                                            }
-                                          }
-                                          to="/challenges"
-                                        >
-                                          <Link
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            to="/challenges"
-                                          >
-                                            <LinkAnchor
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/challenges"
-                                              navigate={[Function]}
-                                            >
-                                              <a
-                                                className="sc-bdnxRM bWMeOf pl-3"
-                                                href="/challenges"
-                                                onClick={[Function]}
-                                              >
-                                                Challenges
-                                              </a>
-                                            </LinkAnchor>
-                                          </Link>
-                                        </styled.a>
-                                        <styled.a
-                                          as={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "displayName": "Link",
-                                              "propTypes": Object {
-                                                "innerRef": [Function],
-                                                "onClick": [Function],
-                                                "replace": [Function],
-                                                "target": [Function],
-                                                "to": [Function],
-                                              },
-                                              "render": [Function],
-                                            }
-                                          }
-                                          to="/about"
-                                        >
-                                          <Link
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            to="/about"
-                                          >
-                                            <LinkAnchor
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/about"
-                                              navigate={[Function]}
-                                            >
-                                              <a
-                                                className="sc-bdnxRM bWMeOf pl-3"
-                                                href="/about"
-                                                onClick={[Function]}
-                                              >
-                                                Meet the Team
-                                              </a>
-                                            </LinkAnchor>
-                                          </Link>
-                                        </styled.a>
-                                      </NavLinks>
-                                    </NavigationBar>
-                                  </Connect(NavigationBar)>
-                                  <Memo()
-                                    authUser={Object {}}
-                                    dispatch={[Function]}
-                                    loadFadeIn={false}
-                                    toggleModal={[Function]}
+                                  <NavigationBarContent
+                                    isLoadingUser={false}
                                   >
-                                    <Dropdown
-                                      className="pl-3"
-                                      navbar={false}
-                                    >
-                                      <ReactOverlaysDropdown
-                                        itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
-                                        onToggle={[Function]}
-                                      >
+                                    <FadeIn>
+                                      <div>
                                         <div
-                                          className="pl-3 dropdown"
-                                        >
-                                          <DropdownToggle
-                                            as={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "render": [Function],
-                                              }
+                                          key=".0"
+                                          style={
+                                            Object {
+                                              "opacity": 0,
+                                              "transform": "translateY(20px)",
+                                              "transition": "opacity 400ms, transform 400ms",
                                             }
-                                          >
+                                          }
+                                        >
+                                          <NavbarCollapse>
                                             <ForwardRef
-                                              aria-expanded={false}
-                                              aria-haspopup={true}
-                                              className="dropdown-toggle"
-                                              onClick={[Function]}
+                                              appear={false}
+                                              getDimensionValue={[Function]}
+                                              in={false}
+                                              mountOnEnter={false}
+                                              timeout={300}
+                                              unmountOnExit={false}
                                             >
-                                              <a
-                                                href="#"
-                                                onClick={[Function]}
+                                              <Transition
+                                                addEndListener={[Function]}
+                                                appear={false}
+                                                aria-expanded={null}
+                                                enter={true}
+                                                exit={true}
+                                                in={false}
+                                                mountOnEnter={false}
+                                                onEnter={[Function]}
+                                                onEntered={[Function]}
+                                                onEntering={[Function]}
+                                                onExit={[Function]}
+                                                onExited={[Function]}
+                                                onExiting={[Function]}
+                                                timeout={300}
+                                                unmountOnExit={false}
                                               >
-                                                <Memo()>
-                                                  <Image
-                                                    alt="ProfilePhoto"
-                                                    fluid={false}
-                                                    rounded={false}
-                                                    roundedCircle={true}
-                                                    style={
-                                                      Object {
-                                                        "width": 30,
-                                                      }
-                                                    }
-                                                    thumbnail={false}
+                                                <div
+                                                  aria-expanded={null}
+                                                  className="navbar-collapse collapse"
+                                                >
+                                                  <Nav
+                                                    fill={false}
+                                                    justify={false}
                                                   >
-                                                    <img
-                                                      alt="ProfilePhoto"
-                                                      className="rounded-circle"
-                                                      style={
-                                                        Object {
-                                                          "width": 30,
-                                                        }
-                                                      }
-                                                    />
-                                                  </Image>
-                                                </Memo()>
-                                              </a>
+                                                    <ForwardRef
+                                                      as="div"
+                                                      className="navbar-nav"
+                                                      onSelect={[Function]}
+                                                    >
+                                                      <div
+                                                        className="navbar-nav"
+                                                        onKeyDown={[Function]}
+                                                      >
+                                                        <Connect(NavigationLinksContainer)>
+                                                          <NavigationLinksContainer
+                                                            dispatch={[Function]}
+                                                            isPremiumUser={false}
+                                                          >
+                                                            <Responsiveness
+                                                              desktop={
+                                                                <NavLinks
+                                                                  isPremiumUser={false}
+                                                                />
+                                                              }
+                                                              mobile={
+                                                                <NavLinksMobile
+                                                                  isPremiumUser={false}
+                                                                />
+                                                              }
+                                                            >
+                                                              <Desktop>
+                                                                <NavLinks
+                                                                  isPremiumUser={false}
+                                                                >
+                                                                  <styled.a
+                                                                    as={
+                                                                      Object {
+                                                                        "$$typeof": Symbol(react.forward_ref),
+                                                                        "displayName": "Link",
+                                                                        "propTypes": Object {
+                                                                          "innerRef": [Function],
+                                                                          "onClick": [Function],
+                                                                          "replace": [Function],
+                                                                          "target": [Function],
+                                                                          "to": [Function],
+                                                                        },
+                                                                        "render": [Function],
+                                                                      }
+                                                                    }
+                                                                    to="/premium"
+                                                                  >
+                                                                    <Link
+                                                                      className="sc-fujyAs jTOOfu"
+                                                                      to="/premium"
+                                                                    >
+                                                                      <LinkAnchor
+                                                                        className="sc-fujyAs jTOOfu"
+                                                                        href="/premium"
+                                                                        navigate={[Function]}
+                                                                      >
+                                                                        <a
+                                                                          className="sc-fujyAs jTOOfu"
+                                                                          href="/premium"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Get Premium
+                                                                        </a>
+                                                                      </LinkAnchor>
+                                                                    </Link>
+                                                                  </styled.a>
+                                                                  <styled.a
+                                                                    as={
+                                                                      Object {
+                                                                        "$$typeof": Symbol(react.forward_ref),
+                                                                        "displayName": "Link",
+                                                                        "propTypes": Object {
+                                                                          "innerRef": [Function],
+                                                                          "onClick": [Function],
+                                                                          "replace": [Function],
+                                                                          "target": [Function],
+                                                                          "to": [Function],
+                                                                        },
+                                                                        "render": [Function],
+                                                                      }
+                                                                    }
+                                                                    to="/challenges"
+                                                                  >
+                                                                    <Link
+                                                                      className="sc-fujyAs jTOOfu"
+                                                                      to="/challenges"
+                                                                    >
+                                                                      <LinkAnchor
+                                                                        className="sc-fujyAs jTOOfu"
+                                                                        href="/challenges"
+                                                                        navigate={[Function]}
+                                                                      >
+                                                                        <a
+                                                                          className="sc-fujyAs jTOOfu"
+                                                                          href="/challenges"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Challenges
+                                                                        </a>
+                                                                      </LinkAnchor>
+                                                                    </Link>
+                                                                  </styled.a>
+                                                                  <styled.a
+                                                                    as={
+                                                                      Object {
+                                                                        "$$typeof": Symbol(react.forward_ref),
+                                                                        "displayName": "Link",
+                                                                        "propTypes": Object {
+                                                                          "innerRef": [Function],
+                                                                          "onClick": [Function],
+                                                                          "replace": [Function],
+                                                                          "target": [Function],
+                                                                          "to": [Function],
+                                                                        },
+                                                                        "render": [Function],
+                                                                      }
+                                                                    }
+                                                                    to="/about"
+                                                                  >
+                                                                    <Link
+                                                                      className="sc-fujyAs jTOOfu"
+                                                                      to="/about"
+                                                                    >
+                                                                      <LinkAnchor
+                                                                        className="sc-fujyAs jTOOfu"
+                                                                        href="/about"
+                                                                        navigate={[Function]}
+                                                                      >
+                                                                        <a
+                                                                          className="sc-fujyAs jTOOfu"
+                                                                          href="/about"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Meet the Team
+                                                                        </a>
+                                                                      </LinkAnchor>
+                                                                    </Link>
+                                                                  </styled.a>
+                                                                </NavLinks>
+                                                              </Desktop>
+                                                              <Mobile />
+                                                            </Responsiveness>
+                                                          </NavigationLinksContainer>
+                                                        </Connect(NavigationLinksContainer)>
+                                                        <Connect(NavigationBarDropdownMenu)>
+                                                          <NavigationBarDropdownMenu
+                                                            authUser={null}
+                                                            isPremiumUser={false}
+                                                            showLoginModal={false}
+                                                            toggleLoginModal={[Function]}
+                                                          >
+                                                            <ProfileDropdown
+                                                              authUser={null}
+                                                              isPremium={false}
+                                                              toggleLoginModal={[Function]}
+                                                            >
+                                                              <NavLink
+                                                                as={
+                                                                  Object {
+                                                                    "$$typeof": Symbol(react.forward_ref),
+                                                                    "displayName": "Link",
+                                                                    "propTypes": Object {
+                                                                      "innerRef": [Function],
+                                                                      "onClick": [Function],
+                                                                      "replace": [Function],
+                                                                      "target": [Function],
+                                                                      "to": [Function],
+                                                                    },
+                                                                    "render": [Function],
+                                                                  }
+                                                                }
+                                                                disabled={false}
+                                                                onClick={[Function]}
+                                                                to="#"
+                                                              >
+                                                                <ForwardRef
+                                                                  as={
+                                                                    Object {
+                                                                      "$$typeof": Symbol(react.forward_ref),
+                                                                      "displayName": "Link",
+                                                                      "propTypes": Object {
+                                                                        "innerRef": [Function],
+                                                                        "onClick": [Function],
+                                                                        "replace": [Function],
+                                                                        "target": [Function],
+                                                                        "to": [Function],
+                                                                      },
+                                                                      "render": [Function],
+                                                                    }
+                                                                  }
+                                                                  className="nav-link"
+                                                                  disabled={false}
+                                                                  onClick={[Function]}
+                                                                  to="#"
+                                                                >
+                                                                  <Link
+                                                                    className="nav-link"
+                                                                    data-rb-event-key={null}
+                                                                    disabled={false}
+                                                                    onClick={[Function]}
+                                                                    to="#"
+                                                                  >
+                                                                    <LinkAnchor
+                                                                      className="nav-link"
+                                                                      data-rb-event-key={null}
+                                                                      disabled={false}
+                                                                      href="/"
+                                                                      navigate={[Function]}
+                                                                      onClick={[Function]}
+                                                                    >
+                                                                      <a
+                                                                        className="nav-link"
+                                                                        data-rb-event-key={null}
+                                                                        disabled={false}
+                                                                        href="/"
+                                                                        onClick={[Function]}
+                                                                      >
+                                                                        Sign Up
+                                                                      </a>
+                                                                    </LinkAnchor>
+                                                                  </Link>
+                                                                </ForwardRef>
+                                                              </NavLink>
+                                                            </ProfileDropdown>
+                                                          </NavigationBarDropdownMenu>
+                                                        </Connect(NavigationBarDropdownMenu)>
+                                                      </div>
+                                                    </ForwardRef>
+                                                  </Nav>
+                                                </div>
+                                              </Transition>
                                             </ForwardRef>
-                                          </DropdownToggle>
-                                          <DropdownMenu
-                                            align="left"
-                                            alignRight={false}
-                                            flip={true}
-                                          />
+                                          </NavbarCollapse>
                                         </div>
-                                      </ReactOverlaysDropdown>
-                                    </Dropdown>
-                                  </Memo()>
-                                </div>
-                              </ForwardRef>
-                            </Nav>
-                          </div>
-                        </Transition>
-                      </ForwardRef>
-                    </NavbarCollapse>
-                  </div>
-                  <LoginModalDesktop
-                    showModal={false}
-                    toggleModal={[Function]}
-                  >
-                    <Modal
-                      animation={true}
-                      autoFocus={true}
-                      backdrop={true}
-                      centered={true}
-                      dialogAs={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "displayName": "ModalDialog",
-                          "render": [Function],
-                        }
-                      }
-                      enforceFocus={true}
-                      keyboard={true}
-                      onHide={[Function]}
-                      restoreFocus={true}
-                      show={false}
-                    >
-                      <Modal
-                        autoFocus={true}
-                        backdrop={true}
-                        backdropTransition={[Function]}
-                        containerClassName="modal-open"
-                        enforceFocus={true}
-                        keyboard={true}
-                        manager={
-                          BootstrapModalManager {
-                            "containers": Array [],
-                            "data": Array [],
-                            "handleContainerOverflow": true,
-                            "hideSiblingNodes": true,
-                            "modals": Array [],
-                            "scrollbarSize": 0,
-                          }
-                        }
-                        onEnter={[Function]}
-                        onEntering={[Function]}
-                        onEscapeKeyDown={[Function]}
-                        onExit={[Function]}
-                        onExited={[Function]}
-                        onHide={[Function]}
-                        renderBackdrop={[Function]}
-                        renderDialog={[Function]}
-                        restoreFocus={true}
-                        show={false}
-                        transition={[Function]}
-                      />
-                    </Modal>
-                  </LoginModalDesktop>
-                </nav>
-              </Navbar>
-            </Memo(NavigationBarDesktop)>
-          </Desktop>
-          <Mobile />
-        </Responsiveness>
-      </NavigationBar>
-    </Connect(NavigationBar)>
+                                      </div>
+                                    </FadeIn>
+                                  </NavigationBarContent>
+                                </NavigationBarContentContainer>
+                              </Connect(NavigationBarContentContainer)>
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Connect(LoginModalContainer)>
+                        <LoginModalContainer
+                          showLoginModal={false}
+                          toggleLoginModal={[Function]}
+                        >
+                          <LoginModal
+                            showModal={false}
+                            toggleModal={[Function]}
+                          >
+                            <Modal
+                              animation={true}
+                              autoFocus={true}
+                              backdrop={true}
+                              centered={true}
+                              dialogAs={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "displayName": "ModalDialog",
+                                  "render": [Function],
+                                }
+                              }
+                              enforceFocus={true}
+                              keyboard={true}
+                              onHide={[Function]}
+                              restoreFocus={true}
+                              show={false}
+                            >
+                              <Modal
+                                autoFocus={true}
+                                backdrop={true}
+                                backdropTransition={[Function]}
+                                containerClassName="modal-open"
+                                enforceFocus={true}
+                                keyboard={true}
+                                manager={
+                                  BootstrapModalManager {
+                                    "containers": Array [],
+                                    "data": Array [],
+                                    "handleContainerOverflow": true,
+                                    "hideSiblingNodes": true,
+                                    "modals": Array [],
+                                    "scrollbarSize": 0,
+                                  }
+                                }
+                                onEnter={[Function]}
+                                onEntering={[Function]}
+                                onEscapeKeyDown={[Function]}
+                                onExit={[Function]}
+                                onExited={[Function]}
+                                onHide={[Function]}
+                                renderBackdrop={[Function]}
+                                renderDialog={[Function]}
+                                restoreFocus={true}
+                                show={false}
+                                transition={[Function]}
+                              />
+                            </Modal>
+                          </LoginModal>
+                        </LoginModalContainer>
+                      </Connect(LoginModalContainer)>
+                    </nav>
+                  </Navbar>
+                </Styled(Navbar)>
+              </Memo(NavigationBarDesktop)>
+            </Desktop>
+            <Mobile />
+          </Responsiveness>
+        </NavigationBar>
+      </Connect(NavigationBar)>
+    </Provider>
   </Router>
 </Provider>
 `;
@@ -507,442 +598,485 @@ exports[`matches snapshot on "MOBILE" 1`] = `
       }
     }
   >
-    <Connect(NavigationBar)>
-      <NavigationBar
-        authUser={Object {}}
-        dispatch={[Function]}
-      >
-        <Responsiveness
-          desktop={
-            <UNDEFINED
-              authUser={Object {}}
-              dispatch={[Function]}
-              loadFadeIn={false}
-            />
-          }
-          mobile={
-            <NavigationBarMobile
-              authUser={Object {}}
-              dispatch={[Function]}
-            />
-          }
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Connect(NavigationBar)>
+        <NavigationBar
+          authUser={null}
+          isLoadingUser={false}
+          showLoginModal={false}
+          toggleLoginModal={[Function]}
         >
-          <Desktop />
-          <Mobile>
-            <NavigationBarMobile
-              authUser={Object {}}
-              dispatch={[Function]}
-            >
-              <Navbar
-                className="pr-5 pl-2 py-3 navigation-bar"
-                collapseOnSelect={false}
-                expand="lg"
-                fixed="top"
-                variant="dark"
+          <Responsiveness
+            desktop={<UNDEFINED />}
+            mobile={
+              <NavigationBarMobile
+                authUser={null}
+                isLoadingUser={false}
+                showLoginModal={false}
+                toggleLoginModal={[Function]}
+              />
+            }
+          >
+            <Desktop />
+            <Mobile>
+              <NavigationBarMobile
+                authUser={null}
+                isLoadingUser={false}
+                showLoginModal={false}
+                toggleLoginModal={[Function]}
               >
-                <nav
-                  className="pr-5 pl-2 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
+                <Styled(Navbar)
+                  expand="lg"
+                  fixed="top"
+                  variant="dark"
                 >
-                  <NavbarBrand
-                    as={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "Link",
-                        "propTypes": Object {
-                          "innerRef": [Function],
-                          "onClick": [Function],
-                          "replace": [Function],
-                          "target": [Function],
-                          "to": [Function],
-                        },
-                        "render": [Function],
-                      }
-                    }
-                    className="pl-5 ml-5"
-                    to="/"
+                  <Navbar
+                    className="sc-gtsrHT dSKHVb"
+                    collapseOnSelect={false}
+                    expand="lg"
+                    fixed="top"
+                    variant="dark"
                   >
-                    <Link
-                      className="pl-5 ml-5 navbar-brand"
-                      to="/"
+                    <nav
+                      className="sc-gtsrHT dSKHVb navbar navbar-expand-lg navbar-dark fixed-top"
                     >
-                      <LinkAnchor
-                        className="pl-5 ml-5 navbar-brand"
-                        href="/"
-                        navigate={[Function]}
+                      <NavbarBrand
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        to="/"
                       >
-                        <a
-                          className="pl-5 ml-5 navbar-brand"
-                          href="/"
+                        <Link
+                          className="navbar-brand"
+                          to="/"
+                        >
+                          <LinkAnchor
+                            className="navbar-brand"
+                            href="/"
+                            navigate={[Function]}
+                          >
+                            <a
+                              className="navbar-brand"
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              <LightNinjaPrepLogo
+                                height={40}
+                                width={100}
+                              >
+                                <svg
+                                  height={40}
+                                  viewBox="0 0 200 57"
+                                  width={100}
+                                >
+                                  <g
+                                    data-name="Group 120"
+                                    id="Group_120"
+                                    transform="translate(-1157 -10208)"
+                                  >
+                                    <text
+                                      fill="#f9fbfd"
+                                      fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                                      fontSize="40"
+                                      fontWeight="700"
+                                      id="NinjaPrep"
+                                      transform="translate(1157 10249)"
+                                    >
+                                      <tspan
+                                        x="0"
+                                        y="0"
+                                      >
+                                        NinjaPrep
+                                      </tspan>
+                                    </text>
+                                    <circle
+                                      cx="7.5"
+                                      cy="7.5"
+                                      data-name="Ellipse 44"
+                                      fill="#25d0f3"
+                                      id="Ellipse_44"
+                                      r="7.5"
+                                      transform="translate(1342 10237)"
+                                    />
+                                  </g>
+                                </svg>
+                              </LightNinjaPrepLogo>
+                            </a>
+                          </LinkAnchor>
+                        </Link>
+                      </NavbarBrand>
+                      <NavbarToggle
+                        label="Toggle navigation"
+                      >
+                        <button
+                          aria-label="Toggle navigation"
+                          className="navbar-toggler collapsed"
                           onClick={[Function]}
+                          type="button"
                         >
-                          <LightNinjaPrepLogo
-                            height={40}
-                            width={100}
-                          >
-                            <svg
-                              height={40}
-                              viewBox="0 0 200 57"
-                              width={100}
-                            >
-                              <g
-                                data-name="Group 120"
-                                id="Group_120"
-                                transform="translate(-1157 -10208)"
-                              >
-                                <text
-                                  fill="#f9fbfd"
-                                  fontFamily="SourceSansPro-Bold, Source Sans Pro"
-                                  fontSize="40"
-                                  fontWeight="700"
-                                  id="NinjaPrep"
-                                  transform="translate(1157 10249)"
-                                >
-                                  <tspan
-                                    x="0"
-                                    y="0"
-                                  >
-                                    NinjaPrep
-                                  </tspan>
-                                </text>
-                                <circle
-                                  cx="7.5"
-                                  cy="7.5"
-                                  data-name="Ellipse 44"
-                                  fill="#25d0f3"
-                                  id="Ellipse_44"
-                                  r="7.5"
-                                  transform="translate(1342 10237)"
-                                />
-                              </g>
-                            </svg>
-                          </LightNinjaPrepLogo>
-                        </a>
-                      </LinkAnchor>
-                    </Link>
-                  </NavbarBrand>
-                  <NavbarToggle
-                    aria-controls="basic-navbar-nav"
-                    label="Toggle navigation"
-                  >
-                    <button
-                      aria-controls="basic-navbar-nav"
-                      aria-label="Toggle navigation"
-                      className="navbar-toggler collapsed"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <span
-                        className="navbar-toggler-icon"
-                      />
-                    </button>
-                  </NavbarToggle>
-                  <NavbarCollapse
-                    id="basic-navbar-nav"
-                  >
-                    <ForwardRef
-                      appear={false}
-                      getDimensionValue={[Function]}
-                      id="basic-navbar-nav"
-                      in={false}
-                      mountOnEnter={false}
-                      timeout={300}
-                      unmountOnExit={false}
-                    >
-                      <Transition
-                        addEndListener={[Function]}
-                        appear={false}
-                        aria-expanded={null}
-                        enter={true}
-                        exit={true}
-                        id="basic-navbar-nav"
-                        in={false}
-                        mountOnEnter={false}
-                        onEnter={[Function]}
-                        onEntered={[Function]}
-                        onEntering={[Function]}
-                        onExit={[Function]}
-                        onExited={[Function]}
-                        onExiting={[Function]}
-                        timeout={300}
-                        unmountOnExit={false}
-                      >
-                        <div
-                          aria-expanded={null}
-                          className="navbar-collapse collapse"
-                          id="basic-navbar-nav"
+                          <span
+                            className="navbar-toggler-icon"
+                          />
+                        </button>
+                      </NavbarToggle>
+                      <NavbarCollapse>
+                        <ForwardRef
+                          appear={false}
+                          getDimensionValue={[Function]}
+                          in={false}
+                          mountOnEnter={false}
+                          timeout={300}
+                          unmountOnExit={false}
                         >
-                          <Nav
-                            fill={false}
-                            justify={false}
+                          <Transition
+                            addEndListener={[Function]}
+                            appear={false}
+                            aria-expanded={null}
+                            enter={true}
+                            exit={true}
+                            in={false}
+                            mountOnEnter={false}
+                            onEnter={[Function]}
+                            onEntered={[Function]}
+                            onEntering={[Function]}
+                            onExit={[Function]}
+                            onExited={[Function]}
+                            onExiting={[Function]}
+                            timeout={300}
+                            unmountOnExit={false}
                           >
-                            <ForwardRef
-                              as="div"
-                              className="navbar-nav"
-                              onSelect={[Function]}
+                            <div
+                              aria-expanded={null}
+                              className="navbar-collapse collapse"
                             >
-                              <div
-                                className="navbar-nav"
-                                onKeyDown={[Function]}
+                              <Nav
+                                fill={false}
+                                justify={false}
                               >
-                                <Connect(NavigationBar)>
-                                  <NavigationBar
-                                    dispatch={[Function]}
-                                    isPremiumUser={false}
-                                  >
-                                    <NavLinks
-                                      isPremiumUser={false}
-                                    >
-                                      <styled.a
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
-                                        to="/premium"
-                                      >
-                                        <Link
-                                          className="sc-bdnxRM bWMeOf pl-3"
-                                          to="/premium"
-                                        >
-                                          <LinkAnchor
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            href="/premium"
-                                            navigate={[Function]}
-                                          >
-                                            <a
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/premium"
-                                              onClick={[Function]}
-                                            >
-                                              Get Premium
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </styled.a>
-                                      <styled.a
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
-                                        to="/challenges"
-                                      >
-                                        <Link
-                                          className="sc-bdnxRM bWMeOf pl-3"
-                                          to="/challenges"
-                                        >
-                                          <LinkAnchor
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            href="/challenges"
-                                            navigate={[Function]}
-                                          >
-                                            <a
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/challenges"
-                                              onClick={[Function]}
-                                            >
-                                              Challenges
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </styled.a>
-                                      <styled.a
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
-                                        to="/about"
-                                      >
-                                        <Link
-                                          className="sc-bdnxRM bWMeOf pl-3"
-                                          to="/about"
-                                        >
-                                          <LinkAnchor
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            href="/about"
-                                            navigate={[Function]}
-                                          >
-                                            <a
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/about"
-                                              onClick={[Function]}
-                                            >
-                                              Meet the Team
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </styled.a>
-                                    </NavLinks>
-                                  </NavigationBar>
-                                </Connect(NavigationBar)>
-                                <Memo()
-                                  authUser={Object {}}
-                                  dispatch={[Function]}
-                                  toggleModal={[Function]}
+                                <ForwardRef
+                                  as="div"
+                                  className="navbar-nav"
+                                  onSelect={[Function]}
                                 >
-                                  <Dropdown
-                                    className="pl-3"
-                                    navbar={false}
+                                  <div
+                                    className="navbar-nav"
+                                    onKeyDown={[Function]}
                                   >
-                                    <ReactOverlaysDropdown
-                                      itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
-                                      onToggle={[Function]}
-                                    >
-                                      <div
-                                        className="pl-3 dropdown"
+                                    <Connect(NavigationLinksContainer)>
+                                      <NavigationLinksContainer
+                                        dispatch={[Function]}
+                                        isPremiumUser={false}
                                       >
-                                        <DropdownToggle
-                                          as={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "render": [Function],
-                                            }
+                                        <Responsiveness
+                                          desktop={
+                                            <NavLinks
+                                              isPremiumUser={false}
+                                            />
+                                          }
+                                          mobile={
+                                            <NavLinksMobile
+                                              isPremiumUser={false}
+                                            />
                                           }
                                         >
-                                          <ForwardRef
-                                            aria-expanded={false}
-                                            aria-haspopup={true}
-                                            className="dropdown-toggle"
-                                            onClick={[Function]}
-                                          >
-                                            <a
-                                              href="#"
-                                              onClick={[Function]}
+                                          <Desktop />
+                                          <Mobile>
+                                            <NavLinksMobile
+                                              isPremiumUser={false}
                                             >
-                                              <Memo()>
-                                                <Image
-                                                  alt="ProfilePhoto"
-                                                  fluid={false}
-                                                  rounded={false}
-                                                  roundedCircle={true}
-                                                  style={
-                                                    Object {
-                                                      "width": 30,
-                                                    }
+                                              <styled.a
+                                                as={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "displayName": "Link",
+                                                    "propTypes": Object {
+                                                      "innerRef": [Function],
+                                                      "onClick": [Function],
+                                                      "replace": [Function],
+                                                      "target": [Function],
+                                                      "to": [Function],
+                                                    },
+                                                    "render": [Function],
                                                   }
-                                                  thumbnail={false}
+                                                }
+                                                to="/premium"
+                                              >
+                                                <Link
+                                                  className="sc-pNWdM llhQCR"
+                                                  to="/premium"
                                                 >
-                                                  <img
-                                                    alt="ProfilePhoto"
-                                                    className="rounded-circle"
-                                                    style={
-                                                      Object {
-                                                        "width": 30,
-                                                      }
-                                                    }
-                                                  />
-                                                </Image>
-                                              </Memo()>
-                                            </a>
-                                          </ForwardRef>
-                                        </DropdownToggle>
-                                        <DropdownMenu
-                                          align="left"
-                                          alignRight={false}
-                                          flip={true}
-                                        />
-                                      </div>
-                                    </ReactOverlaysDropdown>
-                                  </Dropdown>
-                                </Memo()>
-                              </div>
-                            </ForwardRef>
-                          </Nav>
-                          <LoginModalMobile
-                            authUser={Object {}}
-                            dispatch={[Function]}
-                            showModal={false}
-                            toggleModal={[Function]}
-                          >
-                            <Modal
-                              animation={true}
-                              autoFocus={true}
-                              backdrop={true}
-                              centered={true}
-                              className="px-5"
-                              dialogAs={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "displayName": "ModalDialog",
-                                  "render": [Function],
-                                }
-                              }
-                              enforceFocus={true}
-                              keyboard={true}
-                              onHide={[Function]}
-                              restoreFocus={true}
-                              show={false}
-                            >
-                              <Modal
-                                autoFocus={true}
-                                backdrop={true}
-                                backdropTransition={[Function]}
-                                containerClassName="modal-open"
-                                enforceFocus={true}
-                                keyboard={true}
-                                manager={
-                                  BootstrapModalManager {
-                                    "containers": Array [],
-                                    "data": Array [],
-                                    "handleContainerOverflow": true,
-                                    "hideSiblingNodes": true,
-                                    "modals": Array [],
-                                    "scrollbarSize": 0,
-                                  }
-                                }
-                                onEnter={[Function]}
-                                onEntering={[Function]}
-                                onEscapeKeyDown={[Function]}
-                                onExit={[Function]}
-                                onExited={[Function]}
-                                onHide={[Function]}
-                                renderBackdrop={[Function]}
-                                renderDialog={[Function]}
-                                restoreFocus={true}
-                                show={false}
-                                transition={[Function]}
-                              />
-                            </Modal>
-                          </LoginModalMobile>
-                        </div>
-                      </Transition>
-                    </ForwardRef>
-                  </NavbarCollapse>
-                </nav>
-              </Navbar>
-            </NavigationBarMobile>
-          </Mobile>
-        </Responsiveness>
-      </NavigationBar>
-    </Connect(NavigationBar)>
+                                                  <LinkAnchor
+                                                    className="sc-pNWdM llhQCR"
+                                                    href="/premium"
+                                                    navigate={[Function]}
+                                                  >
+                                                    <a
+                                                      className="sc-pNWdM llhQCR"
+                                                      href="/premium"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Get Premium
+                                                    </a>
+                                                  </LinkAnchor>
+                                                </Link>
+                                              </styled.a>
+                                              <styled.a
+                                                as={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "displayName": "Link",
+                                                    "propTypes": Object {
+                                                      "innerRef": [Function],
+                                                      "onClick": [Function],
+                                                      "replace": [Function],
+                                                      "target": [Function],
+                                                      "to": [Function],
+                                                    },
+                                                    "render": [Function],
+                                                  }
+                                                }
+                                                to="/challenges"
+                                              >
+                                                <Link
+                                                  className="sc-pNWdM llhQCR"
+                                                  to="/challenges"
+                                                >
+                                                  <LinkAnchor
+                                                    className="sc-pNWdM llhQCR"
+                                                    href="/challenges"
+                                                    navigate={[Function]}
+                                                  >
+                                                    <a
+                                                      className="sc-pNWdM llhQCR"
+                                                      href="/challenges"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Challenges
+                                                    </a>
+                                                  </LinkAnchor>
+                                                </Link>
+                                              </styled.a>
+                                              <styled.a
+                                                as={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "displayName": "Link",
+                                                    "propTypes": Object {
+                                                      "innerRef": [Function],
+                                                      "onClick": [Function],
+                                                      "replace": [Function],
+                                                      "target": [Function],
+                                                      "to": [Function],
+                                                    },
+                                                    "render": [Function],
+                                                  }
+                                                }
+                                                to="/about"
+                                              >
+                                                <Link
+                                                  className="sc-pNWdM llhQCR"
+                                                  to="/about"
+                                                >
+                                                  <LinkAnchor
+                                                    className="sc-pNWdM llhQCR"
+                                                    href="/about"
+                                                    navigate={[Function]}
+                                                  >
+                                                    <a
+                                                      className="sc-pNWdM llhQCR"
+                                                      href="/about"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Meet the Team
+                                                    </a>
+                                                  </LinkAnchor>
+                                                </Link>
+                                              </styled.a>
+                                            </NavLinksMobile>
+                                          </Mobile>
+                                        </Responsiveness>
+                                      </NavigationLinksContainer>
+                                    </Connect(NavigationLinksContainer)>
+                                    <Connect(NavigationBarDropdownMenu)>
+                                      <NavigationBarDropdownMenu
+                                        authUser={null}
+                                        isPremiumUser={false}
+                                        showLoginModal={false}
+                                        toggleLoginModal={[Function]}
+                                      >
+                                        <ProfileDropdown
+                                          authUser={null}
+                                          isPremium={false}
+                                          toggleLoginModal={[Function]}
+                                        >
+                                          <NavLink
+                                            as={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "displayName": "Link",
+                                                "propTypes": Object {
+                                                  "innerRef": [Function],
+                                                  "onClick": [Function],
+                                                  "replace": [Function],
+                                                  "target": [Function],
+                                                  "to": [Function],
+                                                },
+                                                "render": [Function],
+                                              }
+                                            }
+                                            disabled={false}
+                                            onClick={[Function]}
+                                            to="#"
+                                          >
+                                            <ForwardRef
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Link",
+                                                  "propTypes": Object {
+                                                    "innerRef": [Function],
+                                                    "onClick": [Function],
+                                                    "replace": [Function],
+                                                    "target": [Function],
+                                                    "to": [Function],
+                                                  },
+                                                  "render": [Function],
+                                                }
+                                              }
+                                              className="nav-link"
+                                              disabled={false}
+                                              onClick={[Function]}
+                                              to="#"
+                                            >
+                                              <Link
+                                                className="nav-link"
+                                                data-rb-event-key={null}
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                to="#"
+                                              >
+                                                <LinkAnchor
+                                                  className="nav-link"
+                                                  data-rb-event-key={null}
+                                                  disabled={false}
+                                                  href="/"
+                                                  navigate={[Function]}
+                                                  onClick={[Function]}
+                                                >
+                                                  <a
+                                                    className="nav-link"
+                                                    data-rb-event-key={null}
+                                                    disabled={false}
+                                                    href="/"
+                                                    onClick={[Function]}
+                                                  >
+                                                    Sign Up
+                                                  </a>
+                                                </LinkAnchor>
+                                              </Link>
+                                            </ForwardRef>
+                                          </NavLink>
+                                        </ProfileDropdown>
+                                      </NavigationBarDropdownMenu>
+                                    </Connect(NavigationBarDropdownMenu)>
+                                  </div>
+                                </ForwardRef>
+                              </Nav>
+                              <Connect(LoginModalContainer)>
+                                <LoginModalContainer
+                                  showLoginModal={false}
+                                  toggleLoginModal={[Function]}
+                                >
+                                  <LoginModal
+                                    showModal={false}
+                                    toggleModal={[Function]}
+                                  >
+                                    <Modal
+                                      animation={true}
+                                      autoFocus={true}
+                                      backdrop={true}
+                                      centered={true}
+                                      dialogAs={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "ModalDialog",
+                                          "render": [Function],
+                                        }
+                                      }
+                                      enforceFocus={true}
+                                      keyboard={true}
+                                      onHide={[Function]}
+                                      restoreFocus={true}
+                                      show={false}
+                                    >
+                                      <Modal
+                                        autoFocus={true}
+                                        backdrop={true}
+                                        backdropTransition={[Function]}
+                                        containerClassName="modal-open"
+                                        enforceFocus={true}
+                                        keyboard={true}
+                                        manager={
+                                          BootstrapModalManager {
+                                            "containers": Array [],
+                                            "data": Array [],
+                                            "handleContainerOverflow": true,
+                                            "hideSiblingNodes": true,
+                                            "modals": Array [],
+                                            "scrollbarSize": 0,
+                                          }
+                                        }
+                                        onEnter={[Function]}
+                                        onEntering={[Function]}
+                                        onEscapeKeyDown={[Function]}
+                                        onExit={[Function]}
+                                        onExited={[Function]}
+                                        onHide={[Function]}
+                                        renderBackdrop={[Function]}
+                                        renderDialog={[Function]}
+                                        restoreFocus={true}
+                                        show={false}
+                                        transition={[Function]}
+                                      />
+                                    </Modal>
+                                  </LoginModal>
+                                </LoginModalContainer>
+                              </Connect(LoginModalContainer)>
+                            </div>
+                          </Transition>
+                        </ForwardRef>
+                      </NavbarCollapse>
+                    </nav>
+                  </Navbar>
+                </Styled(Navbar)>
+              </NavigationBarMobile>
+            </Mobile>
+          </Responsiveness>
+        </NavigationBar>
+      </Connect(NavigationBar)>
+    </Provider>
   </Router>
 </Provider>
 `;
@@ -982,442 +1116,485 @@ exports[`matches snapshot on "TABLET" 1`] = `
       }
     }
   >
-    <Connect(NavigationBar)>
-      <NavigationBar
-        authUser={Object {}}
-        dispatch={[Function]}
-      >
-        <Responsiveness
-          desktop={
-            <UNDEFINED
-              authUser={Object {}}
-              dispatch={[Function]}
-              loadFadeIn={false}
-            />
-          }
-          mobile={
-            <NavigationBarMobile
-              authUser={Object {}}
-              dispatch={[Function]}
-            />
-          }
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Connect(NavigationBar)>
+        <NavigationBar
+          authUser={null}
+          isLoadingUser={false}
+          showLoginModal={false}
+          toggleLoginModal={[Function]}
         >
-          <Desktop />
-          <Mobile>
-            <NavigationBarMobile
-              authUser={Object {}}
-              dispatch={[Function]}
-            >
-              <Navbar
-                className="pr-5 pl-2 py-3 navigation-bar"
-                collapseOnSelect={false}
-                expand="lg"
-                fixed="top"
-                variant="dark"
+          <Responsiveness
+            desktop={<UNDEFINED />}
+            mobile={
+              <NavigationBarMobile
+                authUser={null}
+                isLoadingUser={false}
+                showLoginModal={false}
+                toggleLoginModal={[Function]}
+              />
+            }
+          >
+            <Desktop />
+            <Mobile>
+              <NavigationBarMobile
+                authUser={null}
+                isLoadingUser={false}
+                showLoginModal={false}
+                toggleLoginModal={[Function]}
               >
-                <nav
-                  className="pr-5 pl-2 py-3 navigation-bar navbar navbar-expand-lg navbar-dark fixed-top"
+                <Styled(Navbar)
+                  expand="lg"
+                  fixed="top"
+                  variant="dark"
                 >
-                  <NavbarBrand
-                    as={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "Link",
-                        "propTypes": Object {
-                          "innerRef": [Function],
-                          "onClick": [Function],
-                          "replace": [Function],
-                          "target": [Function],
-                          "to": [Function],
-                        },
-                        "render": [Function],
-                      }
-                    }
-                    className="pl-5 ml-5"
-                    to="/"
+                  <Navbar
+                    className="sc-gtsrHT dSKHVb"
+                    collapseOnSelect={false}
+                    expand="lg"
+                    fixed="top"
+                    variant="dark"
                   >
-                    <Link
-                      className="pl-5 ml-5 navbar-brand"
-                      to="/"
+                    <nav
+                      className="sc-gtsrHT dSKHVb navbar navbar-expand-lg navbar-dark fixed-top"
                     >
-                      <LinkAnchor
-                        className="pl-5 ml-5 navbar-brand"
-                        href="/"
-                        navigate={[Function]}
+                      <NavbarBrand
+                        as={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "Link",
+                            "propTypes": Object {
+                              "innerRef": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        to="/"
                       >
-                        <a
-                          className="pl-5 ml-5 navbar-brand"
-                          href="/"
+                        <Link
+                          className="navbar-brand"
+                          to="/"
+                        >
+                          <LinkAnchor
+                            className="navbar-brand"
+                            href="/"
+                            navigate={[Function]}
+                          >
+                            <a
+                              className="navbar-brand"
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              <LightNinjaPrepLogo
+                                height={40}
+                                width={100}
+                              >
+                                <svg
+                                  height={40}
+                                  viewBox="0 0 200 57"
+                                  width={100}
+                                >
+                                  <g
+                                    data-name="Group 120"
+                                    id="Group_120"
+                                    transform="translate(-1157 -10208)"
+                                  >
+                                    <text
+                                      fill="#f9fbfd"
+                                      fontFamily="SourceSansPro-Bold, Source Sans Pro"
+                                      fontSize="40"
+                                      fontWeight="700"
+                                      id="NinjaPrep"
+                                      transform="translate(1157 10249)"
+                                    >
+                                      <tspan
+                                        x="0"
+                                        y="0"
+                                      >
+                                        NinjaPrep
+                                      </tspan>
+                                    </text>
+                                    <circle
+                                      cx="7.5"
+                                      cy="7.5"
+                                      data-name="Ellipse 44"
+                                      fill="#25d0f3"
+                                      id="Ellipse_44"
+                                      r="7.5"
+                                      transform="translate(1342 10237)"
+                                    />
+                                  </g>
+                                </svg>
+                              </LightNinjaPrepLogo>
+                            </a>
+                          </LinkAnchor>
+                        </Link>
+                      </NavbarBrand>
+                      <NavbarToggle
+                        label="Toggle navigation"
+                      >
+                        <button
+                          aria-label="Toggle navigation"
+                          className="navbar-toggler collapsed"
                           onClick={[Function]}
+                          type="button"
                         >
-                          <LightNinjaPrepLogo
-                            height={40}
-                            width={100}
-                          >
-                            <svg
-                              height={40}
-                              viewBox="0 0 200 57"
-                              width={100}
-                            >
-                              <g
-                                data-name="Group 120"
-                                id="Group_120"
-                                transform="translate(-1157 -10208)"
-                              >
-                                <text
-                                  fill="#f9fbfd"
-                                  fontFamily="SourceSansPro-Bold, Source Sans Pro"
-                                  fontSize="40"
-                                  fontWeight="700"
-                                  id="NinjaPrep"
-                                  transform="translate(1157 10249)"
-                                >
-                                  <tspan
-                                    x="0"
-                                    y="0"
-                                  >
-                                    NinjaPrep
-                                  </tspan>
-                                </text>
-                                <circle
-                                  cx="7.5"
-                                  cy="7.5"
-                                  data-name="Ellipse 44"
-                                  fill="#25d0f3"
-                                  id="Ellipse_44"
-                                  r="7.5"
-                                  transform="translate(1342 10237)"
-                                />
-                              </g>
-                            </svg>
-                          </LightNinjaPrepLogo>
-                        </a>
-                      </LinkAnchor>
-                    </Link>
-                  </NavbarBrand>
-                  <NavbarToggle
-                    aria-controls="basic-navbar-nav"
-                    label="Toggle navigation"
-                  >
-                    <button
-                      aria-controls="basic-navbar-nav"
-                      aria-label="Toggle navigation"
-                      className="navbar-toggler collapsed"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <span
-                        className="navbar-toggler-icon"
-                      />
-                    </button>
-                  </NavbarToggle>
-                  <NavbarCollapse
-                    id="basic-navbar-nav"
-                  >
-                    <ForwardRef
-                      appear={false}
-                      getDimensionValue={[Function]}
-                      id="basic-navbar-nav"
-                      in={false}
-                      mountOnEnter={false}
-                      timeout={300}
-                      unmountOnExit={false}
-                    >
-                      <Transition
-                        addEndListener={[Function]}
-                        appear={false}
-                        aria-expanded={null}
-                        enter={true}
-                        exit={true}
-                        id="basic-navbar-nav"
-                        in={false}
-                        mountOnEnter={false}
-                        onEnter={[Function]}
-                        onEntered={[Function]}
-                        onEntering={[Function]}
-                        onExit={[Function]}
-                        onExited={[Function]}
-                        onExiting={[Function]}
-                        timeout={300}
-                        unmountOnExit={false}
-                      >
-                        <div
-                          aria-expanded={null}
-                          className="navbar-collapse collapse"
-                          id="basic-navbar-nav"
+                          <span
+                            className="navbar-toggler-icon"
+                          />
+                        </button>
+                      </NavbarToggle>
+                      <NavbarCollapse>
+                        <ForwardRef
+                          appear={false}
+                          getDimensionValue={[Function]}
+                          in={false}
+                          mountOnEnter={false}
+                          timeout={300}
+                          unmountOnExit={false}
                         >
-                          <Nav
-                            fill={false}
-                            justify={false}
+                          <Transition
+                            addEndListener={[Function]}
+                            appear={false}
+                            aria-expanded={null}
+                            enter={true}
+                            exit={true}
+                            in={false}
+                            mountOnEnter={false}
+                            onEnter={[Function]}
+                            onEntered={[Function]}
+                            onEntering={[Function]}
+                            onExit={[Function]}
+                            onExited={[Function]}
+                            onExiting={[Function]}
+                            timeout={300}
+                            unmountOnExit={false}
                           >
-                            <ForwardRef
-                              as="div"
-                              className="navbar-nav"
-                              onSelect={[Function]}
+                            <div
+                              aria-expanded={null}
+                              className="navbar-collapse collapse"
                             >
-                              <div
-                                className="navbar-nav"
-                                onKeyDown={[Function]}
+                              <Nav
+                                fill={false}
+                                justify={false}
                               >
-                                <Connect(NavigationBar)>
-                                  <NavigationBar
-                                    dispatch={[Function]}
-                                    isPremiumUser={false}
-                                  >
-                                    <NavLinks
-                                      isPremiumUser={false}
-                                    >
-                                      <styled.a
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
-                                        to="/premium"
-                                      >
-                                        <Link
-                                          className="sc-bdnxRM bWMeOf pl-3"
-                                          to="/premium"
-                                        >
-                                          <LinkAnchor
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            href="/premium"
-                                            navigate={[Function]}
-                                          >
-                                            <a
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/premium"
-                                              onClick={[Function]}
-                                            >
-                                              Get Premium
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </styled.a>
-                                      <styled.a
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
-                                        to="/challenges"
-                                      >
-                                        <Link
-                                          className="sc-bdnxRM bWMeOf pl-3"
-                                          to="/challenges"
-                                        >
-                                          <LinkAnchor
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            href="/challenges"
-                                            navigate={[Function]}
-                                          >
-                                            <a
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/challenges"
-                                              onClick={[Function]}
-                                            >
-                                              Challenges
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </styled.a>
-                                      <styled.a
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
-                                        to="/about"
-                                      >
-                                        <Link
-                                          className="sc-bdnxRM bWMeOf pl-3"
-                                          to="/about"
-                                        >
-                                          <LinkAnchor
-                                            className="sc-bdnxRM bWMeOf pl-3"
-                                            href="/about"
-                                            navigate={[Function]}
-                                          >
-                                            <a
-                                              className="sc-bdnxRM bWMeOf pl-3"
-                                              href="/about"
-                                              onClick={[Function]}
-                                            >
-                                              Meet the Team
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </styled.a>
-                                    </NavLinks>
-                                  </NavigationBar>
-                                </Connect(NavigationBar)>
-                                <Memo()
-                                  authUser={Object {}}
-                                  dispatch={[Function]}
-                                  toggleModal={[Function]}
+                                <ForwardRef
+                                  as="div"
+                                  className="navbar-nav"
+                                  onSelect={[Function]}
                                 >
-                                  <Dropdown
-                                    className="pl-3"
-                                    navbar={false}
+                                  <div
+                                    className="navbar-nav"
+                                    onKeyDown={[Function]}
                                   >
-                                    <ReactOverlaysDropdown
-                                      itemSelector=".dropdown-item:not(.disabled):not(:disabled)"
-                                      onToggle={[Function]}
-                                    >
-                                      <div
-                                        className="pl-3 dropdown"
+                                    <Connect(NavigationLinksContainer)>
+                                      <NavigationLinksContainer
+                                        dispatch={[Function]}
+                                        isPremiumUser={false}
                                       >
-                                        <DropdownToggle
-                                          as={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "render": [Function],
-                                            }
+                                        <Responsiveness
+                                          desktop={
+                                            <NavLinks
+                                              isPremiumUser={false}
+                                            />
+                                          }
+                                          mobile={
+                                            <NavLinksMobile
+                                              isPremiumUser={false}
+                                            />
                                           }
                                         >
-                                          <ForwardRef
-                                            aria-expanded={false}
-                                            aria-haspopup={true}
-                                            className="dropdown-toggle"
-                                            onClick={[Function]}
-                                          >
-                                            <a
-                                              href="#"
-                                              onClick={[Function]}
+                                          <Desktop />
+                                          <Mobile>
+                                            <NavLinksMobile
+                                              isPremiumUser={false}
                                             >
-                                              <Memo()>
-                                                <Image
-                                                  alt="ProfilePhoto"
-                                                  fluid={false}
-                                                  rounded={false}
-                                                  roundedCircle={true}
-                                                  style={
-                                                    Object {
-                                                      "width": 30,
-                                                    }
+                                              <styled.a
+                                                as={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "displayName": "Link",
+                                                    "propTypes": Object {
+                                                      "innerRef": [Function],
+                                                      "onClick": [Function],
+                                                      "replace": [Function],
+                                                      "target": [Function],
+                                                      "to": [Function],
+                                                    },
+                                                    "render": [Function],
                                                   }
-                                                  thumbnail={false}
+                                                }
+                                                to="/premium"
+                                              >
+                                                <Link
+                                                  className="sc-pNWdM llhQCR"
+                                                  to="/premium"
                                                 >
-                                                  <img
-                                                    alt="ProfilePhoto"
-                                                    className="rounded-circle"
-                                                    style={
-                                                      Object {
-                                                        "width": 30,
-                                                      }
-                                                    }
-                                                  />
-                                                </Image>
-                                              </Memo()>
-                                            </a>
-                                          </ForwardRef>
-                                        </DropdownToggle>
-                                        <DropdownMenu
-                                          align="left"
-                                          alignRight={false}
-                                          flip={true}
-                                        />
-                                      </div>
-                                    </ReactOverlaysDropdown>
-                                  </Dropdown>
-                                </Memo()>
-                              </div>
-                            </ForwardRef>
-                          </Nav>
-                          <LoginModalMobile
-                            authUser={Object {}}
-                            dispatch={[Function]}
-                            showModal={false}
-                            toggleModal={[Function]}
-                          >
-                            <Modal
-                              animation={true}
-                              autoFocus={true}
-                              backdrop={true}
-                              centered={true}
-                              className="px-5"
-                              dialogAs={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "displayName": "ModalDialog",
-                                  "render": [Function],
-                                }
-                              }
-                              enforceFocus={true}
-                              keyboard={true}
-                              onHide={[Function]}
-                              restoreFocus={true}
-                              show={false}
-                            >
-                              <Modal
-                                autoFocus={true}
-                                backdrop={true}
-                                backdropTransition={[Function]}
-                                containerClassName="modal-open"
-                                enforceFocus={true}
-                                keyboard={true}
-                                manager={
-                                  BootstrapModalManager {
-                                    "containers": Array [],
-                                    "data": Array [],
-                                    "handleContainerOverflow": true,
-                                    "hideSiblingNodes": true,
-                                    "modals": Array [],
-                                    "scrollbarSize": 0,
-                                  }
-                                }
-                                onEnter={[Function]}
-                                onEntering={[Function]}
-                                onEscapeKeyDown={[Function]}
-                                onExit={[Function]}
-                                onExited={[Function]}
-                                onHide={[Function]}
-                                renderBackdrop={[Function]}
-                                renderDialog={[Function]}
-                                restoreFocus={true}
-                                show={false}
-                                transition={[Function]}
-                              />
-                            </Modal>
-                          </LoginModalMobile>
-                        </div>
-                      </Transition>
-                    </ForwardRef>
-                  </NavbarCollapse>
-                </nav>
-              </Navbar>
-            </NavigationBarMobile>
-          </Mobile>
-        </Responsiveness>
-      </NavigationBar>
-    </Connect(NavigationBar)>
+                                                  <LinkAnchor
+                                                    className="sc-pNWdM llhQCR"
+                                                    href="/premium"
+                                                    navigate={[Function]}
+                                                  >
+                                                    <a
+                                                      className="sc-pNWdM llhQCR"
+                                                      href="/premium"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Get Premium
+                                                    </a>
+                                                  </LinkAnchor>
+                                                </Link>
+                                              </styled.a>
+                                              <styled.a
+                                                as={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "displayName": "Link",
+                                                    "propTypes": Object {
+                                                      "innerRef": [Function],
+                                                      "onClick": [Function],
+                                                      "replace": [Function],
+                                                      "target": [Function],
+                                                      "to": [Function],
+                                                    },
+                                                    "render": [Function],
+                                                  }
+                                                }
+                                                to="/challenges"
+                                              >
+                                                <Link
+                                                  className="sc-pNWdM llhQCR"
+                                                  to="/challenges"
+                                                >
+                                                  <LinkAnchor
+                                                    className="sc-pNWdM llhQCR"
+                                                    href="/challenges"
+                                                    navigate={[Function]}
+                                                  >
+                                                    <a
+                                                      className="sc-pNWdM llhQCR"
+                                                      href="/challenges"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Challenges
+                                                    </a>
+                                                  </LinkAnchor>
+                                                </Link>
+                                              </styled.a>
+                                              <styled.a
+                                                as={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "displayName": "Link",
+                                                    "propTypes": Object {
+                                                      "innerRef": [Function],
+                                                      "onClick": [Function],
+                                                      "replace": [Function],
+                                                      "target": [Function],
+                                                      "to": [Function],
+                                                    },
+                                                    "render": [Function],
+                                                  }
+                                                }
+                                                to="/about"
+                                              >
+                                                <Link
+                                                  className="sc-pNWdM llhQCR"
+                                                  to="/about"
+                                                >
+                                                  <LinkAnchor
+                                                    className="sc-pNWdM llhQCR"
+                                                    href="/about"
+                                                    navigate={[Function]}
+                                                  >
+                                                    <a
+                                                      className="sc-pNWdM llhQCR"
+                                                      href="/about"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Meet the Team
+                                                    </a>
+                                                  </LinkAnchor>
+                                                </Link>
+                                              </styled.a>
+                                            </NavLinksMobile>
+                                          </Mobile>
+                                        </Responsiveness>
+                                      </NavigationLinksContainer>
+                                    </Connect(NavigationLinksContainer)>
+                                    <Connect(NavigationBarDropdownMenu)>
+                                      <NavigationBarDropdownMenu
+                                        authUser={null}
+                                        isPremiumUser={false}
+                                        showLoginModal={false}
+                                        toggleLoginModal={[Function]}
+                                      >
+                                        <ProfileDropdown
+                                          authUser={null}
+                                          isPremium={false}
+                                          toggleLoginModal={[Function]}
+                                        >
+                                          <NavLink
+                                            as={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "displayName": "Link",
+                                                "propTypes": Object {
+                                                  "innerRef": [Function],
+                                                  "onClick": [Function],
+                                                  "replace": [Function],
+                                                  "target": [Function],
+                                                  "to": [Function],
+                                                },
+                                                "render": [Function],
+                                              }
+                                            }
+                                            disabled={false}
+                                            onClick={[Function]}
+                                            to="#"
+                                          >
+                                            <ForwardRef
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Link",
+                                                  "propTypes": Object {
+                                                    "innerRef": [Function],
+                                                    "onClick": [Function],
+                                                    "replace": [Function],
+                                                    "target": [Function],
+                                                    "to": [Function],
+                                                  },
+                                                  "render": [Function],
+                                                }
+                                              }
+                                              className="nav-link"
+                                              disabled={false}
+                                              onClick={[Function]}
+                                              to="#"
+                                            >
+                                              <Link
+                                                className="nav-link"
+                                                data-rb-event-key={null}
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                to="#"
+                                              >
+                                                <LinkAnchor
+                                                  className="nav-link"
+                                                  data-rb-event-key={null}
+                                                  disabled={false}
+                                                  href="/"
+                                                  navigate={[Function]}
+                                                  onClick={[Function]}
+                                                >
+                                                  <a
+                                                    className="nav-link"
+                                                    data-rb-event-key={null}
+                                                    disabled={false}
+                                                    href="/"
+                                                    onClick={[Function]}
+                                                  >
+                                                    Sign Up
+                                                  </a>
+                                                </LinkAnchor>
+                                              </Link>
+                                            </ForwardRef>
+                                          </NavLink>
+                                        </ProfileDropdown>
+                                      </NavigationBarDropdownMenu>
+                                    </Connect(NavigationBarDropdownMenu)>
+                                  </div>
+                                </ForwardRef>
+                              </Nav>
+                              <Connect(LoginModalContainer)>
+                                <LoginModalContainer
+                                  showLoginModal={false}
+                                  toggleLoginModal={[Function]}
+                                >
+                                  <LoginModal
+                                    showModal={false}
+                                    toggleModal={[Function]}
+                                  >
+                                    <Modal
+                                      animation={true}
+                                      autoFocus={true}
+                                      backdrop={true}
+                                      centered={true}
+                                      dialogAs={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "ModalDialog",
+                                          "render": [Function],
+                                        }
+                                      }
+                                      enforceFocus={true}
+                                      keyboard={true}
+                                      onHide={[Function]}
+                                      restoreFocus={true}
+                                      show={false}
+                                    >
+                                      <Modal
+                                        autoFocus={true}
+                                        backdrop={true}
+                                        backdropTransition={[Function]}
+                                        containerClassName="modal-open"
+                                        enforceFocus={true}
+                                        keyboard={true}
+                                        manager={
+                                          BootstrapModalManager {
+                                            "containers": Array [],
+                                            "data": Array [],
+                                            "handleContainerOverflow": true,
+                                            "hideSiblingNodes": true,
+                                            "modals": Array [],
+                                            "scrollbarSize": 0,
+                                          }
+                                        }
+                                        onEnter={[Function]}
+                                        onEntering={[Function]}
+                                        onEscapeKeyDown={[Function]}
+                                        onExit={[Function]}
+                                        onExited={[Function]}
+                                        onHide={[Function]}
+                                        renderBackdrop={[Function]}
+                                        renderDialog={[Function]}
+                                        restoreFocus={true}
+                                        show={false}
+                                        transition={[Function]}
+                                      />
+                                    </Modal>
+                                  </LoginModal>
+                                </LoginModalContainer>
+                              </Connect(LoginModalContainer)>
+                            </div>
+                          </Transition>
+                        </ForwardRef>
+                      </NavbarCollapse>
+                    </nav>
+                  </Navbar>
+                </Styled(Navbar)>
+              </NavigationBarMobile>
+            </Mobile>
+          </Responsiveness>
+        </NavigationBar>
+      </Connect(NavigationBar)>
+    </Provider>
   </Router>
 </Provider>
 `;

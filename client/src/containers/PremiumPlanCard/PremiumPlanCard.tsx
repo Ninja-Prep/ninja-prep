@@ -7,7 +7,8 @@ import {redirectToCheckoutForm} from 'services/stripe/stripeService';
 import {PurchasePlan} from 'utils/types/plans/plans';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
-import LoginModalDesktop from 'components/NavigationBar/modals/LoginModalDesktop';
+import {toggleLoginModal} from 'redux/loginModal/actions';
+import LoginModalDesktop from 'containers/LoginModal/LoginModal';
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -15,29 +16,19 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const connector = connect(mapStateToProps);
+const connector = connect(mapStateToProps, {toggleLoginModal});
 type PremiumPlanCardContainerProps = {
   purchasePlan: PurchasePlan;
 } & ConnectedProps<typeof connector>;
 
-type State = {
-  showModal: boolean;
-};
-
-class PremiumPlanCardContainer extends Component<PremiumPlanCardContainerProps, State> {
+class PremiumPlanCardContainer extends Component<PremiumPlanCardContainerProps> {
   stripePromise: Promise<import('@stripe/stripe-js').Stripe | null>;
-  state = {
-    showModal: false,
-  };
 
   constructor(props: Readonly<PremiumPlanCardContainerProps>) {
     super(props);
     this.stripePromise = loadStripe(process.env.REACT_APP_STRIPE_TEST_KEY || '');
   }
 
-  toggleModal() {
-    this.setState({showModal: !this.state.showModal});
-  }
   render(): JSX.Element {
     const purchasePlan = this.props.purchasePlan;
     if (this.props.authUser) {
@@ -52,8 +43,8 @@ class PremiumPlanCardContainer extends Component<PremiumPlanCardContainerProps, 
     } else
       return (
         <div>
-          <PremiumPlanCard purchasePlan={purchasePlan} purchaseHandler={() => this.toggleModal()} />
-          <LoginModalDesktop showModal={this.state.showModal} toggleModal={() => this.toggleModal()} />
+          <PremiumPlanCard purchasePlan={purchasePlan} purchaseHandler={() => this.props.toggleLoginModal()} />
+          <LoginModalDesktop />
         </div>
       );
   }
