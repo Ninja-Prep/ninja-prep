@@ -11,7 +11,6 @@ import {NavLinkMobile} from './styled';
 
 interface Props {
   isPremiumUser: boolean;
-  isMobile?: boolean;
 }
 
 const NavLinksMobile = (props: Props): JSX.Element => {

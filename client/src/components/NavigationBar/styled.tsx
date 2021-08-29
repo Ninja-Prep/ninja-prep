@@ -23,3 +23,7 @@ export const NavigationFloatRight = styled.div`
   float: right;
   margin-right: 10%;
 `;
+
+export const NavigationDropdownPadding = styled.div`
+  padding-top: 15px;
+`;

@@ -13,15 +13,10 @@ import {User} from 'utils/types/user';
 import {LightNinjaPrepLogo} from '../../utils/NinjaPrepLogos';
 import NavigationBarDropdownMenu from 'containers/NavigationBarDropdownMenu/NavigationBarDropdownMenu';
 import NavLinks from 'containers/NavigationLinks/NavigationLinks';
-import {FixedNavigationBar} from './styled';
+import {FixedNavigationBar, NavigationDropdownPadding} from './styled';
 import LoginModal from 'containers/LoginModal/LoginModal';
 
-interface NavBarProps {
-  readonly authUser: User;
-  readonly isLoadingUser: boolean;
-}
-
-function NavigationBarMobile(props: NavBarProps): JSX.Element {
+function NavigationBarMobile(): JSX.Element {
   return (
     <FixedNavigationBar fixed="top" expand="lg" variant="dark">
       <Navbar.Brand as={Link} to="/">
@@ -31,7 +26,9 @@ function NavigationBarMobile(props: NavBarProps): JSX.Element {
       <Navbar.Collapse>
         <Nav>
           <NavLinks />
-          <NavigationBarDropdownMenu />
+          <NavigationDropdownPadding>
+            <NavigationBarDropdownMenu />
+          </NavigationDropdownPadding>
         </Nav>
         <LoginModal />
       </Navbar.Collapse>
