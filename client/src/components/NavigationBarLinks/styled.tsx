@@ -5,6 +5,11 @@ const NavLink = styled.a`
   padding-left: 15px;
   color: hsla(0, 0%, 100%, 0.5);
   margin: auto;
+  :hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+  }
 `;
 
 export const NavLinkMobile = styled.a`

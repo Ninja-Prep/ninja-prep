@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Image, Dropdown} from 'react-bootstrap';
+import {Image, Dropdown, Nav} from 'react-bootstrap';
 import LockIcon from '@material-ui/icons/Lock';
 
 export const DropdownText = styled.p`
@@ -37,4 +37,16 @@ export const PremiumTextColor = styled.div`
 export const ImageWrapper = styled(Image)`
   width: 45px;
   height: 45px;
+`;
+
+export const SignInNavLink = styled(Nav.Link)`
+  text-decoration: none;
+  color: hsla(0, 0%, 100%, 0.5);
+  padding-left: 15px;
+
+  :hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+  }
 `;

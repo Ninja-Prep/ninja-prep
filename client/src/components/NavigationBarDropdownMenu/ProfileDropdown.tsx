@@ -12,7 +12,7 @@ import {Dropdown} from 'react-bootstrap';
 import {GET_PREMIUM_NAVIGATION, SETTINGS, REPORT_A_BUG, SIGN_OUT_NAVIGATION} from 'utils/stringIds.json';
 
 import DropdownItem from './DropdownItem';
-import {A, DropdownMenu, ImageWrapper, PremiumLockIcon, PremiumTextColor} from './styled';
+import {A, DropdownMenu, ImageWrapper, PremiumLockIcon, PremiumTextColor, SignInNavLink} from './styled';
 type ToggleDropdownProps = {
   children?: React.ReactNode;
   onClick: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => Record<string, never>;
@@ -41,7 +41,7 @@ const ToggleDropdown = React.forwardRef(({children, onClick}: ToggleDropdownProp
 const ProfileDropdown = (props: ProfileProps): JSX.Element => {
   if (!props.authUser) {
     return (
-      <Nav.Link
+      <SignInNavLink
         as={Link}
         to="#"
         onClick={() => {
@@ -49,7 +49,7 @@ const ProfileDropdown = (props: ProfileProps): JSX.Element => {
         }}
       >
         {SIGN_IN_NAVIGATION}
-      </Nav.Link>
+      </SignInNavLink>
     );
   } else {
     return (
