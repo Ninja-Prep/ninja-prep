@@ -48,24 +48,20 @@ class ProblemSubmissionPage extends Component<Props> {
     return this.props.problemDetails?.starterCode || '';
   }
 
-  getTabComponent() {
-    if (this.props.isPremiumUser) {
-      return <TabComponent problemDetails={this.props.problemDetails} />;
-    }
-    return <LockedPremiumProblemSubmission />;
-  }
-
   render(): JSX.Element {
     if (this.props.isLoading) return <AsyncSpinner />;
-
-    const tabComponent = this.getTabComponent();
+    const lockedTabComponent = <LockedPremiumProblemSubmission />;
     return (
       <SubmissionWrapper>
         <CodeEditorNavbar title={this.props.problemDetails?.title} />
         <ReflexContainer orientation="horizontal">
           <ReflexElement>
             <ReflexContainer orientation="vertical">
-              <ReflexElement>{tabComponent}</ReflexElement>
+              <ReflexElement>
+                <ProtectedProblemContent lockedComponent={lockedTabComponent}>
+                  <TabComponent problemDetails={this.props.problemDetails} />;
+                </ProtectedProblemContent>
+              </ReflexElement>
               <ReflexSplitter style={{width: '10px'}} />
               <ReflexElement>
                 <ReflexContainer orientation="horizontal">
