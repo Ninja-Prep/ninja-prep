@@ -15,7 +15,7 @@ interface PlanCardProps {
 function PlanCard({purchasePlan, purchaseHandler}: PlanCardProps): JSX.Element {
   return (
     <HoverWrapper>
-      <PlanCardHeader backgroundColor={purchasePlan.backgroundColor}>
+      <PlanCardHeader backgroundcolor={purchasePlan.backgroundColor}>
         <PlanCardName>{purchasePlan.title}</PlanCardName>
         <PlanCardName>
           {purchasePlan.cost}

@@ -6,7 +6,6 @@ import {ChallengeLink} from 'utils/types/challenges';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'redux/rootReducer';
 import {isPremiumUser} from 'redux/auth/reducer';
-import {getAndSetUser} from 'redux/auth/actions';
 
 interface State {
   challengeLinks: ChallengeLink[];
@@ -18,7 +17,7 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const connector = connect(mapStateToProps, {getAndSetUser});
+const connector = connect(mapStateToProps);
 
 type Props = ConnectedProps<typeof connector>;
 
@@ -28,7 +27,6 @@ class QuestionListContainer extends Component<Props, State> {
   };
 
   async componentDidMount(): Promise<void> {
-    await this.props.getAndSetUser();
     const links = await getChallengeLinks();
     links.sort((link) => {
       return link.isFree ? -1 : 1;
