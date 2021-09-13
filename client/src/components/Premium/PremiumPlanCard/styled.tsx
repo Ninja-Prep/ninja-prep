@@ -7,7 +7,7 @@ export const PlanCardHeader = styled(Card.Header)`
   color: white;
   padding: 1.5rem;
 
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundcolor};
 `;
 
 export const PlanCardName = styled.h2`
