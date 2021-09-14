@@ -37,7 +37,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
   >
     <Connect(QuestionListContainer)>
       <QuestionListContainer
-        getAndSetUser={[Function]}
+        dispatch={[Function]}
         isPremiumUser={false}
       >
         <QuestionList
@@ -91,7 +91,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
   >
     <Connect(QuestionListContainer)>
       <QuestionListContainer
-        getAndSetUser={[Function]}
+        dispatch={[Function]}
         isPremiumUser={false}
       >
         <QuestionList
@@ -145,7 +145,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
   >
     <Connect(QuestionListContainer)>
       <QuestionListContainer
-        getAndSetUser={[Function]}
+        dispatch={[Function]}
         isPremiumUser={false}
       >
         <QuestionList
