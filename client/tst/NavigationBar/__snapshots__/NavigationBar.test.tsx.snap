@@ -60,14 +60,14 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                 variant="dark"
               >
                 <Navbar
-                  className="sc-gtsrHT dSKHVb"
+                  className="sc-gtsrHT eqobRA"
                   collapseOnSelect={false}
                   expand="lg"
                   fixed="top"
                   variant="dark"
                 >
                   <nav
-                    className="sc-gtsrHT dSKHVb navbar navbar-expand-lg navbar-dark fixed-top"
+                    className="sc-gtsrHT eqobRA navbar navbar-expand-lg navbar-dark fixed-top"
                   >
                     <styled.div>
                       <div
@@ -108,27 +108,27 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                     href="/"
                                     onClick={[Function]}
                                   >
-                                    <LightNinjaPrepLogo
+                                    <DarkNinjaPrepLogo
                                       height={40}
                                       width={100}
                                     >
                                       <svg
                                         height={40}
-                                        viewBox="0 0 200 57"
+                                        viewBox="0 0 201 58"
                                         width={100}
                                       >
                                         <g
-                                          data-name="Group 120"
-                                          id="Group_120"
-                                          transform="translate(-1157 -10208)"
+                                          data-name="Group 119"
+                                          id="Group_119"
+                                          transform="translate(-1157 -10129)"
                                         >
                                           <text
-                                            fill="#f9fbfd"
+                                            fill="#2a2a3a"
                                             fontFamily="SourceSansPro-Bold, Source Sans Pro"
-                                            fontSize="40"
+                                            fontSize="41"
                                             fontWeight="700"
                                             id="NinjaPrep"
-                                            transform="translate(1157 10249)"
+                                            transform="translate(1157 10171)"
                                           >
                                             <tspan
                                               x="0"
@@ -144,11 +144,11 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                             fill="#25d0f3"
                                             id="Ellipse_44"
                                             r="7.5"
-                                            transform="translate(1342 10237)"
+                                            transform="translate(1343 10158)"
                                           />
                                         </g>
                                       </svg>
-                                    </LightNinjaPrepLogo>
+                                    </DarkNinjaPrepLogo>
                                   </a>
                                 </LinkAnchor>
                               </Link>
@@ -177,7 +177,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                       >
                         <styled.div>
                           <div
-                            className="sc-eCApnc fylMYb"
+                            className="sc-eCApnc gSWqTX"
                           >
                             <Connect(NavigationBarContentContainer)>
                               <NavigationBarContentContainer
@@ -263,114 +263,120 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                               <NavLinks
                                                                 isPremiumUser={false}
                                                               >
-                                                                <styled.a
-                                                                  as={
-                                                                    Object {
-                                                                      "$$typeof": Symbol(react.forward_ref),
-                                                                      "displayName": "Link",
-                                                                      "propTypes": Object {
-                                                                        "innerRef": [Function],
-                                                                        "onClick": [Function],
-                                                                        "replace": [Function],
-                                                                        "target": [Function],
-                                                                        "to": [Function],
-                                                                      },
-                                                                      "render": [Function],
-                                                                    }
-                                                                  }
-                                                                  to="/premium"
-                                                                >
-                                                                  <Link
-                                                                    className="sc-pNWdM cMncoW"
-                                                                    to="/premium"
+                                                                <styled.div>
+                                                                  <div
+                                                                    className="sc-pNWdM jVdCdu"
                                                                   >
-                                                                    <LinkAnchor
-                                                                      className="sc-pNWdM cMncoW"
-                                                                      href="/premium"
-                                                                      navigate={[Function]}
+                                                                    <styled.a
+                                                                      as={
+                                                                        Object {
+                                                                          "$$typeof": Symbol(react.forward_ref),
+                                                                          "displayName": "Link",
+                                                                          "propTypes": Object {
+                                                                            "innerRef": [Function],
+                                                                            "onClick": [Function],
+                                                                            "replace": [Function],
+                                                                            "target": [Function],
+                                                                            "to": [Function],
+                                                                          },
+                                                                          "render": [Function],
+                                                                        }
+                                                                      }
+                                                                      to="/challenges"
                                                                     >
-                                                                      <a
-                                                                        className="sc-pNWdM cMncoW"
-                                                                        href="/premium"
-                                                                        onClick={[Function]}
+                                                                      <Link
+                                                                        className="sc-jrsJWt kRjbqk"
+                                                                        to="/challenges"
                                                                       >
-                                                                        Get Premium
-                                                                      </a>
-                                                                    </LinkAnchor>
-                                                                  </Link>
-                                                                </styled.a>
-                                                                <styled.a
-                                                                  as={
-                                                                    Object {
-                                                                      "$$typeof": Symbol(react.forward_ref),
-                                                                      "displayName": "Link",
-                                                                      "propTypes": Object {
-                                                                        "innerRef": [Function],
-                                                                        "onClick": [Function],
-                                                                        "replace": [Function],
-                                                                        "target": [Function],
-                                                                        "to": [Function],
-                                                                      },
-                                                                      "render": [Function],
-                                                                    }
-                                                                  }
-                                                                  to="/challenges"
-                                                                >
-                                                                  <Link
-                                                                    className="sc-pNWdM cMncoW"
-                                                                    to="/challenges"
-                                                                  >
-                                                                    <LinkAnchor
-                                                                      className="sc-pNWdM cMncoW"
-                                                                      href="/challenges"
-                                                                      navigate={[Function]}
+                                                                        <LinkAnchor
+                                                                          className="sc-jrsJWt kRjbqk"
+                                                                          href="/challenges"
+                                                                          navigate={[Function]}
+                                                                        >
+                                                                          <a
+                                                                            className="sc-jrsJWt kRjbqk"
+                                                                            href="/challenges"
+                                                                            onClick={[Function]}
+                                                                          >
+                                                                            Problems
+                                                                          </a>
+                                                                        </LinkAnchor>
+                                                                      </Link>
+                                                                    </styled.a>
+                                                                    <styled.a
+                                                                      as={
+                                                                        Object {
+                                                                          "$$typeof": Symbol(react.forward_ref),
+                                                                          "displayName": "Link",
+                                                                          "propTypes": Object {
+                                                                            "innerRef": [Function],
+                                                                            "onClick": [Function],
+                                                                            "replace": [Function],
+                                                                            "target": [Function],
+                                                                            "to": [Function],
+                                                                          },
+                                                                          "render": [Function],
+                                                                        }
+                                                                      }
+                                                                      to="/about"
                                                                     >
-                                                                      <a
-                                                                        className="sc-pNWdM cMncoW"
-                                                                        href="/challenges"
-                                                                        onClick={[Function]}
+                                                                      <Link
+                                                                        className="sc-jrsJWt kRjbqk"
+                                                                        to="/about"
                                                                       >
-                                                                        Challenges
-                                                                      </a>
-                                                                    </LinkAnchor>
-                                                                  </Link>
-                                                                </styled.a>
-                                                                <styled.a
-                                                                  as={
-                                                                    Object {
-                                                                      "$$typeof": Symbol(react.forward_ref),
-                                                                      "displayName": "Link",
-                                                                      "propTypes": Object {
-                                                                        "innerRef": [Function],
-                                                                        "onClick": [Function],
-                                                                        "replace": [Function],
-                                                                        "target": [Function],
-                                                                        "to": [Function],
-                                                                      },
-                                                                      "render": [Function],
-                                                                    }
-                                                                  }
-                                                                  to="/about"
-                                                                >
-                                                                  <Link
-                                                                    className="sc-pNWdM cMncoW"
-                                                                    to="/about"
-                                                                  >
-                                                                    <LinkAnchor
-                                                                      className="sc-pNWdM cMncoW"
-                                                                      href="/about"
-                                                                      navigate={[Function]}
+                                                                        <LinkAnchor
+                                                                          className="sc-jrsJWt kRjbqk"
+                                                                          href="/about"
+                                                                          navigate={[Function]}
+                                                                        >
+                                                                          <a
+                                                                            className="sc-jrsJWt kRjbqk"
+                                                                            href="/about"
+                                                                            onClick={[Function]}
+                                                                          >
+                                                                            Team
+                                                                          </a>
+                                                                        </LinkAnchor>
+                                                                      </Link>
+                                                                    </styled.a>
+                                                                    <styled.a
+                                                                      as={
+                                                                        Object {
+                                                                          "$$typeof": Symbol(react.forward_ref),
+                                                                          "displayName": "Link",
+                                                                          "propTypes": Object {
+                                                                            "innerRef": [Function],
+                                                                            "onClick": [Function],
+                                                                            "replace": [Function],
+                                                                            "target": [Function],
+                                                                            "to": [Function],
+                                                                          },
+                                                                          "render": [Function],
+                                                                        }
+                                                                      }
+                                                                      to="/premium"
                                                                     >
-                                                                      <a
-                                                                        className="sc-pNWdM cMncoW"
-                                                                        href="/about"
-                                                                        onClick={[Function]}
+                                                                      <Link
+                                                                        className="sc-jrsJWt kRjbqk"
+                                                                        to="/premium"
                                                                       >
-                                                                        Meet the Team
-                                                                      </a>
-                                                                    </LinkAnchor>
-                                                                  </Link>
-                                                                </styled.a>
+                                                                        <LinkAnchor
+                                                                          className="sc-jrsJWt kRjbqk"
+                                                                          href="/premium"
+                                                                          navigate={[Function]}
+                                                                        >
+                                                                          <a
+                                                                            className="sc-jrsJWt kRjbqk"
+                                                                            href="/premium"
+                                                                            onClick={[Function]}
+                                                                          >
+                                                                            Get Full Access
+                                                                          </a>
+                                                                        </LinkAnchor>
+                                                                      </Link>
+                                                                    </styled.a>
+                                                                  </div>
+                                                                </styled.div>
                                                               </NavLinks>
                                                             </Desktop>
                                                             <Mobile />
@@ -389,7 +395,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                             isPremium={false}
                                                             toggleLoginModal={[Function]}
                                                           >
-                                                            <Styled(NavLink)
+                                                            <styled.a
                                                               as={
                                                                 Object {
                                                                   "$$typeof": Symbol(react.forward_ref),
@@ -408,18 +414,18 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                               to="#"
                                                             >
                                                               <Link
-                                                                className="sc-fnVZcZ fcvQtP"
+                                                                className="sc-jrsJWt kRjbqk"
                                                                 onClick={[Function]}
                                                                 to="#"
                                                               >
                                                                 <LinkAnchor
-                                                                  className="sc-fnVZcZ fcvQtP"
+                                                                  className="sc-jrsJWt kRjbqk"
                                                                   href="/"
                                                                   navigate={[Function]}
                                                                   onClick={[Function]}
                                                                 >
                                                                   <a
-                                                                    className="sc-fnVZcZ fcvQtP"
+                                                                    className="sc-jrsJWt kRjbqk"
                                                                     href="/"
                                                                     onClick={[Function]}
                                                                   >
@@ -427,7 +433,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                                   </a>
                                                                 </LinkAnchor>
                                                               </Link>
-                                                            </Styled(NavLink)>
+                                                            </styled.a>
                                                           </ProfileDropdown>
                                                         </NavigationBarDropdownMenu>
                                                       </Connect(NavigationBarDropdownMenu)>
@@ -582,14 +588,14 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                 variant="dark"
               >
                 <Navbar
-                  className="sc-gtsrHT dSKHVb"
+                  className="sc-gtsrHT eqobRA"
                   collapseOnSelect={false}
                   expand="lg"
                   fixed="top"
                   variant="dark"
                 >
                   <nav
-                    className="sc-gtsrHT dSKHVb navbar navbar-expand-lg navbar-dark fixed-top"
+                    className="sc-gtsrHT eqobRA navbar navbar-expand-lg navbar-dark fixed-top"
                   >
                     <NavbarBrand
                       as={
@@ -764,20 +770,20 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/premium"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/premium"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/premium"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/premium"
                                                     onClick={[Function]}
                                                   >
-                                                    Get Premium
+                                                    Get Full Access
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
@@ -800,20 +806,20 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/challenges"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/challenges"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/challenges"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/challenges"
                                                     onClick={[Function]}
                                                   >
-                                                    Challenges
+                                                    Problems
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
@@ -836,20 +842,20 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/about"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/about"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/about"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/about"
                                                     onClick={[Function]}
                                                   >
-                                                    Meet the Team
+                                                    Team
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
@@ -875,7 +881,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                             isPremium={false}
                                             toggleLoginModal={[Function]}
                                           >
-                                            <Styled(NavLink)
+                                            <styled.a
                                               as={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -894,18 +900,18 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="#"
                                             >
                                               <Link
-                                                className="sc-fnVZcZ fcvQtP"
+                                                className="sc-jrsJWt kRjbqk"
                                                 onClick={[Function]}
                                                 to="#"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-fnVZcZ fcvQtP"
+                                                  className="sc-jrsJWt kRjbqk"
                                                   href="/"
                                                   navigate={[Function]}
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-fnVZcZ fcvQtP"
+                                                    className="sc-jrsJWt kRjbqk"
                                                     href="/"
                                                     onClick={[Function]}
                                                   >
@@ -913,7 +919,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
-                                            </Styled(NavLink)>
+                                            </styled.a>
                                           </ProfileDropdown>
                                         </NavigationBarDropdownMenu>
                                       </Connect(NavigationBarDropdownMenu)>
@@ -1059,14 +1065,14 @@ exports[`matches snapshot on "TABLET" 1`] = `
                 variant="dark"
               >
                 <Navbar
-                  className="sc-gtsrHT dSKHVb"
+                  className="sc-gtsrHT eqobRA"
                   collapseOnSelect={false}
                   expand="lg"
                   fixed="top"
                   variant="dark"
                 >
                   <nav
-                    className="sc-gtsrHT dSKHVb navbar navbar-expand-lg navbar-dark fixed-top"
+                    className="sc-gtsrHT eqobRA navbar navbar-expand-lg navbar-dark fixed-top"
                   >
                     <NavbarBrand
                       as={
@@ -1241,20 +1247,20 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/premium"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/premium"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/premium"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/premium"
                                                     onClick={[Function]}
                                                   >
-                                                    Get Premium
+                                                    Get Full Access
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
@@ -1277,20 +1283,20 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/challenges"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/challenges"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/challenges"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/challenges"
                                                     onClick={[Function]}
                                                   >
-                                                    Challenges
+                                                    Problems
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
@@ -1313,20 +1319,20 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/about"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/about"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/about"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/about"
                                                     onClick={[Function]}
                                                   >
-                                                    Meet the Team
+                                                    Team
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
@@ -1352,7 +1358,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                             isPremium={false}
                                             toggleLoginModal={[Function]}
                                           >
-                                            <Styled(NavLink)
+                                            <styled.a
                                               as={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -1371,18 +1377,18 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="#"
                                             >
                                               <Link
-                                                className="sc-fnVZcZ fcvQtP"
+                                                className="sc-jrsJWt kRjbqk"
                                                 onClick={[Function]}
                                                 to="#"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-fnVZcZ fcvQtP"
+                                                  className="sc-jrsJWt kRjbqk"
                                                   href="/"
                                                   navigate={[Function]}
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-fnVZcZ fcvQtP"
+                                                    className="sc-jrsJWt kRjbqk"
                                                     href="/"
                                                     onClick={[Function]}
                                                   >
@@ -1390,7 +1396,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                                   </a>
                                                 </LinkAnchor>
                                               </Link>
-                                            </Styled(NavLink)>
+                                            </styled.a>
                                           </ProfileDropdown>
                                         </NavigationBarDropdownMenu>
                                       </Connect(NavigationBarDropdownMenu)>

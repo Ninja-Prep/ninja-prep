@@ -7,7 +7,7 @@ import React, {Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import {GET_PREMIUM_NAVIGATION, CHALLENGES_NAVIGATION, MEET_THE_TEAM_NAVIGATION} from 'utils/stringIds.json';
 
-import NavLink from './styled';
+import NavLink, {NavLinkSpacing} from './styled';
 
 interface Props {
   isPremiumUser: boolean;
@@ -16,19 +16,19 @@ interface Props {
 
 const NavLinks = (props: Props): JSX.Element => {
   return (
-    <Fragment>
-      {!props.isPremiumUser && (
-        <NavLink as={Link} to="/premium">
-          {GET_PREMIUM_NAVIGATION}
-        </NavLink>
-      )}
+    <NavLinkSpacing>
       <NavLink as={Link} to="/challenges">
         {CHALLENGES_NAVIGATION}
       </NavLink>
       <NavLink as={Link} to="/about">
         {MEET_THE_TEAM_NAVIGATION}
       </NavLink>
-    </Fragment>
+      {!props.isPremiumUser && (
+        <NavLink as={Link} to="/premium">
+          {GET_PREMIUM_NAVIGATION}
+        </NavLink>
+      )}
+    </NavLinkSpacing>
   );
 };
 

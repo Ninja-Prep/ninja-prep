@@ -6,8 +6,8 @@ export const NavigationBarFullWidth = styled.div`
 `;
 
 export const FixedNavigationBar = styled(Navbar)`
-  background-color: #2a2a3a;
-  padding: 15px 30px;
+  background-color: #ffffff;
+  padding: 15px 16%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 `;
 
@@ -21,7 +21,6 @@ export const PositionLogo = styled.div`
 
 export const NavigationFloatRight = styled.div`
   float: right;
-  margin-right: 10%;
 `;
 
 export const NavigationDropdownPadding = styled.div`

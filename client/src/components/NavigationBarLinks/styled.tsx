@@ -1,14 +1,32 @@
 import styled from 'styled-components';
+import * as CoreUI from 'uiLibrary/CoreUI';
+
+export const NavLinkSpacing = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 const NavLink = styled.a`
   text-decoration: none;
-  padding-left: 15px;
-  color: hsla(0, 0%, 100%, 0.5);
-  margin: auto;
+  color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
+  margin-right: 48px;
+  letter-spacing: 0.15;
+  line-spacing: 23;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
   :hover {
-    text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
+  }
+  :after {
+    display: block;
+    content: '';
+    border-bottom: 3px solid ${CoreUI.LIGHT_BLUE};
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  :hover:after {
+    transform: scaleX(1);
   }
 `;
 
