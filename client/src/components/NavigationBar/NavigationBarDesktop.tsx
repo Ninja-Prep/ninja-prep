@@ -10,7 +10,7 @@ import {Navbar} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {NavigationBarFullWidth, FixedNavigationBar, NavBarBrand, PositionLogo, NavigationFloatRight} from './styled';
 
-import {LightNinjaPrepLogo} from 'utils/NinjaPrepLogos';
+import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 import LoginModal from 'containers/LoginModal/LoginModal';
 import NavigationBarContent from 'containers/NavigationBarContent/NavigationBarContent';
 
@@ -20,7 +20,7 @@ function NavigationBarDesktop(): JSX.Element {
       <NavBarBrand>
         <PositionLogo>
           <Navbar.Brand as={Link} to="/">
-            <LightNinjaPrepLogo height={40} width={100} />
+            <DarkNinjaPrepLogo height={40} width={100} />
           </Navbar.Brand>
         </PositionLogo>
       </NavBarBrand>

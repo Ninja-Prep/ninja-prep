@@ -33,8 +33,8 @@ const GlobalStyle = createGlobalStyle`
   @media only screen and (min-width: 768px) {
     body {
       margin: 0;
+      padding: 0 16% 200px 16%;
       /* Change padding bottom to be footer height */
-      padding-bottom: 200px;
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
       min-height: 100vh;
