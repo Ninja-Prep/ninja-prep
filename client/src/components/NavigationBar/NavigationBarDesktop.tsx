@@ -8,7 +8,7 @@ import React from 'react';
 
 import {Navbar} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import {NavigationBarFullWidth, FixedNavigationBar, NavBarBrand, PositionLogo, NavigationFloatRight} from './styled';
+import {NavigationBarFullWidth, FixedNavigationBar, PositionLogo, NavigationFloatRight} from './styled';
 
 import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 import LoginModal from 'containers/LoginModal/LoginModal';
@@ -17,14 +17,11 @@ import NavigationBarContent from 'containers/NavigationBarContent/NavigationBarC
 function NavigationBarDesktop(): JSX.Element {
   return (
     <FixedNavigationBar fixed="top" expand="lg" variant="dark">
-      <NavBarBrand>
-        <PositionLogo>
-          <Navbar.Brand as={Link} to="/">
-            <DarkNinjaPrepLogo height={40} width={100} />
-          </Navbar.Brand>
-        </PositionLogo>
-      </NavBarBrand>
-      <Navbar.Toggle />
+      <PositionLogo>
+        <Navbar.Brand as={Link} to="/">
+          <DarkNinjaPrepLogo height={40} width={100} />
+        </Navbar.Brand>
+      </PositionLogo>
       <NavigationBarFullWidth>
         <NavigationFloatRight>
           <NavigationBarContent />

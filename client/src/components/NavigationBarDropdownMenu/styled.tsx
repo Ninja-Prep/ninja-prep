@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import {Image, Dropdown, Nav} from 'react-bootstrap';
+import {Image, Dropdown} from 'react-bootstrap';
 import LockIcon from '@material-ui/icons/Lock';
-import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const DropdownText = styled.p`
   color: #6c757d !important;

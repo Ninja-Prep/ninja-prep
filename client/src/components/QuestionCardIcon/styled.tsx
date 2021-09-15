@@ -1,4 +1,3 @@
-import {Row, Col} from 'react-bootstrap';
 import styled from 'styled-components';
 import LockIcon from '@material-ui/icons/Lock';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';

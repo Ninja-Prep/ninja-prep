@@ -1,4 +1,3 @@
-import {GetState} from 'index';
 import {Dispatch} from 'redux';
 import {getUser} from 'services/auth/authService';
 import {Action} from 'utils/types/redux';

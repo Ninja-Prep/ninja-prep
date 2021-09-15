@@ -9,7 +9,7 @@ export const NavLinkSpacing = styled.div`
 const NavLink = styled.a`
   text-decoration: none;
   color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
-  margin-right: 48px;
+  margin: auto 48px auto 0px;
   letter-spacing: 0.15;
   line-spacing: 23;
   font-weight: bold;
