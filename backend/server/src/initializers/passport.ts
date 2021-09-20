@@ -3,6 +3,7 @@ import {Strategy as GitHubStrategy} from 'passport-github2';
 import {Profile as GoogleProfile, Strategy as GoogleStrategy} from 'passport-google-oauth20';
 import {logError} from 'utils/logging/logger';
 import User, {FindOrCreateUserInput, IUserDocument} from '@models/User';
+import axios from 'axios';
 import passport, {Profile} from 'passport';
 
 type Done = (err?: Error | null, profile?: Express.User) => void;
@@ -72,18 +73,25 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT,
       clientSecret: process.env.GITHUB_SECRET,
-      scope: ['read:user'],
+      scope: ['read:user, user:email'],
       callbackURL: '/api/auth/github/callback',
     },
-    function (accessToken: string, refreshToken: string, profile: Profile, done: Done) {
-      if (!profile.emails || !profile.emails[0].value) {
+    async function (accessToken: string, refreshToken: string, profile: Profile, done: Done) {
+      const emailResponse = await axios.get('https://api.github.com/user/emails', {
+        headers: {
+          Authorization: `token ${accessToken}`,
+        },
+      });
+      // https://docs.github.com/en/rest/reference/users#emails
+      const userEmail = emailResponse.data.find((email: any) => email.primary === true);
+      if (!userEmail || !userEmail.email) {
         throw new Error('Missing User Email');
       }
       const input: FindOrCreateUserInput = {
         userId: profile.id,
         firstName: profile.displayName || profile.username || DEFAULT_NINJAPREP_NAME,
         profilePicture: profile.photos && profile.photos[0].value,
-        email: profile.emails[0].value,
+        email: userEmail.email,
         oauthProvider: profile.provider,
       };
       User.findOrCreate(input, function (err: Error, user: IUserDocument) {
