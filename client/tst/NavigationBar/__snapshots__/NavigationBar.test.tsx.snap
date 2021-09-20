@@ -60,18 +60,18 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                 variant="dark"
               >
                 <Navbar
-                  className="sc-gtsrHT iGZOPy"
+                  className="sc-dlnjwi ixrxzm"
                   collapseOnSelect={false}
                   expand="lg"
                   fixed="top"
                   variant="dark"
                 >
                   <nav
-                    className="sc-gtsrHT iGZOPy navbar navbar-expand-lg navbar-dark fixed-top"
+                    className="sc-dlnjwi ixrxzm navbar navbar-expand-lg navbar-dark fixed-top"
                   >
                     <styled.div>
                       <div
-                        className="sc-dlnjwi pbzDt"
+                        className="sc-hKFxyN brFJnk"
                       >
                         <NavbarBrand
                           as={
@@ -153,11 +153,11 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                     </styled.div>
                     <styled.div>
                       <div
-                        className="sc-bdnxRM eaWVJw"
+                        className="sc-gtsrHT cZtdqt"
                       >
                         <styled.div>
                           <div
-                            className="sc-hKFxyN TwiLb"
+                            className="sc-eCApnc gSWqTX"
                           >
                             <Connect(NavigationBarContentContainer)>
                               <NavigationBarContentContainer
@@ -245,7 +245,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                               >
                                                                 <styled.div>
                                                                   <div
-                                                                    className="sc-fujyAs dvJLUA"
+                                                                    className="sc-pNWdM jVdCdu"
                                                                   >
                                                                     <styled.a
                                                                       as={
@@ -265,16 +265,16 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                                       to="/challenges"
                                                                     >
                                                                       <Link
-                                                                        className="sc-pNWdM hWRLFr"
+                                                                        className="sc-jrsJWt evLExI"
                                                                         to="/challenges"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="sc-pNWdM hWRLFr"
+                                                                          className="sc-jrsJWt evLExI"
                                                                           href="/challenges"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="sc-pNWdM hWRLFr"
+                                                                            className="sc-jrsJWt evLExI"
                                                                             href="/challenges"
                                                                             onClick={[Function]}
                                                                           >
@@ -301,16 +301,16 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                                       to="/about"
                                                                     >
                                                                       <Link
-                                                                        className="sc-pNWdM hWRLFr"
+                                                                        className="sc-jrsJWt evLExI"
                                                                         to="/about"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="sc-pNWdM hWRLFr"
+                                                                          className="sc-jrsJWt evLExI"
                                                                           href="/about"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="sc-pNWdM hWRLFr"
+                                                                            className="sc-jrsJWt evLExI"
                                                                             href="/about"
                                                                             onClick={[Function]}
                                                                           >
@@ -337,16 +337,16 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                                       to="/premium"
                                                                     >
                                                                       <Link
-                                                                        className="sc-pNWdM hWRLFr"
+                                                                        className="sc-jrsJWt evLExI"
                                                                         to="/premium"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="sc-pNWdM hWRLFr"
+                                                                          className="sc-jrsJWt evLExI"
                                                                           href="/premium"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="sc-pNWdM hWRLFr"
+                                                                            className="sc-jrsJWt evLExI"
                                                                             href="/premium"
                                                                             onClick={[Function]}
                                                                           >
@@ -394,18 +394,18 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                               to="#"
                                                             >
                                                               <Link
-                                                                className="sc-pNWdM hWRLFr"
+                                                                className="sc-jrsJWt evLExI"
                                                                 onClick={[Function]}
                                                                 to="#"
                                                               >
                                                                 <LinkAnchor
-                                                                  className="sc-pNWdM hWRLFr"
+                                                                  className="sc-jrsJWt evLExI"
                                                                   href="/"
                                                                   navigate={[Function]}
                                                                   onClick={[Function]}
                                                                 >
                                                                   <a
-                                                                    className="sc-pNWdM hWRLFr"
+                                                                    className="sc-jrsJWt evLExI"
                                                                     href="/"
                                                                     onClick={[Function]}
                                                                   >
@@ -568,14 +568,14 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                 variant="dark"
               >
                 <Navbar
-                  className="sc-gtsrHT iGZOPy"
+                  className="sc-dlnjwi ixrxzm"
                   collapseOnSelect={false}
                   expand="lg"
                   fixed="top"
                   variant="dark"
                 >
                   <nav
-                    className="sc-gtsrHT iGZOPy navbar navbar-expand-lg navbar-dark fixed-top"
+                    className="sc-dlnjwi ixrxzm navbar navbar-expand-lg navbar-dark fixed-top"
                   >
                     <NavbarBrand
                       as={
@@ -750,16 +750,16 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/premium"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/premium"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/premium"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/premium"
                                                     onClick={[Function]}
                                                   >
@@ -786,16 +786,16 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/challenges"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/challenges"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/challenges"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/challenges"
                                                     onClick={[Function]}
                                                   >
@@ -822,16 +822,16 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/about"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/about"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/about"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/about"
                                                     onClick={[Function]}
                                                   >
@@ -847,7 +847,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                   </Connect(NavigationLinksContainer)>
                                   <styled.div>
                                     <div
-                                      className="sc-eCApnc kqAvfQ"
+                                      className="sc-jSFjdj eSJROp"
                                     >
                                       <Connect(NavigationBarDropdownMenu)>
                                         <NavigationBarDropdownMenu
@@ -880,18 +880,18 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="#"
                                             >
                                               <Link
-                                                className="sc-pNWdM hWRLFr"
+                                                className="sc-jrsJWt evLExI"
                                                 onClick={[Function]}
                                                 to="#"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-pNWdM hWRLFr"
+                                                  className="sc-jrsJWt evLExI"
                                                   href="/"
                                                   navigate={[Function]}
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-pNWdM hWRLFr"
+                                                    className="sc-jrsJWt evLExI"
                                                     href="/"
                                                     onClick={[Function]}
                                                   >
@@ -1045,14 +1045,14 @@ exports[`matches snapshot on "TABLET" 1`] = `
                 variant="dark"
               >
                 <Navbar
-                  className="sc-gtsrHT iGZOPy"
+                  className="sc-dlnjwi ixrxzm"
                   collapseOnSelect={false}
                   expand="lg"
                   fixed="top"
                   variant="dark"
                 >
                   <nav
-                    className="sc-gtsrHT iGZOPy navbar navbar-expand-lg navbar-dark fixed-top"
+                    className="sc-dlnjwi ixrxzm navbar navbar-expand-lg navbar-dark fixed-top"
                   >
                     <NavbarBrand
                       as={
@@ -1227,16 +1227,16 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/premium"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/premium"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/premium"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/premium"
                                                     onClick={[Function]}
                                                   >
@@ -1263,16 +1263,16 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/challenges"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/challenges"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/challenges"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/challenges"
                                                     onClick={[Function]}
                                                   >
@@ -1299,16 +1299,16 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/about"
                                             >
                                               <Link
-                                                className="sc-jrsJWt gnVKoT"
+                                                className="sc-kEqXSa jKMnEQ"
                                                 to="/about"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt gnVKoT"
+                                                  className="sc-kEqXSa jKMnEQ"
                                                   href="/about"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt gnVKoT"
+                                                    className="sc-kEqXSa jKMnEQ"
                                                     href="/about"
                                                     onClick={[Function]}
                                                   >
@@ -1324,7 +1324,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                   </Connect(NavigationLinksContainer)>
                                   <styled.div>
                                     <div
-                                      className="sc-eCApnc kqAvfQ"
+                                      className="sc-jSFjdj eSJROp"
                                     >
                                       <Connect(NavigationBarDropdownMenu)>
                                         <NavigationBarDropdownMenu
@@ -1357,18 +1357,18 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="#"
                                             >
                                               <Link
-                                                className="sc-pNWdM hWRLFr"
+                                                className="sc-jrsJWt evLExI"
                                                 onClick={[Function]}
                                                 to="#"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-pNWdM hWRLFr"
+                                                  className="sc-jrsJWt evLExI"
                                                   href="/"
                                                   navigate={[Function]}
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-pNWdM hWRLFr"
+                                                    className="sc-jrsJWt evLExI"
                                                     href="/"
                                                     onClick={[Function]}
                                                   >
