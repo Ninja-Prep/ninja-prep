@@ -26,60 +26,42 @@ export const LoginHeaderBodyText = styled.p`
 export const StartLearningForFree = styled.p`
   ${CoreUI.ROBOTO_BOLD_FONT}
   text-align: center;
-`
+`;
 
 export const FlexSizing = styled.div`
   flex: 1;
-`
+`;
 
 export const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const GoogleButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
-  text-align: center;
-  color: white;
   background-color: #DB2828;
   margin-bottom: 16px;
-    > svg {
-      float: left;
-    }
   :hover {
-    text-decoration: none;
-    color: white;
-    background-color:	#bf0000;
+    background-color: #bf0000;
   }
-`
+`;
 
 export const FacebookButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
   background-color: #3B5998;
-  text-align: center;
   color: white !important;
   margin-bottom: 16px;
-    > svg {
-      float: left;
-    }
   :hover {
-    text-decoration: none;
-    color: white;
-    background-color:	#192E92;
+    background-color: #192e92;
   }
-`
+`;
 
 export const GitHubButton = styled.a`
-${CoreUI.SOCIAL_MEDIA_BUTTON}
-  text-align: center;
+  ${CoreUI.SOCIAL_MEDIA_BUTTON}
   color: white !important;
-  background-color: #1B1C1D;
-    > svg {
-      float: left;
-    }
-  :hover {
-    text-decoration: none;
-    color: white;
+  background-color: #1b1c1d;
+  > svg {
+    float: left;
   }
-`
+`;

@@ -245,7 +245,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                               >
                                                                 <styled.div>
                                                                   <div
-                                                                    className="sc-pNWdM jVdCdu"
+                                                                    className="sc-dIsUp dNVWsJ"
                                                                   >
                                                                     <styled.a
                                                                       as={
@@ -265,16 +265,16 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                                       to="/challenges"
                                                                     >
                                                                       <Link
-                                                                        className="sc-jrsJWt evLExI"
+                                                                        className="sc-bqGGPW kLJwIq"
                                                                         to="/challenges"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="sc-jrsJWt evLExI"
+                                                                          className="sc-bqGGPW kLJwIq"
                                                                           href="/challenges"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="sc-jrsJWt evLExI"
+                                                                            className="sc-bqGGPW kLJwIq"
                                                                             href="/challenges"
                                                                             onClick={[Function]}
                                                                           >
@@ -301,16 +301,16 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                                       to="/about"
                                                                     >
                                                                       <Link
-                                                                        className="sc-jrsJWt evLExI"
+                                                                        className="sc-bqGGPW kLJwIq"
                                                                         to="/about"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="sc-jrsJWt evLExI"
+                                                                          className="sc-bqGGPW kLJwIq"
                                                                           href="/about"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="sc-jrsJWt evLExI"
+                                                                            className="sc-bqGGPW kLJwIq"
                                                                             href="/about"
                                                                             onClick={[Function]}
                                                                           >
@@ -337,16 +337,16 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                                       to="/premium"
                                                                     >
                                                                       <Link
-                                                                        className="sc-jrsJWt evLExI"
+                                                                        className="sc-bqGGPW kLJwIq"
                                                                         to="/premium"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="sc-jrsJWt evLExI"
+                                                                          className="sc-bqGGPW kLJwIq"
                                                                           href="/premium"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="sc-jrsJWt evLExI"
+                                                                            className="sc-bqGGPW kLJwIq"
                                                                             href="/premium"
                                                                             onClick={[Function]}
                                                                           >
@@ -394,18 +394,18 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                                                               to="#"
                                                             >
                                                               <Link
-                                                                className="sc-jrsJWt evLExI"
+                                                                className="sc-bqGGPW kLJwIq"
                                                                 onClick={[Function]}
                                                                 to="#"
                                                               >
                                                                 <LinkAnchor
-                                                                  className="sc-jrsJWt evLExI"
+                                                                  className="sc-bqGGPW kLJwIq"
                                                                   href="/"
                                                                   navigate={[Function]}
                                                                   onClick={[Function]}
                                                                 >
                                                                   <a
-                                                                    className="sc-jrsJWt evLExI"
+                                                                    className="sc-bqGGPW kLJwIq"
                                                                     href="/"
                                                                     onClick={[Function]}
                                                                   >
@@ -443,54 +443,10 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                           showModal={false}
                           toggleModal={[Function]}
                         >
-                          <Modal
-                            animation={true}
-                            autoFocus={true}
-                            backdrop={true}
-                            centered={true}
-                            dialogAs={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "displayName": "ModalDialog",
-                                "render": [Function],
-                              }
-                            }
-                            enforceFocus={true}
-                            keyboard={true}
-                            onHide={[Function]}
-                            restoreFocus={true}
-                            show={false}
-                          >
-                            <Modal
-                              autoFocus={true}
-                              backdrop={true}
-                              backdropTransition={[Function]}
-                              containerClassName="modal-open"
-                              enforceFocus={true}
-                              keyboard={true}
-                              manager={
-                                BootstrapModalManager {
-                                  "containers": Array [],
-                                  "data": Array [],
-                                  "handleContainerOverflow": true,
-                                  "hideSiblingNodes": true,
-                                  "modals": Array [],
-                                  "scrollbarSize": 0,
-                                }
-                              }
-                              onEnter={[Function]}
-                              onEntering={[Function]}
-                              onEscapeKeyDown={[Function]}
-                              onExit={[Function]}
-                              onExited={[Function]}
-                              onHide={[Function]}
-                              renderBackdrop={[Function]}
-                              renderDialog={[Function]}
-                              restoreFocus={true}
-                              show={false}
-                              transition={[Function]}
-                            />
-                          </Modal>
+                          <ForwardRef(Modal)
+                            onClose={[Function]}
+                            open={false}
+                          />
                         </LoginModal>
                       </LoginModalContainer>
                     </Connect(LoginModalContainer)>
@@ -750,16 +706,16 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/premium"
                                             >
                                               <Link
-                                                className="sc-kEqXSa jKMnEQ"
+                                                className="sc-ksluID faREYd"
                                                 to="/premium"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-kEqXSa jKMnEQ"
+                                                  className="sc-ksluID faREYd"
                                                   href="/premium"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-kEqXSa jKMnEQ"
+                                                    className="sc-ksluID faREYd"
                                                     href="/premium"
                                                     onClick={[Function]}
                                                   >
@@ -786,16 +742,16 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/challenges"
                                             >
                                               <Link
-                                                className="sc-kEqXSa jKMnEQ"
+                                                className="sc-ksluID faREYd"
                                                 to="/challenges"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-kEqXSa jKMnEQ"
+                                                  className="sc-ksluID faREYd"
                                                   href="/challenges"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-kEqXSa jKMnEQ"
+                                                    className="sc-ksluID faREYd"
                                                     href="/challenges"
                                                     onClick={[Function]}
                                                   >
@@ -822,16 +778,16 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="/about"
                                             >
                                               <Link
-                                                className="sc-kEqXSa jKMnEQ"
+                                                className="sc-ksluID faREYd"
                                                 to="/about"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-kEqXSa jKMnEQ"
+                                                  className="sc-ksluID faREYd"
                                                   href="/about"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-kEqXSa jKMnEQ"
+                                                    className="sc-ksluID faREYd"
                                                     href="/about"
                                                     onClick={[Function]}
                                                   >
@@ -880,18 +836,18 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                               to="#"
                                             >
                                               <Link
-                                                className="sc-jrsJWt evLExI"
+                                                className="sc-bqGGPW kLJwIq"
                                                 onClick={[Function]}
                                                 to="#"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt evLExI"
+                                                  className="sc-bqGGPW kLJwIq"
                                                   href="/"
                                                   navigate={[Function]}
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt evLExI"
+                                                    className="sc-bqGGPW kLJwIq"
                                                     href="/"
                                                     onClick={[Function]}
                                                   >
@@ -917,54 +873,10 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                                   showModal={false}
                                   toggleModal={[Function]}
                                 >
-                                  <Modal
-                                    animation={true}
-                                    autoFocus={true}
-                                    backdrop={true}
-                                    centered={true}
-                                    dialogAs={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "displayName": "ModalDialog",
-                                        "render": [Function],
-                                      }
-                                    }
-                                    enforceFocus={true}
-                                    keyboard={true}
-                                    onHide={[Function]}
-                                    restoreFocus={true}
-                                    show={false}
-                                  >
-                                    <Modal
-                                      autoFocus={true}
-                                      backdrop={true}
-                                      backdropTransition={[Function]}
-                                      containerClassName="modal-open"
-                                      enforceFocus={true}
-                                      keyboard={true}
-                                      manager={
-                                        BootstrapModalManager {
-                                          "containers": Array [],
-                                          "data": Array [],
-                                          "handleContainerOverflow": true,
-                                          "hideSiblingNodes": true,
-                                          "modals": Array [],
-                                          "scrollbarSize": 0,
-                                        }
-                                      }
-                                      onEnter={[Function]}
-                                      onEntering={[Function]}
-                                      onEscapeKeyDown={[Function]}
-                                      onExit={[Function]}
-                                      onExited={[Function]}
-                                      onHide={[Function]}
-                                      renderBackdrop={[Function]}
-                                      renderDialog={[Function]}
-                                      restoreFocus={true}
-                                      show={false}
-                                      transition={[Function]}
-                                    />
-                                  </Modal>
+                                  <ForwardRef(Modal)
+                                    onClose={[Function]}
+                                    open={false}
+                                  />
                                 </LoginModal>
                               </LoginModalContainer>
                             </Connect(LoginModalContainer)>
@@ -1227,16 +1139,16 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/premium"
                                             >
                                               <Link
-                                                className="sc-kEqXSa jKMnEQ"
+                                                className="sc-ksluID faREYd"
                                                 to="/premium"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-kEqXSa jKMnEQ"
+                                                  className="sc-ksluID faREYd"
                                                   href="/premium"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-kEqXSa jKMnEQ"
+                                                    className="sc-ksluID faREYd"
                                                     href="/premium"
                                                     onClick={[Function]}
                                                   >
@@ -1263,16 +1175,16 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/challenges"
                                             >
                                               <Link
-                                                className="sc-kEqXSa jKMnEQ"
+                                                className="sc-ksluID faREYd"
                                                 to="/challenges"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-kEqXSa jKMnEQ"
+                                                  className="sc-ksluID faREYd"
                                                   href="/challenges"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-kEqXSa jKMnEQ"
+                                                    className="sc-ksluID faREYd"
                                                     href="/challenges"
                                                     onClick={[Function]}
                                                   >
@@ -1299,16 +1211,16 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="/about"
                                             >
                                               <Link
-                                                className="sc-kEqXSa jKMnEQ"
+                                                className="sc-ksluID faREYd"
                                                 to="/about"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-kEqXSa jKMnEQ"
+                                                  className="sc-ksluID faREYd"
                                                   href="/about"
                                                   navigate={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-kEqXSa jKMnEQ"
+                                                    className="sc-ksluID faREYd"
                                                     href="/about"
                                                     onClick={[Function]}
                                                   >
@@ -1357,18 +1269,18 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                               to="#"
                                             >
                                               <Link
-                                                className="sc-jrsJWt evLExI"
+                                                className="sc-bqGGPW kLJwIq"
                                                 onClick={[Function]}
                                                 to="#"
                                               >
                                                 <LinkAnchor
-                                                  className="sc-jrsJWt evLExI"
+                                                  className="sc-bqGGPW kLJwIq"
                                                   href="/"
                                                   navigate={[Function]}
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="sc-jrsJWt evLExI"
+                                                    className="sc-bqGGPW kLJwIq"
                                                     href="/"
                                                     onClick={[Function]}
                                                   >
@@ -1394,54 +1306,10 @@ exports[`matches snapshot on "TABLET" 1`] = `
                                   showModal={false}
                                   toggleModal={[Function]}
                                 >
-                                  <Modal
-                                    animation={true}
-                                    autoFocus={true}
-                                    backdrop={true}
-                                    centered={true}
-                                    dialogAs={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "displayName": "ModalDialog",
-                                        "render": [Function],
-                                      }
-                                    }
-                                    enforceFocus={true}
-                                    keyboard={true}
-                                    onHide={[Function]}
-                                    restoreFocus={true}
-                                    show={false}
-                                  >
-                                    <Modal
-                                      autoFocus={true}
-                                      backdrop={true}
-                                      backdropTransition={[Function]}
-                                      containerClassName="modal-open"
-                                      enforceFocus={true}
-                                      keyboard={true}
-                                      manager={
-                                        BootstrapModalManager {
-                                          "containers": Array [],
-                                          "data": Array [],
-                                          "handleContainerOverflow": true,
-                                          "hideSiblingNodes": true,
-                                          "modals": Array [],
-                                          "scrollbarSize": 0,
-                                        }
-                                      }
-                                      onEnter={[Function]}
-                                      onEntering={[Function]}
-                                      onEscapeKeyDown={[Function]}
-                                      onExit={[Function]}
-                                      onExited={[Function]}
-                                      onHide={[Function]}
-                                      renderBackdrop={[Function]}
-                                      renderDialog={[Function]}
-                                      restoreFocus={true}
-                                      show={false}
-                                      transition={[Function]}
-                                    />
-                                  </Modal>
+                                  <ForwardRef(Modal)
+                                    onClose={[Function]}
+                                    open={false}
+                                  />
                                 </LoginModal>
                               </LoginModalContainer>
                             </Connect(LoginModalContainer)>

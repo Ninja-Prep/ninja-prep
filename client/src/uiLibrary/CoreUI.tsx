@@ -73,8 +73,17 @@ export const SOCIAL_MEDIA_BUTTON = css`
   width: 340px;
   color: #ffffff;
   transition-duration: 0.4s;
+  text-align: center;
+  color: white;
+  :hover {
+    text-decoration: none;
+    color: white;
+  }
   :focus {
     outline: none;
+  }
+  > svg {
+    float: left;
   }
 `;
 
