@@ -4,28 +4,42 @@ There is no login page, only a modal to log the user in
 */
 import React from 'react';
 
-import {Modal} from 'react-bootstrap';
+import Modal from '@material-ui/core/Modal';
 import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
-import SocialMediaButtons from 'utils/SocialMediaButtons';
-import {SIGN_UP_POP_UP_BOX} from 'utils/stringIds.json';
-import {CenterContent, ModalHeader, SubheadingText} from './styled';
+import {SIGN_UP_LOGIN, GOOGLE_LOGIN, FACEBOOK_LOGIN, GITHUB_LOGIN, START_CODING_LOGIN_MODAL} from 'utils/stringIds.json';
+import {CenterContent, FacebookButton, GitHubButton, GoogleButton, LoginText, ModalSubtext, SocialMediaButtonContainer} from './styled';
+import {FacebookIcon, GitHubIcon, GoogleIcon} from 'uiLibrary/SocialMediaIcons';
+import Fade from '@material-ui/core/Fade';
+
 interface Props {
   showModal: boolean;
   toggleModal: () => void;
 }
 
 function LoginModal({showModal, toggleModal}: Props): JSX.Element {
-  // TO-DO: Update Social Media buttons to use styled-components
   return (
-    <Modal show={showModal} onHide={toggleModal} centered>
-      <ModalHeader closeButton />
-      <CenterContent>
-        <Modal.Body>
-          <DarkNinjaPrepLogo height={50} width={300} />
-          <SubheadingText>{SIGN_UP_POP_UP_BOX}</SubheadingText>
-          <SocialMediaButtons cssClass="fluid ui mb-3 py-3" />
-        </Modal.Body>
-      </CenterContent>
+    <Modal open={showModal} onClose={toggleModal}>
+      <Fade in={showModal} timeout={showModal ? 500 : 0}>
+        <CenterContent>
+          <DarkNinjaPrepLogo height={50} width={150} />
+          <LoginText>{SIGN_UP_LOGIN}</LoginText>
+          <ModalSubtext>{START_CODING_LOGIN_MODAL}</ModalSubtext>
+          <SocialMediaButtonContainer>
+            <GoogleButton href="/api/auth/google">
+              <GoogleIcon />
+              {GOOGLE_LOGIN}
+            </GoogleButton>
+            <FacebookButton href="/api/auth/facebook">
+              <FacebookIcon />
+              {FACEBOOK_LOGIN}
+            </FacebookButton>
+            <GitHubButton href="/api/auth/github">
+              <GitHubIcon />
+              {GITHUB_LOGIN}
+            </GitHubButton>
+          </SocialMediaButtonContainer>
+        </CenterContent>
+      </Fade>
     </Modal>
   );
 }
