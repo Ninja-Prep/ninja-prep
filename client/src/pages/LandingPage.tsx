@@ -1,6 +1,6 @@
 import React from 'react';
 
-import JourneyComponent from '../components/Journey/JourneyComponent';
+import LandingPageJourney from '../components/LandingPageJourney/LandingPageJourney';
 import ShowcaseComponent from '../components/Showcase/ShowcaseComponent';
 import LoginHeader from 'components/LoginHeader/loginHeader';
 import WhyNinjaPrep from 'components/WhyNinjaPrep/WhyNinjaPrep';
@@ -13,7 +13,7 @@ function LandingPage(): JSX.Element {
     <div>
       <LoginHeader />
       <WhyNinjaPrep />
-      <JourneyComponent />
+      <LandingPageJourney />
       <ShowcaseComponent />
     </div>
   );

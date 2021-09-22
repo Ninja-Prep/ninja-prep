@@ -60,5 +60,16 @@
   "TEST_CASES_PASSED": "Test Cases Passed",
   "TEXT_404": 404,
   "THANK_YOU_FOR_CHOOSING_NINJAPREP": "access, thank you for choosing NinjaPrep!",
-  "YOU_NOW_HAVE": "You now have"
+  "YOU_NOW_HAVE": "You now have",
+  "HOW_IT_WORKS": "How it Works",
+  "DISCOVER_IN_DEMAND": "Discover In-demand Concepts.",
+  "DISCOVER_IN_DEMAND_BODY": "Choose from our wide selection of problems that touches upon in-demand concepts and go from beginner to mastery.",
+  "LEARN_CORE_CONCEPTS": "Learn Core Concepts.",
+  "LEARN_CORE_CONCEPTS_BODY": "No matter your experience level, you'll learn complex concepts in and out through in-depth articles",
+  "CODE_ALONG_TO_VIDEO": "Code Along to Video Solutions.",
+  "CODE_ALONG_TO_VIDEO_BODY": "Stuck on a problem? Code alongside our step-by-step videos",
+  "INSTANT_FEEDBACK": "Get Instant Feedback.",
+  "INSTANT_FEEDBACK_BODY": "Your code is tested against various test cases as soon as you run your code. You'll always know if you're on the right track.",
+  "DREAM_JOB": "Land Your Dream Job.",
+  "DREAM_JOB_BODY": "All hard work pays off. Learn, practice, and apply in-demand coding skills with NinjaPrep to earn that role as a software engineer."
 }
