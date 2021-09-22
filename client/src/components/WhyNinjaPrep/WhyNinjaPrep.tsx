@@ -1,6 +1,5 @@
 import React from 'react';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import {LightBlueButton} from 'uiLibrary/CoreUI';
 import {SubHeading, BackgroundContainer, WhyNinjaPrepContainer, SubText, StartCodingButton} from './styled';
 
 function WhyNinjaPrep(): JSX.Element {
