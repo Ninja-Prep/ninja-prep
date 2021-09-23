@@ -64,6 +64,14 @@ export const ROBOTO_BOLD_FONT = css`
   font-weight: bold;
 `;
 
+export const ROBOTO_BOLD_FONT_LIGHT = css`
+  font-family: Roboto;
+  letter-spacing: 0.15px;
+  line-height: 23px;
+  font-size: 17px;
+  font-weight: bold;
+`;
+
 export const SOCIAL_MEDIA_BUTTON = css`
   ${OPEN_SANS_REGULAR}
   border-radius: 10px;

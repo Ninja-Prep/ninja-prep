@@ -71,5 +71,18 @@
   "INSTANT_FEEDBACK": "Get Instant Feedback.",
   "INSTANT_FEEDBACK_BODY": "Your code is tested against various test cases as soon as you run your code. You'll always know if you're on the right track.",
   "DREAM_JOB": "Land Your Dream Job.",
-  "DREAM_JOB_BODY": "All hard work pays off. Learn, practice, and apply in-demand coding skills with NinjaPrep to earn that role as a software engineer."
+  "DREAM_JOB_BODY": "All hard work pays off. Learn, practice, and apply in-demand coding skills with NinjaPrep to earn that role as a software engineer.",
+  "BENEFITS_PREMIUM": "Access to Premium Content",
+  "BENEFITS_PREMIUM_BODY": "Access to over 100 challenges that cover in-demand algorithm and data structure concepts",
+  "BENEFITS_CAREER_TITLE": "Take Your Career to the Next Level",
+  "BENEFITS_ARTICLES": "Premium Articles",
+  "BENEFITS_ARTICLE_BODY": "Elaborate articles to provide detailed conceptual overview on every problem",
+  "BENEFITS_CODE_WALKTHROUGHS": "Code Walkthroughs",
+  "BENEFITS_CODE_WALKTHROUGHS_BODY": "Step by step video solutions to effectively walk you through each problem",
+  "BENEFITS_CRASH_COURSE": "Crash course",
+  "BENEFITS_CRASH_COURSE_BODY": "Work through a curated list of problems relevant to the tech industry",
+  "BENEFITS_BROWSER_COMPILER": "In-Browser Compiler",
+  "BENEFITS_BROWSER_COMPILER_BODY": "Receive instant feedback on all problems with our in-browser compiler",
+  "BENEFITS_MULTIPLE_LANGUAGES": "Code in 3 languages",
+  "BENEFITS_MULTIPLE_LANGUAGES_BODY": "We offer support for the most popular university languages to prepare all students for their upcoming coding interviews"
 }
