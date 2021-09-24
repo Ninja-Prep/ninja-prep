@@ -8,7 +8,7 @@ other components
 
 import React, {FunctionComponent} from 'react';
 
-import FooterBarComponent from 'components/FooterBar/FooterBarComponent';
+import FooterBarComponent from 'containers/FooterBar/FooterBar';
 import NavigationBar from 'containers/NavigationBar/NavigationBar';
 
 import {FooterMargin, HeaderPadding} from './styledLayouts';

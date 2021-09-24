@@ -23,7 +23,7 @@ class App extends Component<ConnectedProps<typeof connector>> {
       <Router>
         <Switch>
           <HeaderNavbarRoute path="/about" exact routeComponent={AboutRoute} hasFooter />
-          <HeaderNavbarRoute path="/" exact routeComponent={LandingPageRoute} />
+          <HeaderNavbarRoute path="/" exact routeComponent={LandingPageRoute} hasFooter />
           <HeaderNavbarRoute path="/challenges" exact routeComponent={ChallengesRoute} />
           <HeaderNavbarRoute path="/order/success" exact routeComponent={OrderSuccessRoute} hasFooter />
           <HeaderNavbarRoute path="/premium" exact routeComponent={PremiumRoute} hasFooter />

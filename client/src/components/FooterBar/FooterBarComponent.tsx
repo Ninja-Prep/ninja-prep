@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import FadeIn from 'react-fade-in';
 
 import Responsiveness from 'utils/hocs/Responsiveness';
 
@@ -8,8 +9,19 @@ import FooterBarMobile from './mobile/FooterBarMobile';
 const desktop = <FooterBarDesktop />;
 const mobile = <FooterBarMobile />;
 
-const FooterBarComponent = (): JSX.Element => {
-  return <Responsiveness desktop={desktop} mobile={mobile} />;
+interface Props {
+  isLoadingUser: boolean;
+}
+
+const FooterBarComponent = (props: Props): JSX.Element => {
+  if (props.isLoadingUser) {
+    return <Fragment />;
+  }
+  return (
+    <FadeIn>
+      <Responsiveness desktop={desktop} mobile={mobile} />
+    </FadeIn>
+  );
 };
 
 export default FooterBarComponent;
