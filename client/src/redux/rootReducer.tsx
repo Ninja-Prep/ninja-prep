@@ -6,6 +6,7 @@ import textEditor from './textEditor/reducer';
 import userSubmission from './userSubmission/reducer';
 import authReducer from './auth/reducer';
 import loginModal from './loginModal/reducer';
+import footer from './footer/reducer';
 
 const rootReducer = combineReducers({
   authReducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   userSubmission,
   problemDetails,
   loginModal,
+  footer,
 });
 export default rootReducer;
 

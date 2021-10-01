@@ -1,26 +1,44 @@
-import {Row, Col} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
-export const IconWrapper = styled(Col)`
-  background-color: #f5f5f5;
-  max-width: 50px;
+export const QuestionTitleLink = styled(Link)`
+  ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  text-decoration: none;
+  padding: 32px 0 16px 0;
+  :hover {
+    text-decoration: none;
+  }
 `;
 
-export const QuestionTitle = styled(Col)`
-  padding: 22px;
-  font-size: 18px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+export const QuestionTitle = styled.div`
+  ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
+  text-decoration: none;
+  :hover {
+    text-decoration: none;
+    ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
+  }
 `;
 
-export const CardRow = styled(Row)`
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  margin: 20px 0px;
+export const QuestionBody = styled.p`
+  ${CoreUI.OPEN_SANS_REGULAR}
+  color: ${CoreUI.BODY_TEXT_COLOR};
+  padding: 0 0 32px 40px;
+`;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0px 32px;
+  border-bottom: 1px solid ${CoreUI.BORDER_COLOR};
+`;
+
+export const IconWrapper = styled.div`
+  margin-right: 10px;
+  width: 30px;
+  > svg {
+    font-size: 30px;
+  }
 `;

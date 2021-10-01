@@ -11,10 +11,8 @@ interface Props {
 const QuestionCardIcon = (props: Props): JSX.Element => {
   if (props.isCompletedProblem) {
     return <AcceptedIcon />;
-  } else if (props.isPremiumUser) {
+  } else if (props.isPremiumUser || props.isFreeProblem) {
     return <Fragment />;
-  } else if (props.isFreeProblem) {
-    return <FreeUnlockedIcon />;
   } else {
     return <LockedIcon />;
   }

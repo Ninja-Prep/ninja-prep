@@ -15,7 +15,6 @@ import {
   BenefitsBoltIcon,
   BenefitsVideoIcon,
   StartCodingButton,
-  FlexButton,
 } from './styled';
 
 import {

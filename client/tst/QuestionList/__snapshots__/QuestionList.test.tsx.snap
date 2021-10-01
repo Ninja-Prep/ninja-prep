@@ -37,7 +37,7 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
   >
     <Connect(QuestionListContainer)>
       <QuestionListContainer
-        dispatch={[Function]}
+        displayFooter={[Function]}
         isPremiumUser={false}
       >
         <QuestionList
@@ -45,7 +45,113 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
           isPremiumUser={false}
         >
           <FadeIn>
-            <div />
+            <div>
+              <div
+                key=".0"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Arrays"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Arrays
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+              <div
+                key=".1"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Linked Lists"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Linked Lists
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+              <div
+                key=".2"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Trees"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Trees
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+            </div>
           </FadeIn>
         </QuestionList>
       </QuestionListContainer>
@@ -91,7 +197,7 @@ exports[`matches snapshot on "MOBILE" 1`] = `
   >
     <Connect(QuestionListContainer)>
       <QuestionListContainer
-        dispatch={[Function]}
+        displayFooter={[Function]}
         isPremiumUser={false}
       >
         <QuestionList
@@ -99,7 +205,113 @@ exports[`matches snapshot on "MOBILE" 1`] = `
           isPremiumUser={false}
         >
           <FadeIn>
-            <div />
+            <div>
+              <div
+                key=".0"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Arrays"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Arrays
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+              <div
+                key=".1"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Linked Lists"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Linked Lists
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+              <div
+                key=".2"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Trees"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Trees
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+            </div>
           </FadeIn>
         </QuestionList>
       </QuestionListContainer>
@@ -145,7 +357,7 @@ exports[`matches snapshot on "TABLET" 1`] = `
   >
     <Connect(QuestionListContainer)>
       <QuestionListContainer
-        dispatch={[Function]}
+        displayFooter={[Function]}
         isPremiumUser={false}
       >
         <QuestionList
@@ -153,7 +365,113 @@ exports[`matches snapshot on "TABLET" 1`] = `
           isPremiumUser={false}
         >
           <FadeIn>
-            <div />
+            <div>
+              <div
+                key=".0"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Arrays"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Arrays
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+              <div
+                key=".1"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Linked Lists"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Linked Lists
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+              <div
+                key=".2"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "translateY(20px)",
+                    "transition": "opacity 400ms, transform 400ms",
+                  }
+                }
+              >
+                <QuestionListSection
+                  categoryTitle="Trees"
+                  challengeLinks={Array []}
+                  isPremiumUser={false}
+                >
+                  <styled.div>
+                    <div
+                      className="sc-jrsJWt dLLtIa"
+                    >
+                      <styled.p>
+                        <p
+                          className="sc-pNWdM jZpaeY"
+                        >
+                          Trees
+                        </p>
+                      </styled.p>
+                      <styled.div>
+                        <div
+                          className="sc-kEqXSa ijxokZ"
+                        />
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </QuestionListSection>
+              </div>
+            </div>
           </FadeIn>
         </QuestionList>
       </QuestionListContainer>

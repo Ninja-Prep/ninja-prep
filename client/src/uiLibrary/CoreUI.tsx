@@ -7,6 +7,9 @@ export const MEDIUM_BLUE = '#1DA4BF';
 export const EXTRA_LARGE_SPACING = '88px';
 export const OPEN_SANS = 'Open Sans';
 export const BODY_TEXT_COLOR = '#595959';
+export const PREMIUM_COLOR = '#F28324';
+export const DARK_PREMIUM_COLOR = '#DB6A00';
+export const BORDER_COLOR = '#E4E3E4';
 
 export const ROBOTO_BOLD_FONT_LARGE = css`
   font-family: Roboto;
@@ -62,6 +65,7 @@ export const ROBOTO_BOLD_FONT = css`
   line-height: 45px;
   font-size: 34px;
   font-weight: bold;
+  color: ${DEFAULT_BLACK_TEXT_COLOR};
 `;
 
 export const ROBOTO_BOLD_FONT_LIGHT = css`
@@ -70,10 +74,11 @@ export const ROBOTO_BOLD_FONT_LIGHT = css`
   line-height: 23px;
   font-size: 17px;
   font-weight: bold;
+  color: ${DEFAULT_BLACK_TEXT_COLOR};
 `;
 
 export const SOCIAL_MEDIA_BUTTON = css`
-  ${OPEN_SANS_REGULAR}
+  ${OPEN_SANS_MEDIUM}
   border-radius: 10px;
   padding: 16px 32px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 16%);

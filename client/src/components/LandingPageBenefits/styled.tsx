@@ -84,8 +84,6 @@ export const BenefitHeading = styled.div`
   width: 100%;
 `;
 
-export const FlexButton = styled.div``;
-
 export const StartCodingButton = styled.button`
   align-items: flex-start;
   margin: ${CoreUI.EXTRA_LARGE_SPACING} 0;

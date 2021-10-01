@@ -5,7 +5,7 @@ import FooterBarComponent from 'components/FooterBar';
 
 const mapStateToProps = (state: RootState) => {
   return {
-    isLoading: state.authReducer.isLoadingUser,
+    displayFooter: state.footer.displayFooter,
   };
 };
 
@@ -14,7 +14,7 @@ type FooterBarProps = ConnectedProps<typeof connector>;
 
 class FooterBarContainer extends Component<FooterBarProps> {
   render(): JSX.Element {
-    return <FooterBarComponent isLoadingUser={this.props.isLoading} />;
+    return <FooterBarComponent displayFooter={this.props.displayFooter} />;
   }
 }
 

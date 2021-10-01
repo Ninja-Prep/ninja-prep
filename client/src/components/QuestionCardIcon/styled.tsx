@@ -4,7 +4,8 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 export const LockedIcon = styled(LockIcon)`
-  color: black;
+  color: #ee953d;
+  font-size: 30px;
 `;
 
 export const AcceptedIcon = styled(CheckCircleIcon)`

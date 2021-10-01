@@ -10,11 +10,11 @@ const desktop = <FooterBarDesktop />;
 const mobile = <FooterBarMobile />;
 
 interface Props {
-  isLoadingUser: boolean;
+  displayFooter: boolean;
 }
 
 const FooterBarComponent = (props: Props): JSX.Element => {
-  if (props.isLoadingUser) {
+  if (!props.displayFooter) {
     return <Fragment />;
   }
   return (
