@@ -25,7 +25,7 @@ export const QuestionTitle = styled.div`
 export const QuestionBody = styled.p`
   ${CoreUI.OPEN_SANS_REGULAR}
   color: ${CoreUI.BODY_TEXT_COLOR};
-  padding: 0 0 32px 40px;
+  padding: 0 0 32px 0;
 `;
 
 export const FlexContainer = styled.div`
@@ -34,10 +34,20 @@ export const FlexContainer = styled.div`
   margin: 0px 32px;
   border-bottom: 1px solid ${CoreUI.BORDER_COLOR};
 `;
+export const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+export const FlexCol = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const IconWrapper = styled.div`
   margin-right: 10px;
   width: 30px;
+  padding-bottom: 50px;
   > svg {
     font-size: 30px;
   }

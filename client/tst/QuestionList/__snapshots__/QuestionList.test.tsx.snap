@@ -63,18 +63,18 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Arrays
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -98,18 +98,18 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Linked Lists
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -133,18 +133,18 @@ exports[`matches snapshot on "DESKTOP" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Trees
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -223,18 +223,18 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Arrays
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -258,18 +258,18 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Linked Lists
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -293,18 +293,18 @@ exports[`matches snapshot on "MOBILE" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Trees
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -383,18 +383,18 @@ exports[`matches snapshot on "TABLET" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Arrays
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -418,18 +418,18 @@ exports[`matches snapshot on "TABLET" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Linked Lists
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
@@ -453,18 +453,18 @@ exports[`matches snapshot on "TABLET" 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="sc-jrsJWt dLLtIa"
+                      className="sc-iqAclL fZUlSG"
                     >
                       <styled.p>
                         <p
-                          className="sc-pNWdM jZpaeY"
+                          className="sc-kEqXSa ccLrRR"
                         >
                           Trees
                         </p>
                       </styled.p>
                       <styled.div>
                         <div
-                          className="sc-kEqXSa ijxokZ"
+                          className="sc-crzoAE keRqTQ"
                         />
                       </styled.div>
                     </div>
