@@ -5,6 +5,8 @@ export const SubmissionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin-left: calc(-50vw + 50%);
+  width: 100vw;
 `;
 
 export const VerticalSplitter = styled(ReflexSplitter)`
@@ -43,4 +45,9 @@ export const EditorSettingsWrapper = styled.div`
 export const InnerAreaWrapper = styled.div`
   flex: 1 1 auto;
   overflow: hidden;
+`;
+
+export const WidthContainer = styled.div`
+  background-color: #f8fcff;
+  margin-left: calc(-50vw + 50%);
 `;
