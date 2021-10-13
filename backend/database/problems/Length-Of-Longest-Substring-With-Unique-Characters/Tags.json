@@ -1,4 +1,5 @@
 {
     "title": "Longest Unique Substring",
-    "problemPath": "Longest-Unique-Substring"
+    "problemPath": "Longest-Unique-Substring",
+    "tags": "Arrays"
 }

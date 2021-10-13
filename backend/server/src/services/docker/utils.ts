@@ -72,6 +72,7 @@ interface DockerLanguageCommands {
   fileName: string;
   runCommand: string;
   compileCommand: string;
+  runFile: string;
 }
 
 export function tryParseJSON(text: string): any {
@@ -83,13 +84,21 @@ export function tryParseJSON(text: string): any {
 export const languageSelection: {[key: string]: DockerLanguageCommands} = {
   java: {
     fileName: 'File.java',
-    runCommand: 'java File.java',
+    runCommand: 'java',
+    runFile: 'File',
     compileCommand: 'javac File.java',
   },
   python: {
     fileName: 'File.py',
-    runCommand: 'python3 File.py',
+    runCommand: 'python3',
+    runFile: 'File.py',
     compileCommand: ':' /* Bash No-op command*/,
+  },
+  cpp: {
+    fileName: 'File.cpp',
+    runCommand: './File',
+    runFile: '',
+    compileCommand: 'g++ File.cpp -o File',
   },
 };
 

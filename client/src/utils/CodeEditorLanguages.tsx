@@ -27,7 +27,7 @@ export const themeOptions: LabelValuePair[] = [
 
 export const modeOptions: LabelValuePair[] = [
   {value: 'text/x-java', label: 'Java'},
-  {value: 'text/x-c++src', label: 'C++'},
+  {value: 'text/x-c++src', label: 'Cpp'},
   {value: 'javascript', label: 'Javascript'},
   {value: 'python', label: 'Python'},
 ];

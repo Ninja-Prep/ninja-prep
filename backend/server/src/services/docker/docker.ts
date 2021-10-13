@@ -62,7 +62,7 @@ export class DockerService {
       dockerode: this.dockerode,
       user: 'root',
       autoRemove: true,
-      hasSeccomp: true,
+      hasSeccomp: false, // Upload seccomp
     };
 
     this.container = await findAvailableContainer(containerInput);
@@ -140,7 +140,7 @@ export class DockerService {
     const languageCommands = languageSelection[input.programmingLanguage];
 
     const options: ExecCreateOptions = {
-      Cmd: ['bash', '-c', `python3 run_code.py ${languageCommands.runCommand}`],
+      Cmd: ['bash', '-c', `python3 run_code.py ${languageCommands.runCommand} ${languageCommands.runFile}`],
       User: 'ninjaprep',
       AttachStdout: true,
       AttachStderr: true,

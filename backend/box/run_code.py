@@ -26,11 +26,6 @@ def execute_code_submission(test_case_path, id):
     # (Move the user answer to file: UserOutput1.txt)
     user_output_file_name = "UserOutput"+str(id)+".txt"
 
-    runnable_file_map = {
-        "python3": "File.py",
-        "java": "File"
-    }
-
     try: 
         validate_testcase(test_case_path)
     except (SyntaxError, ValueError) as e:
@@ -41,9 +36,13 @@ def execute_code_submission(test_case_path, id):
         user_result['userStderr'] = str(e)
 
     if user_result['userStderr'] == b'':
-        executor = sys.argv[1]
+        commands = []
+        commands.append(sys.argv[1])
+        if len(sys.argv) == 3:
+            commands.append(sys.argv[2])
+        commands.append(user_output_file_name)
         try: 
-            run_result = subprocess.run([executor, runnable_file_map[executor], user_output_file_name], text=True, input=test_input, capture_output=True, timeout=2)
+            run_result = subprocess.run(commands, text=True, input=test_input, capture_output=True, timeout=2)
             user_result['runtimeExitCode'] = run_result.returncode
             user_result['userStderr'] = run_result.stderr
             user_result['userStdout'] = run_result.stdout   

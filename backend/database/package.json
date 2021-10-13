@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.13.2"
+    "mongoose": "^5.13.2",
+    "tsconfig-paths": "^3.11.0"
   },
   "scripts": {
     "start": "nodemon upload.ts",
