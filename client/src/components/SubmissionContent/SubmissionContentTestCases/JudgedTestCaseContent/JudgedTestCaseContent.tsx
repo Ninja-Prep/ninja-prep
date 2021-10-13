@@ -13,20 +13,14 @@ interface ContentProps {
   testCases: string[];
 }
 
-function JudgedTestCaseContent({
-  judgedTestCases,
-  testCases,
-}: ContentProps): JSX.Element {
+function JudgedTestCaseContent({judgedTestCases, testCases}: ContentProps): JSX.Element {
   return (
     <Fragment>
       {testCases.map((testCase, index) => {
         return (
           <Tab.Pane eventKey={index.toString()} key={testCase}>
             <FormatHeader verdictStatus={judgedTestCases[index].status} />
-            <ContentDetailBlock
-              blockHeader={INPUT_TEXT}
-              blockContent={testCase}
-            />
+            <ContentDetailBlock blockHeader={INPUT_TEXT} blockContent={testCase} />
             <JudgedContentDetails judgedTestCase={judgedTestCases[index]} />
           </Tab.Pane>
         );

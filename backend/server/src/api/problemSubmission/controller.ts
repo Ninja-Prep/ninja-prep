@@ -17,7 +17,7 @@ export async function submitProblem(req: Request, res: Response): Promise<void> 
     }
     res.send({
       judgedTestCases: judgedTestCases,
-      verdict: getVerdict(judgedTestCases),
+      verdict: verdict,
       stderr: userOutput.stderr,
     });
   } catch (error) {
@@ -40,6 +40,7 @@ interface JudgedTestCase {
 }
 
 function getVerdict(judgedTestCases: JudgedTestCase[]): StatusCode {
+  if (judgedTestCases.length === 0) return StatusCode.InternalError;
   const errors = judgedTestCases.find((testcase) => {
     return testcase.status != StatusCode.Accepted;
   });

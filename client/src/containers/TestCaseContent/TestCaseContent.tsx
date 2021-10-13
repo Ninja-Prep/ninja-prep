@@ -10,7 +10,7 @@ const mapStateToProps = (state: RootState) => {
   return {
     status: state.userSubmission.submissionStatus,
     testCases: state.problemDetails.details?.testCases || [],
-    judgedTestCases: state.userSubmission.output?.judgedTestCases || []
+    judgedTestCases: state.userSubmission.output?.judgedTestCases || [],
   };
 };
 
@@ -20,12 +20,11 @@ type Props = ConnectedProps<typeof connector>;
 
 class TestCaseContentContainer extends Component<Props> {
   render(): JSX.Element {
-      if (this.props.status === SubmissionStatus.SUBMITTED) {
-          return <JudgedTestCaseContent judgedTestCases={this.props.judgedTestCases} testCases={this.props.testCases}/>
-      }
-    
-    return (
-        <TestCaseContent testCases={this.props.testCases}/>);
+    if (!!this.props.judgedTestCases.length && this.props.status === SubmissionStatus.SUBMITTED) {
+      return <JudgedTestCaseContent judgedTestCases={this.props.judgedTestCases} testCases={this.props.testCases} />;
+    }
+
+    return <TestCaseContent testCases={this.props.testCases} />;
   }
 }
 

@@ -62,7 +62,7 @@ export class DockerService {
       dockerode: this.dockerode,
       user: 'root',
       autoRemove: true,
-      hasSeccomp: false, // Upload seccomp
+      hasSeccomp: true, // Upload seccomp
     };
 
     this.container = await findAvailableContainer(containerInput);
@@ -72,7 +72,7 @@ export class DockerService {
     await putArchive(this.container, putArchiveFiles);
 
     const options: ExecCreateOptions = {
-      Cmd: ['bash', '-c', `${languageCommands.compileCommand} && javac ${checkerCodeFileName}`],
+      Cmd: ['bash', '-c', `${languageCommands.compileCommand} && javac ${checkerCodeFileName} && ls -a `],
       User: 'root',
       AttachStdout: true,
       AttachStderr: true,
