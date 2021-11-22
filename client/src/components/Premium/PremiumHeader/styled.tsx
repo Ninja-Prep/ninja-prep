@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const PremiumHeaderContainer = styled.div`
   background-color: #f9fbfd;
@@ -7,6 +8,7 @@ export const PremiumHeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  ${CoreUI.FULL_PAGE_WIDTH}
 `;
 
 export const PremiumHeaderText = styled.h3`

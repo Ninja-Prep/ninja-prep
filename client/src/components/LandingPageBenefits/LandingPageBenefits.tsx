@@ -73,7 +73,15 @@ const BenefitsList = [
   },
 ];
 
-function LandingPageBenefits(): JSX.Element {
+interface Props {
+  disableCodingButton: boolean;
+}
+
+LandingPageBenefits.defaultProps = {
+  disableCodingButton: false,
+};
+
+function LandingPageBenefits(props: Props): JSX.Element {
   return (
     <BackgroundContainer>
       <BenefitsContainer>
@@ -101,9 +109,11 @@ function LandingPageBenefits(): JSX.Element {
             );
           })}
         </FlexBoxContainer>
-        <StartCodingButton>
-          Start Coding <NavigateNextIcon />
-        </StartCodingButton>
+        {!props.disableCodingButton && (
+          <StartCodingButton>
+            Start Coding <NavigateNextIcon />
+          </StartCodingButton>
+        )}
       </BenefitsContainer>
     </BackgroundContainer>
   );

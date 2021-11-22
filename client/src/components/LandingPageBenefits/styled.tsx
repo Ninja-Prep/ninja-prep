@@ -74,6 +74,7 @@ export const BenefitsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: ${CoreUI.EXTRA_LARGE_SPACING};
 `;
 
 export const BenefitHeading = styled.div`
@@ -86,6 +87,6 @@ export const BenefitHeading = styled.div`
 
 export const StartCodingButton = styled.button`
   align-items: flex-start;
-  margin: ${CoreUI.EXTRA_LARGE_SPACING} 0;
+  margin-top: ${CoreUI.EXTRA_LARGE_SPACING};
   ${CoreUI.LightBlueButtonCSS}
 `;

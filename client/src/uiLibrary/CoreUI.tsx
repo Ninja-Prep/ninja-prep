@@ -109,3 +109,8 @@ export const TRIMMED_ELLIPSES = css`
 export const STANDARDIZED_PAGE_PADDING = css`
   padding: 0 16%;
 `;
+
+export const FULL_PAGE_WIDTH = css`
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+`;
