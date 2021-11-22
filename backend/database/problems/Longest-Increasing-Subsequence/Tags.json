@@ -1,0 +1,8 @@
+{
+  "title": "Longest Increasing Subsequence",
+  "problemPath": "Longest-Increasing-Subsequence",
+  "hints": ["Is dynamic programming helpful?"],
+  "isFree": true,
+  "category": "Arrays",
+  "previewDescription": "Given an array of integers, return the length of the longest increasing subsequence."
+}

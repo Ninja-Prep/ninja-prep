@@ -100,6 +100,12 @@ export const SOCIAL_MEDIA_BUTTON = css`
   }
 `;
 
+export const TRIMMED_ELLIPSES = css`
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
 export const STANDARDIZED_PAGE_PADDING = css`
   padding: 0 16%;
 `;

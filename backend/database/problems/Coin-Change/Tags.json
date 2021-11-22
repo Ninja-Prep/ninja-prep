@@ -1,0 +1,8 @@
+{
+  "title": "Coin Change",
+  "problemPath": "Coin-Change",
+  "hints": ["Is dynamic programming helpful?"],
+  "isFree": true,
+  "category": "Arrays",
+  "previewDescription": "Given an integer array of coins and an integer target, return fewest number of coins needed to sum up to the target."
+}

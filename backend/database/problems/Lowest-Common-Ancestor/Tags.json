@@ -1,0 +1,9 @@
+{
+  "title": "Lowest Common Ancestor",
+  "problemPath": "Lowest-Common-Ancestor",
+  "hints": ["Does post-order traversal help?"],
+  "isFree": true,
+  "category": "Trees",
+  "previewDescription": "Given the root of a tree and nodes A, B, return the lowest common ancestor between those two nodes.",
+  "videoSolutionLink": "https://player.vimeo.com/video/633280864?h=7e5e3f57e6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+}

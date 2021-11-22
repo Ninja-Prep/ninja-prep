@@ -17,6 +17,7 @@ const mapStateToProps = (state: RootState) => {
     styleActiveLine: true,
     matchBrackets: true,
     autoCloseBrackets: true,
+    indentUnit: 4,
   };
 };
 

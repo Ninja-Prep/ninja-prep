@@ -8,7 +8,7 @@ interface Props {
   challengeLinks: ChallengeLink[];
   isPremiumUser?: boolean;
   categoryTitle: string;
-  categoryFilter?: string;
+  categoryFilter: string;
 }
 
 const QuestionListSection = (props: Props): JSX.Element => {
@@ -16,9 +16,13 @@ const QuestionListSection = (props: Props): JSX.Element => {
     <SectionContainer>
       <CategoryTitle>{props.categoryTitle}</CategoryTitle>
       <QuestionCardContainer>
-        {props.challengeLinks.map((challenge: ChallengeLink) => {
-          return <QuestionCard challenge={challenge} isPremiumUser={props.isPremiumUser} />;
-        })}
+        {props.challengeLinks
+          .filter((challenge) => {
+            return challenge.questionCategory == props.categoryFilter;
+          })
+          .map((challenge: ChallengeLink) => {
+            return <QuestionCard challenge={challenge} isPremiumUser={props.isPremiumUser} />;
+          })}
       </QuestionCardContainer>
     </SectionContainer>
   );

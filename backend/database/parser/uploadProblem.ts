@@ -5,20 +5,12 @@ import {
   parseProblemFiles,
 } from './parser';
 import {ProgrammingLanguages} from '../utils/enums/ProgrammingLanguages';
-import Problem from '../models/ProblemDetails';
+import Problem, {IProblem} from '../models/ProblemDetails';
 import ProblemLanguageTemplate from '../models/ProblemLanguageTemplate';
 import mongoose, {QueryOptions} from 'mongoose';
 import path from 'path';
 
-interface UpdateFields {
-  title: string;
-  hints: string[];
-  description: string;
-  problemPath: string;
-  inputTestCases: string[];
-  checkerCodeSnippet: string;
-  validateTestCaseSnippet: string;
-  isFree: boolean;
+interface UpdateFields extends Omit<IProblem, 'templates'> {
   $set: {
     [x: string]: mongoose.Types.ObjectId;
   };
@@ -94,6 +86,9 @@ async function updateProblem(
     checkerCodeSnippet: problemBO.checkerFile,
     validateTestCaseSnippet: problemBO.validateTestCaseFile,
     isFree: problemBO.problemTagsJson.isFree,
+    questionCategory: problemBO.problemTagsJson.category,
+    videoSolutionLink: problemBO.problemTagsJson.videoSolutionLink,
+    previewDescription: problemBO.problemTagsJson.previewDescription,
     $set: {
       [`templates.${language}`]: templateId,
     },

@@ -9,14 +9,17 @@ interface ChallengeLink {
   problemPath: string;
   isFree: boolean;
   isCompleted?: boolean;
+  questionCategory: string;
 }
 export async function getChallengesList(req: Request, res: Response): Promise<void> {
-  const challenges = await Problem.find({}, 'title problemPath isFree').exec();
+  const challenges = await Problem.find({}, 'title problemPath isFree questionCategory previewDescription').exec();
   const challengeLinks: ChallengeLink[] = challenges.map((challenge) => {
     return {
       title: challenge.title,
       problemPath: challenge.problemPath,
       isFree: challenge.isFree,
+      questionCategory: challenge.questionCategory,
+      previewDescription: challenge.previewDescription,
     };
   });
 

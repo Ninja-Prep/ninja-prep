@@ -24,6 +24,7 @@ export const QuestionTitle = styled.div`
 
 export const QuestionBody = styled.p`
   ${CoreUI.OPEN_SANS_REGULAR}
+  ${CoreUI.TRIMMED_ELLIPSES}
   color: ${CoreUI.BODY_TEXT_COLOR};
   padding: 0 0 32px 0;
 `;
@@ -42,6 +43,8 @@ export const FlexRow = styled.div`
 export const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  width: 100%;
 `;
 
 export const IconWrapper = styled.div`

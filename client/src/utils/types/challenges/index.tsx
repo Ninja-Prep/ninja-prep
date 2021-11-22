@@ -19,6 +19,8 @@ export interface ChallengeLink {
   readonly problemPath: string;
   readonly isFree: boolean;
   readonly isCompleted?: boolean;
+  readonly questionCategory: string;
+  readonly previewDescription: string;
 }
 
 export type ProblemDetails = {

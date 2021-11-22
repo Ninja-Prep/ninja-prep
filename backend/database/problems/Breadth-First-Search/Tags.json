@@ -1,0 +1,9 @@
+{
+  "title": "Breadth First Search",
+  "problemPath": "Breadth-First-Search",
+  "hints": ["Think about using a queue", "Think about using a while loop"],
+  "isFree": true,
+  "category": "Trees",
+  "previewDescription": "Given the root of a tree, print all values in the tree in level by level starting from left to right.",
+  "videoSolutionLink": "https://player.vimeo.com/video/633280864?h=7e5e3f57e6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+}

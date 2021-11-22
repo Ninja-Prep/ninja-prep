@@ -24,7 +24,7 @@ const QuestionCard = (props: Props): JSX.Element => {
             <QuestionTitleLink to={'/problem/' + props.challenge.problemPath}>
               <QuestionTitle>{props.challenge.title}</QuestionTitle>
             </QuestionTitleLink>
-            <QuestionBody>Placeholder content when question body will be added</QuestionBody>
+            <QuestionBody>{props.challenge.previewDescription}</QuestionBody>
           </FlexCol>
         </FlexRow>
       </FlexContainer>

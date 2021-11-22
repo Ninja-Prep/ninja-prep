@@ -4,16 +4,20 @@ import ProblemLanguageTemplate from '../models/ProblemLanguageTemplate';
 
 import fs from 'fs';
 import path from 'path';
+import {QuestionCategories} from 'utils/enums/QuestionCategories';
 
-export interface jsonTags {
+export interface JsonTags {
   title: string;
   problemPath: string;
   isFree: boolean;
   hints: string[];
+  videoSolutionLink: string;
+  category: QuestionCategories;
+  previewDescription: string;
 }
 
 export interface ProblemBO {
-  problemTagsJson: jsonTags;
+  problemTagsJson: JsonTags;
   description: string;
   testCases: string[];
   checkerFile: string;
@@ -57,12 +61,14 @@ export async function isValidProblem(
   problemDirectoryPath: string,
 ): Promise<boolean> {
   const problemBO = parseProblemFiles(problemDirectoryPath);
-
   const problem = new Problem();
   problem.title = problemBO.problemTagsJson.title;
   problem.hints = problemBO.problemTagsJson.hints;
+  problem.videoSolutionLink = problemBO.problemTagsJson.videoSolutionLink;
   problem.description = problemBO.description;
+  problem.previewDescription = problemBO.problemTagsJson.previewDescription;
   problem.problemPath = problemBO.problemTagsJson.problemPath;
+  problem.questionCategory = problemBO.problemTagsJson.category;
   problem.inputTestCases = problemBO.testCases;
   problem.checkerCodeSnippet = problemBO.checkerFile;
   problem.validateTestCaseSnippet = problemBO.validateTestCaseFile;

@@ -1,0 +1,7 @@
+{
+  "title": "Reverse Linked List",
+  "problemPath": "Reverse-Linked-List",
+  "isFree": true,
+  "category": "LinkedLists",
+  "previewDescription": "Given the head of a LinkedList, reverse the LinkedList and return the head."
+}

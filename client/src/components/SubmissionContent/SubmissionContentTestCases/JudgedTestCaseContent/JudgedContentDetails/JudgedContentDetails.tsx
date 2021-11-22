@@ -13,17 +13,13 @@ function JudgedContentDetails({judgedTestCase}: Props): JSX.Element {
   return (
     <div>
       <ContentSpacing>
-        <ContentDetailBlock
-          blockHeader="Your Output"
-          blockContent={judgedTestCase?.userOutput}
-        />
+        <ContentDetailBlock blockHeader="Your Output" blockContent={judgedTestCase?.userOutput || judgedTestCase.stderr || 'No Output'} />
       </ContentSpacing>
-      <ContentSpacing>
-        <ContentDetailBlock
-          blockHeader="Expected Output"
-          blockContent={judgedTestCase?.expectedOutput}
-        />
-      </ContentSpacing>
+      {judgedTestCase?.expectedOutput && (
+        <ContentSpacing>
+          <ContentDetailBlock blockHeader="Expected Output" blockContent={judgedTestCase?.expectedOutput} />
+        </ContentSpacing>
+      )}
     </div>
   );
 }
