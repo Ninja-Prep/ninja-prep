@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {connect, ConnectedProps} from 'react-redux';
-import {RootState} from 'redux/rootReducer';
-import {isPremiumUser} from 'redux/auth/reducer';
+import {RootState} from 'reducers/rootReducer';
+import {isPremiumUser} from 'reducers/auth/reducer';
 
 const mapStateToProps = (state: RootState) => {
   return {

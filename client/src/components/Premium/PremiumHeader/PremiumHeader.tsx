@@ -1,17 +1,8 @@
 import React from 'react';
 
 import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
-import {
-  PREMIUM_HEADER_TITLE,
-  PREMIUM_HEADER_DESCRIPTION,
-} from 'utils/stringIds.json';
-
-import {
-  PremiumHeaderContainer,
-  PremiumHeaderLogoWrapper,
-  PremiumHeaderText,
-  PremiumSubdescription,
-} from './styled';
+import {PREMIUM_HEADER_TITLE, PREMIUM_HEADER_DESCRIPTION} from 'utils/stringIds.json';
+import {PremiumHeaderContainer, PremiumHeaderLogoWrapper, PremiumHeaderText, PremiumSubdescription} from './styled';
 
 /**
  *
@@ -31,9 +22,7 @@ function PremiumHeader({isMobile}: {isMobile?: boolean}): JSX.Element {
         <DarkNinjaPrepLogo height={logoHeight} width={logoWidth} />
       </PremiumHeaderLogoWrapper>
       <PremiumHeaderText>{PREMIUM_HEADER_TITLE}</PremiumHeaderText>
-      <PremiumSubdescription>
-        {PREMIUM_HEADER_DESCRIPTION}
-      </PremiumSubdescription>
+      <PremiumSubdescription>{PREMIUM_HEADER_DESCRIPTION}</PremiumSubdescription>
     </PremiumHeaderContainer>
   );
 }

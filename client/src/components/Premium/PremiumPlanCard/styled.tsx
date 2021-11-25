@@ -6,7 +6,6 @@ export const PlanCardHeader = styled(Card.Header)`
   justify-content: space-between !important;
   color: white;
   padding: 1.5rem;
-
   background-color: ${(props) => props.backgroundcolor};
 `;
 
@@ -39,7 +38,8 @@ export const PlanDescription = styled.p`
   padding: 1rem;
 `;
 
-export const HoverWrapper = styled(Card)`
+export const HoverWrapper = styled.div`
+  border-radius: 50px;
   &:hover {
     cursor: pointer;
     box-shadow: 0 0 15px 0 #e0e0e0;

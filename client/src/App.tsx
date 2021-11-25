@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
-import ProblemSubmissionPage from 'pages/ProblemSubmissionPage/ProblemSubmissionPage';
+import ProblemSubmissionPage from './pages/ProblemSubmissionPage/ProblemSubmissionPage';
 import ReactGA from 'react-ga';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import {connect, ConnectedProps} from 'react-redux';
-import {getAndSetUser} from 'redux/auth/actions';
+import {getAndSetUser} from 'reducers/auth/actions';
 import DefaultRoute from 'routing/DefaultRoute';
 import HeaderNavbarRoute from 'routing/HeaderNavbarRoute';
-import {AboutRoute, ChallengesRoute, Error404Route, LandingPageRoute, OrderSuccessRoute, PremiumRoute, SettingsPageRoute} from 'routing/routes';
-import {displayFooter} from 'redux/footer/actions';
+import {ChallengesRoute, Error404Route, LandingPageRoute, OrderSuccessRoute, PremiumRoute, SettingsPageRoute} from 'routing/routes';
+import {displayFooter} from 'reducers/footer/actions';
 
 const connector = connect(null, {getAndSetUser, displayFooter});
 
@@ -25,7 +25,6 @@ class App extends Component<ConnectedProps<typeof connector>> {
     return (
       <Router>
         <Switch>
-          <HeaderNavbarRoute path="/about" exact routeComponent={AboutRoute} hasFooter />
           <HeaderNavbarRoute path="/" exact routeComponent={LandingPageRoute} hasFooter />
           <HeaderNavbarRoute path="/challenges" exact routeComponent={ChallengesRoute} hasFooter />
           <HeaderNavbarRoute path="/order/success" exact routeComponent={OrderSuccessRoute} hasFooter />

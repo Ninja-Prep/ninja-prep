@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
-import QuestionList from 'containers/QuestionList/QuestionList';
+import {QuestionListContainer} from 'components/Challenges';
 import {CHALLENGES_NAVIGATION} from 'utils/stringIds.json';
 
 import {ProblemsHeader, BackgroundContainer, ContentContainer, HeaderFont, PremiumButtonFlex} from './styled';
@@ -16,7 +16,7 @@ function ChallengesPage(): JSX.Element {
             <GetFullAccessButton />
           </PremiumButtonFlex>
         </ProblemsHeader>
-        <QuestionList />
+        <QuestionListContainer />
       </ContentContainer>
     </BackgroundContainer>
   );

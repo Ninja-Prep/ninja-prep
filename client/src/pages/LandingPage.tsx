@@ -1,9 +1,7 @@
 import React from 'react';
 
-import LandingPageJourney from 'components/LandingPageJourney/LandingPageJourney';
-import LandingPageBenefits from 'components/LandingPageBenefits/LandingPageBenefits';
-import LoginHeader from 'components/LoginHeader/loginHeader';
-import WhyNinjaPrep from 'components/WhyNinjaPrep/WhyNinjaPrep';
+import {LandingPageJourney, LandingPageBenefits, WhyNinjaPrep} from 'components/Landing';
+import {LoginHeader} from 'components/Login';
 
 /**
  *

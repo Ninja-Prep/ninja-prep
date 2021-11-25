@@ -3,20 +3,9 @@
 */
 import React from 'react';
 
-import {
-  TEXT_404,
-  MISSING_PAGE_TEXT,
-  OOPS,
-  REDIRECT_TEXT,
-} from 'utils/stringIds.json';
+import {TEXT_404, MISSING_PAGE_TEXT, OOPS, REDIRECT_TEXT} from 'utils/stringIds.json';
 
-import {
-  ErrorContainer,
-  ErrorHeading,
-  HomeButton,
-  HomeLink,
-  TextDiv,
-} from './styled';
+import {ErrorContainer, ErrorHeading, HomeButton, HomeLink, TextDiv} from './styled';
 
 function Error404(): JSX.Element {
   return (

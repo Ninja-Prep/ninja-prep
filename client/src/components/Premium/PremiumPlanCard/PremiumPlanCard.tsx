@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Stripe from 'stripe';
-import {SUBSCRIBE} from 'utils/stringIds.json';
 
+import {SUBSCRIBE} from 'utils/stringIds.json';
 import {PurchasePlan} from 'utils/types/plans/plans';
-import {CardBody} from './styled';
-import {MonthlyText, PlanCardHeader, PlanCardName, HoverWrapper, CenteredButton, PlanDescription} from './styled';
+
+import {MonthlyText, PlanCardHeader, PlanCardName, HoverWrapper, CenteredButton, PlanDescription, CardBody} from './styled';
 
 interface PlanCardProps {
   purchaseHandler?: (stripe: Stripe | null) => void;

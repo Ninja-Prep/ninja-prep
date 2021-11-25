@@ -9,11 +9,11 @@ Pick between two components to render
 import React from 'react';
 
 import {RouteComponentProps, RouteProps} from 'react-router';
-import {RootState} from 'redux/rootReducer';
+import {RootState} from 'reducers/rootReducer';
 import {connect, ConnectedProps} from 'react-redux';
 
 import RouteWrapper from './RouteWrapper';
-import {isPremiumUser} from 'redux/auth/reducer';
+import {isPremiumUser} from 'reducers/auth/reducer';
 import {Redirect} from 'react-router-dom';
 
 const mapStateToProps = (state: RootState) => {

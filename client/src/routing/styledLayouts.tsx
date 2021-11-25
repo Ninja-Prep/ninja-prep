@@ -8,7 +8,3 @@ import styled from 'styled-components';
 export const HeaderPadding = styled.div`
   padding-top: 85px;
 `;
-
-export const FooterMargin = styled.div`
-  // margin-top: 20px;
-`;

@@ -9,7 +9,7 @@ Pick between two components to render
 import React, {Fragment} from 'react';
 
 import {RouteComponentProps, RouteProps} from 'react-router';
-import {RootState} from 'redux/rootReducer';
+import {RootState} from 'reducers/rootReducer';
 import {connect, ConnectedProps} from 'react-redux';
 
 import RouteWrapper from './RouteWrapper';

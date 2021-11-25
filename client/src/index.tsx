@@ -1,12 +1,12 @@
 import React from 'react';
 
-import App from 'App';
-import GlobalStyle from 'GlobalStyle';
+import App from './App';
+import GlobalStyle from './GlobalStyle';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import reduxThunk from 'redux-thunk';
-import reducers from 'redux/rootReducer';
+import reducers from 'reducers/rootReducer';
 
 const store = createStore(reducers, applyMiddleware(reduxThunk));
 

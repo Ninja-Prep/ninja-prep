@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LanguageDropdown from 'containers/LanguageDropdown/LanguageDropdown';
+import LanguageDropdown from 'components/ProblemSubmission/containers/LanguageDropdown/LanguageDropdownContainer';
 import {Col, Row} from 'react-bootstrap';
 
 const CodeEditorUserSettings = (): JSX.Element => {

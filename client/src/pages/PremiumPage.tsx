@@ -1,14 +1,15 @@
 import React from 'react';
 
-import Responsiveness from 'utils/hocs/Responsiveness';
-
-import PremiumDesktop from './Premium/PremiumDesktop';
-import PremiumMobile from './Premium/PremiumMobile';
+import {PremiumHeader, PremiumPlans} from 'components/Premium';
+import {LandingPageBenefits} from 'components/Landing';
 
 const PremiumPage = (): JSX.Element => {
-  const desktop = <PremiumDesktop />;
-  const mobile = <PremiumMobile />;
-
-  return <Responsiveness desktop={desktop} mobile={mobile} />;
+  return (
+    <div>
+      <PremiumHeader />
+      <PremiumPlans />
+      <LandingPageBenefits disableCodingButton />
+    </div>
+  );
 };
 export default PremiumPage;

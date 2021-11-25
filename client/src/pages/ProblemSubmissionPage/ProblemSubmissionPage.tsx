@@ -3,23 +3,23 @@ import React, {Component} from 'react';
 import CodeEditorUserSettings from 'components/ProblemSubmission/CodeEditor/UserSettings/CodeEditorUserSettings';
 import CodeEditorNavbar from 'components/ProblemSubmission/CodeEditorNavbar/CodeEditorNavbar';
 import TabComponent from 'components/ProblemSubmission/Tabs/TabsComponent';
-import CodeEditor from 'containers/CodeEditor/CodeEditor';
-import SubmissionContent from 'containers/SubmissionContent/SubmissionContent';
+import CodeEditor from 'components/ProblemSubmission/containers/CodeEditor/CodeEditorContainer';
+import SubmissionContent from 'components/ProblemSubmission/SubmissionContent/SubmissionContent/SubmissionContent';
 import {connect, ConnectedProps} from 'react-redux';
 import {ReflexContainer, ReflexSplitter, ReflexElement} from 'react-reflex';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
-import {getLanguage} from 'redux/editorSettings/reducer';
-import {loadProblemDetails} from 'redux/problemDetails/action';
-import {RootState} from 'redux/rootReducer';
+import {getLanguage} from 'reducers/editorSettings/reducer';
+import {loadProblemDetails} from 'reducers/problemDetails/action';
+import {RootState} from 'reducers/rootReducer';
 import AsyncSpinner from 'utils/AsyncSpinner';
 
 import styles from './ProblemSubmission.module.css';
 import {CodeEditorReflex, EditorSettingsWrapper, InnerAreaWrapper, MiddleEditorWrapper, OuterEditorWrapper, SubmissionContentReflex, SubmissionWrapper} from './styled';
 
 import 'react-reflex/styles.css';
-import {isPremiumUser} from 'redux/auth/reducer';
+import {isPremiumUser} from 'reducers/auth/reducer';
 import ProtectedProblemContent from './ProtectedProblemContent';
-import LockedPremiumProblemSubmission from 'components/LockedPremiumProblemSubmission/LockedPremiumProblemSubmission';
+import LockedPremiumProblemSubmission from 'components/ProblemSubmission/LockedPremiumProblemSubmission/LockedPremiumProblemSubmission';
 
 interface MatchParams {
   id: string;

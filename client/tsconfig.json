@@ -1,4 +1,5 @@
 {
+  "include": ["src", "tst", "jest.config.ts"],
   "compilerOptions": {
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -20,6 +21,5 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "src",
     "sourceMap": false
-  },
-  "include": ["src", "tst", "jest.config.ts"]
+  }
 }

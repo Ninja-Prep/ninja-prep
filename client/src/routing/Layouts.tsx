@@ -8,10 +8,10 @@ other components
 
 import React, {FunctionComponent} from 'react';
 
-import FooterBarComponent from 'containers/FooterBar/FooterBar';
-import NavigationBar from 'containers/NavigationBar/NavigationBar';
+import {FooterBarContainer} from 'components/Navigation';
+import NavigationBar from 'components/Navigation/containers/NavigationBar/NavigationBarContainer';
 
-import {FooterMargin, HeaderPadding} from './styledLayouts';
+import {HeaderPadding} from './styledLayouts';
 import {RouteProps} from 'react-router';
 
 interface Props extends RouteProps {
@@ -32,9 +32,7 @@ export const FooterLayout = React.memo(
   ({children}: Props): JSX.Element => (
     <div>
       {children}
-      <FooterMargin>
-        <FooterBarComponent />
-      </FooterMargin>
+      <FooterBarContainer />
     </div>
   ),
 );
@@ -43,8 +41,8 @@ export const HeaderandFooterLayout: FunctionComponent<Props> = React.memo(({chil
   <HeaderPadding>
     <NavigationBar />
     {children}
-    <FooterMargin style={hasFooter ? {} : {display: 'none'}}>
-      <FooterBarComponent />
-    </FooterMargin>
+    <div style={hasFooter ? {} : {display: 'none'}}>
+      <FooterBarContainer />
+    </div>
   </HeaderPadding>
 ));
