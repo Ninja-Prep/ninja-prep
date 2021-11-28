@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import FadeIn from 'react-fade-in';
 
 import {RouteComponentProps, RouteProps} from 'react-router';
@@ -9,6 +9,9 @@ interface Props extends RouteProps {
 }
 
 function RouteWrapper({component: Component, ...rest}: Props): JSX.Element {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Route
       {...rest}

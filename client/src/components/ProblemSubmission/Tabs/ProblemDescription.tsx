@@ -10,9 +10,6 @@ interface Props {
   problemDetails: ProblemDetails;
 }
 
-/**
- *
- */
 function ProblemDescription({problemDetails}: Props): JSX.Element {
   return (
     <div className="m-4">
@@ -22,9 +19,7 @@ function ProblemDescription({problemDetails}: Props): JSX.Element {
 
       <div className="text-dark pb-4 pt-2">
         <h3 className="font-weight-bold">{problemDetails?.title}</h3>
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-          {problemDetails?.description || ''}
-        </ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{problemDetails?.description || ''}</ReactMarkdown>
       </div>
       <HintComponent hints={problemDetails?.hints} />
     </div>

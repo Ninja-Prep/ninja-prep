@@ -5,7 +5,8 @@ export enum SubmissionStatus {
   ERROR,
 }
 
-export const VerdictStatus = {
-  Accepted: 'ACCEPTED',
-  WrongAnswer: 'Wrong Answer',
-};
+export enum VerdictStatus {
+  ACCEPTED = 'ACCEPTED',
+  WRONG_ANSWER = 'Wrong Answer',
+  NONE = 'NONE',
+}

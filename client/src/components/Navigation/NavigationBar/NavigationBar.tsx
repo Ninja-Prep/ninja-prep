@@ -10,8 +10,8 @@ import {Navbar} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {NavigationBarFullWidth, FixedNavigationBar, PositionLogo, NavigationFloatRight} from './styled';
 
-import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 import {LoginModalContainer} from 'components/Login';
+import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 import NavigationBarContent from '../containers/NavigationBarContent/NavigationBarContentContainer';
 
 function NavigationBar(): JSX.Element {

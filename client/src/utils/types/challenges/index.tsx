@@ -1,3 +1,5 @@
+import {VerdictStatus} from 'utils/enums/userSubmission';
+
 /* eslint-disable camelcase */
 export type JudgedTestCase = {
   status: string;
@@ -9,10 +11,10 @@ export type JudgedTestCase = {
 };
 
 export type UserSubmissionOutput = {
-  verdict: string;
+  verdict: VerdictStatus;
   stderr: string;
   judgedTestCases: JudgedTestCase[];
-} | null;
+};
 
 export interface ChallengeLink {
   readonly title: string;
@@ -30,7 +32,7 @@ export type ProblemDetails = {
   readonly testCases: string[];
   readonly title: string;
   readonly isFree: boolean;
-} | null;
+};
 
 export function isUserSubmissionOutput(
   // eslint-disable-next-line @typescript-eslint/ban-types
