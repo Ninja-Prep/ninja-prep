@@ -4,7 +4,7 @@ import {Tab, Tabs} from 'react-bootstrap';
 import {ProblemDetails} from 'utils/types/challenges';
 
 import ConceptReview from './ConceptReview';
-import ProblemDescription from './ProblemDescription';
+import ProblemDescription from '../ProblemDescription/ProblemDescription';
 import VideoSolution from './VideoSolution';
 
 import './Tabs.css';

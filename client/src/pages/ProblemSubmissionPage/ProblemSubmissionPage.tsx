@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CodeEditorNavbar from 'components/ProblemSubmission/CodeEditorNavbar/CodeEditorNavbar';
-import TabComponent from 'components/ProblemSubmission/Tabs/TabsComponent';
+import TabComponent from 'components/ProblemSubmissionTabs/Tabs/TabsComponent';
 import CodeEditor from 'components/ProblemSubmission/containers/CodeEditor/CodeEditorContainer';
 import SubmissionContent from 'components/ProblemSubmission/containers/SubmissionContent/SubmissionContentContainer';
 import {ReflexContainer, ReflexSplitter, ReflexElement} from 'react-reflex';
