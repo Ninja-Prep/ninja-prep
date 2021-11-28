@@ -6,6 +6,7 @@ import {LoginHeaderBodyText, LoginHeaderContainer, LoginHeaderLargeText, StartLe
 import {LightBlueButton} from 'uiLibrary/CoreUI';
 import {GoogleIcon, FacebookIcon, GitHubIcon} from 'uiLibrary/SocialMediaIcons';
 import {START_LEARNING_FOR_FREE, FREE_CODING_PROBLEM, CODING_FOUNDATION_HEADER, CODING_SUBHEADING_HEADER, GOOGLE_LOGIN, FACEBOOK_LOGIN, GITHUB_LOGIN} from 'utils/stringIds.json';
+import {WhiteLink} from 'uiLibrary/Links';
 
 function LoginHeader(): JSX.Element {
   return (
@@ -14,8 +15,10 @@ function LoginHeader(): JSX.Element {
         <LoginHeaderLargeText>{CODING_FOUNDATION_HEADER}</LoginHeaderLargeText>
         <LoginHeaderBodyText>{CODING_SUBHEADING_HEADER}</LoginHeaderBodyText>
         <LightBlueButton>
-          {FREE_CODING_PROBLEM}
-          <ExpandMoreIcon />
+          <WhiteLink to="/problem/Two-Sum">
+            {FREE_CODING_PROBLEM}
+            <ExpandMoreIcon />
+          </WhiteLink>
         </LightBlueButton>
       </FlexSizing>
       <FlexSizing>

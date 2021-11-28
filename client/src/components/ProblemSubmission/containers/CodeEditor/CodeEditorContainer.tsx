@@ -24,7 +24,6 @@ const mapStateToProps = (state: RootState) => {
 const connector = connect(mapStateToProps, {updateEditorText});
 
 type Props = {
-  problemTitle: string;
   starterCode: string;
 } & ConnectedProps<typeof connector>;
 

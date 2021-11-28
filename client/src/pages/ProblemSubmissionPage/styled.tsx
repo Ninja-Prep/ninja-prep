@@ -1,3 +1,4 @@
+import CodeEditorUserSettings from 'components/ProblemSubmission/CodeEditor/UserSettings/CodeEditorUserSettings';
 import {ReflexElement, ReflexSplitter} from 'react-reflex';
 import styled from 'styled-components';
 
@@ -7,6 +8,12 @@ export const SubmissionWrapper = styled.div`
   height: 100vh;
   margin-left: calc(-50vw + 50%);
   width: 100vw;
+
+  .testcaseSplitter {
+    height: 13px !important;
+    background-color: #d1d1d1 !important;
+    border-color: #f3f7f8 !important;
+  }
 `;
 
 export const VerticalSplitter = styled(ReflexSplitter)`
@@ -38,7 +45,7 @@ export const MiddleEditorWrapper = styled.div`
   min-height: 0px;
 `;
 
-export const EditorSettingsWrapper = styled.div`
+export const CodeEditorSettings = styled(CodeEditorUserSettings)`
   flex: none;
 `;
 

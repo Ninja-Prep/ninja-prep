@@ -33,6 +33,7 @@ import {
   BENEFITS_CODE_WALKTHROUGHS_BODY,
 } from 'utils/stringIds.json';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import {WhiteLink} from 'uiLibrary/Links';
 
 const BenefitsList = [
   {
@@ -110,9 +111,11 @@ function LandingPageBenefits(props: Props): JSX.Element {
           })}
         </FlexBoxContainer>
         {!props.disableCodingButton && (
-          <StartCodingButton>
-            Start Coding <NavigateNextIcon />
-          </StartCodingButton>
+          <WhiteLink to="/premium">
+            <StartCodingButton>
+              Start Coding <NavigateNextIcon />
+            </StartCodingButton>
+          </WhiteLink>
         )}
       </BenefitsContainer>
     </BackgroundContainer>
