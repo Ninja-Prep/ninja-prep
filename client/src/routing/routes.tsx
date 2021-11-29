@@ -7,7 +7,7 @@ import DefaultRoute from './DefaultRoute';
 import ProtectedRoute from './ProtectedRoute';
 import UnsubscribedRoute from './UnsubscribedRoute';
 import Error404Component from 'components/Error404/Error404';
-import UserSettings from 'components/ProblemSubmission/containers/UserSettings/UserSettingsContainer';
+import UserSettings from 'components/UserSettings/containers/UserSettingsContainer';
 import ProblemSubmissionPageContainer from 'pages/ProblemSubmissionPage/containers/ProblemSubmissionPageContainer';
 
 export const LandingPageRoute = <ProtectedRoute path="/" exact authComponent={ChallengesPage} component={LandingPage} />;

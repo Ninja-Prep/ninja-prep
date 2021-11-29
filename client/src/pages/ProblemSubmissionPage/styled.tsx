@@ -1,4 +1,4 @@
-import CodeEditorUserSettings from 'components/ProblemSubmission/CodeEditor/UserSettings/CodeEditorUserSettings';
+import CodeEditorUserSettings from 'components/ProblemSubmission/CodeEditorSettings/CodeEditorUserSettings';
 import {ReflexElement, ReflexSplitter} from 'react-reflex';
 import styled from 'styled-components';
 

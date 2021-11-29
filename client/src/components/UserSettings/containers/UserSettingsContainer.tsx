@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'reducers/rootReducer';
-import UserSettings from 'components/ProblemSubmission/UserSettings/UserSettings';
+import UserSettings from 'components/UserSettings/UserSettings';
 import {Redirect} from 'react-router-dom';
 import {formattedPremiumExpirationDate} from 'reducers/auth/reducer';
 

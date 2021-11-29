@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import LanguageDropdown from 'components/ProblemSubmission/CodeEditor/UserSettings/LanguageDropdown';
+import LanguageDropdown from 'components/ProblemSubmission/CodeEditorSettings/LanguageDropdown';
 import {connect, ConnectedProps} from 'react-redux';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
 import {changeMode} from 'reducers/editorSettings/actions';

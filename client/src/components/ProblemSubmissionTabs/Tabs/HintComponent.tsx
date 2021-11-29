@@ -10,11 +10,7 @@ interface Props {
 const HintCard = ({index, hint}: {index: number; hint: string}) => {
   return (
     <Card>
-      <Accordion.Toggle
-        as={Card.Header}
-        eventKey={index.toString()}
-        className="text-dark bg-light"
-      >
+      <Accordion.Toggle as={Card.Header} eventKey={index.toString()} className="text-dark bg-light">
         Hint {index}
       </Accordion.Toggle>
       <Accordion.Collapse eventKey={index.toString()}>
