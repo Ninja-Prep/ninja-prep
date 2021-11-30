@@ -1,4 +1,5 @@
 import axios from 'axios';
+import * as _ from 'lodash';
 import {GetState} from 'index';
 import {Dispatch} from 'redux';
 import {UserSubmissionOutput} from 'utils/types/challenges';
@@ -27,8 +28,8 @@ export function submitProblem(problemId: string) {
     dispatch({type: SUBMIT_PROBLEM});
     const state = getState();
     axios
-      .post(`/api/submisson/execute/${problemId}`, {
-        codeSnippet: state.textEditor.value,
+      .post(`/api/submission/execute/${problemId}`, {
+        codeSnippet: _.trim(state.textEditor.value),
         programmingLanguage: getLanguage(state),
       })
       .then((response) => {

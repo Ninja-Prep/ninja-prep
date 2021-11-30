@@ -24,7 +24,7 @@ function ProblemSubmissionPage(props: Props): JSX.Element {
         <ReflexElement>
           <ReflexContainer orientation="vertical">
             <ReflexElement>
-              <TabComponent problemDetails={props.problemDetails} />;
+              <TabComponent problemDetails={props.problemDetails} />
             </ReflexElement>
             <ReflexSplitter style={{width: '10px'}} />
             <ReflexElement>

@@ -8,6 +8,7 @@ import ProblemDescription from '../ProblemDescription/ProblemDescription';
 import VideoSolution from './VideoSolution';
 
 import './Tabs.css';
+import SubmissionsContainer from '../containers/SubmissionsContainer';
 
 interface Props {
   problemDetails: ProblemDetails;
@@ -27,7 +28,7 @@ const TabsComponent = (props: Props): JSX.Element => {
           <ConceptReview />
         </Tab>
         <Tab eventKey="submissions" title="Submissions">
-          <ConceptReview />
+          <SubmissionsContainer />
         </Tab>
       </Tabs>
     </div>

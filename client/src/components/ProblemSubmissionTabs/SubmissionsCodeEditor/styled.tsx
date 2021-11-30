@@ -1,7 +1,7 @@
-import {Controlled as CodeMirror} from 'react-codemirror2';
+import {UnControlled as CodeMirror} from 'react-codemirror2';
 import styled from 'styled-components';
 
-export const StyledCodeMirror = styled(CodeMirror)`
+export const UncontrolledCodeMirror = styled(CodeMirror)`
   .CodeMirror {
     height: 100% !important;
     width: 100% !important;

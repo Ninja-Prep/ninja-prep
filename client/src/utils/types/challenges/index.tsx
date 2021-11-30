@@ -25,6 +25,13 @@ export interface ChallengeLink {
   readonly previewDescription: string;
 }
 
+export interface SubmissionRecord {
+  status: VerdictStatus;
+  date: Date;
+  codeSnippet: string;
+  language: string;
+}
+
 export type ProblemDetails = {
   readonly description: string;
   readonly hints: string[];

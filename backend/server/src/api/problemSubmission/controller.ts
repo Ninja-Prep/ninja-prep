@@ -3,6 +3,7 @@ import {Request, Response} from 'express';
 import {StatusCode, convertRuntimeVerdictExitCodes} from 'services/docker/statusCodes';
 import {logger} from '@logger/logger';
 import User from '@models/User';
+import SubmissionRecords from '@models/ProblemSubmissionRecords';
 
 export async function submitProblem(req: Request, res: Response): Promise<void> {
   try {
@@ -12,6 +13,11 @@ export async function submitProblem(req: Request, res: Response): Promise<void> 
     const judgedTestCases = formatTestCases(userOutput.testCaseResults);
 
     const verdict = getVerdict(judgedTestCases);
+
+    if (req.session.user?.userId) {
+      await addSubmissionToDatabase(req, verdict);
+    }
+
     if (req.session.user && verdict === StatusCode.Accepted) {
       await User.updateOne({userId: req.session.user?.userId}, {$addToSet: {completedProblems: req.params.problemPath}});
     }
@@ -28,6 +34,11 @@ export async function submitProblem(req: Request, res: Response): Promise<void> 
       stderr: error,
     });
   }
+}
+
+export async function getSubmissionRecord(req: Request, res: Response) {
+  const submissionRecord = await SubmissionRecords.findOne({userId: req.session.user?.userId, problemTitle: req.params.problemPath});
+  res.send(submissionRecord?.submissions);
 }
 
 interface JudgedTestCase {
@@ -57,4 +68,23 @@ function formatTestCases(testCaseResults: DockerSubmissionResult[]): JudgedTestC
   });
 
   return formattedTestCases;
+}
+
+async function addSubmissionToDatabase(req: Request, verdict: StatusCode) {
+  await SubmissionRecords.findOneAndUpdate(
+    {userId: req.session.user?.userId, problemTitle: req.params.problemPath},
+    {
+      userId: req.session.user?.userId,
+      problemTitle: req.params.problemPath,
+      $push: {
+        submissions: {
+          date: new Date(),
+          language: req.body.programmingLanguage.toLowerCase(),
+          status: verdict,
+          codeSnippet: req.body.codeSnippet,
+        },
+      },
+    },
+    {upsert: true, runValidators: true, context: 'query'},
+  );
 }

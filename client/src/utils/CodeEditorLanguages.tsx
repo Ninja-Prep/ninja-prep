@@ -18,6 +18,13 @@ export const languageMap: Map = {
   javascript: 'nodejs',
 };
 
+export const languageToMode: Map = {
+  java: 'text/x-java',
+  cpp14: 'text/x-c++src',
+  python3: 'python',
+  nodejs: 'javascript',
+};
+
 export const themeOptions: LabelValuePair[] = [
   {value: 'eclipse', label: 'Eclipse'},
   {value: 'material', label: 'Material'},

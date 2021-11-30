@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {ChallengeLink, ProblemDetails} from 'utils/types/challenges';
+import {ChallengeLink, ProblemDetails, SubmissionRecord} from 'utils/types/challenges';
 
 /**
  * @returns List of links for each problem
@@ -13,6 +13,26 @@ export async function getChallengeLinks(): Promise<ChallengeLink[]> {
   ).data;
 
   return challengesResponse;
+}
+
+export async function getSubmissionRecords(problemId: string): Promise<SubmissionRecord[]> {
+  const responseData = (
+    await axios({
+      method: 'GET',
+      url: `/api/submission/submissionRecords/${problemId}`,
+    })
+  ).data;
+
+  if (!responseData) {
+    return responseData;
+  }
+  const submissionRecords = responseData.map((record: SubmissionRecord) => {
+    return {
+      ...record,
+      date: new Date(record.date).toLocaleDateString(),
+    };
+  });
+  return submissionRecords;
 }
 
 export const getProblemDetails = async (paramsId: string, programmingLanguage: string): Promise<ProblemDetails> => {
