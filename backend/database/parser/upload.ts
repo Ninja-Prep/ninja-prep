@@ -4,6 +4,7 @@ import path from 'path';
 
 import {isValidProblem, isValidProblemTemplateFiles} from './parser';
 import {uploadForProblemName} from './uploadProblem';
+import {uploadProblemSolutions} from './uploadProblemSolutions';
 
 /*
 For each Problem
@@ -67,10 +68,10 @@ async function getUploadPromises(
   problemNamesList: string[],
   rootFolder: string,
 ) {
-  const uploadPromises = problemNamesList.map(
-    async (problemName) =>
-      await uploadForProblemName(path.join(rootFolder, problemName)),
-  );
+  const uploadPromises = problemNamesList.map(async (problemName) => {
+    await uploadForProblemName(path.join(rootFolder, problemName));
+    await uploadProblemSolutions(path.join(rootFolder, problemName));
+  });
   await Promise.all(uploadPromises);
   return uploadPromises;
 }

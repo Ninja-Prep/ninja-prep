@@ -32,6 +32,11 @@ export interface SubmissionRecord {
   language: string;
 }
 
+export interface SolutionDetails {
+  solutionSnippet: string;
+  language: string;
+}
+
 export type ProblemDetails = {
   readonly description: string;
   readonly hints: string[];

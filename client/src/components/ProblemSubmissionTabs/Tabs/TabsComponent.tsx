@@ -9,6 +9,7 @@ import VideoSolution from './VideoSolution';
 
 import './Tabs.css';
 import SubmissionsContainer from '../containers/SubmissionsContainer';
+import SolutionsListContainer from '../containers/SolutionsListContainer';
 
 interface Props {
   problemDetails: ProblemDetails;
@@ -24,8 +25,8 @@ const TabsComponent = (props: Props): JSX.Element => {
         <Tab eventKey="videoSolution" title="Video Solution">
           <VideoSolution />
         </Tab>
-        <Tab eventKey="article" title="Concept Review">
-          <ConceptReview />
+        <Tab eventKey="solutions" title="Solutions">
+          <SolutionsListContainer />
         </Tab>
         <Tab eventKey="submissions" title="Submissions">
           <SubmissionsContainer />

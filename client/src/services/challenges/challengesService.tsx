@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {ChallengeLink, ProblemDetails, SubmissionRecord} from 'utils/types/challenges';
+import {ChallengeLink, ProblemDetails, SolutionDetails, SubmissionRecord} from 'utils/types/challenges';
 
 /**
  * @returns List of links for each problem
@@ -33,6 +33,17 @@ export async function getSubmissionRecords(problemId: string): Promise<Submissio
     };
   });
   return submissionRecords;
+}
+
+export async function getSolutions(problemId: string): Promise<SolutionDetails[]> {
+  const responseData = (
+    await axios({
+      method: 'GET',
+      url: `/api/submission/solutions/${problemId}`,
+    })
+  ).data;
+
+  return responseData;
 }
 
 export const getProblemDetails = async (paramsId: string, programmingLanguage: string): Promise<ProblemDetails> => {

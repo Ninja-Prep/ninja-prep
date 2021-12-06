@@ -1,9 +1,3 @@
-/*
-Template for specific language
-- Solution Code
-- Executable Code
-- Starter Code
-*/
 import {ProgrammingLanguages} from '../utils/enums/ProgrammingLanguages';
 import mongoose from '@mongoose';
 
@@ -20,7 +14,7 @@ type Submission = {
 
 export interface IProblemSubmissionRecordTemplate extends Document {
   userId: string;
-  problemTitle: string;
+  problemPath: string;
   submissions: Submission[];
 }
 
@@ -30,7 +24,7 @@ interface IProblemSubmissionRecordDocument
 
 const ProblemSubmissionRecordSchema: mongoose.Schema = new mongoose.Schema({
   userId: {type: String, required: true},
-  problemTitle: {type: String, required: true},
+  problemPath: {type: String, required: true},
   submissions: [
     {
       date: {type: Date, required: true},

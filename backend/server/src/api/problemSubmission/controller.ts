@@ -4,6 +4,7 @@ import {StatusCode, convertRuntimeVerdictExitCodes} from 'services/docker/status
 import {logger} from '@logger/logger';
 import User from '@models/User';
 import SubmissionRecords from '@models/ProblemSubmissionRecords';
+import ProblemSolutions from '@models/ProblemSolutions';
 
 export async function submitProblem(req: Request, res: Response): Promise<void> {
   try {
@@ -39,6 +40,12 @@ export async function submitProblem(req: Request, res: Response): Promise<void> 
 export async function getSubmissionRecord(req: Request, res: Response) {
   const submissionRecord = await SubmissionRecords.findOne({userId: req.session.user?.userId, problemTitle: req.params.problemPath});
   res.send(submissionRecord?.submissions);
+}
+
+export async function getSolutions(req: Request, res: Response) {
+  const solutionBO = await ProblemSolutions.findOne({problemTitle: req.params.problemPath});
+  const solutions = await ProblemSolutions.find();
+  res.send(solutionBO?.solutions);
 }
 
 interface JudgedTestCase {
