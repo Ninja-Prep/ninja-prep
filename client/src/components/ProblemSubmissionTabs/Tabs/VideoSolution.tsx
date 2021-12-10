@@ -2,9 +2,6 @@ import React from 'react';
 
 import {ResponsiveEmbed} from 'react-bootstrap';
 
-/**
- *
- */
 function VideoSolution() {
   return (
     <div className="m-4">

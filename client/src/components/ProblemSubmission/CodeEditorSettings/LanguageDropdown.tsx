@@ -11,11 +11,7 @@ interface Props {
 
 function LanguageDropdown(props: Props): JSX.Element {
   return (
-    <DropdownButton
-      variant="outline-dark"
-      title={props.language}
-      onSelect={props.onSelect}
-    >
+    <DropdownButton variant="outline-dark" title={props.language} onSelect={props.onSelect}>
       {props.modeOptions.map((option) => (
         <Dropdown.Item eventKey={option.value}> {option.label} </Dropdown.Item>
       ))}

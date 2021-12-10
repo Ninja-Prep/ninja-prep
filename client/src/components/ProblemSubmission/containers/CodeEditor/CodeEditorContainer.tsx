@@ -5,6 +5,7 @@ import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'reducers/rootReducer';
 import {updateEditorText} from 'reducers/textEditor/actions';
 import {getCookieUserCodeKey} from 'reducers/textEditor/reducer';
+import {oneDarkTheme} from '@codemirror/theme-one-dark';
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -18,6 +19,7 @@ const mapStateToProps = (state: RootState) => {
     matchBrackets: true,
     autoCloseBrackets: true,
     indentUnit: 4,
+    extensions: [oneDarkTheme],
   };
 };
 

@@ -4,6 +4,9 @@ export const SubmissionsContainer = styled.div`
   .MuiPaper-elevation2 {
     box-shadow: none;
   }
+  button: focus {
+    outline: 1px auto;
+  }
 `;
 
 export const Accepted = styled.div`
@@ -13,4 +16,8 @@ export const Accepted = styled.div`
 
 export const WrongAnswer = styled.div`
   color: red;
+`;
+
+export const Capitalize = styled.span`
+  text-transform: capitalize;
 `;

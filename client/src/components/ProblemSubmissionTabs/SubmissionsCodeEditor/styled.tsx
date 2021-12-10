@@ -7,7 +7,7 @@ export const UncontrolledCodeMirror = styled(CodeMirror)`
     width: 100% !important;
   }
   .CodeMirror * {
-    font-family: 'Fira Code';
+    font-family: Hack, monospace;
   }
 
   .CodeMirror-focused div.CodeMirror-cursors {

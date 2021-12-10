@@ -7,7 +7,7 @@ export const HeaderText = styled.p`
 
 export const ContentDetail = styled.p`
   white-space: pre;
-  font-family: 'Fira Code';
+  font-family: Hack, monospace;
   border-radius: 0.25rem !important;
   background-color: #343a40 !important;
   padding: 1rem !important;

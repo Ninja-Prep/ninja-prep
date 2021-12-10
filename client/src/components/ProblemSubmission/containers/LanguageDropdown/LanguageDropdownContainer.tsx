@@ -9,7 +9,7 @@ import {RootState} from 'reducers/rootReducer';
 import {updateEditorText} from 'reducers/textEditor/actions';
 import {getCookieUserCodeKey} from 'reducers/textEditor/reducer';
 import {getStarterCode} from 'services/challenges/challengesService';
-import {modeOptions} from 'utils/CodeEditorLanguages';
+import {codeMirrorModeOptions} from 'utils/CodeEditorLanguages';
 
 interface MatchParams {
   id: string;
@@ -40,7 +40,7 @@ class LanguageDropdownContainer extends Component<Props> {
   }
 
   render(): JSX.Element {
-    return <LanguageDropdown language={this.props.language} modeOptions={modeOptions} onSelect={(event: string | null) => this.handleDropdownSelect(event)} />;
+    return <LanguageDropdown language={this.props.language} modeOptions={codeMirrorModeOptions} onSelect={(event: string | null) => this.handleDropdownSelect(event)} />;
   }
 }
 

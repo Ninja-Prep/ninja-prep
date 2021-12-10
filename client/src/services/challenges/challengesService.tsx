@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {ChallengeLink, ProblemDetails, SolutionDetails, SubmissionRecord} from 'utils/types/challenges';
+import * as _ from 'lodash';
 
 /**
  * @returns List of links for each problem
@@ -43,7 +44,11 @@ export async function getSolutions(problemId: string): Promise<SolutionDetails[]
     })
   ).data;
 
-  return responseData;
+  const solutions = responseData.map((data: SolutionDetails) => {
+    return {...data, solutionSnippet: _.trim(data.solutionSnippet)};
+  });
+
+  return solutions;
 }
 
 export const getProblemDetails = async (paramsId: string, programmingLanguage: string): Promise<ProblemDetails> => {

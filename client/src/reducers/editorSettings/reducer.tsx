@@ -1,6 +1,6 @@
 import {PayloadAction} from '@reduxjs/toolkit';
 import {RootState} from 'reducers/rootReducer';
-import {modeOptions} from 'utils/CodeEditorLanguages';
+import {codeMirrorModeOptions} from 'utils/CodeEditorLanguages';
 
 import {CHANGE_THEME, CHANGE_MODE} from './actionTypes';
 
@@ -33,7 +33,7 @@ const editorSettingsReducer = (state = initialState, action: PayloadAction<strin
 };
 
 export function getLanguage(state: RootState): string {
-  const language = modeOptions.find((_) => _.value === state.editorSettings.mode)?.label;
+  const language = codeMirrorModeOptions.find((_) => _.value === state.editorSettings.mode)?.label;
 
   return language || 'Java';
 }

@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 
 import SubmissionsCodeEditor from '../SubmissionsCodeEditor/SubmissionsCodeEditor';
 import {SolutionDetails} from 'utils/types/challenges';
-import {languageToMode} from 'utils/CodeEditorLanguages';
+import {languageToCodeMirrorMode} from 'utils/CodeEditorLanguages';
 import * as Styled from './styled';
 
 interface Props {
@@ -23,11 +23,14 @@ function SolutionsList(props: Props): JSX.Element {
           {
             title: 'Language',
             field: 'language',
+            render: (rowData) => {
+              return <Styled.Capitalize>{rowData.language}</Styled.Capitalize>;
+            },
           },
         ]}
         data={props.solutionsList}
         detailPanel={(rowData) => {
-          return <SubmissionsCodeEditor textValue={rowData.solutionSnippet} mode={languageToMode[rowData.language]} />;
+          return <SubmissionsCodeEditor textValue={rowData.solutionSnippet} mode={languageToCodeMirrorMode[rowData.language]} />;
         }}
       />
     </Styled.SubmissionsContainer>

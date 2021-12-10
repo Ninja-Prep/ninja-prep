@@ -18,9 +18,9 @@ class SubmissionsContainer extends Component<RouteComponentProps<MatchParams>, S
   state = {
     solutionsList: [],
   };
+
   async componentDidMount(): Promise<void> {
     const solutionsList = await getSolutions(this.props.match.params.id);
-    console.log(solutionsList);
     this.setState({solutionsList});
   }
 

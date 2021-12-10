@@ -5,7 +5,7 @@ import * as Styled from './styled';
 import SubmissionsCodeEditor from '../SubmissionsCodeEditor/SubmissionsCodeEditor';
 import {VerdictStatus} from 'utils/enums/userSubmission';
 import {SubmissionRecord} from 'utils/types/challenges';
-import {languageToMode} from 'utils/CodeEditorLanguages';
+import {languageToCodeMirrorMode} from 'utils/CodeEditorLanguages';
 
 interface Props {
   submissionRecords: SubmissionRecord[];
@@ -31,12 +31,18 @@ function Submissions(props: Props) {
               return <Styled.WrongAnswer>{rowData.status}</Styled.WrongAnswer>;
             },
           },
-          {title: 'Language', field: 'language'},
+          {
+            title: 'Language',
+            field: 'language',
+            render: (rowData) => {
+              return <Styled.Capitalize>{rowData.language}</Styled.Capitalize>;
+            },
+          },
           {title: 'Date', field: 'date'},
         ]}
         data={props.submissionRecords}
         detailPanel={(rowData) => {
-          return <SubmissionsCodeEditor textValue={rowData.codeSnippet} mode={languageToMode[rowData.language]} />;
+          return <SubmissionsCodeEditor textValue={rowData.codeSnippet} mode={languageToCodeMirrorMode[rowData.language]} />;
         }}
       />
     </Styled.SubmissionsContainer>

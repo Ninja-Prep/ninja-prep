@@ -5,9 +5,13 @@ export const StyledCodeMirror = styled(CodeMirror)`
   .CodeMirror {
     height: 100% !important;
     width: 100% !important;
+    -webkit-font-variant-ligatures: none !important;
+    font-variant-ligatures: none !important;
   }
   .CodeMirror * {
-    font-family: 'Fira Code';
+    font-family: Hack, monospace;
+    -webkit-font-variant-ligatures: none !important;
+    font-variant-ligatures: none !important;
   }
 
   .CodeMirror-focused div.CodeMirror-cursors {

@@ -11,7 +11,7 @@ pre {
   background-color: #ebebeb88;
   color: rgb(0, 0, 0);
   padding: 10px;
-  font-family: 'Fira Code';
+  font-family: Hack, monospace;
 }
 
 h5 {
