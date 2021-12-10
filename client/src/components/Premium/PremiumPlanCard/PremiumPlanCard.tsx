@@ -1,34 +1,35 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 
-import Stripe from 'stripe';
+import {LightBlueButton} from 'uiLibrary/CoreUI';
 
 import {SUBSCRIBE} from 'utils/stringIds.json';
 import {PurchasePlan} from 'utils/types/plans/plans';
 
-import {MonthlyText, PlanCardHeader, PlanCardName, HoverWrapper, CenteredButton, PlanDescription, CardBody} from './styled';
+import * as Styled from './styled';
 
 interface PlanCardProps {
-  purchaseHandler?: (stripe: Stripe | null) => void;
+  purchaseHandler?: MouseEventHandler<HTMLButtonElement>;
   purchasePlan: PurchasePlan;
 }
 
 function PlanCard({purchasePlan, purchaseHandler}: PlanCardProps): JSX.Element {
   return (
-    <HoverWrapper>
-      <PlanCardHeader backgroundcolor={purchasePlan.backgroundColor}>
-        <PlanCardName>{purchasePlan.title}</PlanCardName>
-        <PlanCardName>
-          {purchasePlan.cost}
-          <MonthlyText>/mo</MonthlyText>
-        </PlanCardName>
-      </PlanCardHeader>
-      <CardBody>
-        <PlanDescription>{purchasePlan.description}</PlanDescription>
-        <CenteredButton variant="outline-secondary" onClick={purchaseHandler}>
-          {SUBSCRIBE}
-        </CenteredButton>
-      </CardBody>
-    </HoverWrapper>
+    <Styled.Container>
+      <Styled.CardHeader backgroundColor={purchasePlan.backgroundColor}>
+        <div>
+          <h2>{purchasePlan.title}</h2>
+        </div>
+        <div>
+          <h2>{purchasePlan.cost}</h2>
+        </div>
+      </Styled.CardHeader>
+      <Styled.Card>
+        <Styled.CardBody>
+          <Styled.PlanDescription>{purchasePlan.description}</Styled.PlanDescription>
+          <LightBlueButton onClick={purchaseHandler}>{SUBSCRIBE}</LightBlueButton>
+        </Styled.CardBody>
+      </Styled.Card>
+    </Styled.Container>
   );
 }
 

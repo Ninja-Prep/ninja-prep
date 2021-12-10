@@ -7,17 +7,17 @@ export interface PurchasePlan {
 }
 
 export const monthlyPricing: PurchasePlan = {
-  title: 'Monthly',
+  title: 'One Month',
   cost: '$15',
-  description: 'Monthly NinjaPrep subscription to quickly study for your upcoming interview.',
+  description: 'Single month subscription to quickly study for your upcoming interview',
   backgroundColor: '#259af3',
   stripePriceId: process.env.REACT_APP_STRIPE_MONTHLY_PRICING || '',
 };
 export const yearlyPricing: PurchasePlan = {
-  title: 'Yearly',
-  cost: '$10',
+  title: '3 Months',
+  cost: '$30',
   description: `Best for long term studying to never miss an algorithm interview question again`,
-  backgroundColor: '#2a2a3a',
+  backgroundColor: '#DB6A00',
   stripePriceId: process.env.REACT_APP_STRIPE_YEARLY_PRICING || '',
 };
 

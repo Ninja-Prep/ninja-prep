@@ -8,6 +8,7 @@ export const OurPlansHeader = styled.h1`
 export const Container = styled.div`
   width: 75%;
   margin: auto;
+  padding: 24px;
 `;
 
 export const CardContainer = styled.div`

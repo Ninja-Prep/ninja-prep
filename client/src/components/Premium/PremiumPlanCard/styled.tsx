@@ -1,47 +1,41 @@
-import {Card, Button} from 'react-bootstrap';
 import styled from 'styled-components';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
-export const PlanCardHeader = styled(Card.Header)`
+export const CardHeader = styled.div.attrs((props: {backgroundColor: string}) => props)`
   display: flex;
-  justify-content: space-between !important;
+  background-color: ${(props) => props.backgroundColor};
   color: white;
-  padding: 1.5rem;
-  background-color: ${(props) => props.backgroundcolor};
+  padding: 24px 48px;
+  justify-content: space-between;
 `;
 
-export const PlanCardName = styled.h2`
-  display: inline;
-  margin: 0;
-`;
-
-export const MonthlyText = styled.span`
-  font-size: 1.25rem;
-  font-weight: 300;
-`;
-
-export const CardBody = styled(Card.Body)`
+export const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 12px;
 `;
 
-export const CenteredButton = styled(Button)`
-  width: 50%;
-  margin: auto;
-  font-size: 1.25rem;
-  font-weight: 300;
-`;
-
 export const PlanDescription = styled.p`
   font-size: 18px;
-  padding: 1rem;
+  padding: 12px;
+  ${CoreUI.OPEN_SANS_REGULAR}
+  color: ${CoreUI.BODY_TEXT_COLOR};
 `;
 
-export const HoverWrapper = styled.div`
+export const Card = styled.div`
+  padding: 24px;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between !important;
   border-radius: 50px;
+  overflow: hidden;
+  outline: solid 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 15px 0 #e0e0e0;
   }
 `;
