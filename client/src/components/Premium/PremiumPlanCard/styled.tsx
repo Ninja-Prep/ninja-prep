@@ -33,8 +33,7 @@ export const Container = styled.div`
   justify-content: space-between !important;
   border-radius: 50px;
   overflow: hidden;
-  outline: solid 3px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
   &:hover {
     cursor: pointer;
   }
