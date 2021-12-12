@@ -4,12 +4,13 @@ import PremiumPlanCardContainer from '../containers/PremiumPlanCard/PremiumPlanC
 
 import {OUR_PLANS} from 'utils/stringIds.json';
 import {planCards} from 'utils/types/plans/plans';
-import {Card, CardContainer, Container, OurPlansHeader} from './styled';
+import {Card, CardContainer} from './styled';
+import {HeadingFont} from 'uiLibrary/Fonts';
 
 function PremiumPlans(): JSX.Element {
   return (
-    <Container>
-      <OurPlansHeader>{OUR_PLANS}</OurPlansHeader>
+    <div>
+      <HeadingFont>{OUR_PLANS}</HeadingFont>
       <CardContainer>
         {planCards.map((plan, key) => (
           <Card>
@@ -17,7 +18,7 @@ function PremiumPlans(): JSX.Element {
           </Card>
         ))}
       </CardContainer>
-    </Container>
+    </div>
   );
 }
 

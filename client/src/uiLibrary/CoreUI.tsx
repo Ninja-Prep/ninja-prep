@@ -5,6 +5,7 @@ export const DEFAULT_BLACK_TEXT_COLOR = '#0F1111';
 export const LIGHT_BLUE = '#24D1F3';
 export const MEDIUM_BLUE = '#1DA4BF';
 export const EXTRA_LARGE_SPACING = '88px';
+export const MEDIUM_SPACING = '44px';
 export const OPEN_SANS = 'Open Sans';
 export const BODY_TEXT_COLOR = '#595959';
 export const PREMIUM_COLOR = '#F28324';

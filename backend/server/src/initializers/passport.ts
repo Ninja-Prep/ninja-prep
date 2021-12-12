@@ -4,6 +4,7 @@ import {Profile as GoogleProfile, Strategy as GoogleStrategy} from 'passport-goo
 import {logError} from 'utils/logging/logger';
 import User, {FindOrCreateUserInput, IUserDocument} from '@models/User';
 import axios from 'axios';
+import qs from 'query-string';
 import passport, {Profile} from 'passport';
 
 type Done = (err?: Error | null, profile?: Express.User) => void;
@@ -49,10 +50,13 @@ passport.use(
       if (!profile.emails || !profile.emails[0].value) {
         throw new Error('Missing User Email');
       }
+      const profileParams = qs.parseUrl((profile.photos && profile.photos[0].value) || '');
+      const profileId = profileParams.query.asid;
+      const profilePicturePath = `http://graph.facebook.com/${profileId}/picture`;
       const input: FindOrCreateUserInput = {
         userId: profile.id,
         firstName: profile.name?.givenName || DEFAULT_NINJAPREP_NAME,
-        profilePicture: profile.photos && profile.photos[0].value,
+        profilePicture: profilePicturePath,
         email: profile.emails[0].value,
         oauthProvider: profile.provider,
       };
