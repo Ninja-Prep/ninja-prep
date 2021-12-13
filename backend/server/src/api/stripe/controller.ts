@@ -34,7 +34,7 @@ export async function checkout(req: Request, res: Response): Promise<void> {
       res.send({
         sessionId: session.id,
       });
-    } catch (e) {
+    } catch (e: any) {
       res.send({
         error: {
           message: e.message,
