@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "useUnknownInCatchVariables": false,
     "target": "es6",
     "module": "commonjs",
     "composite": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,
     "strict": true,
+    "useUnknownInCatchVariables": false,
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
