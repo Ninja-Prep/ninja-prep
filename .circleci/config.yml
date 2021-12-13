@@ -65,7 +65,7 @@ jobs:
       - run:
           name: Build Nginx Client Image
           command: |
-            docker build -t $NPCLIENT_IMAGE:latest -f ./client/Dockerfile ./client
+            docker build --build-arg DOPPLER_TOKEN=$DOPPLER_TOKEN -t $NPCLIENT_IMAGE:latest -f ./client/Dockerfile ./client
       - run:
           name: Archive client Docker image
           command: docker save -o client_image.tar $NPCLIENT_IMAGE

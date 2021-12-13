@@ -1,46 +1,48 @@
-version: '3.8'
+version: "3.8"
 
 services:
-    npclient:
-        image: ninjaprep/npclient
-        ports:
-            - '80:80'
-            - '443:443'
-        networks:
-            - npclient
-            - npserver
-            - npbox
-        depends_on:
-            - npserver
-            - npbox
-        deploy:
-            mode: replicated
-            placement:
-                constraints:
-                    - node.role == manager
-            replicas: 1
+  npclient:
+    image: ninjaprep/npclient
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - npclient
+      - npserver
+      - npbox
+    environment:
+      - DOPPLER_TOKEN
+    depends_on:
+      - npserver
+      - npbox
+    deploy:
+      mode: replicated
+      placement:
+        constraints:
+          - node.role == manager
+      replicas: 1
 
-    npserver:
-        image: npserver
-        depends_on:
-            - npbox
-        environment:
-            - DOPPLER_TOKEN
-        networks:
-            - npbox
-            - npclient
-            - npserver
+  npserver:
+    image: npserver
+    depends_on:
+      - npbox
+    environment:
+      - DOPPLER_TOKEN
+    networks:
+      - npbox
+      - npclient
+      - npserver
 
-    npbox:
-        image: ninjaprep/npbox
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-        ports:
-            - '8000:8000'
-        networks:
-            - npbox
+  npbox:
+    image: ninjaprep/npbox
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8000:8000"
+    networks:
+      - npbox
 
 networks:
-    npclient:
-    npserver:
-    npbox:
+  npclient:
+  npserver:
+  npbox:
