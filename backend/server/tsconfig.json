@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
+    "useUnknownInCatchVariables": false,
     "target": "es6",
     "module": "commonjs",
     "composite": true,

@@ -7,6 +7,13 @@ RUN apk update && \
 # Add Curl
 RUN apk --no-cache add curl
 
+RUN apk add --update alpine-sdk
+RUN apk add --no-cache make
+RUN apk add --no-cache cmake
+
+# Install Python
+RUN apk add --no-cache python3 py3-pip
+
 # Install the Doppler CLI for environment variables
 RUN (curl -Ls https://cli.doppler.com/install.sh || wget -qO- https://cli.doppler.com/install.sh) | sh
 
@@ -20,6 +27,8 @@ COPY ./database/models ./database/utils backend/database/
 COPY . .
 
 WORKDIR /backend/server
+
+
 RUN yarn install
 RUN yarn build
 

@@ -54,8 +54,6 @@ jobs:
       - run:
           name: Testing Server Folder
           command: ./doppler run -- yarn --cwd ./backend/server yarn test
-      - codecov/upload:
-          file: ./client/coverage/coverage-final.json
 
   build-remote-docker-image:
     executor: docker-publisher
