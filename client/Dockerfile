@@ -1,7 +1,7 @@
 FROM node:15-alpine as build
 # Removes source code from browser
 ENV GENERATE_SOURCEMAP=false 
-
+ARG DOPPLER_TOKEN
 # Add Curl
 RUN apk --no-cache add curl
 
