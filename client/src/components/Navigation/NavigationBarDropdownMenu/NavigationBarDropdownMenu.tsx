@@ -51,7 +51,6 @@ const NavigationBarDropdownMenu = (props: ProfileProps): JSX.Element => {
       </NavLink>
     );
   } else {
-    console.log(props.authUser.profilePicture);
     return (
       <DropdownMenu>
         <Dropdown.Toggle as={ToggleDropdown}>
