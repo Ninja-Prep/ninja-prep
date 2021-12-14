@@ -16,7 +16,7 @@ export async function checkout(req: Request, res: Response): Promise<void> {
       const session = await stripe.checkout.sessions.create({
         customer_email: userEmail,
         client_reference_id: userId,
-        mode: 'subscription',
+        mode: 'payment',
         payment_method_types: ['card'],
         line_items: [
           {
