@@ -2,9 +2,9 @@ import {DockerSubmissionResult} from 'services/docker/docker';
 import {Request, Response} from 'express';
 import {StatusCode, convertRuntimeVerdictExitCodes} from 'services/docker/statusCodes';
 import {logger} from '@logger/logger';
-import User from '@models/User';
-import SubmissionRecords from '@models/ProblemSubmissionRecords';
 import ProblemSolutions from '@models/ProblemSolutions';
+import SubmissionRecords from '@models/ProblemSubmissionRecords';
+import User from '@models/User';
 
 export async function submitProblem(req: Request, res: Response): Promise<void> {
   try {
@@ -37,14 +37,13 @@ export async function submitProblem(req: Request, res: Response): Promise<void> 
   }
 }
 
-export async function getSubmissionRecord(req: Request, res: Response) {
-  const submissionRecord = await SubmissionRecords.findOne({userId: req.session.user?.userId, problemTitle: req.params.problemPath});
+export async function getSubmissionRecord(req: Request, res: Response): Promise<void> {
+  const submissionRecord = await SubmissionRecords.findOne({userId: req.session.user?.userId, problemPath: req.params.problemPath});
   res.send(submissionRecord?.submissions);
 }
 
-export async function getSolutions(req: Request, res: Response) {
-  const solutionBO = await ProblemSolutions.findOne({problemTitle: req.params.problemPath});
-  const solutions = await ProblemSolutions.find();
+export async function getSolutions(req: Request, res: Response): Promise<void> {
+  const solutionBO = await ProblemSolutions.findOne({problemPath: req.params.problemPath});
   res.send(solutionBO?.solutions);
 }
 
@@ -79,10 +78,10 @@ function formatTestCases(testCaseResults: DockerSubmissionResult[]): JudgedTestC
 
 async function addSubmissionToDatabase(req: Request, verdict: StatusCode) {
   await SubmissionRecords.findOneAndUpdate(
-    {userId: req.session.user?.userId, problemTitle: req.params.problemPath},
+    {userId: req.session.user?.userId, problemPath: req.params.problemPath},
     {
       userId: req.session.user?.userId,
-      problemTitle: req.params.problemPath,
+      problemPath: req.params.problemPath,
       $push: {
         submissions: {
           date: new Date(),

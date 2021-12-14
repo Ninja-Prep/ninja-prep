@@ -2,7 +2,7 @@ import {PayloadAction} from '@reduxjs/toolkit';
 import {SubmissionStatus, VerdictStatus} from 'utils/enums/userSubmission';
 import {UserSubmissionOutput} from 'utils/types/challenges';
 
-import {SUBMIT_PROBLEM_SUCCESS, SUBMIT_PROBLEM, SUBMIT_PROBLEM_ERROR} from './actionTypes';
+import {SUBMIT_PROBLEM_SUCCESS, SUBMIT_PROBLEM, SUBMIT_PROBLEM_ERROR, RESET_PROBLEM_SUBMISSION} from './actionTypes';
 
 export interface UserSubmissionState {
   submissionStatus: SubmissionStatus;
@@ -35,6 +35,8 @@ const UserSubmissionReducer = (state = initialState, action: PayloadAction<UserS
         ...state,
         submissionStatus: SubmissionStatus.LOADING,
       };
+    case RESET_PROBLEM_SUBMISSION:
+      return initialState;
 
     default:
       return state;

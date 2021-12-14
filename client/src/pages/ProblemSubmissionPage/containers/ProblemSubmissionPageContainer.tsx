@@ -11,6 +11,7 @@ import 'react-reflex/styles.css';
 import {isPremiumUser} from 'reducers/auth/reducer';
 import ProblemSubmissionPage from '../ProblemSubmissionPage';
 import ProtectedProblemPage from 'pages/ProtectedProblemPage/ProtectedProblemPage';
+import {resetProblemSubmission} from 'reducers/userSubmission/action';
 
 interface MatchParams {
   id: string;
@@ -26,13 +27,14 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const connector = connect(mapStateToProps, {loadProblemDetails});
+const connector = connect(mapStateToProps, {loadProblemDetails, resetProblemSubmission});
 
 type Props = ConnectedProps<typeof connector> & RouteComponentProps<MatchParams>;
 
 class ProblemSubmissionPageContainer extends Component<Props> {
   async componentDidMount(): Promise<void> {
     this.props.loadProblemDetails(this.props.match.params.id);
+    this.props.resetProblemSubmission();
   }
 
   get getStarterCode() {

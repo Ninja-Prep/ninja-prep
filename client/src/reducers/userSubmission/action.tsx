@@ -7,12 +7,18 @@ import {JudgedTestCase} from 'utils/types/challenges/index';
 import {Action} from 'utils/types/redux';
 
 import {getLanguage} from '../editorSettings/reducer';
-import {SUBMIT_PROBLEM_SUCCESS, SUBMIT_PROBLEM, SUBMIT_PROBLEM_ERROR} from './actionTypes';
+import {SUBMIT_PROBLEM_SUCCESS, SUBMIT_PROBLEM, SUBMIT_PROBLEM_ERROR, RESET_PROBLEM_SUBMISSION} from './actionTypes';
 
 export function submitProblemSuccess(output: UserSubmissionOutput): Action<string, UserSubmissionOutput> {
   return {
     type: SUBMIT_PROBLEM_SUCCESS,
     payload: output,
+  };
+}
+
+export function resetProblemSubmission(): Action<string, UserSubmissionOutput> {
+  return {
+    type: RESET_PROBLEM_SUBMISSION,
   };
 }
 
