@@ -37,7 +37,9 @@ class PremiumPlanCardContainer extends Component<PremiumPlanCardContainerProps> 
       return (
         <Elements stripe={this.stripePromise}>
           <ElementsConsumer>
-            {({elements, stripe}) => <PremiumPlanCard purchasePlan={purchasePlan} purchaseHandler={() => redirectToCheckoutForm(stripe, purchasePlan.stripePriceId, email)} />}
+            {({elements, stripe}) => (
+              <PremiumPlanCard purchasePlan={purchasePlan} purchaseHandler={() => redirectToCheckoutForm(stripe, purchasePlan.stripePriceId, email, purchasePlan.premiumTime)} />
+            )}
           </ElementsConsumer>
         </Elements>
       );

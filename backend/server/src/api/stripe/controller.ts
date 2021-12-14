@@ -13,11 +13,18 @@ export async function checkout(req: Request, res: Response): Promise<void> {
   const userId = req.session.user?.userId;
   if (userId) {
     try {
+      const metadata = {
+        userId: userId,
+        premiumTime: Number(req.body.premiumTime),
+      };
       const session = await stripe.checkout.sessions.create({
         customer_email: userEmail,
-        client_reference_id: userId,
         mode: 'payment',
         payment_method_types: ['card'],
+        metadata: metadata,
+        payment_intent_data: {
+          metadata: metadata,
+        },
         line_items: [
           {
             price: req.body.stripePriceId,
@@ -57,7 +64,7 @@ export async function webhook(req: Request, res: Response): Promise<void> {
   const event = req.body;
   // Handle the event
   switch (event.type) {
-    case 'checkout.session.completed':
+    case 'payment_intent.succeeded':
       const paymentIntent = event.data.object;
       await addPremiumStatus(paymentIntent);
       // Then define and call a method to handle the successful payment intent.
@@ -72,26 +79,21 @@ export async function webhook(req: Request, res: Response): Promise<void> {
 }
 
 async function addPremiumStatus(session: Stripe.Checkout.Session) {
-  if (session.subscription && session.client_reference_id) {
-    const subscriptionId = session.subscription as string;
-    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-    await User.findOneAndUpdate({userId: session.client_reference_id}, {premiumExpirationDate: new Date(subscription.current_period_end * 1000)}, {new: true});
+  if (session.metadata?.userId && session.metadata?.premiumTime) {
+    await User.findOneAndUpdate({userId: session.metadata?.userId}, {premiumExpirationDate: new Date(Date.now() + Number(session.metadata.premiumTime))}, {runValidators: true, context: 'query'});
   }
 }
 
 export async function getCheckoutSession(req: Request, res: Response): Promise<void> {
   const sessionId = req.body.checkoutSessionId;
-
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-    if (session.client_reference_id !== req.session.user?.userId) {
+    if (!session.metadata?.premiumTime) {
       res.status(400);
       res.send();
       return;
     }
-    const subscriptionId = session.subscription as string;
-    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-    const expirationDate = new Date(subscription.current_period_end * 1000);
+    const expirationDate = new Date(Date.now() + Number(session.metadata.premiumTime));
     const formattedDate = expirationDate.toLocaleString('default', {year: 'numeric', month: 'long', day: 'numeric'});
     res.send({email: session.customer_email, expirationDate: formattedDate});
     return;

@@ -6,15 +6,21 @@ import {CHALLENGES_NAVIGATION} from 'utils/stringIds.json';
 import {ProblemsHeader, BackgroundContainer, ContentContainer, HeaderFont, PremiumButtonFlex} from './styled';
 import {GetFullAccessButton} from 'uiLibrary/Buttons';
 
-function ChallengesPage(): JSX.Element {
+interface Props {
+  isPremiumUser: boolean;
+}
+
+function ChallengesPage(props: Props): JSX.Element {
   return (
     <BackgroundContainer>
       <ContentContainer>
         <ProblemsHeader>
           <HeaderFont>{CHALLENGES_NAVIGATION}</HeaderFont>
-          <PremiumButtonFlex>
-            <GetFullAccessButton />
-          </PremiumButtonFlex>
+          {!props.isPremiumUser && (
+            <PremiumButtonFlex>
+              <GetFullAccessButton />
+            </PremiumButtonFlex>
+          )}
         </ProblemsHeader>
         <QuestionListContainer />
       </ContentContainer>

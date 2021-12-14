@@ -1,7 +1,7 @@
 import {Stripe} from '@stripe/stripe-js';
 import axios from 'axios';
 
-export function redirectToCheckoutForm(stripe: Stripe | null, stripePriceId: string, userEmail: string): void {
+export function redirectToCheckoutForm(stripe: Stripe | null, stripePriceId: string, userEmail: string, premiumTime: number): void {
   stripe &&
     axios({
       method: 'POST',
@@ -9,6 +9,7 @@ export function redirectToCheckoutForm(stripe: Stripe | null, stripePriceId: str
       data: {
         stripePriceId,
         userEmail,
+        premiumTime,
       },
     }).then((res) => {
       stripe?.redirectToCheckout({

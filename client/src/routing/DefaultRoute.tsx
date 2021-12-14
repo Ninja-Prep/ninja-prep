@@ -5,7 +5,7 @@ import {RouteComponentProps, RouteProps} from 'react-router';
 import RouteWrapper from './RouteWrapper';
 
 type Props = {
-  component: React.ComponentType<RouteComponentProps<any>> | React.ComponentClass<any>;
+  component: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
 } & RouteProps;
 
 class DefaultRoute extends React.Component<Props> {

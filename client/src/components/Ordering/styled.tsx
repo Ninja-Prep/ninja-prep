@@ -1,10 +1,13 @@
-import {Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 
-export const OrderContainer = styled(Container)`
+export const Container = styled.div`
+  height: 100%;
+`;
+
+export const OrderContainer = styled.div`
   margin-top: 75px;
   padding: 50px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
