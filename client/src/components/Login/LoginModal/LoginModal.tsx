@@ -4,8 +4,8 @@ There is no login page, only a modal to log the user in
 */
 import React from 'react';
 
-import Modal from '@material-ui/core/Modal';
-import Fade from '@material-ui/core/Fade';
+import Modal from '@mui/material/Modal';
+import {Fade} from '@mui/material';
 
 import {FacebookIcon, GitHubIcon, GoogleIcon} from 'uiLibrary/SocialMediaIcons';
 import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';

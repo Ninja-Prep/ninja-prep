@@ -29,4 +29,4 @@ class SubmissionsContainer extends Component<RouteComponentProps<MatchParams>, S
   }
 }
 
-export default withRouter(SubmissionsContainer);
+export default React.memo(withRouter(SubmissionsContainer));

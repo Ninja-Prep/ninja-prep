@@ -1,20 +1,15 @@
 import styled from 'styled-components';
-import {Navbar} from 'react-bootstrap';
+import AppBar from '@mui/material/AppBar';
+
 import * as CoreUI from 'uiLibrary/CoreUI';
 
-export const NavigationBarFullWidth = styled.div`
-  width: 100%;
-`;
-
-export const FixedNavigationBar = styled(Navbar)`
-  background-color: #ffffff;
+export const FixedNavigationBar = styled(AppBar)`
   padding: 15px 16%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 `;
 
-export const PositionLogo = styled.div`
+export const Logo = styled.a`
   text-decoration: none;
-  color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
   border-bottom: 3px solid transparent;
   padding: 0;
   :hover {
@@ -33,10 +28,16 @@ export const PositionLogo = styled.div`
   }
 `;
 
-export const NavigationFloatRight = styled.div`
-  float: right;
-`;
-
 export const NavigationDropdownPadding = styled.div`
   padding-top: 15px;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Links = styled.div`
+  display: flex;
+  flex-dirction: row;
 `;

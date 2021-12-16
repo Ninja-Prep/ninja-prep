@@ -6,29 +6,24 @@ Wrapper component to add
 */
 import React from 'react';
 
-import {Navbar} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
-import {NavigationBarFullWidth, FixedNavigationBar, PositionLogo, NavigationFloatRight} from './styled';
+import * as Styled from './styled';
 
-import {LoginModalContainer} from 'components/Login';
 import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 import NavigationBarContent from '../containers/NavigationBarContent/NavigationBarContentContainer';
+import {Link} from 'react-router-dom';
 
 function NavigationBar(): JSX.Element {
   return (
-    <FixedNavigationBar fixed="top" expand="lg" variant="dark">
-      <PositionLogo>
-        <Navbar.Brand as={Link} to="/">
+    <Styled.FixedNavigationBar position="fixed" color="inherit">
+      <Styled.Container>
+        <Styled.Logo as={Link} to="/">
           <DarkNinjaPrepLogo height={40} width={100} />
-        </Navbar.Brand>
-      </PositionLogo>
-      <NavigationBarFullWidth>
-        <NavigationFloatRight>
+        </Styled.Logo>
+        <Styled.Links>
           <NavigationBarContent />
-        </NavigationFloatRight>
-      </NavigationBarFullWidth>
-      <LoginModalContainer />
-    </FixedNavigationBar>
+        </Styled.Links>
+      </Styled.Container>
+    </Styled.FixedNavigationBar>
   );
 }
 

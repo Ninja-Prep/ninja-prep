@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import {ProblemDetails} from 'utils/types/challenges/index';
 
-import HintComponent from '../Tabs/HintComponent';
+import HintComponent from '../Hint/HintComponent';
 import {MarkDownPre} from './styled';
 
 interface Props {

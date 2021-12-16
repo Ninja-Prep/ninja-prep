@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {LoginHeaderBodyText, LoginHeaderContainer, LoginHeaderLargeText, StartLearningForFree, FlexSizing, SocialMediaContainer, GoogleButton, FacebookButton, GitHubButton} from './styled';
 import {LightBlueButton} from 'uiLibrary/CoreUI';

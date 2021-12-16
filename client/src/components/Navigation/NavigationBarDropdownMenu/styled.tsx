@@ -1,18 +1,25 @@
 import styled from 'styled-components';
-import {Image, Dropdown} from 'react-bootstrap';
-import LockIcon from '@material-ui/icons/Lock';
+import LockIcon from '@mui/icons-material/Lock';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
-export const DropdownText = styled.p`
-  color: #6c757d !important;
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
-export const InlineBlockDropdownIcon = styled.div`
+export const Link = styled.div`
+  color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
+  text-decoration: none;
+  a {
+    color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
+    text-decoration: none;
+  }
+`;
+
+export const DropdownIcon = styled.div`
   padding: 5px;
-  display: inline-block;
-`;
-
-export const DropdownMenu = styled(Dropdown)`
-  padding-left: 15px;
+  color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
+  text-decoration: none;
 `;
 
 export const A = styled.a`
@@ -30,11 +37,11 @@ export const PremiumLockIcon = styled(LockIcon)`
 `;
 
 export const PremiumTextColor = styled.div`
-  display: inline-block;
   color: #ee953d;
 `;
 
-export const ImageWrapper = styled(Image)`
+export const ImageWrapper = styled.img`
   width: 45px;
   height: 45px;
+  border-radius: 50%;
 `;

@@ -1,5 +1,5 @@
-import CheckRoundedIcon from '@material-ui/icons/CheckRounded';
-import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import {Nav} from 'react-bootstrap';
 import styled from 'styled-components';
 

@@ -1,11 +1,11 @@
 import styled, {css} from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
-import GradeIcon from '@material-ui/icons/Grade';
-import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SchoolIcon from '@material-ui/icons/School';
+import GradeIcon from '@mui/icons-material/Grade';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import SchoolIcon from '@mui/icons-material/School';
 import BoltIcon from '@mui/icons-material/Bolt';
-import CodeIcon from '@material-ui/icons/Code';
+import CodeIcon from '@mui/icons-material/Code';
 
 const iconCss = css`
   color: ${CoreUI.LIGHT_BLUE};

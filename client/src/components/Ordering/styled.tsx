@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 export const Container = styled.div`
   height: 100%;

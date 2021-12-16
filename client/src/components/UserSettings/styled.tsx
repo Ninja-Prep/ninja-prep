@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import SettingsIcon from '@material-ui/icons/Settings';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 export const SettingsContainer = styled.div`
   padding: 50px;

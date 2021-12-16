@@ -32,7 +32,7 @@ import {
   BENEFITS_CODE_WALKTHROUGHS,
   BENEFITS_CODE_WALKTHROUGHS_BODY,
 } from 'utils/stringIds.json';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import {WhiteLink} from 'uiLibrary/Links';
 
 const BenefitsList = [

@@ -5,6 +5,7 @@ import SubmissionsCodeEditor from '../SubmissionsCodeEditor/SubmissionsCodeEdito
 import {SolutionDetails} from 'utils/types/challenges';
 import {languageToCodeMirrorMode} from 'utils/CodeEditorLanguages';
 import * as Styled from './styled';
+import {Box} from '@mui/material';
 
 interface Props {
   solutionsList: SolutionDetails[];
@@ -13,26 +14,28 @@ interface Props {
 function SolutionsList(props: Props): JSX.Element {
   return (
     <Styled.SubmissionsContainer>
-      <MaterialTable
-        options={{
-          paging: false,
-          search: false,
-        }}
-        title="Solutions"
-        columns={[
-          {
-            title: 'Language',
-            field: 'language',
-            render: (rowData) => {
-              return <Styled.Capitalize>{rowData.language}</Styled.Capitalize>;
+      <Box>
+        <MaterialTable
+          options={{
+            paging: false,
+            search: false,
+          }}
+          title="Solutions"
+          columns={[
+            {
+              title: 'Language',
+              field: 'language',
+              render: (rowData) => {
+                return <Styled.Capitalize>{rowData.language}</Styled.Capitalize>;
+              },
             },
-          },
-        ]}
-        data={props.solutionsList}
-        detailPanel={(rowData) => {
-          return <SubmissionsCodeEditor textValue={rowData.solutionSnippet} mode={languageToCodeMirrorMode[rowData.language]} />;
-        }}
-      />
+          ]}
+          data={props.solutionsList}
+          detailPanel={(rowData) => {
+            return <SubmissionsCodeEditor textValue={rowData.solutionSnippet} mode={languageToCodeMirrorMode[rowData.language]} />;
+          }}
+        />
+      </Box>
     </Styled.SubmissionsContainer>
   );
 }

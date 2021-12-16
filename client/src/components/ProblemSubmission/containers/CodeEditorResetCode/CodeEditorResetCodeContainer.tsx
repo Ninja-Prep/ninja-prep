@@ -26,9 +26,6 @@ interface MatchParams {
 type Props = ConnectedProps<typeof connector> & RouteComponentProps<MatchParams>;
 
 class CodeEditorResetCodeContainer extends Component<Props> {
-  constructor(props: Props) {
-    super(props);
-  }
   async resetCode() {
     const starterCode = await getStarterCode(this.props.match.params.id, this.props.language);
     this.props.updateEditorText(starterCode);

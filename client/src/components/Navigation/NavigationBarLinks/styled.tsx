@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
 
-export const NavLinkSpacing = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
 const NavLink = styled.a`
   text-decoration: none;
   color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
@@ -27,18 +22,6 @@ const NavLink = styled.a`
   }
   :hover:after {
     transform: scaleX(1);
-  }
-`;
-
-export const NavLinkMobile = styled.a`
-  text-decoration: none;
-  color: hsla(0, 0%, 100%, 0.5);
-  padding: 10px 10px 10px 15px;
-
-  :hover {
-    text-decoration: none;
-    cursor: pointer;
-    color: white;
   }
 `;
 

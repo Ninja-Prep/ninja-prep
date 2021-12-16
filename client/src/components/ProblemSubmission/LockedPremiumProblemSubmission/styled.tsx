@@ -1,7 +1,7 @@
 import {Container} from 'react-bootstrap';
 import styled from 'styled-components';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import LockIcon from '@material-ui/icons/Lock';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import LockIcon from '@mui/icons-material/Lock';
 
 export const HeightWrapper = styled.div`
   transform: translate(-50%, -50%);

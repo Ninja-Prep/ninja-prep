@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 import {SubHeading, BackgroundContainer, WhyNinjaPrepContainer, SubText, StartCodingButton} from './styled';
 import {WhiteLink} from 'uiLibrary/Links';
