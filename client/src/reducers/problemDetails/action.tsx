@@ -23,7 +23,6 @@ export function loadProblemDetails(problemId: string) {
       const language = getLanguage(state);
 
       const [problemDetails, solutionsList, submissionRecords] = await Promise.all([getProblemDetails(problemId, language), getSolutions(problemId), getSubmissionRecords(problemId)]);
-      console.log(submissionRecords);
       dispatch(loadProblemDetailsSuccess(problemDetails, solutionsList, submissionRecords));
     } catch (err) {
       dispatch({type: LOAD_PROBLEM_DETAILS_ERROR});
