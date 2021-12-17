@@ -39,11 +39,7 @@ function CodeEditorNavbar(props: Props) {
       </Col>
 
       <Col className="d-inline text-right">
-        <Nav.Link
-          as={Link}
-          to="/challenges"
-          className="pl-3 d-inline text-light"
-        >
+        <Nav.Link as={Link} to="/challenges" className="pl-3 d-inline text-light">
           Problems
         </Nav.Link>
         <LoginLink />

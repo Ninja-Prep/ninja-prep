@@ -5,7 +5,7 @@ import qs from 'query-string';
 
 import {RootState} from 'reducers/rootReducer';
 import {getAndSetUser} from 'reducers/auth/actions';
-import AsyncSpinner from 'utils/AsyncSpinner';
+import AsyncSpinner from 'utils/AsyncSpinner/AsyncSpinner';
 import {MatchProps} from 'utils/types/routing';
 import {getCheckoutSession} from 'services/stripe/stripeService';
 
@@ -40,7 +40,7 @@ class OrderSuccessContainer extends Component<OrderSuccessProps, State> {
       const checkoutSession = await getCheckoutSession(sessionId);
       await this.props.getAndSetUser();
       this.setState({isLoadingCheckoutSession: false, email: checkoutSession.email, expirationDate: checkoutSession.expirationDate});
-    } catch (error) {
+    } catch (error: any) {
       this.setState({isLoadingCheckoutSession: false, error: error});
     }
   }

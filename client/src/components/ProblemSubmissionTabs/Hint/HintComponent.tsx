@@ -1,7 +1,13 @@
 import React, {Fragment} from 'react';
 
 import _ from 'lodash';
-import {Accordion, Card} from 'react-bootstrap';
+
+import * as Styled from './styled';
+
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 interface Props {
   hints?: string[];
@@ -9,14 +15,14 @@ interface Props {
 
 const HintCard = ({index, hint}: {index: number; hint: string}) => {
   return (
-    <Card>
-      <Accordion.Toggle as={Card.Header} eventKey={index.toString()} className="text-dark bg-light">
-        Hint {index}
-      </Accordion.Toggle>
-      <Accordion.Collapse eventKey={index.toString()}>
-        <p className="p-3 text-dark">{hint}</p>
-      </Accordion.Collapse>
-    </Card>
+    <Styled.StyledAccordion>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <b>Hint {index}</b>
+        </AccordionSummary>
+        <AccordionDetails>{hint}</AccordionDetails>
+      </Accordion>
+    </Styled.StyledAccordion>
   );
 };
 
@@ -25,13 +31,11 @@ const HintComponent = (props: Props): JSX.Element => {
     return <Fragment />;
   }
   return (
-    <div className="text-dark pb-4">
-      <p className="font-weight-bold lead">Hints</p>
-      <Accordion>
-        {props.hints?.map((hint, index) => {
-          return <HintCard index={index + 1} hint={hint} />;
-        })}
-      </Accordion>
+    <div>
+      <Styled.HintTitle>Hints</Styled.HintTitle>
+      {props.hints?.map((hint, index) => {
+        return <HintCard index={index + 1} hint={hint} />;
+      })}
     </div>
   );
 };

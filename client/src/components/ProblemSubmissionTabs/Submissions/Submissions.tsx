@@ -18,6 +18,7 @@ function Submissions(props: Props) {
         options={{
           paging: false,
           search: false,
+          overflowY: 'hidden',
         }}
         title="Submissions"
         columns={[

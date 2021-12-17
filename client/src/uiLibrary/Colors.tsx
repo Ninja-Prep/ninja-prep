@@ -1,0 +1,9 @@
+export const MEDIUM_BLUE = '#1DA4BF';
+export const LIGHT_BLUE = '#24D1F3';
+export const BODY_TEXT_COLOR = '#595959';
+export const PREMIUM_COLOR = '#F28324';
+export const DARK_PREMIUM_COLOR = '#DB6A00';
+export const BORDER_COLOR = '#E4E3E4';
+export const DEFAULT_BLACK_TEXT_COLOR = '#0F1111';
+export const BACKGROUND_GREY = '#F5F7FA;';
+export const MAIN_BACKGROUND_WHITE = '#F9FBFD';

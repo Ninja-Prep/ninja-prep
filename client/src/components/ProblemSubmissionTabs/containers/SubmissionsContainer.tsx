@@ -1,31 +1,23 @@
 import React, {Component} from 'react';
+import {connect, ConnectedProps} from 'react-redux';
 
-import {RouteComponentProps, withRouter} from 'react-router-dom';
+import {RootState} from 'reducers/rootReducer';
 
-import {getSubmissionRecords} from 'services/challenges';
-import {SubmissionRecord} from 'utils/types/challenges';
 import Submissions from '../Submissions/Submissions';
 
-interface MatchParams {
-  id: string;
-}
-
-interface State {
-  submissionRecords?: SubmissionRecord[];
-}
-
-class SubmissionsContainer extends Component<RouteComponentProps<MatchParams>, State> {
-  state = {
-    submissionRecords: [],
+const mapStateToProps = (state: RootState) => {
+  return {
+    submissionRecords: state.problemDetails.submissionRecords,
   };
-  async componentDidMount(): Promise<void> {
-    const submissionRecords = await getSubmissionRecords(this.props.match.params.id);
-    this.setState({submissionRecords});
-  }
+};
 
+const connector = connect(mapStateToProps);
+type Props = ConnectedProps<typeof connector>;
+
+class SubmissionsContainer extends Component<Props> {
   render(): JSX.Element {
-    return <Submissions submissionRecords={this.state.submissionRecords} />;
+    return <Submissions submissionRecords={this.props.submissionRecords || []} />;
   }
 }
 
-export default withRouter(SubmissionsContainer);
+export default React.memo(connector(SubmissionsContainer));

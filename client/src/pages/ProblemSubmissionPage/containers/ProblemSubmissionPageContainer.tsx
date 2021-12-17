@@ -5,7 +5,7 @@ import {RouteComponentProps, withRouter} from 'react-router-dom';
 import {getLanguage} from 'reducers/editorSettings/reducer';
 import {loadProblemDetails} from 'reducers/problemDetails/action';
 import {RootState} from 'reducers/rootReducer';
-import AsyncSpinner from 'utils/AsyncSpinner';
+import AsyncSpinner from 'utils/AsyncSpinner/AsyncSpinner';
 
 import 'react-reflex/styles.css';
 import {isPremiumUser} from 'reducers/auth/reducer';

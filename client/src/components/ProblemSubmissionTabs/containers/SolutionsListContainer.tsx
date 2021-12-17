@@ -1,32 +1,25 @@
 import React, {Component} from 'react';
+import {connect, ConnectedProps} from 'react-redux';
+import {RootState} from 'reducers/rootReducer';
 
-import {RouteComponentProps, withRouter} from 'react-router-dom';
-
-import {getSolutions} from 'services/challenges';
-import {SolutionDetails} from 'utils/types/challenges';
 import SolutionsList from '../SolutionsList/SolutionsList';
 
-interface MatchParams {
-  id: string;
-}
-
-interface State {
-  solutionsList?: SolutionDetails[];
-}
-
-class SubmissionsContainer extends Component<RouteComponentProps<MatchParams>, State> {
-  state = {
-    solutionsList: [],
+const mapStateToProps = (state: RootState) => {
+  return {
+    solutionsList: state.problemDetails.solutionsList,
   };
+};
 
-  async componentDidMount(): Promise<void> {
-    const solutionsList = await getSolutions(this.props.match.params.id);
-    this.setState({solutionsList});
-  }
+const connector = connect(mapStateToProps);
+type Props = ConnectedProps<typeof connector>;
 
+class SubmissionsContainer extends Component<Props> {
   render(): JSX.Element {
-    return <SolutionsList solutionsList={this.state.solutionsList} />;
+    if (this.props.solutionsList.length === 0) {
+      return <div></div>;
+    }
+    return <SolutionsList solutionsList={this.props.solutionsList} />;
   }
 }
 
-export default React.memo(withRouter(SubmissionsContainer));
+export default React.memo(connector(SubmissionsContainer));

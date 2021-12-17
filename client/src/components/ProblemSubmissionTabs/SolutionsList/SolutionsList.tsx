@@ -13,12 +13,13 @@ interface Props {
 
 function SolutionsList(props: Props): JSX.Element {
   return (
-    <Styled.SubmissionsContainer>
+    <Styled.SolutionsContainer>
       <Box>
         <MaterialTable
           options={{
             paging: false,
             search: false,
+            overflowY: 'hidden',
           }}
           title="Solutions"
           columns={[
@@ -36,7 +37,7 @@ function SolutionsList(props: Props): JSX.Element {
           }}
         />
       </Box>
-    </Styled.SubmissionsContainer>
+    </Styled.SolutionsContainer>
   );
 }
 

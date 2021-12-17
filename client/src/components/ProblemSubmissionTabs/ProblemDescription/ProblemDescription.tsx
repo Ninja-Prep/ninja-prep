@@ -5,7 +5,7 @@ import rehypeRaw from 'rehype-raw';
 import {ProblemDetails} from 'utils/types/challenges/index';
 
 import HintComponent from '../Hint/HintComponent';
-import {MarkDownPre} from './styled';
+import * as Styled from './styled';
 
 interface Props {
   problemDetails: ProblemDetails;
@@ -13,18 +13,18 @@ interface Props {
 
 function ProblemDescription({problemDetails}: Props): JSX.Element {
   return (
-    <MarkDownPre>
-      <div className="m-4">
-        <div>
-          <p className="text-success d-inline pr-3">Easy</p>
-        </div>
-        <div className="text-dark pb-4 pt-2">
-          <h3 className="font-weight-bold">{problemDetails?.title}</h3>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{problemDetails?.description || ''}</ReactMarkdown>
-        </div>
-        <HintComponent hints={problemDetails?.hints} />
+    <Styled.Container>
+      <div>
+        <Styled.DifficultyColor>Easy</Styled.DifficultyColor>
       </div>
-    </MarkDownPre>
+      <div>
+        <h3>
+          <b>{problemDetails?.title}</b>
+        </h3>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{problemDetails?.description || ''}</ReactMarkdown>
+      </div>
+      <HintComponent hints={problemDetails?.hints} />
+    </Styled.Container>
   );
 }
 

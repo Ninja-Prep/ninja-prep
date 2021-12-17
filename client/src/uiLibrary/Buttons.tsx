@@ -1,11 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {Link} from 'react-router-dom';
 import * as CoreUI from 'uiLibrary/CoreUI';
 import LockIcon from '@mui/icons-material/Lock';
 
+export const STANDARD_BUTTON = css`
+  border-radius: 24px;
+  padding: 12px 24px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 16%);
+  transition-duration: 0.4s;
+`;
+
 const GetFullAccess = styled(Link)`
-  ${CoreUI.STANDARD_BUTTON}
+  ${STANDARD_BUTTON}
   ${CoreUI.OPEN_SANS_MEDIUM}
   display: flex;
   align-items: center;
@@ -22,6 +29,47 @@ const GetFullAccess = styled(Link)`
 
 export const PremiumLockIcon = styled(LockIcon)`
   margin-right: 5px;
+`;
+
+export const LightBlueButtonCSS = css`
+  ${CoreUI.OPEN_SANS_MEDIUM}
+  ${STANDARD_BUTTON}
+  background-color: ${CoreUI.LIGHT_BLUE};
+  border-style: none;
+  color: #ffffff;
+  :focus {
+    outline: none;
+  }
+  :hover {
+    background-color: #1da4bf;
+  }
+`;
+
+export const LightBlueButton = styled.button`
+  ${LightBlueButtonCSS}
+`;
+
+export const SOCIAL_MEDIA_BUTTON = css`
+  ${CoreUI.OPEN_SANS_MEDIUM}
+  border-radius: 10px;
+  padding: 16px 32px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 16%);
+  border-style: none;
+  width: 340px;
+  color: #ffffff;
+  transition-duration: 0.4s;
+  text-align: center;
+  color: white;
+  :hover {
+    text-decoration: none;
+    color: white;
+  }
+  :focus {
+    outline: none;
+  }
+  > svg {
+    float: left;
+  }
 `;
 
 export function GetFullAccessButton(): JSX.Element {

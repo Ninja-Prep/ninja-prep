@@ -14,7 +14,7 @@ import {connect, ConnectedProps} from 'react-redux';
 
 import RouteWrapper from './RouteWrapper';
 import {Redirect} from 'react-router-dom';
-import AsyncSpinner from 'utils/AsyncSpinner';
+import AsyncSpinner from 'utils/AsyncSpinner/AsyncSpinner';
 
 const mapStateToProps = (state: RootState) => {
   return {

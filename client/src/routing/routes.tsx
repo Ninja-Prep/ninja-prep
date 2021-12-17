@@ -14,6 +14,6 @@ export const LandingPageRoute = <ProtectedRoute path="/" exact authComponent={Ch
 export const OrderSuccessRoute = <ProtectedRoute path="/order/success" exact fallbackRedirectTo="/" authComponent={OrderSuccess} />;
 export const ChallengesRoute = <DefaultRoute path="/challenges" exact component={ChallengesPageContainer} />;
 export const PremiumRoute = <UnsubscribedRoute path="/premium" exact unsubscribedComponent={PremiumPage} fallbackRedirectTo="/" />;
-export const ProblemSubmissionRoute = () => <DefaultRoute path="/problem/:id" exact component={ProblemSubmissionPageContainer} />;
+export const ProblemSubmissionRoute = () => <DefaultRoute path="/problem/:id" exact component={ProblemSubmissionPageContainer} transitionOff />;
 export const Error404Route = <DefaultRoute exact component={Error404Component} />;
 export const SettingsPageRoute = <ProtectedRoute path="/settings" exact authComponent={UserSettings} fallbackRedirectTo="/" />;

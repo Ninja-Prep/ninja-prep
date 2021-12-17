@@ -1,5 +1,5 @@
 import {PayloadAction} from '@reduxjs/toolkit';
-import {ProblemDetails} from 'utils/types/challenges';
+import {ProblemDetails, SolutionDetails, SubmissionRecord} from 'utils/types/challenges';
 
 import {LOAD_PROBLEM_DETAILS, LOAD_PROBLEM_DETAILS_ERROR, LOAD_PROBLEM_DETAILS_SUCCESS} from './actionTypes';
 
@@ -7,11 +7,21 @@ export interface UserSubmissionState {
   isLoading: boolean;
   isError: boolean;
   details: ProblemDetails;
+  solutionsList: SolutionDetails[];
+  submissionRecords: SubmissionRecord[];
+}
+
+export interface ProblemDetailsPayload {
+  problemDetails: ProblemDetails;
+  solutionsList: SolutionDetails[];
+  submissionRecords: SubmissionRecord[];
 }
 
 const initialState: UserSubmissionState = {
   isLoading: false,
   isError: false,
+  submissionRecords: [],
+  solutionsList: [],
   details: {
     description: '',
     hints: [],
@@ -22,7 +32,7 @@ const initialState: UserSubmissionState = {
   },
 };
 
-const ProblemDetailsReducer = (state = initialState, action: PayloadAction<ProblemDetails>): UserSubmissionState => {
+const ProblemDetailsReducer = (state = initialState, action: PayloadAction<ProblemDetailsPayload>): UserSubmissionState => {
   switch (action.type) {
     case LOAD_PROBLEM_DETAILS:
       return {
@@ -33,7 +43,9 @@ const ProblemDetailsReducer = (state = initialState, action: PayloadAction<Probl
       return {
         ...state,
         isLoading: false,
-        details: action.payload,
+        details: action.payload.problemDetails,
+        solutionsList: action.payload.solutionsList,
+        submissionRecords: action.payload.submissionRecords,
       };
     case LOAD_PROBLEM_DETAILS_ERROR:
       return {

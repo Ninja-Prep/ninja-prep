@@ -6,6 +6,7 @@ import RouteWrapper from './RouteWrapper';
 
 type Props = {
   component: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
+  transitionOff?: boolean;
 } & RouteProps;
 
 class DefaultRoute extends React.Component<Props> {
