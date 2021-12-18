@@ -22,16 +22,6 @@ export const DropdownIcon = styled.div`
   text-decoration: none;
 `;
 
-export const A = styled.a`
-  text-decoration: none !important;
-  color: transparent;
-  :hover {
-    text-decoration: none;
-    cursor: pointer;
-    color: transparent;
-  }
-`;
-
 export const PremiumLockIcon = styled(LockIcon)`
   color: #ee953d;
 `;

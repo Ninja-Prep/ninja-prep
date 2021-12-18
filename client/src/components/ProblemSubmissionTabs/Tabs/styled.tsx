@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import TabList from '@mui/lab/TabList';
 import Tab from '@mui/material/Tab';
 
 import * as CoreUI from 'uiLibrary/CoreUI';

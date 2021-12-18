@@ -9,33 +9,14 @@ import {User} from 'utils/types/user';
 import DropdownItem from './DropdownItem';
 import {GET_PREMIUM_NAVIGATION, SETTINGS, REPORT_A_BUG, SIGN_OUT_NAVIGATION, SIGN_IN_NAVIGATION} from 'utils/stringIds.json';
 import NavLink from '../NavigationBarLinks/styled';
-import {A, ImageWrapper, PremiumLockIcon, PremiumTextColor} from './styled';
+import {ImageWrapper, PremiumLockIcon, PremiumTextColor} from './styled';
 import {IconButton, Menu, MenuItem} from '@mui/material';
-
-type ToggleDropdownProps = {
-  children?: React.ReactNode;
-  onClick: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => Record<string, never>;
-};
 
 interface ProfileProps {
   readonly authUser: User;
   readonly toggleLoginModal: () => void;
   readonly isPremium?: boolean;
 }
-
-const ToggleDropdown = React.forwardRef(({children, onClick}: ToggleDropdownProps, ref: React.Ref<HTMLAnchorElement>) => (
-  // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  <A
-    href="#"
-    ref={ref}
-    onClick={(e) => {
-      e.preventDefault();
-      onClick(e);
-    }}
-  >
-    {children}
-  </A>
-));
 
 const NavigationBarDropdownMenu = (props: ProfileProps): JSX.Element => {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -87,7 +68,7 @@ const NavigationBarDropdownMenu = (props: ProfileProps): JSX.Element => {
             </DropdownItem>
           </MenuItem>
           <MenuItem key="2" onClick={handleCloseUserMenu}>
-            <DropdownItem to="#/action-3" component={Link} DropdownIcon={BugReportIcon}>
+            <DropdownItem href="mailto:ninjaprep@ninjaprep.io?subject=Issue: [Insert Issue]" DropdownIcon={BugReportIcon}>
               {REPORT_A_BUG}
             </DropdownItem>
           </MenuItem>

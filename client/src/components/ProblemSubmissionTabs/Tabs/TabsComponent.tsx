@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Tab from '@mui/material/Tab';
 import DescriptionIcon from '@mui/icons-material/Description';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
@@ -23,23 +22,6 @@ interface Props {
 }
 
 const TabsComponent = (props: Props): JSX.Element => {
-  // <div className="content-tabs-link">
-  //   <Tabs defaultActiveKey="problem">
-  //     <Tab eventKey="problem" title="Problem">
-  //       <ProblemDescription problemDetails={props.problemDetails} />
-  //     </Tab>
-  //     <Tab eventKey="videoSolution" title="Video Solution">
-  //       <VideoSolution />
-  //     </Tab>
-  //     <Tab eventKey="solutions" title="Solutions">
-  //       <SolutionsListContainer />
-  //     </Tab>
-  //     <Tab eventKey="submissions" title="Submissions">
-  //       <SubmissionsContainer />
-  //     </Tab>
-  //   </Tabs>
-  // </div>
-
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
