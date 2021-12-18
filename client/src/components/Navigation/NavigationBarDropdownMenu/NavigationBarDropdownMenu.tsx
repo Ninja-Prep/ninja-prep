@@ -62,11 +62,13 @@ const NavigationBarDropdownMenu = (props: ProfileProps): JSX.Element => {
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
         >
-          <MenuItem key="1" onClick={handleCloseUserMenu}>
-            <DropdownItem to="/premium" component={Link} DropdownIcon={PremiumLockIcon}>
-              <PremiumTextColor>{GET_PREMIUM_NAVIGATION}</PremiumTextColor>
-            </DropdownItem>
-          </MenuItem>
+          {!props.isPremium && (
+            <MenuItem key="1" onClick={handleCloseUserMenu}>
+              <DropdownItem to="/premium" component={Link} DropdownIcon={PremiumLockIcon}>
+                <PremiumTextColor>{GET_PREMIUM_NAVIGATION}</PremiumTextColor>
+              </DropdownItem>
+            </MenuItem>
+          )}
           <MenuItem key="2" onClick={handleCloseUserMenu}>
             <DropdownItem href="mailto:ninjaprep@ninjaprep.io?subject=Issue: [Insert Issue]" DropdownIcon={BugReportIcon}>
               {REPORT_A_BUG}

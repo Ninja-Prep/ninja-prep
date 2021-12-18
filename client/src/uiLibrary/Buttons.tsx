@@ -4,16 +4,21 @@ import {Link} from 'react-router-dom';
 import * as CoreUI from 'uiLibrary/CoreUI';
 import LockIcon from '@mui/icons-material/Lock';
 
-export const STANDARD_BUTTON = css`
+export const LARGE_BUTTON = css`
   border-radius: 24px;
   padding: 12px 24px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 16%);
   transition-duration: 0.4s;
 `;
 
-const GetFullAccess = styled(Link)`
-  ${STANDARD_BUTTON}
-  ${CoreUI.OPEN_SANS_MEDIUM}
+export const MEDIUM_BUTTON = css`
+  border-radius: 24px;
+  padding: 6px 12px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 16%);
+  transition-duration: 0.4s;
+`;
+
+export const GET_FULL_ACCESS_CSS = css`
   display: flex;
   align-items: center;
   background-color: ${CoreUI.PREMIUM_COLOR};
@@ -27,13 +32,24 @@ const GetFullAccess = styled(Link)`
   }
 `;
 
+const GetFullAccessLarge = styled(Link)`
+  ${LARGE_BUTTON}
+  ${CoreUI.OPEN_SANS_MEDIUM}
+  ${GET_FULL_ACCESS_CSS}
+`;
+const GetFullAccessMedium = styled(Link)`
+  ${MEDIUM_BUTTON}
+  ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
+  ${GET_FULL_ACCESS_CSS}
+`;
+
 export const PremiumLockIcon = styled(LockIcon)`
   margin-right: 5px;
 `;
 
 export const LightBlueButtonCSS = css`
   ${CoreUI.OPEN_SANS_MEDIUM}
-  ${STANDARD_BUTTON}
+  ${LARGE_BUTTON}
   background-color: ${CoreUI.LIGHT_BLUE};
   border-style: none;
   color: #ffffff;
@@ -72,11 +88,24 @@ export const SOCIAL_MEDIA_BUTTON = css`
   }
 `;
 
-export function GetFullAccessButton(): JSX.Element {
-  return (
-    <GetFullAccess to="/premium">
-      <PremiumLockIcon />
-      <div>Get Full Access</div>
-    </GetFullAccess>
-  );
+interface FullAccessButtonProps {
+  sizing?: 'medium' | 'large';
+}
+
+export function GetFullAccessButton(props: FullAccessButtonProps): JSX.Element {
+  if (props?.sizing === 'medium') {
+    return (
+      <GetFullAccessMedium to="/premium">
+        <PremiumLockIcon />
+        <div>Get Full Access</div>
+      </GetFullAccessMedium>
+    );
+  } else {
+    return (
+      <GetFullAccessLarge to="/premium">
+        <PremiumLockIcon />
+        <div>Get Full Access</div>
+      </GetFullAccessLarge>
+    );
+  }
 }

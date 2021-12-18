@@ -7,3 +7,4 @@ export const BORDER_COLOR = '#E4E3E4';
 export const DEFAULT_BLACK_TEXT_COLOR = '#0F1111';
 export const BACKGROUND_GREY = '#F5F7FA;';
 export const MAIN_BACKGROUND_WHITE = '#F9FBFD';
+export const BABY_BLUE_BACKGROUND = '#F8FCFF';

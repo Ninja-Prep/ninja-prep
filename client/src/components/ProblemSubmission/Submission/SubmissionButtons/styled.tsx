@@ -1,4 +1,4 @@
-import {Button} from 'react-bootstrap';
+import Button from '@mui/material/Button';
 import styled from 'styled-components';
 
 export const SubmitCodeButtonColor = styled(Button)`

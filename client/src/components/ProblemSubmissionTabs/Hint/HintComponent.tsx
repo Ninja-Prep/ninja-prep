@@ -34,7 +34,7 @@ const HintComponent = (props: Props): JSX.Element => {
     <div>
       <Styled.HintTitle>Hints</Styled.HintTitle>
       {props.hints?.map((hint, index) => {
-        return <HintCard index={index + 1} hint={hint} />;
+        return <HintCard key={index} index={index + 1} hint={hint} />;
       })}
     </div>
   );

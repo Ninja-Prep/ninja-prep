@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MaterialTable from 'material-table';
+import MaterialTable from '@material-table/core';
 
 import * as Styled from './styled';
 import SubmissionsCodeEditor from '../SubmissionsCodeEditor/SubmissionsCodeEditor';
@@ -42,8 +42,8 @@ function Submissions(props: Props) {
           {title: 'Date', field: 'date'},
         ]}
         data={props.submissionRecords}
-        detailPanel={(rowData) => {
-          return <SubmissionsCodeEditor textValue={rowData.codeSnippet} mode={languageToCodeMirrorMode[rowData.language]} />;
+        detailPanel={(row) => {
+          return <SubmissionsCodeEditor textValue={row.rowData.codeSnippet} mode={languageToCodeMirrorMode[row.rowData.language]} />;
         }}
       />
     </Styled.SubmissionsContainer>

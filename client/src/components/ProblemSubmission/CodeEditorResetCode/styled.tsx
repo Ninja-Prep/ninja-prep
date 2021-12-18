@@ -1,4 +1,4 @@
-import {Button} from 'react-bootstrap';
+import Button from '@mui/material/Button';
 import styled from 'styled-components';
 import {LIGHT_BLUE} from 'uiLibrary/CoreUI';
 
@@ -7,6 +7,8 @@ export const ResetCode = styled(Button)`
   background-color: ${LIGHT_BLUE};
   border-style: none;
   color: #ffffff;
+  align-self: center;
+
   :focus {
     outline: none;
     background-color: ${LIGHT_BLUE};

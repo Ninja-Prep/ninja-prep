@@ -10,6 +10,9 @@ export const Container = styled.div`
 `;
 
 export const TabButton = styled(Tab)`
+  &.MuiTab-root {
+    background-color: ${CoreUI.BABY_BLUE_BACKGROUND};
+  }
   &.MuiTab-root.Mui-selected {
     color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
   }

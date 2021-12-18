@@ -1,6 +1,6 @@
 import {Modal} from 'react-bootstrap';
 import styled from 'styled-components';
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const CenterContent = styled(Box)`

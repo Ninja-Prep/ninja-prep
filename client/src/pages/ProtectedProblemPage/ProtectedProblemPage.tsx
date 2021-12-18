@@ -1,12 +1,13 @@
 import React from 'react';
 
-import CodeEditorNavbar from 'components/ProblemSubmission/CodeEditorNavbar/CodeEditorNavbar';
+import ProblemSubmissionNavBar from 'components/ProblemSubmission/ProblemSubmissionNavBar/ProblemSubmissionNavBar';
 import {ReflexContainer, ReflexSplitter, ReflexElement} from 'react-reflex';
 
 import {CodeEditorReflex, SubmissionContentReflex, SubmissionWrapper} from './styled';
 
 import 'react-reflex/styles.css';
 import LockedPremiumProblemSubmission from 'components/ProblemSubmission/LockedPremiumProblemSubmission/LockedPremiumProblemSubmission';
+import ProblemSubmissionNavBarContainer from 'components/ProblemSubmission/containers/ProblemSubmissionNavBar/ProblemSubmissionNavBarContainer';
 
 interface Props {
   title: string;
@@ -15,7 +16,7 @@ interface Props {
 function ProtectedProblemSubmissionPage(props: Props) {
   return (
     <SubmissionWrapper>
-      <CodeEditorNavbar title={props.title} />
+      <ProblemSubmissionNavBarContainer />
       <ReflexContainer orientation="horizontal">
         <ReflexElement>
           <ReflexContainer orientation="vertical">

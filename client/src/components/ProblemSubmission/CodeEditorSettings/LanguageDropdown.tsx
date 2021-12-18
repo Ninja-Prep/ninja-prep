@@ -1,21 +1,34 @@
 import React from 'react';
 
-import {DropdownButton, Dropdown} from 'react-bootstrap';
+import MenuItem from '@mui/material/MenuItem';
 import {LabelValuePair} from 'utils/types/userSettings';
+import {FormControl, Select, SelectChangeEvent} from '@mui/material';
+import * as Styled from './styled';
 
 interface Props {
-  onSelect: (event: string | null) => void;
+  onSelect: (event: SelectChangeEvent) => void;
   language: string;
   modeOptions: LabelValuePair[];
 }
 
 function LanguageDropdown(props: Props): JSX.Element {
   return (
-    <DropdownButton variant="outline-dark" title={props.language} onSelect={props.onSelect}>
-      {props.modeOptions.map((option) => (
-        <Dropdown.Item eventKey={option.value}> {option.label} </Dropdown.Item>
-      ))}
-    </DropdownButton>
+    <Styled.LanguageDropdownContainer>
+      <FormControl variant="standard" sx={{m: 1, minWidth: 120}}>
+        <Select
+          displayEmpty
+          onChange={props.onSelect}
+          value={props.language}
+          renderValue={(language) => {
+            return language;
+          }}
+        >
+          {props.modeOptions.map((option) => {
+            return <MenuItem value={option.value}>{option.label}</MenuItem>;
+          })}
+        </Select>
+      </FormControl>
+    </Styled.LanguageDropdownContainer>
   );
 }
 

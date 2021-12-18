@@ -8,7 +8,7 @@ interface Props {
 
 const CodeEditorResetCode = (props: Props): JSX.Element => {
   return (
-    <Styled.ResetCode onClick={props.onClick}>
+    <Styled.ResetCode variant="contained" onClick={props.onClick}>
       <Styled.ResetCodeContent>
         <ReplayIcon />
         <Styled.Bold>Reset Code</Styled.Bold>

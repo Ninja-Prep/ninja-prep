@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MaterialTable from 'material-table';
+import MaterialTable from '@material-table/core';
 
 import SubmissionsCodeEditor from '../SubmissionsCodeEditor/SubmissionsCodeEditor';
 import {SolutionDetails} from 'utils/types/challenges';
@@ -32,8 +32,8 @@ function SolutionsList(props: Props): JSX.Element {
             },
           ]}
           data={props.solutionsList}
-          detailPanel={(rowData) => {
-            return <SubmissionsCodeEditor textValue={rowData.solutionSnippet} mode={languageToCodeMirrorMode[rowData.language]} />;
+          detailPanel={(row) => {
+            return <SubmissionsCodeEditor textValue={row.rowData.solutionSnippet} mode={languageToCodeMirrorMode[row.rowData.language]} />;
           }}
         />
       </Box>

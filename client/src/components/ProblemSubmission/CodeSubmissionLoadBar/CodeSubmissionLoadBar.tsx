@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LinearProgress from '@material-ui/core/LinearProgress';
+import LinearProgress from '@mui/material/LinearProgress';
 import {PROCESSING_TEXT} from 'utils/stringIds.json';
 
 import {BlinkContainer, BlinkText} from './styled';

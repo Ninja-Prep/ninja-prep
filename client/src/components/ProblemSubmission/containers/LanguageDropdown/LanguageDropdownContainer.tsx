@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import {SelectChangeEvent} from '@mui/material';
 import LanguageDropdown from 'components/ProblemSubmission/CodeEditorSettings/LanguageDropdown';
 import {connect, ConnectedProps} from 'react-redux';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
@@ -40,7 +41,7 @@ class LanguageDropdownContainer extends Component<Props> {
   }
 
   render(): JSX.Element {
-    return <LanguageDropdown language={this.props.language} modeOptions={codeMirrorModeOptions} onSelect={(event: string | null) => this.handleDropdownSelect(event)} />;
+    return <LanguageDropdown language={this.props.language} modeOptions={codeMirrorModeOptions} onSelect={(event: SelectChangeEvent) => this.handleDropdownSelect(event.target.value as string)} />;
   }
 }
 
