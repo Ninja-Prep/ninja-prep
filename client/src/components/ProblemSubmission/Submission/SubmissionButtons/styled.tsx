@@ -2,13 +2,18 @@ import Button from '@mui/material/Button';
 import styled from 'styled-components';
 
 export const SubmitCodeButtonColor = styled(Button)`
-  color: white;
-  background-color: #28a745;
-  border-color: #28a745;
-
-  &:hover {
+  &.MuiButton-root {
     color: white;
     background-color: green;
-    border-color: #28a745;
+    border-style: none;
+    color: #ffffff;
+    align-self: center;
+  }
+  &.MuiButton-root:hover {
+    color: white;
+    background-color: green;
+    border-style: none;
+    color: #ffffff;
+    align-self: center;
   }
 `;

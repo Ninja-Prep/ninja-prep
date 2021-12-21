@@ -28,9 +28,10 @@ export async function getSubmissionRecords(problemId: string): Promise<Submissio
     return responseData;
   }
   const submissionRecords = responseData.map((record: SubmissionRecord) => {
+    const date = new Date(record.date);
     return {
       ...record,
-      date: new Date(record.date).toLocaleDateString(),
+      date: date.toLocaleDateString() + ' ' + date.toLocaleTimeString(),
     };
   });
   return submissionRecords;

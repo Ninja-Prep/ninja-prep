@@ -4,14 +4,7 @@ import NavigationLinks from '../containers/NavigationLinks/NavigationLinksContai
 import NavigationBarDropdownMenu from '../containers/NavigationBarDropdownMenu/NavigationBarDropdownMenuContainer';
 import {LoginModalContainer} from 'components/Login';
 
-interface Props {
-  isLoadingUser: boolean;
-}
-
-function NavigationBarContent(props: Props) {
-  if (props.isLoadingUser) {
-    return <Fragment />;
-  }
+function NavigationBarContent() {
   return (
     <Fragment>
       <NavigationLinks />

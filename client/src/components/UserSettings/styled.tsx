@@ -1,67 +1,42 @@
+import {Box} from '@mui/material';
+import {grey} from '@mui/material/colors';
 import styled from 'styled-components';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
-export const SettingsContainer = styled.div`
-  padding: 50px;
-  width: 60%;
-  margin: 60px auto 120px auto;
+export const PageContainer = styled.div`
+  margin-top: ${CoreUI.EXTRA_LARGE_SPACING};
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 5px;
+  justify-content: stretch;
 `;
 
-export const SettingsHeader = styled.b`
-  font-size: 32px;
+export const ContentBox = styled(Box)`
+  flex-grow: 1;
+  ${CoreUI.SIMPLE_BORDER};
 `;
 
-export const TextSizing = styled.span`
-  font-size: 1.2rem;
-  display: block;
-  margin-bottom: 10px;
+export const SettingsHeader = styled.div`
+  display: flex;
+  align-items: center;
+  ${CoreUI.ROBOTO_BOLD_FONT_LARGE}
+  flex-grow:1;
 `;
 
-export const OauthProviderSizing = styled.span`
-  text-transform: capitalize;
-  font-size: 1.2rem;
-  display: block;
-  margin-bottom: 10px;
+export const Subtitle = styled.div`
+  ${CoreUI.ROBOTO_BOLD_FONT}
 `;
 
-export const BoldSubheading = styled.div`
-  margin: 50px 0px 20px 0px;
-  font-size: 18px;
-  font-weight: bold;
+export const Content = styled.div`
+  ${CoreUI.OPEN_SANS_REGULAR}
 `;
 
-export const SubcontentPadding = styled.div`
-  padding: 10px 15px;
-`;
-
-export const ButtonContainer = styled.div`
-  margin: auto;
-  color: #ee953d;
-`;
-
-export const UserSettingsIcon = styled(SettingsIcon)`
-  color: #2a2a3a !important;
-  width: 120 !important;
-  height: 120 !important;
-  padding: 10px;
-`;
-
-export const GetPremiumIcon = styled(ChevronRightIcon)`
-  margin-left: 5px !important;
-  margin-top: 3px !important;
-  margin: auto;
-  float: right;
-  color: #ee953d;
-`;
-
-export const ContactFooter = styled.div`
-  margin-top: 15px;
+export const Footer = styled.span`
   color: grey;
 `;
 
-export const ContactEmailColor = styled.span`
+export const Email = styled.a`
   color: #0c6991;
 `;

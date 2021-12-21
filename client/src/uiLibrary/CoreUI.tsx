@@ -4,6 +4,7 @@ export * from './Spacing';
 export * from './Colors';
 export * from './Fonts';
 export * from './Buttons';
+export * from './Borders';
 
 export const TRIMMED_ELLIPSES = css`
   overflow: hidden;

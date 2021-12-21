@@ -7,15 +7,17 @@ import {getLanguage} from 'reducers/editorSettings/reducer';
 import {RootState} from 'reducers/rootReducer';
 import {submitProblem} from 'reducers/userSubmission/action';
 import {MatchProps} from 'utils/types/routing';
+import {toggleLoginModal} from 'reducers/loginModal/actions';
 
 const mapStateToProps = (state: RootState) => {
   return {
     textValue: state.textEditor.value,
     language: getLanguage(state),
+    authUser: state.authReducer.authUser,
   };
 };
 
-const connector = connect(mapStateToProps, {submitProblem});
+const connector = connect(mapStateToProps, {submitProblem, toggleLoginModal});
 
 type Props = ConnectedProps<typeof connector> & MatchProps;
 
@@ -27,7 +29,11 @@ class SubmissionButtonsContainer extends Component<Props> {
 
   async handleSubmit(event: {preventDefault: () => void}): Promise<void> {
     event.preventDefault();
-    this.props.submitProblem(this.props.match.params.id);
+    if (!this.props.authUser) {
+      this.props.toggleLoginModal();
+    } else {
+      this.props.submitProblem(this.props.match.params.id);
+    }
   }
 
   render(): JSX.Element {

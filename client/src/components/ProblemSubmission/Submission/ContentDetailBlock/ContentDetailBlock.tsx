@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {HeaderText, ContentDetail} from './styled';
+import * as Styled from './styled';
 
 interface BlockProps {
   blockHeader: string;
@@ -9,10 +9,10 @@ interface BlockProps {
 
 function ContentDetailBlock({blockHeader, blockContent}: BlockProps): JSX.Element {
   return (
-    <div>
-      <HeaderText>{blockHeader}</HeaderText>
-      <ContentDetail>{blockContent}</ContentDetail>
-    </div>
+    <Styled.Container>
+      <Styled.HeaderText>{blockHeader}</Styled.HeaderText>
+      <Styled.ContentDetail>{blockContent}</Styled.ContentDetail>
+    </Styled.Container>
   );
 }
 

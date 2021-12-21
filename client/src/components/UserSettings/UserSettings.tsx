@@ -1,64 +1,52 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
-import {
-  GetPremiumIcon,
-  ContactFooter,
-  UserSettingsIcon,
-  SettingsHeader,
-  SettingsContainer,
-  TextSizing,
-  BoldSubheading,
-  SubcontentPadding,
-  OauthProviderSizing,
-  ButtonContainer,
-  ContactEmailColor,
-} from './styled';
+import * as Styled from './styled';
 import {Link} from 'react-router-dom';
 import {EXPLORE_PROBLEMS, SETTINGS, ACCOUNT_LOGIN, PREMIUM_STATUS, CONTACT_FOOTER, NINJAPREP_EMAIL, PREMIUM_EXPIRATION_DATE} from 'utils/stringIds.json';
+import {Box, Button} from '@mui/material';
+import SettingsIcon from '@mui/icons-material/Settings';
+
+import {GetFullAccessButton} from 'uiLibrary/CoreUI';
 
 interface Props {
   premiumExpirationDate?: string;
   email: string;
   oauthProvider: string;
+  isPremium: boolean;
 }
 
 function UserSettings(props: Props): JSX.Element {
-  const displayPremiumExpiration = (
-    <>
-      <BoldSubheading>{PREMIUM_EXPIRATION_DATE}</BoldSubheading>
-      <TextSizing>{props.premiumExpirationDate}</TextSizing>
-    </>
-  );
-
-  const displayGetPremium = (
-    <>
-      <BoldSubheading>{PREMIUM_STATUS}</BoldSubheading>
-      <ButtonContainer>
-        <Link to="/premium">
-          <Button variant="outline-warning" size="lg">
-            {EXPLORE_PROBLEMS}
-            <GetPremiumIcon />
-          </Button>
-        </Link>
-      </ButtonContainer>
-    </>
-  );
-
   return (
-    <SettingsContainer>
-      <UserSettingsIcon />
-      <SettingsHeader>{SETTINGS}</SettingsHeader>
-      <SubcontentPadding>
-        {props.premiumExpirationDate ? displayPremiumExpiration : displayGetPremium}
-        <BoldSubheading>{ACCOUNT_LOGIN}</BoldSubheading>
-        <OauthProviderSizing>{props.oauthProvider}</OauthProviderSizing>
-        <TextSizing>{props.email}</TextSizing>
-      </SubcontentPadding>
-      <ContactFooter>
-        {CONTACT_FOOTER}
-        <ContactEmailColor> {NINJAPREP_EMAIL}</ContactEmailColor>
-      </ContactFooter>
-    </SettingsContainer>
+    <Styled.PageContainer>
+      <Styled.ContentBox p={3}>
+        <Box p={3}>
+          <Styled.SettingsHeader>
+            <SettingsIcon fontSize="inherit" />
+            {SETTINGS}
+          </Styled.SettingsHeader>
+        </Box>
+        <Box p={3}>
+          <Styled.Subtitle>{ACCOUNT_LOGIN}</Styled.Subtitle>
+          <Styled.Content>{props.oauthProvider}</Styled.Content>
+          <Styled.Content>{props.email}</Styled.Content>
+        </Box>
+        {props.isPremium ? (
+          <Box p={3}>
+            <Styled.Subtitle> {PREMIUM_EXPIRATION_DATE}</Styled.Subtitle>
+            <Styled.Content> {props.premiumExpirationDate}</Styled.Content>
+          </Box>
+        ) : (
+          <Box p={1}>
+            <GetFullAccessButton sizing="medium" />
+          </Box>
+        )}
+
+        <Box p={3}>
+          <Styled.Footer>
+            {CONTACT_FOOTER} <Styled.Email href="mailto:ninjaprep@ninjaprep.io">{NINJAPREP_EMAIL}</Styled.Email>
+          </Styled.Footer>
+        </Box>
+      </Styled.ContentBox>
+    </Styled.PageContainer>
   );
 }
 

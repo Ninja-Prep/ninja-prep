@@ -24,7 +24,11 @@ function LanguageDropdown(props: Props): JSX.Element {
           }}
         >
           {props.modeOptions.map((option) => {
-            return <MenuItem value={option.value}>{option.label}</MenuItem>;
+            return (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            );
           })}
         </Select>
       </FormControl>

@@ -5,17 +5,16 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import SaveIcon from '@mui/icons-material/Save';
 import Box from '@mui/material/Box';
-import {ProblemDetails} from 'utils/types/challenges';
-
-import ProblemDescription from '../ProblemDescription/ProblemDescription';
-import VideoSolution from './VideoSolution';
-import * as Styled from './styled';
-
-import SubmissionsContainer from '../containers/SubmissionsContainer';
 import TabContext from '@mui/lab/TabContext';
-import SolutionsListContainer from '../containers/SolutionsListContainer';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+
+import {ProblemDetails} from 'utils/types/challenges';
+import ProblemDescription from '../ProblemDescription/ProblemDescription';
+import VideoSolution from '../VideoSolution/VideoSolution';
+import * as Styled from './styled';
+import SubmissionsContainer from '../containers/SubmissionsContainer';
+import SolutionsListContainer from '../containers/SolutionsListContainer';
 
 interface Props {
   problemDetails: ProblemDetails;

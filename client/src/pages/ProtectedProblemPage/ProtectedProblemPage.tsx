@@ -1,6 +1,5 @@
 import React from 'react';
 
-import ProblemSubmissionNavBar from 'components/ProblemSubmission/ProblemSubmissionNavBar/ProblemSubmissionNavBar';
 import {ReflexContainer, ReflexSplitter, ReflexElement} from 'react-reflex';
 
 import {CodeEditorReflex, SubmissionContentReflex, SubmissionWrapper} from './styled';

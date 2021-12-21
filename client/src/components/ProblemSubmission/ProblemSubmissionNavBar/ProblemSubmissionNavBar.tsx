@@ -15,9 +15,14 @@ interface Props {
 function ProblemSubmissionNavBar(props: Props) {
   return (
     <Styled.Container>
-      <Link to="/">
-        <DarkNinjaPrepLogo height={35} width={150} />
-      </Link>
+      <Styled.LogoLink>
+        <Link to="/">
+          <DarkNinjaPrepLogo height={35} width={150} />
+        </Link>
+      </Styled.LogoLink>
+      <Styled.Title>
+        <span>{props.title}</span>
+      </Styled.Title>
       <Styled.NavLinks>
         <NavigationBarContentContainer />
       </Styled.NavLinks>

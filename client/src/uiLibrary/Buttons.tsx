@@ -19,7 +19,12 @@ export const MEDIUM_BUTTON = css`
 `;
 
 export const GET_FULL_ACCESS_CSS = css`
-  display: flex;
+  margin: auto 48px auto 0px;
+  letter-spacing: 0.15;
+  line-spacing: 23;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  display: inline-flex;
   align-items: center;
   background-color: ${CoreUI.PREMIUM_COLOR};
   color: white;

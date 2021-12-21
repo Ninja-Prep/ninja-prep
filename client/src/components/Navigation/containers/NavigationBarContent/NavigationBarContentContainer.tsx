@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 import {connect, ConnectedProps} from 'react-redux';
 
@@ -18,7 +18,10 @@ type Props = ConnectedProps<typeof connector>;
 
 class NavigationBarContentContainer extends Component<Props> {
   render(): JSX.Element {
-    return <NavigationBarContent isLoadingUser={this.props.isLoadingUser} />;
+    if (this.props.isLoadingUser) {
+      return <Fragment />;
+    }
+    return <NavigationBarContent />;
   }
 }
 

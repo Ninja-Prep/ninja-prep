@@ -61,7 +61,6 @@ export const SubmissionWrapper = styled.div`
 `;
 
 export const VerticalSplitter = styled(ReflexSplitter)`
-  background-color: #f3f7f8 !important;
   width: 10px;
 `;
 
@@ -71,8 +70,6 @@ export const CodeEditorReflex = styled(ReflexElement)`
 
 export const SubmissionContentReflex = styled(ReflexElement)`
   overflow-x: hidden !important;
-  color: white;
-  background-color: #f3f7f8 !important;
 `;
 
 export const OuterEditorWrapper = styled.div`

@@ -1,25 +1,21 @@
 import Button from '@mui/material/Button';
 import styled from 'styled-components';
-import {LIGHT_BLUE} from 'uiLibrary/CoreUI';
+import {LIGHT_BLUE, MEDIUM_BLUE} from 'uiLibrary/CoreUI';
 
 export const ResetCode = styled(Button)`
-  color: white;
-  background-color: ${LIGHT_BLUE};
-  border-style: none;
-  color: #ffffff;
-  align-self: center;
-
-  :focus {
-    outline: none;
+  &.MuiButton-root {
+    color: white;
     background-color: ${LIGHT_BLUE};
+    border-style: none;
+    color: #ffffff;
+    align-self: center;
   }
-  :active {
-    outline: none;
-    background-color: ${LIGHT_BLUE};
-    border-color: transparent;
-  }
-  :hover {
-    background-color: #1da4bf;
+  &.muibutton-root: hover {
+    color: white;
+    background-color: ${MEDIUM_BLUE};
+    border-style: none;
+    color: #ffffff;
+    align-self: center;
   }
 `;
 

@@ -1,10 +1,10 @@
-import CodeSubmissionLoadBar from 'components/ProblemSubmission/CodeSubmissionLoadBar/CodeSubmissionLoadBar';
 import * as React from 'react';
+import CodeSubmissionLoadBar from 'components/ProblemSubmission/CodeSubmissionLoadBar/CodeSubmissionLoadBar';
+import TestCaseTabsContainer from 'components/ProblemSubmission/containers/TestCaseTabs/TestCaseTabsContainer';
 
 import {SubmissionStatus, VerdictStatus} from 'utils/enums/userSubmission';
 import SubmissionHeader from '../SubmissionHeader/SubmissionHeader';
 import SubmissionTestCaseErrorOutput from '../SubmissionTestCaseErrorOutput/SubmissionTestCaseErrorOutput';
-import SubmissionTestCases from '../SubmissionTestCases/SubmissionTestCases';
 
 interface Props {
   status: SubmissionStatus;
@@ -28,7 +28,7 @@ function SubmissionContent(props: Props): JSX.Element {
   return (
     <div>
       <SubmissionHeader />
-      <SubmissionTestCases />
+      <TestCaseTabsContainer />
     </div>
   );
 }

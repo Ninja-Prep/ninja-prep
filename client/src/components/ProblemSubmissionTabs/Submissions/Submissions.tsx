@@ -20,6 +20,7 @@ function Submissions(props: Props) {
           search: false,
           overflowY: 'hidden',
         }}
+        localization={{body: {emptyDataSourceMessage: <span>Please sign in to view your submissions</span>}}}
         title="Submissions"
         columns={[
           {
@@ -31,12 +32,18 @@ function Submissions(props: Props) {
               }
               return <Styled.WrongAnswer>{rowData.status}</Styled.WrongAnswer>;
             },
+            customSort: (data1, data2) => {
+              return data1.status.localeCompare(data2.status);
+            },
           },
           {
             title: 'Language',
             field: 'language',
             render: (rowData) => {
               return <Styled.Capitalize>{rowData.language}</Styled.Capitalize>;
+            },
+            customSort: (data1, data2) => {
+              return data1.language.localeCompare(data2.language);
             },
           },
           {title: 'Date', field: 'date'},
