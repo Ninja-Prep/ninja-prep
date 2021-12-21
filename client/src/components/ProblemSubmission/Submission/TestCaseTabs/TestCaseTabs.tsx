@@ -50,21 +50,21 @@ function TestCaseTabs(props: Props): JSX.Element {
         {props.status === SubmissionStatus.SUBMITTED
           ? props.judgedTestCases.map((testCase, index) => {
               const labelString = `Testcase ${index + 1}`;
-              if (testCase.status === VerdictStatus.ACCEPTED) return <Styled.TabLabel icon={<Styled.AcceptedIcon />} label={labelString} />;
+              if (testCase.status === VerdictStatus.ACCEPTED) return <Styled.TabLabel key={index} icon={<Styled.AcceptedIcon />} label={labelString} />;
               else {
-                return <Styled.TabLabel icon={<Styled.WrongAnswerIcon />} label={labelString} />;
+                return <Styled.TabLabel key={index} icon={<Styled.WrongAnswerIcon />} label={labelString} />;
               }
             })
           : props.testCases.map((testCase, index) => {
               const labelString = `Testcase ${index + 1}`;
-              return <Styled.TabLabel label={labelString} />;
+              return <Styled.TabLabel key={index} label={labelString} />;
             })}
       </Tabs>
       {props.status === SubmissionStatus.SUBMITTED
         ? props.testCases.map((testCase, index) => {
             const judgedTestCase = props.judgedTestCases[index];
             return (
-              <TabPanel value={value} index={index} key={testCase}>
+              <TabPanel value={value} index={index} key={index}>
                 <FormatHeader verdictStatus={judgedTestCase.status} />
                 <ContentDetailBlock blockHeader={INPUT_TEXT} blockContent={testCase} />
                 {judgedTestCase.userStdout && <ContentDetailBlock blockHeader="Your Output" blockContent={judgedTestCase.userStdout} />}

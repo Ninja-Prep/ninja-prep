@@ -1,6 +1,3 @@
-/*
-404 Not Found pages when user goes to route that does not exist
-*/
 import React from 'react';
 
 import {
@@ -14,14 +11,11 @@ import {
   BoldSubheading,
   TextSizing,
   SubcontentPadding,
-  ExploreProblemsIcon,
   ButtonContainer,
   Container,
   ThankYouHeader,
 } from './styled';
-import {Link} from 'react-router-dom';
-import {YOU_NOW_HAVE, PREMIUM, CONFIRMATION_RECEIPT_WILL_BE_SENT, PREMIUM_EXPIRATION_DATE, PREMIUM_ACCOUNT_LOGIN, EXPLORE_PROBLEMS, THANK_YOU_FOR_CHOOSING_NINJAPREP} from 'utils/stringIds.json';
-import {Button} from '@mui/material';
+import {YOU_NOW_HAVE, PREMIUM, CONFIRMATION_RECEIPT_WILL_BE_SENT, PREMIUM_EXPIRATION_DATE, PREMIUM_ACCOUNT_LOGIN, THANK_YOU_FOR_CHOOSING_NINJAPREP} from 'utils/stringIds.json';
 import {ChallengesPageLinkButton} from 'uiLibrary/Buttons';
 
 interface Props {

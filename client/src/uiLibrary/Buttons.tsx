@@ -21,6 +21,7 @@ export const MEDIUM_BUTTON = css`
 `;
 
 export const GET_FULL_ACCESS_CSS = css`
+  box-sizing: border-box;
   margin: auto 48px auto 0px;
   letter-spacing: 0.15;
   line-spacing: 23;
@@ -119,14 +120,14 @@ export function GetFullAccessButton(props: FullAccessButtonProps): JSX.Element {
     return (
       <GetFullAccessMedium to="/premium">
         <PremiumLockIcon />
-        <div>Get Full Access</div>
+        Get Full Access
       </GetFullAccessMedium>
     );
   } else {
     return (
       <GetFullAccessLarge to="/premium">
         <PremiumLockIcon />
-        <div>Get Full Access</div>
+        Get Full Access
       </GetFullAccessLarge>
     );
   }

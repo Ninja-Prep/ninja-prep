@@ -1,5 +1,6 @@
 import {ReflexElement} from 'react-reflex';
 import styled from 'styled-components';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const SubmissionWrapper = styled.div`
   display: flex;
@@ -7,12 +8,12 @@ export const SubmissionWrapper = styled.div`
   height: 100vh;
   margin-left: calc(-50vw + 50%);
   width: 100vw;
-
   .testcaseSplitter {
     height: 13px !important;
     background-color: #d1d1d1 !important;
     border-color: #f3f7f8 !important;
   }
+  ${CoreUI.FadeInCSS};
 `;
 
 export const CodeEditorReflex = styled(ReflexElement)`

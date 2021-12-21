@@ -6,7 +6,6 @@ import {LoginHeaderBodyText, LoginHeaderContainer, LoginHeaderLargeText, StartLe
 import {LightBlueLinkButton} from 'uiLibrary/CoreUI';
 import {GoogleIcon, FacebookIcon, GitHubIcon} from 'uiLibrary/SocialMediaIcons';
 import {START_LEARNING_FOR_FREE, FREE_CODING_PROBLEM, CODING_FOUNDATION_HEADER, CODING_SUBHEADING_HEADER, GOOGLE_LOGIN, FACEBOOK_LOGIN, GITHUB_LOGIN} from 'utils/stringIds.json';
-import {WhiteLink} from 'uiLibrary/Links';
 
 function LoginHeader(): JSX.Element {
   return (

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import LockIcon from '@mui/icons-material/Lock';
 import {Box} from '@mui/material';
 
@@ -12,7 +11,7 @@ export const HeightWrapper = styled.div`
 
 export const LockedPremiumContainer = styled(Box)`
   padding: 50px;
-  // box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   width: 450px;
   border-radius: 5px;
   display: flex;
@@ -36,13 +35,6 @@ export const PremiumLockIcon = styled(LockIcon)`
   text-align: center;
 `;
 
-export const ExploreProblemsIcon = styled(ChevronRightIcon)`
-  margin-left: 5px !important;
-  margin-top: 3px !important;
-  margin: auto;
-  float: right;
-`;
-
 export const GoldPremiumHeader = styled.b`
   font-size: 1.3rem;
   color: #ee953d;
@@ -53,7 +45,7 @@ export const TextSizing = styled.p`
 `;
 
 export const ButtonContainer = styled.div`
-  margin: 50px auto;
+  margin-top: 12px;
+  padding-left: 42px;
   text-align: center;
-  font-size: 5rem;
 `;

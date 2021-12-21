@@ -20,12 +20,12 @@ export const ContentBox = styled(Box)`
 export const SettingsHeader = styled.div`
   display: flex;
   align-items: center;
-  ${CoreUI.ROBOTO_BOLD_FONT_LARGE}
+  ${CoreUI.ROBOTO_BOLD_FONT}
   flex-grow:1;
 `;
 
 export const Subtitle = styled.div`
-  ${CoreUI.ROBOTO_BOLD_FONT}
+  ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
 `;
 
 export const Content = styled.div`

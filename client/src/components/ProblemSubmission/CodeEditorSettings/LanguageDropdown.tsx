@@ -9,6 +9,7 @@ interface Props {
   onSelect: (event: SelectChangeEvent) => void;
   language: string;
   modeOptions: LabelValuePair[];
+  mode: string;
 }
 
 function LanguageDropdown(props: Props): JSX.Element {
@@ -18,9 +19,9 @@ function LanguageDropdown(props: Props): JSX.Element {
         <Select
           displayEmpty
           onChange={props.onSelect}
-          value={props.language}
+          value={props.mode}
           renderValue={(language) => {
-            return language;
+            return props.language;
           }}
         >
           {props.modeOptions.map((option) => {

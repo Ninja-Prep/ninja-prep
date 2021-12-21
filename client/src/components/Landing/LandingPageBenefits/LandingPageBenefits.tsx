@@ -90,7 +90,7 @@ function LandingPageBenefits(props: Props): JSX.Element {
         <FlexBoxContainer>
           {BenefitsList.map((benefits) => {
             return (
-              <FlexRow>
+              <FlexRow key={benefits.left.title}>
                 <FlexBenefit>
                   <BenefitHeading>
                     {benefits.left.icon}

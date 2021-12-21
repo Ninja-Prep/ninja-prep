@@ -22,7 +22,7 @@ const QuestionListSection = (props: Props): JSX.Element => {
             return challenge.questionCategory === props.categoryFilter;
           })
           .map((challenge: ChallengeLink) => {
-            return <QuestionCard challenge={challenge} isPremiumUser={props.isPremiumUser} />;
+            return <QuestionCard key={challenge.title} challenge={challenge} isPremiumUser={props.isPremiumUser} />;
           })}
       </QuestionCardContainer>
     </SectionContainer>

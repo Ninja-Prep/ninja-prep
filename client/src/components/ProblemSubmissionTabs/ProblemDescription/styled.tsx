@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const Container = styled.div`
   padding: 0px 16px;
@@ -30,7 +31,7 @@ export const Easy = styled.span`
   color: green;
 `;
 export const Medium = styled.span`
-  color: orange;
+  color: ${CoreUI.DARK_PREMIUM_COLOR};
 `;
 export const Hard = styled.span`
   color: red;

@@ -19,6 +19,7 @@ interface MatchParams {
 const mapStateToProps = (state: RootState) => ({
   cookieUserCodeKey: getCookieUserCodeKey(state),
   language: getLanguage(state),
+  mode: state.editorSettings.mode,
 });
 
 const connector = connect(mapStateToProps, {changeMode, updateEditorText});
@@ -41,7 +42,14 @@ class LanguageDropdownContainer extends Component<Props> {
   }
 
   render(): JSX.Element {
-    return <LanguageDropdown language={this.props.language} modeOptions={codeMirrorModeOptions} onSelect={(event: SelectChangeEvent) => this.handleDropdownSelect(event.target.value as string)} />;
+    return (
+      <LanguageDropdown
+        mode={this.props.mode}
+        language={this.props.language}
+        modeOptions={codeMirrorModeOptions}
+        onSelect={(event: SelectChangeEvent) => this.handleDropdownSelect(event.target.value as string)}
+      />
+    );
   }
 }
 
