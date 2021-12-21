@@ -1,6 +1,4 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
-import {Button} from '@mui/material';
 
 import {BoldThankYouHeader, OrderContainer, TextSizing, SubcontentPadding, ButtonContainer, ErrorIcon, ThankYouHeader} from './styled';
 import {ORDER_NOT_FOUND, MISSING_ORDER_TEXT} from 'utils/stringIds.json';
