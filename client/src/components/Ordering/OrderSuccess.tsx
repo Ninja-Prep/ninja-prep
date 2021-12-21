@@ -2,7 +2,7 @@
 404 Not Found pages when user goes to route that does not exist
 */
 import React from 'react';
-import {Button} from 'react-bootstrap';
+
 import {
   OauthProviderSizing,
   EmailSizing,
@@ -17,9 +17,12 @@ import {
   ExploreProblemsIcon,
   ButtonContainer,
   Container,
+  ThankYouHeader,
 } from './styled';
 import {Link} from 'react-router-dom';
 import {YOU_NOW_HAVE, PREMIUM, CONFIRMATION_RECEIPT_WILL_BE_SENT, PREMIUM_EXPIRATION_DATE, PREMIUM_ACCOUNT_LOGIN, EXPLORE_PROBLEMS, THANK_YOU_FOR_CHOOSING_NINJAPREP} from 'utils/stringIds.json';
+import {Button} from '@mui/material';
+import {ChallengesPageLinkButton} from 'uiLibrary/Buttons';
 
 interface Props {
   email: string;
@@ -31,9 +34,12 @@ function OrderSuccess(props: Props): JSX.Element {
   return (
     <Container>
       <OrderContainer>
-        <CircleCheckIcon />
-        <BoldThankYouHeader>{YOU_NOW_HAVE}</BoldThankYouHeader>
-        <GoldBoldThankYouHeader> {PREMIUM} </GoldBoldThankYouHeader> <BoldThankYouHeader>{THANK_YOU_FOR_CHOOSING_NINJAPREP}</BoldThankYouHeader>
+        <ThankYouHeader>
+          <CircleCheckIcon />
+          <BoldThankYouHeader>
+            {YOU_NOW_HAVE} <GoldBoldThankYouHeader> {PREMIUM} </GoldBoldThankYouHeader> {THANK_YOU_FOR_CHOOSING_NINJAPREP}
+          </BoldThankYouHeader>
+        </ThankYouHeader>
         <SubcontentPadding>
           <TextSizing>{CONFIRMATION_RECEIPT_WILL_BE_SENT}</TextSizing>
           <BoldSubheading>
@@ -47,12 +53,7 @@ function OrderSuccess(props: Props): JSX.Element {
           <EmailSizing>{props.email}</EmailSizing>
         </SubcontentPadding>
         <ButtonContainer>
-          <Link to="/challenges">
-            <Button variant="outline-primary" size="lg">
-              {EXPLORE_PROBLEMS}
-              <ExploreProblemsIcon />
-            </Button>
-          </Link>
+          <ChallengesPageLinkButton />
         </ButtonContainer>
       </OrderContainer>
     </Container>

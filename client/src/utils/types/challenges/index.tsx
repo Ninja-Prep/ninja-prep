@@ -1,4 +1,4 @@
-import {VerdictStatus} from 'utils/enums/userSubmission';
+import {VerdictStatus, ProblemDifficulty} from 'utils/enums/userSubmission';
 
 /* eslint-disable camelcase */
 export type JudgedTestCase = {
@@ -44,6 +44,7 @@ export type ProblemDetails = {
   readonly testCases: string[];
   readonly title: string;
   readonly isFree: boolean;
+  readonly difficulty: ProblemDifficulty;
 };
 
 export function isUserSubmissionOutput(

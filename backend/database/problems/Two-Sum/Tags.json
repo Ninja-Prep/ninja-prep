@@ -8,5 +8,6 @@
   "isFree": true,
   "category": "Arrays",
   "previewDescription": "Given an array of integers, return an array of two integers that sum up to a given target",
-  "videoSolutionLink": "https://player.vimeo.com/video/633280864?h=7e5e3f57e6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+  "videoSolutionLink": "https://player.vimeo.com/video/633280864?h=7e5e3f57e6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+  "difficulty": "Easy"
 }

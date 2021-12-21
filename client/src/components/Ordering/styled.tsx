@@ -78,3 +78,8 @@ export const ErrorIcon = styled(ErrorOutlineIcon)`
   height: 60 !important;
   padding: 10px;
 `;
+
+export const ThankYouHeader = styled.div`
+  display: flex;
+  align-items: center;
+`;

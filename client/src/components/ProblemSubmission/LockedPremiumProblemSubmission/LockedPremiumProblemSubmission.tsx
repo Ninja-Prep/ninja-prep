@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
 import {LockedPremiumContainer, BoldGetPremiumHeader, ExploreProblemsIcon, ButtonContainer, PremiumLockIcon, HeightWrapper} from './styled';
 import {GET_PREMIUM_NAVIGATION, BY_GOING_PREMIUM, UNLOCK_THIS_PROBLEM} from 'utils/stringIds.json';
+import {Button} from '@mui/material';
 
 function LockedPremiumProblemSubmission(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ function LockedPremiumProblemSubmission(): JSX.Element {
         <BoldGetPremiumHeader>{BY_GOING_PREMIUM}</BoldGetPremiumHeader>
         <ButtonContainer>
           <a href="/premium">
-            <Button variant="outline-warning" size="lg">
+            <Button>
               {GET_PREMIUM_NAVIGATION}
               <ExploreProblemsIcon />
             </Button>

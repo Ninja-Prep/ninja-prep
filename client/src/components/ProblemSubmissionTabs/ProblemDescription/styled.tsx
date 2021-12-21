@@ -26,6 +26,12 @@ export const InnerContainer = styled.div`
   flex-grow: 1;
 `;
 
-export const DifficultyColor = styled.span`
+export const Easy = styled.span`
   color: green;
+`;
+export const Medium = styled.span`
+  color: orange;
+`;
+export const Hard = styled.span`
+  color: red;
 `;

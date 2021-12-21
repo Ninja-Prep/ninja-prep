@@ -2,9 +2,10 @@ import {ProgrammingLanguages} from '../utils/enums/ProgrammingLanguages';
 import Problem from '../models/ProblemDetails';
 import ProblemLanguageTemplate from '../models/ProblemLanguageTemplate';
 
+import {ProblemDifficulty} from 'utils/enums/ProblemDifficulty';
+import {QuestionCategories} from 'utils/enums/QuestionCategories';
 import fs from 'fs';
 import path from 'path';
-import {QuestionCategories} from 'utils/enums/QuestionCategories';
 
 export interface JsonTags {
   title: string;
@@ -14,6 +15,7 @@ export interface JsonTags {
   videoSolutionLink: string;
   category: QuestionCategories;
   previewDescription: string;
+  difficulty: ProblemDifficulty;
 }
 
 export interface ProblemBO {
@@ -72,6 +74,7 @@ export async function isValidProblem(
   problem.inputTestCases = problemBO.testCases;
   problem.checkerCodeSnippet = problemBO.checkerFile;
   problem.validateTestCaseSnippet = problemBO.validateTestCaseFile;
+  problem.difficulty = problemBO.problemTagsJson.difficulty;
 
   const errors = problem.validateSync();
   if (errors) {

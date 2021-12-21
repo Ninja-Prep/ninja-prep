@@ -89,6 +89,7 @@ async function updateProblem(
     questionCategory: problemBO.problemTagsJson.category,
     videoSolutionLink: problemBO.problemTagsJson.videoSolutionLink,
     previewDescription: problemBO.problemTagsJson.previewDescription,
+    difficulty: problemBO.problemTagsJson.difficulty,
     $set: {
       [`templates.${language}`]: templateId,
     },

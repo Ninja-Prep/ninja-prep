@@ -3,6 +3,8 @@ import styled, {css} from 'styled-components';
 import {Link} from 'react-router-dom';
 import * as CoreUI from 'uiLibrary/CoreUI';
 import LockIcon from '@mui/icons-material/Lock';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import {EXPLORE_PROBLEMS} from 'utils/stringIds.json';
 
 export const LARGE_BUTTON = css`
   border-radius: 24px;
@@ -66,8 +68,23 @@ export const LightBlueButtonCSS = css`
   }
 `;
 
+export const LightBlueLinkButton = styled(Link)`
+  ${LightBlueButtonCSS}
+  text-decoration: none;
+  color: White;
+  :hover {
+    cursor: pointer;
+    color: White;
+  }
+`;
 export const LightBlueButton = styled.button`
   ${LightBlueButtonCSS}
+  text-decoration: none;
+  color: White;
+  :hover {
+    cursor: pointer;
+    color: White;
+  }
 `;
 
 export const SOCIAL_MEDIA_BUTTON = css`
@@ -113,4 +130,13 @@ export function GetFullAccessButton(props: FullAccessButtonProps): JSX.Element {
       </GetFullAccessLarge>
     );
   }
+}
+
+export function ChallengesPageLinkButton(): JSX.Element {
+  return (
+    <LightBlueLinkButton to="/challenges">
+      {EXPLORE_PROBLEMS}
+      <ChevronRightIcon />
+    </LightBlueLinkButton>
+  );
 }

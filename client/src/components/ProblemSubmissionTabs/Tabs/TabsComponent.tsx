@@ -13,7 +13,7 @@ import {ProblemDetails} from 'utils/types/challenges';
 import ProblemDescription from '../ProblemDescription/ProblemDescription';
 import VideoSolution from '../VideoSolution/VideoSolution';
 import * as Styled from './styled';
-import SubmissionsContainer from '../containers/SubmissionsContainer';
+import SubmissionsListContainer from '../containers/SubmissionsListContainer';
 import SolutionsListContainer from '../containers/SolutionsListContainer';
 
 interface Props {
@@ -55,7 +55,7 @@ const TabsComponent = (props: Props): JSX.Element => {
             <SolutionsListContainer />
           </TabPanel>
           <TabPanel value="4">
-            <SubmissionsContainer />
+            <SubmissionsListContainer />
           </TabPanel>
         </TabContext>
       </Box>

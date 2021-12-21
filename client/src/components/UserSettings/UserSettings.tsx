@@ -1,8 +1,8 @@
 import React from 'react';
 import * as Styled from './styled';
-import {Link} from 'react-router-dom';
-import {EXPLORE_PROBLEMS, SETTINGS, ACCOUNT_LOGIN, PREMIUM_STATUS, CONTACT_FOOTER, NINJAPREP_EMAIL, PREMIUM_EXPIRATION_DATE} from 'utils/stringIds.json';
-import {Box, Button} from '@mui/material';
+
+import {SETTINGS, ACCOUNT_LOGIN, CONTACT_FOOTER, NINJAPREP_EMAIL, PREMIUM_EXPIRATION_DATE} from 'utils/stringIds.json';
+import {Box} from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 import {GetFullAccessButton} from 'uiLibrary/CoreUI';

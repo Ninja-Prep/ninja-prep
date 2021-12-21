@@ -70,6 +70,7 @@ export const getProblemDetails = async (paramsId: string, programmingLanguage: s
     testCases: responseData.testCases,
     title: responseData.title,
     isFree: responseData.isFree,
+    difficulty: responseData.difficulty,
   };
   return problemDetails;
 };

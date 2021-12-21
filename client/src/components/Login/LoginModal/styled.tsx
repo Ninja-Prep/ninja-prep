@@ -1,4 +1,3 @@
-import {Modal} from 'react-bootstrap';
 import styled from 'styled-components';
 import Box from '@mui/material/Box';
 import * as CoreUI from 'uiLibrary/CoreUI';
@@ -20,10 +19,6 @@ export const CenterContent = styled(Box)`
 export const LoginText = styled.p`
   ${CoreUI.ROBOTO_BOLD_FONT}
   margin: 32px 0 16px 0;
-`;
-
-export const ModalHeader = styled(Modal.Header)`
-  border-bottom: 0px;
 `;
 
 export const ModalSubtext = styled.p`

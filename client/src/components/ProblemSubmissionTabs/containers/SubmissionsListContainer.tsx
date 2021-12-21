@@ -3,21 +3,22 @@ import {connect, ConnectedProps} from 'react-redux';
 
 import {RootState} from 'reducers/rootReducer';
 
-import Submissions from '../Submissions/Submissions';
+import SubmissionsList from '../SubmissionsList/SubmissionsList';
 
 const mapStateToProps = (state: RootState) => {
   return {
     submissionRecords: state.problemDetails.submissionRecords,
+    authUser: state.authReducer.authUser,
   };
 };
 
 const connector = connect(mapStateToProps);
 type Props = ConnectedProps<typeof connector>;
 
-class SubmissionsContainer extends Component<Props> {
+class SubmissionsListContainer extends Component<Props> {
   render(): JSX.Element {
-    return <Submissions submissionRecords={this.props.submissionRecords || []} />;
+    return <SubmissionsList submissionRecords={this.props.submissionRecords || []} authUser={this.props.authUser} />;
   }
 }
 
-export default React.memo(connector(SubmissionsContainer));
+export default React.memo(connector(SubmissionsListContainer));

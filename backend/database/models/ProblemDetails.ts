@@ -3,8 +3,9 @@ Schema for specific problem
 Contains all language templates
 */
 
-import mongoose from '@mongoose';
+import {ProblemDifficulty} from '../utils/enums/ProblemDifficulty';
 import {QuestionCategories} from '../utils/enums/QuestionCategories';
+import mongoose from '@mongoose';
 
 export interface IProblem {
   title: string;
@@ -19,6 +20,7 @@ export interface IProblem {
   checkerCodeSnippet: string;
   validateTestCaseSnippet: string;
   questionCategory: QuestionCategories;
+  difficulty: ProblemDifficulty;
 }
 
 export interface IProblemDocument extends IProblem, Document {}
@@ -38,6 +40,7 @@ const ProblemSchema: mongoose.Schema = new mongoose.Schema({
   validateTestCaseSnippet: {type: String, required: true},
   isFree: {type: Boolean},
   questionCategory: {type: String, enum: QuestionCategories},
+  difficulty: {type: String, enum: ProblemDifficulty},
 });
 
 export default mongoose.model<IProblemDocument>('Problems', ProblemSchema);

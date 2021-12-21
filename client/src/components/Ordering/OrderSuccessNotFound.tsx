@@ -1,26 +1,24 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {Button} from 'react-bootstrap';
+import {Button} from '@mui/material';
 
-import {BoldThankYouHeader, OrderContainer, TextSizing, SubcontentPadding, ExploreProblemsIcon, ButtonContainer, ErrorIcon} from './styled';
-import {ORDER_NOT_FOUND, MISSING_ORDER_TEXT, EXPLORE_PROBLEMS} from 'utils/stringIds.json';
+import {BoldThankYouHeader, OrderContainer, TextSizing, SubcontentPadding, ButtonContainer, ErrorIcon, ThankYouHeader} from './styled';
+import {ORDER_NOT_FOUND, MISSING_ORDER_TEXT} from 'utils/stringIds.json';
+import {ChallengesPageLinkButton} from 'uiLibrary/Buttons';
 
 function OrderSuccessNotFound(): JSX.Element {
   return (
     <OrderContainer>
-      <ErrorIcon />
-      <BoldThankYouHeader>{ORDER_NOT_FOUND}</BoldThankYouHeader>
+      <ThankYouHeader>
+        <ErrorIcon />
+        <BoldThankYouHeader>{ORDER_NOT_FOUND}</BoldThankYouHeader>
+      </ThankYouHeader>
       <SubcontentPadding>
         <TextSizing>{MISSING_ORDER_TEXT}</TextSizing>
       </SubcontentPadding>
       <SubcontentPadding>
         <ButtonContainer>
-          <Link to="/challenges">
-            <Button variant="outline-primary" size="lg">
-              {EXPLORE_PROBLEMS}
-              <ExploreProblemsIcon />
-            </Button>
-          </Link>
+          <ChallengesPageLinkButton />
         </ButtonContainer>
       </SubcontentPadding>
     </OrderContainer>

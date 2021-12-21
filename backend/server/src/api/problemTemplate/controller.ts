@@ -47,7 +47,8 @@ export async function getProblemDetails(req: Request, res: Response): Promise<vo
     const hints = problem.hints;
     const testCases = problem.inputTestCases;
     const isFree = problem.isFree;
-    res.send({starterCode, title, description, hints, testCases, isFree});
+    const difficulty = problem.difficulty;
+    res.send({starterCode, title, description, hints, testCases, isFree, difficulty});
   } else {
     res.send({}).sendStatus(500);
   }

@@ -1,4 +1,5 @@
 import {PayloadAction} from '@reduxjs/toolkit';
+import {ProblemDifficulty} from 'utils/enums/userSubmission';
 import {ProblemDetails, SolutionDetails, SubmissionRecord} from 'utils/types/challenges';
 
 import {LOAD_PROBLEM_DETAILS, LOAD_PROBLEM_DETAILS_ERROR, LOAD_PROBLEM_DETAILS_SUCCESS} from './actionTypes';
@@ -29,6 +30,7 @@ const initialState: UserSubmissionState = {
     testCases: [],
     title: '',
     isFree: false,
+    difficulty: ProblemDifficulty.EASY,
   },
 };
 

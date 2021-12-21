@@ -1,7 +1,7 @@
-import {Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import LockIcon from '@mui/icons-material/Lock';
+import {Box} from '@mui/material';
 
 export const HeightWrapper = styled.div`
   transform: translate(-50%, -50%);
@@ -10,7 +10,7 @@ export const HeightWrapper = styled.div`
   left: 50%;
 `;
 
-export const LockedPremiumContainer = styled(Container)`
+export const LockedPremiumContainer = styled(Box)`
   padding: 50px;
   // box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   width: 450px;

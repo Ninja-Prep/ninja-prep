@@ -6,12 +6,15 @@ import SubmissionsCodeEditor from '../SubmissionsCodeEditor/SubmissionsCodeEdito
 import {VerdictStatus} from 'utils/enums/userSubmission';
 import {SubmissionRecord} from 'utils/types/challenges';
 import {languageToCodeMirrorMode} from 'utils/CodeEditorLanguages';
+import {User} from 'utils/types/user';
 
 interface Props {
   submissionRecords: SubmissionRecord[];
+  authUser: User;
 }
 
-function Submissions(props: Props) {
+function SubmissionsList(props: Props) {
+  const emptySubmissionsMessage = props.authUser ? <span>No submissions yet</span> : <span>Please sign in to view your submissions</span>;
   return (
     <Styled.SubmissionsContainer>
       <MaterialTable
@@ -20,7 +23,7 @@ function Submissions(props: Props) {
           search: false,
           overflowY: 'hidden',
         }}
-        localization={{body: {emptyDataSourceMessage: <span>Please sign in to view your submissions</span>}}}
+        localization={{body: {emptyDataSourceMessage: emptySubmissionsMessage}}}
         title="Submissions"
         columns={[
           {
@@ -57,4 +60,4 @@ function Submissions(props: Props) {
   );
 }
 
-export default Submissions;
+export default SubmissionsList;

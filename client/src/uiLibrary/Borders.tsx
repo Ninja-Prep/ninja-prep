@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import {css} from 'styled-components';
 import {BORDER_COLOR} from './Colors';
 
 export const SIMPLE_BORDER = css`
