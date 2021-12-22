@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  margin: 24px 0;
+`;
+
 export const OurPlansHeader = styled.h1`
   text-align: center !important;
-  padding: 2rem;
 `;
 
 export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 25%;
+  min-height: 400px;
 `;
 
 export const Card = styled.div`
-  width: 350px;
+  width: 400px;
 `;

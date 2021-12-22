@@ -5,6 +5,7 @@ export interface PurchasePlan {
   backgroundColor: string;
   stripePriceId: string;
   premiumTime: number;
+  bestValue?: boolean;
 }
 
 export const oneMonthPricing: PurchasePlan = {
@@ -22,6 +23,7 @@ export const threeMonthPricing: PurchasePlan = {
   description: `Best for long term studying to never miss an algorithm interview question again`,
   backgroundColor: '#DB6A00',
   stripePriceId: process.env.REACT_APP_STRIPE_3_MONTH || '',
+  bestValue: true,
 };
 
 export const planCards: PurchasePlan[] = [oneMonthPricing, threeMonthPricing];

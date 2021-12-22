@@ -68,6 +68,19 @@ export const LightBlueButtonCSS = css`
     background-color: #1da4bf;
   }
 `;
+export const PremiumButtonCSS = css`
+  ${CoreUI.OPEN_SANS_MEDIUM}
+  ${LARGE_BUTTON}
+  background-color: ${CoreUI.PREMIUM_COLOR};
+  border-style: none;
+  color: #ffffff;
+  :focus {
+    outline: none;
+  }
+  :hover {
+    background-color: ${CoreUI.DARK_PREMIUM_COLOR};
+  }
+`;
 
 export const LightBlueLinkButton = styled(Link)`
   ${LightBlueButtonCSS}
@@ -80,6 +93,16 @@ export const LightBlueLinkButton = styled(Link)`
 `;
 export const LightBlueButton = styled.button`
   ${LightBlueButtonCSS}
+  text-decoration: none;
+  color: White;
+  :hover {
+    cursor: pointer;
+    color: White;
+  }
+`;
+
+export const PremiumButton = styled.button`
+  ${PremiumButtonCSS}
   text-decoration: none;
   color: White;
   :hover {
