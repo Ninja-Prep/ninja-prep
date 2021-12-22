@@ -31,6 +31,7 @@ const initialState: UserSubmissionState = {
     title: '',
     isFree: false,
     difficulty: ProblemDifficulty.EASY,
+    videoSolutionLink: '',
   },
 };
 

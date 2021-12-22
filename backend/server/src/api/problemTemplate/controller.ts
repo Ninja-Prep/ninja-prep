@@ -48,7 +48,8 @@ export async function getProblemDetails(req: Request, res: Response): Promise<vo
     const testCases = problem.inputTestCases;
     const isFree = problem.isFree;
     const difficulty = problem.difficulty;
-    res.send({starterCode, title, description, hints, testCases, isFree, difficulty});
+    const videoSolutionLink = problem.videoSolutionLink;
+    res.send({starterCode, title, description, hints, testCases, isFree, difficulty, videoSolutionLink});
   } else {
     res.send({}).sendStatus(500);
   }

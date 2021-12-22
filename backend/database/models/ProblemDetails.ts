@@ -37,6 +37,7 @@ const ProblemSchema: mongoose.Schema = new mongoose.Schema({
     of: mongoose.Types.ObjectId,
   },
   checkerCodeSnippet: {type: String, required: true},
+  videoSolutionLink: {type: String},
   validateTestCaseSnippet: {type: String, required: true},
   isFree: {type: Boolean},
   questionCategory: {type: String, enum: QuestionCategories},

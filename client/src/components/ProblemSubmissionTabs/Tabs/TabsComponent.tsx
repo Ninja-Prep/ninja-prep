@@ -9,12 +9,12 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
+import * as Styled from './styled';
 import {ProblemDetails} from 'utils/types/challenges';
 import ProblemDescription from '../ProblemDescription/ProblemDescription';
-import VideoSolution from '../VideoSolution/VideoSolution';
-import * as Styled from './styled';
 import SubmissionsListContainer from '../containers/SubmissionsListContainer';
 import SolutionsListContainer from '../containers/SolutionsListContainer';
+import VideoSolutionContainer from '../containers/VideoSolutionContainer';
 
 interface Props {
   problemDetails: ProblemDetails;
@@ -49,7 +49,7 @@ const TabsComponent = (props: Props): JSX.Element => {
             <ProblemDescription problemDetails={props.problemDetails} />
           </TabPanel>
           <TabPanel value="2">
-            <VideoSolution />
+            <VideoSolutionContainer />
           </TabPanel>
           <TabPanel value="3">
             <SolutionsListContainer />

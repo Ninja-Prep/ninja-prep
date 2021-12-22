@@ -45,6 +45,7 @@ export type ProblemDetails = {
   readonly title: string;
   readonly isFree: boolean;
   readonly difficulty: ProblemDifficulty;
+  readonly videoSolutionLink: string;
 };
 
 export function isUserSubmissionOutput(

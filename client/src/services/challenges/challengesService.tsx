@@ -71,6 +71,7 @@ export const getProblemDetails = async (paramsId: string, programmingLanguage: s
     title: responseData.title,
     isFree: responseData.isFree,
     difficulty: responseData.difficulty,
+    videoSolutionLink: responseData.videoSolutionLink,
   };
   return problemDetails;
 };

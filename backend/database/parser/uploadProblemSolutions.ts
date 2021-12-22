@@ -1,8 +1,8 @@
-import {getCodeSnippets, parseProblemFiles} from './parser';
 import {ProgrammingLanguages} from '../utils/enums/ProgrammingLanguages';
 import {QueryOptions} from 'mongoose';
-import path from 'path';
+import {getCodeSnippets, parseProblemFiles} from './parser';
 import ProblemSolution, {SolutionDetails} from '../models/ProblemSolutions';
+import path from 'path';
 
 export async function uploadProblemSolutions(
   problemDirectoryPath: string,
