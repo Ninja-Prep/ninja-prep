@@ -67,8 +67,8 @@ function TestCaseTabs(props: Props): JSX.Element {
               <TabPanel value={value} index={index} key={index}>
                 <FormatHeader verdictStatus={judgedTestCase.status} />
                 <ContentDetailBlock blockHeader={INPUT_TEXT} blockContent={testCase} />
-                {judgedTestCase.userStdout && <ContentDetailBlock blockHeader="Your Output" blockContent={judgedTestCase.userStdout} />}
-                <ContentDetailBlock blockHeader="Stdout" blockContent={judgedTestCase.userOutput || judgedTestCase.stderr || 'No Output'} />
+                {judgedTestCase.userStdout && <ContentDetailBlock blockHeader="Stdout" blockContent={judgedTestCase.userStdout} />}
+                <ContentDetailBlock blockHeader="Your Output" blockContent={judgedTestCase.userOutput || judgedTestCase.stderr || 'No Output'} />
                 {judgedTestCase.expectedOutput && <ContentDetailBlock blockHeader="Expected Output" blockContent={judgedTestCase.expectedOutput} />}
               </TabPanel>
             );

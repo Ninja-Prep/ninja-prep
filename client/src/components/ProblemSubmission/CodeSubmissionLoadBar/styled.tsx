@@ -1,15 +1,22 @@
+import {Box} from '@mui/material';
 import styled from 'styled-components';
+import * as CoreUI from 'uiLibrary/CoreUI';
 
-export const BlinkText = styled.h5`
-  font-weight: bold;
-  color: black;
-  animation: blinker 4s linear infinite;
-  font-size: 1.25rem;
+export const BlinkText = styled.span`
+  ${CoreUI.ROBOTO_BOLD_FONT_LIGHT};
+  animation: blinker 5s linear infinite;
   @keyframes blinker {
     50% {
       opacity: 0;
     }
   }
+`;
+
+export const BoxContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  ${CoreUI.SIMPLE_BORDER};
 `;
 
 export const BlinkContainer = styled.div`

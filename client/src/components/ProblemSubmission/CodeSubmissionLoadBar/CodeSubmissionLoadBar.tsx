@@ -1,18 +1,18 @@
 import React from 'react';
 
-import LinearProgress from '@mui/material/LinearProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 import {PROCESSING_TEXT} from 'utils/stringIds.json';
 
-import {BlinkContainer, BlinkText} from './styled';
+import * as Styled from './styled';
 
 const CodeSubmissionLoadBar = (): JSX.Element => {
   return (
-    <div>
-      <BlinkContainer>
-        <BlinkText>{PROCESSING_TEXT}</BlinkText>
-      </BlinkContainer>
-      <LinearProgress />
-    </div>
+    <Styled.BoxContainer>
+      <CircularProgress disableShrink />
+      <Styled.BlinkContainer>
+        <Styled.BlinkText>{PROCESSING_TEXT}</Styled.BlinkText>
+      </Styled.BlinkContainer>
+    </Styled.BoxContainer>
   );
 };
 
