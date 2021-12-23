@@ -30,6 +30,7 @@ declare global {
       GOOGLE_SECRET: string;
       FACEBOOK_CLIENT: string;
       FACEBOOK_SECRET: string;
+      FACEBOOK_AUTH_CALLBACK: string;
       GITHUB_CLIENT: string;
       GITHUB_SECRET: string;
       SHOULD_LOG_META: string;

@@ -16,7 +16,7 @@ export const HeaderFont = styled.span`
 
 export const BackgroundContainer = styled.div`
   width: 100vw;
-  background-color: #f8fcff;
+  background-color: ${CoreUI.BABY_BLUE_BACKGROUND};
   margin-left: calc(-50vw + 50%);
 `;
 

@@ -34,7 +34,6 @@ export const FlexContainer = styled.div`
 
   :hover {
     padding: 0px 48px;
-    border-radius: 1px;
     transition: all ease-in-out 0.2s;
   }
 `;

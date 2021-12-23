@@ -13,5 +13,5 @@ export const QuestionCardContainer = styled.div`
   background-color: white;
   ${CoreUI.THICK_SIMPLE_BORDER};
   border-radius: 12px;
-  box-shadow: 0 5px 50px rgba(36, 209, 243, 20%);
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);
 `;
