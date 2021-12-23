@@ -11,7 +11,7 @@ export const SectionContainer = styled.div`
 
 export const QuestionCardContainer = styled.div`
   background-color: white;
-  border-color: ${CoreUI.BORDER_COLOR};
-  border-radius: 1px;
+  ${CoreUI.THICK_SIMPLE_BORDER};
+  border-radius: 12px;
   box-shadow: 0 5px 50px rgba(36, 209, 243, 20%);
 `;

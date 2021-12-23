@@ -29,10 +29,13 @@ export const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 32px;
-  border-bottom: 1px solid ${CoreUI.BORDER_COLOR};
+  transition: all ease-in-out 0.2s;
+  ${CoreUI.SIMPLE_BORDER_BOTTOM};
+
   :hover {
+    padding: 0px 48px;
     border-radius: 1px;
-    box-shadow: 0 5px 50px rgba(36, 209, 243, 20%);
+    transition: all ease-in-out 0.2s;
   }
 `;
 export const FlexRow = styled.div`

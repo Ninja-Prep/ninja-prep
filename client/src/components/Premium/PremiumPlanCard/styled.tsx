@@ -83,5 +83,5 @@ export const BestValue = styled.div`
   ${CoreUI.OPEN_SANS_MEDIUM};
   padding: 4px;
   text-align: center;
-  ${CoreUI.SIMPLE_BORDER};
+  ${CoreUI.SIMPLE_BORDER_BOTTOM};
 `;

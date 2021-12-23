@@ -1,4 +1,5 @@
 import {css} from 'styled-components';
+import {LIGHT_BLUE} from './Colors';
 
 export const FadeInCSS = css`
   -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
@@ -43,5 +44,18 @@ export const FadeInCSS = css`
     to {
       opacity: 1;
     }
+  }
+`;
+
+export const BLUE_UNDER_LINE_CSS = css`
+  :after {
+    display: block;
+    content: '';
+    border-bottom: 3px solid ${LIGHT_BLUE};
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  :hover:after {
+    transform: scaleX(1);
   }
 `;

@@ -16,7 +16,7 @@ export const BoxContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 16px;
-  ${CoreUI.SIMPLE_BORDER};
+  ${CoreUI.SIMPLE_BORDER_BOTTOM};
 `;
 
 export const BlinkContainer = styled.div`

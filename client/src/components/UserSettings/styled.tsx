@@ -14,7 +14,7 @@ export const PageContainer = styled.div`
 
 export const ContentBox = styled(Box)`
   flex-grow: 1;
-  ${CoreUI.SIMPLE_BORDER};
+  ${CoreUI.SIMPLE_BORDER_BOTTOM};
 `;
 
 export const SettingsHeader = styled.div`

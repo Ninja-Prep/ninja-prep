@@ -21,16 +21,7 @@ export const NavLink = styled.a`
     cursor: pointer;
     color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
   }
-  :after {
-    display: block;
-    content: '';
-    border-bottom: 3px solid ${CoreUI.LIGHT_BLUE};
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  :hover:after {
-    transform: scaleX(1);
-  }
+  ${CoreUI.BLUE_UNDER_LINE_CSS};
 `;
 
 export default NavLink;
