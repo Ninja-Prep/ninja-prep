@@ -1,0 +1,12 @@
+{
+  "title": "Kth Largest Element",
+  "problemPath": "Kth-Largest-Element",
+  "hints": [
+    "Does sorting help?",
+    "Is there a data structure that can help solve this faster than n(logn)"
+  ],
+  "isFree": true,
+  "category": "Heaps",
+  "previewDescription": "Given an array of integers, return the kth largest element",
+  "difficulty": "Easy"
+}
