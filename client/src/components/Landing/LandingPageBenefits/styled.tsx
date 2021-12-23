@@ -6,6 +6,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SchoolIcon from '@mui/icons-material/School';
 import BoltIcon from '@mui/icons-material/Bolt';
 import CodeIcon from '@mui/icons-material/Code';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 const iconCss = css`
   color: ${CoreUI.LIGHT_BLUE};
@@ -30,6 +31,10 @@ export const BenefitsBoltIcon = styled(BoltIcon)`
 `;
 export const BenefitsCodeIcon = styled(CodeIcon)`
   ${iconCss}
+`;
+
+export const NavigateNext = styled(NavigateNextIcon)`
+  transform: scale(1.5);
 `;
 
 export const HeadingFont = styled.p`
@@ -85,8 +90,6 @@ export const BenefitHeading = styled.div`
   width: 100%;
 `;
 
-export const StartCodingButton = styled.button`
-  align-items: flex-start;
+export const ExploreProblemsButton = styled.div`
   margin-top: ${CoreUI.EXTRA_LARGE_SPACING};
-  ${CoreUI.LightBlueButtonCSS}
 `;

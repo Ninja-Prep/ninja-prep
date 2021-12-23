@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import {BoldThankYouHeader, OrderContainer, TextSizing, SubcontentPadding, ButtonContainer, ErrorIcon, ThankYouHeader} from './styled';
-import {ORDER_NOT_FOUND, MISSING_ORDER_TEXT} from 'utils/stringIds.json';
-import {ChallengesPageLinkButton} from 'uiLibrary/Buttons';
+import {ORDER_NOT_FOUND, MISSING_ORDER_TEXT, EXPLORE_PROBLEMS} from 'utils/stringIds.json';
+import {LightBlueLinkButton} from 'uiLibrary/Buttons';
 
 function OrderSuccessNotFound(): JSX.Element {
   return (
@@ -16,7 +16,7 @@ function OrderSuccessNotFound(): JSX.Element {
       </SubcontentPadding>
       <SubcontentPadding>
         <ButtonContainer>
-          <ChallengesPageLinkButton />
+          <LightBlueLinkButton to="/challenges" text={EXPLORE_PROBLEMS} />
         </ButtonContainer>
       </SubcontentPadding>
     </OrderContainer>

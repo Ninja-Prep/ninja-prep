@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+
+export const ButtonContent = styled.div``;
+
+export const RightChevron = styled(NavigateNextIcon)`
+  ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
+  color: white;
+  margin-right: 10px;
+  transform: scale(1.5);
+`;
 
 export const LoginHeaderContainer = styled.div`
   padding: ${CoreUI.PAGE_PADDING} 0px;

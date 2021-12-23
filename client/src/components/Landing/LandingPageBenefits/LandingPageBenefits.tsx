@@ -1,23 +1,8 @@
 import React from 'react';
-import {
-  FlexBoxContainer,
-  BenefitsGradeIcon,
-  BenefitsArticleIcon,
-  BenefitsCodeIcon,
-  FlexBenefit,
-  FlexRow,
-  HeadingFont,
-  BodyFont,
-  BackgroundContainer,
-  BenefitsContainer,
-  BenefitHeading,
-  BenefitsCourseIcon,
-  BenefitsBoltIcon,
-  BenefitsVideoIcon,
-  StartCodingButton,
-} from './styled';
+import * as Styled from './styled';
 
 import {
+  EXPLORE_PROBLEMS,
   BENEFITS_CAREER_TITLE,
   BENEFITS_MULTIPLE_LANGUAGES_BODY,
   BENEFITS_MULTIPLE_LANGUAGES,
@@ -32,42 +17,41 @@ import {
   BENEFITS_CODE_WALKTHROUGHS,
   BENEFITS_CODE_WALKTHROUGHS_BODY,
 } from 'utils/stringIds.json';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import {WhiteLink} from 'uiLibrary/Links';
+import {LightBlueLinkButton} from 'uiLibrary/CoreUI';
 
 const BenefitsList = [
   {
     left: {
-      icon: <BenefitsGradeIcon />,
+      icon: <Styled.BenefitsGradeIcon />,
       title: BENEFITS_PREMIUM,
       bodyContent: BENEFITS_PREMIUM_BODY,
     },
     right: {
-      icon: <BenefitsArticleIcon />,
+      icon: <Styled.BenefitsArticleIcon />,
       title: BENEFITS_ARTICLES,
       bodyContent: BENEFITS_ARTICLE_BODY,
     },
   },
   {
     left: {
-      icon: <BenefitsCodeIcon />,
+      icon: <Styled.BenefitsCodeIcon />,
       title: BENEFITS_CODE_WALKTHROUGHS,
       bodyContent: BENEFITS_CODE_WALKTHROUGHS_BODY,
     },
     right: {
-      icon: <BenefitsCourseIcon />,
+      icon: <Styled.BenefitsCourseIcon />,
       title: BENEFITS_CRASH_COURSE,
       bodyContent: BENEFITS_CRASH_COURSE_BODY,
     },
   },
   {
     left: {
-      icon: <BenefitsBoltIcon />,
+      icon: <Styled.BenefitsBoltIcon />,
       title: BENEFITS_BROWSER_COMPILER,
       bodyContent: BENEFITS_BROWSER_COMPILER_BODY,
     },
     right: {
-      icon: <BenefitsVideoIcon />,
+      icon: <Styled.BenefitsVideoIcon />,
       title: BENEFITS_MULTIPLE_LANGUAGES,
       bodyContent: BENEFITS_MULTIPLE_LANGUAGES_BODY,
     },
@@ -84,41 +68,39 @@ LandingPageBenefits.defaultProps = {
 
 function LandingPageBenefits(props: Props): JSX.Element {
   return (
-    <BackgroundContainer>
-      <BenefitsContainer>
-        <HeadingFont>{BENEFITS_CAREER_TITLE}</HeadingFont>
-        <FlexBoxContainer>
+    <Styled.BackgroundContainer>
+      <Styled.BenefitsContainer>
+        <Styled.HeadingFont>{BENEFITS_CAREER_TITLE}</Styled.HeadingFont>
+        <Styled.FlexBoxContainer>
           {BenefitsList.map((benefits) => {
             return (
-              <FlexRow key={benefits.left.title}>
-                <FlexBenefit>
-                  <BenefitHeading>
+              <Styled.FlexRow key={benefits.left.title}>
+                <Styled.FlexBenefit>
+                  <Styled.BenefitHeading>
                     {benefits.left.icon}
                     <span>{benefits.left.title}</span>
-                  </BenefitHeading>
-                  <BodyFont>{benefits.left.bodyContent}</BodyFont>
-                </FlexBenefit>
+                  </Styled.BenefitHeading>
+                  <Styled.BodyFont>{benefits.left.bodyContent}</Styled.BodyFont>
+                </Styled.FlexBenefit>
 
-                <FlexBenefit>
-                  <BenefitHeading>
+                <Styled.FlexBenefit>
+                  <Styled.BenefitHeading>
                     {benefits.right.icon}
                     <span>{benefits.right.title}</span>
-                  </BenefitHeading>
-                  <BodyFont>{benefits.right.bodyContent}</BodyFont>
-                </FlexBenefit>
-              </FlexRow>
+                  </Styled.BenefitHeading>
+                  <Styled.BodyFont>{benefits.right.bodyContent}</Styled.BodyFont>
+                </Styled.FlexBenefit>
+              </Styled.FlexRow>
             );
           })}
-        </FlexBoxContainer>
+        </Styled.FlexBoxContainer>
         {!props.disableCodingButton && (
-          <WhiteLink to="/premium">
-            <StartCodingButton>
-              Start Coding <NavigateNextIcon />
-            </StartCodingButton>
-          </WhiteLink>
+          <Styled.ExploreProblemsButton>
+            <LightBlueLinkButton to="/challenges" text={EXPLORE_PROBLEMS} icon={<Styled.NavigateNext />} />
+          </Styled.ExploreProblemsButton>
         )}
-      </BenefitsContainer>
-    </BackgroundContainer>
+      </Styled.BenefitsContainer>
+    </Styled.BackgroundContainer>
   );
 }
 

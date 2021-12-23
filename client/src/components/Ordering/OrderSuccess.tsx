@@ -15,8 +15,8 @@ import {
   Container,
   ThankYouHeader,
 } from './styled';
-import {YOU_NOW_HAVE, PREMIUM, CONFIRMATION_RECEIPT_WILL_BE_SENT, PREMIUM_EXPIRATION_DATE, PREMIUM_ACCOUNT_LOGIN, THANK_YOU_FOR_CHOOSING_NINJAPREP} from 'utils/stringIds.json';
-import {ChallengesPageLinkButton} from 'uiLibrary/Buttons';
+import {YOU_NOW_HAVE, EXPLORE_PROBLEMS, PREMIUM, CONFIRMATION_RECEIPT_WILL_BE_SENT, PREMIUM_EXPIRATION_DATE, PREMIUM_ACCOUNT_LOGIN, THANK_YOU_FOR_CHOOSING_NINJAPREP} from 'utils/stringIds.json';
+import {LightBlueLinkButton} from 'uiLibrary/Buttons';
 
 interface Props {
   email: string;
@@ -47,7 +47,7 @@ function OrderSuccess(props: Props): JSX.Element {
           <EmailSizing>{props.email}</EmailSizing>
         </SubcontentPadding>
         <ButtonContainer>
-          <ChallengesPageLinkButton />
+          <LightBlueLinkButton to="/challenges" text={EXPLORE_PROBLEMS} />
         </ButtonContainer>
       </OrderContainer>
     </Container>

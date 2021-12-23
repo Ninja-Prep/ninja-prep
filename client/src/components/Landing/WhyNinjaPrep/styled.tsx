@@ -1,5 +1,10 @@
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import styled from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
+
+export const NavigateNext = styled(NavigateNextIcon)`
+  transform: scale(1.5);
+`;
 
 export const BackgroundContainer = styled.div`
   width: 100vw;
@@ -12,6 +17,7 @@ export const WhyNinjaPrepContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: ${CoreUI.EXTRA_LARGE_SPACING};
 `;
 
 export const SubHeading = styled.p`
@@ -27,9 +33,4 @@ export const SubText = styled.p`
   ${CoreUI.ROBOTO_BOLD_FONT_LARGE}
   color: #1DA4BF;
   margin: 0;
-`;
-
-export const StartCodingButton = styled.button`
-  margin-bottom: ${CoreUI.EXTRA_LARGE_SPACING};
-  ${CoreUI.LightBlueButtonCSS}
 `;

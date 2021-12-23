@@ -3,8 +3,7 @@ import styled, {css} from 'styled-components';
 import {Link} from 'react-router-dom';
 import * as CoreUI from 'uiLibrary/CoreUI';
 import LockIcon from '@mui/icons-material/Lock';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import {EXPLORE_PROBLEMS} from 'utils/stringIds.json';
+import {ReactElement} from 'react-markdown';
 
 export const LARGE_BUTTON = css`
   border-radius: 24px;
@@ -22,16 +21,11 @@ export const MEDIUM_BUTTON = css`
 
 export const GET_FULL_ACCESS_CSS = css`
   box-sizing: border-box;
-  margin: auto 48px auto 0px;
-  letter-spacing: 0.15;
-  line-spacing: 23;
-  font-weight: bold;
-  border-bottom: 3px solid transparent;
+  margin: auto 48px auto 5px;
   display: inline-flex;
   align-items: center;
   background-color: ${CoreUI.PREMIUM_COLOR};
   color: white;
-  margin-left: 5px;
   text-decoration: none;
   :hover {
     text-decoration: none;
@@ -55,60 +49,49 @@ export const PremiumLockIcon = styled(LockIcon)`
   margin-right: 5px;
 `;
 
-export const LightBlueButtonCSS = css`
+export const PageButtonCSS = css`
   ${CoreUI.OPEN_SANS_MEDIUM}
   ${LARGE_BUTTON}
-  background-color: ${CoreUI.LIGHT_BLUE};
   border-style: none;
   color: #ffffff;
-  :focus {
-    outline: none;
-  }
+`;
+
+export const LightBlueLink = styled(Link)`
+  ${PageButtonCSS}
+  background-color: ${CoreUI.LIGHT_BLUE};
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: White;
   :hover {
+    cursor: pointer;
+    color: White;
     background-color: #1da4bf;
   }
 `;
-export const PremiumButtonCSS = css`
-  ${CoreUI.OPEN_SANS_MEDIUM}
-  ${LARGE_BUTTON}
-  background-color: ${CoreUI.PREMIUM_COLOR};
-  border-style: none;
-  color: #ffffff;
-  :focus {
-    outline: none;
-  }
-  :hover {
-    background-color: ${CoreUI.DARK_PREMIUM_COLOR};
-  }
-`;
 
-export const LightBlueLinkButton = styled(Link)`
-  ${LightBlueButtonCSS}
-  text-decoration: none;
-  color: White;
-  :hover {
-    cursor: pointer;
-    color: White;
-  }
-`;
 export const LightBlueButton = styled.button`
-  ${LightBlueButtonCSS}
+  ${PageButtonCSS}
   text-decoration: none;
   color: White;
+  background-color: ${CoreUI.LIGHT_BLUE};
   :hover {
     cursor: pointer;
     color: White;
+    background-color: #1da4bf;
   }
 `;
 
 export const PremiumButton = styled.button`
-  ${PremiumButtonCSS}
+  ${PageButtonCSS}
   text-decoration: none;
   color: White;
   :hover {
     cursor: pointer;
     color: White;
+    background-color: ${CoreUI.DARK_PREMIUM_COLOR};
   }
+  background-color: ${CoreUI.PREMIUM_COLOR};
 `;
 
 export const SOCIAL_MEDIA_BUTTON = css`
@@ -156,11 +139,17 @@ export function GetFullAccessButton(props: FullAccessButtonProps): JSX.Element {
   }
 }
 
-export function ChallengesPageLinkButton(): JSX.Element {
+interface BlueButtonProps {
+  text: string;
+  to: string;
+  icon?: ReactElement;
+}
+
+export function LightBlueLinkButton(props: BlueButtonProps): JSX.Element {
   return (
-    <LightBlueLinkButton to="/challenges">
-      {EXPLORE_PROBLEMS}
-      <ChevronRightIcon />
-    </LightBlueLinkButton>
+    <LightBlueLink to={props.to}>
+      {props.text}
+      {props.icon}
+    </LightBlueLink>
   );
 }

@@ -1,41 +1,36 @@
 import React from 'react';
 
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-import {LoginHeaderBodyText, LoginHeaderContainer, LoginHeaderLargeText, StartLearningForFree, FlexSizing, SocialMediaContainer, GoogleButton, FacebookButton, GitHubButton} from './styled';
 import {LightBlueLinkButton} from 'uiLibrary/CoreUI';
 import {GoogleIcon, FacebookIcon, GitHubIcon} from 'uiLibrary/SocialMediaIcons';
+import * as Styled from './styled';
 import {START_LEARNING_FOR_FREE, FREE_CODING_PROBLEM, CODING_FOUNDATION_HEADER, CODING_SUBHEADING_HEADER, GOOGLE_LOGIN, FACEBOOK_LOGIN, GITHUB_LOGIN} from 'utils/stringIds.json';
 
 function LoginHeader(): JSX.Element {
   return (
-    <LoginHeaderContainer>
-      <FlexSizing>
-        <LoginHeaderLargeText>{CODING_FOUNDATION_HEADER}</LoginHeaderLargeText>
-        <LoginHeaderBodyText>{CODING_SUBHEADING_HEADER}</LoginHeaderBodyText>
-        <LightBlueLinkButton to="/problem/Two-Sum">
-          {FREE_CODING_PROBLEM}
-          <ExpandMoreIcon />
-        </LightBlueLinkButton>
-      </FlexSizing>
-      <FlexSizing>
-        <SocialMediaContainer>
-          <StartLearningForFree>{START_LEARNING_FOR_FREE}</StartLearningForFree>
-          <GoogleButton href="/api/auth/google">
+    <Styled.LoginHeaderContainer>
+      <Styled.FlexSizing>
+        <Styled.LoginHeaderLargeText>{CODING_FOUNDATION_HEADER}</Styled.LoginHeaderLargeText>
+        <Styled.LoginHeaderBodyText>{CODING_SUBHEADING_HEADER}</Styled.LoginHeaderBodyText>
+        <LightBlueLinkButton to="/problem/Two-Sum" text={FREE_CODING_PROBLEM} icon={<Styled.RightChevron />} />
+      </Styled.FlexSizing>
+      <Styled.FlexSizing>
+        <Styled.SocialMediaContainer>
+          <Styled.StartLearningForFree>{START_LEARNING_FOR_FREE}</Styled.StartLearningForFree>
+          <Styled.GoogleButton href="/api/auth/google">
             <GoogleIcon />
             {GOOGLE_LOGIN}
-          </GoogleButton>
-          <FacebookButton href="/api/auth/facebook">
+          </Styled.GoogleButton>
+          <Styled.FacebookButton href="/api/auth/facebook">
             <FacebookIcon />
             {FACEBOOK_LOGIN}
-          </FacebookButton>
-          <GitHubButton href="/api/auth/github">
+          </Styled.FacebookButton>
+          <Styled.GitHubButton href="/api/auth/github">
             <GitHubIcon />
             {GITHUB_LOGIN}
-          </GitHubButton>
-        </SocialMediaContainer>
-      </FlexSizing>
-    </LoginHeaderContainer>
+          </Styled.GitHubButton>
+        </Styled.SocialMediaContainer>
+      </Styled.FlexSizing>
+    </Styled.LoginHeaderContainer>
   );
 }
 

@@ -17,6 +17,12 @@ export const Container = styled.div`
     border: 1px solid #bcc0c4;
     width: auto;
   }
+  code {
+    padding: 4px;
+    background-color: #f5f7fa;
+    border-radius: 5px;
+    border: 1px solid #bcc0c4;
+  }
 `;
 
 export const InnerContainer = styled.div`

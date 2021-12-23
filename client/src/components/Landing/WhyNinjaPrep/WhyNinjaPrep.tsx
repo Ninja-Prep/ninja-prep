@@ -1,22 +1,18 @@
 import React from 'react';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-import {SubHeading, BackgroundContainer, WhyNinjaPrepContainer, SubText, StartCodingButton} from './styled';
-import {WhiteLink} from 'uiLibrary/Links';
+import * as Styled from './styled';
+import {START_CODING} from 'utils/stringIds.json';
+import {LightBlueLinkButton} from 'uiLibrary/Buttons';
 
 function WhyNinjaPrep(): JSX.Element {
   return (
-    <BackgroundContainer>
-      <WhyNinjaPrepContainer>
-        <SubHeading>Why NinjaPrep?</SubHeading>
-        <SubText>We empower developers to take their careers to the next level with a strong and simple platform</SubText>
-        <WhiteLink to="/premium">
-          <StartCodingButton>
-            Start Coding <NavigateNextIcon />
-          </StartCodingButton>
-        </WhiteLink>
-      </WhyNinjaPrepContainer>
-    </BackgroundContainer>
+    <Styled.BackgroundContainer>
+      <Styled.WhyNinjaPrepContainer>
+        <Styled.SubHeading>Why NinjaPrep?</Styled.SubHeading>
+        <Styled.SubText>We empower developers to take their careers to the next level with a strong and simple platform</Styled.SubText>
+        <LightBlueLinkButton to="challenges" text={START_CODING} icon={<Styled.NavigateNext />} />
+      </Styled.WhyNinjaPrepContainer>
+    </Styled.BackgroundContainer>
   );
 }
 
