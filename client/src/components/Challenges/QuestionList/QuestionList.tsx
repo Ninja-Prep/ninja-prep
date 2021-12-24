@@ -16,6 +16,7 @@ const QuestionList = (props: Props): JSX.Element => {
       <QuestionListSection {...props} categoryTitle="Linked Lists" categoryFilter="LinkedLists" />
       <QuestionListSection {...props} categoryTitle="Trees" categoryFilter="Trees" />
       <QuestionListSection {...props} categoryTitle="Heaps" categoryFilter="Heaps" />
+      <QuestionListSection {...props} categoryTitle="Binary Search" categoryFilter="BinarySearch" />
     </FadeIn>
   );
 };

@@ -1,0 +1,10 @@
+{
+  "title": "Search in Sorted Rotated Array",
+  "problemPath": "Search-in-Sorted-Rotated-Array",
+  "hints": [
+    "At any point in the array, does knowing which part of the array is sorted helpful?"
+  ],
+  "category": "BinarySearch",
+  "previewDescription": "A sorted array of integers is rotated at an unknown pivot",
+  "difficulty": "Medium"
+}

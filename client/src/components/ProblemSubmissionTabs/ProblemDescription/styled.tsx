@@ -8,6 +8,13 @@ export const Container = styled.div`
   justify-content: stretch;
   align-items: stretch;
   flex-grow: 1;
+  img {
+    max-width: 100%;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
   pre {
     border-radius: 5px;
     background-color: #f5f7fa;

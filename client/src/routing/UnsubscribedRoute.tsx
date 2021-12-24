@@ -32,10 +32,6 @@ type Props = {
   RouteProps;
 
 class UnsubscribedRoute extends React.Component<Props> {
-  async componentDidMount() {
-    await this.props.getAndSetUser();
-  }
-
   render(): JSX.Element | null {
     const UnsubscribedComponent = this.props.unsubscribedComponent;
 
