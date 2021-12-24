@@ -1,4 +1,3 @@
-import {Box} from '@mui/material';
 import styled from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
 

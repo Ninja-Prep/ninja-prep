@@ -13,7 +13,7 @@ function PremiumPlans(): JSX.Element {
       <HeadingFont>{OUR_PLANS}</HeadingFont>
       <Styled.CardContainer>
         {planCards.map((plan, key) => (
-          <Styled.Card>
+          <Styled.Card key={plan.title}>
             <PremiumPlanCardContainer purchasePlan={plan} key={key} />
           </Styled.Card>
         ))}

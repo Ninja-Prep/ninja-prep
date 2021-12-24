@@ -12,6 +12,7 @@ import {isPremiumUser} from 'reducers/auth/reducer';
 import ProblemSubmissionPage from '../ProblemSubmissionPage';
 import ProtectedProblemPage from 'pages/ProtectedProblemPage/ProtectedProblemPage';
 import {resetProblemSubmission} from 'reducers/userSubmission/action';
+import {getAndSetUser} from 'reducers/auth/actions';
 
 interface MatchParams {
   id: string;
@@ -27,7 +28,7 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const connector = connect(mapStateToProps, {loadProblemDetails, resetProblemSubmission});
+const connector = connect(mapStateToProps, {loadProblemDetails, resetProblemSubmission, getAndSetUser});
 
 type Props = ConnectedProps<typeof connector> & RouteComponentProps<MatchParams>;
 
@@ -35,6 +36,7 @@ class ProblemSubmissionPageContainer extends Component<Props> {
   async componentDidMount(): Promise<void> {
     this.props.loadProblemDetails(this.props.match.params.id);
     this.props.resetProblemSubmission();
+    await this.props.getAndSetUser();
   }
 
   get getStarterCode() {

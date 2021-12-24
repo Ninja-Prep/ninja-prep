@@ -6,7 +6,7 @@ import passport from 'passport';
 const router = express.Router();
 
 router.get('/google', passport.authenticate('google', {scope: ['profile', 'email']}));
-router.get('/facebook', passport.authenticate('facebook'));
+router.get('/facebook', passport.authenticate('facebook', {scope: ['email']}));
 router.get('/github', passport.authenticate('github'));
 
 router.get('/getUser', getUser);
