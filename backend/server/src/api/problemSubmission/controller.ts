@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import {DockerSubmissionResult} from 'services/docker/docker';
 import {Request, Response} from 'express';
 import {StatusCode, convertRuntimeVerdictExitCodes} from 'services/docker/statusCodes';
@@ -77,20 +78,26 @@ function formatTestCases(testCaseResults: DockerSubmissionResult[]): JudgedTestC
 }
 
 async function addSubmissionToDatabase(req: Request, verdict: StatusCode) {
-  await SubmissionRecords.findOneAndUpdate(
-    {userId: req.session.user?.userId, problemPath: req.params.problemPath},
-    {
-      userId: req.session.user?.userId,
-      problemPath: req.params.problemPath,
-      $push: {
-        submissions: {
-          date: new Date(),
-          language: req.body.programmingLanguage.toLowerCase(),
-          status: verdict,
-          codeSnippet: req.body.codeSnippet,
+  const record = await SubmissionRecords.findOne({userId: req.session.user?.userId, problemPath: req.params.problemPath});
+  const hasExistingSubmission = record?.submissions.some((submission) => {
+    return _.lowerCase(req.body.programmingLanguage) === submission.language && _.trim(submission.codeSnippet) === _.trim(req.body.codeSnippet);
+  });
+
+  if (!hasExistingSubmission) {
+    await record?.updateOne(
+      {
+        userId: req.session.user?.userId,
+        problemPath: req.params.problemPath,
+        $push: {
+          submissions: {
+            date: new Date(),
+            language: req.body.programmingLanguage.toLowerCase(),
+            status: verdict,
+            codeSnippet: _.trim(req.body.codeSnippet),
+          },
         },
       },
-    },
-    {upsert: true, runValidators: true, context: 'query'},
-  );
+      {upsert: true, runValidators: true, context: 'query'},
+    );
+  }
 }
