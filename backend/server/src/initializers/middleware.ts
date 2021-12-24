@@ -5,10 +5,18 @@ import express from 'express';
 import expressLogger from 'utils/logging/logger';
 import httpContext from 'express-http-context';
 import passport from 'passport';
+import rateLimit from 'express-rate-limit';
 import reqId from 'express-request-id';
 import routingMiddleWare from '../api/routing';
 
+const limiter = rateLimit({
+  windowMs: 30 * 1000,
+  max: 50,
+});
+
 export default function (app: express.Application): void {
+  app.set('trust proxy', 1);
+  app.use(limiter);
   app.use(express.json());
   app.use(cookieParser('mySecret'));
   app.use(

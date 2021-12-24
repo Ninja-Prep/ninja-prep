@@ -9,6 +9,7 @@ const mapStateToProps = (state: RootState) => {
     status: state.userSubmission.submissionStatus,
     verdict: state.userSubmission.output?.verdict,
     stderr: state.userSubmission.output?.stderr || '',
+    throttleError: state.userSubmission.throttleError,
   };
 };
 
@@ -18,7 +19,7 @@ type Props = ConnectedProps<typeof connector>;
 
 class SubmisssionContentContainer extends Component<Props> {
   render(): JSX.Element {
-    return <SubmissionContent stderr={this.props.stderr} status={this.props.status} verdict={this.props.verdict} />;
+    return <SubmissionContent stderr={this.props.stderr} status={this.props.status} verdict={this.props.verdict} throttleError={this.props.throttleError} />;
   }
 }
 

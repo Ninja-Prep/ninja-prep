@@ -24,31 +24,38 @@ public class Checker {
                 else nums[i] = Integer.parseInt(stringNums[i]);
             }
 
-            Node[] nodes = new Node[n];
             Node nodeA = null;
             Node nodeB = null;
 
-            nodes[0] = new Node(nums[0]);
-
-            for (int i = 1; i < n; i++) {
-                Node node = null;
-                if (nums[i] != null) {
-                    node = new Node(nums[i]);
-                    if (nums[i] == nodeAVal) nodeA = node;
-                    if (nums[i] == nodeBVal) nodeB = node;
+            Node root = new Node(nums[0]);
+            Queue<Node> queue = new LinkedList<>();
+            queue.add(root);
+            int i = 1;
+            while(!queue.isEmpty()) {
+                Node curr = queue.remove();
+                if (curr == null) continue;
+                Node left = null;
+                Node right = null;
+                if (i < nums.length && nums[i] != null) {
+                    left = new Node(nums[i]);
+                    curr.left = left;
+                    if (nums[i] == nodeAVal) nodeA = left;
+                    else if (nums[i] == nodeBVal) nodeB = left;
                 }
-                nodes[i] = node;
-                if (nodes[i/2] == null) continue;
-                if (i % 2 == 1) {
-                    nodes[i/2].left = node;
+                i++;
+                if (i < nums.length && nums[i] != null) {
+                    right = new Node(nums[i]);
+                    curr.right = right;
+                    if (nums[i] == nodeAVal) nodeA = right;
+                    else if (nums[i] == nodeBVal) nodeB = right;
                 }
-                else {
-                    nodes[i/2].right = node;
-                }
+                i++;
+                queue.add(left);
+                queue.add(right);
             }
 
             Solution solution = new Solution();
-            Node ans = solution.lowestCommonAncestor(nodes[0], nodeA, nodeB);
+            Node ans = solution.lowestCommonAncestor(root, nodeA, nodeB);
 
             StringBuffer sb = new StringBuffer();
             sb.append(ans.value);

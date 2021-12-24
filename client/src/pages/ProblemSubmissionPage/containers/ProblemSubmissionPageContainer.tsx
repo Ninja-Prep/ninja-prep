@@ -23,7 +23,7 @@ const mapStateToProps = (state: RootState) => {
     isPremiumUser: isPremiumUser(state),
     problemDetails: state.problemDetails.details,
     isError: state.problemDetails.isError,
-    isLoading: state.problemDetails.isLoading,
+    isLoadingProblemDetails: state.problemDetails.isLoading,
     language: getLanguage(state),
   };
 };
@@ -31,12 +31,19 @@ const mapStateToProps = (state: RootState) => {
 const connector = connect(mapStateToProps, {loadProblemDetails, resetProblemSubmission, getAndSetUser});
 
 type Props = ConnectedProps<typeof connector> & RouteComponentProps<MatchParams>;
+type State = {
+  isMounted: boolean;
+};
 
-class ProblemSubmissionPageContainer extends Component<Props> {
+class ProblemSubmissionPageContainer extends Component<Props, State> {
+  state = {
+    isMounted: false,
+  };
   async componentDidMount(): Promise<void> {
-    await this.props.getAndSetUser();
-    this.props.loadProblemDetails(this.props.match.params.id);
     this.props.resetProblemSubmission();
+    this.props.loadProblemDetails(this.props.match.params.id);
+    await this.props.getAndSetUser();
+    this.setState({isMounted: true});
   }
 
   get getStarterCode() {
@@ -44,7 +51,7 @@ class ProblemSubmissionPageContainer extends Component<Props> {
   }
 
   render(): JSX.Element {
-    if (this.props.isLoading) return <AsyncSpinner />;
+    if (this.props.isLoadingProblemDetails || !this.state.isMounted) return <AsyncSpinner />;
     else if (!this.props.problemDetails?.isFree && !this.props.isPremiumUser) {
       return <ProtectedProblemPage title={this.props.problemDetails?.title} />;
     }

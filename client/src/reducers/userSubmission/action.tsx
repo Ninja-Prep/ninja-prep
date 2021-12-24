@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, {AxiosError} from 'axios';
 import * as _ from 'lodash';
 import {GetState} from 'index';
 import {Dispatch} from 'redux';
@@ -7,7 +7,7 @@ import {JudgedTestCase} from 'utils/types/challenges/index';
 import {Action} from 'utils/types/redux';
 
 import {getLanguage} from '../editorSettings/reducer';
-import {SUBMIT_PROBLEM_SUCCESS, SUBMIT_PROBLEM, SUBMIT_PROBLEM_ERROR, RESET_PROBLEM_SUBMISSION} from './actionTypes';
+import {SUBMIT_PROBLEM_SUCCESS, SUBMIT_PROBLEM, SUBMIT_PROBLEM_ERROR, RESET_PROBLEM_SUBMISSION, SUBMIT_PROBLEM_THROTTLE_ERROR} from './actionTypes';
 
 export function submitProblemSuccess(output: UserSubmissionOutput): Action<string, UserSubmissionOutput> {
   return {
@@ -26,6 +26,11 @@ export function submitProblemError(errorMessage: string): Action<string, string>
   return {
     type: SUBMIT_PROBLEM_ERROR,
     payload: errorMessage,
+  };
+}
+export function submitProblemThrottleError(): Action<string, undefined> {
+  return {
+    type: SUBMIT_PROBLEM_THROTTLE_ERROR,
   };
 }
 
@@ -61,8 +66,12 @@ export function submitProblem(problemId: string) {
         };
         dispatch(submitProblemSuccess(payload));
       })
-      .catch((err: Error) => {
-        dispatch(submitProblemError(err.message));
+      .catch((err: AxiosError) => {
+        if (err.response?.status === 429) {
+          dispatch(submitProblemThrottleError());
+        } else {
+          dispatch(submitProblemError(err.message));
+        }
       });
   };
 }

@@ -5,11 +5,13 @@ import TestCaseTabsContainer from 'components/ProblemSubmission/containers/TestC
 import {SubmissionStatus, VerdictStatus} from 'utils/enums/userSubmission';
 import SubmissionHeader from '../SubmissionHeader/SubmissionHeader';
 import SubmissionTestCaseErrorOutput from '../SubmissionTestCaseErrorOutput/SubmissionTestCaseErrorOutput';
+import {SubmissionThrottleMessage} from '../SubmissionThrottleMessage/SubmissionThrottleMessage';
 
 interface Props {
   status: SubmissionStatus;
   verdict: VerdictStatus;
   stderr: string;
+  throttleError: boolean;
 }
 
 function SubmissionContent(props: Props): JSX.Element {
@@ -19,17 +21,18 @@ function SubmissionContent(props: Props): JSX.Element {
     case SubmissionStatus.SUBMITTED:
       if (props.verdict !== VerdictStatus.ACCEPTED && props.verdict !== VerdictStatus.WRONG_ANSWER)
         return (
-          <div>
+          <React.Fragment>
             <SubmissionHeader />
             <SubmissionTestCaseErrorOutput content={props.stderr} />
-          </div>
+          </React.Fragment>
         );
   }
   return (
-    <div>
+    <React.Fragment>
+      {props.throttleError && <SubmissionThrottleMessage />}
       <SubmissionHeader />
       <TestCaseTabsContainer />
-    </div>
+    </React.Fragment>
   );
 }
 
