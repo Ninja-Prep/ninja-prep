@@ -34,9 +34,9 @@ type Props = ConnectedProps<typeof connector> & RouteComponentProps<MatchParams>
 
 class ProblemSubmissionPageContainer extends Component<Props> {
   async componentDidMount(): Promise<void> {
+    await this.props.getAndSetUser();
     this.props.loadProblemDetails(this.props.match.params.id);
     this.props.resetProblemSubmission();
-    await this.props.getAndSetUser();
   }
 
   get getStarterCode() {

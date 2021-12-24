@@ -22,6 +22,7 @@ export default function (app: express.Application): void {
       keys: ['keyboard cat'],
       secure: false,
       httpOnly: false,
+      sameSite: 'lax',
       // Cookie Options
       maxAge: 5 * 60 * 1000,
     }),
