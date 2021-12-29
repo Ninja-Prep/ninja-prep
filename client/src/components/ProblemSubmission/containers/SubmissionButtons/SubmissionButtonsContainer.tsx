@@ -7,7 +7,7 @@ import {getLanguage} from 'reducers/editorSettings/reducer';
 import {RootState} from 'reducers/rootReducer';
 import {submitProblem} from 'reducers/userSubmission/action';
 import {MatchProps} from 'utils/types/routing';
-import {toggleLoginModal} from 'reducers/loginModal/actions';
+import {toggleLoginModal} from 'reducers/displayModal/actions';
 
 const mapStateToProps = (state: RootState) => {
   return {

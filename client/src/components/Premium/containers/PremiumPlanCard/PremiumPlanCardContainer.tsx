@@ -6,7 +6,7 @@ import {loadStripe} from '@stripe/stripe-js';
 
 import {PurchasePlan} from 'utils/types/plans/plans';
 import {redirectToCheckoutForm} from 'services/stripe/stripeService';
-import {toggleLoginModal} from 'reducers/loginModal/actions';
+import {toggleLoginModal} from 'reducers/displayModal/actions';
 import {RootState} from 'reducers/rootReducer';
 import PremiumPlanCard from '../../PremiumPlanCard/PremiumPlanCard';
 import {LoginModalContainer} from 'components/Login';

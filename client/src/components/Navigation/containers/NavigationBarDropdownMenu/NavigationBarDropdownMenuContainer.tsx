@@ -3,18 +3,17 @@ import React, {Component} from 'react';
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'reducers/rootReducer';
 import {isPremiumUser} from 'reducers/auth/reducer';
-import {toggleLoginModal} from 'reducers/loginModal/actions';
+import {toggleContactEmailModal, toggleLoginModal} from 'reducers/displayModal/actions';
 import ProfileDropdown from '../../NavigationBarDropdownMenu/NavigationBarDropdownMenu';
 
 const mapStateToProps = (state: RootState) => {
   return {
     authUser: state.authReducer.authUser,
     isPremiumUser: isPremiumUser(state),
-    showLoginModal: state.loginModal.showLoginModal,
   };
 };
 
-const connector = connect(mapStateToProps, {toggleLoginModal});
+const connector = connect(mapStateToProps, {toggleLoginModal, toggleContactEmailModal});
 
 type Props = ConnectedProps<typeof connector>;
 
@@ -26,6 +25,9 @@ class NavigationBarDropdownMenu extends Component<Props> {
         isPremium={this.props.isPremiumUser}
         toggleLoginModal={() => {
           this.props.toggleLoginModal();
+        }}
+        toggleContactEmailModal={() => {
+          this.props.toggleContactEmailModal();
         }}
       />
     );

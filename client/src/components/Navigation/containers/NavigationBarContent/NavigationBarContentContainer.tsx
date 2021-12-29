@@ -3,7 +3,7 @@ import React, {Component, Fragment} from 'react';
 import {connect, ConnectedProps} from 'react-redux';
 
 import {RootState} from 'reducers/rootReducer';
-import {toggleLoginModal} from 'reducers/loginModal/actions';
+import {toggleLoginModal} from 'reducers/displayModal/actions';
 import NavigationBarContent from '../../NavigationBarContent/NavigationBarContent';
 
 const mapStateToProps = (state: RootState) => {

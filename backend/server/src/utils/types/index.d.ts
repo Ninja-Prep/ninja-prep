@@ -37,6 +37,7 @@ declare global {
       STRIPE_SUCCESS_URL: string;
       STRIPE_CANCEL_URL: string;
       STRIPE_TEST_KEY: string;
+      SENDGRID_API_KEY: string;
     }
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Styled from './styled';
 
-import {SETTINGS, ACCOUNT_LOGIN, CONTACT_FOOTER, NINJAPREP_EMAIL, PREMIUM_EXPIRATION_DATE} from 'utils/stringIds.json';
+import {SETTINGS, ACCOUNT_LOGIN, CONTACT_FOOTER, HELP_NINJAPREP_EMAIL, PREMIUM_EXPIRATION_DATE} from 'utils/stringIds.json';
 import {Box} from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 
@@ -42,7 +42,7 @@ function UserSettings(props: Props): JSX.Element {
 
         <Box p={3}>
           <Styled.Footer>
-            {CONTACT_FOOTER} <Styled.Email href="mailto:ninjaprep@ninjaprep.io">{NINJAPREP_EMAIL}</Styled.Email>
+            {CONTACT_FOOTER} <Styled.Email href="mailto:help@ninjaprep.io">{HELP_NINJAPREP_EMAIL}</Styled.Email>
           </Styled.Footer>
         </Box>
       </Styled.ContentBox>

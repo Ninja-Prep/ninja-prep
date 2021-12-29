@@ -11,9 +11,22 @@ interface DropdownItemProps {
   children: React.ReactNode;
   href?: string;
   component?: React.ElementType;
+  isTextOnly?: boolean;
 }
 
-export default function DropdownItem({DropdownIcon, children, ...linkProps}: DropdownItemProps): JSX.Element {
+export default function DropdownItem({DropdownIcon, children, isTextOnly, ...linkProps}: DropdownItemProps): JSX.Element {
+  if (isTextOnly) {
+    return (
+      <Styled.Link>
+        <Styled.Container>
+          <Styled.DropdownIcon>
+            <DropdownIcon />
+          </Styled.DropdownIcon>
+          {children}
+        </Styled.Container>
+      </Styled.Link>
+    );
+  }
   return (
     <Styled.Link>
       <Link {...linkProps}>

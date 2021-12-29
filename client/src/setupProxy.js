@@ -10,5 +10,8 @@ module.exports = function (app) {
     createProxyMiddleware('/payment', {
       target: `http://${process.env.PROXY_DOMAIN}:5000`,
     }),
+    createProxyMiddleware('/emails', {
+      target: `http://${process.env.PROXY_DOMAIN}:5000`,
+    }),
   );
 };

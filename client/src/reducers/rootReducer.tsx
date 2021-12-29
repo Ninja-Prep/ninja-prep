@@ -5,7 +5,7 @@ import problemDetails from './problemDetails/reducer';
 import textEditor from './textEditor/reducer';
 import userSubmission from './userSubmission/reducer';
 import authReducer from './auth/reducer';
-import loginModal from './loginModal/reducer';
+import displayModal from './displayModal/reducer';
 import footer from './footer/reducer';
 
 const rootReducer = combineReducers({
@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
   textEditor,
   userSubmission,
   problemDetails,
-  loginModal,
+  displayModal,
   footer,
 });
 export default rootReducer;

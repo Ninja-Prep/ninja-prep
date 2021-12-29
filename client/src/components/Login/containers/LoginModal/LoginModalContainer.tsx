@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 
 import {connect, ConnectedProps} from 'react-redux';
 import {RootState} from 'reducers/rootReducer';
-import {toggleLoginModal} from 'reducers/loginModal/actions';
+import {toggleLoginModal} from 'reducers/displayModal/actions';
 
 import LoginModal from '../../LoginModal/LoginModal';
 
 const mapStateToProps = (state: RootState) => {
   return {
-    showLoginModal: state.loginModal.showLoginModal,
+    showLoginModal: state.displayModal.showLoginModal,
   };
 };
 

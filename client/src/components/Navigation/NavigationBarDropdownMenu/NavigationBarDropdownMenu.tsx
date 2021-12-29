@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import BugReportIcon from '@mui/icons-material/BugReport';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import SettingsIcon from '@mui/icons-material/Settings';
+import SendIcon from '@mui/icons-material/Send';
 
 import {User} from 'utils/types/user';
 import DropdownItem from './DropdownItem';
-import {GET_PREMIUM_NAVIGATION, SETTINGS, REPORT_A_BUG, SIGN_OUT_NAVIGATION, SIGN_IN_NAVIGATION} from 'utils/stringIds.json';
+import {GET_PREMIUM_NAVIGATION, SETTINGS, CONTACT_US, SIGN_OUT_NAVIGATION, SIGN_IN_NAVIGATION} from 'utils/stringIds.json';
 import NavLink from '../NavigationBarLinks/styled';
 import {ImageWrapper, PremiumLockIcon, PremiumTextColor} from './styled';
 import {IconButton, Menu, MenuItem} from '@mui/material';
@@ -15,6 +15,7 @@ import {IconButton, Menu, MenuItem} from '@mui/material';
 interface ProfileProps {
   readonly authUser: User;
   readonly toggleLoginModal: () => void;
+  readonly toggleContactEmailModal: () => void;
   readonly isPremium?: boolean;
 }
 
@@ -69,9 +70,15 @@ const NavigationBarDropdownMenu = (props: ProfileProps): JSX.Element => {
               </DropdownItem>
             </MenuItem>
           )}
-          <MenuItem key="2" onClick={handleCloseUserMenu}>
-            <DropdownItem href="mailto:ninjaprep@ninjaprep.io?subject=Issue: [Insert Issue]" DropdownIcon={BugReportIcon}>
-              {REPORT_A_BUG}
+          <MenuItem
+            key="2"
+            onClick={() => {
+              handleCloseUserMenu();
+              props.toggleContactEmailModal();
+            }}
+          >
+            <DropdownItem isTextOnly DropdownIcon={SendIcon}>
+              {CONTACT_US}
             </DropdownItem>
           </MenuItem>
           <MenuItem key="3" onClick={handleCloseUserMenu}>

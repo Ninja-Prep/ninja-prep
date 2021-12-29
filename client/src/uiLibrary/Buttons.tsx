@@ -71,6 +71,9 @@ export const LightBlueLink = styled(Link)`
 `;
 
 export const LightBlueButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 12px;
   ${PageButtonCSS}
   text-decoration: none;
   color: White;
@@ -79,6 +82,9 @@ export const LightBlueButton = styled.button`
     cursor: pointer;
     color: White;
     background-color: #1da4bf;
+  }
+  :disabled {
+    opacity: 0.5;
   }
 `;
 
