@@ -16,6 +16,9 @@ export const TRIMMED_ELLIPSES = css`
 export const STANDARDIZED_PAGE_PADDING = css`
   padding: 0 16%;
 `;
+export const STANDARDIZED_MOBILE_PAGE_PADDING = css`
+  padding: 0 32px;
+`;
 
 export const FULL_PAGE_WIDTH = css`
   width: 100vw;

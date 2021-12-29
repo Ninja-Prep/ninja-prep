@@ -10,8 +10,9 @@ import UserSettings from 'components/UserSettings/containers/UserSettingsContain
 import ProblemSubmissionPageContainer from 'pages/ProblemSubmissionPage/containers/ProblemSubmissionPageContainer';
 import ChallengesPageContainer from 'pages/ChallengesPage/containers/ChallengesPageContainer';
 import {TermsAndConditions} from 'components/TermsAndConditions/TermsAndConditions';
+import LandingPageMobile from 'pages/mobile/LandingPageMobile';
 
-export const LandingPageRoute = <ProtectedRoute path="/" exact authComponent={ChallengesPageContainer} component={LandingPage} />;
+export const LandingPageRoute = <ProtectedRoute path="/" exact authComponent={ChallengesPageContainer} component={LandingPage} mobileComponent={LandingPageMobile} />;
 export const OrderSuccessRoute = <ProtectedRoute path="/order/success" exact fallbackRedirectTo="/" authComponent={OrderSuccess} />;
 export const ChallengesRoute = <DefaultRoute path="/challenges" exact component={ChallengesPageContainer} />;
 export const PremiumRoute = <UnsubscribedRoute path="/premium" exact unsubscribedComponent={PremiumPage} fallbackRedirectTo="/" />;

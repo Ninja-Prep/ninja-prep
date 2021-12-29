@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     background: #555; 
   }
   
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1281px) {
     body {
       margin: 0;
       padding: 0 16% 200px 16%;
@@ -41,11 +41,14 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1280px) {
     body {
       margin: 0;
-      /* Change padding bottom to be footer height */
-      padding-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto; 
+      max-width: 576px;
+      padding: 0 32px;
+
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
     }

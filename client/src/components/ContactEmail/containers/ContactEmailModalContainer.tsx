@@ -38,7 +38,6 @@ class ContactEmailModalContainer extends Component<Props, State> {
     this.setState({pending: true});
 
     const response = await postContactEmail(data.sender, data.subject, data.emailMessage);
-    console.log(response);
     if (response.status === 200) {
       this.setState({submitted: true, pending: false});
     }

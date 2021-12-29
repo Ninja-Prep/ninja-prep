@@ -15,6 +15,7 @@ import {connect, ConnectedProps} from 'react-redux';
 import RouteWrapper from './RouteWrapper';
 import {Redirect} from 'react-router-dom';
 import AsyncSpinner from 'utils/AsyncSpinner/AsyncSpinner';
+import {withMobileSizing} from '../utils/hocs/withMediaSizing';
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -27,8 +28,10 @@ const connector = connect(mapStateToProps);
 
 type Props = {
   component?: React.ComponentType<RouteComponentProps>;
+  mobileComponent?: React.ComponentType<RouteComponentProps>;
   authComponent: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
   fallbackRedirectTo?: string;
+  isMobile?: boolean;
 } & ConnectedProps<typeof connector> &
   RouteProps;
 
@@ -46,8 +49,8 @@ class ProtectedRoute extends React.Component<Props, State> {
   }
 
   render(): JSX.Element {
-    const Component = this.props.component;
-    const AuthComponent = this.props.authComponent;
+    const Component = this.props.isMobile && this.props.mobileComponent ? this.props.mobileComponent : this.props.component;
+    const AuthComponent = this.props.isMobile && this.props.mobileComponent ? this.props.mobileComponent : this.props.authComponent;
 
     let RouterWrapper = <Fragment />;
     if (this.props.authUser && AuthComponent) {
@@ -64,4 +67,4 @@ class ProtectedRoute extends React.Component<Props, State> {
   }
 }
 
-export default connector(ProtectedRoute);
+export default withMobileSizing(connector(ProtectedRoute));
