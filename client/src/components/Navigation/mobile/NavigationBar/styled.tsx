@@ -2,14 +2,20 @@ import styled from 'styled-components';
 
 import * as CoreUI from 'uiLibrary/CoreUI';
 import MenuIcon from '@mui/icons-material/Menu';
+import AppBar from '@mui/material/AppBar';
+
+export const AppBarContainer = styled(AppBar)`
+  &.MuiAppBar-root {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 32px;
+    background-color: ${CoreUI.LIGHT_BLUE};
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 32px;
-  background-color: ${CoreUI.LIGHT_BLUE};
 `;
 
 export const DrawerButton = styled.div`

@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
       margin-left: auto;
       margin-right: auto; 
       max-width: 576px;
-      padding: 0 32px;
+      padding: 97px 32px;
 
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;

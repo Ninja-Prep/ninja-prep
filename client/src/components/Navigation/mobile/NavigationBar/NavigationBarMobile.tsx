@@ -16,6 +16,7 @@ import SendIcon from '@mui/icons-material/Send';
 import LoginIcon from '@mui/icons-material/Login';
 import {User} from 'utils/types/user';
 import {LoginModalContainer} from 'components/Login';
+import {DarkNinjaPrepLogo} from 'utils/NinjaPrepLogos';
 import {Link} from 'react-router-dom';
 import ContactEmailModalContainer from 'components/ContactEmail/containers/ContactEmailModalContainer';
 
@@ -42,6 +43,11 @@ export default function NavigationBarMobile(props: Props) {
   const list = () => (
     <Box sx={{width: 250}} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
+        <ListItem button>
+          <Styled.NavLink as={Link} to="/">
+            <DarkNinjaPrepLogo height={40} width={100} />
+          </Styled.NavLink>
+        </ListItem>
         <ListItem button>
           <ListItemIcon>
             <ViewListIcon />
@@ -111,15 +117,17 @@ export default function NavigationBarMobile(props: Props) {
   );
 
   return (
-    <Styled.Container>
-      <Button onClick={toggleDrawer(true)}>
-        <Styled.DrawerIcon />
-      </Button>
-      <Drawer anchor={'right'} open={state.isOpen} onClose={toggleDrawer(false)}>
-        {list()}
-      </Drawer>
-      <LoginModalContainer />
-      <ContactEmailModalContainer />
-    </Styled.Container>
+    <Styled.AppBarContainer position="fixed" color="inherit">
+      <Styled.Container>
+        <Button onClick={toggleDrawer(true)}>
+          <Styled.DrawerIcon />
+        </Button>
+        <Drawer anchor={'right'} open={state.isOpen} onClose={toggleDrawer(false)}>
+          {list()}
+        </Drawer>
+        <LoginModalContainer />
+        <ContactEmailModalContainer />
+      </Styled.Container>
+    </Styled.AppBarContainer>
   );
 }
