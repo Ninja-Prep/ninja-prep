@@ -28,19 +28,19 @@ function UserSettings(props: Props): JSX.Element {
           <Styled.Subtitle>{ACCOUNT_LOGIN}</Styled.Subtitle>
           <Styled.Content>{props.oauthProvider}</Styled.Content>
           <Styled.Content>{props.email}</Styled.Content>
+          {props.isPremium ? (
+            <React.Fragment>
+              <Styled.Subtitle> {PREMIUM_EXPIRATION_DATE}</Styled.Subtitle>
+              <Styled.Content> {props.premiumExpirationDate}</Styled.Content>
+            </React.Fragment>
+          ) : (
+            <Box pt={2}>
+              <GetFullAccessButton sizing="medium" />
+            </Box>
+          )}
         </Box>
-        {props.isPremium ? (
-          <Box p={3}>
-            <Styled.Subtitle> {PREMIUM_EXPIRATION_DATE}</Styled.Subtitle>
-            <Styled.Content> {props.premiumExpirationDate}</Styled.Content>
-          </Box>
-        ) : (
-          <Box p={1}>
-            <GetFullAccessButton sizing="medium" />
-          </Box>
-        )}
 
-        <Box p={3}>
+        <Box px={3} py={1}>
           <Styled.Footer>
             {CONTACT_FOOTER} <Styled.Email href="mailto:help@ninjaprep.io">{HELP_NINJAPREP_EMAIL}</Styled.Email>
           </Styled.Footer>

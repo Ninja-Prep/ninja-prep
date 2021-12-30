@@ -21,7 +21,6 @@ export const MEDIUM_BUTTON = css`
 
 export const GET_FULL_ACCESS_CSS = css`
   box-sizing: border-box;
-  margin: auto 48px auto 5px;
   display: inline-flex;
   align-items: center;
   background-color: ${CoreUI.PREMIUM_COLOR};

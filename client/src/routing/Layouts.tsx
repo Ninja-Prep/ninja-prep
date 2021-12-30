@@ -14,20 +14,24 @@ import NavigationBar from 'components/Navigation/NavigationBar/NavigationBar';
 import {HeaderPadding} from './styledLayouts';
 import {RouteProps} from 'react-router';
 import * as Styled from './styledLayouts';
+import {useMediaQuery} from 'react-responsive';
+import NavigationBarDropdownMenu from 'components/Navigation/containers/NavigationBarDropdownMenu/NavigationBarDropdownMenuContainer';
 
 interface Props extends RouteProps {
   children: React.ReactChild | React.ReactChild[];
   hasFooter?: boolean;
 }
 
-export const HeaderLayout = React.memo(
-  ({children}: Props): JSX.Element => (
+export const HeaderLayout = React.memo(({children}: Props): JSX.Element => {
+  const isMobile = useMediaQuery({maxWidth: 1280});
+
+  return (
     <HeaderPadding>
-      <NavigationBar />
+      {isMobile ? <NavigationBarDropdownMenu /> : <NavigationBar />}
       {children}
     </HeaderPadding>
-  ),
-);
+  );
+});
 
 export const FooterLayout = React.memo(
   ({children}: Props): JSX.Element => (
@@ -38,14 +42,18 @@ export const FooterLayout = React.memo(
   ),
 );
 
-export const HeaderandFooterLayout: FunctionComponent<Props> = React.memo(({children, hasFooter}: Props) => (
-  <HeaderPadding>
-    <NavigationBar />
-    <Styled.Container>
-      {children}
-      <div style={hasFooter ? {} : {display: 'none'}}>
-        <FooterBarContainer />
-      </div>
-    </Styled.Container>
-  </HeaderPadding>
-));
+export const HeaderandFooterLayout: FunctionComponent<Props> = React.memo(({children, hasFooter}: Props) => {
+  const isMobile = useMediaQuery({maxWidth: 1280});
+
+  return (
+    <HeaderPadding>
+      {isMobile ? <NavigationBarDropdownMenu /> : <NavigationBar />}
+      <Styled.Container>
+        {children}
+        <div style={hasFooter ? {} : {display: 'none'}}>
+          <FooterBarContainer />
+        </div>
+      </Styled.Container>
+    </HeaderPadding>
+  );
+});

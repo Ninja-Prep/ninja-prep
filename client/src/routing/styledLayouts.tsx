@@ -6,7 +6,9 @@ Content below needs to be shifted the height of the header
 import styled from 'styled-components';
 
 export const HeaderPadding = styled.div`
-  padding-top: 85px;
+  @media only screen and (min-width: 1281px) {
+    padding-top: 85px;
+  }
 `;
 
 export const Container = styled.div`

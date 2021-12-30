@@ -46,7 +46,8 @@ export const HeadingFont = styled.p`
 export const FlexBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  align-items: center;
+  gap: ${CoreUI.EXTRA_LARGE_SPACING};
 `;
 
 export const FlexRow = styled.div`
@@ -78,6 +79,7 @@ export const BenefitsContainer = styled.div`
 
 export const BenefitHeading = styled.div`
   ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
+  justify-content: center;
   display: flex;
   align-items: center;
   margin-bottom: 16px;

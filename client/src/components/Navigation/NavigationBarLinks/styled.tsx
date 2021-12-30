@@ -24,4 +24,10 @@ export const NavLink = styled.a`
   ${CoreUI.BLUE_UNDER_LINE_CSS};
 `;
 
+export const PremiumButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 48px;
+`;
+
 export default NavLink;

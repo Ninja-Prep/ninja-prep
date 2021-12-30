@@ -17,7 +17,11 @@ interface Props {
 const NavigationBarLinks = (props: Props): JSX.Element => {
   return (
     <Fragment>
-      {!props.isPremiumUser && <GetFullAccessButton sizing="medium" />}
+      {!props.isPremiumUser && (
+        <Styled.PremiumButtonContainer>
+          <GetFullAccessButton sizing="medium" />
+        </Styled.PremiumButtonContainer>
+      )}
       <Styled.NavLink as={Link} to="/challenges">
         {CHALLENGES_NAVIGATION}
       </Styled.NavLink>
