@@ -11,7 +11,8 @@ export const CenterContent = styled(Box)`
   transform: translate(-50%, -50%);
   width: 90vw;
   max-width: 550px;
-  min-width: 390px;
+
+  max-height: 95vh;
   background-color: #ffffff;
   border-radius: 10px;
   border-color: #24d1f3;

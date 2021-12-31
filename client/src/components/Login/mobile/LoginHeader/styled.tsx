@@ -53,6 +53,8 @@ export const SocialMediaContainer = styled.div`
 export const GoogleButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
   background-color: #DB2828;
+  max-width: 340px;
+  width: 100%;
   margin-bottom: 16px;
   :hover {
     background-color: #bf0000;
@@ -63,6 +65,8 @@ export const FacebookButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
   background-color: #3B5998;
   color: white !important;
+  max-width: 340px;
+  width: 100%;
   margin-bottom: 16px;
   :hover {
     background-color: #192e92;
@@ -72,6 +76,8 @@ export const FacebookButton = styled.a`
 export const GitHubButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
   color: white !important;
+  max-width: 340px;
+  width: 100%;
   background-color: #1b1c1d;
   > svg {
     float: left;

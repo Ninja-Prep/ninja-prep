@@ -146,7 +146,7 @@ function ContactEmailModal({showModal, toggleModal, onSubmit, submitted, pending
                         sx={{width: '100%'}}
                         error={!!errors.emailMessage}
                         multiline
-                        rows={8}
+                        rows={6}
                         helperText={errors.emailMessage ? errors.emailMessage.message : ''}
                       />
                     )}
