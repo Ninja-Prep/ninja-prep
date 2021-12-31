@@ -3,6 +3,7 @@ import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const QuestionTitle = styled.div`
   ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
+  ${CoreUI.TRIMMED_ELLIPSES}
   text-decoration: none;
   text-decoration: none;
   padding: 32px 0 16px 0;

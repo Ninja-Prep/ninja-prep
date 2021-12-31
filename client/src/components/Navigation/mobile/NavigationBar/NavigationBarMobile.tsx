@@ -43,63 +43,62 @@ export default function NavigationBarMobile(props: Props) {
   const list = () => (
     <Box sx={{width: 250}} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
-        <ListItem button>
-          <Styled.NavLink as={Link} to="/">
+        <Styled.NavLink as={Link} to="/">
+          <ListItem button>
             <DarkNinjaPrepLogo height={40} width={100} />
-          </Styled.NavLink>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ViewListIcon />
-          </ListItemIcon>
-          <Styled.NavLink as={Link} to="/challenges">
+          </ListItem>
+        </Styled.NavLink>
+        <Styled.NavLink as={Link} to="/challenges">
+          <ListItem button>
+            <ListItemIcon>
+              <ViewListIcon />
+            </ListItemIcon>
             <ListItemText primary="Problems" />
-          </Styled.NavLink>
-        </ListItem>
+          </ListItem>
+        </Styled.NavLink>
         {props.authUser ? (
           <React.Fragment>
-            <ListItem button>
+            <ListItem
+              button
+              onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+                e.preventDefault();
+                props.toggleContactEmailModal();
+              }}
+            >
               <ListItemIcon>
                 <SendIcon />
               </ListItemIcon>
-              <ListItemText
-                primary="Contact Us"
-                onClick={(e: React.MouseEvent<HTMLDivElement>) => {
-                  e.preventDefault();
-                  props.toggleContactEmailModal();
-                }}
-              ></ListItemText>
+              <ListItemText primary="Contact Us"></ListItemText>
             </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <SettingsIcon />
-              </ListItemIcon>
-              <Styled.NavLink as={Link} to="/settings">
+            <Styled.NavLink as={Link} to="/settings">
+              <ListItem button>
+                <ListItemIcon>
+                  <SettingsIcon />
+                </ListItemIcon>
                 <ListItemText primary="Settings"></ListItemText>
-              </Styled.NavLink>
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <ExitToAppIcon />
-              </ListItemIcon>
-
-              <Styled.NavLink href="/api/auth/logout">
+              </ListItem>
+            </Styled.NavLink>
+            <Styled.NavLink href="/api/auth/logout">
+              <ListItem button>
+                <ListItemIcon>
+                  <ExitToAppIcon />
+                </ListItemIcon>
                 <ListItemText primary="Log Out"></ListItemText>
-              </Styled.NavLink>
-            </ListItem>
+              </ListItem>
+            </Styled.NavLink>
           </React.Fragment>
         ) : (
-          <ListItem button>
+          <ListItem
+            button
+            onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+              e.preventDefault();
+              props.toggleLoginModal();
+            }}
+          >
             <ListItemIcon>
               <LoginIcon />
             </ListItemIcon>
-            <ListItemText
-              primary="Sign Up"
-              onClick={(e: React.MouseEvent<HTMLDivElement>) => {
-                e.preventDefault();
-                props.toggleLoginModal();
-              }}
-            ></ListItemText>
+            <ListItemText primary="Sign Up" />
           </ListItem>
         )}
       </List>
@@ -107,9 +106,7 @@ export default function NavigationBarMobile(props: Props) {
         <React.Fragment>
           <Divider />
           <Styled.DrawerButton>
-            <div>
-              <GetFullAccessButton sizing="medium" />
-            </div>
+            <GetFullAccessButton sizing="medium" />
           </Styled.DrawerButton>
         </React.Fragment>
       )}
