@@ -11,11 +11,12 @@ import ProblemSubmissionPageContainer from 'pages/ProblemSubmissionPage/containe
 import ChallengesPageContainer from 'pages/ChallengesPage/containers/ChallengesPageContainer';
 import {TermsAndConditions} from 'components/TermsAndConditions/TermsAndConditions';
 import LandingPageMobile from 'pages/mobile/LandingPageMobile';
+import PremiumPageMobile from 'pages/PremiumPage/mobile/PremiumPageMobile';
 
 export const LandingPageRoute = <ProtectedRoute path="/" exact authComponent={ChallengesPageContainer} component={LandingPage} mobileComponent={LandingPageMobile} />;
 export const OrderSuccessRoute = <ProtectedRoute path="/order/success" exact fallbackRedirectTo="/" authComponent={OrderSuccess} />;
 export const ChallengesRoute = <DefaultRoute path="/challenges" exact component={ChallengesPageContainer} />;
-export const PremiumRoute = <UnsubscribedRoute path="/premium" exact unsubscribedComponent={PremiumPage} fallbackRedirectTo="/" />;
+export const PremiumRoute = <UnsubscribedRoute path="/premium" exact unsubscribedComponent={PremiumPage} unsubscribedMobileComponent={PremiumPageMobile} fallbackRedirectTo="/" />;
 export const ProblemSubmissionRoute = () => <DefaultRoute path="/problem/:id" exact component={ProblemSubmissionPageContainer} transitionOff />;
 export const Error404Route = <DefaultRoute exact component={Error404Component} />;
 export const SettingsPageRoute = <ProtectedRoute path="/settings" exact authComponent={UserSettings} fallbackRedirectTo="/" />;

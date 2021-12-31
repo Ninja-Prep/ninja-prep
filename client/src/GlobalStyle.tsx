@@ -32,8 +32,6 @@ const GlobalStyle = createGlobalStyle`
   
   @media only screen and (min-width: 1281px) {
     body {
-      margin: 0;
-      padding: 0 16% 200px 16%;
       /* Change padding bottom to be footer height */
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
@@ -43,12 +41,6 @@ const GlobalStyle = createGlobalStyle`
   
   @media only screen and (max-width: 1280px) {
     body {
-      margin: 0;
-      margin-left: auto;
-      margin-right: auto; 
-      max-width: 576px;
-      padding: 97px 32px;
-
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
     }

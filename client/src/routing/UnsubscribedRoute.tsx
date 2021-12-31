@@ -11,6 +11,7 @@ import React from 'react';
 import {RouteComponentProps, RouteProps} from 'react-router';
 import {RootState} from 'reducers/rootReducer';
 import {connect, ConnectedProps} from 'react-redux';
+import {withMobileSizing} from 'utils/hocs/withMediaSizing';
 
 import RouteWrapper from './RouteWrapper';
 import {isPremiumUser} from 'reducers/auth/reducer';
@@ -28,12 +29,14 @@ const connector = connect(mapStateToProps, {getAndSetUser});
 type Props = {
   fallbackRedirectTo: string;
   unsubscribedComponent: React.ComponentType<RouteComponentProps>;
+  unsubscribedMobileComponent: React.ComponentType<RouteComponentProps>;
+  isMobile?: boolean;
 } & ConnectedProps<typeof connector> &
   RouteProps;
 
 class UnsubscribedRoute extends React.Component<Props> {
   render(): JSX.Element | null {
-    const UnsubscribedComponent = this.props.unsubscribedComponent;
+    const UnsubscribedComponent = this.props.isMobile ? this.props.unsubscribedMobileComponent : this.props.unsubscribedComponent;
 
     if (this.props.isUnsubscribedUser && UnsubscribedComponent) {
       return <RouteWrapper component={UnsubscribedComponent} />;
@@ -42,4 +45,4 @@ class UnsubscribedRoute extends React.Component<Props> {
   }
 }
 
-export default connector(UnsubscribedRoute);
+export default withMobileSizing(connector(UnsubscribedRoute));

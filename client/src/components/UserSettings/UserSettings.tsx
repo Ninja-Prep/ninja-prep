@@ -39,7 +39,6 @@ function UserSettings(props: Props): JSX.Element {
             </Box>
           )}
         </Box>
-
         <Box px={3} py={1}>
           <Styled.Footer>
             {CONTACT_FOOTER} <Styled.Email href="mailto:help@ninjaprep.io">{HELP_NINJAPREP_EMAIL}</Styled.Email>

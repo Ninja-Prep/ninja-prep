@@ -4,8 +4,9 @@ import {connect, ConnectedProps} from 'react-redux';
 
 import {RootState} from 'reducers/rootReducer';
 import {toggleContactEmailModal, toggleLoginModal} from 'reducers/displayModal/actions';
-import NavigationBarContent from '../../NavigationBarContent/NavigationBarContent';
+import {withMobileSizing} from 'utils/hocs/withMediaSizing';
 import {isPremiumUser} from 'reducers/auth/reducer';
+import NavigationBarMobile from 'components/Navigation/mobile/NavigationBar/NavigationBarMobile';
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -20,13 +21,13 @@ type Props = {
   isMobile?: boolean;
 } & ConnectedProps<typeof connector>;
 
-class NavigationBarContentContainer extends Component<Props> {
+class NavigationBarMobileContainer extends Component<Props> {
   render(): JSX.Element {
     if (this.props.isLoadingUser) {
       return <Fragment />;
     }
-    return <NavigationBarContent {...this.props} />;
+    return <NavigationBarMobile {...this.props} />;
   }
 }
 
-export default connector(NavigationBarContentContainer);
+export default withMobileSizing(connector(NavigationBarMobileContainer));

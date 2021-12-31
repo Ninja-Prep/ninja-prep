@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const Container = styled.div`
+  min-width: fit-content;
   '&.mui-selected': {
     outline: 'none';
   }

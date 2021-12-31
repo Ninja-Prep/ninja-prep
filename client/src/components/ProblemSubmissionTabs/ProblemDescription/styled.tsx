@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: stretch;
   align-items: stretch;
   flex-grow: 1;
+  min-width: 300px;
   img {
     max-width: 100%;
     max-height: 400px;
@@ -22,7 +23,7 @@ export const Container = styled.div`
     padding: 20px;
     font-family: 'Menlo';
     border: 1px solid #bcc0c4;
-    width: auto;
+    width: fit-content;
   }
   code {
     padding: 4px;

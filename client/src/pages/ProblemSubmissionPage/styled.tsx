@@ -9,6 +9,7 @@ export const SubmissionWrapper = styled.div`
   height: 100vh;
   margin-left: calc(-50vw + 50%);
   width: 100vw;
+  min-width: 896px;
 
   .testcaseSplitter {
     height: 13px !important;
@@ -16,19 +17,16 @@ export const SubmissionWrapper = styled.div`
     border-color: #f3f7f8 !important;
   }
   ${CoreUI.FadeInCSS}
+  overflow-x: auto;
 `;
 
 export const VerticalSplitter = styled(ReflexSplitter)`
   width: 10px;
 `;
 
-export const CodeEditorReflex = styled(ReflexElement)`
-  overflow-x: hidden !important;
-`;
+export const CodeEditorReflex = styled(ReflexElement)``;
 
-export const SubmissionContentReflex = styled(ReflexElement)`
-  overflow-x: hidden !important;
-`;
+export const SubmissionContentReflex = styled(ReflexElement)``;
 
 export const OuterEditorWrapper = styled.div`
   display: flex;
@@ -56,4 +54,8 @@ export const InnerAreaWrapper = styled.div`
 export const WidthContainer = styled.div`
   background-color: #f8fcff;
   margin-left: calc(-50vw + 50%);
+`;
+
+export const EditorSubmissionContainer = styled.div`
+  min-width: 600px;
 `;

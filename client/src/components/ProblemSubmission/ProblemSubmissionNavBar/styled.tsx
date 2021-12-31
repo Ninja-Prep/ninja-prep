@@ -18,7 +18,6 @@ export const LogoLink = styled.div`
 
 export const NavLinks = styled.div`
   display: flex;
-  flex: 1 1 0;
   align-items: center;
   justify-content: flex-end;
 `;
