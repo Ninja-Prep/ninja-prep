@@ -42,9 +42,8 @@ const GlobalStyle = createGlobalStyle`
   }
   
   @media only screen and (max-width: 1280px) {
-    body {
+    html, body {
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
-      overflow-x: hidden;
       min-width: 100vw;
     }
   }

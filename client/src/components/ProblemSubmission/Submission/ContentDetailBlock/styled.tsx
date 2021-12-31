@@ -14,7 +14,6 @@ export const ContentDetail = styled.p`
   border-radius: 0.25rem !important;
   background-color: ${CoreUI.BACKGROUND_GREY};
   padding: 1rem !important;
-  min-width: 500px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: normal;
