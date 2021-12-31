@@ -29,10 +29,10 @@ function UserSettings(props: Props): JSX.Element {
           <Styled.Content>{props.oauthProvider}</Styled.Content>
           <Styled.Content>{props.email}</Styled.Content>
           {props.isPremium ? (
-            <React.Fragment>
+            <Box py={3}>
               <Styled.Subtitle> {PREMIUM_EXPIRATION_DATE}</Styled.Subtitle>
               <Styled.Content> {props.premiumExpirationDate}</Styled.Content>
-            </React.Fragment>
+            </Box>
           ) : (
             <Box pt={2}>
               <GetFullAccessButton sizing="medium" />

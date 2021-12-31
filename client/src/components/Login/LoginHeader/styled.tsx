@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-export const ButtonContent = styled.div``;
-
 export const RightChevron = styled(NavigateNextIcon)`
   ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
   color: white;
@@ -49,6 +47,7 @@ export const SocialMediaContainer = styled.div`
 `;
 
 export const GoogleButton = styled.a`
+  width: 340px;
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
   background-color: #DB2828;
   margin-bottom: 16px;
@@ -59,7 +58,8 @@ export const GoogleButton = styled.a`
 
 export const FacebookButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
-  background-color: #3B5998;
+  width: 340px;
+  background-color: #3b5998;
   color: white !important;
   margin-bottom: 16px;
   :hover {
@@ -68,6 +68,7 @@ export const FacebookButton = styled.a`
 `;
 
 export const GitHubButton = styled.a`
+  width: 340px;
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
   color: white !important;
   background-color: #1b1c1d;

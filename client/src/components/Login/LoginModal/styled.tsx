@@ -9,11 +9,13 @@ export const CenterContent = styled(Box)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 550;
+  max-width: 550;
   background-color: #ffffff;
   border-radius: 10px;
   border-color: #24d1f3;
   box-shadow: 0 5px 50px rgba(36, 209, 243, 20%);
+  width: 90vw;
+
 `;
 
 export const LoginText = styled.p`

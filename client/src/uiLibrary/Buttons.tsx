@@ -105,8 +105,6 @@ export const SOCIAL_MEDIA_BUTTON = css`
   padding: 16px 32px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 16%);
   border-style: none;
-  width: 340px;
-  color: #ffffff;
   transition-duration: 0.4s;
   text-align: center;
   color: white;
