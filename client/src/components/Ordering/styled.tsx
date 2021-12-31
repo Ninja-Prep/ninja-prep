@@ -12,6 +12,10 @@ export const OrderContainer = styled.div`
   padding: 50px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 5px;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 25px;
+  }
 `;
 
 export const BoldThankYouHeader = styled.b`
@@ -67,8 +71,6 @@ export const EmailSizing = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
-  width: 50%;
-  margin: auto;
   text-align: center;
 `;
 
@@ -82,4 +84,9 @@ export const ErrorIcon = styled(ErrorOutlineIcon)`
 export const ThankYouHeader = styled.div`
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 1280px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;

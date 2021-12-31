@@ -48,9 +48,9 @@ class OrderSuccessContainer extends Component<OrderSuccessProps, State> {
     if (this.state.isLoadingCheckoutSession) {
       return <AsyncSpinner />;
     } else if (this.props.authUser && !this.state.error) {
-      return <OrderSuccess email={this.state.email} expirationDate={this.state.expirationDate} provider={this.props.authUser.oauthProvider} />;
-    } else {
       return <OrderSuccessNotFound />;
+    } else {
+      return <OrderSuccess email={this.state.email} expirationDate={this.state.expirationDate} provider={this.props?.authUser?.oauthProvider || 'Google'} />;
     }
   }
 }

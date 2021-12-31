@@ -13,6 +13,8 @@ import ProblemSubmissionPage from '../ProblemSubmissionPage';
 import ProtectedProblemPage from 'pages/ProtectedProblemPage/ProtectedProblemPage';
 import {resetProblemSubmission} from 'reducers/userSubmission/action';
 import {getAndSetUser} from 'reducers/auth/actions';
+import {withMobileSizing} from 'utils/hocs/withMediaSizing';
+import ProtectedProblemPageMobile from 'pages/ProtectedProblemPage/mobile/ProtectedProblemPageMobile';
 
 interface MatchParams {
   id: string;
@@ -30,7 +32,10 @@ const mapStateToProps = (state: RootState) => {
 
 const connector = connect(mapStateToProps, {loadProblemDetails, resetProblemSubmission, getAndSetUser});
 
-type Props = ConnectedProps<typeof connector> & RouteComponentProps<MatchParams>;
+type Props = {
+  isMobile: boolean;
+} & ConnectedProps<typeof connector> &
+  RouteComponentProps<MatchParams>;
 type State = {
   isMounted: boolean;
 };
@@ -53,10 +58,10 @@ class ProblemSubmissionPageContainer extends Component<Props, State> {
   render(): JSX.Element {
     if (this.props.isLoadingProblemDetails || !this.state.isMounted) return <AsyncSpinner />;
     else if (!this.props.problemDetails?.isFree && !this.props.isPremiumUser) {
-      return <ProtectedProblemPage title={this.props.problemDetails?.title} />;
+      return this.props.isMobile ? <ProtectedProblemPageMobile title={this.props.problemDetails?.title} /> : <ProtectedProblemPage title={this.props.problemDetails?.title} />;
     }
     return <ProblemSubmissionPage starterCode={this.getStarterCode} problemDetails={this.props.problemDetails} />;
   }
 }
 
-export default withRouter(connector(ProblemSubmissionPageContainer));
+export default withMobileSizing(withRouter(connector(ProblemSubmissionPageContainer)));

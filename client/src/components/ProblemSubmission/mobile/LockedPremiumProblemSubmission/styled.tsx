@@ -1,18 +1,14 @@
 import styled from 'styled-components';
 import LockIcon from '@mui/icons-material/Lock';
 import {Box} from '@mui/material';
-
-export const HeightWrapper = styled.div`
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 30%;
-  left: 50%;
-`;
+import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const LockedPremiumContainer = styled(Box)`
+  height: 100vh;
+  margin: auto 0;
   padding: 50px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  width: 450px;
+  max-width: 450px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
