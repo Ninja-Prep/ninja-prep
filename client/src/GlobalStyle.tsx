@@ -36,6 +36,8 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
       min-height: 100vh;
+      min-width: 100vw;
+
     }
   }
   
@@ -43,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
     body {
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
+      min-width: 100vw;
     }
   }
   `;

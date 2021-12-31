@@ -15,16 +15,17 @@ import {CenterContent, FacebookButton, GitHubButton, GoogleButton, LoginText, Mo
 interface Props {
   showModal: boolean;
   toggleModal: () => void;
+  isMobile?: boolean;
 }
 
-function LoginModal({showModal, toggleModal}: Props): JSX.Element {
+function LoginModal({showModal, toggleModal, isMobile}: Props): JSX.Element {
   return (
     <Modal open={showModal} onClose={toggleModal}>
       <Fade in={showModal} timeout={showModal ? 500 : 300}>
         <CenterContent>
           <DarkNinjaPrepLogo height={50} width={150} />
           <LoginText>{SIGN_UP_LOGIN}</LoginText>
-          <ModalSubtext>{START_CODING_LOGIN_MODAL}</ModalSubtext>
+          {!isMobile && <ModalSubtext>{START_CODING_LOGIN_MODAL}</ModalSubtext>}
           <SocialMediaButtonContainer>
             <GoogleButton href="/api/auth/google">
               <GoogleIcon />

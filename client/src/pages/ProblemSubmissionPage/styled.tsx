@@ -1,7 +1,13 @@
 import CodeEditorUserSettings from 'components/ProblemSubmission/CodeEditorSettings/CodeEditorUserSettings';
 import {ReflexElement, ReflexSplitter} from 'react-reflex';
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
+
+export const GlobalStyle = createGlobalStyle`
+body {
+  overflow-x: visible !important;
+}
+`;
 
 export const SubmissionWrapper = styled.div`
   display: flex;
@@ -17,21 +23,25 @@ export const SubmissionWrapper = styled.div`
     border-color: #f3f7f8 !important;
   }
   ${CoreUI.FadeInCSS}
-  overflow-x: auto;
 `;
 
 export const VerticalSplitter = styled(ReflexSplitter)`
   width: 10px;
 `;
 
-export const CodeEditorReflex = styled(ReflexElement)``;
+export const CodeEditorReflex = styled(ReflexElement)`
+  overflow-x: hidden !important;
+`;
 
-export const SubmissionContentReflex = styled(ReflexElement)``;
+export const SubmissionContentReflex = styled(ReflexElement)`
+  overflow-x: hidden !important;
+`;
 
 export const OuterEditorWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-width: fit-content;
 `;
 
 export const MiddleEditorWrapper = styled.div`
@@ -49,13 +59,4 @@ export const CodeEditorSettings = styled(CodeEditorUserSettings)`
 export const InnerAreaWrapper = styled.div`
   flex: 1 1 auto;
   overflow: hidden;
-`;
-
-export const WidthContainer = styled.div`
-  background-color: #f8fcff;
-  margin-left: calc(-50vw + 50%);
-`;
-
-export const EditorSubmissionContainer = styled.div`
-  min-width: 600px;
 `;

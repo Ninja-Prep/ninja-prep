@@ -18,6 +18,4 @@ export const CardsContainer = styled.div`
   min-height: 400px;
 `;
 
-export const Card = styled.div`
-  width: 400px;
-`;
+export const Card = styled.div``;

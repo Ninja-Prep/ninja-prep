@@ -10,11 +10,15 @@ export const PageContainer = styled.div`
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 5px;
   justify-content: stretch;
+  max-width: 90vw;
 `;
 
 export const ContentBox = styled(Box)`
   flex-grow: 1;
   ${CoreUI.SIMPLE_BORDER_BOTTOM};
+  &.MuiBox-root {
+    width: 100%;
+  }
 `;
 
 export const SettingsHeader = styled.div`
@@ -30,6 +34,7 @@ export const Subtitle = styled.div`
 
 export const Content = styled.div`
   ${CoreUI.OPEN_SANS_REGULAR}
+  ${CoreUI.TRIMMED_ELLIPSES};
 `;
 
 export const Footer = styled.span`

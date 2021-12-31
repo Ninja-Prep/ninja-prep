@@ -4,7 +4,7 @@ import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const CenterContent = styled(Box)`
   text-align: center !important;
-  padding: 48px;
+  padding: 48px 16px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -14,13 +14,13 @@ export const CenterContent = styled(Box)`
   border-radius: 10px;
   border-color: #24d1f3;
   box-shadow: 0 5px 50px rgba(36, 209, 243, 20%);
-  width: 90vw;
-
+  width: 95vw;
+  max-height: 95vh;
 `;
 
 export const LoginText = styled.p`
   ${CoreUI.ROBOTO_BOLD_FONT}
-  margin: 32px 0 16px 0;
+  padding: 4px 0px;
 `;
 
 export const ModalSubtext = styled.p`
@@ -31,7 +31,8 @@ export const ModalSubtext = styled.p`
 
 export const GoogleButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
-  width: 390px;
+  max-width: 390px;
+  width: 100%;
   background-color: #db2828;
   margin-bottom: 24px;
   :hover {
@@ -41,7 +42,8 @@ export const GoogleButton = styled.a`
 
 export const FacebookButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
-  width: 390px;
+  max-width: 390px;
+  width: 100%;
   background-color: #3b5998;
 
   color: white !important;
@@ -53,7 +55,8 @@ export const FacebookButton = styled.a`
 
 export const GitHubButton = styled.a`
   ${CoreUI.SOCIAL_MEDIA_BUTTON}
-  width: 390px;
+  max-width: 390px;
+  width: 100%;
   color: white !important;
   background-color: #1b1c1d;
   > svg {
@@ -62,6 +65,7 @@ export const GitHubButton = styled.a`
 `;
 
 export const SocialMediaButtonContainer = styled.div`
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;

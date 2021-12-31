@@ -7,7 +7,7 @@ import LandingPageBenefitsMobile from 'components/Landing/mobile/LandingPageBene
 const PremiumPageMobile = (): JSX.Element => {
   return (
     <div>
-      <PremiumHeader />
+      <PremiumHeader isMobile />
       <PremiumPlansMobile />
       <LandingPageBenefitsMobile disableCodingButton />
     </div>

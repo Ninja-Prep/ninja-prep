@@ -12,8 +12,8 @@ function PremiumHeader({isMobile}: {isMobile?: boolean}): JSX.Element {
   let logoWidth = 460;
 
   if (isMobile) {
-    logoWidth /= 1.5;
-    logoHeight /= 1.5;
+    logoWidth /= 2;
+    logoHeight /= 2;
   }
 
   return (

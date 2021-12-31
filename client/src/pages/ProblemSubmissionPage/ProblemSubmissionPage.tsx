@@ -6,7 +6,7 @@ import ProblemSubmissionNavBarContainer from 'components/ProblemSubmission/conta
 import SubmissionContent from 'components/ProblemSubmission/containers/SubmissionContent/SubmissionContentContainer';
 import {ReflexContainer, ReflexSplitter, ReflexElement} from 'react-reflex';
 
-import {CodeEditorReflex, CodeEditorSettings, EditorSubmissionContainer, InnerAreaWrapper, MiddleEditorWrapper, OuterEditorWrapper, SubmissionContentReflex, SubmissionWrapper} from './styled';
+import {CodeEditorReflex, GlobalStyle, CodeEditorSettings, InnerAreaWrapper, MiddleEditorWrapper, OuterEditorWrapper, SubmissionContentReflex, SubmissionWrapper} from './styled';
 
 import 'react-reflex/styles.css';
 import {ProblemDetails} from 'utils/types/challenges';
@@ -19,6 +19,7 @@ interface Props {
 function ProblemSubmissionPage(props: Props): JSX.Element {
   return (
     <SubmissionWrapper>
+      <GlobalStyle />
       <ProblemSubmissionNavBarContainer />
       <ReflexContainer orientation="horizontal">
         <ReflexElement>
@@ -29,22 +30,20 @@ function ProblemSubmissionPage(props: Props): JSX.Element {
             <ReflexSplitter style={{width: '10px'}} />
             <ReflexElement minSize={200}>
               <ReflexContainer orientation="horizontal">
-                <EditorSubmissionContainer>
-                  <CodeEditorReflex flex={4}>
-                    <OuterEditorWrapper>
-                      <CodeEditorSettings />
-                      <MiddleEditorWrapper>
-                        <InnerAreaWrapper>
-                          <CodeEditor starterCode={props.starterCode} />
-                        </InnerAreaWrapper>
-                      </MiddleEditorWrapper>
-                    </OuterEditorWrapper>
-                  </CodeEditorReflex>
-                  <ReflexSplitter className="testcaseSplitter" />
-                  <SubmissionContentReflex flex={2}>
-                    <SubmissionContent />
-                  </SubmissionContentReflex>
-                </EditorSubmissionContainer>
+                <CodeEditorReflex flex={4}>
+                  <OuterEditorWrapper>
+                    <CodeEditorSettings />
+                    <MiddleEditorWrapper>
+                      <InnerAreaWrapper>
+                        <CodeEditor starterCode={props.starterCode} />
+                      </InnerAreaWrapper>
+                    </MiddleEditorWrapper>
+                  </OuterEditorWrapper>
+                </CodeEditorReflex>
+                <ReflexSplitter className="testcaseSplitter" />
+                <SubmissionContentReflex flex={2}>
+                  <SubmissionContent />
+                </SubmissionContentReflex>
               </ReflexContainer>
             </ReflexElement>
           </ReflexContainer>
