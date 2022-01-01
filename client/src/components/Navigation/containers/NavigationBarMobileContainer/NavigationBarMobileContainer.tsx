@@ -12,7 +12,7 @@ const mapStateToProps = (state: RootState) => {
   return {
     isLoadingUser: state.authReducer.isLoadingUser,
     authUser: state.authReducer.authUser,
-    isPremiumUser: isPremiumUser(state),
+    isPremium: isPremiumUser(state),
   };
 };
 const connector = connect(mapStateToProps, {toggleLoginModal, toggleContactEmailModal});
