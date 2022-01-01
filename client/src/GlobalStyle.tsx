@@ -30,18 +30,17 @@ const GlobalStyle = createGlobalStyle`
     background: #555; 
   }
   
-  @media only screen and (min-width: 1281px) {
+  @media only screen and (min-width: 770px) {
     body {
       /* Change padding bottom to be footer height */
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       overflow-x: hidden;
       min-height: 100vh;
       min-width: 100vw;
-
     }
   }
   
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 769px) {
     html, body {
       font-family: 'Roboto', 'Source Sans Pro', sans-serif;
       min-width: 100vw;

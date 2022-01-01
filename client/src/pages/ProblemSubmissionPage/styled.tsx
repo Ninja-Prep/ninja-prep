@@ -4,11 +4,10 @@ import styled, {createGlobalStyle} from 'styled-components';
 import * as CoreUI from 'uiLibrary/CoreUI';
 
 export const GlobalStyle = createGlobalStyle`
-  
-@media only screen and (max-width: 896px) {
+@media only screen and (max-width: 769px) {
   html, body {
     overflow-y:hidden;
-    overflow-x:visible;
+    overflow-x: visible;
   }
 `;
 
@@ -18,7 +17,7 @@ export const SubmissionWrapper = styled.div`
   height: 100vh;
   margin-left: calc(-50vw + 50%);
   width: 100vw;
-  min-width: 896px;
+  min-width: 769px;
   overflow-x: visible !important;
 
   .testcaseSplitter {

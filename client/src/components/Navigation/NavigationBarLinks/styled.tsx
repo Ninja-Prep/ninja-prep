@@ -4,11 +4,14 @@ import * as CoreUI from 'uiLibrary/CoreUI';
 const NavLinkCSS = css`
   text-decoration: none;
   color: ${CoreUI.DEFAULT_BLACK_TEXT_COLOR};
-  margin: auto 48px auto 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 0.15;
   line-spacing: 23;
   font-weight: bold;
   border-bottom: 3px solid transparent;
+  padding: 0 8px;
 `;
 
 export const PremiumLink = styled.div`
@@ -27,7 +30,7 @@ export const NavLink = styled.a`
 export const PremiumButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 48px;
+  padding: 0 32px;
 `;
 
 export default NavLink;

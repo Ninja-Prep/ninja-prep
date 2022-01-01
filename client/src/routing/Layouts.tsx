@@ -22,7 +22,7 @@ interface Props extends RouteProps {
 }
 
 export const HeaderLayout = React.memo(({children}: Props): JSX.Element => {
-  const isMobile = useMediaQuery({maxWidth: 1280});
+  const isMobile = useMediaQuery({maxWidth: 769});
 
   return (
     <div>
@@ -42,7 +42,7 @@ export const FooterLayout = React.memo(
 );
 
 export const HeaderandFooterLayout: FunctionComponent<Props> = React.memo(({children, hasFooter}: Props) => {
-  const isMobile = useMediaQuery({maxWidth: 1280});
+  const isMobile = useMediaQuery({maxWidth: 769});
 
   return (
     <div>

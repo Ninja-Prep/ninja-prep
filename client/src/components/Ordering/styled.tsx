@@ -13,7 +13,7 @@ export const OrderContainer = styled.div`
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 5px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 769px) {
     padding: 25px;
   }
 `;
@@ -85,7 +85,7 @@ export const ThankYouHeader = styled.div`
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 769px) {
     flex-direction: column;
     text-align: center;
   }

@@ -10,16 +10,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media only screen and (min-width: 1281px) {
+  @media only screen and (min-width: 770px) {
     margin: 0;
     padding: 85px 16% 0 16%;
   }
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 769px) {
     margin: 0;
     margin-left: auto;
     margin-right: auto;
     min-height: 100vh;
-    max-width: 576px;
     padding: 97px 32px;
     overflow-x: hidden;
   }

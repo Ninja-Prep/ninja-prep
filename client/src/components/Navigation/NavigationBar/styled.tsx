@@ -83,5 +83,5 @@ export const Container = styled.div`
 
 export const Links = styled.div`
   display: flex;
-  flex-dirction: row;
+  gap: 16px;
 `;
