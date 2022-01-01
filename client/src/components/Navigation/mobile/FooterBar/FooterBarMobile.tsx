@@ -20,7 +20,7 @@ export function FooterBarMobile(props: Props): JSX.Element {
           <Link to="/terms-and-conditions">Terms and Conditions</Link>
           <span>|</span>
           <LightNinjaPrepLogo height={70} width={160} />
-          <span>© 2021 NinjaPrep LLC. All Rights Reserved.</span>
+          <span id="copyright">© 2021 NinjaPrep LLC. All Rights Reserved.</span>
         </Styled.FooterLinks>
       </Styled.Container>
     </Styled.FooterContainer>

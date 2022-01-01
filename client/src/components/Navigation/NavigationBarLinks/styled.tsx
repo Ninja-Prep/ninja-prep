@@ -30,7 +30,12 @@ export const NavLink = styled.a`
 export const PremiumButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 0 32px;
+  @media only screen and (min-width: 1281px) {
+    padding: 0 32px;
+  }
+  @media only screen and (min-width: 1280px) {
+    padding: 0 8px;
+  }
 `;
 
 export default NavLink;

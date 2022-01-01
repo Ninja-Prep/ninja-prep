@@ -12,20 +12,27 @@ export const Container = styled.div`
 
 export const LogoLink = styled.div`
   display: flex;
-  flex: 1 1 0;
   align-items: center;
+  @media only screen and (min-width: 1281px) {
+    flex: 1 1 0;
+  }
 `;
 
 export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media only screen and (min-width: 1281px) {
+    flex: 1 1 0;
+  }
 `;
 
 export const Title = styled.div`
   display: flex;
   ${CoreUI.ROBOTO_BOLD_FONT_LIGHT}
-  flex: 1 1 0;
   align-items: center;
   justify-content: center;
+  @media only screen and (min-width: 1281px) {
+    flex: 1 1 0;
+  }
 `;

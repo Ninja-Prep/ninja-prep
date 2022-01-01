@@ -27,6 +27,9 @@ export const FooterLinks = styled.div`
     font-size: 12px;
   }
   font-size: 12px;
+  #copyright {
+    text-align: center;
+  }
 `;
 
 export const FooterContainer = styled.div`
