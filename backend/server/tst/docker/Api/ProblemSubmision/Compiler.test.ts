@@ -1,5 +1,6 @@
 import {Validator} from 'jsonschema';
 import {dbclose, dbconnect} from 'initializers/mongoose';
+import Keygrip from 'keygrip';
 import chai from 'chai';
 import express from 'express';
 import initializeMiddleWare from 'initializers/middleware';
@@ -8,9 +9,12 @@ import request from 'supertest';
 const app = express();
 initializeMiddleWare(app);
 
-describe('POST /api/challenges/execute/Two-Sum', function () {
+describe('POST /api/submission/execute/Two-Sum', function () {
   // eslint-disable-next-line no-invalid-this
   this.timeout(10000);
+  const cookie = Buffer.from(JSON.stringify({user: {userId: '123'}})).toString('base64');
+  const kg = Keygrip(['keyboard cat']);
+  const hash = kg.sign('session=' + cookie);
   beforeEach(function (done) {
     dbconnect()
       .once('open', () => done())
@@ -57,7 +61,8 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
                 }
             }`;
     request(app)
-      .post('/api/submisson/execute/Two-Sum')
+      .post('/api/submission/execute/Two-Sum')
+      .set('Cookie', ['session=' + cookie + '; ' + 'session.sig=' + hash + ';'])
       .send({programmingLanguage: 'java', codeSnippet: solutionString})
       .then((res) => {
         const output = JSON.parse(res.text);
@@ -81,7 +86,8 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
                 }
             }`;
     request(app)
-      .post('/api/submisson/execute/Two-Sum')
+      .post('/api/submission/execute/Two-Sum')
+      .set('Cookie', ['session=' + cookie + '; ' + 'session.sig=' + hash + ';'])
       .send({programmingLanguage: 'java', codeSnippet: solutionString})
       .then((res) => {
         const output = JSON.parse(res.text);
@@ -105,7 +111,8 @@ describe('POST /api/challenges/execute/Two-Sum', function () {
                 }
             }`;
     request(app)
-      .post('/api/submisson/execute/Two-Sum')
+      .post('/api/submission/execute/Two-Sum')
+      .set('Cookie', ['session=' + cookie + '; ' + 'session.sig=' + hash + ';'])
       .send({programmingLanguage: 'java', codeSnippet: solutionString})
       .then((res) => {
         const output = JSON.parse(res.text);
