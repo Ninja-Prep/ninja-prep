@@ -6,6 +6,7 @@ import {ProblemDifficulty} from 'utils/enums/ProblemDifficulty';
 import {QuestionCategories} from 'utils/enums/QuestionCategories';
 import fs from 'fs';
 import path from 'path';
+import {orderBy} from 'natural-orderby';
 
 export interface JsonTags {
   title: string;
@@ -185,8 +186,9 @@ function getFileForLanguage(folderPath: string, fileName: string): string {
 // Gets all Testcases in Testcases folder and returns array
 
 function getAllTestcases(testCaseDirectoryPath: string): string[] {
-  const testCaseFileNames = fs.readdirSync(testCaseDirectoryPath);
-  const testCaseFiles = testCaseFileNames.map((testCase: string) => {
+  const testCaseFileNames = fs.readdirSync(testCaseDirectoryPath) || [];
+  const sortedTestCaseFileNames = orderBy(testCaseFileNames);
+  const testCaseFiles = sortedTestCaseFileNames.map((testCase: string) => {
     return fs.readFileSync(path.join(testCaseDirectoryPath, testCase), 'utf8');
   });
   return testCaseFiles;

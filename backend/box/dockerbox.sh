@@ -1,4 +1,4 @@
-for i in {0..10}
+for i in {0..20}
 do 
     touch "/ninjaprep/UserOutput${i}.txt"
     chown ninjaprep:ninjaprep "/ninjaprep/UserOutput${i}.txt"

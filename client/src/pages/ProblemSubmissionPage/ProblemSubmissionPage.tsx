@@ -6,7 +6,7 @@ import ProblemSubmissionNavBarContainer from 'components/ProblemSubmission/conta
 import SubmissionContent from 'components/ProblemSubmission/containers/SubmissionContent/SubmissionContentContainer';
 import {ReflexContainer, ReflexSplitter, ReflexElement} from 'react-reflex';
 
-import {CodeEditorReflex, GlobalStyle, CodeEditorSettings, InnerAreaWrapper, MiddleEditorWrapper, OuterEditorWrapper, SubmissionContentReflex, SubmissionWrapper} from './styled';
+import {GlobalStyle, CodeEditorSettings, InnerAreaWrapper, MiddleEditorWrapper, OuterEditorWrapper, SubmissionWrapper} from './styled';
 
 import 'react-reflex/styles.css';
 import {ProblemDetails} from 'utils/types/challenges';
@@ -30,7 +30,7 @@ function ProblemSubmissionPage(props: Props): JSX.Element {
             <ReflexSplitter style={{width: '10px'}} />
             <ReflexElement minSize={200}>
               <ReflexContainer orientation="horizontal">
-                <CodeEditorReflex flex={4}>
+                <ReflexElement flex={4}>
                   <OuterEditorWrapper>
                     <CodeEditorSettings />
                     <MiddleEditorWrapper>
@@ -39,11 +39,11 @@ function ProblemSubmissionPage(props: Props): JSX.Element {
                       </InnerAreaWrapper>
                     </MiddleEditorWrapper>
                   </OuterEditorWrapper>
-                </CodeEditorReflex>
+                </ReflexElement>
                 <ReflexSplitter className="testcaseSplitter" />
-                <SubmissionContentReflex flex={2}>
+                <ReflexElement flex={2}>
                   <SubmissionContent />
-                </SubmissionContentReflex>
+                </ReflexElement>
               </ReflexContainer>
             </ReflexElement>
           </ReflexContainer>

@@ -2,6 +2,7 @@ import subprocess
 import sys
 import glob
 import json
+import re 
 
 from concurrent.futures import ThreadPoolExecutor
 from ValidateTestCase import validate_testcase
@@ -65,7 +66,12 @@ def execute_code_submission(test_case_path, id):
     return user_result
 
 test_case_paths = glob.glob("TestCase*.txt")
-test_case_paths.sort()
+def natural_sort(l): 
+    convert = lambda text: int(text) if text.isdigit() else text.lower() 
+    alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
+    return sorted(l, key = alphanum_key)
+
+test_case_paths = natural_sort(test_case_paths)
 
 submissionOutput = []
 

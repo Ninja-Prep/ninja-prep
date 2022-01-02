@@ -32,14 +32,6 @@ export const VerticalSplitter = styled(ReflexSplitter)`
   width: 10px;
 `;
 
-export const CodeEditorReflex = styled(ReflexElement)`
-  overflow-x: hidden !important;
-`;
-
-export const SubmissionContentReflex = styled(ReflexElement)`
-  overflow-x: hidden !important;
-`;
-
 export const OuterEditorWrapper = styled.div`
   display: flex;
   flex-direction: column;
