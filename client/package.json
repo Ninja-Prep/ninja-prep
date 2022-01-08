@@ -22,6 +22,7 @@
     ]
   },
   "dependencies": {
+    "@ctrl/react-adsense": "^1.5.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@material-table/core": "^0.2.9",

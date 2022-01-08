@@ -33,7 +33,7 @@ public class Checker {
             // Check userOutput against solution output
             if (userOutputLine == null) System.exit(1);
             int userAns = convertLine(userOutputLine);
-            boolean isCorrect = check(userAns, testCaseNums, testCaseTarget);
+            boolean isCorrect = check(userAns, testCaseNums, testCaseTarget, ans);
             if (!isCorrect){
                 // Exit(1) is an incorrect answer
                 System.exit(1);
@@ -66,8 +66,8 @@ public class Checker {
         return Integer.parseInt(line);
     }
 
-    public static boolean check(int userOutput, int[] nums, int target) {
-        return nums[userOutput] == target;
+    public static boolean check(int userOutput, int[] nums, int target, int ans) {
+        return ans == userOutput || nums[userOutput] == target;
     }
  
 }
