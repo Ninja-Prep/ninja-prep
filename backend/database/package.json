@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongoose": "^5.13.2",
     "natural-orderby": "^2.0.3",
     "tsconfig-paths": "^3.11.0"
