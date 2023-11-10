@@ -33,7 +33,7 @@
     "@reduxjs/toolkit": "^1.6.0",
     "@stripe/react-stripe-js": "^1.2.1",
     "@stripe/stripe-js": "^1.11.0",
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "classnames": "^2.3.1",
     "codemirror": "^5.59.0",
     "codemirror-github-light": "^0.4.2",
